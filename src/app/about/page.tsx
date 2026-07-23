@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, Award, Code2, Users, ShieldCheck, Layers, Cpu } from 'lucide-react';
+import { ArrowUpRight, Award, Code2, Users, ShieldCheck, Layers, Bot, Smartphone } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Founder & Studio | Axorks Software House',
+  title: 'About Founder & Department Teams | Axorks Software House',
   description:
-    'Axorks is a founder-led software studio founded by Muhammad Mujahid. Backed by dedicated development & UI/UX design teams shipping enterprise & public sector systems.',
+    'Axorks is a founder-led software studio founded by Muhammad Mujahid. Backed by dedicated Web, AI, Mobile App, and UI/UX design teams.',
 };
 
 export default function AboutPage() {
@@ -20,7 +20,7 @@ export default function AboutPage() {
             About Axorks
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Axorks is a premier software studio engineered by Founder & Chief Architect Muhammad Mujahid. Backed by dedicated development teams and specialized UI/UX departments, we architect high-throughput web applications, AI automation pipelines, and public-sector infrastructure solutions.
+            Axorks is a premier software studio engineered by Founder & Chief Architect Muhammad Mujahid. Backed by dedicated development teams, AI automation specialists, mobile application engineers, and UI/UX designers, we architect high-throughput web applications and public-sector infrastructure solutions.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 His engineering portfolio includes national-scale public sector systems — such as <strong className="text-gold">AgroTrace</strong> (connected to FWO grid telemetry monitoring $47M in exports across 3,400+ shipments), the <strong className="text-gold">Sindh Food Security Dashboard</strong> (monitoring 25.45M population across 8 districts under FAO/WFP standards), and <strong className="text-gold">IPMI-OS</strong> (an institutional probabilistic quant engine operating with sub-2.5ms inference speed).
               </p>
 
-              {/* Education - Minor Prestigious Touch at the end */}
+              {/* Academic Foundation */}
               <div className="mt-4 rounded border border-obsidian-border bg-obsidian p-4 space-y-1">
                 <span className="font-mono text-[10px] uppercase text-gold">Academic Foundation:</span>
                 <p className="font-mono text-xs text-paper">
@@ -57,31 +57,51 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Dedicated Team & Department Structure */}
+            {/* Dedicated Department Structure */}
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8 space-y-4">
               <div className="flex items-center gap-2 text-gold">
                 <Users className="h-5 w-5" />
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider">
-                  TEAM_STRUCTURE_&_DEPARTMENTS
+                  SPECIALIZED_DEPARTMENT_STRUCTURE
                 </span>
               </div>
 
               <h3 className="font-serif text-xl font-bold text-paper">
-                Dedicated Software Development & UI/UX Teams
+                Dedicated Software, AI, Mobile & Design Teams
               </h3>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Axorks is backed by dedicated departmental teams structured for specialized delivery:
+                Axorks is backed by specialized department leads working across 4 core divisions:
               </p>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 pt-2">
                 <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-2">
                   <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold">
                     <Code2 className="h-4 w-4" />
-                    Development Team
+                    Web Engineering Division
                   </div>
                   <p className="text-xs text-steel">
-                    Core full-stack engineers specializing in Next.js App Router, TypeScript, Node.js API development, and PostgreSQL optimization.
+                    Full-stack developers building with Next.js App Router, TypeScript, Node.js REST APIs, and PostgreSQL database optimization.
+                  </p>
+                </div>
+
+                <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-2">
+                  <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold">
+                    <Bot className="h-4 w-4" />
+                    AI & Machine Learning Team
+                  </div>
+                  <p className="text-xs text-steel">
+                    AI engineers specializing in OpenAI API integrations, automated document parser pipelines, and statistical predictive models.
+                  </p>
+                </div>
+
+                <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-2">
+                  <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold">
+                    <Smartphone className="h-4 w-4" />
+                    Mobile App Department
+                  </div>
+                  <p className="text-xs text-steel">
+                    Mobile application engineers building cross-platform iOS and Android solutions with offline sync and push notification infrastructure.
                   </p>
                 </div>
 
@@ -91,7 +111,7 @@ export default function AboutPage() {
                     UI/UX Design Department
                   </div>
                   <p className="text-xs text-steel">
-                    Specialized interface designers crafting dark-mode enterprise schematics, dynamic micro-animations, and responsive component design systems.
+                    Interface designers crafting dark-mode schematic systems, dynamic micro-animations, and high-conversion user flows.
                   </p>
                 </div>
               </div>
@@ -115,12 +135,8 @@ export default function AboutPage() {
                   <span className="font-mono font-bold text-paper text-right">6 Live Systems</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
-                  <span>Government Systems:</span>
-                  <span className="font-mono font-bold text-gold text-right">2 Flagship Systems</span>
-                </li>
-                <li className="flex items-start justify-between gap-2">
-                  <span>Dedicated Teams:</span>
-                  <span className="font-mono text-paper text-right">Dev + UI/UX Leads</span>
+                  <span>Specialized Departments:</span>
+                  <span className="font-mono text-paper text-right">Web, AI, Mobile, UI/UX</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
                   <span>Academic Foundation:</span>

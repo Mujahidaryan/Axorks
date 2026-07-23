@@ -1,13 +1,12 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, Users, Layers } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, Users, Smartphone, Bot, Layers } from 'lucide-react';
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 
 export const metadata = {
   title: 'Axorks | Founder-Led Software Studio & Systems Engineering',
   description:
-    'High-stakes software studio shipping enterprise web platforms, AI integrations, FWO grid systems, and government-grade public sector solutions.',
+    'High-stakes software studio shipping enterprise web platforms, AI integrations, mobile applications, FWO grid systems, and government-grade public sector solutions.',
 };
 
 export default function HomePage() {
@@ -16,7 +15,7 @@ export default function HomePage() {
       id: 'agrotrace',
       sysId: 'SYS_01 — AGROTRACE',
       name: 'AgroTrace',
-      category: 'AgriTech · FWO Grid & FAO Aligned',
+      category: 'AgriTech · FWO Grid & FAO Telemetry',
       description:
         'National-scale supply chain intelligence connected to FWO grid telemetry — 3,400+ active shipments, cold-chain compliance monitoring, and predictive logistics delay analytics across 28 export destinations.',
       problem: 'Agricultural exporters lacked unified telemetry and automated cold-chain failure alerts.',
@@ -74,7 +73,7 @@ export default function HomePage() {
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold">
               <ShieldCheck className="h-4 w-4" />
-              <span>Full-Stack Engineering & AI Systems Studio</span>
+              <span>Full-Stack Engineering, AI & Mobile Systems Studio</span>
             </div>
 
             <h1 className="font-serif text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl lg:leading-[1.12]">
@@ -83,7 +82,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base leading-relaxed text-steel sm:text-lg">
-              Axorks is an elite software studio engineered by <strong className="text-paper">Muhammad Mujahid</strong> and backed by dedicated development & UI/UX teams. We ship mission-critical web platforms, AI pipelines, and <strong className="text-gold">government-grade public sector solutions (FWO grid & FAO aligned)</strong>.
+              Axorks is an elite software studio engineered by Founder & Chief Architect <strong className="text-paper">Muhammad Mujahid</strong> and backed by specialized teams in <strong className="text-paper">Full-Stack Web, AI Systems, Mobile Engineering, and UI/UX Design</strong>. We ship mission-critical web platforms, mobile apps, and <strong className="text-gold">government-grade public sector solutions (FWO grid & FAO aligned)</strong>.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -117,8 +116,8 @@ export default function HomePage() {
                   <span className="font-bold text-paper">M. Mujahid</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Dedicated Teams:</span>
-                  <span className="font-bold text-gold">Dev + UI/UX Leads</span>
+                  <span>Specialized Departments:</span>
+                  <span className="font-bold text-gold">Web, AI, Mobile, UI/UX</span>
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Public Sector Authority:</span>
@@ -126,11 +125,11 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Core Tech Stack:</span>
-                  <span className="text-paper">Next.js / Node / Postgres</span>
+                  <span className="text-paper">Next.js / React / Node / Postgres</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>AI Architecture:</span>
-                  <span className="text-paper">OpenAI / Quant Inference</span>
+                  <span>AI & Quant Engine:</span>
+                  <span className="text-paper">OpenAI / Bayesian Models</span>
                 </li>
               </ul>
             </div>
@@ -204,31 +203,54 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Dedicated Team & Department Structure Section */}
+      {/* Dedicated Department Structure Section (Web, AI, Mobile, UI/UX) */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-8 sm:p-10">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-            <div className="max-w-2xl space-y-3">
+          <div className="space-y-6">
+            <div className="space-y-2">
               <div className="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
                 <Users className="h-4 w-4" />
-                <span>ORGANIZATIONAL_STRUCTURE</span>
+                <span>ORGANIZATIONAL_STRUCTURE_&_DEPARTMENTS</span>
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-                Dedicated Engineering & Design Departments
+                Specialized Engineering & Design Teams
               </h2>
-              <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Axorks operates with specialized department leads — featuring a dedicated full-stack development team, a specialized UI/UX design department, and direct founder oversight on every project lifecycle.
+              <p className="text-xs leading-relaxed text-steel sm:text-sm max-w-3xl">
+                Axorks operates with dedicated departmental leads working under Founder & Chief Architect Muhammad Mujahid:
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 shrink-0 font-mono text-xs">
-              <div className="rounded border border-obsidian-border bg-obsidian p-4 text-center">
-                <div className="text-gold font-bold text-base">Development</div>
-                <div className="text-steel text-[10px] uppercase mt-1">Core Software Team</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-xs">
+              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
+                <div className="flex items-center gap-2 text-gold font-bold text-sm">
+                  <Code2 className="h-4 w-4" />
+                  Web Engineering
+                </div>
+                <div className="text-steel text-[11px] leading-relaxed">Full-Stack Next.js, Node.js & Postgres Teams</div>
               </div>
-              <div className="rounded border border-obsidian-border bg-obsidian p-4 text-center">
-                <div className="text-gold font-bold text-base">UI/UX Department</div>
-                <div className="text-steel text-[10px] uppercase mt-1">Interface Designers</div>
+
+              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
+                <div className="flex items-center gap-2 text-gold font-bold text-sm">
+                  <Bot className="h-4 w-4" />
+                  AI & ML Team
+                </div>
+                <div className="text-steel text-[11px] leading-relaxed">OpenAI API, Document Processing & ML Pipelines</div>
+              </div>
+
+              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
+                <div className="flex items-center gap-2 text-gold font-bold text-sm">
+                  <Smartphone className="h-4 w-4" />
+                  Mobile Engineering
+                </div>
+                <div className="text-steel text-[11px] leading-relaxed">Cross-Platform iOS & Android Native App Teams</div>
+              </div>
+
+              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
+                <div className="flex items-center gap-2 text-gold font-bold text-sm">
+                  <Layers className="h-4 w-4" />
+                  UI/UX Department
+                </div>
+                <div className="text-steel text-[11px] leading-relaxed">Design System Spec & Dark-Mode Schematics</div>
               </div>
             </div>
           </div>
@@ -290,7 +312,7 @@ export default function HomePage() {
               Turn complex technical demands into live, production software.
             </h2>
             <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm">
-              Work directly with Founder & Chief Architect Muhammad Mujahid and our dedicated engineering department.
+              Work directly with Founder & Chief Architect Muhammad Mujahid and our dedicated engineering departments.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">

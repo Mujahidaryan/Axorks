@@ -16,6 +16,11 @@ export interface ProjectData {
 }
 
 export default function SchematicCard({ project }: { project: ProjectData }) {
+  // Extract SYS ID number (e.g. SYS_03) and system slug name (e.g. SINDH_FOOD_SECURITY_DASHBOARD)
+  const sysParts = project.sysId.split(' — ');
+  const sysTag = sysParts[0] || project.sysId;
+  const sysSlug = sysParts[1] || '';
+
   return (
     <div
       className={`schematic-bracket group relative flex flex-col justify-between border bg-obsidian-raised p-5 sm:p-6 transition-all duration-300 ${
@@ -25,26 +30,33 @@ export default function SchematicCard({ project }: { project: ProjectData }) {
       }`}
     >
       <div>
-        {/* Schematic Header Bar - Mobile & Desktop Responsive Fix */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between items-start gap-2.5 border-b border-obsidian-border pb-4">
-          <span className="font-mono text-xs font-semibold tracking-wider text-gold break-words max-w-full">
-            {project.sysId}
-          </span>
-          {project.isGovernment ? (
-            <span className="inline-flex items-center gap-1.5 shrink-0 rounded border border-gold/50 bg-gold/15 px-2.5 py-1 font-mono text-[10px] font-bold text-gold tracking-wide">
-              <ShieldCheck className="h-3.5 w-3.5" />
-              GOVERNMENT GRADE
+        {/* Schematic Header Bar - 100% Collision-Proof Architecture */}
+        <div className="border-b border-obsidian-border pb-3.5">
+          <div className="flex items-center justify-between gap-2">
+            <span className="font-mono text-xs font-bold tracking-widest text-gold">
+              {sysTag}
             </span>
-          ) : (
-            <span className="font-mono text-[10px] uppercase text-steel shrink-0">
-              {project.status}
-            </span>
+            {project.isGovernment ? (
+              <span className="inline-flex items-center gap-1 shrink-0 rounded border border-gold/50 bg-gold/15 px-2.5 py-1 font-mono text-[9px] font-bold text-gold tracking-wide">
+                <ShieldCheck className="h-3 w-3 shrink-0 text-gold" />
+                GOVERNMENT GRADE
+              </span>
+            ) : (
+              <span className="font-mono text-[10px] font-medium uppercase text-steel shrink-0">
+                {project.status}
+              </span>
+            )}
+          </div>
+          {sysSlug && (
+            <div className="mt-1.5 font-mono text-[11px] font-semibold text-steel/90 tracking-wider uppercase break-words">
+              {sysSlug}
+            </div>
           )}
         </div>
 
         {/* Title & Category */}
         <div className="mt-4">
-          <span className="font-mono text-[11px] uppercase tracking-wider text-steel">
+          <span className="font-mono text-[10px] uppercase tracking-wider text-steel">
             {project.category}
           </span>
           <h3 className="mt-1 font-serif text-xl sm:text-2xl font-bold tracking-tight text-paper group-hover:text-gold transition-colors">
