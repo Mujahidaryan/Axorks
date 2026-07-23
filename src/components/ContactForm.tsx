@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Send, CheckCircle2, AlertCircle, Phone } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, Phone, DollarSign } from 'lucide-react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,6 +9,7 @@ export default function ContactForm() {
     email: '',
     phone: '',
     service: 'Web Applications & Custom Systems',
+    budget: 'PKR 250,000 – 500,000',
     message: '',
     company_website: '', // Honeypot field
   });
@@ -25,16 +26,30 @@ export default function ContactForm() {
     'Maintenance & Support Retainer',
   ];
 
+  const budgetRanges = [
+    'Under PKR 100,000',
+    'PKR 100,000 – 250,000',
+    'PKR 250,000 – 500,000',
+    'PKR 500,000 – 1,500,000',
+    'PKR 1,500,000+',
+    'Custom Enterprise Quotation',
+  ];
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
     setErrorMessage('');
 
     try {
+      const payload = {
+        ...formData,
+        message: `[Expected Budget: ${formData.budget}]\n\n${formData.message}`,
+      };
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const data = await res.json();
@@ -49,6 +64,7 @@ export default function ContactForm() {
         email: '',
         phone: '',
         service: 'Web Applications & Custom Systems',
+        budget: 'PKR 250,000 – 500,000',
         message: '',
         company_website: '',
       });
@@ -130,7 +146,7 @@ export default function ContactForm() {
             <input
               type="tel"
               id="phone"
-              placeholder="+1 (555) 000-0000"
+              placeholder="+92 314 1030223"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className="mt-1.5 w-full rounded border border-obsidian-border bg-obsidian px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-colors focus:border-signal-blue focus:outline-none"
@@ -156,6 +172,26 @@ export default function ContactForm() {
               ))}
             </select>
           </div>
+        </div>
+
+        {/* Budget Selector */}
+        <div>
+          <label htmlFor="budget" className="block font-mono text-xs font-medium text-paper">
+            Expected Project Investment Band <span className="text-gold">*</span>
+          </label>
+          <select
+            id="budget"
+            required
+            value={formData.budget}
+            onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+            className="mt-1.5 w-full rounded border border-gold/40 bg-obsidian px-3 py-2.5 text-xs font-mono text-gold transition-colors focus:border-signal-blue focus:outline-none"
+          >
+            {budgetRanges.map((b) => (
+              <option key={b} value={b} className="bg-obsidian text-paper">
+                {b}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Message */}

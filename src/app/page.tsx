@@ -1,12 +1,30 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, Users, Smartphone, Bot, Layers } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, Users, Smartphone, Bot, Layers, Info } from 'lucide-react';
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
+import { SITE_URL, SITE_NAME } from '@/lib/config';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Axorks | Founder-Led Software Studio & Systems Engineering',
   description:
     'High-stakes software studio shipping enterprise web platforms, AI integrations, mobile applications, FWO grid systems, and government-grade public sector solutions.',
+  openGraph: {
+    title: 'Axorks | Founder-Led Software Studio & Systems Engineering',
+    description:
+      'High-stakes software studio shipping enterprise web platforms, AI integrations, mobile applications, and public sector solutions.',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    images: [{ url: `${SITE_URL}/logo.png` }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Axorks | Founder-Led Software Studio',
+    description: 'High-stakes software studio shipping enterprise web platforms and AI integrations.',
+  },
+  alternates: {
+    canonical: SITE_URL,
+  },
 };
 
 export default function HomePage() {
@@ -15,17 +33,18 @@ export default function HomePage() {
       id: 'agrotrace',
       sysId: 'SYS_01 — AGROTRACE',
       name: 'AgroTrace',
-      category: 'AgriTech · FWO Grid & FAO Telemetry',
+      category: 'AgriTech · FWO Grid & Cold-Chain Telemetry',
       description:
-        'National-scale supply chain intelligence connected to FWO grid telemetry — 3,400+ active shipments, cold-chain compliance monitoring, and predictive logistics delay analytics across 28 export destinations.',
-      problem: 'Agricultural exporters lacked unified telemetry and automated cold-chain failure alerts.',
+        'National-scale supply chain tracking platform connected to FWO grid telemetry — monitoring thermal compliance logs, cold-chain sensor status, export compliance, and predictive logistics delay analytics across international shipping routes.',
+      problem: 'Agricultural exporters lacked real-time visibility into temperature anomalies and logistics delays during transit.',
       built: 'High-throughput tracking portal integrated with FWO grid telemetry, automated thermal sensor logs, and real-time export validation.',
+      challenges: 'Ingesting continuous sensor data streams during intermittent network connectivity across shipping routes.',
+      outcome: 'Achieved sub-second alert dispatch for thermal threshold breaches and automated compliance validation.',
       stack: ['Next.js 14', 'TypeScript', 'PostgreSQL', 'FWO Telemetry', 'REST APIs', 'Vercel'],
-      status: 'Live Production',
-      liveUrl: 'https://agrotrace-n65b.vercel.app',
+      status: 'Representative Engineering Work',
       stats: [
-        { label: 'Shipments Monitored', value: '3,400+' },
-        { label: 'Export Value', value: '$47M' },
+        { label: 'System Domain', value: 'AgriTech Telemetry' },
+        { label: 'Infrastructure', value: 'FWO Grid Sync' },
       ],
     },
     {
@@ -34,16 +53,17 @@ export default function HomePage() {
       name: 'Sindh Food Security Dashboard',
       category: 'Government & Public Sector · FAO / WFP',
       description:
-        'Government-grade humanitarian monitoring platform covering 25.45M population across 8 Sindh districts. Built to international FAO/WFP operational standards.',
-      problem: 'Fragmented field survey reporting delayed critical food intervention during regional crop vulnerabilities.',
+        'Government-grade humanitarian food security monitoring platform covering regional population metrics across multiple districts under international FAO/WFP operational standards.',
+      problem: 'District survey teams relied on delayed manual reporting, hindering emergency response during regional crop vulnerabilities.',
       built: 'IPC Phase Classification monitoring platform with real-time district gap alerts, automated crop telemetry, and field CSV export.',
+      challenges: 'Standardizing disparate district field survey metrics into a unified executive-level decision dashboard.',
+      outcome: 'Provided humanitarian planners with real-time district gap analysis and automated alert dispatch.',
       stack: ['Next.js 14', 'TypeScript', 'Recharts', 'Tailwind CSS', 'Vercel'],
       isGovernment: true,
-      status: 'Government Live System',
-      liveUrl: 'https://sindh-food-supply-tracking-dashboar.vercel.app/dashboard',
+      status: 'Government System',
       stats: [
-        { label: 'Population Covered', value: '25.45M' },
-        { label: 'Districts Monitored', value: '8 Sindh' },
+        { label: 'System Domain', value: 'Public Sector' },
+        { label: 'Compliance Standard', value: 'FAO / WFP' },
       ],
     },
     {
@@ -55,12 +75,13 @@ export default function HomePage() {
         'Institutional Probabilistic Market Intelligence OS. Bayesian Hidden Markov regime detection, recursive signal fusion with 90% confidence intervals, and CVaR-gated risk engine.',
       problem: 'Rule-based indicators failed during volatile market regime shifts.',
       built: 'Event-driven probabilistic engine delivering sub-2.5ms inference on live tick microstructure data.',
+      challenges: 'Maintaining sub-3ms inference latency under high-frequency market tick volume without thread blocking.',
+      outcome: 'Delivered real-time regime classification with 90% live confidence intervals and automated CVaR gating.',
       stack: ['Python', 'Bayesian HMM', 'React/TS', 'NATS JetStream', 'Vercel'],
-      status: 'Live Engine',
-      liveUrl: 'https://impi-os-dashboard-cncn.vercel.app/',
+      status: 'Representative Engineering Work',
       stats: [
-        { label: 'Inference Speed', value: '< 2.5ms' },
-        { label: 'Confidence Interval', value: '90% Live' },
+        { label: 'Inference Speed', value: 'Sub-2.5ms' },
+        { label: 'Statistical Engine', value: 'Bayesian HMM' },
       ],
     },
   ];
@@ -98,7 +119,7 @@ export default function HomePage() {
                 href="/case-studies"
                 className="flex items-center gap-2 rounded border border-obsidian-border bg-obsidian-raised px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-steel transition-colors hover:border-gold/40 hover:text-paper"
               >
-                Explore Shipped Systems
+                Explore Case Studies
               </Link>
             </div>
           </div>
@@ -116,20 +137,20 @@ export default function HomePage() {
                   <span className="font-bold text-paper">M. Mujahid</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Specialized Departments:</span>
-                  <span className="font-bold text-gold">Web, AI, Mobile, UI/UX</span>
+                  <span>Production Systems Shipped:</span>
+                  <span className="font-bold text-gold">6+ Live Applications</span>
+                </li>
+                <li className="flex items-center justify-between">
+                  <span>Specialized Divisions:</span>
+                  <span className="font-bold text-paper">Web, AI, Mobile, UI/UX</span>
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Public Sector Authority:</span>
-                  <span className="font-bold text-gold">FWO Grid & FAO Systems</span>
+                  <span className="font-bold text-gold">FWO Grid & FAO Standards</span>
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Core Tech Stack:</span>
-                  <span className="text-paper">Next.js / React / Node / Postgres</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span>AI & Quant Engine:</span>
-                  <span className="text-paper">OpenAI / Bayesian Models</span>
+                  <span className="text-paper">Next.js / Node / Postgres</span>
                 </li>
               </ul>
             </div>
@@ -140,36 +161,36 @@ export default function HomePage() {
       {/* Signature Animated Gold Swoosh Divider Line */}
       <GoldSwooshLine />
 
-      {/* Proof Strip (6 Shipped Systems Monospace Row) */}
+      {/* Proof Strip (Monospace Row) */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-y border-obsidian-border/80 bg-obsidian-raised/60 py-4.5">
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
             <span className="font-mono text-xs font-semibold uppercase text-gold shrink-0">
-              SHIPPED PRODUCTION SYSTEMS:
+              REPRESENTATIVE ENGINEERING DOMAINS:
             </span>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-steel">
               <Link href="/case-studies" className="text-gold font-medium hover:underline">
-                SYS_01 — AgroTrace (FWO Grid)
+                AgriTech Telemetry (FWO Grid)
               </Link>
               <span className="text-obsidian-border">|</span>
               <Link href="/case-studies" className="hover:text-paper transition-colors">
-                SYS_02 — MediVerse
+                Telehealth Platforms
               </Link>
               <span className="text-obsidian-border">|</span>
               <Link href="/case-studies" className="text-gold hover:underline font-semibold">
-                SYS_03 — Sindh Food Security Dashboard ★
+                Sindh Food Security (FAO/WFP) ★
               </Link>
               <span className="text-obsidian-border">|</span>
               <Link href="/case-studies" className="hover:text-paper transition-colors">
-                SYS_04 — IPMI-OS
+                Quant Probabilistic AI
               </Link>
               <span className="text-obsidian-border">|</span>
               <Link href="/case-studies" className="hover:text-paper transition-colors">
-                SYS_05 — HMS
+                Clinical EHR Systems
               </Link>
               <span className="text-obsidian-border">|</span>
               <Link href="/case-studies" className="hover:text-paper transition-colors">
-                SYS_06 — Veritas
+                Cryptographic Audit Engines
               </Link>
             </div>
           </div>
@@ -181,19 +202,27 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-obsidian-border pb-4 gap-4">
           <div>
             <span className="font-mono text-xs text-gold uppercase tracking-wider">
-              PROVEN_SYSTEMS_TRACK_RECORD
+              ENGINEERING_CASE_STUDIES
             </span>
             <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
-              Featured Flagship Deployments
+              Representative Systems Architecture
             </h2>
           </div>
           <Link
             href="/case-studies"
             className="font-mono text-xs text-signal-blue hover:text-signal-blue-hover inline-flex items-center gap-1 font-semibold"
           >
-            View All Shipped Systems
+            View All Representative Case Studies
             <ArrowUpRight className="h-3.5 w-3.5" />
           </Link>
+        </div>
+
+        {/* NDA Disclaimer Note */}
+        <div className="mt-6 schematic-bracket border border-gold/30 bg-obsidian-raised p-4 flex items-start gap-3 text-xs text-steel">
+          <Info className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+          <p className="leading-relaxed">
+            Select systems were engineered by our founder and technical team in a senior engineering capacity for client partner studios. Client identities and proprietary metrics are withheld per non-disclosure agreements (NDAs).
+          </p>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -203,7 +232,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Dedicated Department Structure Section (Web, AI, Mobile, UI/UX) */}
+      {/* Dedicated Department Structure Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-8 sm:p-10">
           <div className="space-y-6">
@@ -237,7 +266,7 @@ export default function HomePage() {
                 <div className="text-steel text-[11px] leading-relaxed">OpenAI API, Document Processing & ML Pipelines</div>
               </div>
 
-              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
+              <div className="rounded border border-obsidian-border bg-obsidian-raised p-4 space-y-1.5 border-gold/40">
                 <div className="flex items-center gap-2 text-gold font-bold text-sm">
                   <Smartphone className="h-4 w-4" />
                   Mobile Engineering
@@ -257,11 +286,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Preview */}
+      {/* Services Preview with Typical Investment Ranges */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-b border-obsidian-border pb-4">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            SYSTEM_CAPABILITIES
+            SYSTEM_CAPABILITIES_&_INVESTMENT
           </span>
           <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
             Engineered Software Solutions
@@ -269,34 +298,52 @@ export default function HomePage() {
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6">
-            <Code2 className="h-6 w-6 text-gold" />
-            <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-              Web Applications & Custom Systems
-            </h3>
-            <p className="mt-2 text-xs leading-relaxed text-steel">
-              High-throughput full-stack web platforms engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL databases. Built for extreme scale and performance.
-            </p>
+          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+            <div>
+              <Code2 className="h-6 w-6 text-gold" />
+              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
+                Web Applications & Custom Systems
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-steel">
+                High-throughput full-stack web platforms engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL databases.
+              </p>
+            </div>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
+              <span className="text-steel">Typical Investment:</span>
+              <span className="text-gold font-bold">PKR 250k – 1.5M+</span>
+            </div>
           </div>
 
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6">
-            <Cpu className="h-6 w-6 text-gold" />
-            <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-              AI Integration & Automation
-            </h3>
-            <p className="mt-2 text-xs leading-relaxed text-steel">
-              Integrating OpenAI API pipelines, document processing workflows, and custom statistical models directly into live production software.
-            </p>
+          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+            <div>
+              <Bot className="h-6 w-6 text-gold" />
+              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
+                AI Integration & Automation
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-steel">
+                Integrating OpenAI API pipelines, document processing workflows, and custom statistical models directly into live production software.
+              </p>
+            </div>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
+              <span className="text-steel">Typical Investment:</span>
+              <span className="text-gold font-bold">PKR 120k – 800k+</span>
+            </div>
           </div>
 
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6">
-            <Server className="h-6 w-6 text-gold" />
-            <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-              Government & Public Sector Solutions
-            </h3>
-            <p className="mt-2 text-xs leading-relaxed text-steel">
-              Public sector monitoring systems connected to infrastructure grids (FWO grid & FAO/WFP international humanitarian compliance standards).
-            </p>
+          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+            <div>
+              <Server className="h-6 w-6 text-gold" />
+              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
+                Government & Enterprise Digital Solutions
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-steel">
+                Public sector monitoring systems connected to infrastructure grids (FWO grid & FAO/WFP international humanitarian compliance standards).
+              </p>
+            </div>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
+              <span className="text-steel">Typical Investment:</span>
+              <span className="text-gold font-bold">Custom Quote</span>
+            </div>
           </div>
         </div>
       </section>

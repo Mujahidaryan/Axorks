@@ -1,4 +1,4 @@
-import { ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export interface ProjectData {
   id: string;
@@ -8,15 +8,15 @@ export interface ProjectData {
   description: string;
   problem: string;
   built: string;
+  challenges?: string;
+  outcome?: string;
   stack: string[];
   isGovernment?: boolean;
   status: string;
-  liveUrl?: string;
   stats?: { label: string; value: string }[];
 }
 
 export default function SchematicCard({ project }: { project: ProjectData }) {
-  // Extract SYS ID number (e.g. SYS_03) and system slug name (e.g. SINDH_FOOD_SECURITY_DASHBOARD)
   const sysParts = project.sysId.split(' — ');
   const sysTag = sysParts[0] || project.sysId;
   const sysSlug = sysParts[1] || '';
@@ -43,7 +43,7 @@ export default function SchematicCard({ project }: { project: ProjectData }) {
               </span>
             ) : (
               <span className="font-mono text-[10px] font-medium uppercase text-steel shrink-0">
-                {project.status}
+                REPRESENTATIVE WORK
               </span>
             )}
           </div>
@@ -78,6 +78,18 @@ export default function SchematicCard({ project }: { project: ProjectData }) {
             <span className="font-mono text-[10px] font-semibold uppercase text-gold">Solution Built: </span>
             <span className="text-paper/90">{project.built}</span>
           </div>
+          {project.challenges && (
+            <div>
+              <span className="font-mono text-[10px] font-semibold uppercase text-gold">Engineering Challenge: </span>
+              <span className="text-paper/90">{project.challenges}</span>
+            </div>
+          )}
+          {project.outcome && (
+            <div>
+              <span className="font-mono text-[10px] font-semibold uppercase text-gold">Outcome: </span>
+              <span className="text-paper/90">{project.outcome}</span>
+            </div>
+          )}
         </div>
 
         {/* Impact Stats if any */}
@@ -85,7 +97,7 @@ export default function SchematicCard({ project }: { project: ProjectData }) {
           <div className="mt-4 grid grid-cols-2 gap-2 border-t border-obsidian-border/60 pt-3">
             {project.stats.map((stat, idx) => (
               <div key={idx} className="rounded bg-obsidian/70 p-2 text-center border border-obsidian-border/40">
-                <div className="font-mono text-sm font-bold text-gold">{stat.value}</div>
+                <div className="font-mono text-xs font-bold text-gold">{stat.value}</div>
                 <div className="font-mono text-[9px] uppercase text-steel">{stat.label}</div>
               </div>
             ))}
@@ -93,7 +105,7 @@ export default function SchematicCard({ project }: { project: ProjectData }) {
         )}
       </div>
 
-      {/* Tech Stack Pills & Live Action Link */}
+      {/* Tech Stack Pills */}
       <div className="mt-6 border-t border-obsidian-border pt-4">
         <div className="flex flex-wrap gap-1.5">
           {project.stack.map((item, idx) => (
@@ -105,21 +117,6 @@ export default function SchematicCard({ project }: { project: ProjectData }) {
             </span>
           ))}
         </div>
-
-        {project.liveUrl && (
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
-            <span className="font-mono text-[10px] text-emerald-400 font-medium">● Live Production</span>
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 font-mono text-xs text-signal-blue font-semibold transition-colors hover:text-signal-blue-hover"
-            >
-              Verify Live System
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </a>
-          </div>
-        )}
       </div>
     </div>
   );
