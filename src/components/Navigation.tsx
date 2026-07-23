@@ -20,14 +20,14 @@ export default function Navigation() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-obsidian-border bg-obsidian/90 backdrop-blur-md transition-all">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
-        {/* Brand Mark */}
+    <header className="sticky top-0 z-50 w-full border-b border-obsidian-border bg-obsidian/95 backdrop-blur-md transition-all">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        {/* Brand Mark with Full Logo */}
         <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-90">
-          <div className="relative h-9 w-9 overflow-hidden rounded-md border border-gold/30 bg-obsidian-raised p-1">
+          <div className="relative h-9 w-9 overflow-hidden rounded-md border border-gold/40 bg-obsidian-raised p-1">
             <Image
               src="/logo.png"
-              alt="Axorks Logo"
+              alt="Axorks Mark"
               width={36}
               height={36}
               className="h-full w-full object-contain"
@@ -38,7 +38,7 @@ export default function Navigation() {
             <span className="font-serif text-xl font-bold tracking-tight text-paper">
               Axorks
             </span>
-            <span className="font-mono text-[10px] tracking-widest text-steel uppercase">
+            <span className="font-mono text-[9px] tracking-widest text-gold uppercase">
               Software Studio
             </span>
           </div>
@@ -52,7 +52,7 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative font-sans text-sm font-medium transition-colors ${
+                className={`relative font-sans text-xs font-semibold uppercase tracking-wider transition-colors ${
                   isActive ? 'text-gold' : 'text-steel hover:text-paper'
                 }`}
               >
@@ -83,7 +83,7 @@ export default function Navigation() {
           className="inline-flex items-center justify-center rounded-md p-2 text-steel hover:bg-obsidian-raised hover:text-paper focus:outline-none md:hidden"
           aria-label="Toggle navigation menu"
         >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? <X className="h-6 w-6 text-gold" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
@@ -98,7 +98,7 @@ export default function Navigation() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block text-base font-medium transition-colors ${
+                  className={`block font-mono text-sm font-semibold uppercase tracking-wider transition-colors ${
                     isActive ? 'text-gold' : 'text-steel hover:text-paper'
                   }`}
                 >
@@ -110,7 +110,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-md bg-signal-blue py-3 text-sm font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover"
+                className="flex w-full items-center justify-center gap-2 rounded-md bg-signal-blue py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover"
               >
                 Start a project
                 <ArrowUpRight className="h-4 w-4" />

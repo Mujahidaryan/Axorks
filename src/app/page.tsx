@@ -1,12 +1,13 @@
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, Users, Layers } from 'lucide-react';
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 
 export const metadata = {
-  title: 'Axorks | Engineering the future. Solving today.',
+  title: 'Axorks | Founder-Led Software Studio & Systems Engineering',
   description:
-    'A software studio that ships — including two government-grade systems already in active production.',
+    'High-stakes software studio shipping enterprise web platforms, AI integrations, FWO grid systems, and government-grade public sector solutions.',
 };
 
 export default function HomePage() {
@@ -15,16 +16,16 @@ export default function HomePage() {
       id: 'agrotrace',
       sysId: 'SYS_01 — AGROTRACE',
       name: 'AgroTrace',
-      category: 'AgriTech · FAO Aligned',
+      category: 'AgriTech · FWO Grid & FAO Aligned',
       description:
-        'Real-time supply chain tracking across Pakistan — monitoring cold chain compliance, predictive delay analytics, and live geospatial logistics.',
-      problem: 'Export shipments lacked cold-chain transparency and real-time delay alerts.',
-      built: 'End-to-end telemetry system with live maps, shipment monitoring, and export validation.',
-      stack: ['Next.js 14', 'TypeScript', 'PostgreSQL', 'REST APIs', 'Vercel'],
+        'National-scale supply chain intelligence connected to FWO grid telemetry — 3,400+ active shipments, cold-chain compliance monitoring, and predictive logistics delay analytics across 28 export destinations.',
+      problem: 'Agricultural exporters lacked unified telemetry and automated cold-chain failure alerts.',
+      built: 'High-throughput tracking portal integrated with FWO grid telemetry, automated thermal sensor logs, and real-time export validation.',
+      stack: ['Next.js 14', 'TypeScript', 'PostgreSQL', 'FWO Telemetry', 'REST APIs', 'Vercel'],
       status: 'Live Production',
       liveUrl: 'https://agrotrace-n65b.vercel.app',
       stats: [
-        { label: 'Shipments Tracked', value: '3,400+' },
+        { label: 'Shipments Monitored', value: '3,400+' },
         { label: 'Export Value', value: '$47M' },
       ],
     },
@@ -32,14 +33,14 @@ export default function HomePage() {
       id: 'sindh-food-security',
       sysId: 'SYS_03 — SINDH_FOOD_SECURITY_DASHBOARD',
       name: 'Sindh Food Security Dashboard',
-      category: 'Humanitarian · Government System',
+      category: 'Government & Public Sector · FAO / WFP',
       description:
-        'Humanitarian food security monitoring system covering 25.45M population across 8 Sindh districts. Built to FAO/WFP operational standards.',
-      problem: 'Fragmented field survey data delayed critical food intervention during crop vulnerability.',
-      built: 'IPC Phase Classification platform with real-time district gap alerts and CSV field export.',
+        'Government-grade humanitarian monitoring platform covering 25.45M population across 8 Sindh districts. Built to international FAO/WFP operational standards.',
+      problem: 'Fragmented field survey reporting delayed critical food intervention during regional crop vulnerabilities.',
+      built: 'IPC Phase Classification monitoring platform with real-time district gap alerts, automated crop telemetry, and field CSV export.',
       stack: ['Next.js 14', 'TypeScript', 'Recharts', 'Tailwind CSS', 'Vercel'],
       isGovernment: true,
-      status: 'Government Live',
+      status: 'Government Live System',
       liveUrl: 'https://sindh-food-supply-tracking-dashboar.vercel.app/dashboard',
       stats: [
         { label: 'Population Covered', value: '25.45M' },
@@ -50,11 +51,11 @@ export default function HomePage() {
       id: 'ipmi-os',
       sysId: 'SYS_04 — IPMI_OS',
       name: 'IPMI-OS',
-      category: 'Quant Systems · Probabilistic AI',
+      category: 'Quant Systems · Probabilistic AI Engine',
       description:
         'Institutional Probabilistic Market Intelligence OS. Bayesian Hidden Markov regime detection, recursive signal fusion with 90% confidence intervals, and CVaR-gated risk engine.',
       problem: 'Rule-based indicators failed during volatile market regime shifts.',
-      built: 'Event-driven probabilistic engine delivering sub-2.5ms inference on live microstructure data.',
+      built: 'Event-driven probabilistic engine delivering sub-2.5ms inference on live tick microstructure data.',
       stack: ['Python', 'Bayesian HMM', 'React/TS', 'NATS JetStream', 'Vercel'],
       status: 'Live Engine',
       liveUrl: 'https://impi-os-dashboard-cncn.vercel.app/',
@@ -71,66 +72,65 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 rounded border border-gold/30 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
-              <ShieldCheck className="h-3.5 w-3.5" />
-              <span>Founder-Led Studio · Full-Stack & AI-Native</span>
+            <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold">
+              <ShieldCheck className="h-4 w-4" />
+              <span>Full-Stack Engineering & AI Systems Studio</span>
             </div>
 
-            <h1 className="font-serif text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl lg:leading-[1.15]">
-              Engineering the future.{' '}
-              <span className="italic text-gold">Solving today.</span>
+            <h1 className="font-serif text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl lg:leading-[1.12]">
+              Architecting high-stakes software.{' '}
+              <span className="italic text-gold">Built to scale.</span>
             </h1>
 
             <p className="text-base leading-relaxed text-steel sm:text-lg">
-              A software studio that ships — including{' '}
-              <strong className="text-paper">two government-grade systems</strong> already in active production. We build high-reliability web platforms, AI-augmented backends, and complex enterprise systems without agency bloat.
+              Axorks is an elite software studio engineered by <strong className="text-paper">Muhammad Mujahid</strong> and backed by dedicated development & UI/UX teams. We ship mission-critical web platforms, AI pipelines, and <strong className="text-gold">government-grade public sector solutions (FWO grid & FAO aligned)</strong>.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 href="/contact"
-                className="group flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover hover:shadow-lg hover:shadow-signal-blue/25"
+                className="group flex items-center gap-2 rounded bg-signal-blue px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover hover:shadow-lg hover:shadow-signal-blue/25"
               >
-                Start a project
+                Schedule Consultation
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
 
               <Link
                 href="/case-studies"
-                className="flex items-center gap-2 rounded border border-obsidian-border bg-obsidian-raised px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-steel transition-colors hover:border-gold/40 hover:text-paper"
+                className="flex items-center gap-2 rounded border border-obsidian-border bg-obsidian-raised px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-steel transition-colors hover:border-gold/40 hover:text-paper"
               >
-                Explore Case Studies
+                Explore Shipped Systems
               </Link>
             </div>
           </div>
 
           {/* Right Hero Schematic Badge Box */}
-          <div className="w-full lg:w-[380px]">
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6">
+          <div className="w-full lg:w-[400px]">
+            <div className="schematic-bracket border border-gold/40 bg-obsidian-raised p-6 shadow-xl">
               <div className="flex items-center justify-between border-b border-obsidian-border pb-3 font-mono text-xs text-gold">
-                <span>SYSTEM_CAPABILITY_MATRIX</span>
-                <span>STATUS_OK</span>
+                <span>STUDIO_CAPABILITY_MATRIX</span>
+                <span className="text-emerald-400">STATUS_ACTIVE</span>
               </div>
-              <ul className="mt-4 space-y-3 font-mono text-xs text-steel">
+              <ul className="mt-4 space-y-3.5 font-mono text-xs text-steel">
                 <li className="flex items-center justify-between">
-                  <span>Production Systems:</span>
-                  <span className="font-bold text-paper">6 Shipped</span>
+                  <span>Founder & Chief Architect:</span>
+                  <span className="font-bold text-paper">M. Mujahid</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Public Sector Grade:</span>
-                  <span className="font-bold text-gold">2 Government</span>
+                  <span>Dedicated Teams:</span>
+                  <span className="font-bold text-gold">Dev + UI/UX Leads</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Architecture:</span>
+                  <span>Public Sector Authority:</span>
+                  <span className="font-bold text-gold">FWO Grid & FAO Systems</span>
+                </li>
+                <li className="flex items-center justify-between">
+                  <span>Core Tech Stack:</span>
                   <span className="text-paper">Next.js / Node / Postgres</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>AI Engine:</span>
-                  <span className="text-paper">OpenAI / Bayesian HMM</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span>Lead Time:</span>
-                  <span className="text-emerald-400">Rapid Deployment</span>
+                  <span>AI Architecture:</span>
+                  <span className="text-paper">OpenAI / Quant Inference</span>
                 </li>
               </ul>
             </div>
@@ -143,14 +143,14 @@ export default function HomePage() {
 
       {/* Proof Strip (6 Shipped Systems Monospace Row) */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="border-y border-obsidian-border/80 bg-obsidian-raised/50 py-4">
+        <div className="border-y border-obsidian-border/80 bg-obsidian-raised/60 py-4.5">
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
             <span className="font-mono text-xs font-semibold uppercase text-gold shrink-0">
               SHIPPED PRODUCTION SYSTEMS:
             </span>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-steel">
-              <Link href="/case-studies" className="hover:text-paper transition-colors">
-                SYS_01 — AgroTrace
+              <Link href="/case-studies" className="text-gold font-medium hover:underline">
+                SYS_01 — AgroTrace (FWO Grid)
               </Link>
               <span className="text-obsidian-border">|</span>
               <Link href="/case-studies" className="hover:text-paper transition-colors">
@@ -179,20 +179,20 @@ export default function HomePage() {
 
       {/* Featured Case Studies Preview */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between border-b border-obsidian-border pb-4">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-obsidian-border pb-4 gap-4">
           <div>
             <span className="font-mono text-xs text-gold uppercase tracking-wider">
-              PROVEN_TRACK_RECORD
+              PROVEN_SYSTEMS_TRACK_RECORD
             </span>
             <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
-              Featured Case Studies
+              Featured Flagship Deployments
             </h2>
           </div>
           <Link
             href="/case-studies"
-            className="hidden font-mono text-xs text-signal-blue hover:text-signal-blue-hover sm:inline-flex sm:items-center sm:gap-1"
+            className="font-mono text-xs text-signal-blue hover:text-signal-blue-hover inline-flex items-center gap-1 font-semibold"
           >
-            View All 6 Systems
+            View All Shipped Systems
             <ArrowUpRight className="h-3.5 w-3.5" />
           </Link>
         </div>
@@ -202,15 +202,36 @@ export default function HomePage() {
             <SchematicCard key={project.id} project={project} />
           ))}
         </div>
+      </section>
 
-        <div className="mt-8 text-center sm:hidden">
-          <Link
-            href="/case-studies"
-            className="inline-flex items-center gap-1 font-mono text-xs text-signal-blue"
-          >
-            View All 6 Shipped Case Studies
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
+      {/* Dedicated Team & Department Structure Section */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-8 sm:p-10">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="max-w-2xl space-y-3">
+              <div className="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
+                <Users className="h-4 w-4" />
+                <span>ORGANIZATIONAL_STRUCTURE</span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
+                Dedicated Engineering & Design Departments
+              </h2>
+              <p className="text-xs leading-relaxed text-steel sm:text-sm">
+                Axorks operates with specialized department leads — featuring a dedicated full-stack development team, a specialized UI/UX design department, and direct founder oversight on every project lifecycle.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 shrink-0 font-mono text-xs">
+              <div className="rounded border border-obsidian-border bg-obsidian p-4 text-center">
+                <div className="text-gold font-bold text-base">Development</div>
+                <div className="text-steel text-[10px] uppercase mt-1">Core Software Team</div>
+              </div>
+              <div className="rounded border border-obsidian-border bg-obsidian p-4 text-center">
+                <div className="text-gold font-bold text-base">UI/UX Department</div>
+                <div className="text-steel text-[10px] uppercase mt-1">Interface Designers</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -218,10 +239,10 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-b border-obsidian-border pb-4">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            CORE_CAPABILITIES
+            SYSTEM_CAPABILITIES
           </span>
           <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
-            Engineered Software Services
+            Engineered Software Solutions
           </h2>
         </div>
 
@@ -232,7 +253,7 @@ export default function HomePage() {
               Web Applications & Custom Systems
             </h3>
             <p className="mt-2 text-xs leading-relaxed text-steel">
-              End-to-end full-stack web applications engineered with Next.js, Node.js, and serverless Postgres. Built for high performance, strict RBAC authorization, and long-term maintainability.
+              High-throughput full-stack web platforms engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL databases. Built for extreme scale and performance.
             </p>
           </div>
 
@@ -242,44 +263,34 @@ export default function HomePage() {
               AI Integration & Automation
             </h3>
             <p className="mt-2 text-xs leading-relaxed text-steel">
-              Integrating OpenAI APIs, predictive statistical models, and automated data pipelines into production workflows. Reducing operational manual overhead by up to 80%.
+              Integrating OpenAI API pipelines, document processing workflows, and custom statistical models directly into live production software.
             </p>
           </div>
 
           <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6">
             <Server className="h-6 w-6 text-gold" />
             <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-              Government & Public Sector Systems
+              Government & Public Sector Solutions
             </h3>
             <p className="mt-2 text-xs leading-relaxed text-steel">
-              Designing mission-critical dashboards and public-sector software compliant with international humanitarian protocols (FAO/WFP). High reliability under high load.
+              Public sector monitoring systems connected to infrastructure grids (FWO grid & FAO/WFP international humanitarian compliance standards).
             </p>
           </div>
-        </div>
-
-        <div className="mt-8 text-center">
-          <Link
-            href="/services"
-            className="inline-flex items-center gap-1 font-mono text-xs font-semibold text-signal-blue hover:text-signal-blue-hover"
-          >
-            Explore All 6 Detailed Services & Retainers
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
         </div>
       </section>
 
       {/* Closing Call To Action Block */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="schematic-bracket border border-gold/40 bg-gradient-to-r from-obsidian-raised via-obsidian-raised to-obsidian p-8 sm:p-12">
+        <div className="schematic-bracket border border-gold/50 bg-gradient-to-r from-obsidian-raised via-obsidian-raised to-obsidian p-8 sm:p-12">
           <div className="max-w-2xl">
             <span className="font-mono text-xs font-semibold text-gold uppercase tracking-wider">
-              READY_TO_BUILD
+              INITIATE_PROJECT_DISCOVERY
             </span>
             <h2 className="mt-2 font-serif text-3xl font-bold text-paper sm:text-4xl">
-              Turn cold traffic into booked consultations.
+              Turn complex technical demands into live, production software.
             </h2>
             <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm">
-              Work directly with a founder-led studio that delivers clean code, complete documentation, and zero agency overhead.
+              Work directly with Founder & Chief Architect Muhammad Mujahid and our dedicated engineering department.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -287,7 +298,7 @@ export default function HomePage() {
                 href="/contact"
                 className="flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-colors hover:bg-signal-blue-hover"
               >
-                Start a project
+                Schedule Consultation
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
               <a
@@ -296,7 +307,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="font-mono text-xs text-gold hover:underline"
               >
-                Or message directly on WhatsApp (+92 314 1030223)
+                Direct WhatsApp Connect (+92 314 1030223)
               </a>
             </div>
           </div>
