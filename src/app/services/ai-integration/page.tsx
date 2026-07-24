@@ -1,25 +1,35 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { ArrowUpRight, ArrowLeft, Bot, CheckCircle2, HelpCircle } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'AI Integration & Automation Services | Axorks Software Studio',
+  title: 'AI Integrated Dashboards & Automation Services in Karachi | Axorks',
   description:
-    'Practical AI implementation integrating OpenAI APIs, automated document processing, intelligent search, and predictive models directly into production web platforms.',
+    'Practical AI integrated dashboards and automation services in Karachi & Islamabad. Integrating OpenAI APIs, automated document processing, vector search, and predictive models into production software.',
+  keywords: [
+    'AI integrated dashboards',
+    'AI automation Karachi',
+    'OpenAI API integration',
+    'predictive AI dashboards',
+    'AI document processing',
+    'custom AI solutions Pakistan',
+    'Axorks AI integrated dashboards',
+  ],
   openGraph: {
-    title: 'AI Integration & Automation Services | Axorks',
+    title: 'AI Integrated Dashboards & Automation Services in Karachi | Axorks',
     description:
-      'Practical AI workflows integrating OpenAI APIs, document processing pipelines, and predictive statistical models.',
+      'Practical AI integrated dashboards connecting OpenAI APIs, document processing pipelines, and predictive statistical models by Axorks Software House.',
     url: `${SITE_URL}/services/ai-integration`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Integration & Automation Services | Axorks',
-    description: 'Practical AI implementation integrating OpenAI APIs and predictive models.',
+    title: 'AI Integrated Dashboards & Automation Services | Axorks',
+    description: 'Practical AI integrated dashboards and automated document processing pipelines.',
   },
   alternates: {
     canonical: `${SITE_URL}/services/ai-integration`,
@@ -30,16 +40,16 @@ export default function AiIntegrationPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'AI Integration & Automation',
-    serviceType: 'AI Engineering',
+    name: 'AI Integrated Dashboards & Automation',
+    serviceType: 'AI Engineering & Dashboard Solutions',
     provider: {
       '@type': 'Organization',
-      name: 'Axorks',
+      name: 'Axorks Software House',
       url: SITE_URL,
     },
-    areaServed: 'Worldwide',
+    areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
     description:
-      'Practical AI integration including OpenAI API connections, automated document parsing pipelines, vector embeddings, and predictive analytics for business software.',
+      'Practical AI integrated dashboards including OpenAI API connections, automated document parsing pipelines, vector embeddings, and predictive analytics for business software.',
   };
 
   const faqSchema = {
@@ -48,23 +58,23 @@ export default function AiIntegrationPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What kind of AI integrations does Axorks build?',
+        name: 'What kind of AI integrated dashboards does Axorks build?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We build OpenAI API text generation pipelines, automated PDF/invoice parsing, intelligent search using vector embeddings, automated customer support agents, and predictive statistical models.',
+          text: 'We build OpenAI API text generation pipelines, AI integrated dashboards, automated PDF/invoice parsing, intelligent search using vector embeddings, automated customer support agents, and predictive statistical models.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How does AI integration reduce operational costs?',
+        name: 'How do AI integrated dashboards reduce operational costs?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'By automating repetitive document extraction and data entry tasks, AI pipelines reduce manual operational workload by up to 80% while improving response accuracy.',
+          text: 'By automating repetitive document extraction and data entry tasks into live dashboards, AI pipelines reduce manual operational workload by up to 80% while improving response accuracy.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What is the typical investment for AI integration?',
+        name: 'What is the typical investment for AI integrated dashboards?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: `Typical investment ranges from ${PRICING.aiIntegration.formattedRange} depending on model complexity, API rate limiting setup, and data pipeline requirements.`,
@@ -87,22 +97,21 @@ export default function AiIntegrationPage() {
       </head>
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/services"
-          className="inline-flex items-center gap-2 font-mono text-xs text-steel transition-colors hover:text-paper"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" />
-          Back to All Services
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'Services', href: '/services' },
+            { label: 'AI Integrated Dashboards' },
+          ]}
+        />
 
-        <div className="mt-6 border-b border-obsidian-border pb-6">
+        <div className="mt-4 border-b border-obsidian-border pb-6">
           <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
             <Bot className="h-3.5 w-3.5" />
             <span>CORE_SERVICE_04</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            AI Integration & Automation
+            AI Integrated Dashboards & Automation Solutions
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
@@ -115,11 +124,11 @@ export default function AiIntegrationPage() {
         {/* Rich Factual Prose */}
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
           <p className="text-paper/95 text-base">
-            Axorks delivers practical, production-ready AI integrations that connect OpenAI APIs, automated document parsing pipelines, vector search embeddings, and predictive statistical models directly into your custom web and mobile software.
+            Axorks Software House delivers practical, production-ready AI integrated dashboards that connect OpenAI APIs, automated document parsing pipelines, vector search embeddings, and predictive statistical models directly into your custom web and mobile software.
           </p>
 
           <p>
-            Rather than building novelty chatbots, we focus on high-ROI business automations: extracting structured data from unstructured PDF invoices, automating customer communication triage, speeding up database search with semantic vector embeddings, and running predictive trend analytics. Our AI integrations have proven to reduce operational workload by up to 80%.
+            Rather than building novelty chatbots, we focus on high-ROI business automations: building AI integrated dashboards to extract structured data from unstructured PDF invoices, automating customer communication triage, speeding up database search with semantic vector embeddings, and running predictive trend analytics. Our AI integrations have proven to reduce operational workload by up to 80%.
           </p>
 
           <p>
@@ -130,7 +139,7 @@ export default function AiIntegrationPage() {
         {/* Deliverables List */}
         <div className="mt-10 schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8">
           <h2 className="font-serif text-xl font-bold text-paper mb-4">
-            What's Included in AI Integration
+            What's Included in AI Integrated Dashboards
           </h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-xs text-steel">
             <div className="flex items-center gap-2">
@@ -170,25 +179,25 @@ export default function AiIntegrationPage() {
           <div className="space-y-4">
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
               <h3 className="font-serif text-base font-bold text-paper">
-                What kind of AI integrations does Axorks build?
+                What kind of AI integrated dashboards does Axorks build?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                We build OpenAI API text generation pipelines, automated PDF/invoice parsing, intelligent search using vector embeddings, automated customer support agents, and predictive statistical models.
+                We build OpenAI API text generation pipelines, AI integrated dashboards, automated PDF/invoice parsing, intelligent search using vector embeddings, automated customer support agents, and predictive statistical models.
               </p>
             </div>
 
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
               <h3 className="font-serif text-base font-bold text-paper">
-                How does AI integration reduce operational costs?
+                How do AI integrated dashboards reduce operational costs?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                By automating repetitive document extraction and data entry tasks, AI pipelines reduce manual operational workload by up to 80% while improving response accuracy.
+                By automating repetitive document extraction and data entry tasks into live dashboards, AI pipelines reduce manual operational workload by up to 80% while improving response accuracy.
               </p>
             </div>
 
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
               <h3 className="font-serif text-base font-bold text-paper">
-                What is the typical investment for AI integration?
+                What is the typical investment for AI integrated dashboards?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
                 Typical investment ranges from {PRICING.aiIntegration.formattedRange} depending on model complexity, API rate limiting setup, and data pipeline requirements.
@@ -213,7 +222,7 @@ export default function AiIntegrationPage() {
             href="/contact?service=AI%20Integration%20%26%20Automation"
             className="inline-flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
           >
-            Inquire for AI Integration
+            Inquire for AI Integrated Dashboards
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>

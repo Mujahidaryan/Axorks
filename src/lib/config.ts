@@ -10,4 +10,13 @@ export const CONTACT_EMAIL = 'contact@axorks.com';
 export const CAREERS_EMAIL = 'careers@axorks.com';
 export const CONTACT_WHATSAPP = '+923141030223';
 export const CONTACT_WHATSAPP_FORMATTED = '+92 314 1030223';
-export const CONTACT_LOCATION = 'Karachi & Islamabad, Pakistan';
+
+// Physical Address & Geographic Location
+export const CONTACT_LOCATION = 'Shahrah-e-Faisal, Karachi & Islamabad, Pakistan';
+export const ADDRESS_STREET = 'Shahrah-e-Faisal';
+export const ADDRESS_CITY = 'Karachi';
+export const ADDRESS_REGION = 'Sindh';
+export const ADDRESS_POSTAL = '75400';
+export const ADDRESS_COUNTRY = 'PK';
+export const GEO_LATITUDE = 24.8607;
+export const GEO_LONGITUDE = 67.0611;

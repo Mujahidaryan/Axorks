@@ -1,26 +1,98 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, Award, Code2, Users, ShieldCheck, Layers, Bot, Smartphone } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { ArrowUpRight, Award, Code2, Users, ShieldCheck, Layers, Bot, Smartphone, GraduationCap, CheckCircle2 } from 'lucide-react';
+import { SITE_URL, SITE_NAME, FOUNDER_NAME, FOUNDER_ROLE } from '@/lib/config';
 
 export const metadata: Metadata = {
-  title: 'About Founder & Department Teams | Axorks Software House',
+  title: 'Muhammad Mujahid — Founder & Chief Systems Architect | Axorks',
   description:
-    'Axorks is a founder-led software studio founded by Muhammad Mujahid. Backed by dedicated Web, AI, Mobile App, and UI/UX design teams.',
+    'Official profile of Muhammad Mujahid, Founder & Chief Systems Architect of Axorks Software Studio in Karachi. Full-Stack Software Engineer (BS SE, Bahria University) and Microsoft Innovative Educator Expert (MIEE 2025).',
+  keywords: [
+    'Muhammad Mujahid',
+    'Muhammad Mujahid software engineer',
+    'Muhammad Mujahid Axorks',
+    'Muhammad Mujahid Karachi',
+    'Muhammad Mujahid founder',
+    'Muhammad Mujahid Bahria University',
+    'Founder & Chief Systems Architect',
+    'Axorks Software Studio',
+  ],
+  openGraph: {
+    title: 'Muhammad Mujahid — Founder & Chief Systems Architect | Axorks',
+    description:
+      'Official profile of Muhammad Mujahid, Founder & Chief Systems Architect of Axorks Software Studio in Karachi. Full-Stack Software Engineer (BS SE, Bahria University) & MIEE 2025.',
+    url: `${SITE_URL}/about`,
+    siteName: SITE_NAME,
+    type: 'profile',
+    images: [{ url: `${SITE_URL}/logo.png` }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Muhammad Mujahid — Founder & Chief Systems Architect | Axorks',
+    description: 'Official profile of Muhammad Mujahid, Founder & Chief Systems Architect of Axorks.',
+  },
+  alternates: {
+    canonical: `${SITE_URL}/about`,
+  },
 };
 
 export default function AboutPage() {
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/about#founder`,
+    name: FOUNDER_NAME,
+    alternateName: ['Muhammad Mujahid Axorks', 'Muhammad Mujahid Software Engineer'],
+    jobTitle: FOUNDER_ROLE,
+    worksFor: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    url: `${SITE_URL}/about`,
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Bahria University',
+    },
+    description:
+      'Muhammad Mujahid is the Founder & Chief Systems Architect of Axorks, a Karachi-based software studio. BS Software Engineering (Bahria University), CS educator, and Microsoft Innovative Educator Expert (MIEE 2025).',
+    award: 'Microsoft Innovative Educator Expert (MIEE 2025)',
+    knowsAbout: [
+      'Software Engineering',
+      'Full-Stack Web Development',
+      'Next.js & TypeScript Systems',
+      'AI Integration & OpenAI API',
+      'PostgreSQL Serverless Architecture',
+      'FWO Grid Telemetry Systems',
+    ],
+    sameAs: [
+      'https://github.com/Mujahidaryan',
+      'https://wa.me/923141030223',
+    ],
+  };
+
   return (
     <div className="py-12 sm:py-20">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs items={[{ label: 'Muhammad Mujahid (Founder Profile)' }]} />
+
         <div className="border-b border-obsidian-border pb-6">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
             FOUNDER_VISION_&_STUDIO_ARCHITECTURE
           </span>
           <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            About Axorks
+            Muhammad Mujahid — Founder & Chief Systems Architect
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Axorks is a premier software studio engineered by Founder & Chief Architect Muhammad Mujahid. Backed by dedicated development teams, AI automation specialists, mobile application engineers, and UI/UX designers, we architect high-throughput web applications and public-sector infrastructure solutions.
+            Official profile of Muhammad Mujahid, Founder & Chief Architect of Axorks Software Studio in Karachi & Islamabad. Backed by specialized development teams, AI automation specialists, mobile application engineers, and UI/UX designers.
           </p>
         </div>
 
@@ -45,15 +117,29 @@ export default function AboutPage() {
               </p>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                His engineering portfolio includes national-scale public sector systems — such as <strong className="text-gold">AgroTrace</strong> (connected to FWO grid telemetry monitoring $47M in exports across 3,400+ shipments), the <strong className="text-gold">Sindh Food Security Dashboard</strong> (monitoring 25.45M population across 8 districts under FAO/WFP standards), and <strong className="text-gold">IPMI-OS</strong> (an institutional probabilistic quant engine operating with sub-2.5ms inference speed).
+                His engineering portfolio includes national-scale public sector systems — such as <strong className="text-gold">AgroTrace</strong> (connected to FWO grid telemetry monitoring cold-chain sensor status across export routes), the <strong className="text-gold">Sindh Food Security Dashboard</strong> (monitoring regional food metrics across 8 districts under international FAO/WFP standards), and <strong className="text-gold">IPMI-OS</strong> (an institutional probabilistic quant engine operating with sub-2.5ms inference speed).
               </p>
 
-              {/* Academic Foundation */}
-              <div className="mt-4 rounded border border-obsidian-border bg-obsidian p-4 space-y-1">
-                <span className="font-mono text-[10px] uppercase text-gold">Academic Foundation:</span>
-                <p className="font-mono text-xs text-paper">
-                  Bachelor of Software Engineering (Bahria University) · O & A-Levels Computer Science
-                </p>
+              {/* Academic Foundation & Credential Badges */}
+              <div className="mt-4 rounded border border-obsidian-border bg-obsidian p-4 space-y-3 font-mono text-xs">
+                <div className="flex items-center gap-2 text-gold font-bold">
+                  <GraduationCap className="h-4 w-4" />
+                  <span>Academic Credentials & Industry Recognition</span>
+                </div>
+                <ul className="space-y-1.5 text-steel text-[11px]">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0" />
+                    <span>Bachelor of Software Engineering (BS SE) — Bahria University</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0" />
+                    <span>CAIE O & A-Levels Computer Science Educator (4+ Years Instruction)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0" />
+                    <span>Microsoft Innovative Educator Expert (MIEE 2025 Awardee)</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -71,7 +157,7 @@ export default function AboutPage() {
               </h3>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Axorks is backed by specialized department leads working across 4 core divisions:
+                Under Muhammad Mujahid's technical leadership, Axorks operates across 4 specialized divisions:
               </p>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 pt-2">
@@ -127,6 +213,10 @@ export default function AboutPage() {
               </div>
               <ul className="mt-4 space-y-3.5 text-xs text-steel">
                 <li className="flex items-start justify-between gap-2">
+                  <span>Founder & Architect:</span>
+                  <span className="font-mono font-bold text-gold text-right">M. Mujahid</span>
+                </li>
+                <li className="flex items-start justify-between gap-2">
                   <span>Public Sector Authority:</span>
                   <span className="font-mono font-bold text-gold text-right">FWO Grid & FAO</span>
                 </li>
@@ -135,12 +225,12 @@ export default function AboutPage() {
                   <span className="font-mono font-bold text-paper text-right">6 Live Systems</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
-                  <span>Specialized Departments:</span>
-                  <span className="font-mono text-paper text-right">Web, AI, Mobile, UI/UX</span>
+                  <span>Academic Credentials:</span>
+                  <span className="font-mono text-paper text-right">BS SE (Bahria Univ)</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
-                  <span>Academic Foundation:</span>
-                  <span className="font-mono text-paper text-right">BS SE / O & A-Levels CS</span>
+                  <span>Industry Recognition:</span>
+                  <span className="font-mono text-gold text-right">MIEE 2025</span>
                 </li>
               </ul>
             </div>

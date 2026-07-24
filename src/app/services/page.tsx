@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { ArrowUpRight, Code, Layout, Smartphone, Bot, Landmark, Wrench } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Services Hub | Axorks Software Studio',
+  title: 'Software Engineering Services | Axorks Software Studio Karachi',
   description:
     'Explore Axorks software engineering capabilities: Website Development, Web Applications, Mobile App Development, AI Integration, Government & Enterprise Solutions, and Maintenance Retainers.',
   openGraph: {
@@ -87,6 +88,8 @@ export default function ServicesHubPage() {
   return (
     <div className="py-12 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs items={[{ label: 'Services' }]} />
+
         <div className="border-b border-obsidian-border pb-6">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
             SYSTEM_CAPABILITIES_HUB

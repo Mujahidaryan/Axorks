@@ -1,25 +1,36 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { ArrowUpRight, ArrowLeft, Smartphone, CheckCircle2, HelpCircle } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Cross-Platform Mobile App Development | Axorks Software Studio',
+  title: 'Mobile Application Development in Karachi | Build Mobile Applications iOS & Android',
   description:
-    'High-performance cross-platform mobile applications for iOS and Android built with modern UI, offline data synchronization, and scalable cloud backends.',
+    'High-performance mobile application development in Karachi & Islamabad by Axorks. We build cross-platform mobile applications for iOS and Android with modern UI, offline data sync, and fast cloud backends.',
+  keywords: [
+    'mobile application',
+    'build mobile application',
+    'karachi mobile application development',
+    'mobile application development Karachi',
+    'iOS mobile application development',
+    'Android mobile application development',
+    'cross platform mobile apps Pakistan',
+    'Axorks mobile application',
+  ],
   openGraph: {
-    title: 'Cross-Platform Mobile App Development | Axorks',
+    title: 'Mobile Application Development in Karachi | Build Mobile Applications',
     description:
-      'Cross-platform iOS and Android applications with modern UI, offline sync, and fast cloud backends.',
+      'Cross-platform iOS and Android mobile application development in Karachi with modern UI, offline sync, and fast cloud backends by Axorks Software House.',
     url: `${SITE_URL}/services/mobile-app-development`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cross-Platform Mobile App Development | Axorks',
-    description: 'Cross-platform iOS and Android applications built with modern architecture.',
+    title: 'Mobile Application Development in Karachi | Axorks',
+    description: 'Build mobile applications for iOS and Android with high-performance cross-platform architecture.',
   },
   alternates: {
     canonical: `${SITE_URL}/services/mobile-app-development`,
@@ -30,16 +41,16 @@ export default function MobileAppDevelopmentPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Mobile App Development',
+    name: 'Karachi Mobile Application Development',
     serviceType: 'Mobile Application Development',
     provider: {
       '@type': 'Organization',
-      name: 'Axorks',
+      name: 'Axorks Software House',
       url: SITE_URL,
     },
-    areaServed: 'Worldwide',
+    areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
     description:
-      'Cross-platform iOS and Android mobile app development with modern user interface design, offline data sync, and scalable API backends.',
+      'Cross-platform iOS and Android mobile application development in Karachi with modern user interface design, offline data sync, and scalable API backends.',
   };
 
   const faqSchema = {
@@ -48,23 +59,23 @@ export default function MobileAppDevelopmentPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Do you build native apps for both iOS and Android?',
+        name: 'Do you build mobile applications for both iOS and Android?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We build high-performance cross-platform mobile apps targeting both iOS and Android from a single codebase, delivering native performance without dual codebase costs.',
+          text: 'We build high-performance cross-platform mobile applications targeting both iOS and Android from a single codebase, delivering native performance without dual codebase costs.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can mobile apps connect to our existing web application database?',
+        name: 'Can mobile applications connect to our existing web application database?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. We engineer mobile backends to seamlessly integrate with your existing PostgreSQL, MongoDB, or REST/GraphQL web APIs.',
+          text: 'Yes. We engineer mobile application backends to seamlessly integrate with your existing PostgreSQL, MongoDB, or REST/GraphQL web APIs.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What is the typical investment for a mobile app?',
+        name: 'What is the typical investment to build a mobile application?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: `Typical investment ranges from ${PRICING.mobileAppDevelopment.formattedRange} depending on offline sync requirements, push notification triggers, and store deployment assistance.`,
@@ -87,22 +98,21 @@ export default function MobileAppDevelopmentPage() {
       </head>
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/services"
-          className="inline-flex items-center gap-2 font-mono text-xs text-steel transition-colors hover:text-paper"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" />
-          Back to All Services
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'Services', href: '/services' },
+            { label: 'Mobile Application Development' },
+          ]}
+        />
 
-        <div className="mt-6 border-b border-obsidian-border pb-6">
+        <div className="mt-4 border-b border-obsidian-border pb-6">
           <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
             <Smartphone className="h-3.5 w-3.5" />
             <span>CORE_SERVICE_03</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Mobile App Development
+            Karachi Mobile Application Development Services
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
@@ -115,7 +125,7 @@ export default function MobileAppDevelopmentPage() {
         {/* Rich Factual Prose */}
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
           <p className="text-paper/95 text-base">
-            Axorks engineers cross-platform mobile applications for iOS and Android, focusing on modern UI design, offline data synchronization, and fast backend connectivity. Designed for startups, field operations teams, and growing enterprises, our mobile solutions extend your core business software directly onto mobile devices.
+            Axorks Software House engineers cross-platform mobile applications for iOS and Android in Karachi & Islamabad, focusing on modern UI design, offline data synchronization, and fast backend connectivity. Designed for startups, field operations teams, and growing enterprises seeking to build mobile applications that scale.
           </p>
 
           <p>
@@ -123,14 +133,14 @@ export default function MobileAppDevelopmentPage() {
           </p>
 
           <p>
-            Our mobile development service covers UI/UX wireframing, API integration, local caching mechanisms, store publishing compliance guidance (Apple App Store & Google Play), and post-launch maintenance.
+            Our mobile application development service covers UI/UX wireframing, API integration, local caching mechanisms, store publishing compliance guidance (Apple App Store & Google Play), and post-launch maintenance.
           </p>
         </div>
 
         {/* Deliverables List */}
         <div className="mt-10 schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8">
           <h2 className="font-serif text-xl font-bold text-paper mb-4">
-            What's Included in Mobile App Development
+            What's Included When You Build a Mobile Application
           </h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-xs text-steel">
             <div className="flex items-center gap-2">
@@ -170,25 +180,25 @@ export default function MobileAppDevelopmentPage() {
           <div className="space-y-4">
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
               <h3 className="font-serif text-base font-bold text-paper">
-                Do you build native apps for both iOS and Android?
+                Do you build mobile applications for both iOS and Android?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                We build high-performance cross-platform mobile apps targeting both iOS and Android from a single codebase, delivering native performance without dual codebase costs.
+                We build high-performance cross-platform mobile applications targeting both iOS and Android from a single codebase, delivering native performance without dual codebase costs.
               </p>
             </div>
 
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
               <h3 className="font-serif text-base font-bold text-paper">
-                Can mobile apps connect to our existing web application database?
+                Can mobile applications connect to our existing web application database?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Yes. We engineer mobile backends to seamlessly integrate with your existing PostgreSQL, MongoDB, or REST/GraphQL web APIs.
+                Yes. We engineer mobile application backends to seamlessly integrate with your existing PostgreSQL, MongoDB, or REST/GraphQL web APIs.
               </p>
             </div>
 
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
               <h3 className="font-serif text-base font-bold text-paper">
-                What is the typical investment for a mobile app?
+                What is the typical investment to build a mobile application?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
                 Typical investment ranges from {PRICING.mobileAppDevelopment.formattedRange} depending on offline sync requirements, push notification triggers, and store deployment assistance.
@@ -213,7 +223,7 @@ export default function MobileAppDevelopmentPage() {
             href="/contact?service=Mobile%20App%20Development"
             className="inline-flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
           >
-            Inquire for Mobile App Development
+            Inquire for Mobile Application Development
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>

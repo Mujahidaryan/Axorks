@@ -1,27 +1,40 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, Users, Smartphone, Bot, Layers, Info } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, Users, Smartphone, Bot, Layers, Info, Layout } from 'lucide-react';
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Axorks | Founder-Led Software Studio & Systems Engineering',
+  title: 'Axorks | Top Software House in Karachi & Custom Website Development',
   description:
-    'High-stakes software studio shipping enterprise web platforms, AI integrations, mobile applications, FWO grid systems, and government-grade public sector solutions.',
+    'Axorks is the leading software house in Karachi & Islamabad engineered by Muhammad Mujahid. We specialize in custom website development, web applications, mobile apps, AI solutions, and government enterprise platforms.',
+  keywords: [
+    'software house Karachi',
+    'software house in Karachi',
+    'karachi software house',
+    'top software house in Karachi',
+    'website development Karachi',
+    'custom website development',
+    'web development company Karachi',
+    'software solutions provider Karachi',
+    'mobile app development Karachi',
+    'AI integration services Karachi',
+    'Muhammad Mujahid Axorks',
+  ],
   openGraph: {
-    title: 'Axorks | Founder-Led Software Studio & Systems Engineering',
+    title: 'Axorks | Top Software House in Karachi & Custom Website Development',
     description:
-      'High-stakes software studio shipping enterprise web platforms, AI integrations, mobile applications, and public sector solutions.',
+      'Axorks is the leading software house in Karachi & Islamabad. Architecting enterprise web platforms, custom website development, AI solutions, and mobile applications.',
     url: SITE_URL,
     siteName: SITE_NAME,
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axorks | Founder-Led Software Studio',
-    description: 'High-stakes software studio shipping enterprise web platforms and AI integrations.',
+    title: 'Axorks | Top Software House in Karachi',
+    description: 'Leading software house in Karachi shipping custom website development and enterprise software solutions.',
   },
   alternates: {
     canonical: SITE_URL,
@@ -95,16 +108,16 @@ export default function HomePage() {
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold">
               <ShieldCheck className="h-4 w-4" />
-              <span>Full-Stack Engineering, AI & Mobile Systems Studio</span>
+              <span>Leading Software House & Custom Web Development Studio in Karachi</span>
             </div>
 
             <h1 className="font-serif text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl lg:leading-[1.12]">
-              Architecting high-stakes software.{' '}
-              <span className="italic text-gold">Built to scale.</span>
+              Leading Software House in Karachi.{' '}
+              <span className="italic text-gold">Built to scale custom web solutions.</span>
             </h1>
 
             <p className="text-base leading-relaxed text-steel sm:text-lg">
-              Axorks is an elite software studio engineered by Founder & Chief Architect <strong className="text-paper">Muhammad Mujahid</strong> and backed by specialized teams in <strong className="text-paper">Full-Stack Web, AI Systems, Mobile Engineering, and UI/UX Design</strong>. We ship mission-critical web platforms, mobile apps, and <strong className="text-gold">government-grade public sector solutions (FWO grid & FAO aligned)</strong>.
+              Axorks is a top-tier software house in Karachi & Islamabad engineered by Founder & Chief Architect <strong className="text-paper">Muhammad Mujahid</strong>. Backed by specialized engineering divisions in <strong className="text-paper">Website Development, Full-Stack Web Applications, AI Solutions, Mobile Engineering, and UI/UX Design</strong>, we ship high-performance software and <strong className="text-gold">government-grade public sector platforms (FWO grid & FAO aligned)</strong>.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -117,10 +130,10 @@ export default function HomePage() {
               </Link>
 
               <Link
-                href="/case-studies"
+                href="/services/website-development"
                 className="flex items-center gap-2 rounded border border-obsidian-border bg-obsidian-raised px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-steel transition-colors hover:border-gold/40 hover:text-paper"
               >
-                Explore Case Studies
+                Website Development Services
               </Link>
             </div>
           </div>
@@ -138,12 +151,12 @@ export default function HomePage() {
                   <span className="font-bold text-paper">M. Mujahid</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Production Systems Shipped:</span>
-                  <span className="font-bold text-gold">6+ Live Applications</span>
+                  <span>Primary HQ Location:</span>
+                  <span className="font-bold text-gold">Karachi, Pakistan</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Specialized Divisions:</span>
-                  <span className="font-bold text-paper">Web, AI, Mobile, UI/UX</span>
+                  <span>Core Specializations:</span>
+                  <span className="font-bold text-paper">Web & Software Solutions</span>
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Public Sector Authority:</span>
@@ -167,31 +180,27 @@ export default function HomePage() {
         <div className="border-y border-obsidian-border/80 bg-obsidian-raised/60 py-4.5">
           <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
             <span className="font-mono text-xs font-semibold uppercase text-gold shrink-0">
-              REPRESENTATIVE ENGINEERING DOMAINS:
+              FEATURED SOFTWARE & WEB SOLUTIONS:
             </span>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-steel">
-              <Link href="/case-studies" className="text-gold font-medium hover:underline">
-                AgriTech Telemetry (FWO Grid)
+              <Link href="/services/website-development" className="text-gold font-medium hover:underline">
+                Custom Website Development
               </Link>
               <span className="text-obsidian-border">|</span>
-              <Link href="/case-studies" className="hover:text-paper transition-colors">
-                Telehealth Platforms
+              <Link href="/services/web-applications" className="hover:text-paper transition-colors">
+                Full-Stack Web Applications
               </Link>
               <span className="text-obsidian-border">|</span>
-              <Link href="/case-studies" className="text-gold hover:underline font-semibold">
-                Sindh Food Security (FAO/WFP) ★
+              <Link href="/services/ai-integration" className="text-gold hover:underline font-semibold">
+                AI Solutions & Automations ★
               </Link>
               <span className="text-obsidian-border">|</span>
-              <Link href="/case-studies" className="hover:text-paper transition-colors">
-                Quant Probabilistic AI
+              <Link href="/services/mobile-app-development" className="hover:text-paper transition-colors">
+                Mobile App Engineering
               </Link>
               <span className="text-obsidian-border">|</span>
-              <Link href="/case-studies" className="hover:text-paper transition-colors">
-                Clinical EHR Systems
-              </Link>
-              <span className="text-obsidian-border">|</span>
-              <Link href="/case-studies" className="hover:text-paper transition-colors">
-                Cryptographic Audit Engines
+              <Link href="/services/government-enterprise-solutions" className="hover:text-paper transition-colors">
+                Government Enterprise Software
               </Link>
             </div>
           </div>
@@ -222,7 +231,7 @@ export default function HomePage() {
         <div className="mt-6 schematic-bracket border border-gold/30 bg-obsidian-raised p-4 flex items-start gap-3 text-xs text-steel">
           <Info className="h-4 w-4 text-gold shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            Select systems were engineered by our founder and technical team in a senior engineering capacity for client partner studios. Client identities and proprietary metrics are withheld per non-disclosure agreements (NDAs).
+            Select software solutions were engineered by our founder and technical team in a senior engineering capacity for client partner studios. Client identities and proprietary metrics are withheld per non-disclosure agreements (NDAs).
           </p>
         </div>
 
@@ -240,29 +249,37 @@ export default function HomePage() {
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
                 <Users className="h-4 w-4" />
-                <span>ORGANIZATIONAL_STRUCTURE_&_DEPARTMENTS</span>
+                <span>KARACHI_SOFTWARE_HOUSE_ORGANIZATION</span>
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-                Specialized Engineering & Design Teams
+                Specialized Web & Software Development Teams
               </h2>
               <p className="text-xs leading-relaxed text-steel sm:text-sm max-w-3xl">
-                Axorks operates with dedicated departmental leads working under Founder & Chief Architect Muhammad Mujahid:
+                Axorks operates as a full-service software house in Karachi with dedicated departmental leads working under Founder & Chief Architect Muhammad Mujahid:
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-xs">
               <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
                 <div className="flex items-center gap-2 text-gold font-bold text-sm">
-                  <Code2 className="h-4 w-4" />
-                  Web Engineering
+                  <Layout className="h-4 w-4" />
+                  Website Development
                 </div>
-                <div className="text-steel text-[11px] leading-relaxed">Full-Stack Next.js, Node.js & Postgres Teams</div>
+                <div className="text-steel text-[11px] leading-relaxed">Custom Next.js Marketing & Corporate Sites</div>
+              </div>
+
+              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
+                <div className="flex items-center gap-2 text-gold font-bold text-sm">
+                  <Code2 className="h-4 w-4" />
+                  Web Applications
+                </div>
+                <div className="text-steel text-[11px] leading-relaxed">Full-Stack Next.js, Node.js & Postgres Portals</div>
               </div>
 
               <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
                 <div className="flex items-center gap-2 text-gold font-bold text-sm">
                   <Bot className="h-4 w-4" />
-                  AI & ML Team
+                  AI & Automation Solutions
                 </div>
                 <div className="text-steel text-[11px] leading-relaxed">OpenAI API, Document Processing & ML Pipelines</div>
               </div>
@@ -270,17 +287,9 @@ export default function HomePage() {
               <div className="rounded border border-obsidian-border bg-obsidian-raised p-4 space-y-1.5 border-gold/40">
                 <div className="flex items-center gap-2 text-gold font-bold text-sm">
                   <Smartphone className="h-4 w-4" />
-                  Mobile Engineering
+                  Mobile App Development
                 </div>
                 <div className="text-steel text-[11px] leading-relaxed">Cross-Platform iOS & Android Native App Teams</div>
-              </div>
-
-              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
-                <div className="flex items-center gap-2 text-gold font-bold text-sm">
-                  <Layers className="h-4 w-4" />
-                  UI/UX Department
-                </div>
-                <div className="text-steel text-[11px] leading-relaxed">Design System Spec & Dark-Mode Schematics</div>
               </div>
             </div>
           </div>
@@ -291,22 +300,38 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-b border-obsidian-border pb-4">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            SYSTEM_CAPABILITIES_&_INVESTMENT
+            SOFTWARE_SERVICES_&_INVESTMENT
           </span>
           <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
-            Engineered Software Solutions
+            Custom Software & Website Development Solutions
           </h2>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
           <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
             <div>
-              <Code2 className="h-6 w-6 text-gold" />
+              <Layout className="h-6 w-6 text-gold" />
               <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                Web Applications & Custom Systems
+                Custom Website Development
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                High-throughput full-stack web platforms engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL databases.
+                High-performance corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure for maximum conversion.
+              </p>
+            </div>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
+              <span className="text-steel">Typical Investment:</span>
+              <span className="text-gold font-bold">{PRICING.websiteDevelopment.shortRange}</span>
+            </div>
+          </div>
+
+          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+            <div>
+              <Code2 className="h-6 w-6 text-gold" />
+              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
+                Web Applications & Custom Software
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-steel">
+                Full-stack web portals, CRMs, and operational dashboards featuring serverless PostgreSQL databases and role-based authorization (RBAC).
               </p>
             </div>
             <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
@@ -319,31 +344,15 @@ export default function HomePage() {
             <div>
               <Bot className="h-6 w-6 text-gold" />
               <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                AI Integration & Automation
+                AI Solutions & Automation
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Integrating OpenAI API pipelines, document processing workflows, and custom statistical models directly into live production software.
+                Integrating OpenAI API pipelines, document processing workflows, and custom statistical models directly into production web applications.
               </p>
             </div>
             <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
               <span className="text-steel">Typical Investment:</span>
               <span className="text-gold font-bold">{PRICING.aiIntegration.shortRange}</span>
-            </div>
-          </div>
-
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
-            <div>
-              <Server className="h-6 w-6 text-gold" />
-              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                Government & Enterprise Digital Solutions
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Public sector monitoring systems connected to infrastructure grids (FWO grid & FAO/WFP international humanitarian compliance standards).
-              </p>
-            </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Investment:</span>
-              <span className="text-gold font-bold">{PRICING.governmentEnterprise.shortRange}</span>
             </div>
           </div>
         </div>
@@ -357,10 +366,10 @@ export default function HomePage() {
               INITIATE_PROJECT_DISCOVERY
             </span>
             <h2 className="mt-2 font-serif text-3xl font-bold text-paper sm:text-4xl">
-              Turn complex technical demands into live, production software.
+              Turn complex technical demands into custom software solutions.
             </h2>
             <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm">
-              Work directly with Founder & Chief Architect Muhammad Mujahid and our dedicated engineering departments.
+              Work directly with Karachi's premier software house founder & Chief Architect Muhammad Mujahid.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">

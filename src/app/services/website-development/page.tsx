@@ -1,25 +1,35 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { ArrowUpRight, ArrowLeft, Layout, CheckCircle2, HelpCircle } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Custom Website Development Services | Axorks Software Studio',
+  title: 'Website Development Services in Karachi | Custom Web Development Studio',
   description:
-    'High-performance marketing and corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure for maximum conversions.',
+    'Top-rated custom website development services in Karachi & Islamabad by Axorks Software House. Built with Next.js App Router, TypeScript, and serverless technology for sub-second speed, conversions, and top search engine rankings.',
+  keywords: [
+    'website development Karachi',
+    'custom website development',
+    'web development company Karachi',
+    'website development services Pakistan',
+    'Next.js website development',
+    'software house website development',
+    'Axorks website development',
+  ],
   openGraph: {
-    title: 'Custom Website Development Services | Axorks',
+    title: 'Website Development Services in Karachi | Custom Web Development Studio',
     description:
-      'High-performance corporate websites built with Next.js, TypeScript, and serverless technology for maximum conversion.',
+      'Custom website development services in Karachi built with Next.js App Router, TypeScript, and serverless technology by Axorks Software House.',
     url: `${SITE_URL}/services/website-development`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom Website Development Services | Axorks',
-    description: 'High-performance corporate websites built with Next.js and TypeScript.',
+    title: 'Website Development Services in Karachi | Axorks',
+    description: 'High-performance custom website development services in Karachi built with Next.js.',
   },
   alternates: {
     canonical: `${SITE_URL}/services/website-development`,
@@ -30,16 +40,16 @@ export default function WebsiteDevelopmentPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Website Development',
-    serviceType: 'Web Development',
+    name: 'Website Development Services in Karachi',
+    serviceType: 'Custom Web Development',
     provider: {
       '@type': 'Organization',
-      name: 'Axorks',
+      name: 'Axorks Software House',
       url: SITE_URL,
     },
-    areaServed: 'Worldwide',
+    areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
     description:
-      'Custom corporate and business website development built with Next.js App Router, TypeScript, and serverless databases for speed and lead generation.',
+      'Custom corporate and business website development in Karachi built with Next.js App Router, TypeScript, and serverless databases for speed, security, and lead generation.',
   };
 
   const faqSchema = {
@@ -48,10 +58,10 @@ export default function WebsiteDevelopmentPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Why does Axorks use Next.js instead of WordPress?',
+        name: 'Why does Axorks use Next.js instead of WordPress for website development?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Next.js delivers sub-second page loads, zero plugin security vulnerabilities, superior SEO crawlability, and total design customization without heavy page builder overhead.',
+          text: 'Next.js delivers sub-second page loads, zero plugin security vulnerabilities, superior search engine crawlability, and total design customization without heavy page builder overhead.',
         },
       },
       {
@@ -59,7 +69,7 @@ export default function WebsiteDevelopmentPage() {
         name: 'How long does a custom website development project take?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Typical corporate website builds are completed and deployed within 2 to 4 weeks from initial discovery and content alignment.',
+          text: 'Typical corporate website development builds are completed and deployed within 2 to 4 weeks from initial discovery and content alignment.',
         },
       },
       {
@@ -87,22 +97,21 @@ export default function WebsiteDevelopmentPage() {
       </head>
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/services"
-          className="inline-flex items-center gap-2 font-mono text-xs text-steel transition-colors hover:text-paper"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" />
-          Back to All Services
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'Services', href: '/services' },
+            { label: 'Website Development' },
+          ]}
+        />
 
-        <div className="mt-6 border-b border-obsidian-border pb-6">
+        <div className="mt-4 border-b border-obsidian-border pb-6">
           <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
             <Layout className="h-3.5 w-3.5" />
             <span>CORE_SERVICE_01</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Custom Website Development
+            Custom Website Development Services in Karachi
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
@@ -115,22 +124,22 @@ export default function WebsiteDevelopmentPage() {
         {/* Rich Factual Prose */}
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
           <p className="text-paper/95 text-base">
-            Axorks engineers high-performance corporate and business websites built with Next.js App Router, TypeScript, and serverless cloud infrastructure. Designed specifically for technical founders, high-ticket agency owners, and growing enterprises, our websites replace slow, bloated WordPress themes with clean, security-hardened code.
+            Axorks Software House engineers high-performance custom website development solutions built with Next.js App Router, TypeScript, and serverless cloud infrastructure in Karachi & Islamabad. Designed specifically for technical founders, high-ticket agency owners, and growing enterprises, our websites replace slow, bloated WordPress themes with clean, security-hardened code.
           </p>
 
           <p>
-            Every website we ship is optimized for conversion performance, converting cold referral, Upwork, or WhatsApp traffic into qualified consultation bookings. By leveraging server-side rendering (SSR), responsive mobile-first Tailwind layouts, and custom micro-animations, we deliver sub-second page loading speeds that boost search engine indexing and lower bounce rates.
+            Every website we ship is optimized for search engine indexing and conversion performance, converting cold referral, Google Search, or WhatsApp traffic into qualified consultation bookings. By leveraging server-side rendering (SSR), responsive mobile-first Tailwind layouts, and custom micro-animations, we deliver sub-second page loading speeds that boost search engine ranking and lower bounce rates.
           </p>
 
           <p>
-            Our website development engagement includes full SEO schema setup, analytics integration, custom contact API routes, security hardening, and complete source code repository handoff.
+            Our custom website development engagement includes full technical SEO schema setup, analytics integration, custom contact API routes, security hardening, and complete source code repository handoff.
           </p>
         </div>
 
         {/* Deliverables List */}
         <div className="mt-10 schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8">
           <h2 className="font-serif text-xl font-bold text-paper mb-4">
-            What's Included in Website Development
+            What's Included in Custom Website Development
           </h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-xs text-steel">
             <div className="flex items-center gap-2">
@@ -170,10 +179,10 @@ export default function WebsiteDevelopmentPage() {
           <div className="space-y-4">
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
               <h3 className="font-serif text-base font-bold text-paper">
-                Why does Axorks use Next.js instead of WordPress?
+                Why does Axorks use Next.js instead of WordPress for website development?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Next.js delivers sub-second page loads, zero plugin security vulnerabilities, superior SEO crawlability, and total design customization without heavy page builder overhead.
+                Next.js delivers sub-second page loads, zero plugin security vulnerabilities, superior search engine crawlability, and total design customization without heavy page builder overhead.
               </p>
             </div>
 
@@ -182,7 +191,7 @@ export default function WebsiteDevelopmentPage() {
                 How long does a custom website development project take?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical corporate website builds are completed and deployed within 2 to 4 weeks from initial discovery and content alignment.
+                Typical corporate website development builds are completed and deployed within 2 to 4 weeks from initial discovery and content alignment.
               </p>
             </div>
 

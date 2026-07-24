@@ -1,24 +1,35 @@
 import { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
-import { Mail, Phone, MapPin, Clock, ShieldCheck } from 'lucide-react';
-import { SITE_URL, SITE_NAME, FOUNDER_NAME, CONTACT_EMAIL, CONTACT_WHATSAPP_FORMATTED } from '@/lib/config';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { Mail, Phone, MapPin, Clock, ShieldCheck, Building2 } from 'lucide-react';
+import {
+  SITE_URL,
+  SITE_NAME,
+  FOUNDER_NAME,
+  CONTACT_EMAIL,
+  CONTACT_WHATSAPP_FORMATTED,
+  ADDRESS_STREET,
+  ADDRESS_CITY,
+  ADDRESS_REGION,
+  ADDRESS_POSTAL,
+} from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Contact & Project Discovery | Axorks Software Studio',
+  title: 'Contact Axorks | Software House in Karachi & Project Discovery',
   description:
-    'Schedule a technical consultation with Founder & Chief Architect Muhammad Mujahid. Get a transparent fixed-price quote and timeline estimate for your project.',
+    'Schedule a technical consultation with Founder & Chief Architect Muhammad Mujahid at Axorks Software Studio, Shahrah-e-Faisal, Karachi, Pakistan.',
   openGraph: {
-    title: 'Contact & Project Discovery | Axorks Software Studio',
+    title: 'Contact Axorks | Software House in Karachi',
     description:
-      'Schedule a technical consultation with Founder & Chief Architect Muhammad Mujahid. Get a transparent fixed-price quote.',
+      'Schedule a technical consultation with Founder & Chief Architect Muhammad Mujahid at Axorks Software Studio, Shahrah-e-Faisal, Karachi.',
     url: `${SITE_URL}/contact`,
     siteName: SITE_NAME,
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact & Project Discovery | Axorks Software Studio',
+    title: 'Contact Axorks | Software House in Karachi',
     description: 'Schedule a technical consultation with Founder & Chief Architect Muhammad Mujahid.',
   },
   alternates: {
@@ -30,15 +41,17 @@ export default function ContactPage() {
   return (
     <div className="py-12 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs items={[{ label: 'Contact & Project Discovery' }]} />
+
         <div className="border-b border-obsidian-border pb-6">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
             INITIATE_ENGINEERING_DISCOVERY
           </span>
           <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Contact Axorks
+            Contact Axorks Software Studio
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Connect directly with Founder & Chief Architect {FOUNDER_NAME} and our engineering department leads. Guaranteed response within 24 hours.
+            Connect directly with Founder & Chief Architect {FOUNDER_NAME} and our engineering department leads at our Karachi software studio. Guaranteed response within 24 hours.
           </p>
         </div>
 
@@ -85,9 +98,17 @@ export default function ContactPage() {
                   </a>
                 </div>
 
+                <div className="flex items-start gap-2 text-steel">
+                  <Building2 className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                  <div className="space-y-0.5">
+                    <span className="text-paper font-semibold block">Karachi Headquarters:</span>
+                    <span>{ADDRESS_STREET}, {ADDRESS_CITY}, {ADDRESS_REGION} {ADDRESS_POSTAL}, Pakistan</span>
+                  </div>
+                </div>
+
                 <div className="flex items-center gap-2 text-steel">
                   <MapPin className="h-4 w-4 text-gold shrink-0" />
-                  <span>Karachi, Pakistan</span>
+                  <span>Serving: Karachi, Islamabad & Worldwide</span>
                 </div>
 
                 <div className="flex items-center gap-2 text-steel">
