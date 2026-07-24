@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Factual Q&A covering Axorks capabilities, pricing ranges, and technical workflows.',
   },
   alternates: {
-    canonical: `${SITE_URL}/faq`,
+    canonical: '/faq',
   },
 };
 
@@ -30,11 +30,11 @@ export default function FaqPage() {
   const faqs = [
     {
       q: 'What is Axorks and what services does it provide?',
-      a: 'Axorks is a founder-led software studio founded by Muhammad Mujahid in Karachi, Pakistan. We specialize in custom web application development, corporate website engineering, cross-platform mobile app development, AI integration & automation, government/enterprise digital solutions, and monthly technical maintenance retainers.',
+      a: 'Axorks is a founder-led software studio based in Karachi, Pakistan. We specialize in custom web application development, corporate website engineering, cross-platform mobile app development, AI integration & automation, government/enterprise digital solutions, and monthly technical maintenance retainers.',
     },
     {
       q: 'Who is the founder of Axorks and what are their credentials?',
-      a: 'Axorks was founded by Muhammad Mujahid, a Full-Stack Software Engineer (BS Software Engineering, Bahria University) and Computer Science Educator with 4+ years of experience across CAIE O/A-Levels instruction and shipped production systems. He is recognized as a Microsoft Innovative Educator Expert (MIEE 2025).',
+      a: 'Axorks was founded by a Full-Stack Software Engineer (BS Software Engineering, Bahria University) and Computer Science Educator with 4+ years of experience across CAIE O/A-Levels instruction and shipped production systems. Our founder is recognized as a Microsoft Innovative Educator Expert (MIEE 2025).',
     },
     {
       q: 'What technologies and frameworks does Axorks use?',
@@ -115,7 +115,7 @@ export default function FaqPage() {
             Have a specific technical question?
           </h3>
           <p className="mt-2 text-xs text-steel">
-            Book a direct technical discovery call with Founder & Chief Architect {FOUNDER_NAME}.
+            Book a direct technical discovery call with our engineering team.
           </p>
           <Link
             href="/contact"

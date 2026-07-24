@@ -6,7 +6,7 @@ import { SITE_URL } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Software Engineering Services | Axorks Software Studio Karachi',
+  title: 'Software Development Services | Axorks Software Studio Karachi',
   description:
     'Explore Axorks software engineering capabilities: Website Development, Web Applications, Mobile App Development, AI Integration, Government & Enterprise Solutions, and Maintenance Retainers.',
   openGraph: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Explore Axorks software engineering offerings and investment ranges.',
   },
   alternates: {
-    canonical: `${SITE_URL}/services`,
+    canonical: '/services',
   },
 };
 

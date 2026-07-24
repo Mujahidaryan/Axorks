@@ -1,13 +1,14 @@
 import { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { Mail, Phone, MapPin, Clock, ShieldCheck, Building2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, ShieldCheck, Building2, Linkedin } from 'lucide-react';
 import {
   SITE_URL,
   SITE_NAME,
   FOUNDER_NAME,
   CONTACT_EMAIL,
   CONTACT_WHATSAPP_FORMATTED,
+  LINKEDIN_URL,
   ADDRESS_STREET,
   ADDRESS_CITY,
   ADDRESS_REGION,
@@ -18,11 +19,11 @@ import { PRICING } from '@/lib/pricing';
 export const metadata: Metadata = {
   title: 'Contact Axorks | Software House in Karachi & Project Discovery',
   description:
-    'Schedule a technical consultation with Founder & Chief Architect Muhammad Mujahid at Axorks Software Studio, Shahrah-e-Faisal, Karachi, Pakistan.',
+    'Schedule a technical consultation with Axorks Software Studio at Shahrah-e-Faisal, Karachi, Pakistan. Fast response within 24 hours.',
   openGraph: {
     title: 'Contact Axorks | Software House in Karachi',
     description:
-      'Schedule a technical consultation with Founder & Chief Architect Muhammad Mujahid at Axorks Software Studio, Shahrah-e-Faisal, Karachi.',
+      'Schedule a technical consultation with Axorks Software Studio at Shahrah-e-Faisal, Karachi.',
     url: `${SITE_URL}/contact`,
     siteName: SITE_NAME,
     images: [{ url: `${SITE_URL}/logo.png` }],
@@ -30,10 +31,10 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Axorks | Software House in Karachi',
-    description: 'Schedule a technical consultation with Founder & Chief Architect Muhammad Mujahid.',
+    description: 'Schedule a technical consultation with Axorks Software Studio.',
   },
   alternates: {
-    canonical: `${SITE_URL}/contact`,
+    canonical: '/contact',
   },
 };
 
@@ -51,7 +52,7 @@ export default function ContactPage() {
             Contact Axorks Software Studio
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Connect directly with Founder & Chief Architect {FOUNDER_NAME} and our engineering department leads at our Karachi software studio. Guaranteed response within 24 hours.
+            Connect directly with our engineering leadership and department leads at our Karachi software studio. Guaranteed response within 24 hours.
           </p>
         </div>
 
@@ -67,15 +68,15 @@ export default function ContactPage() {
               <div className="flex items-center gap-2 border-b border-obsidian-border pb-3 text-gold">
                 <ShieldCheck className="h-5 w-5" />
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider">
-                  DIRECT_FOUNDER_LINE
+                  DIRECT_STUDIO_LINE
                 </span>
               </div>
 
               <h2 className="font-serif text-xl font-bold text-paper">
-                Muhammad Mujahid
+                Axorks Engineering Office
               </h2>
               <p className="text-xs text-steel">
-                Founder & Chief Systems Architect
+                Software House & Systems Studio
               </p>
 
               <div className="space-y-3 pt-2 text-xs font-mono">
@@ -95,6 +96,18 @@ export default function ContactPage() {
                     className="hover:text-paper transition-colors"
                   >
                     {CONTACT_WHATSAPP_FORMATTED} (WhatsApp)
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-2 text-steel">
+                  <Linkedin className="h-4 w-4 text-gold shrink-0" />
+                  <a
+                    href={LINKEDIN_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-paper transition-colors"
+                  >
+                    linkedin.com/in/axorks
                   </a>
                 </div>
 

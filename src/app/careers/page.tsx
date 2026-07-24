@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { ArrowUpRight, Mail, Users, ShieldCheck, Briefcase, CheckCircle2, Star } from 'lucide-react';
 import { SITE_URL, SITE_NAME, CAREERS_EMAIL } from '@/lib/config';
 
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Explore engineering, sales, AI, and design career opportunities at Axorks.',
   },
   alternates: {
-    canonical: `${SITE_URL}/careers`,
+    canonical: '/careers',
   },
 };
 
@@ -39,7 +40,7 @@ export default function CareersPage() {
       education: "Bachelor's degree preferred in Business/Marketing or related field, but not a hard requirement — equivalent practical sales track record is accepted.",
       compensation: 'Competitive base salary plus a performance-driven commission structure — full details discussed at interview.',
       summary:
-        'We are seeking an ambitious, high-bar Sales Specialist to drive international outbound business development. Working directly with Founder & Chief Architect Muhammad Mujahid, you will engage high-ticket enterprise prospects, technical founders, and international clients.',
+        'We are seeking an ambitious, high-bar Sales Specialist to drive international outbound business development. Working directly with studio leadership, you will engage high-ticket enterprise prospects, technical founders, and international clients.',
       requirements: [
         '3+ years of proven sales track record in B2B software services or digital agency outreach.',
         'Excellent spoken English fluency with clear, confident phone and video communication — this is a client-facing role involving outbound calls to international prospects.',
@@ -48,7 +49,7 @@ export default function CareersPage() {
         'Self-driven work ethic with a disciplined approach to pipeline management and CRM tracking.',
       ],
       offers: [
-        'Direct collaboration with Founder & Chief Systems Architect.',
+        'Direct collaboration with studio founder & Chief Systems Architect.',
         'High-upside performance commission structure on high-ticket international contracts.',
         'Exposure to mission-critical public-sector and enterprise software engagements.',
         'Flexible working arrangement (remote / hybrid / on-site).',
@@ -131,7 +132,7 @@ export default function CareersPage() {
       offers: [
         'Lead practical AI integration across high-ROI client automation projects.',
         'R&D flexibility on cutting-edge LLM toolchains and statistical algorithms.',
-        'Direct collaboration with Founder on quantitative engine development.',
+        'Direct collaboration with studio founder on quantitative engine development.',
         'Flexible working arrangement (remote / hybrid / on-site).',
       ],
     },
@@ -140,6 +141,8 @@ export default function CareersPage() {
   return (
     <div className="py-12 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs items={[{ label: 'Careers' }]} />
+
         {/* Page Header */}
         <div className="border-b border-obsidian-border pb-6">
           <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold mb-3">
@@ -151,7 +154,7 @@ export default function CareersPage() {
             Join the Axorks Engineering Team
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            We are hiring selective, high-bar talent across Sales, Web Development, UI/UX Design, and AI Engineering. Build mission-critical software with direct founder access and zero bureaucracy.
+            We are hiring selective, high-bar talent across Sales, Web Development, UI/UX Design, and AI Engineering. Build mission-critical software with direct studio leadership and zero bureaucracy.
           </p>
         </div>
 

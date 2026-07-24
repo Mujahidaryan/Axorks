@@ -9,7 +9,7 @@ import { PRICING } from '@/lib/pricing';
 export const metadata: Metadata = {
   title: 'Axorks | Top Software House in Karachi & Custom Website Development',
   description:
-    'Axorks is the leading software house in Karachi & Islamabad engineered by Muhammad Mujahid. We specialize in custom website development, web applications, mobile apps, AI solutions, and government enterprise platforms.',
+    'Axorks is the leading software house in Karachi & Islamabad. We specialize in custom website development, web applications, mobile apps, AI solutions, and government enterprise platforms.',
   keywords: [
     'software house Karachi',
     'software house in Karachi',
@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     'software solutions provider Karachi',
     'mobile app development Karachi',
     'AI integration services Karachi',
-    'Muhammad Mujahid Axorks',
   ],
   openGraph: {
     title: 'Axorks | Top Software House in Karachi & Custom Website Development',
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     description: 'Leading software house in Karachi shipping custom website development and enterprise software solutions.',
   },
   alternates: {
-    canonical: SITE_URL,
+    canonical: '/',
   },
 };
 
@@ -117,7 +116,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base leading-relaxed text-steel sm:text-lg">
-              Axorks is a top-tier software house in Karachi & Islamabad engineered by Founder & Chief Architect <strong className="text-paper">Muhammad Mujahid</strong>. Backed by specialized engineering divisions in <strong className="text-paper">Website Development, Full-Stack Web Applications, AI Solutions, Mobile Engineering, and UI/UX Design</strong>, we ship high-performance software and <strong className="text-gold">government-grade public sector platforms (FWO grid & FAO aligned)</strong>.
+              Axorks is a top-tier software house in Karachi & Islamabad. Backed by specialized engineering divisions in <strong className="text-paper">Website Development, Full-Stack Web Applications, AI Solutions, Mobile Engineering, and UI/UX Design</strong>, we ship high-performance software and <strong className="text-gold">government-grade public sector platforms (FWO grid & FAO aligned)</strong>.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -147,8 +146,8 @@ export default function HomePage() {
               </div>
               <ul className="mt-4 space-y-3.5 font-mono text-xs text-steel">
                 <li className="flex items-center justify-between">
-                  <span>Founder & Chief Architect:</span>
-                  <span className="font-bold text-paper">M. Mujahid</span>
+                  <span>Studio Engineering:</span>
+                  <span className="font-bold text-paper">Axorks Studio</span>
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Primary HQ Location:</span>
@@ -231,7 +230,7 @@ export default function HomePage() {
         <div className="mt-6 schematic-bracket border border-gold/30 bg-obsidian-raised p-4 flex items-start gap-3 text-xs text-steel">
           <Info className="h-4 w-4 text-gold shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            Select software solutions were engineered by our founder and technical team in a senior engineering capacity for client partner studios. Client identities and proprietary metrics are withheld per non-disclosure agreements (NDAs).
+            Select software solutions were engineered by our technical team in a senior engineering capacity for client partner studios. Client identities and proprietary metrics are withheld per non-disclosure agreements (NDAs).
           </p>
         </div>
 
@@ -255,7 +254,7 @@ export default function HomePage() {
                 Specialized Web & Software Development Teams
               </h2>
               <p className="text-xs leading-relaxed text-steel sm:text-sm max-w-3xl">
-                Axorks operates as a full-service software house in Karachi with dedicated departmental leads working under Founder & Chief Architect Muhammad Mujahid:
+                Axorks operates as a full-service software house in Karachi with dedicated departmental leads across 4 core divisions:
               </p>
             </div>
 
@@ -369,7 +368,7 @@ export default function HomePage() {
               Turn complex technical demands into custom software solutions.
             </h2>
             <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm">
-              Work directly with Karachi's premier software house founder & Chief Architect Muhammad Mujahid.
+              Work directly with Karachi's premier software house engineering department.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">

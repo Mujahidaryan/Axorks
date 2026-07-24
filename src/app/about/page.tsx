@@ -2,26 +2,24 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { ArrowUpRight, Award, Code2, Users, ShieldCheck, Layers, Bot, Smartphone, GraduationCap, CheckCircle2 } from 'lucide-react';
-import { SITE_URL, SITE_NAME, FOUNDER_NAME, FOUNDER_ROLE } from '@/lib/config';
+import { SITE_URL, SITE_NAME, FOUNDER_NAME, FOUNDER_ROLE, LINKEDIN_URL } from '@/lib/config';
 
 export const metadata: Metadata = {
-  title: 'Muhammad Mujahid — Founder & Chief Systems Architect | Axorks',
+  title: 'About Studio Architecture & Leadership | Axorks',
   description:
-    'Official profile of Muhammad Mujahid, Founder & Chief Systems Architect of Axorks Software Studio in Karachi. Full-Stack Software Engineer (BS SE, Bahria University) and Microsoft Innovative Educator Expert (MIEE 2025).',
+    'Axorks is an elite software studio in Karachi & Islamabad founded by Muhammad Mujahid. Backed by dedicated Web, AI, Mobile App, and UI/UX design teams.',
   keywords: [
-    'Muhammad Mujahid',
-    'Muhammad Mujahid software engineer',
+    'Axorks',
+    'Software House Karachi',
+    'Software House in Karachi',
+    'Custom Software Studio',
+    'Software Architecture Karachi',
     'Muhammad Mujahid Axorks',
-    'Muhammad Mujahid Karachi',
-    'Muhammad Mujahid founder',
-    'Muhammad Mujahid Bahria University',
-    'Founder & Chief Systems Architect',
-    'Axorks Software Studio',
   ],
   openGraph: {
-    title: 'Muhammad Mujahid — Founder & Chief Systems Architect | Axorks',
+    title: 'About Studio Architecture & Leadership | Axorks',
     description:
-      'Official profile of Muhammad Mujahid, Founder & Chief Systems Architect of Axorks Software Studio in Karachi. Full-Stack Software Engineer (BS SE, Bahria University) & MIEE 2025.',
+      'Axorks is a founder-led software studio in Karachi & Islamabad engineered by Muhammad Mujahid. Backed by specialized engineering and design teams.',
     url: `${SITE_URL}/about`,
     siteName: SITE_NAME,
     type: 'profile',
@@ -29,11 +27,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Muhammad Mujahid — Founder & Chief Systems Architect | Axorks',
-    description: 'Official profile of Muhammad Mujahid, Founder & Chief Systems Architect of Axorks.',
+    title: 'About Studio Architecture & Leadership | Axorks',
+    description: 'Axorks is a founder-led software studio engineered by Muhammad Mujahid.',
   },
   alternates: {
-    canonical: `${SITE_URL}/about`,
+    canonical: '/about',
   },
 };
 
@@ -43,7 +41,6 @@ export default function AboutPage() {
     '@type': 'Person',
     '@id': `${SITE_URL}/about#founder`,
     name: FOUNDER_NAME,
-    alternateName: ['Muhammad Mujahid Axorks', 'Muhammad Mujahid Software Engineer'],
     jobTitle: FOUNDER_ROLE,
     worksFor: {
       '@type': 'Organization',
@@ -56,18 +53,10 @@ export default function AboutPage() {
       name: 'Bahria University',
     },
     description:
-      'Muhammad Mujahid is the Founder & Chief Systems Architect of Axorks, a Karachi-based software studio. BS Software Engineering (Bahria University), CS educator, and Microsoft Innovative Educator Expert (MIEE 2025).',
+      'Muhammad Mujahid is the Founder & Chief Systems Architect of Axorks. BS Software Engineering (Bahria University) and Microsoft Innovative Educator Expert (MIEE 2025).',
     award: 'Microsoft Innovative Educator Expert (MIEE 2025)',
-    knowsAbout: [
-      'Software Engineering',
-      'Full-Stack Web Development',
-      'Next.js & TypeScript Systems',
-      'AI Integration & OpenAI API',
-      'PostgreSQL Serverless Architecture',
-      'FWO Grid Telemetry Systems',
-    ],
     sameAs: [
-      'https://github.com/Mujahidaryan',
+      LINKEDIN_URL,
       'https://wa.me/923141030223',
     ],
   };
@@ -82,17 +71,17 @@ export default function AboutPage() {
       </head>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ label: 'Muhammad Mujahid (Founder Profile)' }]} />
+        <Breadcrumbs items={[{ label: 'About Studio & Founder' }]} />
 
         <div className="border-b border-obsidian-border pb-6">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            FOUNDER_VISION_&_STUDIO_ARCHITECTURE
+            STUDIO_ARCHITECTURE_&_LEADERSHIP
           </span>
           <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Muhammad Mujahid — Founder & Chief Systems Architect
+            About Axorks Software Studio
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Official profile of Muhammad Mujahid, Founder & Chief Architect of Axorks Software Studio in Karachi & Islamabad. Backed by specialized development teams, AI automation specialists, mobile application engineers, and UI/UX designers.
+            Axorks is a premier software studio in Karachi & Islamabad. Backed by dedicated development teams, AI automation specialists, mobile application engineers, and UI/UX designers, we architect high-throughput web applications and public-sector infrastructure solutions.
           </p>
         </div>
 
@@ -104,7 +93,7 @@ export default function AboutPage() {
               <div className="flex items-center gap-2 border-b border-obsidian-border pb-3 text-gold">
                 <ShieldCheck className="h-5 w-5" />
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider">
-                  FOUNDER_&_CHIEF_SYSTEMS_ARCHITECT
+                  STUDIO_FOUNDER_&_CHIEF_ARCHITECT
                 </span>
               </div>
 
@@ -113,18 +102,18 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Muhammad Mujahid is the Founder & Chief Software Architect of Axorks. Specializing in high-stakes full-stack application development, serverless Postgres data architectures, and AI integration, Muhammad has architected and delivered <strong className="text-paper">6 major production systems</strong>.
+                Muhammad Mujahid serves as the Founder & Chief Systems Architect of Axorks. Specializing in high-stakes full-stack application development, serverless Postgres data architectures, and AI integration, our technical team has architected and delivered <strong className="text-paper">6 major production systems</strong>.
               </p>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                His engineering portfolio includes national-scale public sector systems — such as <strong className="text-gold">AgroTrace</strong> (connected to FWO grid telemetry monitoring cold-chain sensor status across export routes), the <strong className="text-gold">Sindh Food Security Dashboard</strong> (monitoring regional food metrics across 8 districts under international FAO/WFP standards), and <strong className="text-gold">IPMI-OS</strong> (an institutional probabilistic quant engine operating with sub-2.5ms inference speed).
+                Our engineering portfolio includes national-scale public sector systems — such as <strong className="text-gold">AgroTrace</strong> (connected to FWO grid telemetry monitoring cold-chain sensor status across export routes), the <strong className="text-gold">Sindh Food Security Dashboard</strong> (monitoring regional food metrics across 8 districts under international FAO/WFP standards), and <strong className="text-gold">IPMI-OS</strong> (an institutional probabilistic quant engine operating with sub-2.5ms inference speed).
               </p>
 
               {/* Academic Foundation & Credential Badges */}
               <div className="mt-4 rounded border border-obsidian-border bg-obsidian p-4 space-y-3 font-mono text-xs">
                 <div className="flex items-center gap-2 text-gold font-bold">
                   <GraduationCap className="h-4 w-4" />
-                  <span>Academic Credentials & Industry Recognition</span>
+                  <span>Academic Foundation & Recognition</span>
                 </div>
                 <ul className="space-y-1.5 text-steel text-[11px]">
                   <li className="flex items-center gap-2">
@@ -157,7 +146,7 @@ export default function AboutPage() {
               </h3>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Under Muhammad Mujahid's technical leadership, Axorks operates across 4 specialized divisions:
+                Axorks operates with specialized department leads working across 4 core divisions:
               </p>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 pt-2">
@@ -213,16 +202,16 @@ export default function AboutPage() {
               </div>
               <ul className="mt-4 space-y-3.5 text-xs text-steel">
                 <li className="flex items-start justify-between gap-2">
-                  <span>Founder & Architect:</span>
-                  <span className="font-mono font-bold text-gold text-right">M. Mujahid</span>
-                </li>
-                <li className="flex items-start justify-between gap-2">
                   <span>Public Sector Authority:</span>
                   <span className="font-mono font-bold text-gold text-right">FWO Grid & FAO</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
                   <span>Shipped Production Apps:</span>
                   <span className="font-mono font-bold text-paper text-right">6 Live Systems</span>
+                </li>
+                <li className="flex items-start justify-between gap-2">
+                  <span>Specialized Departments:</span>
+                  <span className="font-mono text-paper text-right">Web, AI, Mobile, UI/UX</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
                   <span>Academic Credentials:</span>
@@ -240,7 +229,7 @@ export default function AboutPage() {
                 Initiate Consultation
               </h3>
               <p className="mt-2 text-xs text-steel">
-                Discuss your technical specs directly with Founder & Chief Architect Muhammad Mujahid.
+                Discuss your technical specifications directly with our engineering team leads.
               </p>
               <Link
                 href="/contact"

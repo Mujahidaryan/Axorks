@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowUpRight, Github, Mail, Phone, Linkedin } from 'lucide-react';
-import { CONTACT_EMAIL } from '@/lib/config';
+import { ArrowUpRight, Mail, Phone, Linkedin } from 'lucide-react';
+import { CONTACT_EMAIL, LINKEDIN_URL } from '@/lib/config';
 
 export default function Footer() {
   return (
@@ -106,21 +106,15 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/Mujahidaryan"
+                  href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 transition-colors hover:text-paper"
                 >
-                  <Github className="h-3.5 w-3.5 text-gold" />
-                  github.com/Mujahidaryan
+                  <Linkedin className="h-3.5 w-3.5 text-gold" />
+                  linkedin.com/in/axorks
                   <ArrowUpRight className="h-3 w-3 text-steel" />
                 </a>
-              </li>
-              <li className="pt-0.5">
-                <span className="inline-flex items-center gap-2 text-steel/60 text-[11px] font-mono">
-                  <Linkedin className="h-3.5 w-3.5 text-steel/50" />
-                  [LinkedIn URL — pending, confirm with founder]
-                </span>
               </li>
             </ul>
           </div>

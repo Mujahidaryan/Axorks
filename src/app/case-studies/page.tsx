@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Technical case studies detailing 6 production systems engineered by Axorks.',
   },
   alternates: {
-    canonical: `${SITE_URL}/case-studies`,
+    canonical: '/case-studies',
   },
 };
 

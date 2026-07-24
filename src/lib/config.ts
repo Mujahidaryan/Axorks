@@ -1,5 +1,5 @@
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://axorks.com';
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.axorks.com';
 
 export const SITE_NAME = 'Axorks';
 export const SITE_TAGLINE = 'Engineering the future. Solving today.';
@@ -10,6 +10,7 @@ export const CONTACT_EMAIL = 'contact@axorks.com';
 export const CAREERS_EMAIL = 'careers@axorks.com';
 export const CONTACT_WHATSAPP = '+923141030223';
 export const CONTACT_WHATSAPP_FORMATTED = '+92 314 1030223';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/axorks';
 
 // Physical Address & Geographic Location
 export const CONTACT_LOCATION = 'Shahrah-e-Faisal, Karachi & Islamabad, Pakistan';

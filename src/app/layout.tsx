@@ -4,9 +4,9 @@ import Footer from '@/components/Footer';
 import {
   SITE_URL,
   SITE_NAME,
-  SITE_TAGLINE,
   FOUNDER_NAME,
   CONTACT_EMAIL,
+  LINKEDIN_URL,
   ADDRESS_STREET,
   ADDRESS_CITY,
   ADDRESS_REGION,
@@ -18,16 +18,15 @@ import {
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL('https://www.axorks.com'),
   title: {
     default: 'Axorks | Software House & Systems Engineering Studio in Karachi',
     template: '%s | Axorks Software Studio',
   },
   description:
-    'Axorks is an elite software studio in Karachi & Islamabad engineered by Founder & Chief Architect Muhammad Mujahid. We architect full-stack web platforms, AI integrations, mobile apps, and government-grade public sector solutions.',
+    'Axorks is an elite founder-led software studio in Karachi & Islamabad. We architect full-stack web platforms, AI integrations, mobile apps, and government-grade public sector solutions.',
   keywords: [
     'Axorks',
-    'Muhammad Mujahid',
     'Software House Karachi',
     'Software House in Karachi',
     'Software Agency Karachi',
@@ -42,6 +41,11 @@ export const metadata: Metadata = {
   authors: [{ name: FOUNDER_NAME, url: SITE_URL }],
   creator: FOUNDER_NAME,
   publisher: SITE_NAME,
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   robots: {
     index: true,
     follow: true,
@@ -78,7 +82,7 @@ export const metadata: Metadata = {
     images: [`${SITE_URL}/logo.png`],
   },
   alternates: {
-    canonical: SITE_URL,
+    canonical: '/',
   },
 };
 
@@ -99,7 +103,7 @@ export default function RootLayout({
         logo: `${SITE_URL}/logo.png`,
         image: `${SITE_URL}/logo.png`,
         description:
-          'Axorks is a founder-led software studio in Karachi & Islamabad engineered by Muhammad Mujahid. We build full-stack web applications, AI integrations, mobile apps, and government-grade public sector software.',
+          'Axorks is a founder-led software studio in Karachi & Islamabad. We build full-stack web applications, AI integrations, mobile apps, and government-grade public sector software.',
         priceRange: '$$$',
         telephone: '+923141030223',
         email: CONTACT_EMAIL,
@@ -137,12 +141,12 @@ export default function RootLayout({
             'FWO Grid Telemetry Systems',
           ],
           sameAs: [
-            'https://github.com/Mujahidaryan',
+            LINKEDIN_URL,
             'https://wa.me/923141030223',
           ],
         },
         sameAs: [
-          'https://github.com/Mujahidaryan',
+          LINKEDIN_URL,
           'https://wa.me/923141030223',
         ],
       },
@@ -166,7 +170,7 @@ export default function RootLayout({
           'Government Systems',
         ],
         sameAs: [
-          'https://github.com/Mujahidaryan',
+          LINKEDIN_URL,
           'https://wa.me/923141030223',
         ],
       },

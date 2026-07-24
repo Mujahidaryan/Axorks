@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Factual technical guides on software stack selection and AI integration.',
   },
   alternates: {
-    canonical: `${SITE_URL}/blog`,
+    canonical: '/blog',
   },
 };
 
