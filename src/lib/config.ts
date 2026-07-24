@@ -6,7 +6,8 @@ export const SITE_TAGLINE = 'Engineering the future. Solving today.';
 export const FOUNDER_NAME = 'Muhammad Mujahid';
 export const FOUNDER_ROLE = 'Founder & Chief Systems Architect';
 
-export const CONTACT_EMAIL = 'muhammad.mujahid.dev@gmail.com';
+export const CONTACT_EMAIL = 'contact@axorks.com';
+export const CAREERS_EMAIL = 'careers@axorks.com';
 export const CONTACT_WHATSAPP = '+923141030223';
 export const CONTACT_WHATSAPP_FORMATTED = '+92 314 1030223';
-export const CONTACT_LOCATION = 'Karachi, Pakistan';
+export const CONTACT_LOCATION = 'Karachi & Islamabad, Pakistan';

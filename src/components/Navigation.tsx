@@ -16,6 +16,7 @@ export default function Navigation() {
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Process', href: '/process' },
     { label: 'About', href: '/about' },
+    { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -45,7 +46,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Nav Items */}
-        <nav className="hidden md:flex md:items-center md:gap-8">
+        <nav className="hidden md:flex md:items-center md:gap-7">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (

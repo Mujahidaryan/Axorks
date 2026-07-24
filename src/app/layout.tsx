@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { SITE_URL, SITE_NAME, SITE_TAGLINE, FOUNDER_NAME } from '@/lib/config';
+import { SITE_URL, SITE_NAME, SITE_TAGLINE, FOUNDER_NAME, CONTACT_EMAIL } from '@/lib/config';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -90,13 +90,13 @@ export default function RootLayout({
     },
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Karachi',
+      addressLocality: 'Karachi & Islamabad',
       addressCountry: 'PK',
     },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      email: 'muhammad.mujahid.dev@gmail.com',
+      email: CONTACT_EMAIL,
       telephone: '+923141030223',
       availableLanguage: ['English', 'Urdu'],
     },
