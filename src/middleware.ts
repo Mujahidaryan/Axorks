@@ -2,17 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const host = request.headers.get('host') || '';
-  const url = request.nextUrl.clone();
-
-  // Redirect www.axorks.com to axorks.com
-  if (host === 'www.axorks.com') {
-    url.host = 'axorks.com';
-    url.port = '';
-    url.protocol = 'https';
-    return NextResponse.redirect(url, { status: 301 });
-  }
-
+  // Allow Vercel Edge to handle domain routing (axorks.com & www.axorks.com 308 redirect) natively without header conflicts.
   return NextResponse.next();
 }
 
