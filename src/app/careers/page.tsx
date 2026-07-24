@@ -7,7 +7,7 @@ import { SITE_URL, SITE_NAME, CAREERS_EMAIL } from '@/lib/config';
 export const metadata: Metadata = {
   title: 'Careers & Engineering Talent | Axorks Software Studio',
   description:
-    'Explore engineering, sales, AI, and design career opportunities at Axorks. Join an elite founder-led software studio shipping production-grade platforms.',
+    'Explore engineering, sales, AI, and design career opportunities at Axorks. Join a founder-led software studio shipping production-grade platforms.',
   openGraph: {
     title: 'Careers & Engineering Talent | Axorks Software Studio',
     description:
@@ -34,40 +34,40 @@ export default function CareersPage() {
       isFeatured: true,
       department: 'Growth & Business Development',
       location: 'Karachi & Islamabad, Pakistan',
-      arrangement: 'Work arrangement (remote / hybrid / on-site) is determined per role — Axorks reserves the right to set this based on business needs.',
-      employmentType: '[Employment Type — confirm: Full-time / Contract]',
-      experience: '3+ years proven B2B software / agency sales track record',
-      education: "Bachelor's degree preferred in Business/Marketing or related field, but not a hard requirement — equivalent practical sales track record is accepted.",
-      compensation: 'Competitive base salary plus a performance-driven commission structure — full details discussed at interview.',
+      arrangement: 'Flexible work arrangement (Remote / Hybrid / On-site) evaluated per role.',
+      employmentType: 'Full-time / Contract',
+      experience: '3+ years B2B software or agency sales experience',
+      education: "Bachelor's degree preferred or equivalent practical sales track record.",
+      compensation: 'Competitive base salary plus performance-driven commission structure.',
       summary:
-        'We are seeking an ambitious, high-bar Sales Specialist to drive international outbound business development. Working directly with studio leadership, you will engage high-ticket enterprise prospects, technical founders, and international clients.',
+        'We are seeking an ambitious Sales Specialist to drive international outbound business development. Working directly with studio leadership, you will engage enterprise prospects, technical founders, and international clients.',
       requirements: [
-        '3+ years of proven sales track record in B2B software services or digital agency outreach.',
-        'Excellent spoken English fluency with clear, confident phone and video communication — this is a client-facing role involving outbound calls to international prospects.',
+        '3+ years of sales track record in B2B software services or digital agency outreach.',
+        'Excellent spoken English fluency with clear, confident phone and video communication.',
         'Strong critical thinking, analytical objection-handling, and consultative sales capabilities.',
         'Ability to qualify leads, explain technical software capabilities, and articulate ROI to executive stakeholders.',
         'Self-driven work ethic with a disciplined approach to pipeline management and CRM tracking.',
       ],
       offers: [
         'Direct collaboration with studio founder & Chief Systems Architect.',
-        'High-upside performance commission structure on high-ticket international contracts.',
-        'Exposure to mission-critical public-sector and enterprise software engagements.',
-        'Flexible working arrangement (remote / hybrid / on-site).',
+        'High-upside performance commission structure on international contracts.',
+        'Exposure to enterprise and public-sector software engagements.',
+        'Flexible working arrangement (Remote / Hybrid / On-site).',
       ],
     },
     {
       id: 'fullstack-engineer',
       title: 'Web / Full-Stack Engineer',
       isFeatured: false,
-      department: 'Web Engineering Division',
+      department: 'Web Engineering',
       location: 'Karachi & Islamabad, Pakistan',
-      arrangement: 'Work arrangement (remote / hybrid / on-site) is determined per role — Axorks reserves the right to set this based on business needs.',
-      employmentType: '[Employment Type — confirm: Full-time / Contract]',
+      arrangement: 'Flexible work arrangement (Remote / Hybrid / On-site) evaluated per role.',
+      employmentType: 'Full-time / Contract',
       experience: '3+ years full-stack web engineering experience',
-      education: "Bachelor's degree in CS/SE preferred, but not a hard requirement — equivalent shipped production portfolio is accepted.",
+      education: "Bachelor's degree in CS/SE preferred or equivalent shipped production portfolio.",
       compensation: 'Competitive market rate based on engineering depth and portfolio experience.',
       summary:
-        'Join our core Web Engineering Division building high-throughput web applications, relational serverless database architectures, and custom client portals using Next.js App Router, TypeScript, and Node.js.',
+        'Join our Web Engineering team building high-throughput web applications, relational serverless database architectures, and custom client portals using Next.js App Router, TypeScript, and Node.js.',
       requirements: [
         '3+ years of experience engineering production web applications.',
         'Deep proficiency in Next.js 14/15 App Router, React, TypeScript, and Tailwind CSS.',
@@ -76,25 +76,25 @@ export default function CareersPage() {
         'Clean, modular code habits with disciplined Git repository practices.',
       ],
       offers: [
-        'Engineering ownership across live production platforms and government-grade systems.',
-        'Direct mentorship and architectural review with Chief Software Architect.',
+        'Engineering ownership across live production platforms.',
+        'Direct technical collaboration with Chief Systems Architect.',
         'Modern tech stack without legacy codebase burden.',
-        'Flexible working arrangement (remote / hybrid / on-site).',
+        'Flexible working arrangement (Remote / Hybrid / On-site).',
       ],
     },
     {
       id: 'ui-ux-designer',
       title: 'UI/UX Designer',
       isFeatured: false,
-      department: 'UI/UX Department',
+      department: 'UI/UX Design',
       location: 'Karachi & Islamabad, Pakistan',
-      arrangement: 'Work arrangement (remote / hybrid / on-site) is determined per role — Axorks reserves the right to set this based on business needs.',
-      employmentType: '[Employment Type — confirm: Full-time / Contract]',
+      arrangement: 'Flexible work arrangement (Remote / Hybrid / On-site) evaluated per role.',
+      employmentType: 'Full-time / Contract',
       experience: '3+ years digital product design experience',
-      education: "Bachelor's degree preferred, but not a hard requirement — equivalent portfolio of shipped digital products is accepted.",
+      education: "Bachelor's degree preferred or equivalent portfolio of shipped digital products.",
       compensation: 'Competitive market rate based on design system expertise.',
       summary:
-        'Craft dark-mode schematics, conversion-focused user interfaces, and modular design systems for complex web applications, mobile platforms, and executive dashboards.',
+        'Craft dark-mode schematics, conversion-focused user interfaces, and modular design systems for web applications, mobile platforms, and executive dashboards.',
       requirements: [
         '3+ years of experience designing complex web and mobile user interfaces.',
         'Expertise in Figma design systems, component tokens, responsive layouts, and auto-layout.',
@@ -103,22 +103,22 @@ export default function CareersPage() {
         'Comprehensive portfolio demonstrating shipped digital product interfaces.',
       ],
       offers: [
-        'Opportunity to shape the visual brand identity and design language of Axorks platforms.',
-        'Collaborative workflow directly with engineering department leads.',
+        'Opportunity to shape visual design systems for client platforms.',
+        'Collaborative workflow directly with engineering team members.',
         'Exposure to diverse product domains (AgriTech, Quant Systems, Healthcare, Public Sector).',
-        'Flexible working arrangement (remote / hybrid / on-site).',
+        'Flexible working arrangement (Remote / Hybrid / On-site).',
       ],
     },
     {
       id: 'ai-automation-engineer',
       title: 'AI & Automation Engineer',
       isFeatured: false,
-      department: 'AI & ML Team',
+      department: 'AI & Machine Learning',
       location: 'Karachi & Islamabad, Pakistan',
-      arrangement: 'Work arrangement (remote / hybrid / on-site) is determined per role — Axorks reserves the right to set this based on business needs.',
-      employmentType: '[Employment Type — confirm: Full-time / Contract]',
+      arrangement: 'Flexible work arrangement (Remote / Hybrid / On-site) evaluated per role.',
+      employmentType: 'Full-time / Contract',
       experience: '3+ years AI/ML / backend engineering experience',
-      education: "Bachelor's degree in CS/Data Science preferred, but not a hard requirement — equivalent practical AI implementation background is accepted.",
+      education: "Bachelor's degree in CS/Data Science preferred or equivalent practical AI implementation background.",
       compensation: 'Competitive market rate based on AI pipeline engineering experience.',
       summary:
         'Engineer practical AI automation pipelines integrating OpenAI APIs, automated document parsing (PDF/Image) workflows, vector search embeddings, and statistical machine learning models.',
@@ -133,7 +133,7 @@ export default function CareersPage() {
         'Lead practical AI integration across high-ROI client automation projects.',
         'R&D flexibility on cutting-edge LLM toolchains and statistical algorithms.',
         'Direct collaboration with studio founder on quantitative engine development.',
-        'Flexible working arrangement (remote / hybrid / on-site).',
+        'Flexible working arrangement (Remote / Hybrid / On-site).',
       ],
     },
   ];
@@ -154,7 +154,7 @@ export default function CareersPage() {
             Join the Axorks Engineering Team
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            We are hiring selective, high-bar talent across Sales, Web Development, UI/UX Design, and AI Engineering. Build mission-critical software with direct studio leadership and zero bureaucracy.
+            We are hiring selective talent across Sales, Web Development, UI/UX Design, and AI Engineering. Build production software directly alongside studio leadership.
           </p>
         </div>
 
@@ -205,7 +205,7 @@ export default function CareersPage() {
                     {role.isFeatured && (
                       <span className="inline-flex items-center gap-1 rounded border border-gold/50 bg-gold/15 px-2 py-0.5 font-mono text-[9px] font-bold text-gold uppercase">
                         <Star className="h-2.5 w-2.5 text-gold fill-gold" />
-                        FLAGSHIP HIRE
+                        FEATURED ROLE
                       </span>
                     )}
                   </div>

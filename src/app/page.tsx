@@ -1,20 +1,19 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, Users, Smartphone, Bot, Layers, Info, Layout } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Code2, Server, Users, Smartphone, Bot, Layers, Info, Layout, Clock, FileText } from 'lucide-react';
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Axorks | Top Software House in Karachi & Custom Website Development',
+  title: 'Axorks | Software House in Karachi & Custom Website Development',
   description:
-    'Axorks is the leading software house in Karachi & Islamabad. We specialize in custom website development, web applications, mobile apps, AI solutions, and government enterprise platforms.',
+    'Axorks is a software house in Karachi & Islamabad. We specialize in custom website development, web applications, mobile apps, AI solutions, and public sector software platforms.',
   keywords: [
     'software house Karachi',
     'software house in Karachi',
     'karachi software house',
-    'top software house in Karachi',
     'website development Karachi',
     'custom website development',
     'web development company Karachi',
@@ -23,17 +22,17 @@ export const metadata: Metadata = {
     'AI integration services Karachi',
   ],
   openGraph: {
-    title: 'Axorks | Top Software House in Karachi & Custom Website Development',
+    title: 'Axorks | Software House in Karachi & Custom Website Development',
     description:
-      'Axorks is the leading software house in Karachi & Islamabad. Architecting enterprise web platforms, custom website development, AI solutions, and mobile applications.',
+      'Axorks is a software house in Karachi & Islamabad. Architecting custom web platforms, website development, AI solutions, and mobile applications.',
     url: SITE_URL,
     siteName: SITE_NAME,
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axorks | Top Software House in Karachi',
-    description: 'Leading software house in Karachi shipping custom website development and enterprise software solutions.',
+    title: 'Axorks | Software House in Karachi',
+    description: 'Software house in Karachi shipping custom website development and software solutions.',
   },
   alternates: {
     canonical: '/',
@@ -48,11 +47,11 @@ export default function HomePage() {
       name: 'AgroTrace',
       category: 'AgriTech · FWO Grid & Cold-Chain Telemetry',
       description:
-        'National-scale supply chain tracking platform connected to FWO grid telemetry — monitoring thermal compliance logs, cold-chain sensor status, export compliance, and predictive logistics delay analytics across international shipping routes.',
-      problem: 'Agricultural exporters lacked real-time visibility into temperature anomalies and logistics delays during transit.',
-      built: 'High-throughput tracking portal integrated with FWO grid telemetry, automated thermal sensor logs, and real-time export validation.',
+        'Supply chain tracking platform connected to FWO grid telemetry — monitoring thermal sensor logs, cold-chain status, export compliance, and logistics analytics across shipping routes.',
+      problem: 'Agricultural exporters lacked real-time visibility into temperature anomalies during transit.',
+      built: 'Tracking portal integrated with FWO grid telemetry, automated thermal sensor logs, and export validation.',
       challenges: 'Ingesting continuous sensor data streams during intermittent network connectivity across shipping routes.',
-      outcome: 'Achieved sub-second alert dispatch for thermal threshold breaches and automated compliance validation.',
+      outcome: 'Delivered automated thermal threshold breach alerts and compliance validation.',
       stack: ['Next.js 14', 'TypeScript', 'PostgreSQL', 'FWO Telemetry', 'REST APIs', 'Vercel'],
       status: 'Representative Engineering Work',
       stats: [
@@ -66,11 +65,11 @@ export default function HomePage() {
       name: 'Sindh Food Security Dashboard',
       category: 'Government & Public Sector · FAO / WFP',
       description:
-        'Government-grade humanitarian food security monitoring platform covering regional population metrics across multiple districts under international FAO/WFP operational standards.',
+        'Humanitarian food security monitoring platform covering regional population metrics across multiple districts under international FAO/WFP operational standards.',
       problem: 'District survey teams relied on delayed manual reporting, hindering emergency response during regional crop vulnerabilities.',
-      built: 'IPC Phase Classification monitoring platform with real-time district gap alerts, automated crop telemetry, and field CSV export.',
-      challenges: 'Standardizing disparate district field survey metrics into a unified executive-level decision dashboard.',
-      outcome: 'Provided humanitarian planners with real-time district gap analysis and automated alert dispatch.',
+      built: 'IPC Phase Classification monitoring platform with district gap alerts, automated crop telemetry, and field CSV export.',
+      challenges: 'Standardizing disparate district field survey metrics into a unified executive decision dashboard.',
+      outcome: 'Provided humanitarian planners with district gap analysis and alert dispatch.',
       stack: ['Next.js 14', 'TypeScript', 'Recharts', 'Tailwind CSS', 'Vercel'],
       isGovernment: true,
       status: 'Government System',
@@ -85,15 +84,15 @@ export default function HomePage() {
       name: 'IPMI-OS',
       category: 'Quant Systems · Probabilistic AI Engine',
       description:
-        'Institutional Probabilistic Market Intelligence OS. Bayesian Hidden Markov regime detection, recursive signal fusion with 90% confidence intervals, and CVaR-gated risk engine.',
+        'Institutional Probabilistic Market Intelligence OS. Bayesian Hidden Markov regime detection, recursive signal fusion with statistical confidence intervals, and risk engine.',
       problem: 'Rule-based indicators failed during volatile market regime shifts.',
-      built: 'Event-driven probabilistic engine delivering sub-2.5ms inference on live tick microstructure data.',
-      challenges: 'Maintaining sub-3ms inference latency under high-frequency market tick volume without thread blocking.',
-      outcome: 'Delivered real-time regime classification with 90% live confidence intervals and automated CVaR gating.',
+      built: 'Event-driven probabilistic engine delivering sub-millisecond inference on live tick microstructure data.',
+      challenges: 'Maintaining low inference latency under high-frequency market tick volume without thread blocking.',
+      outcome: 'Delivered real-time regime classification with live confidence intervals.',
       stack: ['Python', 'Bayesian HMM', 'React/TS', 'NATS JetStream', 'Vercel'],
       status: 'Representative Engineering Work',
       stats: [
-        { label: 'Inference Speed', value: 'Sub-2.5ms' },
+        { label: 'Inference Speed', value: 'Sub-millisecond' },
         { label: 'Statistical Engine', value: 'Bayesian HMM' },
       ],
     },
@@ -107,16 +106,16 @@ export default function HomePage() {
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold">
               <ShieldCheck className="h-4 w-4" />
-              <span>Leading Software House & Custom Web Development Studio in Karachi</span>
+              <span>Software House & Custom Web Development Studio in Karachi</span>
             </div>
 
             <h1 className="font-serif text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl lg:leading-[1.12]">
-              Leading Software House in Karachi.{' '}
-              <span className="italic text-gold">Built to scale custom web solutions.</span>
+              Software House in Karachi.{' '}
+              <span className="italic text-gold">Built to scale web software.</span>
             </h1>
 
             <p className="text-base leading-relaxed text-steel sm:text-lg">
-              Axorks is a top-tier software house in Karachi & Islamabad. Backed by specialized engineering divisions in <strong className="text-paper">Website Development, Full-Stack Web Applications, AI Solutions, Mobile Engineering, and UI/UX Design</strong>, we ship high-performance software and <strong className="text-gold">government-grade public sector platforms (FWO grid & FAO aligned)</strong>.
+              Axorks is a founder-led 5-person software studio in Karachi & Islamabad. Engineered across <strong className="text-paper">Website Development, Full-Stack Web Applications, AI Automations, Mobile Engineering, and UI/UX Design</strong>, we ship reliable web applications and <strong className="text-gold">public sector monitoring platforms (FWO grid & FAO aligned)</strong>.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -128,11 +127,13 @@ export default function HomePage() {
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
 
+              {/* Low-Commitment CTA Option */}
               <Link
-                href="/services/website-development"
-                className="flex items-center gap-2 rounded border border-obsidian-border bg-obsidian-raised px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-steel transition-colors hover:border-gold/40 hover:text-paper"
+                href="/contact?cta=estimate"
+                className="flex items-center gap-2 rounded border border-gold/40 bg-obsidian-raised px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-gold transition-colors hover:bg-gold/10"
               >
-                Website Development Services
+                <FileText className="h-4 w-4 text-gold" />
+                Request Scoped Estimate (48h)
               </Link>
             </div>
           </div>
@@ -146,19 +147,19 @@ export default function HomePage() {
               </div>
               <ul className="mt-4 space-y-3.5 font-mono text-xs text-steel">
                 <li className="flex items-center justify-between">
-                  <span>Studio Engineering:</span>
-                  <span className="font-bold text-paper">Axorks Studio</span>
+                  <span>Founder & Chief Architect:</span>
+                  <span className="font-bold text-paper">M. Mujahid</span>
+                </li>
+                <li className="flex items-center justify-between">
+                  <span>Core Team Size:</span>
+                  <span className="font-bold text-gold">5 Skilled Team Members</span>
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Primary HQ Location:</span>
-                  <span className="font-bold text-gold">Karachi, Pakistan</span>
+                  <span className="font-bold text-paper">Karachi, Pakistan</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Core Specializations:</span>
-                  <span className="font-bold text-paper">Web & Software Solutions</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span>Public Sector Authority:</span>
+                  <span>Public Sector Work:</span>
                   <span className="font-bold text-gold">FWO Grid & FAO Standards</span>
                 </li>
                 <li className="flex items-center justify-between">
@@ -199,7 +200,7 @@ export default function HomePage() {
               </Link>
               <span className="text-obsidian-border">|</span>
               <Link href="/services/government-enterprise-solutions" className="hover:text-paper transition-colors">
-                Government Enterprise Software
+                Public Sector Platforms
               </Link>
             </div>
           </div>
@@ -226,11 +227,11 @@ export default function HomePage() {
           </Link>
         </div>
 
-        {/* NDA Disclaimer Note */}
+        {/* Grounded NDA Disclaimer Note */}
         <div className="mt-6 schematic-bracket border border-gold/30 bg-obsidian-raised p-4 flex items-start gap-3 text-xs text-steel">
           <Info className="h-4 w-4 text-gold shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            Select software solutions were engineered by our technical team in a senior engineering capacity for client partner studios. Client identities and proprietary metrics are withheld per non-disclosure agreements (NDAs).
+            Representative software systems engineered by our technical team in senior engineering capacities. Specific client identities and proprietary metrics are protected under NDA.
           </p>
         </div>
 
@@ -248,13 +249,13 @@ export default function HomePage() {
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
                 <Users className="h-4 w-4" />
-                <span>KARACHI_SOFTWARE_HOUSE_ORGANIZATION</span>
+                <span>5-PERSON_STUDIO_TEAM</span>
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-                Specialized Web & Software Development Teams
+                A 5-Person Team Across Web, AI, Mobile & Design
               </h2>
               <p className="text-xs leading-relaxed text-steel sm:text-sm max-w-3xl">
-                Axorks operates as a full-service software house in Karachi with dedicated departmental leads across 4 core divisions:
+                Axorks operates as a founder-led 5-person studio in Karachi covering four core software disciplines:
               </p>
             </div>
 
@@ -314,11 +315,11 @@ export default function HomePage() {
                 Custom Website Development
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                High-performance corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure for maximum conversion.
+                Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure for conversion.
               </p>
             </div>
             <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Investment:</span>
+              <span className="text-steel">Typical Engagement:</span>
               <span className="text-gold font-bold">{PRICING.websiteDevelopment.shortRange}</span>
             </div>
           </div>
@@ -330,11 +331,11 @@ export default function HomePage() {
                 Web Applications & Custom Software
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Full-stack web portals, CRMs, and operational dashboards featuring serverless PostgreSQL databases and role-based authorization (RBAC).
+                Full-stack web portals, CRMs, and operational dashboards featuring serverless PostgreSQL databases and role-based authorization.
               </p>
             </div>
             <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Investment:</span>
+              <span className="text-steel">Typical Engagement:</span>
               <span className="text-gold font-bold">{PRICING.webApplications.shortRange}</span>
             </div>
           </div>
@@ -346,11 +347,11 @@ export default function HomePage() {
                 AI Solutions & Automation
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Integrating OpenAI API pipelines, document processing workflows, and custom statistical models directly into production web applications.
+                Integrating OpenAI API pipelines, document processing workflows, and custom statistical models into production web applications.
               </p>
             </div>
             <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Investment:</span>
+              <span className="text-steel">Typical Engagement:</span>
               <span className="text-gold font-bold">{PRICING.aiIntegration.shortRange}</span>
             </div>
           </div>
@@ -365,10 +366,10 @@ export default function HomePage() {
               INITIATE_PROJECT_DISCOVERY
             </span>
             <h2 className="mt-2 font-serif text-3xl font-bold text-paper sm:text-4xl">
-              Turn complex technical demands into custom software solutions.
+              Turn software requirements into production code.
             </h2>
             <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm">
-              Work directly with Karachi's premier software house engineering department.
+              Work directly with Founder & Chief Architect Muhammad Mujahid and our 5-person engineering team.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -376,17 +377,16 @@ export default function HomePage() {
                 href="/contact"
                 className="flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-colors hover:bg-signal-blue-hover"
               >
-                Schedule Consultation
+                Schedule Technical Consultation
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
-              <a
-                href="https://wa.me/923141030223"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-mono text-xs text-gold hover:underline"
+              <Link
+                href="/contact?cta=estimate"
+                className="font-mono text-xs text-gold hover:underline flex items-center gap-1"
               >
-                Direct WhatsApp Connect (+92 314 1030223)
-              </a>
+                <FileText className="h-3.5 w-3.5" />
+                Request 48-Hour Scoped Estimate
+              </Link>
             </div>
           </div>
         </div>

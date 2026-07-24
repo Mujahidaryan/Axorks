@@ -1,11 +1,10 @@
 import { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { Mail, Phone, MapPin, Clock, ShieldCheck, Building2, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, ShieldCheck, Building2, Linkedin, Lock, FileCheck } from 'lucide-react';
 import {
   SITE_URL,
   SITE_NAME,
-  FOUNDER_NAME,
   CONTACT_EMAIL,
   CONTACT_WHATSAPP_FORMATTED,
   LINKEDIN_URL,
@@ -19,11 +18,11 @@ import { PRICING } from '@/lib/pricing';
 export const metadata: Metadata = {
   title: 'Contact Axorks | Software House in Karachi & Project Discovery',
   description:
-    'Schedule a technical consultation with Axorks Software Studio at Shahrah-e-Faisal, Karachi, Pakistan. Fast response within 24 hours.',
+    'Schedule a technical consultation or request a 48-hour scoped estimate with Axorks Software Studio at Shahrah-e-Faisal, Karachi, Pakistan.',
   openGraph: {
     title: 'Contact Axorks | Software House in Karachi',
     description:
-      'Schedule a technical consultation with Axorks Software Studio at Shahrah-e-Faisal, Karachi.',
+      'Schedule a technical consultation or request a 48-hour scoped estimate with Axorks Software Studio.',
     url: `${SITE_URL}/contact`,
     siteName: SITE_NAME,
     images: [{ url: `${SITE_URL}/logo.png` }],
@@ -52,11 +51,22 @@ export default function ContactPage() {
             Contact Axorks Software Studio
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Connect directly with our engineering leadership and department leads at our Karachi software studio. Guaranteed response within 24 hours.
+            Connect directly with our engineering team at our Karachi software studio. Choose between scheduling a technical consultation or requesting a 48-hour scoped estimate below.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-3">
+        {/* Low-commitment CTA notice banner */}
+        <div className="mt-8 schematic-bracket border border-gold/40 bg-obsidian-raised p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <FileCheck className="h-5 w-5 text-gold shrink-0" />
+            <div className="text-xs">
+              <span className="font-mono text-gold font-bold block uppercase">Lightweight Project Scoping:</span>
+              <span className="text-steel">Prefer a quick initial quote? Submit your core requirements in the form below for a 48-hour scoped proposal.</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-3">
           {/* Main Form Col */}
           <div className="lg:col-span-2">
             <ContactForm />
@@ -126,7 +136,7 @@ export default function ContactPage() {
 
                 <div className="flex items-center gap-2 text-steel">
                   <Clock className="h-4 w-4 text-gold shrink-0" />
-                  <span>Response Window: &lt; 24 Hours</span>
+                  <span>Response SLA: &lt; 24 Hours</span>
                 </div>
               </div>
             </div>
@@ -134,7 +144,7 @@ export default function ContactPage() {
             {/* Static USD Investment Reference Card */}
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-3">
               <span className="font-mono text-xs text-gold uppercase font-bold">
-                TYPICAL_INVESTMENT_SUMMARY
+                ENGAGEMENT_TIER_SUMMARY
               </span>
               <ul className="space-y-2 text-xs text-steel font-mono">
                 <li className="flex justify-between border-b border-obsidian-border/50 pb-1.5">
@@ -158,6 +168,17 @@ export default function ContactPage() {
                   <span className="text-paper font-bold">{PRICING.maintenanceSupport.shortRange}</span>
                 </li>
               </ul>
+            </div>
+
+            {/* Security & Confidentiality Card */}
+            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-2 text-xs">
+              <div className="flex items-center gap-2 text-gold font-mono font-bold uppercase">
+                <Lock className="h-4 w-4" />
+                <span>NDA & Confidentiality</span>
+              </div>
+              <p className="text-steel leading-relaxed">
+                All client proposals and conversations are executed under strict mutual confidentiality protocols. Source code ownership and IP are transferred upon delivery.
+              </p>
             </div>
           </div>
         </div>

@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { ArrowUpRight, Award, Code2, Users, ShieldCheck, Layers, Bot, Smartphone, GraduationCap, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Award, Code2, Users, ShieldCheck, Layers, Bot, Smartphone, GraduationCap, CheckCircle2, Lock } from 'lucide-react';
 import { SITE_URL, SITE_NAME, FOUNDER_NAME, FOUNDER_ROLE, LINKEDIN_URL } from '@/lib/config';
 
 export const metadata: Metadata = {
   title: 'About Studio Architecture & Leadership | Axorks',
   description:
-    'Axorks is an elite software studio in Karachi & Islamabad founded by Muhammad Mujahid. Backed by dedicated Web, AI, Mobile App, and UI/UX design teams.',
+    'Axorks is a software studio in Karachi & Islamabad founded by Muhammad Mujahid. Backed by a team of 5 engineers and designers across Web, AI, Mobile, and UI/UX design.',
   keywords: [
     'Axorks',
     'Software House Karachi',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Studio Architecture & Leadership | Axorks',
     description:
-      'Axorks is a founder-led software studio in Karachi & Islamabad engineered by Muhammad Mujahid. Backed by specialized engineering and design teams.',
+      'Axorks is a founder-led software studio in Karachi & Islamabad. Backed by a core 5-person team across Web, AI, Mobile, and UI/UX design.',
     url: `${SITE_URL}/about`,
     siteName: SITE_NAME,
     type: 'profile',
@@ -53,7 +53,7 @@ export default function AboutPage() {
       name: 'Bahria University',
     },
     description:
-      'Muhammad Mujahid is the Founder & Chief Systems Architect of Axorks. BS Software Engineering (Bahria University) and Microsoft Innovative Educator Expert (MIEE 2025).',
+      'Muhammad Mujahid is the founder of Axorks software company and Chief Systems Architect. BS Software Engineering (Bahria University) and Microsoft Innovative Educator Expert (MIEE 2025).',
     award: 'Microsoft Innovative Educator Expert (MIEE 2025)',
     sameAs: [
       LINKEDIN_URL,
@@ -71,17 +71,17 @@ export default function AboutPage() {
       </head>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ label: 'About Studio & Founder' }]} />
+        <Breadcrumbs items={[{ label: 'About Studio & Leadership' }]} />
 
         <div className="border-b border-obsidian-border pb-6">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            STUDIO_ARCHITECTURE_&_LEADERSHIP
+            STUDIO_LEADERSHIP_&_TEAM
           </span>
           <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
             About Axorks Software Studio
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Axorks is a premier software studio in Karachi & Islamabad. Backed by dedicated development teams, AI automation specialists, mobile application engineers, and UI/UX designers, we architect high-throughput web applications and public-sector infrastructure solutions.
+            Axorks is a founder-led software studio based in Karachi & Islamabad. Operating as a 5-person team of skilled engineers and designers, we build custom web applications, AI automations, mobile apps, and public sector monitoring platforms.
           </p>
         </div>
 
@@ -102,18 +102,18 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Muhammad Mujahid serves as the Founder & Chief Systems Architect of Axorks. Specializing in high-stakes full-stack application development, serverless Postgres data architectures, and AI integration, our technical team has architected and delivered <strong className="text-paper">6 major production systems</strong>.
+                Muhammad Mujahid serves as the founder of Axorks software company and Chief Systems Architect. Specializing in full-stack web applications, serverless database architectures, and AI API integrations, our technical team has delivered <strong className="text-paper">6 major production systems</strong>.
               </p>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Our engineering portfolio includes national-scale public sector systems — such as <strong className="text-gold">AgroTrace</strong> (connected to FWO grid telemetry monitoring cold-chain sensor status across export routes), the <strong className="text-gold">Sindh Food Security Dashboard</strong> (monitoring regional food metrics across 8 districts under international FAO/WFP standards), and <strong className="text-gold">IPMI-OS</strong> (an institutional probabilistic quant engine operating with sub-2.5ms inference speed).
+                Our engineering background includes public sector telemetry systems — such as <strong className="text-gold">AgroTrace</strong> (cold-chain tracking connected to FWO grid telemetry), the <strong className="text-gold">Sindh Food Security Dashboard</strong> (monitoring district population metrics under FAO/WFP standards), and <strong className="text-gold">IPMI-OS</strong> (a quantitative probabilistic engine).
               </p>
 
               {/* Academic Foundation & Credential Badges */}
               <div className="mt-4 rounded border border-obsidian-border bg-obsidian p-4 space-y-3 font-mono text-xs">
                 <div className="flex items-center gap-2 text-gold font-bold">
                   <GraduationCap className="h-4 w-4" />
-                  <span>Academic Foundation & Recognition</span>
+                  <span>Academic Background & Recognition</span>
                 </div>
                 <ul className="space-y-1.5 text-steel text-[11px]">
                   <li className="flex items-center gap-2">
@@ -122,7 +122,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0" />
-                    <span>CAIE O & A-Levels Computer Science Educator (4+ Years Instruction)</span>
+                    <span>Computer Science Educator (4+ Years CAIE Instruction)</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0" />
@@ -132,64 +132,75 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Dedicated Department Structure */}
+            {/* Core Team Structure (5-Person Team Pass) */}
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8 space-y-4">
               <div className="flex items-center gap-2 text-gold">
                 <Users className="h-5 w-5" />
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider">
-                  SPECIALIZED_DEPARTMENT_STRUCTURE
+                  5-PERSON_STUDIO_TEAM
                 </span>
               </div>
 
               <h3 className="font-serif text-xl font-bold text-paper">
-                Dedicated Software, AI, Mobile & Design Teams
+                A 5-Person Team of Skilled Engineers & Designers
               </h3>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Axorks operates with specialized department leads working across 4 core divisions:
+                Axorks operates as a founder-led 5-person studio. We combine full-stack development, AI engineering, mobile app expertise, and UI/UX design into a lean, highly capable unit:
               </p>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 pt-2">
                 <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-2">
                   <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold">
                     <Code2 className="h-4 w-4" />
-                    Web Engineering Division
+                    Web Engineering
                   </div>
                   <p className="text-xs text-steel">
-                    Full-stack developers building with Next.js App Router, TypeScript, Node.js REST APIs, and PostgreSQL database optimization.
+                    Full-stack web development using Next.js App Router, TypeScript, Node.js REST APIs, and PostgreSQL database optimization.
                   </p>
                 </div>
 
                 <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-2">
                   <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold">
                     <Bot className="h-4 w-4" />
-                    AI & Machine Learning Team
+                    AI & Machine Learning
                   </div>
                   <p className="text-xs text-steel">
-                    AI engineers specializing in OpenAI API integrations, automated document parser pipelines, and statistical predictive models.
+                    OpenAI API pipelines, automated document parsing (PDF/invoice), and vector search integrations.
                   </p>
                 </div>
 
                 <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-2">
                   <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold">
                     <Smartphone className="h-4 w-4" />
-                    Mobile App Department
+                    Mobile Engineering
                   </div>
                   <p className="text-xs text-steel">
-                    Mobile application engineers building cross-platform iOS and Android solutions with offline sync and push notification infrastructure.
+                    Cross-platform mobile applications for iOS and Android with offline caching and backend synchronization.
                   </p>
                 </div>
 
                 <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-2">
                   <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold">
                     <Layers className="h-4 w-4" />
-                    UI/UX Design Department
+                    UI/UX Design
                   </div>
                   <p className="text-xs text-steel">
-                    Interface designers crafting dark-mode schematic systems, dynamic micro-animations, and high-conversion user flows.
+                    Interface design systems, dark-mode schematics, and conversion-focused responsive layouts.
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Security, Data Handling & NDA Statement Block */}
+            <div className="schematic-bracket border border-gold/30 bg-obsidian-raised p-6 sm:p-8 space-y-3">
+              <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold uppercase">
+                <Lock className="h-4 w-4 text-gold" />
+                <span>Security, Confidentiality & NDA Protocol</span>
+              </div>
+              <p className="text-xs leading-relaxed text-steel sm:text-sm">
+                We enforce strict NDA confidentiality across all client projects. Code repositories are isolated per engagement with total source code ownership and IP assigned directly to the client upon project delivery. Data privacy protocols ensure client credentials and database access remain strictly protected.
+              </p>
             </div>
           </div>
 
@@ -198,27 +209,27 @@ export default function AboutPage() {
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6">
               <div className="flex items-center gap-2 border-b border-obsidian-border pb-3 font-mono text-xs text-gold">
                 <Award className="h-4 w-4" />
-                <span>AUTHORITY_METRICS</span>
+                <span>STUDIO_FACTS</span>
               </div>
               <ul className="mt-4 space-y-3.5 text-xs text-steel">
                 <li className="flex items-start justify-between gap-2">
-                  <span>Public Sector Authority:</span>
-                  <span className="font-mono font-bold text-gold text-right">FWO Grid & FAO</span>
+                  <span>Core Team Size:</span>
+                  <span className="font-mono font-bold text-gold text-right">5 Skilled Team Members</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
                   <span>Shipped Production Apps:</span>
                   <span className="font-mono font-bold text-paper text-right">6 Live Systems</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
-                  <span>Specialized Departments:</span>
+                  <span>Disciplines Covered:</span>
                   <span className="font-mono text-paper text-right">Web, AI, Mobile, UI/UX</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
-                  <span>Academic Credentials:</span>
+                  <span>Academic Background:</span>
                   <span className="font-mono text-paper text-right">BS SE (Bahria Univ)</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
-                  <span>Industry Recognition:</span>
+                  <span>Recognition:</span>
                   <span className="font-mono text-gold text-right">MIEE 2025</span>
                 </li>
               </ul>
@@ -229,7 +240,7 @@ export default function AboutPage() {
                 Initiate Consultation
               </h3>
               <p className="mt-2 text-xs text-steel">
-                Discuss your technical specifications directly with our engineering team leads.
+                Discuss your software scope directly with our team leads.
               </p>
               <Link
                 href="/contact"
