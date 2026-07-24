@@ -7,7 +7,7 @@ import { SITE_URL, SITE_NAME, FOUNDER_NAME, FOUNDER_ROLE, LINKEDIN_URL } from '@
 export const metadata: Metadata = {
   title: 'About Studio Architecture & Leadership | Axorks',
   description:
-    'Axorks is a software studio in Karachi & Islamabad founded by Muhammad Mujahid. Backed by a team of 5 engineers and designers across Web, AI, Mobile, and UI/UX design.',
+    'Axorks is a software studio in Karachi & Islamabad founded by Muhammad Mujahid. Backed by a team of 7+ engineers and designers across Web, AI, Mobile, and UI/UX design.',
   keywords: [
     'Axorks',
     'Software House Karachi',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Studio Architecture & Leadership | Axorks',
     description:
-      'Axorks is a founder-led software studio in Karachi & Islamabad. Backed by a core 5-person team across Web, AI, Mobile, and UI/UX design.',
+      'Axorks is a founder-led software studio in Karachi & Islamabad. Backed by a core team of 7+ skilled team members across Web, AI, Mobile, and UI/UX design.',
     url: `${SITE_URL}/about`,
     siteName: SITE_NAME,
     type: 'profile',
@@ -81,7 +81,7 @@ export default function AboutPage() {
             About Axorks Software Studio
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Axorks is a founder-led software studio based in Karachi & Islamabad. Operating as a 5-person team of skilled engineers and designers, we build custom web applications, AI automations, mobile apps, and public sector monitoring platforms.
+            Axorks is a founder-led software studio based in Karachi & Islamabad. Operating with a team of 7+ skilled engineers and designers, we build custom web applications, AI automations, mobile apps, and public sector monitoring platforms.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Muhammad Mujahid serves as the founder of Axorks software company and Chief Systems Architect. Specializing in full-stack web applications, serverless database architectures, and AI API integrations, our technical team has delivered <strong className="text-paper">6 major production systems</strong>.
+                Muhammad Mujahid serves as the founder of Axorks software company and Chief Systems Architect. Specializing in full-stack web applications, serverless database architectures, and AI API integrations, our technical team has shipped <strong className="text-paper">6+ major production systems for 5 clients (including 2+ international clients)</strong>.
               </p>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
@@ -132,21 +132,21 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Core Team Structure (5-Person Team Pass) */}
+            {/* Core Team Structure (7+ Team Members) */}
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8 space-y-4">
               <div className="flex items-center gap-2 text-gold">
                 <Users className="h-5 w-5" />
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider">
-                  5-PERSON_STUDIO_TEAM
+                  7+_PERSON_STUDIO_TEAM
                 </span>
               </div>
 
               <h3 className="font-serif text-xl font-bold text-paper">
-                A 5-Person Team of Skilled Engineers & Designers
+                A Team of 7+ Skilled Engineers & Designers
               </h3>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Axorks operates as a founder-led 5-person studio. We combine full-stack development, AI engineering, mobile app expertise, and UI/UX design into a lean, highly capable unit:
+                Axorks operates as a founder-led team of 7+ skilled team members across Karachi & Islamabad. We combine full-stack development, AI engineering, mobile app expertise, and UI/UX design into a focused unit:
               </p>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 pt-2">
@@ -209,28 +209,28 @@ export default function AboutPage() {
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6">
               <div className="flex items-center gap-2 border-b border-obsidian-border pb-3 font-mono text-xs text-gold">
                 <Award className="h-4 w-4" />
-                <span>STUDIO_FACTS</span>
+                <span>PROVABLE_METRICS</span>
               </div>
               <ul className="mt-4 space-y-3.5 text-xs text-steel">
                 <li className="flex items-start justify-between gap-2">
+                  <span>Projects Shipped:</span>
+                  <span className="font-mono font-bold text-gold text-right">6+ Live Systems</span>
+                </li>
+                <li className="flex items-start justify-between gap-2">
                   <span>Core Team Size:</span>
-                  <span className="font-mono font-bold text-gold text-right">5 Skilled Team Members</span>
+                  <span className="font-mono font-bold text-paper text-right">7+ Team Members</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
-                  <span>Shipped Production Apps:</span>
-                  <span className="font-mono font-bold text-paper text-right">6 Live Systems</span>
+                  <span>Clients Served:</span>
+                  <span className="font-mono text-paper text-right">5 Clients</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
-                  <span>Disciplines Covered:</span>
-                  <span className="font-mono text-paper text-right">Web, AI, Mobile, UI/UX</span>
+                  <span>International Reach:</span>
+                  <span className="font-mono text-gold text-right">2+ Overseas Clients</span>
                 </li>
                 <li className="flex items-start justify-between gap-2">
-                  <span>Academic Background:</span>
-                  <span className="font-mono text-paper text-right">BS SE (Bahria Univ)</span>
-                </li>
-                <li className="flex items-start justify-between gap-2">
-                  <span>Recognition:</span>
-                  <span className="font-mono text-gold text-right">MIEE 2025</span>
+                  <span>Studio Hubs:</span>
+                  <span className="font-mono text-paper text-right">Karachi & Islamabad</span>
                 </li>
               </ul>
             </div>

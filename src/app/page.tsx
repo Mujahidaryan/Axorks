@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, Code2, Server, Users, Smartphone, Bot, Layers, Info, Layout, Clock, FileText } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Code2, Users, Smartphone, Bot, Layers, Info, Layout, FileText, CheckCircle2, Globe, Building } from 'lucide-react';
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
@@ -9,7 +9,7 @@ import { PRICING } from '@/lib/pricing';
 export const metadata: Metadata = {
   title: 'Axorks | Software House in Karachi & Custom Website Development',
   description:
-    'Axorks is a software house in Karachi & Islamabad. We specialize in custom website development, web applications, mobile apps, AI solutions, and public sector software platforms.',
+    'Axorks is a software house in Karachi & Islamabad. 6+ projects shipped, 7+ team members, serving international & regional clients in custom web development, mobile apps, and AI solutions.',
   keywords: [
     'software house Karachi',
     'software house in Karachi',
@@ -115,7 +115,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base leading-relaxed text-steel sm:text-lg">
-              Axorks is a founder-led 5-person software studio in Karachi & Islamabad. Engineered across <strong className="text-paper">Website Development, Full-Stack Web Applications, AI Automations, Mobile Engineering, and UI/UX Design</strong>, we ship reliable web applications and <strong className="text-gold">public sector monitoring platforms (FWO grid & FAO aligned)</strong>.
+              Axorks is a founder-led software studio with a team of <strong className="text-paper">7+ skilled engineers and designers</strong> across Karachi & Islamabad. Specializing in <strong className="text-paper">Website Development, Custom Web Applications, AI Automations, Mobile Engineering, and UI/UX Design</strong>, we ship reliable web software and <strong className="text-gold">public sector monitoring platforms (FWO grid & FAO aligned)</strong>.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -152,21 +152,44 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Core Team Size:</span>
-                  <span className="font-bold text-gold">5 Skilled Team Members</span>
+                  <span className="font-bold text-gold">7+ Skilled Team Members</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Primary HQ Location:</span>
-                  <span className="font-bold text-paper">Karachi, Pakistan</span>
+                  <span>Track Record:</span>
+                  <span className="font-bold text-paper">6+ Shipped Systems · 5 Clients</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Public Sector Work:</span>
-                  <span className="font-bold text-gold">FWO Grid & FAO Standards</span>
+                  <span>Client Reach:</span>
+                  <span className="font-bold text-gold">2+ International Clients</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Core Tech Stack:</span>
-                  <span className="text-paper">Next.js / Node / Postgres</span>
+                  <span>Studio Locations:</span>
+                  <span className="text-paper font-semibold">Karachi & Islamabad</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Signature Quantifiable Proof Bar (High Impact Top Proof Line) */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="schematic-bracket border border-gold/50 bg-obsidian-raised p-4 sm:p-5 shadow-lg">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between font-mono text-xs">
+            <div className="flex items-center gap-2 text-gold font-bold uppercase tracking-wider shrink-0">
+              <CheckCircle2 className="h-4 w-4 text-gold" />
+              <span>PROVABLE_STUDIO_METRICS:</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-steel">
+              <span><strong className="text-paper">6+</strong> Projects Shipped</span>
+              <span className="text-obsidian-border">·</span>
+              <span><strong className="text-gold">7+</strong> Team Members</span>
+              <span className="text-obsidian-border">·</span>
+              <span><strong className="text-paper">5</strong> Clients Served</span>
+              <span className="text-obsidian-border">·</span>
+              <span><strong className="text-gold">2+</strong> International Clients</span>
+              <span className="text-obsidian-border">·</span>
+              <span><strong className="text-paper">Karachi & Islamabad</strong></span>
             </div>
           </div>
         </div>
@@ -175,33 +198,63 @@ export default function HomePage() {
       {/* Signature Animated Gold Swoosh Divider Line */}
       <GoldSwooshLine />
 
-      {/* Proof Strip (Monospace Row) */}
+      {/* Services Capabilities Section ("What we can solve for you") */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="border-y border-obsidian-border/80 bg-obsidian-raised/60 py-4.5">
-          <div className="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
-            <span className="font-mono text-xs font-semibold uppercase text-gold shrink-0">
-              FEATURED SOFTWARE & WEB SOLUTIONS:
-            </span>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-steel">
-              <Link href="/services/website-development" className="text-gold font-medium hover:underline">
+        <div className="border-b border-obsidian-border pb-4">
+          <span className="font-mono text-xs text-gold uppercase tracking-wider">
+            SOFTWARE_SERVICES_&_CAPABILITIES
+          </span>
+          <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
+            Engineered Solutions & What We Solve
+          </h2>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+            <div>
+              <Layout className="h-6 w-6 text-gold" />
+              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
                 Custom Website Development
-              </Link>
-              <span className="text-obsidian-border">|</span>
-              <Link href="/services/web-applications" className="hover:text-paper transition-colors">
-                Full-Stack Web Applications
-              </Link>
-              <span className="text-obsidian-border">|</span>
-              <Link href="/services/ai-integration" className="text-gold hover:underline font-semibold">
-                AI Solutions & Automations ★
-              </Link>
-              <span className="text-obsidian-border">|</span>
-              <Link href="/services/mobile-app-development" className="hover:text-paper transition-colors">
-                Mobile App Engineering
-              </Link>
-              <span className="text-obsidian-border">|</span>
-              <Link href="/services/government-enterprise-solutions" className="hover:text-paper transition-colors">
-                Public Sector Platforms
-              </Link>
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-steel">
+                Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure for high conversion and search indexing.
+              </p>
+            </div>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
+              <span className="text-steel">Typical Engagement:</span>
+              <span className="text-gold font-bold">{PRICING.websiteDevelopment.shortRange}</span>
+            </div>
+          </div>
+
+          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+            <div>
+              <Code2 className="h-6 w-6 text-gold" />
+              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
+                Web Applications & Custom Systems
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-steel">
+                Full-stack web portals, CRMs, and operational dashboards featuring serverless PostgreSQL databases and role-based authorization.
+              </p>
+            </div>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
+              <span className="text-steel">Typical Engagement:</span>
+              <span className="text-gold font-bold">{PRICING.webApplications.shortRange}</span>
+            </div>
+          </div>
+
+          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+            <div>
+              <Bot className="h-6 w-6 text-gold" />
+              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
+                AI Solutions & Automation
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-steel">
+                Integrating OpenAI API pipelines, document processing workflows, and custom statistical models into production web applications.
+              </p>
+            </div>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
+              <span className="text-steel">Typical Engagement:</span>
+              <span className="text-gold font-bold">{PRICING.aiIntegration.shortRange}</span>
             </div>
           </div>
         </div>
@@ -242,20 +295,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Dedicated Department Structure Section */}
+      {/* Dedicated Team Structure Section (7+ Team Members) */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-8 sm:p-10">
           <div className="space-y-6">
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
                 <Users className="h-4 w-4" />
-                <span>5-PERSON_STUDIO_TEAM</span>
+                <span>STUDIO_ORGANIZATION</span>
               </div>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-                A 5-Person Team Across Web, AI, Mobile & Design
+                A Team of 7+ Skilled Engineers & Designers
               </h2>
               <p className="text-xs leading-relaxed text-steel sm:text-sm max-w-3xl">
-                Axorks operates as a founder-led 5-person studio in Karachi covering four core software disciplines:
+                Axorks operates as a founder-led studio with a team of 7+ team members working across Karachi & Islamabad in four core software disciplines:
               </p>
             </div>
 
@@ -296,68 +349,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Preview with Static USD Investment Ranges */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="border-b border-obsidian-border pb-4">
-          <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            SOFTWARE_SERVICES_&_INVESTMENT
-          </span>
-          <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
-            Custom Software & Website Development Solutions
-          </h2>
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
-            <div>
-              <Layout className="h-6 w-6 text-gold" />
-              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                Custom Website Development
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure for conversion.
-              </p>
-            </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Engagement:</span>
-              <span className="text-gold font-bold">{PRICING.websiteDevelopment.shortRange}</span>
-            </div>
-          </div>
-
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
-            <div>
-              <Code2 className="h-6 w-6 text-gold" />
-              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                Web Applications & Custom Software
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Full-stack web portals, CRMs, and operational dashboards featuring serverless PostgreSQL databases and role-based authorization.
-              </p>
-            </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Engagement:</span>
-              <span className="text-gold font-bold">{PRICING.webApplications.shortRange}</span>
-            </div>
-          </div>
-
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
-            <div>
-              <Bot className="h-6 w-6 text-gold" />
-              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                AI Solutions & Automation
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Integrating OpenAI API pipelines, document processing workflows, and custom statistical models into production web applications.
-              </p>
-            </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Engagement:</span>
-              <span className="text-gold font-bold">{PRICING.aiIntegration.shortRange}</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Closing Call To Action Block */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="schematic-bracket border border-gold/50 bg-gradient-to-r from-obsidian-raised via-obsidian-raised to-obsidian p-8 sm:p-12">
@@ -369,7 +360,7 @@ export default function HomePage() {
               Turn software requirements into production code.
             </h2>
             <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm">
-              Work directly with Founder & Chief Architect Muhammad Mujahid and our 5-person engineering team.
+              Work directly with Founder & Chief Architect Muhammad Mujahid and our 7+ person engineering team.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
