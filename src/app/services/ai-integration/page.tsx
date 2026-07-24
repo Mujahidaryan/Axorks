@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight, ArrowLeft, Bot, CheckCircle2, HelpCircle } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'AI Integration & Automation Services | Axorks Software Studio',
@@ -66,7 +67,7 @@ export default function AiIntegrationPage() {
         name: 'What is the typical investment for AI integration?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Typical investment ranges from PKR 120,000 to PKR 800,000+ depending on model complexity, API rate limiting setup, and data pipeline requirements.',
+          text: `Typical investment ranges from ${PRICING.aiIntegration.formattedRange} depending on model complexity, API rate limiting setup, and data pipeline requirements.`,
         },
       },
     ],
@@ -105,7 +106,7 @@ export default function AiIntegrationPage() {
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Typical Investment: <strong className="text-gold font-bold">PKR 120,000 to PKR 800,000+</strong></span>
+            <span>Typical Investment: <strong className="text-gold font-bold">{PRICING.aiIntegration.formattedRange}</strong></span>
             <span>·</span>
             <span>Delivery SLA: <strong className="text-paper">2 – 5 Weeks</strong></span>
           </div>
@@ -190,7 +191,7 @@ export default function AiIntegrationPage() {
                 What is the typical investment for AI integration?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical investment ranges from PKR 120,000 to PKR 800,000+ depending on model complexity, API rate limiting setup, and data pipeline requirements.
+                Typical investment ranges from {PRICING.aiIntegration.formattedRange} depending on model complexity, API rate limiting setup, and data pipeline requirements.
               </p>
             </div>
           </div>

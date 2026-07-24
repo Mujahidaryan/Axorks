@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, HelpCircle, ShieldCheck } from 'lucide-react';
-import { SITE_URL, SITE_NAME, FOUNDER_NAME, FOUNDER_ROLE } from '@/lib/config';
+import { ArrowUpRight, HelpCircle } from 'lucide-react';
+import { SITE_URL, SITE_NAME, FOUNDER_NAME } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions (FAQ) | Axorks Software Studio',
@@ -41,11 +42,11 @@ export default function FaqPage() {
     },
     {
       q: 'How much does a custom web application or website cost at Axorks?',
-      a: 'Axorks operates on transparent investment ranges: Custom Websites range from PKR 70,000 to PKR 180,000+; Custom Web Applications range from PKR 250,000 to PKR 1,500,000+; Mobile Applications range from PKR 200,000 to PKR 1,200,000+; AI Integrations range from PKR 120,000 to PKR 800,000+; Government/Enterprise solutions are custom quoted; Maintenance Retainers range from PKR 15,000 to PKR 80,000/month.',
+      a: `Axorks operates on transparent static investment ranges: Custom Websites range from ${PRICING.websiteDevelopment.formattedRange}; Custom Web Applications range from ${PRICING.webApplications.formattedRange}; Mobile Applications range from ${PRICING.mobileAppDevelopment.formattedRange}; AI Integrations range from ${PRICING.aiIntegration.formattedRange}; Government/Enterprise solutions are custom quoted; Maintenance Retainers range from ${PRICING.maintenanceSupport.formattedRange}.`,
     },
     {
       q: 'What experience does Axorks have with government and public-sector software?',
-      a: 'Our engineering leadership has architected public-sector systems including AgroTrace (connected to FWO grid telemetry monitoring $47M in export logistics) and the Sindh Food Security Dashboard (monitoring 25.45M population across 8 Sindh districts compliant with international FAO/WFP humanitarian standards).',
+      a: 'Our engineering leadership has architected public-sector systems including AgroTrace (connected to FWO grid telemetry) and the Sindh Food Security Dashboard (aligned with international FAO/WFP humanitarian standards).',
     },
     {
       q: 'How long does a typical software development project take?',

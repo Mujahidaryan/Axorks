@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, ArrowUpRight, Clock, Calendar } from 'lucide-react';
 import { SITE_URL, SITE_NAME, FOUNDER_NAME } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'What Does a Mobile App Actually Cost in 2026? | Axorks Blog',
@@ -98,14 +99,14 @@ export default function MobileAppCostArticle() {
             2. Real-World Mobile Investment Ranges
           </h2>
           <p>
-            At Axorks, typical cross-platform mobile app development ranges from <strong className="text-gold">PKR 200,000 to PKR 1,200,000+</strong> depending on features such as offline data caching, push notification infrastructure, payment gateway triggers, and third-party API connectivity.
+            At Axorks, typical cross-platform mobile app development ranges from <strong className="text-gold">{PRICING.mobileAppDevelopment.formattedRange}</strong> depending on features such as offline data caching, push notification infrastructure, payment gateway triggers, and third-party API connectivity.
           </p>
 
           <h2 className="font-serif text-2xl font-bold text-paper pt-4">
             3. Backend Infrastructure & Maintenance Retainers
           </h2>
           <p>
-            A mobile app is only as fast as its backend API. Serverless cloud databases (PostgreSQL/Neon) combined with Node.js REST endpoints keep server overhead minimal, with ongoing monthly maintenance retainers ranging from <strong className="text-gold">PKR 15,000 to PKR 80,000/month</strong> for security updates and uptime monitoring.
+            A mobile app is only as fast as its backend API. Serverless cloud databases (PostgreSQL/Neon) combined with Node.js REST endpoints keep server overhead minimal, with ongoing monthly maintenance retainers ranging from <strong className="text-gold">{PRICING.maintenanceSupport.formattedRange}</strong> for security updates and uptime monitoring.
           </p>
         </div>
 

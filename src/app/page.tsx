@@ -4,6 +4,7 @@ import { ArrowUpRight, ShieldCheck, Cpu, Code2, Server, Users, Smartphone, Bot, 
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'Axorks | Founder-Led Software Studio & Systems Engineering',
@@ -286,7 +287,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Preview with Typical Investment Ranges */}
+      {/* Services Preview with Static USD Investment Ranges */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="border-b border-obsidian-border pb-4">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
@@ -310,7 +311,7 @@ export default function HomePage() {
             </div>
             <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
               <span className="text-steel">Typical Investment:</span>
-              <span className="text-gold font-bold">PKR 250k – 1.5M+</span>
+              <span className="text-gold font-bold">{PRICING.webApplications.shortRange}</span>
             </div>
           </div>
 
@@ -326,7 +327,7 @@ export default function HomePage() {
             </div>
             <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
               <span className="text-steel">Typical Investment:</span>
-              <span className="text-gold font-bold">PKR 120k – 800k+</span>
+              <span className="text-gold font-bold">{PRICING.aiIntegration.shortRange}</span>
             </div>
           </div>
 
@@ -342,7 +343,7 @@ export default function HomePage() {
             </div>
             <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
               <span className="text-steel">Typical Investment:</span>
-              <span className="text-gold font-bold">Custom Quote</span>
+              <span className="text-gold font-bold">{PRICING.governmentEnterprise.shortRange}</span>
             </div>
           </div>
         </div>

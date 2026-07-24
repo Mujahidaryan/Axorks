@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight, ArrowLeft, Code, CheckCircle2, HelpCircle } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'Custom Web Application Development | Axorks Software Studio',
@@ -66,7 +67,7 @@ export default function WebApplicationsPage() {
         name: 'What is the typical investment for a custom web application?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Typical investment ranges from PKR 250,000 to PKR 1,500,000+ depending on database complexity, user role count, and third-party API integrations.',
+          text: `Typical investment ranges from ${PRICING.webApplications.formattedRange} depending on database complexity, user role count, and third-party API integrations.`,
         },
       },
     ],
@@ -105,7 +106,7 @@ export default function WebApplicationsPage() {
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Typical Investment: <strong className="text-gold font-bold">PKR 250,000 to PKR 1,500,000+</strong></span>
+            <span>Typical Investment: <strong className="text-gold font-bold">{PRICING.webApplications.formattedRange}</strong></span>
             <span>·</span>
             <span>Delivery SLA: <strong className="text-paper">4 – 8 Weeks</strong></span>
           </div>
@@ -190,7 +191,7 @@ export default function WebApplicationsPage() {
                 What is the typical investment for a custom web application?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical investment ranges from PKR 250,000 to PKR 1,500,000+ depending on database complexity, user role count, and third-party API integrations.
+                Typical investment ranges from {PRICING.webApplications.formattedRange} depending on database complexity, user role count, and third-party API integrations.
               </p>
             </div>
           </div>

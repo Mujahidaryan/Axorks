@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import { Mail, Phone, MapPin, Clock, ShieldCheck } from 'lucide-react';
 import { SITE_URL, SITE_NAME, FOUNDER_NAME, CONTACT_EMAIL, CONTACT_WHATSAPP_FORMATTED } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'Contact & Project Discovery | Axorks Software Studio',
@@ -96,7 +97,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Typical Investment Reference Card */}
+            {/* Static USD Investment Reference Card */}
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-3">
               <span className="font-mono text-xs text-gold uppercase font-bold">
                 TYPICAL_INVESTMENT_SUMMARY
@@ -104,23 +105,23 @@ export default function ContactPage() {
               <ul className="space-y-2 text-xs text-steel font-mono">
                 <li className="flex justify-between border-b border-obsidian-border/50 pb-1.5">
                   <span>Websites:</span>
-                  <span className="text-paper font-bold">PKR 70k – 180k+</span>
+                  <span className="text-paper font-bold">{PRICING.websiteDevelopment.shortRange}</span>
                 </li>
                 <li className="flex justify-between border-b border-obsidian-border/50 pb-1.5">
                   <span>Web Apps:</span>
-                  <span className="text-paper font-bold">PKR 250k – 1.5M+</span>
+                  <span className="text-paper font-bold">{PRICING.webApplications.shortRange}</span>
                 </li>
                 <li className="flex justify-between border-b border-obsidian-border/50 pb-1.5">
                   <span>Mobile Apps:</span>
-                  <span className="text-paper font-bold">PKR 200k – 1.2M+</span>
+                  <span className="text-paper font-bold">{PRICING.mobileAppDevelopment.shortRange}</span>
                 </li>
                 <li className="flex justify-between border-b border-obsidian-border/50 pb-1.5">
                   <span>AI Pipelines:</span>
-                  <span className="text-paper font-bold">PKR 120k – 800k+</span>
+                  <span className="text-paper font-bold">{PRICING.aiIntegration.shortRange}</span>
                 </li>
                 <li className="flex justify-between">
                   <span>Retainers:</span>
-                  <span className="text-paper font-bold">PKR 15k – 80k/mo</span>
+                  <span className="text-paper font-bold">{PRICING.maintenanceSupport.shortRange}</span>
                 </li>
               </ul>
             </div>

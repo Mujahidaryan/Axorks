@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight, ArrowLeft, Smartphone, CheckCircle2, HelpCircle } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'Cross-Platform Mobile App Development | Axorks Software Studio',
@@ -66,7 +67,7 @@ export default function MobileAppDevelopmentPage() {
         name: 'What is the typical investment for a mobile app?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Typical investment ranges from PKR 200,000 to PKR 1,200,000+ depending on offline sync requirements, push notification triggers, and store deployment assistance.',
+          text: `Typical investment ranges from ${PRICING.mobileAppDevelopment.formattedRange} depending on offline sync requirements, push notification triggers, and store deployment assistance.`,
         },
       },
     ],
@@ -105,7 +106,7 @@ export default function MobileAppDevelopmentPage() {
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Typical Investment: <strong className="text-gold font-bold">PKR 200,000 to PKR 1,200,000+</strong></span>
+            <span>Typical Investment: <strong className="text-gold font-bold">{PRICING.mobileAppDevelopment.formattedRange}</strong></span>
             <span>·</span>
             <span>Delivery SLA: <strong className="text-paper">4 – 8 Weeks</strong></span>
           </div>
@@ -190,7 +191,7 @@ export default function MobileAppDevelopmentPage() {
                 What is the typical investment for a mobile app?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical investment ranges from PKR 200,000 to PKR 1,200,000+ depending on offline sync requirements, push notification triggers, and store deployment assistance.
+                Typical investment ranges from {PRICING.mobileAppDevelopment.formattedRange} depending on offline sync requirements, push notification triggers, and store deployment assistance.
               </p>
             </div>
           </div>

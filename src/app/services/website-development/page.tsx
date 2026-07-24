@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight, ArrowLeft, Layout, CheckCircle2, HelpCircle } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'Custom Website Development Services | Axorks Software Studio',
@@ -66,7 +67,7 @@ export default function WebsiteDevelopmentPage() {
         name: 'What is the typical investment for a custom website?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Typical investment ranges from PKR 70,000 to PKR 180,000+ depending on page depth, custom micro-animations, and third-party API integrations.',
+          text: `Typical investment ranges from ${PRICING.websiteDevelopment.formattedRange} depending on page depth, custom micro-animations, and third-party API integrations.`,
         },
       },
     ],
@@ -105,7 +106,7 @@ export default function WebsiteDevelopmentPage() {
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Typical Investment: <strong className="text-gold font-bold">PKR 70,000 to PKR 180,000+</strong></span>
+            <span>Typical Investment: <strong className="text-gold font-bold">{PRICING.websiteDevelopment.formattedRange}</strong></span>
             <span>·</span>
             <span>Delivery SLA: <strong className="text-paper">2 – 4 Weeks</strong></span>
           </div>
@@ -190,7 +191,7 @@ export default function WebsiteDevelopmentPage() {
                 What is the typical investment for a custom website?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical investment ranges from PKR 70,000 to PKR 180,000+ depending on page depth, custom micro-animations, and third-party API integrations.
+                Typical investment ranges from {PRICING.websiteDevelopment.formattedRange} depending on page depth, custom micro-animations, and third-party API integrations.
               </p>
             </div>
           </div>

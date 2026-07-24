@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight, Code, Layout, Smartphone, Bot, Landmark, Wrench } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'Services Hub | Axorks Software Studio',
@@ -32,7 +33,7 @@ export default function ServicesHubPage() {
       href: '/services/website-development',
       icon: Layout,
       title: 'Website Development',
-      investment: 'PKR 70,000 to PKR 180,000+',
+      investment: PRICING.websiteDevelopment.formattedRange,
       paragraph:
         'High-performance marketing and corporate websites built with Next.js App Router, TypeScript, and serverless infrastructure for maximum conversion and search indexing.',
     },
@@ -41,7 +42,7 @@ export default function ServicesHubPage() {
       href: '/services/web-applications',
       icon: Code,
       title: 'Web Applications & Custom Systems',
-      investment: 'PKR 250,000 to PKR 1,500,000+',
+      investment: PRICING.webApplications.formattedRange,
       paragraph:
         'Full-stack dashboards, client portals, CRMs, and operational management systems featuring serverless relational databases and role-based authorization (RBAC).',
     },
@@ -50,7 +51,7 @@ export default function ServicesHubPage() {
       href: '/services/mobile-app-development',
       icon: Smartphone,
       title: 'Mobile App Development',
-      investment: 'PKR 200,000 to PKR 1,200,000+',
+      investment: PRICING.mobileAppDevelopment.formattedRange,
       paragraph:
         'Cross-platform iOS and Android applications engineered for fast performance, offline data synchronization, push notifications, and clean mobile interfaces.',
     },
@@ -59,7 +60,7 @@ export default function ServicesHubPage() {
       href: '/services/ai-integration',
       icon: Bot,
       title: 'AI Integration & Automation',
-      investment: 'PKR 120,000 to PKR 800,000+',
+      investment: PRICING.aiIntegration.formattedRange,
       paragraph:
         'Practical AI implementations integrating OpenAI APIs, automated document parsing pipelines, vector embeddings, and predictive analytics into existing web software.',
     },
@@ -68,7 +69,7 @@ export default function ServicesHubPage() {
       href: '/services/government-enterprise-solutions',
       icon: Landmark,
       title: 'Government & Enterprise Digital Solutions',
-      investment: 'Custom Quotation',
+      investment: PRICING.governmentEnterprise.formattedRange,
       paragraph:
         'Mission-critical public-sector platforms, FWO grid telemetry dashboards, and large-scale enterprise systems compliant with international FAO/WFP standards.',
     },
@@ -77,7 +78,7 @@ export default function ServicesHubPage() {
       href: '/services/maintenance-support',
       icon: Wrench,
       title: 'Maintenance & Support Retainer',
-      investment: 'PKR 15,000 to PKR 80,000/month',
+      investment: PRICING.maintenanceSupport.formattedRange,
       paragraph:
         'Ongoing technical maintenance, security patch management, PostgreSQL query performance optimization, and reserved monthly development hours.',
     },

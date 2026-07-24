@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight, ArrowLeft, Wrench, CheckCircle2, HelpCircle } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'Maintenance & Support Retainer Services | Axorks Studio',
@@ -66,7 +67,7 @@ export default function MaintenanceSupportPage() {
         name: 'What is the typical investment for a maintenance retainer?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Typical investment ranges from PKR 15,000 to PKR 80,000/month depending on allocated developer hours, database size, and SLA response time requirements.',
+          text: `Typical investment ranges from ${PRICING.maintenanceSupport.formattedRange} depending on allocated developer hours, database size, and SLA response time requirements.`,
         },
       },
     ],
@@ -105,7 +106,7 @@ export default function MaintenanceSupportPage() {
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Typical Investment: <strong className="text-gold font-bold">PKR 15,000 to PKR 80,000/month</strong></span>
+            <span>Typical Investment: <strong className="text-gold font-bold">{PRICING.maintenanceSupport.formattedRange}</strong></span>
             <span>·</span>
             <span>Availability: <strong className="text-paper">Monthly Retainer SLA</strong></span>
           </div>
@@ -190,7 +191,7 @@ export default function MaintenanceSupportPage() {
                 What is the typical investment for a maintenance retainer?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical investment ranges from PKR 15,000 to PKR 80,000/month depending on allocated developer hours, database size, and SLA response time requirements.
+                Typical investment ranges from {PRICING.maintenanceSupport.formattedRange} depending on allocated developer hours, database size, and SLA response time requirements.
               </p>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, ArrowUpRight, Clock, Calendar } from 'lucide-react';
 import { SITE_URL, SITE_NAME, FOUNDER_NAME } from '@/lib/config';
+import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'AI Integration for Small & Mid-Sized Businesses: Practical Guide | Axorks Blog',
@@ -110,7 +111,7 @@ export default function AiIntegrationForSmesArticle() {
             3. Investment Expectations
           </h2>
           <p>
-            Practical business AI integrations at Axorks typically range from <strong className="text-gold">PKR 120,000 to PKR 800,000+</strong>, delivering up to an 80% reduction in manual data entry workload.
+            Practical business AI integrations at Axorks typically range from <strong className="text-gold">{PRICING.aiIntegration.formattedRange}</strong>, delivering up to an 80% reduction in manual data entry workload.
           </p>
         </div>
 
