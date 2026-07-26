@@ -1,14 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { ArrowUpRight, ArrowLeft, Layout, CheckCircle2, HelpCircle } from 'lucide-react';
+import { ArrowUpRight, Layout, CheckCircle2, HelpCircle, FileText, PhoneCall } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
-import { PRICING } from '@/lib/pricing';
+import { PRICING_LADDER } from '@/lib/pricing';
+
+const serviceData = PRICING_LADDER.websiteDevelopment;
 
 export const metadata: Metadata = {
-  title: 'Website Development Services in Karachi | Custom Web Development Studio',
+  title: 'Website Development Services in Karachi — Starting at $600 | Axorks',
   description:
-    'Top-rated custom website development services in Karachi & Islamabad by Axorks Software House. Built with Next.js App Router, TypeScript, and serverless technology for sub-second speed, conversions, and top search engine rankings.',
+    'Custom website development services in Karachi & Islamabad by Axorks Software House. Tiered pricing: Starter ($600), Growth ($1,200), Premium ($2,000). Built with Next.js App Router, TypeScript, and serverless technology.',
   keywords: [
     'website development Karachi',
     'custom website development',
@@ -19,20 +21,20 @@ export const metadata: Metadata = {
     'Axorks website development',
   ],
   openGraph: {
-    title: 'Website Development Services in Karachi | Custom Web Development Studio',
+    title: 'Website Development Services in Karachi — Starting at $600 | Axorks',
     description:
-      'Custom website development services in Karachi built with Next.js App Router, TypeScript, and serverless technology by Axorks Software House.',
+      'Custom website development in Karachi with 3-tier pricing ($600, $1,200, $2,000) built with Next.js App Router and TypeScript by Axorks Software House.',
     url: `${SITE_URL}/services/website-development`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Development Services in Karachi | Axorks',
-    description: 'High-performance custom website development services in Karachi built with Next.js.',
+    title: 'Website Development Services in Karachi — Starting at $600 | Axorks',
+    description: 'Custom website development services in Karachi starting at $600 built with Next.js.',
   },
   alternates: {
-    canonical: `${SITE_URL}/services/website-development`,
+    canonical: '/services/website-development',
   },
 };
 
@@ -48,8 +50,20 @@ export default function WebsiteDevelopmentPage() {
       url: SITE_URL,
     },
     areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
-    description:
-      'Custom corporate and business website development in Karachi built with Next.js App Router, TypeScript, and serverless databases for speed, security, and lead generation.',
+    description: serviceData.description,
+    offers: serviceData.tiers.map((t) => ({
+      '@type': 'Offer',
+      name: `Website Development — ${t.name} Tier`,
+      price: t.priceUsd,
+      priceCurrency: 'USD',
+      description: t.outcome,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: t.priceUsd,
+        priceCurrency: 'USD',
+        unitText: 'project',
+      },
+    })),
   };
 
   const faqSchema = {
@@ -66,18 +80,18 @@ export default function WebsiteDevelopmentPage() {
       },
       {
         '@type': 'Question',
-        name: 'How long does a custom website development project take?',
+        name: 'What is included in the $600 Starter Tier?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Typical corporate website development builds are completed and deployed within 2 to 4 weeks from initial discovery and content alignment.',
+          text: 'The $600 Starter tier delivers a single-page responsive landing site built with Next.js 14 & Tailwind CSS, serverless contact form, 1 round of revisions, and SSL deployment within ~1–2 weeks.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What is the typical investment for a custom website?',
+        name: 'How long does a custom website development project take?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `Typical investment ranges from ${PRICING.websiteDevelopment.formattedRange} depending on page depth, custom micro-animations, and third-party API integrations.`,
+          text: 'Starter builds take ~1–2 weeks, Growth builds take ~2–3 weeks, and Premium custom builds take ~3–4 weeks from content alignment.',
         },
       },
     ],
@@ -115,57 +129,91 @@ export default function WebsiteDevelopmentPage() {
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Typical Investment: <strong className="text-gold font-bold">{PRICING.websiteDevelopment.formattedRange}</strong></span>
+            <span>Floor Pricing: <strong className="text-gold font-bold">{serviceData.floorPrice}</strong></span>
             <span>·</span>
-            <span>Delivery SLA: <strong className="text-paper">2 – 4 Weeks</strong></span>
+            <span>SLA: <strong className="text-paper">1 – 4 Weeks</strong></span>
           </div>
         </div>
 
-        {/* Rich Factual Prose */}
+        {/* Prose Overview */}
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
           <p className="text-paper/95 text-base">
-            Axorks Software House engineers high-performance custom website development solutions built with Next.js App Router, TypeScript, and serverless cloud infrastructure in Karachi & Islamabad. Designed specifically for technical founders, high-ticket agency owners, and growing enterprises, our websites replace slow, bloated WordPress themes with clean, security-hardened code.
-          </p>
-
-          <p>
-            Every website we ship is optimized for search engine indexing and conversion performance, converting cold referral, Google Search, or WhatsApp traffic into qualified consultation bookings. By leveraging server-side rendering (SSR), responsive mobile-first Tailwind layouts, and custom micro-animations, we deliver sub-second page loading speeds that boost search engine ranking and lower bounce rates.
-          </p>
-
-          <p>
-            Our custom website development engagement includes full technical SEO schema setup, analytics integration, custom contact API routes, security hardening, and complete source code repository handoff.
+            Axorks Software House engineers high-performance custom website development solutions built with Next.js App Router, TypeScript, and serverless cloud infrastructure in Karachi & Islamabad. Designed for technical founders, growing businesses, and agencies, our websites replace bloated page builders with clean code.
           </p>
         </div>
 
-        {/* Deliverables List */}
-        <div className="mt-10 schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8">
-          <h2 className="font-serif text-xl font-bold text-paper mb-4">
-            What's Included in Custom Website Development
+        {/* 3-Tier Pricing Ladder */}
+        <div className="mt-10 space-y-4">
+          <h2 className="font-serif text-2xl font-bold text-paper">
+            Select Your Website Development Tier
           </h2>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-xs text-steel">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Next.js 14 App Router & TypeScript Architecture</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Mobile-First Responsive Tailwind Design</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Serverless Contact API & Email Notification</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Technical SEO & JSON-LD Structured Data</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Custom Domain & Vercel SSL Deployment</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Full GitHub Repository Ownership</span>
-            </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {serviceData.tiers.map((tier) => (
+              <div
+                key={tier.name}
+                className={`schematic-bracket flex flex-col justify-between border bg-obsidian-raised p-6 space-y-6 ${
+                  tier.name === 'Growth' || tier.name === 'Premium'
+                    ? 'border-gold/50 shadow-[0_0_20px_rgba(201,162,75,0.08)]'
+                    : 'border-obsidian-border'
+                }`}
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
+                    <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
+                      {tier.name} TIER
+                    </span>
+                    <span className="font-mono text-[11px] text-steel">{tier.turnaround}</span>
+                  </div>
+
+                  <div>
+                    <div className="font-serif text-3xl font-bold text-paper">{tier.formattedPrice}</div>
+                    <p className="mt-2 text-xs leading-relaxed text-steel italic">"{tier.outcome}"</p>
+                  </div>
+
+                  <div className="space-y-2 pt-2 border-t border-obsidian-border/60">
+                    <span className="font-mono text-[10px] uppercase text-gold font-bold block">Deliverables:</span>
+                    <ul className="space-y-2 text-xs text-steel">
+                      {tier.deliverables.map((item, dIdx) => (
+                        <li key={dIdx} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-obsidian-border">
+                  {tier.ctaType === 'quote_or_discovery' ? (
+                    <div className="grid grid-cols-2 gap-2">
+                      <Link
+                        href={`/contact?service=Custom%20Website%20Development&tier=${tier.name}&cta=quote`}
+                        className="flex items-center justify-center gap-1 rounded bg-signal-blue px-3 py-2 font-mono text-[11px] font-semibold uppercase text-paper hover:bg-signal-blue-hover text-center"
+                      >
+                        <FileText className="h-3 w-3" />
+                        Quick Quote
+                      </Link>
+                      <Link
+                        href={`/contact?service=Custom%20Website%20Development&tier=${tier.name}&cta=discovery`}
+                        className="flex items-center justify-center gap-1 rounded border border-gold/40 bg-gold/10 px-3 py-2 font-mono text-[11px] font-semibold uppercase text-gold hover:bg-gold/20 text-center"
+                      >
+                        <PhoneCall className="h-3 w-3" />
+                        Book Call
+                      </Link>
+                    </div>
+                  ) : (
+                    <Link
+                      href={`/contact?service=Custom%20Website%20Development&tier=${tier.name}&cta=quote`}
+                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors"
+                    >
+                      <FileText className="h-3.5 w-3.5" />
+                      Get a Quick Quote
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -188,43 +236,13 @@ export default function WebsiteDevelopmentPage() {
 
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
               <h3 className="font-serif text-base font-bold text-paper">
-                How long does a custom website development project take?
+                What is included in the $600 Starter Tier?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical corporate website development builds are completed and deployed within 2 to 4 weeks from initial discovery and content alignment.
-              </p>
-            </div>
-
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
-              <h3 className="font-serif text-base font-bold text-paper">
-                What is the typical investment for a custom website?
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical investment ranges from {PRICING.websiteDevelopment.formattedRange} depending on page depth, custom micro-animations, and third-party API integrations.
+                The $600 Starter tier delivers a single-page responsive landing site built with Next.js 14 & Tailwind CSS, serverless contact form, 1 round of revisions, and SSL deployment within ~1–2 weeks.
               </p>
             </div>
           </div>
-        </div>
-
-        {/* CTA & Internal Navigation Links */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-obsidian-border pt-8 sm:flex-row">
-          <div className="flex items-center gap-4 text-xs font-mono text-steel">
-            <Link href="/case-studies" className="hover:text-paper transition-colors">
-              Explore Case Studies →
-            </Link>
-            <span>·</span>
-            <Link href="/process" className="hover:text-paper transition-colors">
-              View Our Process →
-            </Link>
-          </div>
-
-          <Link
-            href="/contact?service=Website%20Development"
-            className="inline-flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
-          >
-            Inquire for Website Development
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
         </div>
       </div>
     </div>

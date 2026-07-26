@@ -1,16 +1,21 @@
 'use client';
 
-import { useState } from 'react';
-import { Send, CheckCircle2, AlertCircle, Phone } from 'lucide-react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { Send, CheckCircle2, AlertCircle, Phone, FileText, PhoneCall } from 'lucide-react';
 import { BUDGET_RANGES_USD } from '@/lib/pricing';
 
-export default function ContactForm() {
+function ContactFormInner() {
+  const searchParams = useSearchParams();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     service: 'Web Applications & Custom Systems',
-    budget: '$2,500 – $5,000',
+    budget: '$1,500 – $3,500',
+    selectedTier: '',
+    ctaMode: 'quote',
     message: '',
     company_website: '', // Honeypot field
   });
@@ -19,13 +24,28 @@ export default function ContactForm() {
   const [errorMessage, setErrorMessage] = useState('');
 
   const services = [
-    'Website Development',
+    'Custom Website Development',
     'Web Applications & Custom Systems',
     'Mobile App Development',
-    'AI Integration & Automation',
+    'AI Solutions & Automation',
     'Government & Enterprise Digital Solutions',
     'Maintenance & Support Retainer',
   ];
+
+  useEffect(() => {
+    const serviceParam = searchParams.get('service');
+    const tierParam = searchParams.get('tier');
+    const ctaParam = searchParams.get('cta');
+
+    if (serviceParam || tierParam || ctaParam) {
+      setFormData((prev) => ({
+        ...prev,
+        service: serviceParam ? decodeURIComponent(serviceParam) : prev.service,
+        selectedTier: tierParam ? decodeURIComponent(tierParam) : prev.selectedTier,
+        ctaMode: ctaParam === 'discovery' ? 'discovery' : 'quote',
+      }));
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,9 +53,11 @@ export default function ContactForm() {
     setErrorMessage('');
 
     try {
+      const tierNote = formData.selectedTier ? ` [Tier Selected: ${formData.selectedTier}]` : '';
+      const ctaTypeNote = formData.ctaMode === 'discovery' ? ' [Request Type: Book Discovery Call]' : ' [Request Type: Get Quick Quote]';
       const payload = {
         ...formData,
-        message: `[Expected Budget: ${formData.budget}]\n\n${formData.message}`,
+        message: `[Expected Budget: ${formData.budget}]${tierNote}${ctaTypeNote}\n\n${formData.message}`,
       };
 
       const res = await fetch('/api/contact', {
@@ -56,7 +78,9 @@ export default function ContactForm() {
         email: '',
         phone: '',
         service: 'Web Applications & Custom Systems',
-        budget: '$2,500 – $5,000',
+        budget: '$1,500 – $3,500',
+        selectedTier: '',
+        ctaMode: 'quote',
         message: '',
         company_website: '',
       });
@@ -69,11 +93,28 @@ export default function ContactForm() {
   return (
     <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8">
       <div className="border-b border-obsidian-border pb-4">
-        <span className="font-mono text-xs text-gold uppercase tracking-wider">
-          PROJECT_INITIATION_PROTOCOL
-        </span>
-        <h2 className="mt-1 font-serif text-2xl font-bold text-paper">
-          Book a Technical Consultation
+        <div className="flex items-center justify-between">
+          <span className="font-mono text-xs text-gold uppercase tracking-wider">
+            PROJECT_INITIATION_PROTOCOL
+          </span>
+          {formData.selectedTier && (
+            <span className="font-mono text-[11px] font-bold text-gold bg-gold/15 border border-gold/40 px-2.5 py-1 rounded">
+              Selected Tier: {formData.selectedTier}
+            </span>
+          )}
+        </div>
+        <h2 className="mt-1 font-serif text-2xl font-bold text-paper flex items-center gap-2">
+          {formData.ctaMode === 'discovery' ? (
+            <>
+              <PhoneCall className="h-5 w-5 text-gold" />
+              Book a Technical Discovery Call
+            </>
+          ) : (
+            <>
+              <FileText className="h-5 w-5 text-signal-blue" />
+              Request a Quick Project Quote
+            </>
+          )}
         </h2>
         <p className="mt-1 text-xs text-steel">
           Direct line to our founder & engineering leads. Guaranteed response within 24 hours.
@@ -81,7 +122,7 @@ export default function ContactForm() {
       </div>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-5">
-        {/* Honeypot field (hidden visually) */}
+        {/* Honeypot field */}
         <div style={{ display: 'none' }} aria-hidden="true">
           <label htmlFor="company_website">Do not fill this field</label>
           <input
@@ -195,7 +236,7 @@ export default function ContactForm() {
             id="message"
             required
             rows={4}
-            placeholder="Tell us about what you want to build, key features, target timeline, or current technical bottlenecks..."
+            placeholder="Tell us about your core requirements, target features, expected timeline, or key technical goals..."
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             className="mt-1.5 w-full rounded border border-obsidian-border bg-obsidian px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-colors focus:border-signal-blue focus:outline-none"
@@ -228,7 +269,7 @@ export default function ContactForm() {
               <span>Dispatching...</span>
             ) : (
               <>
-                <span>Submit Inquiry</span>
+                <span>{formData.ctaMode === 'discovery' ? 'Book Discovery Call' : 'Submit Quick Quote Inquiry'}</span>
                 <Send className="h-3.5 w-3.5" />
               </>
             )}
@@ -246,5 +287,13 @@ export default function ContactForm() {
         </div>
       </form>
     </div>
+  );
+}
+
+export default function ContactForm() {
+  return (
+    <Suspense fallback={<div className="p-8 font-mono text-xs text-steel">Loading contact protocol...</div>}>
+      <ContactFormInner />
+    </Suspense>
   );
 }

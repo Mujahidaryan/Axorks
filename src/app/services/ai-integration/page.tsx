@@ -1,14 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { ArrowUpRight, ArrowLeft, Bot, CheckCircle2, HelpCircle } from 'lucide-react';
+import { ArrowUpRight, Bot, CheckCircle2, HelpCircle, FileText, PhoneCall } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
-import { PRICING } from '@/lib/pricing';
+import { PRICING_LADDER } from '@/lib/pricing';
+
+const serviceData = PRICING_LADDER.aiIntegration;
 
 export const metadata: Metadata = {
-  title: 'AI Integrated Dashboards & Automation Services in Karachi | Axorks',
+  title: 'AI Solutions & Automation Services in Karachi — Starting at $900 | Axorks',
   description:
-    'Practical AI integrated dashboards and automation services in Karachi & Islamabad. Integrating OpenAI APIs, automated document processing, vector search, and predictive models into production software.',
+    'Practical AI solutions and automation services in Karachi & Islamabad by Axorks. Tiered pricing: Starter ($900), Growth ($1,800), Premium ($3,000). Integrating OpenAI APIs, document processing, and vector embeddings.',
   keywords: [
     'AI integrated dashboards',
     'AI automation Karachi',
@@ -19,20 +21,20 @@ export const metadata: Metadata = {
     'Axorks AI integrated dashboards',
   ],
   openGraph: {
-    title: 'AI Integrated Dashboards & Automation Services in Karachi | Axorks',
+    title: 'AI Solutions & Automation Services in Karachi — Starting at $900 | Axorks',
     description:
-      'Practical AI integrated dashboards connecting OpenAI APIs, document processing pipelines, and predictive statistical models by Axorks Software House.',
+      'Practical AI automation pipelines connecting OpenAI APIs, document processing, and vector embeddings by Axorks Software House.',
     url: `${SITE_URL}/services/ai-integration`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Integrated Dashboards & Automation Services | Axorks',
-    description: 'Practical AI integrated dashboards and automated document processing pipelines.',
+    title: 'AI Solutions & Automation Services — Starting at $900 | Axorks',
+    description: 'Practical AI automations and document parsing pipelines starting at $900.',
   },
   alternates: {
-    canonical: `${SITE_URL}/services/ai-integration`,
+    canonical: '/services/ai-integration',
   },
 };
 
@@ -40,7 +42,7 @@ export default function AiIntegrationPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'AI Integrated Dashboards & Automation',
+    name: 'AI Solutions & Automation',
     serviceType: 'AI Engineering & Dashboard Solutions',
     provider: {
       '@type': 'Organization',
@@ -48,39 +50,20 @@ export default function AiIntegrationPage() {
       url: SITE_URL,
     },
     areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
-    description:
-      'Practical AI integrated dashboards including OpenAI API connections, automated document parsing pipelines, vector embeddings, and predictive analytics for business software.',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What kind of AI integrated dashboards does Axorks build?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We build OpenAI API text generation pipelines, AI integrated dashboards, automated PDF/invoice parsing, intelligent search using vector embeddings, automated customer support agents, and predictive statistical models.',
-        },
+    description: serviceData.description,
+    offers: serviceData.tiers.map((t) => ({
+      '@type': 'Offer',
+      name: `AI Solutions — ${t.name} Tier`,
+      price: t.priceUsd,
+      priceCurrency: 'USD',
+      description: t.outcome,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: t.priceUsd,
+        priceCurrency: 'USD',
+        unitText: 'project',
       },
-      {
-        '@type': 'Question',
-        name: 'How do AI integrated dashboards reduce operational costs?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'By automating repetitive document extraction and data entry tasks into live dashboards, AI pipelines reduce manual operational workload by up to 80% while improving response accuracy.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the typical investment for AI integrated dashboards?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `Typical investment ranges from ${PRICING.aiIntegration.formattedRange} depending on model complexity, API rate limiting setup, and data pipeline requirements.`,
-        },
-      },
-    ],
+    })),
   };
 
   return (
@@ -90,141 +73,113 @@ export default function AiIntegrationPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
       </head>
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Breadcrumbs
           items={[
             { label: 'Services', href: '/services' },
-            { label: 'AI Integrated Dashboards' },
+            { label: 'AI Solutions & Automation' },
           ]}
         />
 
         <div className="mt-4 border-b border-obsidian-border pb-6">
           <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
             <Bot className="h-3.5 w-3.5" />
-            <span>CORE_SERVICE_04</span>
+            <span>CORE_SERVICE_03</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            AI Integrated Dashboards & Automation Solutions
+            AI Solutions & Automation Services
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Typical Investment: <strong className="text-gold font-bold">{PRICING.aiIntegration.formattedRange}</strong></span>
+            <span>Floor Pricing: <strong className="text-gold font-bold">{serviceData.floorPrice}</strong></span>
             <span>·</span>
-            <span>Delivery SLA: <strong className="text-paper">2 – 5 Weeks</strong></span>
+            <span>SLA: <strong className="text-paper">1 – 5 Weeks</strong></span>
           </div>
         </div>
 
-        {/* Rich Factual Prose */}
+        {/* Prose Overview */}
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
           <p className="text-paper/95 text-base">
-            Axorks Software House delivers practical, production-ready AI integrated dashboards that connect OpenAI APIs, automated document parsing pipelines, vector search embeddings, and predictive statistical models directly into your custom web and mobile software.
-          </p>
-
-          <p>
-            Rather than building novelty chatbots, we focus on high-ROI business automations: building AI integrated dashboards to extract structured data from unstructured PDF invoices, automating customer communication triage, speeding up database search with semantic vector embeddings, and running predictive trend analytics. Our AI integrations have proven to reduce operational workload by up to 80%.
-          </p>
-
-          <p>
-            Our AI engineering process includes prompt tuning, fallback error handling, rate limiting architecture, token cost optimization, and secure API key isolation.
+            Axorks Software House delivers practical, production-ready AI automations connecting OpenAI APIs, document parsing pipelines, vector search embeddings, and predictive models directly into software applications.
           </p>
         </div>
 
-        {/* Deliverables List */}
-        <div className="mt-10 schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8">
-          <h2 className="font-serif text-xl font-bold text-paper mb-4">
-            What's Included in AI Integrated Dashboards
-          </h2>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-xs text-steel">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>OpenAI GPT-4o & Claude API Pipeline Integration</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Automated Document (PDF/Image) Parsing Pipelines</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Vector Database Embeddings for Intelligent Search</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Token Usage Optimization & Cost Management</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Asynchronous Processing & Webhook Callbacks</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Full Source Code Ownership & Security Audit</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Service FAQ Block */}
-        <div className="mt-12 space-y-6">
-          <h2 className="font-serif text-2xl font-bold text-paper flex items-center gap-2">
-            <HelpCircle className="h-5 w-5 text-gold" />
-            Frequently Asked Questions
+        {/* 3-Tier Pricing Ladder */}
+        <div className="mt-10 space-y-4">
+          <h2 className="font-serif text-2xl font-bold text-paper">
+            Select Your AI Automation Tier
           </h2>
 
-          <div className="space-y-4">
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
-              <h3 className="font-serif text-base font-bold text-paper">
-                What kind of AI integrated dashboards does Axorks build?
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                We build OpenAI API text generation pipelines, AI integrated dashboards, automated PDF/invoice parsing, intelligent search using vector embeddings, automated customer support agents, and predictive statistical models.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {serviceData.tiers.map((tier) => (
+              <div
+                key={tier.name}
+                className={`schematic-bracket flex flex-col justify-between border bg-obsidian-raised p-6 space-y-6 ${
+                  tier.name === 'Growth' || tier.name === 'Premium'
+                    ? 'border-gold/50 shadow-[0_0_20px_rgba(201,162,75,0.08)]'
+                    : 'border-obsidian-border'
+                }`}
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
+                    <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
+                      {tier.name} TIER
+                    </span>
+                    <span className="font-mono text-[11px] text-steel">{tier.turnaround}</span>
+                  </div>
 
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
-              <h3 className="font-serif text-base font-bold text-paper">
-                How do AI integrated dashboards reduce operational costs?
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                By automating repetitive document extraction and data entry tasks into live dashboards, AI pipelines reduce manual operational workload by up to 80% while improving response accuracy.
-              </p>
-            </div>
+                  <div>
+                    <div className="font-serif text-3xl font-bold text-paper">{tier.formattedPrice}</div>
+                    <p className="mt-2 text-xs leading-relaxed text-steel italic">"{tier.outcome}"</p>
+                  </div>
 
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
-              <h3 className="font-serif text-base font-bold text-paper">
-                What is the typical investment for AI integrated dashboards?
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical investment ranges from {PRICING.aiIntegration.formattedRange} depending on model complexity, API rate limiting setup, and data pipeline requirements.
-              </p>
-            </div>
+                  <div className="space-y-2 pt-2 border-t border-obsidian-border/60">
+                    <span className="font-mono text-[10px] uppercase text-gold font-bold block">Deliverables:</span>
+                    <ul className="space-y-2 text-xs text-steel">
+                      {tier.deliverables.map((item, dIdx) => (
+                        <li key={dIdx} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-obsidian-border">
+                  {tier.ctaType === 'quote_or_discovery' ? (
+                    <div className="grid grid-cols-2 gap-2">
+                      <Link
+                        href={`/contact?service=AI%20Solutions%20%26%20Automation&tier=${tier.name}&cta=quote`}
+                        className="flex items-center justify-center gap-1 rounded bg-signal-blue px-3 py-2 font-mono text-[11px] font-semibold uppercase text-paper hover:bg-signal-blue-hover text-center"
+                      >
+                        <FileText className="h-3 w-3" />
+                        Quick Quote
+                      </Link>
+                      <Link
+                        href={`/contact?service=AI%20Solutions%20%26%20Automation&tier=${tier.name}&cta=discovery`}
+                        className="flex items-center justify-center gap-1 rounded border border-gold/40 bg-gold/10 px-3 py-2 font-mono text-[11px] font-semibold uppercase text-gold hover:bg-gold/20 text-center"
+                      >
+                        <PhoneCall className="h-3 w-3" />
+                        Book Call
+                      </Link>
+                    </div>
+                  ) : (
+                    <Link
+                      href={`/contact?service=AI%20Solutions%20%26%20Automation&tier=${tier.name}&cta=quote`}
+                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors"
+                    >
+                      <FileText className="h-3.5 w-3.5" />
+                      Get a Quick Quote
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-
-        {/* CTA & Internal Navigation Links */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-obsidian-border pt-8 sm:flex-row">
-          <div className="flex items-center gap-4 text-xs font-mono text-steel">
-            <Link href="/case-studies" className="hover:text-paper transition-colors">
-              Explore Case Studies →
-            </Link>
-            <span>·</span>
-            <Link href="/process" className="hover:text-paper transition-colors">
-              View Our Process →
-            </Link>
-          </div>
-
-          <Link
-            href="/contact?service=AI%20Integration%20%26%20Automation"
-            className="inline-flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
-          >
-            Inquire for AI Integrated Dashboards
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
         </div>
       </div>
     </div>

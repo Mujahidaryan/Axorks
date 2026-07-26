@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, Code2, Users, Smartphone, Bot, Layers, Info, Layout, FileText, CheckCircle2, Globe, Building } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Code2, Users, Smartphone, Bot, Info, Layout, FileText, CheckCircle2, PhoneCall } from 'lucide-react';
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Axorks | Software House in Karachi & Custom Website Development',
+  title: 'Axorks | Custom Software & Website Development in Karachi — Starting at $600',
   description:
-    'Axorks is a software house in Karachi & Islamabad. 6+ projects shipped, 7+ team members, serving international & regional clients in custom web development, mobile apps, and AI solutions.',
+    'Axorks is a software house in Karachi & Islamabad offering tiered software development: Custom Websites (from $600), Web Applications (from $2,200), AI Automations (from $900), Mobile Apps (from $1,200), and Custom Enterprise Engineering.',
   keywords: [
     'software house Karachi',
     'software house in Karachi',
@@ -22,17 +22,17 @@ export const metadata: Metadata = {
     'AI integration services Karachi',
   ],
   openGraph: {
-    title: 'Axorks | Software House in Karachi & Custom Website Development',
+    title: 'Axorks | Custom Software & Website Development in Karachi — Starting at $600',
     description:
-      'Axorks is a software house in Karachi & Islamabad. Architecting custom web platforms, website development, AI solutions, and mobile applications.',
+      'Tiered software development studio in Karachi & Islamabad. Custom Websites from $600, Web Applications from $2,200, AI Automations from $900, Mobile Apps from $1,200.',
     url: SITE_URL,
     siteName: SITE_NAME,
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axorks | Software House in Karachi',
-    description: 'Software house in Karachi shipping custom website development and software solutions.',
+    title: 'Axorks | Software House in Karachi — Starting at $600',
+    description: 'Tiered software development studio in Karachi shipping custom website development and software solutions.',
   },
   alternates: {
     canonical: '/',
@@ -115,12 +115,12 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base leading-relaxed text-steel sm:text-lg">
-              Axorks is a founder-led software studio with a team of <strong className="text-paper">7+ skilled engineers and designers</strong> across Karachi & Islamabad. Specializing in <strong className="text-paper">Website Development, Custom Web Applications, AI Automations, Mobile Engineering, and UI/UX Design</strong>, we ship reliable web software and <strong className="text-gold">public sector monitoring platforms (FWO grid & FAO aligned)</strong>.
+              Axorks is a founder-led software studio with a team of <strong className="text-paper">7+ skilled engineers and designers</strong> across Karachi & Islamabad. Productized software tiers starting at <strong className="text-gold font-bold">$600</strong> for <strong className="text-paper">Website Development, Web Applications, AI Automations, and Mobile Apps</strong>.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
-                href="/contact"
+                href="/contact?cta=discovery"
                 className="group flex items-center gap-2 rounded bg-signal-blue px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover hover:shadow-lg hover:shadow-signal-blue/25"
               >
                 Schedule Consultation
@@ -129,11 +129,11 @@ export default function HomePage() {
 
               {/* Low-Commitment CTA Option */}
               <Link
-                href="/contact?cta=estimate"
+                href="/contact?cta=quote"
                 className="flex items-center gap-2 rounded border border-gold/40 bg-obsidian-raised px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-gold transition-colors hover:bg-gold/10"
               >
                 <FileText className="h-4 w-4 text-gold" />
-                Request Scoped Estimate (48h)
+                Get a Quick Quote
               </Link>
             </div>
           </div>
@@ -159,8 +159,8 @@ export default function HomePage() {
                   <span className="font-bold text-paper">6+ Shipped Systems · 5 Clients</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Client Reach:</span>
-                  <span className="font-bold text-gold">2+ International Clients</span>
+                  <span>Productized Floor:</span>
+                  <span className="font-bold text-gold">Starting at $600</span>
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Studio Locations:</span>
@@ -172,7 +172,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Signature Quantifiable Proof Bar (High Impact Top Proof Line) */}
+      {/* Signature Quantifiable Proof Bar */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="schematic-bracket border border-gold/50 bg-obsidian-raised p-4 sm:p-5 shadow-lg">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between font-mono text-xs">
@@ -198,18 +198,27 @@ export default function HomePage() {
       {/* Signature Animated Gold Swoosh Divider Line */}
       <GoldSwooshLine />
 
-      {/* Services Capabilities Section ("What we can solve for you") */}
+      {/* Services Tiers Capabilities Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="border-b border-obsidian-border pb-4">
-          <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            SOFTWARE_SERVICES_&_CAPABILITIES
-          </span>
-          <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
-            Engineered Solutions & What We Solve
-          </h2>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-obsidian-border pb-4 gap-4">
+          <div>
+            <span className="font-mono text-xs text-gold uppercase tracking-wider">
+              PRODUCTIZED_SERVICES_&_PRICING
+            </span>
+            <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
+              Tiered Software Offerings & Floor Pricing
+            </h2>
+          </div>
+          <Link
+            href="/services"
+            className="font-mono text-xs text-signal-blue hover:text-signal-blue-hover inline-flex items-center gap-1 font-semibold"
+          >
+            Explore All Tiered Pricing Ladders
+            <ArrowUpRight className="h-3.5 w-3.5" />
+          </Link>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
             <div>
               <Layout className="h-6 w-6 text-gold" />
@@ -217,12 +226,20 @@ export default function HomePage() {
                 Custom Website Development
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure for high conversion and search indexing.
+                Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure.
               </p>
             </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Engagement:</span>
-              <span className="text-gold font-bold">{PRICING.websiteDevelopment.shortRange}</span>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 space-y-3 font-mono text-xs">
+              <div className="flex items-center justify-between">
+                <span className="text-steel">Floor Pricing:</span>
+                <span className="text-gold font-bold">{PRICING.websiteDevelopment.shortRange}</span>
+              </div>
+              <Link
+                href="/services#website-development"
+                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
+              >
+                View 3 Tiers ($600–$2,000)
+              </Link>
             </div>
           </div>
 
@@ -230,15 +247,23 @@ export default function HomePage() {
             <div>
               <Code2 className="h-6 w-6 text-gold" />
               <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                Web Applications & Custom Systems
+                Web Applications & Systems
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Full-stack web portals, CRMs, and operational dashboards featuring serverless PostgreSQL databases and role-based authorization.
+                Full-stack web portals, CRMs, and internal tools with serverless PostgreSQL databases and RBAC permissions.
               </p>
             </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Engagement:</span>
-              <span className="text-gold font-bold">{PRICING.webApplications.shortRange}</span>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 space-y-3 font-mono text-xs">
+              <div className="flex items-center justify-between">
+                <span className="text-steel">Floor Pricing:</span>
+                <span className="text-gold font-bold">{PRICING.webApplications.shortRange}</span>
+              </div>
+              <Link
+                href="/services#web-applications"
+                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
+              >
+                View 2 Tiers ($2,200–$4,000)
+              </Link>
             </div>
           </div>
 
@@ -249,23 +274,55 @@ export default function HomePage() {
                 AI Solutions & Automation
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                Integrating OpenAI API pipelines, document processing workflows, and custom statistical models into production web applications.
+                Integrating OpenAI API pipelines, document processing workflows, and vector embeddings into software.
               </p>
             </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 flex items-center justify-between font-mono text-xs">
-              <span className="text-steel">Typical Engagement:</span>
-              <span className="text-gold font-bold">{PRICING.aiIntegration.shortRange}</span>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 space-y-3 font-mono text-xs">
+              <div className="flex items-center justify-between">
+                <span className="text-steel">Floor Pricing:</span>
+                <span className="text-gold font-bold">{PRICING.aiIntegration.shortRange}</span>
+              </div>
+              <Link
+                href="/services#ai-integration"
+                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
+              >
+                View 3 Tiers ($900–$3,000)
+              </Link>
+            </div>
+          </div>
+
+          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+            <div>
+              <Smartphone className="h-6 w-6 text-gold" />
+              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
+                Mobile App Development
+              </h3>
+              <p className="mt-2 text-xs leading-relaxed text-steel">
+                Cross-platform iOS and Android mobile applications built for performance and offline data synchronization.
+              </p>
+            </div>
+            <div className="mt-6 border-t border-obsidian-border/60 pt-3 space-y-3 font-mono text-xs">
+              <div className="flex items-center justify-between">
+                <span className="text-steel">Floor Pricing:</span>
+                <span className="text-gold font-bold">{PRICING.mobileAppDevelopment.shortRange}</span>
+              </div>
+              <Link
+                href="/services#mobile-app-development"
+                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
+              >
+                View 3 Tiers ($1,200–$3,800)
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Case Studies Preview */}
+      {/* Featured Case Studies Preview — Elevated next to Premium & Custom sections */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-obsidian-border pb-4 gap-4">
           <div>
             <span className="font-mono text-xs text-gold uppercase tracking-wider">
-              ENGINEERING_CASE_STUDIES
+              PROOF_OF_ENGINEERING_CAPABILITY
             </span>
             <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
               Representative Systems Architecture
@@ -365,18 +422,18 @@ export default function HomePage() {
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link
-                href="/contact"
+                href="/contact?cta=discovery"
                 className="flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-colors hover:bg-signal-blue-hover"
               >
-                Schedule Technical Consultation
+                Schedule Technical Discovery Call
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/contact?cta=estimate"
+                href="/contact?cta=quote"
                 className="font-mono text-xs text-gold hover:underline flex items-center gap-1"
               >
                 <FileText className="h-3.5 w-3.5" />
-                Request 48-Hour Scoped Estimate
+                Get a Quick Quote
               </Link>
             </div>
           </div>

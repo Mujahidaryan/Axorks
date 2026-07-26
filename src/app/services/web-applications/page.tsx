@@ -1,14 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { ArrowUpRight, ArrowLeft, Code, CheckCircle2, HelpCircle } from 'lucide-react';
+import { ArrowUpRight, Code, CheckCircle2, HelpCircle, FileText, PhoneCall } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
-import { PRICING } from '@/lib/pricing';
+import { PRICING_LADDER } from '@/lib/pricing';
+
+const serviceData = PRICING_LADDER.webApplications;
 
 export const metadata: Metadata = {
-  title: 'Web and Custom Application Development Karachi | Axorks',
+  title: 'Web Applications & Custom Systems Karachi — Starting at $2,200 | Axorks',
   description:
-    'High-throughput web and custom application development in Karachi & Islamabad by Axorks. We build full-stack dashboards, client portals, CRMs, and operational management systems with Next.js and PostgreSQL.',
+    'Custom web application development in Karachi & Islamabad by Axorks Software House. Tiered pricing: Growth ($2,200), Premium ($4,000). Built with Next.js, TypeScript, and serverless Postgres.',
   keywords: [
     'web and custom application',
     'custom web application development',
@@ -19,20 +21,20 @@ export const metadata: Metadata = {
     'Axorks web and custom application',
   ],
   openGraph: {
-    title: 'Web and Custom Application Development Karachi | Axorks',
+    title: 'Web Applications & Custom Systems Karachi — Starting at $2,200 | Axorks',
     description:
-      'Full-stack web and custom application development, dashboards, client portals, and CRMs built with Next.js, TypeScript, and serverless Postgres by Axorks Software House.',
+      'Full-stack web application development, dashboards, client portals, and CRMs built with Next.js, TypeScript, and serverless Postgres by Axorks Software House.',
     url: `${SITE_URL}/services/web-applications`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web and Custom Application Development Karachi | Axorks',
-    description: 'Full-stack web and custom application development, dashboards, and CRMs built with Next.js and PostgreSQL.',
+    title: 'Web Applications & Custom Systems Karachi — Starting at $2,200 | Axorks',
+    description: 'Full-stack web applications and internal tools built with Next.js and PostgreSQL.',
   },
   alternates: {
-    canonical: `${SITE_URL}/services/web-applications`,
+    canonical: '/services/web-applications',
   },
 };
 
@@ -40,7 +42,7 @@ export default function WebApplicationsPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Web and Custom Application Development in Karachi',
+    name: 'Web Applications & Custom Systems Development in Karachi',
     serviceType: 'Custom Software & Web Application Development',
     provider: {
       '@type': 'Organization',
@@ -48,8 +50,20 @@ export default function WebApplicationsPage() {
       url: SITE_URL,
     },
     areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
-    description:
-      'Custom full-stack web and custom application development, dashboards, client portals, and operational management software built with Next.js, Node.js, and serverless PostgreSQL.',
+    description: serviceData.description,
+    offers: serviceData.tiers.map((t) => ({
+      '@type': 'Offer',
+      name: `Web Applications — ${t.name} Tier`,
+      price: t.priceUsd,
+      priceCurrency: 'USD',
+      description: t.outcome,
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: t.priceUsd,
+        priceCurrency: 'USD',
+        unitText: 'project',
+      },
+    })),
   };
 
   const faqSchema = {
@@ -58,26 +72,18 @@ export default function WebApplicationsPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What tech stack does Axorks use for web and custom application development?',
+        name: 'Why is there no Starter tier for Web Applications?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We build web and custom applications with Next.js App Router, TypeScript, Node.js REST APIs, serverless PostgreSQL (Neon), Prisma ORM, and Tailwind CSS.',
+          text: 'Full custom systems require multi-role authorization, serverless database architecture, and strict security logic that cannot be delivered properly at a cut-rate price without sacrificing quality or system stability.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can you migrate legacy spreadsheet workflows into a web and custom application?',
+        name: 'What tech stack does Axorks use for web applications?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. We specialize in replacing messy Excel/Google Sheet operational workflows with secure, relational web dashboards and role-based access control (RBAC).',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the typical investment for a web and custom application?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `Typical investment ranges from ${PRICING.webApplications.formattedRange} depending on database complexity, user role count, and third-party API integrations.`,
+          text: 'We build custom web applications with Next.js App Router, TypeScript, Node.js REST APIs, serverless PostgreSQL (Neon), Prisma ORM, and Tailwind CSS.',
         },
       },
     ],
@@ -100,7 +106,7 @@ export default function WebApplicationsPage() {
         <Breadcrumbs
           items={[
             { label: 'Services', href: '/services' },
-            { label: 'Web and Custom Application' },
+            { label: 'Web Applications' },
           ]}
         />
 
@@ -111,61 +117,91 @@ export default function WebApplicationsPage() {
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Web and Custom Application Development Services
+            Web Applications & Custom Systems Services
           </h1>
 
           <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Typical Investment: <strong className="text-gold font-bold">{PRICING.webApplications.formattedRange}</strong></span>
+            <span>Floor Pricing: <strong className="text-gold font-bold">{serviceData.floorPrice}</strong></span>
             <span>·</span>
-            <span>Delivery SLA: <strong className="text-paper">4 – 8 Weeks</strong></span>
+            <span>SLA: <strong className="text-paper">3 – 8 Weeks</strong></span>
           </div>
         </div>
 
-        {/* Rich Factual Prose */}
+        {/* Prose Overview */}
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
           <p className="text-paper/95 text-base">
-            Axorks Software House architects full-stack web and custom application systems, internal operational dashboards, client portals, CRMs, and enterprise software tailored to complex workflow demands in Karachi & Islamabad. Engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL, our systems replace fragmented manual tools with secure, high-throughput software.
-          </p>
-
-          <p>
-            Whether your business requires role-based authorization (RBAC), multi-tenant data isolation, real-time data sync, or automated invoice generation, we deliver clean data architectures designed for scale. Every web and custom application is built with strict type safety and structured API error handling.
-          </p>
-
-          <p>
-            Our web and custom application development workflow includes database schema modeling, API endpoint construction, front-end dashboard implementation, security audits, and full CI/CD deployment setup.
+            Axorks Software House architects full-stack web applications, internal operational dashboards, client portals, and CRMs tailored to complex business demands in Karachi & Islamabad. Engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL.
           </p>
         </div>
 
-        {/* Deliverables List */}
-        <div className="mt-10 schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8">
-          <h2 className="font-serif text-xl font-bold text-paper mb-4">
-            What's Included in Web and Custom Application Development
+        {/* Tier Pricing Ladder (Growth & Premium) */}
+        <div className="mt-10 space-y-4">
+          <h2 className="font-serif text-2xl font-bold text-paper">
+            Select Your Web Application Engagement Tier
           </h2>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-xs text-steel">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Full-Stack Next.js App Router & Node.js Backend</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Serverless PostgreSQL Database (Neon) & Prisma ORM</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Role-Based Access Control (RBAC) & NextAuth/JWT</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>REST API Endpoints & Third-Party Webhooks</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Real-Time Data Visualization & CSV/PDF Export</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
-              <span>Complete Source Code Handoff & Technical Docs</span>
-            </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+            {serviceData.tiers.map((tier) => (
+              <div
+                key={tier.name}
+                className="schematic-bracket flex flex-col justify-between border border-gold/50 bg-obsidian-raised p-6 space-y-6 shadow-[0_0_20px_rgba(201,162,75,0.08)]"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
+                    <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
+                      {tier.name} TIER
+                    </span>
+                    <span className="font-mono text-[11px] text-steel">{tier.turnaround}</span>
+                  </div>
+
+                  <div>
+                    <div className="font-serif text-3xl font-bold text-paper">{tier.formattedPrice}</div>
+                    <p className="mt-2 text-xs leading-relaxed text-steel italic">"{tier.outcome}"</p>
+                  </div>
+
+                  <div className="space-y-2 pt-2 border-t border-obsidian-border/60">
+                    <span className="font-mono text-[10px] uppercase text-gold font-bold block">Deliverables:</span>
+                    <ul className="space-y-2 text-xs text-steel">
+                      {tier.deliverables.map((item, dIdx) => (
+                        <li key={dIdx} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-obsidian-border">
+                  {tier.ctaType === 'quote_or_discovery' ? (
+                    <div className="grid grid-cols-2 gap-2">
+                      <Link
+                        href={`/contact?service=Web%20Applications%20%26%20Custom%20Systems&tier=${tier.name}&cta=quote`}
+                        className="flex items-center justify-center gap-1 rounded bg-signal-blue px-3 py-2 font-mono text-[11px] font-semibold uppercase text-paper hover:bg-signal-blue-hover text-center"
+                      >
+                        <FileText className="h-3 w-3" />
+                        Quick Quote
+                      </Link>
+                      <Link
+                        href={`/contact?service=Web%20Applications%20%26%20Custom%20Systems&tier=${tier.name}&cta=discovery`}
+                        className="flex items-center justify-center gap-1 rounded border border-gold/40 bg-gold/10 px-3 py-2 font-mono text-[11px] font-semibold uppercase text-gold hover:bg-gold/20 text-center"
+                      >
+                        <PhoneCall className="h-3 w-3" />
+                        Book Call
+                      </Link>
+                    </div>
+                  ) : (
+                    <Link
+                      href={`/contact?service=Web%20Applications%20%26%20Custom%20Systems&tier=${tier.name}&cta=quote`}
+                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors"
+                    >
+                      <FileText className="h-3.5 w-3.5" />
+                      Get a Quick Quote
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -179,52 +215,13 @@ export default function WebApplicationsPage() {
           <div className="space-y-4">
             <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
               <h3 className="font-serif text-base font-bold text-paper">
-                What tech stack does Axorks use for web and custom application development?
+                Why is there no Starter tier for Web Applications?
               </h3>
               <p className="mt-2 text-xs leading-relaxed text-steel">
-                We build web and custom applications with Next.js App Router, TypeScript, Node.js REST APIs, serverless PostgreSQL (Neon), Prisma ORM, and Tailwind CSS.
-              </p>
-            </div>
-
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
-              <h3 className="font-serif text-base font-bold text-paper">
-                Can you migrate legacy spreadsheet workflows into a web and custom application?
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Yes. We specialize in replacing messy Excel/Google Sheet operational workflows with secure, relational web dashboards and role-based access control (RBAC).
-              </p>
-            </div>
-
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
-              <h3 className="font-serif text-base font-bold text-paper">
-                What is the typical investment for a web and custom application?
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Typical investment ranges from {PRICING.webApplications.formattedRange} depending on database complexity, user role count, and third-party API integrations.
+                Full custom systems require multi-role authorization, serverless database architecture, and strict security logic that cannot be delivered properly at a cut-rate price without sacrificing quality or system stability.
               </p>
             </div>
           </div>
-        </div>
-
-        {/* CTA & Internal Navigation Links */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-obsidian-border pt-8 sm:flex-row">
-          <div className="flex items-center gap-4 text-xs font-mono text-steel">
-            <Link href="/case-studies" className="hover:text-paper transition-colors">
-              Explore Case Studies →
-            </Link>
-            <span>·</span>
-            <Link href="/process" className="hover:text-paper transition-colors">
-              View Our Process →
-            </Link>
-          </div>
-
-          <Link
-            href="/contact?service=Web%20Applications%20%26%20Custom%20Systems"
-            className="inline-flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
-          >
-            Inquire for Web & Custom Applications
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
         </div>
       </div>
     </div>
