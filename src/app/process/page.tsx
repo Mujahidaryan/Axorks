@@ -1,11 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, Search, FileCode, Hammer, Rocket, LifeBuoy } from 'lucide-react';
+import { ArrowUpRight, Search, FileCode, Hammer, Rocket, LifeBuoy, HelpCircle, ShieldCheck, Globe, Clock, MessageSquare, CreditCard } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import InternationalFAQSection from '@/components/InternationalFAQSection';
 
 export const metadata: Metadata = {
-  title: 'Engineering Process | Axorks Software Studio',
+  title: 'Engineering Process & International FAQ | Axorks Software Studio',
   description:
-    'Our 5-step honest software build walkthrough: Discovery, Scope & Quote, Build, Launch, and Retainer Support.',
+    'Our 5-step honest software build walkthrough and international client FAQ: Discovery, Scope & Quote, Time Zones, NDAs, and Milestone Payments.',
+  alternates: {
+    canonical: '/process',
+  },
 };
 
 export default function ProcessPage() {
@@ -15,7 +20,7 @@ export default function ProcessPage() {
       title: 'Discovery & Architecture Audit',
       icon: Search,
       paragraph:
-        'We start with a direct technical discussion to understand your product goals, target user flows, database needs, and integration constraints. No sales reps or account managers — you speak directly with engineering.',
+        'We start with a direct technical discussion to understand your product goals, target user flows, database needs, and integration constraints. You work directly with Founder & Chief Architect Muhammad Mujahid — never handed off to junior account reps.',
     },
     {
       number: '02',
@@ -50,6 +55,8 @@ export default function ProcessPage() {
   return (
     <div className="py-12 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs items={[{ label: 'Engineering Process & FAQ' }]} />
+
         <div className="border-b border-obsidian-border pb-6">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
             NO_AGILE_THEATER
@@ -62,6 +69,7 @@ export default function ProcessPage() {
           </p>
         </div>
 
+        {/* Steps */}
         <div className="mt-12 space-y-8">
           {steps.map((step) => {
             const Icon = step.icon;
@@ -92,12 +100,17 @@ export default function ProcessPage() {
           })}
         </div>
 
+        {/* International Objection-Handling FAQ Section */}
+        <div className="mt-20 border-t border-obsidian-border pt-12">
+          <InternationalFAQSection />
+        </div>
+
         <div className="mt-16 text-center">
           <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
+            href="/contact?cta=discovery"
+            className="inline-flex items-center gap-2 rounded bg-signal-blue px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
           >
-            Start Step 01 Discovery
+            Start Step 01 Discovery Call
             <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>

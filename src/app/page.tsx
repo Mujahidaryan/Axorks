@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, Code2, Users, Smartphone, Bot, Info, Layout, FileText, CheckCircle2, PhoneCall } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Code2, Users, Smartphone, Bot, Info, Layout, FileText, CheckCircle2, PhoneCall, UserCheck } from 'lucide-react';
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import InternationalFAQSection from '@/components/InternationalFAQSection';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
@@ -118,16 +120,21 @@ export default function HomePage() {
               Axorks is a founder-led software studio with a team of <strong className="text-paper">7+ skilled engineers and designers</strong> across Karachi & Islamabad. Productized software tiers starting at <strong className="text-gold font-bold">$600</strong> for <strong className="text-paper">Website Development, Web Applications, AI Automations, and Mobile Apps</strong>.
             </p>
 
+            {/* Founder Access Line */}
+            <div className="rounded border border-obsidian-border bg-obsidian p-3 font-mono text-xs text-steel flex items-center gap-2">
+              <UserCheck className="h-4 w-4 text-gold shrink-0" />
+              <span>You work directly with Founder & Chief Architect Muhammad Mujahid — not handed off to an account manager.</span>
+            </div>
+
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 href="/contact?cta=discovery"
                 className="group flex items-center gap-2 rounded bg-signal-blue px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover hover:shadow-lg hover:shadow-signal-blue/25"
               >
-                Schedule Consultation
+                Schedule Technical Discovery Call
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
 
-              {/* Low-Commitment CTA Option */}
               <Link
                 href="/contact?cta=quote"
                 className="flex items-center gap-2 rounded border border-gold/40 bg-obsidian-raised px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-gold transition-colors hover:bg-gold/10"
@@ -197,6 +204,21 @@ export default function HomePage() {
 
       {/* Signature Animated Gold Swoosh Divider Line */}
       <GoldSwooshLine />
+
+      {/* Risk-Reversal Payment Structure Note */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="schematic-bracket border border-gold/40 bg-obsidian-raised p-5 flex items-center justify-between font-mono text-xs text-steel">
+          <div className="flex items-center gap-3">
+            <ShieldCheck className="h-5 w-5 text-gold shrink-0" />
+            <div>
+              <span className="text-gold font-bold block uppercase">Risk-Reversal Payment Terms:</span>
+              <span className="text-paper/90">
+                Milestone-based payment: <strong>40% to begin, 40% at midpoint review, 20% on final delivery</strong>. You're never paying for work you haven't seen.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Tiers Capabilities Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -317,7 +339,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Case Studies Preview — Elevated next to Premium & Custom sections */}
+      {/* Featured Case Studies Preview */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-obsidian-border pb-4 gap-4">
           <div>
@@ -352,92 +374,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Dedicated Team Structure Section (7+ Team Members) */}
+      {/* Testimonials Structure Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-8 sm:p-10">
-          <div className="space-y-6">
-            <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
-                <Users className="h-4 w-4" />
-                <span>STUDIO_ORGANIZATION</span>
-              </div>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-                A Team of 7+ Skilled Engineers & Designers
-              </h2>
-              <p className="text-xs leading-relaxed text-steel sm:text-sm max-w-3xl">
-                Axorks operates as a founder-led studio with a team of 7+ team members working across Karachi & Islamabad in four core software disciplines:
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-mono text-xs">
-              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
-                <div className="flex items-center gap-2 text-gold font-bold text-sm">
-                  <Layout className="h-4 w-4" />
-                  Website Development
-                </div>
-                <div className="text-steel text-[11px] leading-relaxed">Custom Next.js Marketing & Corporate Sites</div>
-              </div>
-
-              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
-                <div className="flex items-center gap-2 text-gold font-bold text-sm">
-                  <Code2 className="h-4 w-4" />
-                  Web Applications
-                </div>
-                <div className="text-steel text-[11px] leading-relaxed">Full-Stack Next.js, Node.js & Postgres Portals</div>
-              </div>
-
-              <div className="rounded border border-obsidian-border bg-obsidian p-4 space-y-1.5">
-                <div className="flex items-center gap-2 text-gold font-bold text-sm">
-                  <Bot className="h-4 w-4" />
-                  AI & Automation Solutions
-                </div>
-                <div className="text-steel text-[11px] leading-relaxed">OpenAI API, Document Processing & ML Pipelines</div>
-              </div>
-
-              <div className="rounded border border-obsidian-border bg-obsidian-raised p-4 space-y-1.5 border-gold/40">
-                <div className="flex items-center gap-2 text-gold font-bold text-sm">
-                  <Smartphone className="h-4 w-4" />
-                  Mobile App Development
-                </div>
-                <div className="text-steel text-[11px] leading-relaxed">Cross-Platform iOS & Android Native App Teams</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <TestimonialsSection />
       </section>
 
-      {/* Closing Call To Action Block */}
+      {/* International Client Objection Handling FAQ */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="schematic-bracket border border-gold/50 bg-gradient-to-r from-obsidian-raised via-obsidian-raised to-obsidian p-8 sm:p-12">
-          <div className="max-w-2xl">
-            <span className="font-mono text-xs font-semibold text-gold uppercase tracking-wider">
-              INITIATE_PROJECT_DISCOVERY
-            </span>
-            <h2 className="mt-2 font-serif text-3xl font-bold text-paper sm:text-4xl">
-              Turn software requirements into production code.
-            </h2>
-            <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm">
-              Work directly with Founder & Chief Architect Muhammad Mujahid and our 7+ person engineering team.
-            </p>
-
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <Link
-                href="/contact?cta=discovery"
-                className="flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-colors hover:bg-signal-blue-hover"
-              >
-                Schedule Technical Discovery Call
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href="/contact?cta=quote"
-                className="font-mono text-xs text-gold hover:underline flex items-center gap-1"
-              >
-                <FileText className="h-3.5 w-3.5" />
-                Get a Quick Quote
-              </Link>
-            </div>
-          </div>
-        </div>
+        <InternationalFAQSection />
       </section>
     </div>
   );
