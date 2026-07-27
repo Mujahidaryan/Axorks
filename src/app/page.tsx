@@ -9,32 +9,31 @@ import { SITE_URL, SITE_NAME } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Axorks | Custom Software & Website Development in Karachi — Starting at $600',
+  title: 'Axorks | International Custom Software & Bespoke Web Engineering Studio',
   description:
-    'Axorks is a software house in Karachi & Islamabad offering tiered software development: Custom Websites (from $600), Web Applications (from $2,200), AI Automations (from $900), Mobile Apps (from $1,200), and Custom Enterprise Engineering.',
+    'Axorks is an international software engineering company serving businesses worldwide. We deliver custom web platforms (from $600), web applications (from $2,200), AI automations (from $900), mobile apps (from $1,200), and custom enterprise software.',
   keywords: [
-    'software house Karachi',
-    'software house in Karachi',
-    'karachi software house',
-    'website development Karachi',
-    'custom website development',
-    'web development company Karachi',
-    'software solutions provider Karachi',
-    'mobile app development Karachi',
-    'AI integration services Karachi',
+    'international software engineering company',
+    'custom software development company',
+    'bespoke web development UK',
+    'custom web application development US',
+    'AI automation agency',
+    'remote software engineering studio',
+    'cross platform mobile app development',
+    'enterprise web solutions',
   ],
   openGraph: {
-    title: 'Axorks | Custom Software & Website Development in Karachi — Starting at $600',
+    title: 'Axorks | International Custom Software & Bespoke Web Engineering',
     description:
-      'Tiered software development studio in Karachi & Islamabad. Custom Websites from $600, Web Applications from $2,200, AI Automations from $900, Mobile Apps from $1,200.',
+      'International software engineering company delivering custom web platforms, AI integrations, mobile applications, and enterprise cloud software for global decision-makers.',
     url: SITE_URL,
     siteName: SITE_NAME,
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axorks | Software House in Karachi — Starting at $600',
-    description: 'Tiered software development studio in Karachi shipping custom website development and software solutions.',
+    title: 'Axorks | International Software Engineering Studio',
+    description: 'International software engineering company delivering bespoke web systems, AI automations, and custom software.',
   },
   alternates: {
     canonical: '/',
@@ -108,16 +107,16 @@ export default function HomePage() {
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold">
               <ShieldCheck className="h-4 w-4" />
-              <span>Software House & Custom Web Development Studio in Karachi</span>
+              <span>International Software Engineering Company · Global Remote Delivery</span>
             </div>
 
             <h1 className="font-serif text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl lg:leading-[1.12]">
-              Software House in Karachi.{' '}
-              <span className="italic text-gold">Built to scale web software.</span>
+              International Software Engineering.{' '}
+              <span className="italic text-gold">Built to scale global businesses.</span>
             </h1>
 
             <p className="text-base leading-relaxed text-steel sm:text-lg">
-              Axorks is a founder-led software studio with a team of <strong className="text-paper">7+ skilled engineers and designers</strong> across Karachi & Islamabad. Productized software tiers starting at <strong className="text-gold font-bold">$600</strong> for <strong className="text-paper">Website Development, Web Applications, AI Automations, and Mobile Apps</strong>.
+              Axorks is a founder-led software engineering company serving ambitious businesses across the UK, US, EU, UAE, and worldwide. Powered by a core team of <strong className="text-paper">7+ senior engineers and designers</strong>, we architect custom web applications, AI automations, and mobile platforms engineered for high performance, enterprise security, and long-term scalability.
             </p>
 
             {/* Founder Access Line */}
@@ -159,19 +158,19 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Core Team Size:</span>
-                  <span className="font-bold text-gold">7+ Skilled Team Members</span>
+                  <span className="font-bold text-gold">7+ Senior Engineers</span>
                 </li>
                 <li className="flex items-center justify-between">
                   <span>Track Record:</span>
                   <span className="font-bold text-paper">6+ Shipped Systems · 5 Clients</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Productized Floor:</span>
-                  <span className="font-bold text-gold">Starting at $600</span>
+                  <span>Delivery Model:</span>
+                  <span className="font-bold text-gold">Remote Global Delivery</span>
                 </li>
                 <li className="flex items-center justify-between">
-                  <span>Studio Locations:</span>
-                  <span className="text-paper font-semibold">Karachi & Islamabad</span>
+                  <span>Timezone Overlap:</span>
+                  <span className="text-paper font-semibold">US / UK / EU Shifts</span>
                 </li>
               </ul>
             </div>

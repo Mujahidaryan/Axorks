@@ -5,7 +5,14 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import PaymentTermsNote from '@/components/PaymentTermsNote';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import InternationalFAQSection from '@/components/InternationalFAQSection';
+import WhyChooseAxorks from '@/components/service/WhyChooseAxorks';
+import WhyThisTech, { TechChoice } from '@/components/service/WhyThisTech';
+import ServiceProcess from '@/components/service/ServiceProcess';
+import ProjectEstimationFramework from '@/components/service/ProjectEstimationFramework';
+import AgencyComparisonTable from '@/components/service/AgencyComparisonTable';
+import IndustrySolutionsSection from '@/components/service/IndustrySolutionsSection';
+import ServiceFAQSection from '@/components/service/ServiceFAQSection';
+import ServiceCTA from '@/components/service/ServiceCTA';
 import { ArrowUpRight, Bot, CheckCircle2, FileText, PhoneCall, ChevronDown, ChevronUp, Cpu, Database, Server, Lock, Sparkles, UserCheck } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING_LADDER } from '@/lib/pricing';
@@ -14,6 +21,69 @@ const serviceData = PRICING_LADDER.aiIntegration;
 
 export default function AiIntegrationPage() {
   const [showTechnicalOverview, setShowTechnicalOverview] = useState(false);
+
+  const aiTechChoices: TechChoice[] = [
+    {
+      name: 'OpenAI GPT-4o & Claude 3.5 Sonnet',
+      category: 'LLM Engines',
+      whySelected:
+        'Industry-leading reasoning capability, multimodal vision processing, and structured JSON output mode.',
+      businessOutcome:
+        'Automates manual document processing, data extraction, and customer inquiry response with human-level accuracy.',
+    },
+    {
+      name: 'pgvector & Serverless Postgres',
+      category: 'Vector Database (RAG)',
+      whySelected:
+        'Integrates vector embeddings directly inside your relational database without needing external vector services.',
+      businessOutcome:
+        'Sub-second semantic search over internal company knowledge bases with zero extra database infrastructure overhead.',
+    },
+    {
+      name: 'Python (LangChain / LlamaIndex)',
+      category: 'AI Pipeline Framework',
+      whySelected:
+        'Robust ecosystem for prompt chaining, agentic workflows, document chunking, and PDF parsing pipelines.',
+      businessOutcome:
+        'Rapid deployment of enterprise RAG search tools and automated report generation workflows.',
+    },
+    {
+      name: 'Token Optimization Middleware',
+      category: 'Cost Control',
+      whySelected:
+        'Implements semantic caching, prompt truncation, and response pre-filtering before sending requests to API vendors.',
+      businessOutcome:
+        'Reduces monthly OpenAI/Anthropic API bill costs by up to 60% while maintaining instant response times.',
+    },
+  ];
+
+  const aiFaqs = [
+    {
+      question: 'Will our proprietary business data be used to train public AI models?',
+      answer:
+        'No. We configure enterprise zero-data-retention API endpoints (OpenAI Enterprise / Anthropic API) where client data is strictly excluded from any AI model training.',
+    },
+    {
+      question: 'How do you prevent AI model hallucinations?',
+      answer:
+        'We utilize strict Retrieval-Augmented Generation (RAG) pipelines that constrain LLM answers exclusively to your verified internal document context, including source citations.',
+    },
+    {
+      question: 'What are the ongoing monthly costs of running an AI integration?',
+      answer:
+        'Monthly costs consist of raw LLM token API usage (typically $20–$150/month for SMBs depending on volume) plus optional hosting maintenance. We optimize prompts to keep API bills low.',
+    },
+    {
+      question: 'How long does an AI automation project take to complete?',
+      answer:
+        'Starter chatbots take ~1–2 weeks, Growth automated document/support pipelines take ~2–4 weeks, and Premium custom agentic platforms take ~4–6 weeks.',
+    },
+    {
+      question: 'Who owns the custom AI workflow code and prompt templates?',
+      answer:
+        'You own 100% of the custom prompt templates, Python middleware, vector database schemas, and integration source code.',
+    },
+  ];
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -25,7 +95,7 @@ export default function AiIntegrationPage() {
       name: 'Axorks Software House',
       url: SITE_URL,
     },
-    areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
+    areaServed: ['United Kingdom', 'United States', 'European Union', 'United Arab Emirates', 'Worldwide'],
     description: serviceData.description,
     offers: serviceData.tiers.map((t) => ({
       '@type': 'Offer',
@@ -43,7 +113,7 @@ export default function AiIntegrationPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
       <head>
         <script
           type="application/ld+json"
@@ -51,7 +121,7 @@ export default function AiIntegrationPage() {
         />
       </head>
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         <Breadcrumbs
           items={[
             { label: 'Services', href: '/services' },
@@ -59,38 +129,43 @@ export default function AiIntegrationPage() {
           ]}
         />
 
-        <div className="mt-4 border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
+        {/* SECTION 1: VALUE PROPOSITION */}
+        <div className="border-b border-obsidian-border pb-8 space-y-4">
+          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
             <Bot className="h-3.5 w-3.5" />
-            <span>CORE_SERVICE_02</span>
+            <span>AI_SOLUTIONS_&_WORKFLOW_AUTOMATION</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            AI Solutions & Automation Services
+            AI Solutions & Business Workflow Automation
           </h1>
 
-          <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Lead Entry Price: <strong className="text-gold font-bold">{serviceData.leadPrice}</strong></span>
+          <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+            Axorks builds practical AI automations that integrate intelligent assistants, document parsing pipelines, and automated workflows directly into your business software. We focus on high-ROI business tools that eliminate manual data entry hours and streamline daily operations for companies in the UK, US, EU, and worldwide.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-steel pt-2">
+            <span>Lead Entry Price: <strong className="text-gold font-bold">Starting at {serviceData.leadPrice}</strong></span>
             <span>·</span>
             <span>SLA: <strong className="text-paper">1 – 5 Weeks</strong></span>
+            <span>·</span>
+            <span>Data Privacy: <strong className="text-gold">Zero AI Training on Your Data</strong></span>
           </div>
-        </div>
-
-        {/* Prose Overview (Plain Language — Jargon Free) */}
-        <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
-          <p className="text-paper/95 text-base">
-            Axorks Software House builds practical AI automations that integrate intelligent assistants, document parsing features, and automated workflows directly into your business software. We focus on high-ROI business tools that save manual hours and streamline daily operations.
-          </p>
         </div>
 
         {/* Risk-Reversal Payment Structure Note Banner */}
         <PaymentTermsNote />
 
-        {/* 3-Tier Pricing Ladder with Full Deliverable Checklists */}
-        <div className="mt-10 space-y-4">
-          <h2 className="font-serif text-2xl font-bold text-paper">
-            Select Your AI Automation Tier
-          </h2>
+        {/* 3-Tier Pricing Ladder */}
+        <div className="space-y-6">
+          <div className="border-b border-obsidian-border pb-4">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
+              Select Your AI Automation Tier
+            </h2>
+            <p className="text-xs text-steel mt-1">
+              Fixed milestone pricing for custom AI assistants, semantic document search (RAG), and intelligent pipeline automations.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {serviceData.tiers.map((tier) => {
@@ -212,7 +287,7 @@ export default function AiIntegrationPage() {
         </div>
 
         {/* Expandable "See the Detailed Overview" Section for Technical Visitors */}
-        <div className="mt-12 pt-6 border-t border-obsidian-border">
+        <div className="pt-2">
           <button
             onClick={() => setShowTechnicalOverview(!showTechnicalOverview)}
             className="w-full flex items-center justify-between rounded border border-gold/40 bg-obsidian-raised p-5 font-mono text-xs font-semibold text-gold hover:bg-gold/10 transition-colors"
@@ -282,15 +357,46 @@ export default function AiIntegrationPage() {
           )}
         </div>
 
-        {/* Client Testimonials Structure */}
-        <div className="mt-16">
-          <TestimonialsSection />
-        </div>
+        {/* SECTION 2: WHY INTERNATIONAL CLIENTS CHOOSE AXORKS */}
+        <WhyChooseAxorks />
 
-        {/* International Client Objection Handling FAQ */}
-        <div className="mt-16">
-          <InternationalFAQSection />
-        </div>
+        {/* SECTION 3: WHY THIS TECHNOLOGY */}
+        <WhyThisTech
+          heading="Why We Architect AI Pipelines with OpenAI, Claude & pgvector"
+          subheading="We select enterprise-grade LLM models, vector embeddings, and token-caching middleware to deliver intelligent automations that keep monthly API bills low."
+          techChoices={aiTechChoices}
+        />
+
+        {/* SECTION 4: 10-PHASE PROCESS */}
+        <ServiceProcess />
+
+        {/* SECTION 5: PROJECT ESTIMATION & ENGAGEMENT */}
+        <ProjectEstimationFramework />
+
+        {/* SECTION 6: COMPARISON TABLE */}
+        <AgencyComparisonTable />
+
+        {/* SECTION 7: INDUSTRIES SERVED */}
+        <IndustrySolutionsSection />
+
+        {/* CLIENT TESTIMONIALS */}
+        <TestimonialsSection />
+
+        {/* SECTION 8: FREQUENTLY ASKED QUESTIONS */}
+        <ServiceFAQSection
+          title="AI Solutions & Automation FAQ"
+          subtitle="Direct answers regarding data privacy, LLM token costs, hallucination prevention, and custom prompt IP."
+          faqs={aiFaqs}
+        />
+
+        {/* SECTION 10: CALL TO ACTION */}
+        <ServiceCTA
+          serviceName="AI Solutions & Automation"
+          heading="Ready to Automate Your Business Workflows with AI?"
+          subheading="Schedule an AI discovery session directly with Chief Systems Architect Muhammad Mujahid to identify high-ROI automation opportunities and token optimization strategies."
+          primaryCtaText="Talk to an AI Architect"
+          secondaryCtaText="Request Scoped AI Proposal"
+        />
       </div>
     </div>
   );

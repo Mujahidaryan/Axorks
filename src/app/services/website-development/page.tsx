@@ -3,7 +3,14 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import PaymentTermsNote from '@/components/PaymentTermsNote';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import InternationalFAQSection from '@/components/InternationalFAQSection';
+import WhyChooseAxorks from '@/components/service/WhyChooseAxorks';
+import WhyThisTech, { TechChoice } from '@/components/service/WhyThisTech';
+import ServiceProcess from '@/components/service/ServiceProcess';
+import ProjectEstimationFramework from '@/components/service/ProjectEstimationFramework';
+import AgencyComparisonTable from '@/components/service/AgencyComparisonTable';
+import IndustrySolutionsSection from '@/components/service/IndustrySolutionsSection';
+import ServiceFAQSection from '@/components/service/ServiceFAQSection';
+import ServiceCTA from '@/components/service/ServiceCTA';
 import { ArrowUpRight, Layout, CheckCircle2, FileText, PhoneCall, Sparkles, UserCheck } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING_LADDER } from '@/lib/pricing';
@@ -11,30 +18,29 @@ import { PRICING_LADDER } from '@/lib/pricing';
 const serviceData = PRICING_LADDER.websiteDevelopment;
 
 export const metadata: Metadata = {
-  title: 'Website Development Services in Karachi — Starting at $600 | Axorks',
+  title: 'Custom & Bespoke Website Development Services — Starting at $600 | Axorks',
   description:
-    'Custom website development services in Karachi & Islamabad by Axorks Software House. Tiered pricing: Starter ($600), Growth ($1,200), Premium ($2,000). Built with Next.js App Router, TypeScript, and serverless technology.',
+    'Bespoke website development services for businesses in the UK, US, EU, and worldwide. Tiered engagement: Starter ($600), Growth ($1,200), Premium ($2,000). Built with Next.js App Router, TypeScript, and serverless technology.',
   keywords: [
-    'website development Karachi',
-    'custom website development',
-    'web development company Karachi',
-    'website development services Pakistan',
-    'Next.js website development',
-    'software house website development',
+    'bespoke website development',
+    'custom website development company',
+    'Next.js website engineering',
+    'corporate website development UK',
+    'high conversion landing sites US',
     'Axorks website development',
   ],
   openGraph: {
-    title: 'Website Development Services in Karachi — Starting at $600 | Axorks',
+    title: 'Custom & Bespoke Website Development Services — Starting at $600 | Axorks',
     description:
-      'Custom website development in Karachi with 3-tier pricing ($600, $1,200, $2,000) built with Next.js App Router and TypeScript by Axorks Software House.',
+      'Bespoke website development with 3-tier pricing ($600, $1,200, $2,000) built with Next.js App Router and TypeScript by Axorks Software House for global decision-makers.',
     url: `${SITE_URL}/services/website-development`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Website Development Services in Karachi — Starting at $600 | Axorks',
-    description: 'Custom website development services in Karachi starting at $600 built with Next.js.',
+    title: 'Custom & Bespoke Website Development Services — Starting at $600 | Axorks',
+    description: 'Bespoke website development services starting at $600 built with Next.js App Router.',
   },
   alternates: {
     canonical: '/services/website-development',
@@ -42,17 +48,85 @@ export const metadata: Metadata = {
 };
 
 export default function WebsiteDevelopmentPage() {
+  const websiteTechChoices: TechChoice[] = [
+    {
+      name: 'Next.js 14 App Router',
+      category: 'Full-Stack Framework',
+      whySelected:
+        'Enables hybrid server-side rendering (SSR), static generation (SSG), sub-second First Contentful Paint, and superior search engine crawlability.',
+      businessOutcome:
+        'Sub-second page load speeds and green Core Web Vitals scores that improve Google search rankings and lead conversion.',
+    },
+    {
+      name: 'TypeScript',
+      category: 'Language',
+      whySelected:
+        'Provides strict type safety across all components and server actions, eliminating runtime JavaScript errors in production.',
+      businessOutcome:
+        'Zero runtime code crashes, reduced maintenance overhead, and rapid bug-free feature deployment.',
+    },
+    {
+      name: 'Tailwind CSS',
+      category: 'Styling Engine',
+      whySelected:
+        'Utility-first CSS compiler generating minimal production CSS bundles with zero unused style bloat.',
+      businessOutcome:
+        'Ultra-lightweight page weight, mobile-responsive layout consistency, and seamless dark-mode design.',
+    },
+    {
+      name: 'Vercel Serverless Edge',
+      category: 'Deployment Infrastructure',
+      whySelected:
+        'Global Content Delivery Network (CDN) with automatic SSL, instant edge caching, and zero server management.',
+      businessOutcome:
+        '99.99% uptime guarantee, enterprise DDOS protection, and instant global page loading.',
+    },
+  ];
+
+  const websiteFaqs = [
+    {
+      question: 'How long does a custom website development project take?',
+      answer:
+        'Starter builds take ~1–2 weeks, Growth multi-page sites take ~2–3 weeks, and Premium bespoke enterprise marketing platforms take ~3–4 weeks from initial content alignment.',
+    },
+    {
+      question: 'How is project pricing determined?',
+      answer:
+        'Pricing is fixed and milestone-based ($600 Starter, $1,200 Growth, $2,000 Premium). Complex custom web platforms requiring custom backend API integrations receive a tailored discovery quote.',
+    },
+    {
+      question: 'Who owns the source code and intellectual property after completion?',
+      answer:
+        'You own 100% of the source code, custom design assets, and intellectual property upon project completion and final payment. Source code is delivered directly via GitHub.',
+    },
+    {
+      question: 'Can you sign a Non-Disclosure Agreement (NDA)?',
+      answer:
+        'Yes. Standing mutual NDA confidentiality is standard policy for all client engagements, protecting your trade secrets, content, and credentials.',
+    },
+    {
+      question: 'Why does Axorks use Next.js instead of WordPress?',
+      answer:
+        'Next.js delivers sub-second page loads, zero plugin security vulnerabilities, superior search crawlability, and custom design flexibility without heavy page-builder bloat.',
+    },
+    {
+      question: 'Do you provide post-launch maintenance and support?',
+      answer:
+        'Yes. Every project includes post-launch support (7 to 30 days depending on tier). Optional monthly retainer plans are available for continuous performance tuning and updates.',
+    },
+  ];
+
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Website Development Services in Karachi',
+    name: 'Bespoke & Custom Website Development Services',
     serviceType: 'Custom Web Development',
     provider: {
       '@type': 'Organization',
       name: 'Axorks Software House',
       url: SITE_URL,
     },
-    areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
+    areaServed: ['United Kingdom', 'United States', 'European Union', 'United Arab Emirates', 'Worldwide'],
     description: serviceData.description,
     offers: serviceData.tiers.map((t) => ({
       '@type': 'Offer',
@@ -70,7 +144,7 @@ export default function WebsiteDevelopmentPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
       <head>
         <script
           type="application/ld+json"
@@ -78,7 +152,7 @@ export default function WebsiteDevelopmentPage() {
         />
       </head>
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         <Breadcrumbs
           items={[
             { label: 'Services', href: '/services' },
@@ -86,38 +160,43 @@ export default function WebsiteDevelopmentPage() {
           ]}
         />
 
-        <div className="mt-4 border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
+        {/* SECTION 1: VALUE PROPOSITION */}
+        <div className="border-b border-obsidian-border pb-8 space-y-4">
+          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
             <Layout className="h-3.5 w-3.5" />
-            <span>CORE_SERVICE_01</span>
+            <span>ENTERPRISE_WEB_ENGINEERING</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Custom Website Development Services in Karachi
+            Custom & Bespoke Website Engineering
           </h1>
 
-          <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
+          <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+            Axorks engineers high-performance custom and bespoke website solutions built with Next.js App Router, TypeScript, and serverless cloud infrastructure. Designed specifically for founders, CEOs, and marketing leaders across the UK, US, EU, and worldwide who require sub-second load times, superior search visibility, and maximum lead conversion.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-steel pt-2">
             <span>Lead Entry Price: <strong className="text-gold font-bold">Starting at {serviceData.leadPrice}</strong></span>
             <span>·</span>
             <span>SLA: <strong className="text-paper">1 – 4 Weeks</strong></span>
+            <span>·</span>
+            <span>Code Ownership: <strong className="text-gold">100% Client Owned</strong></span>
           </div>
-        </div>
-
-        {/* Prose Overview */}
-        <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
-          <p className="text-paper/95 text-base">
-            Axorks Software House engineers high-performance custom website development solutions built with Next.js App Router, TypeScript, and serverless cloud infrastructure in Karachi & Islamabad. Designed for technical founders, growing businesses, and agencies, our websites replace bloated page builders with clean code.
-          </p>
         </div>
 
         {/* Risk-Reversal Payment Structure Note Banner */}
         <PaymentTermsNote />
 
         {/* 3-Tier Pricing Ladder */}
-        <div className="mt-10 space-y-4">
-          <h2 className="font-serif text-2xl font-bold text-paper">
-            Select Your Website Development Tier
-          </h2>
+        <div className="space-y-6">
+          <div className="border-b border-obsidian-border pb-4">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
+              Select Your Website Development Tier
+            </h2>
+            <p className="text-xs text-steel mt-1">
+              Transparent, fixed milestone pricing. Starter & Growth tiers include line-item deliverable checklists; Premium tier delivers bespoke custom architecture.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {serviceData.tiers.map((tier) => {
@@ -224,7 +303,7 @@ export default function WebsiteDevelopmentPage() {
                   <div className="pt-4 border-t border-obsidian-border">
                     <Link
                       href={`/contact?service=Custom%20Website%20Development&tier=${tier.name}&cta=quote`}
-                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors"
+                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors text-center"
                     >
                       <FileText className="h-3.5 w-3.5" />
                       Get a Quick Quote
@@ -236,15 +315,46 @@ export default function WebsiteDevelopmentPage() {
           </div>
         </div>
 
-        {/* Client Testimonials Structure */}
-        <div className="mt-16">
-          <TestimonialsSection />
-        </div>
+        {/* SECTION 2: WHY INTERNATIONAL CLIENTS CHOOSE AXORKS */}
+        <WhyChooseAxorks />
 
-        {/* International Client Objection Handling FAQ */}
-        <div className="mt-16">
-          <InternationalFAQSection />
-        </div>
+        {/* SECTION 3: WHY THIS TECHNOLOGY */}
+        <WhyThisTech
+          heading="Why We Architect Websites with Next.js & TypeScript"
+          subheading="We replace heavy page builders and legacy CMS monoliths with clean, serverless Next.js architecture engineered for sub-second speeds and search engine dominancy."
+          techChoices={websiteTechChoices}
+        />
+
+        {/* SECTION 4: 10-PHASE PROCESS */}
+        <ServiceProcess />
+
+        {/* SECTION 5: PROJECT ESTIMATION & ENGAGEMENT */}
+        <ProjectEstimationFramework />
+
+        {/* SECTION 6: COMPARISON TABLE */}
+        <AgencyComparisonTable />
+
+        {/* SECTION 7: INDUSTRIES SERVED */}
+        <IndustrySolutionsSection />
+
+        {/* CLIENT TESTIMONIALS */}
+        <TestimonialsSection />
+
+        {/* SECTION 8: FREQUENTLY ASKED QUESTIONS */}
+        <ServiceFAQSection
+          title="Website Development FAQ"
+          subtitle="Direct technical answers regarding website build SLA, code ownership, Next.js tech stack, and post-launch maintenance."
+          faqs={websiteFaqs}
+        />
+
+        {/* SECTION 10: CALL TO ACTION */}
+        <ServiceCTA
+          serviceName="Custom Website Development"
+          heading="Ready to Engineer Your Bespoke Web Platform?"
+          subheading="Schedule a technical discovery call with Chief Systems Architect Muhammad Mujahid to map out your site architecture, performance SLA, and milestone plan."
+          primaryCtaText="Talk to a Web Architect"
+          secondaryCtaText="Request Scoped Quote"
+        />
       </div>
     </div>
   );

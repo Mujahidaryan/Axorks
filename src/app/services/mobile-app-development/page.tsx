@@ -3,7 +3,14 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import PaymentTermsNote from '@/components/PaymentTermsNote';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import InternationalFAQSection from '@/components/InternationalFAQSection';
+import WhyChooseAxorks from '@/components/service/WhyChooseAxorks';
+import WhyThisTech, { TechChoice } from '@/components/service/WhyThisTech';
+import ServiceProcess from '@/components/service/ServiceProcess';
+import ProjectEstimationFramework from '@/components/service/ProjectEstimationFramework';
+import AgencyComparisonTable from '@/components/service/AgencyComparisonTable';
+import IndustrySolutionsSection from '@/components/service/IndustrySolutionsSection';
+import ServiceFAQSection from '@/components/service/ServiceFAQSection';
+import ServiceCTA from '@/components/service/ServiceCTA';
 import { ArrowUpRight, Smartphone, CheckCircle2, FileText, PhoneCall, Sparkles, UserCheck } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING_LADDER } from '@/lib/pricing';
@@ -11,31 +18,29 @@ import { PRICING_LADDER } from '@/lib/pricing';
 const serviceData = PRICING_LADDER.mobileAppDevelopment;
 
 export const metadata: Metadata = {
-  title: 'Mobile App Development Services in Karachi — Starting at $1,200 | Axorks',
+  title: 'Cross-Platform Mobile App Development — Starting at $1,200 | Axorks',
   description:
-    'Cross-platform iOS and Android mobile app development in Karachi & Islamabad by Axorks. Tiered pricing: Starter ($1,200), Growth ($2,200), Premium ($3,800). Built for performance, offline sync, and fast cloud backends.',
+    'Cross-platform iOS and Android mobile application engineering for clients in the UK, US, EU, and worldwide. Tiered pricing: Starter ($1,200), Growth ($2,200), Premium ($3,800). Built for high performance, offline data sync, and cloud backends.',
   keywords: [
-    'mobile application',
-    'build mobile application',
-    'karachi mobile application development',
-    'mobile application development Karachi',
-    'iOS mobile application development',
-    'Android mobile application development',
-    'cross platform mobile apps Pakistan',
+    'cross platform mobile app development',
+    'iOS and Android app engineering',
+    'custom mobile apps US',
+    'mobile application development UK',
+    'react native flutter engineering',
     'Axorks mobile application',
   ],
   openGraph: {
-    title: 'Mobile App Development Services in Karachi — Starting at $1,200 | Axorks',
+    title: 'Cross-Platform Mobile App Development — Starting at $1,200 | Axorks',
     description:
-      'Cross-platform iOS and Android mobile app development with 3-tier pricing ($1,200, $2,200, $3,800) by Axorks Software House.',
+      'Cross-platform iOS and Android mobile app development with 3-tier pricing ($1,200, $2,200, $3,800) engineered by Axorks Software House for global clients.',
     url: `${SITE_URL}/services/mobile-app-development`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mobile App Development Services in Karachi — Starting at $1,200 | Axorks',
-    description: 'Cross-platform iOS and Android app development starting at $1,200.',
+    title: 'Cross-Platform Mobile App Development — Starting at $1,200 | Axorks',
+    description: 'Cross-platform iOS and Android app development starting at $1,200 built for global scale.',
   },
   alternates: {
     canonical: '/services/mobile-app-development',
@@ -43,17 +48,80 @@ export const metadata: Metadata = {
 };
 
 export default function MobileAppDevelopmentPage() {
+  const mobileTechChoices: TechChoice[] = [
+    {
+      name: 'React Native & Flutter',
+      category: 'Cross-Platform Framework',
+      whySelected:
+        'Enables native performance on both iOS and Android from a single unified codebase.',
+      businessOutcome:
+        'Reduces development timeline by 50% while guaranteeing 60fps smooth UI animations across all mobile devices.',
+    },
+    {
+      name: 'SQLite / WatermelonDB',
+      category: 'Local Storage Engine',
+      whySelected:
+        'Provides local relational database storage on mobile devices with background thread synchronization.',
+      businessOutcome:
+        'Enables seamless offline operation for mobile users with automatic cloud sync when connectivity returns.',
+    },
+    {
+      name: 'Node.js & Serverless REST APIs',
+      category: 'Backend Cloud API',
+      whySelected:
+        'Lightweight, event-driven backend microservices providing fast JSON response payloads.',
+      businessOutcome:
+        'Sub-100ms API response times, instant push notification triggers, and low cloud hosting overhead.',
+    },
+    {
+      name: 'Firebase & Apple Push Notification (APNs)',
+      category: 'Notification Engine',
+      whySelected:
+        'Enterprise push notification infrastructure with user segment targeting and background payload delivery.',
+      businessOutcome:
+        'Higher user retention, instant transactional alerts, and automated user re-engagement campaigns.',
+    },
+  ];
+
+  const mobileFaqs = [
+    {
+      question: 'Do you build native apps for both iOS and Android?',
+      answer:
+        'Yes. We utilize cross-platform engineering (React Native / Flutter) to compile native iOS (Swift runtime) and Android (Kotlin runtime) applications from a single secure codebase.',
+    },
+    {
+      question: 'Do you handle Apple App Store and Google Play Store deployment?',
+      answer:
+        'Yes. Every mobile app project includes full store submission management: developer account setup, screenshot formatting, privacy policy compliance, and review approval.',
+    },
+    {
+      question: 'How does offline data synchronization work?',
+      answer:
+        'Apps store user actions locally in an encrypted database (SQLite/WatermelonDB) during offline states and automatically sync changes to the cloud backend once connectivity is re-established.',
+    },
+    {
+      question: 'Who owns the mobile application source code?',
+      answer:
+        'You own 100% of the mobile app source code, assets, and App Store credentials upon project completion and final milestone payment.',
+    },
+    {
+      question: 'What is the typical mobile app development timeline?',
+      answer:
+        'Starter builds take ~2–3 weeks, Growth applications take ~4–6 weeks, and Premium enterprise mobile platforms take ~6–8 weeks.',
+    },
+  ];
+
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Mobile App Development Services in Karachi',
+    name: 'Cross-Platform Mobile App Development Services',
     serviceType: 'Mobile Application Development',
     provider: {
       '@type': 'Organization',
       name: 'Axorks Software House',
       url: SITE_URL,
     },
-    areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
+    areaServed: ['United Kingdom', 'United States', 'European Union', 'United Arab Emirates', 'Worldwide'],
     description: serviceData.description,
     offers: serviceData.tiers.map((t) => ({
       '@type': 'Offer',
@@ -71,7 +139,7 @@ export default function MobileAppDevelopmentPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
       <head>
         <script
           type="application/ld+json"
@@ -79,7 +147,7 @@ export default function MobileAppDevelopmentPage() {
         />
       </head>
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         <Breadcrumbs
           items={[
             { label: 'Services', href: '/services' },
@@ -87,38 +155,43 @@ export default function MobileAppDevelopmentPage() {
           ]}
         />
 
-        <div className="mt-4 border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
+        {/* SECTION 1: VALUE PROPOSITION */}
+        <div className="border-b border-obsidian-border pb-8 space-y-4">
+          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
             <Smartphone className="h-3.5 w-3.5" />
-            <span>CORE_SERVICE_04</span>
+            <span>CROSS_PLATFORM_MOBILE_ENGINEERING</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Mobile App Development Services
+            Cross-Platform Mobile App Engineering
           </h1>
 
-          <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
+          <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+            Axorks engineers high-performance cross-platform mobile applications for iOS and Android, focusing on bespoke UI design, offline data synchronization, role-based security, and cloud backend connectivity for global businesses across the UK, US, EU, and worldwide.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-steel pt-2">
             <span>Lead Entry Price: <strong className="text-gold font-bold">Starting at {serviceData.leadPrice}</strong></span>
             <span>·</span>
             <span>SLA: <strong className="text-paper">2 – 8 Weeks</strong></span>
+            <span>·</span>
+            <span>App Store Approval: <strong className="text-gold">Guaranteed Handoff</strong></span>
           </div>
-        </div>
-
-        {/* Prose Overview */}
-        <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
-          <p className="text-paper/95 text-base">
-            Axorks Software House engineers cross-platform mobile applications for iOS and Android in Karachi & Islamabad, focusing on UI design, offline data sync, and fast backend connectivity.
-          </p>
         </div>
 
         {/* Risk-Reversal Payment Structure Note Banner */}
         <PaymentTermsNote />
 
         {/* 3-Tier Pricing Ladder */}
-        <div className="mt-10 space-y-4">
-          <h2 className="font-serif text-2xl font-bold text-paper">
-            Select Your Mobile App Development Tier
-          </h2>
+        <div className="space-y-6">
+          <div className="border-b border-obsidian-border pb-4">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
+              Select Your Mobile App Development Tier
+            </h2>
+            <p className="text-xs text-steel mt-1">
+              Transparent, fixed milestone pricing for cross-platform iOS & Android mobile software.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {serviceData.tiers.map((tier) => {
@@ -225,7 +298,7 @@ export default function MobileAppDevelopmentPage() {
                   <div className="pt-4 border-t border-obsidian-border">
                     <Link
                       href={`/contact?service=Mobile%20App%20Development&tier=${tier.name}&cta=quote`}
-                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors"
+                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors text-center"
                     >
                       <FileText className="h-3.5 w-3.5" />
                       Get a Quick Quote
@@ -237,15 +310,46 @@ export default function MobileAppDevelopmentPage() {
           </div>
         </div>
 
-        {/* Client Testimonials Structure */}
-        <div className="mt-16">
-          <TestimonialsSection />
-        </div>
+        {/* SECTION 2: WHY INTERNATIONAL CLIENTS CHOOSE AXORKS */}
+        <WhyChooseAxorks />
 
-        {/* International Client Objection Handling FAQ */}
-        <div className="mt-16">
-          <InternationalFAQSection />
-        </div>
+        {/* SECTION 3: WHY THIS TECHNOLOGY */}
+        <WhyThisTech
+          heading="Why We Build Mobile Apps with React Native & Flutter"
+          subheading="We select cross-platform mobile frameworks to ship native iOS and Android apps from a unified codebase without compromising frame rate or hardware API access."
+          techChoices={mobileTechChoices}
+        />
+
+        {/* SECTION 4: 10-PHASE PROCESS */}
+        <ServiceProcess />
+
+        {/* SECTION 5: PROJECT ESTIMATION & ENGAGEMENT */}
+        <ProjectEstimationFramework />
+
+        {/* SECTION 6: COMPARISON TABLE */}
+        <AgencyComparisonTable />
+
+        {/* SECTION 7: INDUSTRIES SERVED */}
+        <IndustrySolutionsSection />
+
+        {/* CLIENT TESTIMONIALS */}
+        <TestimonialsSection />
+
+        {/* SECTION 8: FREQUENTLY ASKED QUESTIONS */}
+        <ServiceFAQSection
+          title="Mobile App Development FAQ"
+          subtitle="Direct technical answers regarding App Store approval, offline sync, code ownership, and native performance."
+          faqs={mobileFaqs}
+        />
+
+        {/* SECTION 10: CALL TO ACTION */}
+        <ServiceCTA
+          serviceName="Mobile App Development"
+          heading="Ready to Build Your Custom Mobile Application?"
+          subheading="Schedule a technical discovery call with Chief Systems Architect Muhammad Mujahid to map out mobile user flows, offline storage requirements, and App Store approval milestones."
+          primaryCtaText="Talk to a Mobile Architect"
+          secondaryCtaText="Request Scoped Quote"
+        />
       </div>
     </div>
   );

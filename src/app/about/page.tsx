@@ -5,21 +5,21 @@ import { ArrowUpRight, Award, Code2, Users, ShieldCheck, Layers, Bot, Smartphone
 import { SITE_URL, SITE_NAME, FOUNDER_NAME, FOUNDER_ROLE, LINKEDIN_URL } from '@/lib/config';
 
 export const metadata: Metadata = {
-  title: 'About Studio Architecture & Leadership | Axorks',
+  title: 'About Studio Engineering & Leadership | Axorks',
   description:
-    'Axorks is a software studio in Karachi & Islamabad founded by Muhammad Mujahid. Backed by a team of 7+ engineers and designers across Web, AI, Mobile, and UI/UX design.',
+    'Axorks is an international software engineering company founded by Muhammad Mujahid. Backed by a core team of 7+ senior engineers and designers delivering scalable web applications, AI automations, and mobile systems worldwide.',
   keywords: [
     'Axorks',
-    'Software House Karachi',
-    'Software House in Karachi',
-    'Custom Software Studio',
-    'Software Architecture Karachi',
+    'international software engineering company',
+    'remote custom software development',
+    'bespoke web development studio',
     'Muhammad Mujahid Axorks',
+    'full stack software engineering',
   ],
   openGraph: {
-    title: 'About Studio Architecture & Leadership | Axorks',
+    title: 'About Studio Engineering & Leadership | Axorks',
     description:
-      'Axorks is a founder-led software studio in Karachi & Islamabad. Backed by a core team of 7+ skilled team members across Web, AI, Mobile, and UI/UX design.',
+      'Axorks is a founder-led international software engineering company serving clients worldwide with custom web applications, AI automations, and mobile software.',
     url: `${SITE_URL}/about`,
     siteName: SITE_NAME,
     type: 'profile',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Studio Architecture & Leadership | Axorks',
-    description: 'Axorks is a founder-led software studio engineered by Muhammad Mujahid.',
+    title: 'About Studio Engineering & Leadership | Axorks',
+    description: 'Axorks is an international software engineering company engineered by Founder & Chief Architect Muhammad Mujahid.',
   },
   alternates: {
     canonical: '/about',
@@ -41,9 +41,9 @@ export default function AboutPage() {
     '@graph': [
       {
         '@type': 'AboutPage',
-        name: 'About Studio Architecture & Leadership | Axorks',
+        name: 'About Studio Engineering & Leadership | Axorks',
         description:
-          'Axorks is a founder-led software studio in Karachi & Islamabad. Backed by a core team of 7+ skilled team members across Web, AI, Mobile, and UI/UX design.',
+          'Axorks is an international software engineering company serving businesses worldwide. Backed by a core team of 7+ senior team members across Web, AI, Mobile, and UI/UX design.',
         url: `${SITE_URL}/about`,
         mainEntity: {
           '@id': `${SITE_URL}/about#founder`,
@@ -89,13 +89,13 @@ export default function AboutPage() {
 
         <div className="border-b border-obsidian-border pb-6">
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            STUDIO_LEADERSHIP_&_TEAM
+            INTERNATIONAL_ENGINEERING_LEADERSHIP
           </span>
           <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            About Axorks Software Studio
+            About Axorks Engineering Studio
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Axorks is a founder-led software studio based in Karachi & Islamabad. Operating with a team of 7+ skilled engineers and designers, we build custom web applications, AI automations, mobile apps, and public sector monitoring platforms.
+            Axorks is a founder-led international software engineering company serving decision-makers across the UK, US, EU, UAE, and worldwide. Operating with a senior team of 7+ engineers and designers, we architect custom web applications, AI automations, mobile apps, and enterprise platforms.
           </p>
         </div>
 

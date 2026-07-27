@@ -2,7 +2,7 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || 'https://www.axorks.com';
 
 export const SITE_NAME = 'Axorks';
-export const SITE_TAGLINE = 'Engineering the future. Solving today.';
+export const SITE_TAGLINE = 'International Software Engineering & Bespoke Web Systems';
 export const FOUNDER_NAME = 'Muhammad Mujahid';
 export const FOUNDER_ROLE = 'Founder & Chief Systems Architect';
 

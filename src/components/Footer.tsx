@@ -25,7 +25,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-xs leading-relaxed text-steel">
-              Engineering the future. Solving today. Founder-led software studio shipping production-grade, AI-augmented, and government-scale software systems.
+              International software engineering company serving businesses worldwide. Shipping production-grade custom web platforms, AI automations, and enterprise cloud systems.
             </p>
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 font-mono text-[11px] text-emerald-400">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -137,7 +137,7 @@ export default function Footer() {
               </li>
               <li>
                 <span className="text-steel/70">
-                  Location: Karachi & Islamabad, PK
+                  Serving: US, UK, EU, UAE & Worldwide
                 </span>
               </li>
               <li>

@@ -22,23 +22,22 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.axorks.com'),
   title: {
-    default: 'Axorks | Software House & Systems Engineering Studio in Karachi',
-    template: '%s | Axorks Software Studio',
+    default: 'Axorks | International Custom Software & Bespoke Web Engineering Studio',
+    template: '%s | Axorks International Software Studio',
   },
   description:
-    'Axorks is an elite founder-led software studio in Karachi & Islamabad. We architect full-stack web platforms, AI integrations, mobile apps, and government-grade public sector solutions.',
+    'Axorks is an international software engineering company serving businesses worldwide. We architect custom web applications, AI automations, cross-platform mobile apps, and enterprise cloud systems for clients in the UK, US, EU, UAE, and global markets.',
   keywords: [
     'Axorks',
-    'Software House Karachi',
-    'Software House in Karachi',
-    'Software Agency Karachi',
-    'Custom Software Company Karachi',
-    'Full Stack Web Development Karachi',
-    'AI Integration Services Pakistan',
-    'Mobile App Development Karachi',
-    'Government Software Solutions Pakistan',
-    'FWO Grid Systems',
-    'Next.js PostgreSQL Developers',
+    'custom software development company',
+    'bespoke web development UK',
+    'custom web application development US',
+    'AI automation agency',
+    'enterprise software engineering',
+    'remote software development partner',
+    'cross platform mobile app development',
+    'Next.js PostgreSQL software architecture',
+    'custom cloud software development',
   ],
   authors: [{ name: FOUNDER_NAME, url: SITE_URL }],
   creator: FOUNDER_NAME,
@@ -60,9 +59,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Axorks | Software House & Systems Engineering Studio in Karachi',
+    title: 'Axorks | International Custom Software & Bespoke Web Engineering Studio',
     description:
-      'High-stakes software studio in Karachi & Islamabad shipping enterprise web platforms, AI integrations, mobile applications, and public sector solutions.',
+      'International software engineering company delivering custom web platforms, AI integrations, mobile applications, and enterprise cloud systems for businesses in the US, UK, EU, UAE, and worldwide.',
     url: SITE_URL,
     siteName: SITE_NAME,
     locale: 'en_US',
@@ -72,7 +71,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Axorks Software Studio — Custom Web Development & AI Solutions',
+        alt: 'Axorks International Software Engineering Studio',
       },
       {
         url: `${SITE_URL}/logo.png`,
@@ -84,9 +83,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axorks | Software House in Karachi',
+    title: 'Axorks | International Custom Software Engineering',
     description:
-      'High-stakes software studio in Karachi shipping enterprise web platforms, AI integrations, and public sector solutions.',
+      'International software engineering company building enterprise web platforms, AI automations, and custom software systems for businesses worldwide.',
     images: [`${SITE_URL}/og-image.png`, `${SITE_URL}/logo.png`],
   },
   alternates: {
@@ -103,15 +102,15 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': ['Organization', 'ProfessionalService', 'LocalBusiness'],
+        '@type': ['Organization', 'ProfessionalService'],
         '@id': `${SITE_URL}/#organization`,
         name: `${SITE_NAME} Software Studio`,
-        alternateName: ['Axorks', 'Axorks Software House'],
+        alternateName: ['Axorks', 'Axorks International Software Engineering'],
         url: SITE_URL,
         logo: `${SITE_URL}/logo.png`,
         image: `${SITE_URL}/logo.png`,
         description:
-          'Axorks is a founder-led software studio in Karachi & Islamabad. We build full-stack web applications, AI integrations, mobile apps, and government-grade public sector software.',
+          'Axorks is an international software engineering company serving businesses worldwide. We build custom web applications, AI integrations, mobile apps, and enterprise cloud software.',
         priceRange: '$$$',
         telephone: '+923141030223',
         email: CONTACT_EMAIL,
@@ -129,9 +128,11 @@ export default function RootLayout({
           longitude: GEO_LONGITUDE,
         },
         areaServed: [
-          { '@type': 'City', name: 'Karachi' },
-          { '@type': 'City', name: 'Islamabad' },
-          { '@type': 'Country', name: 'Pakistan' },
+          { '@type': 'Country', name: 'United Kingdom' },
+          { '@type': 'Country', name: 'United States' },
+          { '@type': 'Country', name: 'Australia' },
+          { '@type': 'Country', name: 'Germany' },
+          { '@type': 'Country', name: 'United Arab Emirates' },
           { '@type': 'AdministrativeArea', name: 'Worldwide' },
         ],
         founder: {
@@ -146,7 +147,7 @@ export default function RootLayout({
             'Full-Stack Web Systems',
             'Next.js & PostgreSQL Architecture',
             'AI API Integration',
-            'FWO Grid Telemetry Systems',
+            'Enterprise Cloud Systems',
           ],
           sameAs: [
             LINKEDIN_URL,
@@ -187,7 +188,7 @@ export default function RootLayout({
         '@id': `${SITE_URL}/#website`,
         url: SITE_URL,
         name: `${SITE_NAME} Software Studio`,
-        description: 'Software house and systems engineering studio in Karachi & Islamabad.',
+        description: 'International software engineering company serving businesses worldwide.',
         publisher: { '@id': `${SITE_URL}/#organization` },
         inLanguage: 'en-US',
       },

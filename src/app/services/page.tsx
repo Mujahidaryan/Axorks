@@ -5,8 +5,14 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import PaymentTermsNote from '@/components/PaymentTermsNote';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import WhyChooseAxorks from '@/components/service/WhyChooseAxorks';
+import ServiceProcess from '@/components/service/ServiceProcess';
+import ProjectEstimationFramework from '@/components/service/ProjectEstimationFramework';
+import AgencyComparisonTable from '@/components/service/AgencyComparisonTable';
+import IndustrySolutionsSection from '@/components/service/IndustrySolutionsSection';
 import InternationalFAQSection from '@/components/InternationalFAQSection';
-import { ArrowUpRight, Code, Layout, Smartphone, Bot, Landmark, CheckCircle2, PhoneCall, FileText, ChevronDown, ChevronUp, ShieldCheck, Sparkles, UserCheck, Lock } from 'lucide-react';
+import ServiceCTA from '@/components/service/ServiceCTA';
+import { ArrowUpRight, Code, Layout, Smartphone, Bot, Landmark, CheckCircle2, PhoneCall, FileText, ChevronDown, ChevronUp, ShieldCheck, Sparkles, UserCheck } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING_LADDER, CUSTOM_ENTERPRISE_SERVICE } from '@/lib/pricing';
 
@@ -53,20 +59,21 @@ export default function ServicesHubPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         <Breadcrumbs items={[{ label: 'Services & Tiered Pricing' }]} />
 
         {/* Section Header */}
-        <div className="border-b border-obsidian-border pb-6">
-          <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            PRODUCTIZED_SOFTWARE_TIERS_&_DELIVERABLES
-          </span>
-          <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Software Services & Tiered Deliverables
+        <div className="border-b border-obsidian-border pb-8 space-y-4">
+          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
+            <ShieldCheck className="h-3.5 w-3.5" />
+            <span>PRODUCTIZED_SOFTWARE_SERVICES_&_TIERS</span>
+          </div>
+          <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
+            International Software Engineering Services
           </h1>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Each service leads with its starter engagement price. Explore full deliverable checklists and expand Growth or Premium tiers below on the same page.
+          <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+            Every software service leads with transparent entry pricing and milestone deliverables. Explore full deliverable checklists, expand Growth or Premium tiers, or schedule a technical discovery call directly with Chief Systems Architect Muhammad Mujahid.
           </p>
         </div>
 
@@ -74,7 +81,7 @@ export default function ServicesHubPage() {
         <PaymentTermsNote />
 
         {/* Services Mini Pricing Blocks */}
-        <div className="mt-12 space-y-16">
+        <div className="space-y-16">
           {serviceCategories.map((cat, sIdx) => {
             const Icon = cat.icon;
             const sData = cat.data;
@@ -218,7 +225,7 @@ export default function ServicesHubPage() {
                         <div className="pt-4 border-t border-obsidian-border">
                           <Link
                             href={`/contact?service=${encodeURIComponent(sData.title)}&tier=Growth&cta=quote`}
-                            className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors"
+                            className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors text-center"
                           >
                             <FileText className="h-3.5 w-3.5" />
                             Get a Quick Quote
@@ -300,7 +307,7 @@ export default function ServicesHubPage() {
         </div>
 
         {/* Custom / Government-Scale Engineering Section */}
-        <div className="mt-16 schematic-bracket border border-gold/60 bg-obsidian-raised p-8 sm:p-10 space-y-6 shadow-[0_0_30px_rgba(201,162,75,0.12)]">
+        <div className="schematic-bracket border border-gold/60 bg-obsidian-raised p-8 sm:p-10 space-y-6 shadow-[0_0_30px_rgba(201,162,75,0.12)]">
           <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold uppercase tracking-wider">
             <Landmark className="h-5 w-5" />
             <span>CUSTOM_ENGINEERING · NO_PUBLIC_PRICING</span>
@@ -329,15 +336,35 @@ export default function ServicesHubPage() {
           </div>
         </div>
 
+        {/* SECTION 2: WHY INTERNATIONAL CLIENTS CHOOSE AXORKS */}
+        <WhyChooseAxorks />
+
+        {/* SECTION 4: 10-PHASE PROCESS */}
+        <ServiceProcess />
+
+        {/* SECTION 5: PROJECT ESTIMATION & ENGAGEMENT */}
+        <ProjectEstimationFramework />
+
+        {/* SECTION 6: COMPARISON TABLE */}
+        <AgencyComparisonTable />
+
+        {/* SECTION 7: INDUSTRIES SERVED */}
+        <IndustrySolutionsSection />
+
         {/* Client Testimonials Structure Section */}
-        <div className="mt-16">
-          <TestimonialsSection />
-        </div>
+        <TestimonialsSection />
 
         {/* International Client Objection Handling FAQ */}
-        <div className="mt-16">
-          <InternationalFAQSection />
-        </div>
+        <InternationalFAQSection />
+
+        {/* SECTION 10: CALL TO ACTION */}
+        <ServiceCTA
+          serviceName="General Software Services"
+          heading="Ready to Engineer Your Next Software System?"
+          subheading="Schedule a technical discovery call with Founder & Chief Architect Muhammad Mujahid to clarify project scope, business outcomes, and milestone timelines."
+          primaryCtaText="Book a Technical Discovery Call"
+          secondaryCtaText="Get a Quick Quote"
+        />
       </div>
     </div>
   );

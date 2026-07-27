@@ -16,21 +16,21 @@ import {
 import { PRICING } from '@/lib/pricing';
 
 export const metadata: Metadata = {
-  title: 'Contact Axorks | Software House in Karachi & Project Discovery',
+  title: 'Contact Axorks | Technical Discovery & Consultation Booking',
   description:
-    'Schedule a technical consultation or request a 48-hour scoped estimate with Axorks Software Studio at Shahrah-e-Faisal, Karachi, Pakistan.',
+    'Schedule a technical consultation or request a 48-hour scoped estimate with Axorks Software Studio. Serving business leaders across the UK, US, EU, UAE, and worldwide.',
   openGraph: {
-    title: 'Contact Axorks | Software House in Karachi',
+    title: 'Contact Axorks | International Project Discovery & Consultation',
     description:
-      'Schedule a technical consultation or request a 48-hour scoped estimate with Axorks Software Studio.',
+      'Schedule a technical consultation or request a 48-hour scoped estimate with Axorks Software Studio for your custom software project.',
     url: `${SITE_URL}/contact`,
     siteName: SITE_NAME,
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Axorks | Software House in Karachi',
-    description: 'Schedule a technical consultation with Axorks Software Studio.',
+    title: 'Contact Axorks | Technical Consultation Booking',
+    description: 'Schedule a technical consultation with Axorks Software Studio for custom web, AI, and mobile software engineering.',
   },
   alternates: {
     canonical: '/contact',

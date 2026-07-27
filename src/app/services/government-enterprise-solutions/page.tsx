@@ -1,6 +1,14 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import WhyChooseAxorks from '@/components/service/WhyChooseAxorks';
+import WhyThisTech, { TechChoice } from '@/components/service/WhyThisTech';
+import ServiceProcess from '@/components/service/ServiceProcess';
+import ProjectEstimationFramework from '@/components/service/ProjectEstimationFramework';
+import AgencyComparisonTable from '@/components/service/AgencyComparisonTable';
+import IndustrySolutionsSection from '@/components/service/IndustrySolutionsSection';
+import ServiceFAQSection from '@/components/service/ServiceFAQSection';
+import ServiceCTA from '@/components/service/ServiceCTA';
 import { ArrowUpRight, Landmark, PhoneCall, ShieldCheck, CheckCircle2, Lock } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { CUSTOM_ENTERPRISE_SERVICE } from '@/lib/pricing';
@@ -14,7 +22,7 @@ export const metadata: Metadata = {
     'FWO grid telemetry',
     'FAO WFP compliance software',
     'public sector digital systems',
-    'enterprise software engineering Karachi',
+    'enterprise software engineering',
   ],
   openGraph: {
     title: 'Custom Government & Enterprise Engineering | Axorks',
@@ -35,6 +43,64 @@ export const metadata: Metadata = {
 };
 
 export default function GovernmentEnterprisePage() {
+  const enterpriseTechChoices: TechChoice[] = [
+    {
+      name: 'Next.js & TypeScript',
+      category: 'Application Core',
+      whySelected:
+        'Delivers server-rendered security isolation, strict static typing, and robust RBAC middleware.',
+      businessOutcome:
+        'Zero unauthorized data access, sub-second dashboard load times, and high system reliability.',
+    },
+    {
+      name: 'FWO Grid Telemetry & REST APIs',
+      category: 'IoT & Telemetry Integration',
+      whySelected:
+        'Ingests real-time sensor streams and thermal log data over low-bandwidth intermittent cellular links.',
+      businessOutcome:
+        'Instant anomaly detection, thermal breach alerts, and real-time cold-chain compliance tracking.',
+    },
+    {
+      name: 'PostgreSQL & pgvector (Neon)',
+      category: 'Database Infrastructure',
+      whySelected:
+        'ACID-compliant relational database storage with integrated spatial indexing and vector similarity search.',
+      businessOutcome:
+        'Enterprise-grade data integrity, rapid district geographical spatial queries, and long-term audit trail persistence.',
+    },
+    {
+      name: 'FAO / WFP Standard Reporting Engines',
+      category: 'Public Sector Compliance',
+      whySelected:
+        'Implements international IPC Phase Classification reporting algorithms and CSV export streams.',
+      businessOutcome:
+        'Instant compliance with international humanitarian standards and rapid executive decision dispatch.',
+    },
+  ];
+
+  const enterpriseFaqs = [
+    {
+      question: 'Why are government and enterprise projects quote-gated?',
+      answer:
+        'Public sector platforms, telemetry grid systems, and multi-agency software require customized security compliance, custom data pipelines, and multi-stakeholder approval workflows that cannot be represented by fixed floor prices.',
+    },
+    {
+      question: 'Can Axorks execute projects under strict non-disclosure agreements (NDAs)?',
+      answer:
+        'Yes. We sign binding mutual NDAs prior to initial technical scoping, ensuring full confidentiality for public sector and enterprise infrastructure projects.',
+    },
+    {
+      question: 'How do you handle compliance and audit trails?',
+      answer:
+        'We architect immutable database audit logs, role-based access control (RBAC), and detailed CSV/PDF export capabilities compliant with FAO/WFP and international audit standards.',
+    },
+    {
+      question: 'Who retains the intellectual property and source code?',
+      answer:
+        'The client or contracting public sector entity retains 100% ownership of all custom source code, schemas, and system documentation upon project completion.',
+    },
+  ];
+
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -45,12 +111,12 @@ export default function GovernmentEnterprisePage() {
       name: 'Axorks Software House',
       url: SITE_URL,
     },
-    areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
+    areaServed: ['United Kingdom', 'United States', 'European Union', 'United Arab Emirates', 'Worldwide'],
     description: CUSTOM_ENTERPRISE_SERVICE.description,
   };
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
       <head>
         <script
           type="application/ld+json"
@@ -58,7 +124,7 @@ export default function GovernmentEnterprisePage() {
         />
       </head>
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         <Breadcrumbs
           items={[
             { label: 'Services', href: '/services' },
@@ -66,34 +132,28 @@ export default function GovernmentEnterprisePage() {
           ]}
         />
 
-        <div className="mt-4 border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
+        {/* SECTION 1: VALUE PROPOSITION */}
+        <div className="border-b border-obsidian-border pb-8 space-y-4">
+          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
             <Landmark className="h-3.5 w-3.5" />
-            <span>CUSTOM_ENTERPRISE_DISCOVERY</span>
+            <span>ENTERPRISE_&_PUBLIC_SECTOR_ENGINEERING</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
             {CUSTOM_ENTERPRISE_SERVICE.title}
           </h1>
 
-          <div className="mt-4 inline-block rounded bg-gold/10 border border-gold/30 px-3 py-1.5 font-mono text-xs font-bold text-gold">
+          <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+            Axorks Software House engineers custom public sector monitoring platforms, infrastructure telemetry systems connected to FWO grid streams, and international humanitarian software aligned with FAO/WFP operational standards.
+          </p>
+
+          <div className="inline-block rounded bg-gold/10 border border-gold/30 px-3 py-1.5 font-mono text-xs font-bold text-gold">
             {CUSTOM_ENTERPRISE_SERVICE.pricingNote}
           </div>
         </div>
 
-        {/* Prose Overview */}
-        <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
-          <p className="text-paper/95 text-base">
-            Axorks Software House engineers custom public sector monitoring platforms, infrastructure telemetry systems connected to FWO grid streams, and international humanitarian software aligned with FAO/WFP operational standards.
-          </p>
-
-          <p>
-            Due to the confidential scope, compliance requirements, and custom infrastructure needs of government and enterprise systems (such as <strong className="text-gold">AgroTrace</strong> and the <strong className="text-gold">Sindh Food Security Dashboard</strong>), we do not publish fixed numbers or floor prices for this category. All engagements are quote-gated via a technical discovery call.
-          </p>
-        </div>
-
         {/* Discovery Call Gate Box */}
-        <div className="mt-10 schematic-bracket border border-gold/60 bg-obsidian-raised p-8 space-y-6 shadow-[0_0_30px_rgba(201,162,75,0.12)]">
+        <div className="schematic-bracket border border-gold/60 bg-obsidian-raised p-8 space-y-6 shadow-[0_0_30px_rgba(201,162,75,0.12)]">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <div className="space-y-2">
               <span className="font-mono text-xs text-gold uppercase font-bold tracking-wider block">
@@ -132,13 +192,43 @@ export default function GovernmentEnterprisePage() {
           </div>
         </div>
 
-        {/* Link to Case Studies */}
-        <div className="mt-12 flex items-center justify-between border-t border-obsidian-border pt-8">
-          <Link href="/case-studies" className="font-mono text-xs text-gold hover:underline inline-flex items-center gap-1">
-            Explore Representative Public Sector Case Studies
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
-        </div>
+        {/* SECTION 2: WHY INTERNATIONAL CLIENTS CHOOSE AXORKS */}
+        <WhyChooseAxorks />
+
+        {/* SECTION 3: WHY THIS TECHNOLOGY */}
+        <WhyThisTech
+          heading="Why We Select High-Stakes Public Sector Architecture"
+          subheading="Telemetry streams and public sector decision dashboards require zero latency lag, immutable audit logging, and international compliance standardization."
+          techChoices={enterpriseTechChoices}
+        />
+
+        {/* SECTION 4: 10-PHASE PROCESS */}
+        <ServiceProcess />
+
+        {/* SECTION 5: PROJECT ESTIMATION & ENGAGEMENT */}
+        <ProjectEstimationFramework />
+
+        {/* SECTION 6: COMPARISON TABLE */}
+        <AgencyComparisonTable />
+
+        {/* SECTION 7: INDUSTRIES SERVED */}
+        <IndustrySolutionsSection />
+
+        {/* SECTION 8: FREQUENTLY ASKED QUESTIONS */}
+        <ServiceFAQSection
+          title="Government & Enterprise FAQ"
+          subtitle="Direct answers regarding project NDA compliance, quote gating, audit trails, and IP ownership."
+          faqs={enterpriseFaqs}
+        />
+
+        {/* SECTION 10: CALL TO ACTION */}
+        <ServiceCTA
+          serviceName="Government & Enterprise Digital Solutions"
+          heading="Ready to Engineer Custom Public Sector Infrastructure?"
+          subheading="Schedule a technical consultation directly with Chief Systems Architect Muhammad Mujahid to map out compliance frameworks, telemetry integrations, and milestone terms."
+          primaryCtaText="Talk to Chief Architect"
+          secondaryCtaText="Request Scoped Proposal"
+        />
       </div>
     </div>
   );

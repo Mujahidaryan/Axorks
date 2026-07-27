@@ -3,7 +3,14 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import PaymentTermsNote from '@/components/PaymentTermsNote';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import InternationalFAQSection from '@/components/InternationalFAQSection';
+import WhyChooseAxorks from '@/components/service/WhyChooseAxorks';
+import WhyThisTech, { TechChoice } from '@/components/service/WhyThisTech';
+import ServiceProcess from '@/components/service/ServiceProcess';
+import ProjectEstimationFramework from '@/components/service/ProjectEstimationFramework';
+import AgencyComparisonTable from '@/components/service/AgencyComparisonTable';
+import IndustrySolutionsSection from '@/components/service/IndustrySolutionsSection';
+import ServiceFAQSection from '@/components/service/ServiceFAQSection';
+import ServiceCTA from '@/components/service/ServiceCTA';
 import { ArrowUpRight, Code, CheckCircle2, FileText, PhoneCall, Sparkles, UserCheck } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING_LADDER } from '@/lib/pricing';
@@ -11,30 +18,29 @@ import { PRICING_LADDER } from '@/lib/pricing';
 const serviceData = PRICING_LADDER.webApplications;
 
 export const metadata: Metadata = {
-  title: 'Web Applications & Custom Systems Karachi — Starting at $2,200 | Axorks',
+  title: 'Custom Web Applications & Enterprise Software — Starting at $2,200 | Axorks',
   description:
-    'Custom web application development in Karachi & Islamabad by Axorks Software House. Tiered pricing: Growth ($2,200), Premium ($4,000). Built with Next.js, TypeScript, and serverless Postgres.',
+    'Full-stack custom web application development for businesses across the UK, US, EU, and worldwide. Tiered engagement: Growth ($2,200), Premium ($4,000). Built with Next.js App Router, TypeScript, and serverless Postgres.',
   keywords: [
-    'web and custom application',
     'custom web application development',
-    'web application development Karachi',
-    'custom web app company Pakistan',
     'enterprise software solutions',
-    'Next.js web applications',
-    'Axorks web and custom application',
+    'b2b SaaS development US',
+    'custom CRM development UK',
+    'Next.js serverless web apps',
+    'Axorks custom web software',
   ],
   openGraph: {
-    title: 'Web Applications & Custom Systems Karachi — Starting at $2,200 | Axorks',
+    title: 'Custom Web Applications & Enterprise Software — Starting at $2,200 | Axorks',
     description:
-      'Full-stack web application development, dashboards, client portals, and CRMs built with Next.js, TypeScript, and serverless Postgres by Axorks Software House.',
+      'Full-stack custom web application development, dashboards, client portals, and SaaS platforms built with Next.js App Router and serverless PostgreSQL for global decision-makers.',
     url: `${SITE_URL}/services/web-applications`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Applications & Custom Systems Karachi — Starting at $2,200 | Axorks',
-    description: 'Full-stack web applications and internal tools built with Next.js and PostgreSQL.',
+    title: 'Custom Web Applications & Enterprise Software — Starting at $2,200 | Axorks',
+    description: 'Full-stack web applications and internal software platforms built with Next.js and PostgreSQL.',
   },
   alternates: {
     canonical: '/services/web-applications',
@@ -42,17 +48,85 @@ export const metadata: Metadata = {
 };
 
 export default function WebApplicationsPage() {
+  const webAppTechChoices: TechChoice[] = [
+    {
+      name: 'Next.js App Router (Full-Stack)',
+      category: 'Architecture',
+      whySelected:
+        'Enables unified full-stack React server components with zero-bundle API routing and instant serverless rendering.',
+      businessOutcome:
+        'Fast time-to-market, zero server infrastructure management, and high security for client portals and internal tools.',
+    },
+    {
+      name: 'Serverless PostgreSQL (Neon DB)',
+      category: 'Database',
+      whySelected:
+        'Delivers full ACID relational database compliance, branching workflows, and dynamic auto-scaling serverless capacity.',
+      businessOutcome:
+        'Strict data integrity, zero downtime under traffic spikes, and dynamic cost optimization based on query usage.',
+    },
+    {
+      name: 'Prisma ORM & TypeScript',
+      category: 'Data Layer',
+      whySelected:
+        'Provides end-to-end type safety from database models down to React UI components, preventing query bugs.',
+      businessOutcome:
+        'Predictable system stability, fast feature iterations, and error-free multi-tenant data isolation.',
+    },
+    {
+      name: 'NextAuth / Jose Auth Middleware',
+      category: 'Security & Access Control',
+      whySelected:
+        'Role-Based Access Control (RBAC), multi-factor authentication capability, JWT session signing, and encrypted cookie storage.',
+      businessOutcome:
+        'Enterprise data protection, multi-user role security, and total compliance with international security standards.',
+    },
+  ];
+
+  const webAppFaqs = [
+    {
+      question: 'Why is there no Starter tier for Web Applications?',
+      answer:
+        'Full custom systems require multi-role authorization, serverless database architecture, and strict security logic that cannot be delivered properly at a cut-rate price without sacrificing quality or system stability.',
+    },
+    {
+      question: 'How long does custom web application development take?',
+      answer:
+        'Growth builds (custom single-purpose tools, dashboards, internal portals) take ~3–4 weeks. Premium enterprise platforms (full custom CRM/ERP-lite, multi-role auth) take ~4–8 weeks.',
+    },
+    {
+      question: 'Can you work with our internal development team?',
+      answer:
+        'Yes. We collaborate closely with in-house technical leads and CTOs, delivering modular codebases, OpenAPI specifications, and clean PR documentation.',
+    },
+    {
+      question: 'How do you ensure data security and isolation?',
+      answer:
+        'We implement encrypted database connections, JWT token rotation, strict CORS rules, environment variable isolation, and OWASP top 10 protection.',
+    },
+    {
+      question: 'Who owns the intellectual property and code?',
+      answer:
+        'You retain 100% ownership of all custom source code, database schemas, and IP upon project completion and final payment.',
+    },
+    {
+      question: 'Do you offer monthly maintenance and retainer options?',
+      answer:
+        'Yes. We provide monthly retainer plans covering infrastructure monitoring, performance optimization, feature additions, and security updates.',
+    },
+  ];
+
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Web Applications & Custom Systems Development in Karachi',
+    name: 'Custom Web Applications & Enterprise Software Development',
     serviceType: 'Custom Software & Web Application Development',
     provider: {
       '@type': 'Organization',
       name: 'Axorks Software House',
       url: SITE_URL,
     },
-    areaServed: ['Karachi', 'Islamabad', 'Pakistan', 'Worldwide'],
+    areaServed: ['United Kingdom', 'United States', 'European Union', 'United Arab Emirates', 'Worldwide'],
     description: serviceData.description,
     offers: serviceData.tiers.map((t) => ({
       '@type': 'Offer',
@@ -70,7 +144,7 @@ export default function WebApplicationsPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
       <head>
         <script
           type="application/ld+json"
@@ -78,7 +152,7 @@ export default function WebApplicationsPage() {
         />
       </head>
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         <Breadcrumbs
           items={[
             { label: 'Services', href: '/services' },
@@ -86,38 +160,43 @@ export default function WebApplicationsPage() {
           ]}
         />
 
-        <div className="mt-4 border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
+        {/* SECTION 1: VALUE PROPOSITION */}
+        <div className="border-b border-obsidian-border pb-8 space-y-4">
+          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
             <Code className="h-3.5 w-3.5" />
-            <span>CORE_SERVICE_03</span>
+            <span>CUSTOM_SOFTWARE_ENGINEERING</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Web Applications & Custom Systems Services
+            Custom Web Applications & Enterprise Systems
           </h1>
 
-          <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
+          <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+            Axorks architects full-stack custom web applications, internal operational dashboards, client portals, and CRMs tailored to complex business demands across global markets. Engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL to replace legacy manual workflows with automated software systems.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-steel pt-2">
             <span>Lead Entry Price: <strong className="text-gold font-bold">Starting at {serviceData.leadPrice}</strong></span>
             <span>·</span>
             <span>SLA: <strong className="text-paper">3 – 8 Weeks</strong></span>
+            <span>·</span>
+            <span>Code Ownership: <strong className="text-gold">100% Client Owned</strong></span>
           </div>
-        </div>
-
-        {/* Prose Overview */}
-        <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
-          <p className="text-paper/95 text-base">
-            Axorks Software House architects full-stack web applications, internal operational dashboards, client portals, and CRMs tailored to complex business demands in Karachi & Islamabad. Engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL.
-          </p>
         </div>
 
         {/* Risk-Reversal Payment Structure Note Banner */}
         <PaymentTermsNote />
 
         {/* Tier Pricing Ladder (Growth & Premium) */}
-        <div className="mt-10 space-y-4">
-          <h2 className="font-serif text-2xl font-bold text-paper">
-            Select Your Web Application Engagement Tier
-          </h2>
+        <div className="space-y-6">
+          <div className="border-b border-obsidian-border pb-4">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
+              Select Your Web Application Engagement Tier
+            </h2>
+            <p className="text-xs text-steel mt-1">
+              Transparent, milestone-based pricing for full-stack custom systems. Deliberately no cut-rate Starter tier to protect system stability and security integrity.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
             {serviceData.tiers.map((tier) => {
@@ -220,7 +299,7 @@ export default function WebApplicationsPage() {
                   <div className="pt-4 border-t border-obsidian-border">
                     <Link
                       href={`/contact?service=Web%20Applications%20%26%20Custom%20Systems&tier=${tier.name}&cta=quote`}
-                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors"
+                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors text-center"
                     >
                       <FileText className="h-3.5 w-3.5" />
                       Get a Quick Quote
@@ -232,15 +311,46 @@ export default function WebApplicationsPage() {
           </div>
         </div>
 
-        {/* Client Testimonials Structure */}
-        <div className="mt-16">
-          <TestimonialsSection />
-        </div>
+        {/* SECTION 2: WHY INTERNATIONAL CLIENTS CHOOSE AXORKS */}
+        <WhyChooseAxorks />
 
-        {/* International Client Objection Handling FAQ */}
-        <div className="mt-16">
-          <InternationalFAQSection />
-        </div>
+        {/* SECTION 3: WHY THIS TECHNOLOGY */}
+        <WhyThisTech
+          heading="Why We Build Applications with Next.js & Serverless Postgres"
+          subheading="We select full-stack Next.js and Neon serverless PostgreSQL to guarantee dynamic auto-scaling, data integrity, and strict security isolation."
+          techChoices={webAppTechChoices}
+        />
+
+        {/* SECTION 4: 10-PHASE PROCESS */}
+        <ServiceProcess />
+
+        {/* SECTION 5: PROJECT ESTIMATION & ENGAGEMENT */}
+        <ProjectEstimationFramework />
+
+        {/* SECTION 6: COMPARISON TABLE */}
+        <AgencyComparisonTable />
+
+        {/* SECTION 7: INDUSTRIES SERVED */}
+        <IndustrySolutionsSection />
+
+        {/* CLIENT TESTIMONIALS */}
+        <TestimonialsSection />
+
+        {/* SECTION 8: FREQUENTLY ASKED QUESTIONS */}
+        <ServiceFAQSection
+          title="Web Applications FAQ"
+          subtitle="Direct technical answers regarding multi-tenant security, system timelines, source code ownership, and retainers."
+          faqs={webAppFaqs}
+        />
+
+        {/* SECTION 10: CALL TO ACTION */}
+        <ServiceCTA
+          serviceName="Web Applications & Custom Systems"
+          heading="Ready to Engineer Your Custom Software Platform?"
+          subheading="Discuss your software architecture directly with Chief Systems Architect Muhammad Mujahid. We map out data models, role permissions, and a milestone proposal."
+          primaryCtaText="Talk to a Systems Architect"
+          secondaryCtaText="Request Technical Scoping"
+        />
       </div>
     </div>
   );
