@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import {
@@ -14,6 +15,7 @@ import {
   ADDRESS_COUNTRY,
   GEO_LATITUDE,
   GEO_LONGITUDE,
+  GA_MEASUREMENT_ID,
 } from '@/lib/config';
 import './globals.css';
 
@@ -67,6 +69,12 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Axorks Software Studio — Custom Web Development & AI Solutions',
+      },
+      {
         url: `${SITE_URL}/logo.png`,
         width: 800,
         height: 800,
@@ -79,7 +87,7 @@ export const metadata: Metadata = {
     title: 'Axorks | Software House in Karachi',
     description:
       'High-stakes software studio in Karachi shipping enterprise web platforms, AI integrations, and public sector solutions.',
-    images: [`${SITE_URL}/logo.png`],
+    images: [`${SITE_URL}/og-image.png`, `${SITE_URL}/logo.png`],
   },
   alternates: {
     canonical: '/',
@@ -183,6 +191,23 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
+        />
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `,
+          }}
         />
       </head>
       <body className="flex min-h-screen flex-col bg-obsidian text-paper antialiased">

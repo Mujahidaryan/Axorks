@@ -21,3 +21,5 @@ export const ADDRESS_POSTAL = '75400';
 export const ADDRESS_COUNTRY = 'PK';
 export const GEO_LATITUDE = 24.8607;
 export const GEO_LONGITUDE = 67.0611;
+
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-LN5D82EM65';
