@@ -36,28 +36,42 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const personSchema = {
+  const aboutPageGraph = {
     '@context': 'https://schema.org',
-    '@type': 'Person',
-    '@id': `${SITE_URL}/about#founder`,
-    name: FOUNDER_NAME,
-    jobTitle: FOUNDER_ROLE,
-    worksFor: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
-    url: `${SITE_URL}/about`,
-    alumniOf: {
-      '@type': 'EducationalOrganization',
-      name: 'Bahria University',
-    },
-    description:
-      'Muhammad Mujahid is the founder of Axorks software company and Chief Systems Architect. BS Software Engineering (Bahria University) and Microsoft Innovative Educator Expert (MIEE 2025).',
-    award: 'Microsoft Innovative Educator Expert (MIEE 2025)',
-    sameAs: [
-      LINKEDIN_URL,
-      'https://wa.me/923141030223',
+    '@graph': [
+      {
+        '@type': 'AboutPage',
+        name: 'About Studio Architecture & Leadership | Axorks',
+        description:
+          'Axorks is a founder-led software studio in Karachi & Islamabad. Backed by a core team of 7+ skilled team members across Web, AI, Mobile, and UI/UX design.',
+        url: `${SITE_URL}/about`,
+        mainEntity: {
+          '@id': `${SITE_URL}/about#founder`,
+        },
+      },
+      {
+        '@type': 'Person',
+        '@id': `${SITE_URL}/about#founder`,
+        name: FOUNDER_NAME,
+        jobTitle: FOUNDER_ROLE,
+        worksFor: {
+          '@type': 'Organization',
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+        url: `${SITE_URL}/about`,
+        alumniOf: {
+          '@type': 'EducationalOrganization',
+          name: 'Bahria University',
+        },
+        description:
+          'Muhammad Mujahid is the founder of Axorks software company and Chief Systems Architect. BS Software Engineering (Bahria University) and Microsoft Innovative Educator Expert (MIEE 2025).',
+        award: 'Microsoft Innovative Educator Expert (MIEE 2025)',
+        sameAs: [
+          LINKEDIN_URL,
+          'https://wa.me/923141030223',
+        ],
+      },
     ],
   };
 
@@ -66,7 +80,7 @@ export default function AboutPage() {
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageGraph) }}
         />
       </head>
 

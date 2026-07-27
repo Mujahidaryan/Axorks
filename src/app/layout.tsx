@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { GoogleAnalytics } from "@next/third-parties/google";
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import {
@@ -183,6 +182,15 @@ export default function RootLayout({
           'https://wa.me/923141030223',
         ],
       },
+      {
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        url: SITE_URL,
+        name: `${SITE_NAME} Software Studio`,
+        description: 'Software house and systems engineering studio in Karachi & Islamabad.',
+        publisher: { '@id': `${SITE_URL}/#organization` },
+        inLanguage: 'en-US',
+      },
     ],
   };
 
@@ -215,7 +223,6 @@ export default function RootLayout({
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-LN5D82EM65" />
       </body>
     </html>
   );

@@ -38,8 +38,38 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const contactPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Axorks Software Studio',
+    description:
+      'Schedule a technical consultation or request a 48-hour scoped estimate with Axorks Software Studio in Karachi, Pakistan.',
+    url: `${SITE_URL}/contact`,
+    mainEntity: {
+      '@type': ['Organization', 'ProfessionalService', 'LocalBusiness'],
+      name: `${SITE_NAME} Software Studio`,
+      url: SITE_URL,
+      telephone: '+923141030223',
+      email: CONTACT_EMAIL,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: ADDRESS_STREET,
+        addressLocality: ADDRESS_CITY,
+        addressRegion: ADDRESS_REGION,
+        postalCode: ADDRESS_POSTAL,
+        addressCountry: 'PK',
+      },
+    },
+  };
+
   return (
     <div className="py-12 sm:py-20">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+        />
+      </head>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: 'Contact & Project Discovery' }]} />
 
