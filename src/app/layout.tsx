@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import {
@@ -214,6 +215,7 @@ export default function RootLayout({
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
+        <GoogleAnalytics gaId="G-LN5D82EM65" />
       </body>
     </html>
   );
