@@ -411,3 +411,12 @@ export const BUDGET_RANGES_USD = [
   '$50,000+',
   'Custom Enterprise Quotation',
 ];
+
+/** Dynamically generates "View N Tiers ($min–$max)" from PRICING_LADDER so it never drifts from source data. */
+export function getTierRangeLabel(serviceKey: keyof typeof PRICING_LADDER): string {
+  const service = PRICING_LADDER[serviceKey];
+  const count = service.tiers.length;
+  const min = service.tiers[0].formattedPrice;
+  const max = service.tiers[count - 1].formattedPrice;
+  return `View ${count} Tiers (${min}–${max})`;
+}

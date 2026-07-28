@@ -6,12 +6,12 @@ import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import InternationalFAQSection from '@/components/InternationalFAQSection';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
-import { PRICING } from '@/lib/pricing';
+import { PRICING, getTierRangeLabel } from '@/lib/pricing';
 
 export const metadata: Metadata = {
   title: 'Axorks | International Custom Software & Bespoke Web Engineering Studio',
   description:
-    'Axorks is an international software engineering company serving businesses worldwide. We deliver custom web platforms (from $600), web applications (from $2,200), AI automations (from $900), mobile apps (from $1,200), and custom enterprise software.',
+    'Axorks is an international software engineering company serving businesses worldwide. We deliver custom web platforms (from $1,000), web applications (from $3,500), AI automations (from $2,500), mobile apps (from $4,000), and custom enterprise software.',
   keywords: [
     'international software engineering company',
     'custom software development company',
@@ -259,7 +259,7 @@ export default function HomePage() {
                 href="/services#website-development"
                 className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
               >
-                View 3 Tiers ($600–$2,000)
+                {getTierRangeLabel('websiteDevelopment')}
               </Link>
             </div>
           </div>
@@ -283,7 +283,7 @@ export default function HomePage() {
                 href="/services#web-applications"
                 className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
               >
-                View 2 Tiers ($2,200–$4,000)
+                {getTierRangeLabel('webApplications')}
               </Link>
             </div>
           </div>
@@ -307,7 +307,7 @@ export default function HomePage() {
                 href="/services#ai-integration"
                 className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
               >
-                View 3 Tiers ($900–$3,000)
+                {getTierRangeLabel('aiIntegration')}
               </Link>
             </div>
           </div>
@@ -331,7 +331,7 @@ export default function HomePage() {
                 href="/services#mobile-app-development"
                 className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
               >
-                View 3 Tiers ($1,200–$3,800)
+                {getTierRangeLabel('mobileAppDevelopment')}
               </Link>
             </div>
           </div>
