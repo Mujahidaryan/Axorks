@@ -116,13 +116,13 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base leading-relaxed text-steel sm:text-lg">
-              Axorks is a founder-led software engineering company serving ambitious businesses across the UK, US, EU, UAE, and worldwide. Powered by a core team of <strong className="text-paper">7+ senior engineers and designers</strong>, we architect custom web applications, AI automations, and mobile platforms engineered for high performance, enterprise security, and long-term scalability.
+              Axorks is an independent software engineering company serving ambitious startups, SMEs, and enterprises across the UK, Europe, GCC, North America, and worldwide. Powered by a core team of <strong className="text-paper">7+ senior engineers and designers</strong>, we architect custom web applications, AI automations, and mobile platforms engineered for high performance, enterprise security, and long-term scalability.
             </p>
 
-            {/* Founder Access Line */}
+            {/* Direct Collaboration Line */}
             <div className="rounded border border-obsidian-border bg-obsidian p-3 font-mono text-xs text-steel flex items-center gap-2">
               <UserCheck className="h-4 w-4 text-gold shrink-0" />
-              <span>You work directly with Founder & Chief Architect Muhammad Mujahid — not handed off to an account manager.</span>
+              <span>You collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.</span>
             </div>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -130,7 +130,7 @@ export default function HomePage() {
                 href="/contact?cta=discovery"
                 className="group flex items-center gap-2 rounded bg-signal-blue px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover hover:shadow-lg hover:shadow-signal-blue/25"
               >
-                Schedule Technical Discovery Call
+                Book a Free Discovery Call
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
 
@@ -153,7 +153,7 @@ export default function HomePage() {
               </div>
               <ul className="mt-4 space-y-3.5 font-mono text-xs text-steel">
                 <li className="flex items-center justify-between">
-                  <span>Founder & Chief Architect:</span>
+                  <span>Chief Systems Architect:</span>
                   <span className="font-bold text-paper">M. Mujahid</span>
                 </li>
                 <li className="flex items-center justify-between">

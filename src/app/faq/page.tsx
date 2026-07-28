@@ -30,7 +30,7 @@ export default function FaqPage() {
   const faqs = [
     {
       q: 'What is Axorks and what services does it provide?',
-      a: 'Axorks is a founder-led software studio based in Karachi, Pakistan. We specialize in custom web application development, corporate website engineering, cross-platform mobile app development, AI integration & automation, government/enterprise digital solutions, and monthly technical maintenance retainers.',
+      a: 'Axorks is an independent software engineering studio serving clients across the UK, Europe, GCC, North America, and worldwide. We specialize in custom web application development, corporate website engineering, cross-platform mobile app development, AI integration & automation, enterprise digital solutions, and monthly technical maintenance retainers.',
     },
     {
       q: 'Who is the founder of Axorks and what are their credentials?',

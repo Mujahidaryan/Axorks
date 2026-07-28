@@ -7,7 +7,7 @@ import { SITE_URL, SITE_NAME, CAREERS_EMAIL } from '@/lib/config';
 export const metadata: Metadata = {
   title: 'Careers & Engineering Talent | Axorks Software Studio',
   description:
-    'Explore engineering, sales, AI, and design career opportunities at Axorks. Join a founder-led software studio shipping production-grade platforms.',
+    'Explore engineering, sales, AI, and design career opportunities at Axorks. Join an independent software engineering studio shipping production-grade platforms.',
   openGraph: {
     title: 'Careers & Engineering Talent | Axorks Software Studio',
     description:

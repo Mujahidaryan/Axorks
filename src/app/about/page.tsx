@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Studio Engineering & Leadership | Axorks',
     description:
-      'Axorks is a founder-led international software engineering company serving clients worldwide with custom web applications, AI automations, and mobile software.',
+      'Axorks is an independent international software engineering company serving clients worldwide with custom web applications, AI automations, and mobile software.',
     url: `${SITE_URL}/about`,
     siteName: SITE_NAME,
     type: 'profile',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'About Studio Engineering & Leadership | Axorks',
-    description: 'Axorks is an international software engineering company engineered by Founder & Chief Architect Muhammad Mujahid.',
+    description: 'Axorks is an international software engineering company engineered by Chief Systems Architect Muhammad Mujahid.',
   },
   alternates: {
     canonical: '/about',
@@ -95,7 +95,7 @@ export default function AboutPage() {
             About Axorks Engineering Studio
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Axorks is a founder-led international software engineering company serving decision-makers across the UK, US, EU, UAE, and worldwide. Operating with a senior team of 7+ engineers and designers, we architect custom web applications, AI automations, mobile apps, and enterprise platforms.
+            Axorks is an independent international software engineering company serving decision-makers across the UK, Europe, GCC, North America, and worldwide. Operating with a senior team of 7+ engineers and designers, we architect custom web applications, AI automations, mobile apps, and enterprise platforms.
           </p>
         </div>
 
@@ -160,7 +160,7 @@ export default function AboutPage() {
               </h3>
 
               <p className="text-xs leading-relaxed text-steel sm:text-sm">
-                Axorks operates as a founder-led team of 7+ skilled team members across Karachi & Islamabad. We combine full-stack development, AI engineering, mobile app expertise, and UI/UX design into a focused unit:
+                Axorks operates with a core engineering team of 7+ skilled senior developers and designers. We combine full-stack development, AI engineering, mobile app expertise, and UI/UX design into a focused unit:
               </p>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 pt-2">

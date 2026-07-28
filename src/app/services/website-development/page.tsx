@@ -18,9 +18,9 @@ import { PRICING_LADDER } from '@/lib/pricing';
 const serviceData = PRICING_LADDER.websiteDevelopment;
 
 export const metadata: Metadata = {
-  title: 'Custom & Bespoke Website Development Services — Starting at $600 | Axorks',
+  title: 'Custom & Bespoke Website Development Services — Starting at $1,000 | Axorks',
   description:
-    'Bespoke website development services for businesses in the UK, US, EU, and worldwide. Tiered engagement: Starter ($600), Growth ($1,200), Premium ($2,000). Built with Next.js App Router, TypeScript, and serverless technology.',
+    'Bespoke website development services for businesses in the UK, US, EU, and worldwide. Tiered engagement: Starter ($1,000), Professional ($2,500), Enterprise ($5,000+). Built with Next.js App Router, TypeScript, and serverless technology.',
   keywords: [
     'bespoke website development',
     'custom website development company',
@@ -30,17 +30,17 @@ export const metadata: Metadata = {
     'Axorks website development',
   ],
   openGraph: {
-    title: 'Custom & Bespoke Website Development Services — Starting at $600 | Axorks',
+    title: 'Custom & Bespoke Website Development Services — Starting at $1,000 | Axorks',
     description:
-      'Bespoke website development with 3-tier pricing ($600, $1,200, $2,000) built with Next.js App Router and TypeScript by Axorks Software House for global decision-makers.',
+      'Bespoke website development with 3-tier pricing ($1,000, $2,500, $5,000+) built with Next.js App Router and TypeScript by Axorks Software House for global decision-makers.',
     url: `${SITE_URL}/services/website-development`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom & Bespoke Website Development Services — Starting at $600 | Axorks',
-    description: 'Bespoke website development services starting at $600 built with Next.js App Router.',
+    title: 'Custom & Bespoke Website Development Services — Starting at $1,000 | Axorks',
+    description: 'Bespoke website development services starting at $1,000 built with Next.js App Router.',
   },
   alternates: {
     canonical: '/services/website-development',
@@ -87,12 +87,12 @@ export default function WebsiteDevelopmentPage() {
     {
       question: 'How long does a custom website development project take?',
       answer:
-        'Starter builds take ~1–2 weeks, Growth multi-page sites take ~2–3 weeks, and Premium bespoke enterprise marketing platforms take ~3–4 weeks from initial content alignment.',
+        'Starter builds take ~1–2 weeks, Professional multi-page sites take ~2–3 weeks, and Enterprise bespoke marketing platforms take ~3–4 weeks from initial content alignment.',
     },
     {
       question: 'How is project pricing determined?',
       answer:
-        'Pricing is fixed and milestone-based ($600 Starter, $1,200 Growth, $2,000 Premium). Complex custom web platforms requiring custom backend API integrations receive a tailored discovery quote.',
+        'Pricing is fixed and milestone-based ($1,000 Starter, $2,500 Professional, $5,000+ Enterprise). Complex custom web platforms requiring custom backend API integrations receive a tailored discovery quote.',
     },
     {
       question: 'Who owns the source code and intellectual property after completion?',
@@ -194,13 +194,13 @@ export default function WebsiteDevelopmentPage() {
               Select Your Website Development Tier
             </h2>
             <p className="text-xs text-steel mt-1">
-              Transparent, fixed milestone pricing. Starter & Growth tiers include line-item deliverable checklists; Premium tier delivers bespoke custom architecture.
+              Transparent, fixed milestone pricing. Starter & Professional tiers include line-item deliverable checklists; Enterprise tier delivers bespoke custom architecture.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {serviceData.tiers.map((tier) => {
-              const isPremium = tier.name === 'Premium';
+              const isPremium = tier.name === 'Enterprise';
 
               if (isPremium) {
                 return (
@@ -211,7 +211,7 @@ export default function WebsiteDevelopmentPage() {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
                         <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
-                          PREMIUM TIER · BESPOKE ARCHITECTURE
+                          ENTERPRISE TIER · BESPOKE ARCHITECTURE
                         </span>
                         <span className="font-mono text-[11px] text-steel">{tier.turnaround}</span>
                       </div>
@@ -245,16 +245,16 @@ export default function WebsiteDevelopmentPage() {
                         </Link>
                       </div>
 
-                      {/* Founder Access Line */}
+                      {/* Direct Access Line */}
                       <div className="text-[11px] font-mono text-steel flex items-start gap-1.5 pt-1">
                         <UserCheck className="h-3.5 w-3.5 text-gold shrink-0 mt-0.5" />
-                        <span>You work directly with Founder & Chief Architect Muhammad Mujahid — not handed off to an account manager.</span>
+                        <span>You collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.</span>
                       </div>
                     </div>
 
                     <div className="pt-4 border-t border-obsidian-border">
                       <Link
-                        href={`/contact?service=Custom%20Website%20Development&tier=Premium&cta=discovery`}
+                        href={`/contact?service=Custom%20Website%20Development&tier=Enterprise&cta=discovery`}
                         className="flex items-center justify-center gap-2 w-full rounded bg-gold px-4 py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian hover:bg-gold-hover transition-colors text-center"
                       >
                         <PhoneCall className="h-4 w-4" />
@@ -269,7 +269,7 @@ export default function WebsiteDevelopmentPage() {
                 <div
                   key={tier.name}
                   className={`schematic-bracket flex flex-col justify-between border bg-obsidian-raised p-6 space-y-6 ${
-                    tier.name === 'Growth'
+                    tier.name === 'Professional'
                       ? 'border-gold/50 shadow-[0_0_20px_rgba(201,162,75,0.08)]'
                       : 'border-obsidian-border'
                   }`}

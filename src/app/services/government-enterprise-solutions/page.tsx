@@ -163,7 +163,7 @@ export default function GovernmentEnterprisePage() {
                 Schedule a Discovery Call
               </h2>
               <p className="text-xs text-steel max-w-xl leading-relaxed">
-                Connect directly with Founder & Chief Architect Muhammad Mujahid to discuss project scope, security compliance, timeline milestones, and formal proposal generation.
+                Connect directly with Chief Systems Architect Muhammad Mujahid to discuss project scope, security compliance, timeline milestones, and formal proposal generation.
               </p>
             </div>
 

@@ -20,7 +20,7 @@ export default function ProcessPage() {
       title: 'Discovery & Architecture Audit',
       icon: Search,
       paragraph:
-        'We start with a direct technical discussion to understand your product goals, target user flows, database needs, and integration constraints. You work directly with Founder & Chief Architect Muhammad Mujahid — never handed off to junior account reps.',
+        'We start with a direct technical discussion to understand your product goals, target user flows, database needs, and integration constraints. You collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.',
     },
     {
       number: '02',

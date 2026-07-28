@@ -73,7 +73,7 @@ export default function ServicesHubPage() {
             International Software Engineering Services
           </h1>
           <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
-            Every software service leads with transparent entry pricing and milestone deliverables. Explore full deliverable checklists, expand Growth or Premium tiers, or schedule a technical discovery call directly with Chief Systems Architect Muhammad Mujahid.
+            Every software service leads with transparent entry pricing and milestone deliverables. Explore full deliverable checklists, expand Professional or Enterprise tiers, or schedule a technical discovery call directly with Chief Systems Architect Muhammad Mujahid.
           </p>
         </div>
 
@@ -173,45 +173,45 @@ export default function ServicesHubPage() {
                     <span className="flex items-center gap-2">
                       <Sparkles className="h-4 w-4 text-gold" />
                       {isExpanded
-                        ? `Hide Growth & Premium Tiers for ${sData.title}`
-                        : `See More Options (Growth & Premium Tiers for ${sData.title})`}
+                        ? `Hide Professional & Enterprise Tiers for ${sData.title}`
+                        : `See More Options (Professional & Enterprise Tiers for ${sData.title})`}
                     </span>
                     {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
                   </button>
                 </div>
 
-                {/* Growth & Premium Expandable Drawer */}
+                {/* Professional & Enterprise Expandable Drawer */}
                 {isExpanded && (
                   <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-6 animate-fadeIn">
-                    {/* Growth Tier */}
-                    {sData.tiers.find((t) => t.name === 'Growth') && (
+                    {/* Professional Tier */}
+                    {sData.tiers.find((t) => t.name === 'Professional') && (
                       <div className="schematic-bracket flex flex-col justify-between border border-obsidian-border bg-obsidian p-6 space-y-6">
                         <div className="space-y-4">
                           <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
                             <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
-                              GROWTH TIER
+                              PROFESSIONAL TIER
                             </span>
                             <span className="font-mono text-[11px] text-steel">
-                              {sData.tiers.find((t) => t.name === 'Growth')?.turnaround}
+                              {sData.tiers.find((t) => t.name === 'Professional')?.turnaround}
                             </span>
                           </div>
 
                           <div>
                             <div className="font-serif text-3xl font-bold text-paper">
-                              {sData.tiers.find((t) => t.name === 'Growth')?.formattedPrice}
+                              {sData.tiers.find((t) => t.name === 'Professional')?.formattedPrice}
                             </div>
                             <p className="mt-2 text-xs leading-relaxed text-steel italic">
-                              "{sData.tiers.find((t) => t.name === 'Growth')?.outcome}"
+                              "{sData.tiers.find((t) => t.name === 'Professional')?.outcome}"
                             </p>
                           </div>
 
                           <div className="space-y-2 pt-2 border-t border-obsidian-border/60">
                             <span className="font-mono text-[10px] uppercase text-gold font-bold block">
-                              Deliverables ({sData.tiers.find((t) => t.name === 'Growth')?.deliverables.length} Items):
+                              Deliverables ({sData.tiers.find((t) => t.name === 'Professional')?.deliverables.length} Items):
                             </span>
                             <ul className="space-y-2 text-xs text-steel">
                               {sData.tiers
-                                .find((t) => t.name === 'Growth')
+                                .find((t) => t.name === 'Professional')
                                 ?.deliverables.map((item, dIdx) => (
                                   <li key={dIdx} className="flex items-start gap-2">
                                     <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0 mt-0.5" />
@@ -224,7 +224,7 @@ export default function ServicesHubPage() {
 
                         <div className="pt-4 border-t border-obsidian-border">
                           <Link
-                            href={`/contact?service=${encodeURIComponent(sData.title)}&tier=Growth&cta=quote`}
+                            href={`/contact?service=${encodeURIComponent(sData.title)}&tier=Professional&cta=quote`}
                             className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors text-center"
                           >
                             <FileText className="h-3.5 w-3.5" />
@@ -234,25 +234,25 @@ export default function ServicesHubPage() {
                       </div>
                     )}
 
-                    {/* Premium Tier Narrative Rework */}
-                    {sData.tiers.find((t) => t.name === 'Premium') && (
+                    {/* Enterprise Tier Narrative Rework */}
+                    {sData.tiers.find((t) => t.name === 'Enterprise') && (
                       <div className="schematic-bracket flex flex-col justify-between border border-gold/60 bg-obsidian p-6 space-y-6 shadow-[0_0_25px_rgba(201,162,75,0.12)]">
                         <div className="space-y-4">
                           <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
                             <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
-                              PREMIUM TIER · BESPOKE ARCHITECTURE
+                              ENTERPRISE TIER · BESPOKE ARCHITECTURE
                             </span>
                             <span className="font-mono text-[11px] text-steel">
-                              {sData.tiers.find((t) => t.name === 'Premium')?.turnaround}
+                              {sData.tiers.find((t) => t.name === 'Enterprise')?.turnaround}
                             </span>
                           </div>
 
                           <div>
                             <div className="font-serif text-3xl font-bold text-paper">
-                              {sData.tiers.find((t) => t.name === 'Premium')?.formattedPrice}
+                              {sData.tiers.find((t) => t.name === 'Enterprise')?.formattedPrice}
                             </div>
                             <p className="mt-2 text-xs leading-relaxed text-steel italic">
-                              "{sData.tiers.find((t) => t.name === 'Premium')?.outcome}"
+                              "{sData.tiers.find((t) => t.name === 'Enterprise')?.outcome}"
                             </p>
                           </div>
 
@@ -280,17 +280,17 @@ export default function ServicesHubPage() {
                             </Link>
                           </div>
 
-                          {/* Founder Access Differentiator Line */}
+                          {/* Direct Collaboration Differentiator Line */}
                           <div className="text-[11px] font-mono text-steel flex items-start gap-1.5 pt-1">
                             <UserCheck className="h-3.5 w-3.5 text-gold shrink-0 mt-0.5" />
-                            <span>You work directly with Founder & Chief Architect Muhammad Mujahid — not handed off to an account manager.</span>
+                            <span>You collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.</span>
                           </div>
                         </div>
 
-                        {/* Premium CTA — Discovery Call Only */}
+                        {/* Enterprise CTA — Discovery Call Only */}
                         <div className="pt-4 border-t border-obsidian-border">
                           <Link
-                            href={`/contact?service=${encodeURIComponent(sData.title)}&tier=Premium&cta=discovery`}
+                            href={`/contact?service=${encodeURIComponent(sData.title)}&tier=Enterprise&cta=discovery`}
                             className="flex items-center justify-center gap-2 w-full rounded bg-gold px-4 py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian hover:bg-gold-hover transition-colors text-center"
                           >
                             <PhoneCall className="h-4 w-4" />
@@ -361,8 +361,8 @@ export default function ServicesHubPage() {
         <ServiceCTA
           serviceName="General Software Services"
           heading="Ready to Engineer Your Next Software System?"
-          subheading="Schedule a technical discovery call with Founder & Chief Architect Muhammad Mujahid to clarify project scope, business outcomes, and milestone timelines."
-          primaryCtaText="Book a Technical Discovery Call"
+          subheading="Book a free technical discovery call with Chief Systems Architect Muhammad Mujahid to clarify project scope, business outcomes, and milestone timelines."
+          primaryCtaText="Book a Free Discovery Call"
           secondaryCtaText="Get a Quick Quote"
         />
       </div>

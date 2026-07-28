@@ -18,9 +18,9 @@ import { PRICING_LADDER } from '@/lib/pricing';
 const serviceData = PRICING_LADDER.webApplications;
 
 export const metadata: Metadata = {
-  title: 'Custom Web Applications & Enterprise Software — Starting at $2,200 | Axorks',
+  title: 'Custom Web Applications & Enterprise Software — Starting at $3,500 | Axorks',
   description:
-    'Full-stack custom web application development for businesses across the UK, US, EU, and worldwide. Tiered engagement: Growth ($2,200), Premium ($4,000). Built with Next.js App Router, TypeScript, and serverless Postgres.',
+    'Full-stack custom web application development for businesses across the UK, US, EU, and worldwide. Tiered engagement: Starter ($3,500), Professional ($8,000), Enterprise ($20,000+). Built with Next.js App Router, TypeScript, and serverless Postgres.',
   keywords: [
     'custom web application development',
     'enterprise software solutions',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'Axorks custom web software',
   ],
   openGraph: {
-    title: 'Custom Web Applications & Enterprise Software — Starting at $2,200 | Axorks',
+    title: 'Custom Web Applications & Enterprise Software — Starting at $3,500 | Axorks',
     description:
       'Full-stack custom web application development, dashboards, client portals, and SaaS platforms built with Next.js App Router and serverless PostgreSQL for global decision-makers.',
     url: `${SITE_URL}/services/web-applications`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom Web Applications & Enterprise Software — Starting at $2,200 | Axorks',
+    title: 'Custom Web Applications & Enterprise Software — Starting at $3,500 | Axorks',
     description: 'Full-stack web applications and internal software platforms built with Next.js and PostgreSQL.',
   },
   alternates: {
@@ -85,14 +85,9 @@ export default function WebApplicationsPage() {
 
   const webAppFaqs = [
     {
-      question: 'Why is there no Starter tier for Web Applications?',
-      answer:
-        'Full custom systems require multi-role authorization, serverless database architecture, and strict security logic that cannot be delivered properly at a cut-rate price without sacrificing quality or system stability.',
-    },
-    {
       question: 'How long does custom web application development take?',
       answer:
-        'Growth builds (custom single-purpose tools, dashboards, internal portals) take ~3–4 weeks. Premium enterprise platforms (full custom CRM/ERP-lite, multi-role auth) take ~4–8 weeks.',
+        'Starter builds (custom single-purpose tools, dashboards, internal portals) take ~2–3 weeks. Professional builds take ~3–5 weeks. Enterprise platforms (full custom CRM/ERP-lite, multi-role auth) take ~4–8 weeks.',
     },
     {
       question: 'Can you work with our internal development team?',
@@ -187,20 +182,20 @@ export default function WebApplicationsPage() {
         {/* Risk-Reversal Payment Structure Note Banner */}
         <PaymentTermsNote />
 
-        {/* Tier Pricing Ladder (Growth & Premium) */}
+        {/* Tier Pricing Ladder (Starter, Professional & Enterprise) */}
         <div className="space-y-6">
           <div className="border-b border-obsidian-border pb-4">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
               Select Your Web Application Engagement Tier
             </h2>
             <p className="text-xs text-steel mt-1">
-              Transparent, milestone-based pricing for full-stack custom systems. Deliberately no cut-rate Starter tier to protect system stability and security integrity.
+              Transparent, milestone-based pricing for full-stack custom systems. Three tiers designed to match your project scope and complexity.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
             {serviceData.tiers.map((tier) => {
-              const isPremium = tier.name === 'Premium';
+              const isPremium = tier.name === 'Enterprise';
 
               if (isPremium) {
                 return (
@@ -211,7 +206,7 @@ export default function WebApplicationsPage() {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
                         <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
-                          PREMIUM TIER · BESPOKE ARCHITECTURE
+                          ENTERPRISE TIER · BESPOKE ARCHITECTURE
                         </span>
                         <span className="font-mono text-[11px] text-steel">{tier.turnaround}</span>
                       </div>
@@ -248,13 +243,13 @@ export default function WebApplicationsPage() {
                       {/* Founder Access Line */}
                       <div className="text-[11px] font-mono text-steel flex items-start gap-1.5 pt-1">
                         <UserCheck className="h-3.5 w-3.5 text-gold shrink-0 mt-0.5" />
-                        <span>You work directly with Founder & Chief Architect Muhammad Mujahid — not handed off to an account manager.</span>
+                        <span>You collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.</span>
                       </div>
                     </div>
 
                     <div className="pt-4 border-t border-obsidian-border">
                       <Link
-                        href={`/contact?service=Web%20Applications%20%26%20Custom%20Systems&tier=Premium&cta=discovery`}
+                        href={`/contact?service=Web%20Applications%20%26%20Custom%20Systems&tier=Enterprise&cta=discovery`}
                         className="flex items-center justify-center gap-2 w-full rounded bg-gold px-4 py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian hover:bg-gold-hover transition-colors text-center"
                       >
                         <PhoneCall className="h-4 w-4" />

@@ -114,7 +114,7 @@ export default function CustomVsOffTheShelfArticle() {
             Evaluating a Custom Software Project?
           </h3>
           <p className="mt-2 text-xs text-steel">
-            Book a direct technical discovery call with Axorks Founder & Chief Architect {FOUNDER_NAME}.
+            Book a free technical discovery call with Axorks Chief Systems Architect {FOUNDER_NAME}.
           </p>
           <Link
             href="/contact"

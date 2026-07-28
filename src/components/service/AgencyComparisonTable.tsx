@@ -55,7 +55,7 @@ export default function AgencyComparisonTable() {
           Traditional Agency vs Axorks Engineering
         </h2>
         <p className="text-xs text-steel leading-relaxed max-w-3xl">
-          Factual architectural comparison highlighting how our founder-led engineering approach differs from traditional software vendors.
+          Factual architectural comparison highlighting how our direct-access engineering approach differs from traditional software vendors.
         </p>
       </div>
 

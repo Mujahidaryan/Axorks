@@ -3,14 +3,14 @@ import { Globe, HelpCircle, ShieldCheck, Clock, MessageSquare, CreditCard, Award
 export default function InternationalFAQSection() {
   const faqs = [
     {
-      q: 'Why a Karachi-based studio instead of someone local to me?',
+      q: 'Why choose Axorks over a local development agency?',
       icon: Award,
-      a: 'Senior engineering talent at a materially lower cost base without sacrificing quality. Our technical standards are proven by public-sector telemetry systems (FWO Grid sync & FAO-aligned monitoring dashboards) built to strict reliability standards, giving you enterprise-grade code at startup-accessible pricing.',
+      a: 'Senior engineering talent and high-quality software delivery at competitive international rates without sacrificing code standards or security. Our technical capabilities are proven by enterprise-grade telemetry systems (FWO Grid sync & FAO-aligned monitoring dashboards) built to strict reliability standards.',
     },
     {
-      q: 'What about time zones?',
+      q: 'How do you handle time zones & global collaboration?',
       icon: Clock,
-      a: 'We operate in PKT (UTC+5) with core engineering shifts scheduled from 1:00 PM to 10:00 PM PKT. This guarantees direct overlap hours with US East Coast mornings, UK afternoons, and European business shifts. Call schedules are arranged around your convenient local time.',
+      a: 'We offer flexible collaboration across time zones with core engineering schedules structured to guarantee direct overlap hours with North America (US East Coast/West Coast), UK, Europe, and GCC business shifts. Call schedules and communication are arranged around your convenient local time.',
     },
     {
       q: 'How do we communicate during the project?',

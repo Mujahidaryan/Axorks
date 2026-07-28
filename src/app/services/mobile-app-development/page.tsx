@@ -18,9 +18,9 @@ import { PRICING_LADDER } from '@/lib/pricing';
 const serviceData = PRICING_LADDER.mobileAppDevelopment;
 
 export const metadata: Metadata = {
-  title: 'Cross-Platform Mobile App Development — Starting at $1,200 | Axorks',
+  title: 'Cross-Platform Mobile App Development — Starting at $4,000 | Axorks',
   description:
-    'Cross-platform iOS and Android mobile application engineering for clients in the UK, US, EU, and worldwide. Tiered pricing: Starter ($1,200), Growth ($2,200), Premium ($3,800). Built for high performance, offline data sync, and cloud backends.',
+    'Cross-platform iOS and Android mobile application engineering for clients in the UK, US, EU, and worldwide. Tiered pricing: Starter ($4,000), Professional ($10,000), Enterprise ($25,000+). Built for high performance, offline data sync, and cloud backends.',
   keywords: [
     'cross platform mobile app development',
     'iOS and Android app engineering',
@@ -30,17 +30,17 @@ export const metadata: Metadata = {
     'Axorks mobile application',
   ],
   openGraph: {
-    title: 'Cross-Platform Mobile App Development — Starting at $1,200 | Axorks',
+    title: 'Cross-Platform Mobile App Development — Starting at $4,000 | Axorks',
     description:
-      'Cross-platform iOS and Android mobile app development with 3-tier pricing ($1,200, $2,200, $3,800) engineered by Axorks Software House for global clients.',
+      'Cross-platform iOS and Android mobile app development with 3-tier pricing ($4,000, $10,000, $25,000+) engineered by Axorks Software House for global clients.',
     url: `${SITE_URL}/services/mobile-app-development`,
     siteName: 'Axorks',
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cross-Platform Mobile App Development — Starting at $1,200 | Axorks',
-    description: 'Cross-platform iOS and Android app development starting at $1,200 built for global scale.',
+    title: 'Cross-Platform Mobile App Development — Starting at $4,000 | Axorks',
+    description: 'Cross-platform iOS and Android app development starting at $4,000 built for global scale.',
   },
   alternates: {
     canonical: '/services/mobile-app-development',
@@ -107,7 +107,7 @@ export default function MobileAppDevelopmentPage() {
     {
       question: 'What is the typical mobile app development timeline?',
       answer:
-        'Starter builds take ~2–3 weeks, Growth applications take ~4–6 weeks, and Premium enterprise mobile platforms take ~6–8 weeks.',
+        'Starter builds take ~2–3 weeks, Professional applications take ~4–6 weeks, and Enterprise mobile platforms take ~6–8 weeks.',
     },
   ];
 
@@ -195,7 +195,7 @@ export default function MobileAppDevelopmentPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {serviceData.tiers.map((tier) => {
-              const isPremium = tier.name === 'Premium';
+              const isPremium = tier.name === 'Enterprise';
 
               if (isPremium) {
                 return (
@@ -206,7 +206,7 @@ export default function MobileAppDevelopmentPage() {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
                         <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
-                          PREMIUM TIER · BESPOKE ARCHITECTURE
+                          ENTERPRISE TIER · BESPOKE ARCHITECTURE
                         </span>
                         <span className="font-mono text-[11px] text-steel">{tier.turnaround}</span>
                       </div>
@@ -243,13 +243,13 @@ export default function MobileAppDevelopmentPage() {
                       {/* Founder Access Line */}
                       <div className="text-[11px] font-mono text-steel flex items-start gap-1.5 pt-1">
                         <UserCheck className="h-3.5 w-3.5 text-gold shrink-0 mt-0.5" />
-                        <span>You work directly with Founder & Chief Architect Muhammad Mujahid — not handed off to an account manager.</span>
+                        <span>You collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.</span>
                       </div>
                     </div>
 
                     <div className="pt-4 border-t border-obsidian-border">
                       <Link
-                        href={`/contact?service=Mobile%20App%20Development&tier=Premium&cta=discovery`}
+                        href={`/contact?service=Mobile%20App%20Development&tier=Enterprise&cta=discovery`}
                         className="flex items-center justify-center gap-2 w-full rounded bg-gold px-4 py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian hover:bg-gold-hover transition-colors text-center"
                       >
                         <PhoneCall className="h-4 w-4" />
@@ -264,7 +264,7 @@ export default function MobileAppDevelopmentPage() {
                 <div
                   key={tier.name}
                   className={`schematic-bracket flex flex-col justify-between border bg-obsidian-raised p-6 space-y-6 ${
-                    tier.name === 'Growth'
+                    tier.name === 'Professional'
                       ? 'border-gold/50 shadow-[0_0_20px_rgba(201,162,75,0.08)]'
                       : 'border-obsidian-border'
                   }`}

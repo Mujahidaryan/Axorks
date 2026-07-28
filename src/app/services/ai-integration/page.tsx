@@ -76,7 +76,7 @@ export default function AiIntegrationPage() {
     {
       question: 'How long does an AI automation project take to complete?',
       answer:
-        'Starter chatbots take ~1–2 weeks, Growth automated document/support pipelines take ~2–4 weeks, and Premium custom agentic platforms take ~4–6 weeks.',
+        'Starter integrations take ~1–2 weeks, Professional automated document/support pipelines take ~2–3 weeks, and Enterprise custom agentic platforms take ~3–5 weeks.',
     },
     {
       question: 'Who owns the custom AI workflow code and prompt templates?',
@@ -169,7 +169,7 @@ export default function AiIntegrationPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {serviceData.tiers.map((tier) => {
-              const isPremium = tier.name === 'Premium';
+              const isPremium = tier.name === 'Enterprise';
 
               if (isPremium) {
                 return (
@@ -180,7 +180,7 @@ export default function AiIntegrationPage() {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
                         <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
-                          PREMIUM TIER · BESPOKE ARCHITECTURE
+                          ENTERPRISE TIER · BESPOKE ARCHITECTURE
                         </span>
                         <span className="font-mono text-[11px] text-steel">{tier.turnaround}</span>
                       </div>
@@ -217,13 +217,13 @@ export default function AiIntegrationPage() {
                       {/* Founder Access Line */}
                       <div className="text-[11px] font-mono text-steel flex items-start gap-1.5 pt-1">
                         <UserCheck className="h-3.5 w-3.5 text-gold shrink-0 mt-0.5" />
-                        <span>You work directly with Founder & Chief Architect Muhammad Mujahid — not handed off to an account manager.</span>
+                        <span>You collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.</span>
                       </div>
                     </div>
 
                     <div className="pt-4 border-t border-obsidian-border">
                       <Link
-                        href={`/contact?service=AI%20Solutions%20%26%20Automation&tier=Premium&cta=discovery`}
+                        href={`/contact?service=AI%20Solutions%20%26%20Automation&tier=Enterprise&cta=discovery`}
                         className="flex items-center justify-center gap-2 w-full rounded bg-gold px-4 py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian hover:bg-gold-hover transition-colors text-center"
                       >
                         <PhoneCall className="h-4 w-4" />

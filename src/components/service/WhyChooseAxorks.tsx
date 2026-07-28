@@ -61,7 +61,7 @@ export default function WhyChooseAxorks() {
       icon: UserCheck,
       title: 'Direct Collaboration with Engineers',
       description:
-        'Work directly with Founder & Chief Architect Muhammad Mujahid and senior developers — no junior account reps.',
+        'Collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.',
     },
     {
       icon: TrendingUp,

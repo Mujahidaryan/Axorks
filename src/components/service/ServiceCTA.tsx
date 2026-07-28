@@ -11,7 +11,7 @@ interface ServiceCTAProps {
 
 export default function ServiceCTA({
   heading = 'Ready to Scale Your Business Infrastructure?',
-  subheading = 'Schedule a technical discovery call directly with Founder & Chief Architect Muhammad Mujahid. We analyze your business requirements, define an explicit technical scope, and outline a fixed milestone plan.',
+  subheading = 'Book a free technical discovery call directly with Chief Systems Architect Muhammad Mujahid. We analyze your business requirements, define an explicit technical scope, and outline a fixed milestone plan.',
   primaryCtaText = 'Talk to a Software Architect',
   secondaryCtaText = 'Request Scoped Proposal',
   serviceName = 'Custom Software Development',
