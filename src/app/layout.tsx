@@ -16,6 +16,7 @@ import {
   GEO_LATITUDE,
   GEO_LONGITUDE,
   GA_MEASUREMENT_ID,
+  GOOGLE_SITE_VERIFICATION,
 } from '@/lib/config';
 import './globals.css';
 
@@ -90,6 +91,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/',
+  },
+  verification: {
+    google: GOOGLE_SITE_VERIFICATION,
   },
 };
 
