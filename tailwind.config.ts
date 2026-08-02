@@ -25,6 +25,13 @@ const config: Config = {
           DEFAULT: '#2E6FBD',
           hover: '#3E82D5',
         },
+        /* Systems Limited extracted colors — use ONLY these for white sections */
+        'sys-white': '#FFFFFF',
+        'sys-light': '#F4F5F7',        /* Systems Ltd light-gray section bg */
+        'sys-blue': '#0057E7',         /* Systems Ltd vibrant electric blue accent */
+        'sys-blue-hover': '#0047CC',   /* Darker hover for sys-blue */
+        'sys-ink': '#0A0B0D',          /* Systems Ltd near-black text on white sections */
+        'sys-ink-muted': '#4A4F5A',    /* Systems Ltd muted body text on white */
       },
       fontFamily: {
         serif: ['var(--font-fraunces)', 'Georgia', 'serif'],

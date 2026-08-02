@@ -201,63 +201,89 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Signature Quantifiable Proof Bar */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-gold/50 bg-obsidian-raised p-4 sm:p-6 shadow-xl backdrop-blur-md">
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between font-mono text-xs">
-            <div className="flex items-center gap-2 text-gold font-bold uppercase tracking-wider shrink-0">
-              <CheckCircle2 className="h-5 w-5 text-gold" />
-              <span>PROVABLE_STUDIO_METRICS:</span>
+      {/* Signature Quantifiable Proof Bar — Systems Limited Style White Stats Section */}
+      <section className="w-full bg-sys-white">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          {/* Section Label */}
+          <div className="text-center mb-10">
+            <span className="font-mono text-xs font-bold uppercase tracking-widest text-sys-blue">
+              [ PROVABLE_STUDIO_METRICS ]
+            </span>
+            <p className="mt-2 font-sans text-sm text-sys-ink-muted">
+              Quantifiable engineering delivery — no fluff, no filler.
+            </p>
+          </div>
+
+          {/* Large Impact Number Grid */}
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+            <div className="text-center space-y-2">
+              <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
+                6<span className="text-sys-blue">+</span>
+              </span>
+              <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
+              <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">Systems Shipped</span>
             </div>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-steel">
-              <span><strong className="text-paper">6+</strong> Systems Shipped</span>
-              <span className="text-obsidian-border">·</span>
-              <span><strong className="text-gold">7+</strong> Senior Engineers</span>
-              <span className="text-obsidian-border">·</span>
-              <span><strong className="text-paper">5</strong> Enterprise Clients</span>
-              <span className="text-obsidian-border">·</span>
-              <span><strong className="text-gold">100%</strong> On-Time Delivery</span>
-              <span className="text-obsidian-border">·</span>
-              <span><strong className="text-paper font-bold">US / UK / EU Shifts</strong></span>
+            <div className="text-center space-y-2">
+              <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
+                7<span className="text-sys-blue">+</span>
+              </span>
+              <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
+              <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">Senior Engineers</span>
+            </div>
+            <div className="text-center space-y-2">
+              <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
+                5<span className="text-sys-blue">+</span>
+              </span>
+              <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
+              <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">Enterprise Clients</span>
+            </div>
+            <div className="text-center space-y-2">
+              <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
+                100<span className="text-sys-blue">%</span>
+              </span>
+              <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
+              <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">On-Time Delivery</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Physical Office & Leadership Visual Proof Block */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian-raised/80 shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-            {/* Office Image Visual Anchor */}
-            <div className="relative lg:col-span-7 h-72 sm:h-96 lg:h-[420px] overflow-hidden">
-              <img
-                src="/AxorkOffice.png"
-                alt="Axorks Software House Corporate Office"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-obsidian" />
-            </div>
+      <section className="w-full bg-sys-light">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-0">
+          <div className="relative overflow-hidden shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+              {/* Office Image Visual Anchor — stays dark/cinematic */}
+              <div className="relative lg:col-span-7 h-72 sm:h-96 lg:h-[460px] overflow-hidden">
+                <img
+                  src="/AxorkOffice.png"
+                  alt="Axorks Software House Corporate Office"
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sys-ink/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-sys-light" />
+              </div>
 
-            {/* Office Text & Trust Copy */}
-            <div className="lg:col-span-5 p-6 sm:p-10 space-y-4">
-              <span className="font-mono text-xs text-gold uppercase tracking-wider">
-                [ PHYSICAL_WORKSPACE_&_HEADQUARTERS ]
-              </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-                Physical Engineering Credibility & Global Delivery
-              </h2>
-              <p className="text-xs sm:text-sm text-steel leading-relaxed">
-                Operating from our modern software house facilities in Karachi & Islamabad, Axorks combines physical office infrastructure with transparent, asynchronous global remote delivery for international clients.
-              </p>
-              <div className="pt-2 flex items-center gap-4 border-t border-white/10 font-mono text-xs text-paper">
-                <div>
-                  <span className="block text-gold font-bold">100% In-House</span>
-                  <span className="text-steel text-[11px]">Zero Outsourcing</span>
-                </div>
-                <div className="h-8 w-[1px] bg-white/10" />
-                <div>
-                  <span className="block text-paper font-bold">Direct Architect Access</span>
-                  <span className="text-steel text-[11px]">Senior Leadership</span>
+              {/* Office Text Panel — Systems Ltd white/light-gray right panel */}
+              <div className="lg:col-span-5 bg-sys-light p-8 sm:p-12 space-y-5 flex flex-col justify-center">
+                <span className="font-mono text-[11px] font-bold text-sys-blue uppercase tracking-widest">
+                  [ PHYSICAL_WORKSPACE_&_HEADQUARTERS ]
+                </span>
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-sys-ink leading-tight">
+                  Real Office. Real Engineers. Global Delivery.
+                </h2>
+                <p className="text-sm text-sys-ink-muted leading-relaxed">
+                  Operating from our modern software house facilities in Karachi &amp; Islamabad, Axorks combines physical office infrastructure with transparent, asynchronous global remote delivery for international clients.
+                </p>
+                <div className="pt-4 flex items-center gap-6 border-t border-sys-ink/10 font-mono text-xs">
+                  <div>
+                    <span className="block text-sys-blue font-bold text-sm">100% In-House</span>
+                    <span className="text-sys-ink-muted text-[11px] mt-0.5 block">Zero Outsourcing</span>
+                  </div>
+                  <div className="h-8 w-[1px] bg-sys-ink/10" />
+                  <div>
+                    <span className="block text-sys-ink font-bold text-sm">Direct Access</span>
+                    <span className="text-sys-ink-muted text-[11px] mt-0.5 block">Chief Systems Architect</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -265,17 +291,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Risk-Reversal Payment Structure Note */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-gold/40 bg-obsidian-raised p-5 flex items-center justify-between font-mono text-xs text-steel shadow-lg">
-          <div className="flex items-center gap-3">
-            <ShieldCheck className="h-5 w-5 text-gold shrink-0" />
-            <div>
-              <span className="text-gold font-bold block uppercase">Risk-Reversal Milestone Billing:</span>
-              <span className="text-paper/90">
-                Milestone-based billing: <strong>40% to begin, 40% at midpoint review, 20% on final delivery</strong>. You're never paying for work you haven't seen.
-              </span>
+      {/* Risk-Reversal Payment Structure — Systems Limited white with top blue accent line */}
+      <section className="w-full bg-sys-white">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            {/* Left: Blue top-accent label + headline */}
+            <div className="flex-1 space-y-1">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="h-5 w-5 text-sys-blue shrink-0" />
+                <span className="font-mono text-[11px] font-bold text-sys-blue uppercase tracking-widest">
+                  RISK-REVERSAL MILESTONE BILLING
+                </span>
+              </div>
+              <p className="font-sans text-sm text-sys-ink-muted leading-relaxed">
+                Milestone-based billing: <strong className="text-sys-ink">40% to begin, 40% at midpoint review, 20% on final delivery</strong>. You're never paying for work you haven't seen.
+              </p>
             </div>
+            {/* Right: CTA */}
+            <a
+              href="/contact"
+              className="shrink-0 flex items-center gap-2 rounded-full bg-sys-blue px-6 py-2.5 font-mono text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-sys-blue-hover hover:shadow-lg hover:shadow-sys-blue/20"
+            >
+              Start with No Risk
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
