@@ -100,79 +100,100 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="space-y-16 pb-16 pt-8 sm:space-y-24 sm:pb-24 sm:pt-12">
-      {/* Hero Section */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-          <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold">
-              <ShieldCheck className="h-4 w-4" />
-              <span>International Software Engineering Company · Global Remote Delivery</span>
-            </div>
+    <div className="space-y-16 pb-16 pt-4 sm:space-y-24 sm:pb-24">
+      {/* Hero Section with Video & Dynamic Artwork Backdrop */}
+      <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian-raised/60 shadow-2xl mx-auto max-w-7xl">
+        {/* Background Kling AI Video Player */}
+        <div className="absolute inset-0 z-0 overflow-hidden opacity-30">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-full w-full object-cover scale-105 filter blur-[1px]"
+          >
+            <source src="/assets/hero_motion.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/85 to-obsidian/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-obsidian/60 via-transparent to-obsidian" />
+        </div>
 
-            <h1 className="font-serif text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl lg:leading-[1.12]">
-              International Software Engineering.{' '}
-              <span className="italic text-gold">Built to scale global businesses.</span>
-            </h1>
-
-            <p className="text-base leading-relaxed text-steel sm:text-lg">
-              Axorks is an independent software engineering company serving ambitious startups, SMEs, and enterprises across the UK, Europe, GCC, North America, and worldwide. Powered by a core team of <strong className="text-paper">7+ senior engineers and designers</strong>, we architect custom web applications, AI automations, and mobile platforms engineered for high performance, enterprise security, and long-term scalability.
-            </p>
-
-            {/* Direct Collaboration Line */}
-            <div className="rounded border border-obsidian-border bg-obsidian p-3 font-mono text-xs text-steel flex items-center gap-2">
-              <UserCheck className="h-4 w-4 text-gold shrink-0" />
-              <span>You collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.</span>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Link
-                href="/contact?cta=discovery"
-                className="group flex items-center gap-2 rounded bg-signal-blue px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover hover:shadow-lg hover:shadow-signal-blue/25"
-              >
-                Book a Free Discovery Call
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
-
-              <Link
-                href="/contact?cta=quote"
-                className="flex items-center gap-2 rounded border border-gold/40 bg-obsidian-raised px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-gold transition-colors hover:bg-gold/10"
-              >
-                <FileText className="h-4 w-4 text-gold" />
-                Get a Quick Quote
-              </Link>
-            </div>
-          </div>
-
-          {/* Right Hero Schematic Badge Box */}
-          <div className="w-full lg:w-[400px]">
-            <div className="schematic-bracket border border-gold/40 bg-obsidian-raised p-6 shadow-xl">
-              <div className="flex items-center justify-between border-b border-obsidian-border pb-3 font-mono text-xs text-gold">
-                <span>STUDIO_CAPABILITY_MATRIX</span>
-                <span className="text-emerald-400">STATUS_ACTIVE</span>
+        {/* Hero Content */}
+        <div className="relative z-10 px-6 py-12 sm:px-10 sm:py-20 lg:px-12">
+          <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
+            <div className="max-w-3xl space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 font-mono text-xs font-semibold text-gold backdrop-blur-md">
+                <ShieldCheck className="h-4 w-4" />
+                <span>International Software Engineering Studio · Global Remote Delivery</span>
               </div>
-              <ul className="mt-4 space-y-3.5 font-mono text-xs text-steel">
-                <li className="flex items-center justify-between">
-                  <span>Chief Systems Architect:</span>
-                  <span className="font-bold text-paper">M. Mujahid</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span>Core Team Size:</span>
-                  <span className="font-bold text-gold">7+ Senior Engineers</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span>Track Record:</span>
-                  <span className="font-bold text-paper">6+ Shipped Systems · 5 Clients</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span>Delivery Model:</span>
-                  <span className="font-bold text-gold">Remote Global Delivery</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span>Timezone Overlap:</span>
-                  <span className="text-paper font-semibold">US / UK / EU Shifts</span>
-                </li>
-              </ul>
+
+              <h1 className="font-serif text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl lg:leading-[1.12]">
+                Architecting Enterprise AI Systems &{' '}
+                <span className="italic text-gold">Bespoke Software Platforms.</span>
+              </h1>
+
+              <p className="text-base leading-relaxed text-steel sm:text-lg">
+                Axorks is an independent software engineering company serving ambitious startups, SMEs, and enterprises across the UK, Europe, GCC, North America, and worldwide. Powered by a core team of <strong className="text-paper">7+ senior engineers and designers</strong>, we architect custom web applications, AI automations, and mobile platforms engineered for high performance, enterprise security, and long-term scalability.
+              </p>
+
+              {/* Direct Collaboration Line */}
+              <div className="rounded-xl border border-white/10 bg-obsidian/90 p-4 font-mono text-xs text-steel flex items-center gap-3 backdrop-blur-md">
+                <UserCheck className="h-5 w-5 text-gold shrink-0" />
+                <span>You collaborate directly with Chief Systems Architect <strong>Muhammad Mujahid</strong> and senior engineers — zero account-manager handoff.</span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Link
+                  href="/contact?cta=discovery"
+                  className="group flex items-center gap-2.5 rounded-full border border-paper/20 bg-paper px-7 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all hover:bg-white hover:shadow-xl hover:shadow-paper/10 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  Book Free Discovery Call
+                  <ArrowUpRight className="h-4 w-4 text-obsidian transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </Link>
+
+                <Link
+                  href="/contact?cta=quote"
+                  className="flex items-center gap-2 rounded-full border border-gold/40 bg-obsidian/80 px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-gold transition-all hover:bg-gold/10 hover:border-gold backdrop-blur-md"
+                >
+                  <FileText className="h-4 w-4 text-gold" />
+                  Get a Quick Quote
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Hero Schematic Matrix */}
+            <div className="w-full lg:w-[380px]">
+              <div className="rounded-2xl border border-gold/40 bg-obsidian/90 p-6 shadow-2xl backdrop-blur-xl">
+                <div className="flex items-center justify-between border-b border-white/10 pb-3 font-mono text-xs text-gold">
+                  <span>STUDIO_CAPABILITY_MATRIX</span>
+                  <span className="flex items-center gap-1.5 text-emerald-400 font-bold">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                    ACTIVE
+                  </span>
+                </div>
+                <ul className="mt-4 space-y-3.5 font-mono text-xs text-steel">
+                  <li className="flex items-center justify-between">
+                    <span>Chief Systems Architect:</span>
+                    <span className="font-bold text-paper">M. Mujahid</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Core Engineering Team:</span>
+                    <span className="font-bold text-gold">7+ Senior Engineers</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Track Record:</span>
+                    <span className="font-bold text-paper">6+ Shipped Systems</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Delivery Model:</span>
+                    <span className="font-bold text-gold">Global Remote Delivery</span>
+                  </li>
+                  <li className="flex items-center justify-between">
+                    <span>Timezone Overlap:</span>
+                    <span className="text-paper font-semibold">US / UK / EU Shifts</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -180,54 +201,92 @@ export default function HomePage() {
 
       {/* Signature Quantifiable Proof Bar */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="schematic-bracket border border-gold/50 bg-obsidian-raised p-4 sm:p-5 shadow-lg">
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between font-mono text-xs">
+        <div className="rounded-2xl border border-gold/50 bg-obsidian-raised p-4 sm:p-6 shadow-xl backdrop-blur-md">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between font-mono text-xs">
             <div className="flex items-center gap-2 text-gold font-bold uppercase tracking-wider shrink-0">
-              <CheckCircle2 className="h-4 w-4 text-gold" />
+              <CheckCircle2 className="h-5 w-5 text-gold" />
               <span>PROVABLE_STUDIO_METRICS:</span>
             </div>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-steel">
-              <span><strong className="text-paper">6+</strong> Projects Shipped</span>
+              <span><strong className="text-paper">6+</strong> Systems Shipped</span>
               <span className="text-obsidian-border">·</span>
-              <span><strong className="text-gold">7+</strong> Team Members</span>
+              <span><strong className="text-gold">7+</strong> Senior Engineers</span>
               <span className="text-obsidian-border">·</span>
-              <span><strong className="text-paper">5</strong> Clients Served</span>
+              <span><strong className="text-paper">5</strong> Enterprise Clients</span>
               <span className="text-obsidian-border">·</span>
-              <span><strong className="text-gold">2+</strong> International Clients</span>
+              <span><strong className="text-gold">100%</strong> On-Time Delivery</span>
               <span className="text-obsidian-border">·</span>
-              <span><strong className="text-paper">Karachi & Islamabad</strong></span>
+              <span><strong className="text-paper font-bold">US / UK / EU Shifts</strong></span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Signature Animated Gold Swoosh Divider Line */}
-      <GoldSwooshLine />
+      {/* Physical Office & Leadership Visual Proof Block */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian-raised/80 shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
+            {/* Office Image Visual Anchor */}
+            <div className="relative lg:col-span-7 h-72 sm:h-96 lg:h-[420px] overflow-hidden">
+              <img
+                src="/AxorkOffice.png"
+                alt="Axorks Software House Corporate Office"
+                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-obsidian" />
+            </div>
+
+            {/* Office Text & Trust Copy */}
+            <div className="lg:col-span-5 p-6 sm:p-10 space-y-4">
+              <span className="font-mono text-xs text-gold uppercase tracking-wider">
+                [ PHYSICAL_WORKSPACE_&_HEADQUARTERS ]
+              </span>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
+                Physical Engineering Credibility & Global Delivery
+              </h2>
+              <p className="text-xs sm:text-sm text-steel leading-relaxed">
+                Operating from our modern software house facilities in Karachi & Islamabad, Axorks combines physical office infrastructure with transparent, asynchronous global remote delivery for international clients.
+              </p>
+              <div className="pt-2 flex items-center gap-4 border-t border-white/10 font-mono text-xs text-paper">
+                <div>
+                  <span className="block text-gold font-bold">100% In-House</span>
+                  <span className="text-steel text-[11px]">Zero Outsourcing</span>
+                </div>
+                <div className="h-8 w-[1px] bg-white/10" />
+                <div>
+                  <span className="block text-paper font-bold">Direct Architect Access</span>
+                  <span className="text-steel text-[11px]">Senior Leadership</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Risk-Reversal Payment Structure Note */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="schematic-bracket border border-gold/40 bg-obsidian-raised p-5 flex items-center justify-between font-mono text-xs text-steel">
+        <div className="rounded-2xl border border-gold/40 bg-obsidian-raised p-5 flex items-center justify-between font-mono text-xs text-steel shadow-lg">
           <div className="flex items-center gap-3">
             <ShieldCheck className="h-5 w-5 text-gold shrink-0" />
             <div>
-              <span className="text-gold font-bold block uppercase">Risk-Reversal Payment Terms:</span>
+              <span className="text-gold font-bold block uppercase">Risk-Reversal Milestone Billing:</span>
               <span className="text-paper/90">
-                Milestone-based payment: <strong>40% to begin, 40% at midpoint review, 20% on final delivery</strong>. You're never paying for work you haven't seen.
+                Milestone-based billing: <strong>40% to begin, 40% at midpoint review, 20% on final delivery</strong>. You're never paying for work you haven't seen.
               </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Tiers Capabilities Section */}
+      {/* Services Tiers Capabilities Section with Systems Ltd Style Top-Radius Cards */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-obsidian-border pb-4 gap-4">
           <div>
             <span className="font-mono text-xs text-gold uppercase tracking-wider">
-              PRODUCTIZED_SERVICES_&_PRICING
+              PRODUCTIZED_CAPABILITIES_&_PRICING
             </span>
             <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
-              Tiered Software Offerings & Floor Pricing
+              Enterprise Software Offerings & Pricing Ladders
             </h2>
           </div>
           <Link
@@ -240,96 +299,148 @@ export default function HomePage() {
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+          {/* Card 1: Custom Website Development */}
+          <div className="group rounded-2xl border border-white/10 bg-obsidian-raised overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1">
             <div>
-              <Layout className="h-6 w-6 text-gold" />
-              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                Custom Website Development
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure.
-              </p>
+              <div className="relative h-44 w-full overflow-hidden bg-obsidian">
+                <img
+                  src="/assets/web_art.png"
+                  alt="Custom Website Development"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-obsidian-raised via-transparent to-transparent" />
+                <span className="absolute top-3 left-3 rounded bg-obsidian/80 px-2.5 py-1 font-mono text-[10px] font-bold text-gold uppercase tracking-widest border border-gold/30 backdrop-blur-md">
+                  [ CUSTOM WEB ]
+                </span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-lg font-bold text-paper group-hover:text-gold transition-colors">
+                  Custom Website Development
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-steel">
+                  Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure.
+                </p>
+              </div>
             </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 space-y-3 font-mono text-xs">
+            <div className="p-6 pt-0 border-t border-obsidian-border/60 mt-4 space-y-3 font-mono text-xs">
               <div className="flex items-center justify-between">
                 <span className="text-steel">Floor Pricing:</span>
                 <span className="text-gold font-bold">{PRICING.websiteDevelopment.shortRange}</span>
               </div>
               <Link
                 href="/services#website-development"
-                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
+                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-2 rounded-xl hover:border-gold/50 hover:bg-gold/10 transition-all font-semibold"
               >
                 {getTierRangeLabel('websiteDevelopment')}
               </Link>
             </div>
           </div>
 
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+          {/* Card 2: Web Applications & Systems */}
+          <div className="group rounded-2xl border border-white/10 bg-obsidian-raised overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1">
             <div>
-              <Code2 className="h-6 w-6 text-gold" />
-              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                Web Applications & Systems
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Full-stack web portals, CRMs, and internal tools with serverless PostgreSQL databases and RBAC permissions.
-              </p>
+              <div className="relative h-44 w-full overflow-hidden bg-obsidian">
+                <img
+                  src="/assets/cloud_art.png"
+                  alt="Web Applications & Systems"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-obsidian-raised via-transparent to-transparent" />
+                <span className="absolute top-3 left-3 rounded bg-obsidian/80 px-2.5 py-1 font-mono text-[10px] font-bold text-gold uppercase tracking-widest border border-gold/30 backdrop-blur-md">
+                  [ CLOUD & SYSTEMS ]
+                </span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-lg font-bold text-paper group-hover:text-gold transition-colors">
+                  Web Applications & Systems
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-steel">
+                  Full-stack web portals, CRMs, and internal tools with serverless PostgreSQL databases and RBAC permissions.
+                </p>
+              </div>
             </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 space-y-3 font-mono text-xs">
+            <div className="p-6 pt-0 border-t border-obsidian-border/60 mt-4 space-y-3 font-mono text-xs">
               <div className="flex items-center justify-between">
                 <span className="text-steel">Floor Pricing:</span>
                 <span className="text-gold font-bold">{PRICING.webApplications.shortRange}</span>
               </div>
               <Link
                 href="/services#web-applications"
-                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
+                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-2 rounded-xl hover:border-gold/50 hover:bg-gold/10 transition-all font-semibold"
               >
                 {getTierRangeLabel('webApplications')}
               </Link>
             </div>
           </div>
 
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+          {/* Card 3: AI Solutions & Automation */}
+          <div className="group rounded-2xl border border-white/10 bg-obsidian-raised overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1">
             <div>
-              <Bot className="h-6 w-6 text-gold" />
-              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                AI Solutions & Automation
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Integrating OpenAI API pipelines, document processing workflows, and vector embeddings into software.
-              </p>
+              <div className="relative h-44 w-full overflow-hidden bg-obsidian">
+                <img
+                  src="/assets/ai_art.png"
+                  alt="AI Solutions & Automation"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-obsidian-raised via-transparent to-transparent" />
+                <span className="absolute top-3 left-3 rounded bg-obsidian/80 px-2.5 py-1 font-mono text-[10px] font-bold text-gold uppercase tracking-widest border border-gold/30 backdrop-blur-md">
+                  [ AI & AUTOMATION ]
+                </span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-lg font-bold text-paper group-hover:text-gold transition-colors">
+                  AI Solutions & Automation
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-steel">
+                  Integrating OpenAI API pipelines, document processing workflows, and vector embeddings into software.
+                </p>
+              </div>
             </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 space-y-3 font-mono text-xs">
+            <div className="p-6 pt-0 border-t border-obsidian-border/60 mt-4 space-y-3 font-mono text-xs">
               <div className="flex items-center justify-between">
                 <span className="text-steel">Floor Pricing:</span>
                 <span className="text-gold font-bold">{PRICING.aiIntegration.shortRange}</span>
               </div>
               <Link
                 href="/services#ai-integration"
-                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
+                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-2 rounded-xl hover:border-gold/50 hover:bg-gold/10 transition-all font-semibold"
               >
                 {getTierRangeLabel('aiIntegration')}
               </Link>
             </div>
           </div>
 
-          <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 flex flex-col justify-between">
+          {/* Card 4: Mobile App Development */}
+          <div className="group rounded-2xl border border-white/10 bg-obsidian-raised overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1">
             <div>
-              <Smartphone className="h-6 w-6 text-gold" />
-              <h3 className="mt-4 font-serif text-lg font-bold text-paper">
-                Mobile App Development
-              </h3>
-              <p className="mt-2 text-xs leading-relaxed text-steel">
-                Cross-platform iOS and Android mobile applications built for performance and offline data synchronization.
-              </p>
+              <div className="relative h-44 w-full overflow-hidden bg-obsidian">
+                <img
+                  src="/assets/hero_art.png"
+                  alt="Mobile App Development"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-obsidian-raised via-transparent to-transparent" />
+                <span className="absolute top-3 left-3 rounded bg-obsidian/80 px-2.5 py-1 font-mono text-[10px] font-bold text-gold uppercase tracking-widest border border-gold/30 backdrop-blur-md">
+                  [ MOBILE APPS ]
+                </span>
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-lg font-bold text-paper group-hover:text-gold transition-colors">
+                  Mobile App Development
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-steel">
+                  Cross-platform iOS and Android mobile applications built for performance and offline data synchronization.
+                </p>
+              </div>
             </div>
-            <div className="mt-6 border-t border-obsidian-border/60 pt-3 space-y-3 font-mono text-xs">
+            <div className="p-6 pt-0 border-t border-obsidian-border/60 mt-4 space-y-3 font-mono text-xs">
               <div className="flex items-center justify-between">
                 <span className="text-steel">Floor Pricing:</span>
                 <span className="text-gold font-bold">{PRICING.mobileAppDevelopment.shortRange}</span>
               </div>
               <Link
                 href="/services#mobile-app-development"
-                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-1.5 rounded hover:border-gold/40 transition-colors"
+                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-2 rounded-xl hover:border-gold/50 hover:bg-gold/10 transition-all font-semibold"
               >
                 {getTierRangeLabel('mobileAppDevelopment')}
               </Link>
@@ -359,7 +470,7 @@ export default function HomePage() {
         </div>
 
         {/* Grounded NDA Disclaimer Note */}
-        <div className="mt-6 schematic-bracket border border-gold/30 bg-obsidian-raised p-4 flex items-start gap-3 text-xs text-steel">
+        <div className="mt-6 rounded-xl border border-gold/30 bg-obsidian-raised p-4 flex items-start gap-3 text-xs text-steel">
           <Info className="h-4 w-4 text-gold shrink-0 mt-0.5" />
           <p className="leading-relaxed">
             Representative software systems engineered by our technical team in senior engineering capacities. Specific client identities and proprietary metrics are protected under NDA.

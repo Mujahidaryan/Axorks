@@ -21,11 +21,11 @@ export default function Navigation() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-obsidian-border bg-obsidian/95 backdrop-blur-md transition-all">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-obsidian/90 backdrop-blur-xl transition-all">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Brand Mark with Full Logo */}
         <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-90">
-          <div className="relative h-9 w-9 overflow-hidden rounded-md border border-gold/40 bg-obsidian-raised p-1">
+          <div className="relative h-9 w-9 overflow-hidden rounded-md border border-gold/40 bg-obsidian-raised p-1 shadow-sm shadow-gold/20">
             <Image
               src="/logo.png"
               alt="Axorks Mark"
@@ -66,14 +66,14 @@ export default function Navigation() {
           })}
         </nav>
 
-        {/* Desktop CTA Button */}
+        {/* Desktop CTA Button — White Pill Button inspired by Systems Ltd */}
         <div className="hidden md:flex md:items-center">
           <Link
             href="/contact"
-            className="group flex items-center gap-2 rounded-md border border-signal-blue bg-signal-blue px-4 py-2 text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover hover:shadow-lg hover:shadow-signal-blue/20"
+            className="group flex items-center gap-2 rounded-full border border-paper/20 bg-paper px-5 py-2 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all hover:bg-white hover:shadow-lg hover:shadow-paper/10 hover:scale-[1.02] active:scale-[0.98]"
           >
-            Start a project
-            <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            Book Discovery Call
+            <ArrowUpRight className="h-4 w-4 text-obsidian transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>
 
@@ -90,7 +90,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Drawer */}
       {isOpen && (
-        <div className="border-b border-obsidian-border bg-obsidian-raised px-4 pb-6 pt-4 md:hidden">
+        <div className="border-b border-obsidian-border bg-obsidian-raised/95 px-4 pb-6 pt-4 backdrop-blur-xl md:hidden">
           <div className="flex flex-col space-y-4">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
@@ -111,9 +111,9 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-md bg-signal-blue py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover"
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-paper py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all hover:bg-white"
               >
-                Start a project
+                Book Discovery Call
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
