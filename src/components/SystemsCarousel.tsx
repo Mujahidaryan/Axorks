@@ -149,6 +149,21 @@ export default function SystemsCarousel() {
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80" />
+
+          {/* Axorks Studio Brand Bug — flush top-left corner, fully covers watermark */}
+          <div className="absolute top-0 left-0 flex items-center gap-1.5 rounded-br-lg border-b border-r border-gold/30 bg-obsidian/90 px-3 py-2 backdrop-blur-md z-10">
+            <img
+              src="/logo.png"
+              alt="Axorks"
+              width={16}
+              height={16}
+              className="h-4 w-4 object-contain"
+            />
+            <span className="font-mono text-[10px] font-bold text-gold uppercase tracking-widest">
+              AXORKS
+            </span>
+          </div>
+
           <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-xs text-paper">
             <span className="rounded bg-obsidian/90 px-3 py-1 text-[10px] font-bold text-gold uppercase tracking-wider border border-gold/30 backdrop-blur-md">
               {activeSlide.sysId}

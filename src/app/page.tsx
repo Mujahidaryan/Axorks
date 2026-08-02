@@ -112,7 +112,8 @@ export default function HomePage() {
             loop
             muted
             playsInline
-            className="h-full w-full object-cover scale-105 filter blur-[1px]"
+            className="h-full w-full object-cover scale-110 translate-x-4 filter blur-[1px]"
+            style={{ objectPosition: '60% center' }}
           >
             <source src="/assets/hero_motion.mp4" type="video/mp4" />
           </video>
