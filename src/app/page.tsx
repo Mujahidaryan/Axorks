@@ -5,6 +5,8 @@ import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import InternationalFAQSection from '@/components/InternationalFAQSection';
+import ContactForm from '@/components/ContactForm';
+import SystemsCarousel from '@/components/SystemsCarousel';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 import { PRICING, getTierRangeLabel } from '@/lib/pricing';
 
@@ -449,6 +451,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Interactive Systems Showcase Carousel */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SystemsCarousel />
+      </section>
+
       {/* Featured Case Studies Preview */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-obsidian-border pb-4 gap-4">
@@ -487,6 +494,46 @@ export default function HomePage() {
       {/* Testimonials Structure Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <TestimonialsSection />
+      </section>
+
+      {/* Split Homepage Conversion & Contact Section (Systems Limited Pattern) */}
+      <section id="contact-section" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian-raised/80 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Left Brand Call to Action */}
+            <div className="lg:col-span-5 space-y-6">
+              <span className="font-mono text-xs text-gold uppercase tracking-wider">
+                [ LET'S_BUILD_WHAT'S_NEXT ]
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-paper leading-[1.15]">
+                Let's build what's next, <span className="italic text-gold">together.</span>
+              </h2>
+              <p className="text-sm text-steel leading-relaxed">
+                Whether you need a bespoke web application, enterprise AI pipeline, or full-stack software system, our senior engineering team is ready to deliver.
+              </p>
+              
+              <div className="space-y-3 pt-2 font-mono text-xs text-paper">
+                <div className="flex items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Guaranteed 24-Hour Technical Response</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-gold" />
+                  <span>Direct Chief Systems Architect Consultation</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-signal-blue" />
+                  <span>Milestone Billing — 40 / 40 / 20 Structure</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right High-Contrast Floating Form Card */}
+            <div className="lg:col-span-7">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* International Client Objection Handling FAQ */}
