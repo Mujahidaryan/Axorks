@@ -183,7 +183,7 @@ export default function Footer() {
 
         {/* Bottom Strip */}
         <div className="mt-12 border-t border-white/10 pt-6 flex flex-col items-center justify-between gap-3 text-[11px] text-steel sm:flex-row">
-          <p>© {new Date().getFullYear()} Axorks Software Engineering Studio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Axorks Pvt Limited. All rights reserved.</p>
           <div className="flex items-center gap-4 font-mono">
             <span>Precision Engineering</span>
             <span className="text-white/20">·</span>

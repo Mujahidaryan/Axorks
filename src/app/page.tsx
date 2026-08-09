@@ -7,6 +7,8 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import InternationalFAQSection from '@/components/InternationalFAQSection';
 import ContactForm from '@/components/ContactForm';
 import SystemsCarousel from '@/components/SystemsCarousel';
+import ScrollReveal from '@/components/ScrollReveal';
+import AnimatedCounter from '@/components/AnimatedCounter';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 import { PRICING, getTierRangeLabel } from '@/lib/pricing';
 
@@ -219,28 +221,28 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
             <div className="text-center space-y-2">
               <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
-                6<span className="text-sys-blue">+</span>
+                <AnimatedCounter target={6} suffix="+" />
               </span>
               <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
               <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">Systems Shipped</span>
             </div>
             <div className="text-center space-y-2">
               <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
-                7<span className="text-sys-blue">+</span>
+                <AnimatedCounter target={7} suffix="+" />
               </span>
               <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
               <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">Senior Engineers</span>
             </div>
             <div className="text-center space-y-2">
               <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
-                5<span className="text-sys-blue">+</span>
+                <AnimatedCounter target={5} suffix="+" />
               </span>
               <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
               <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">Enterprise Clients</span>
             </div>
             <div className="text-center space-y-2">
               <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
-                100<span className="text-sys-blue">%</span>
+                <AnimatedCounter target={100} suffix="%" />
               </span>
               <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
               <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">On-Time Delivery</span>
