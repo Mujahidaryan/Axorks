@@ -137,6 +137,7 @@ export default function SystemsCarousel() {
               loop
               muted
               playsInline
+              preload="metadata"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             >
               <source src={activeSlide.videoSrc} type="video/mp4" />

@@ -1,8 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -17,21 +16,18 @@ export default function ScrollReveal({
   className = '',
   delay = 0,
   direction = 'up',
-  duration = 0.6,
+  duration = 0.5,
 }: ScrollRevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
-
   const getOffset = () => {
     switch (direction) {
       case 'up':
-        return { y: 30, x: 0 };
+        return { y: 24, x: 0 };
       case 'down':
-        return { y: -30, x: 0 };
+        return { y: -24, x: 0 };
       case 'left':
-        return { x: 30, y: 0 };
+        return { x: 24, y: 0 };
       case 'right':
-        return { x: -30, y: 0 };
+        return { x: -24, y: 0 };
       case 'none':
         return { x: 0, y: 0 };
     }
@@ -41,13 +37,13 @@ export default function ScrollReveal({
 
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, ...offset }}
-      animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, ...offset }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{
         duration,
         delay,
-        ease: [0.21, 0.47, 0.32, 0.98],
+        ease: [0.25, 0.1, 0.25, 1],
       }}
       className={className}
     >

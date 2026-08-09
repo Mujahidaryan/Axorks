@@ -1,3 +1,5 @@
+'use client';
+
 import {
   MessageSquare,
   ShieldCheck,
@@ -12,6 +14,7 @@ import {
   Gauge,
   Sparkles,
 } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function WhyChooseAxorks() {
   const trustCards = [
@@ -59,76 +62,51 @@ export default function WhyChooseAxorks() {
     },
     {
       icon: UserCheck,
-      title: 'Direct Collaboration with Engineers',
+      title: 'Direct Architect Collaboration',
       description:
-        'Collaborate directly with Chief Systems Architect Muhammad Mujahid and senior engineers — zero account-manager handoff.',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Business-Focused Solutions',
-      description:
-        'Every line of code is tied directly to your business outcomes: revenue growth, cost reduction, or workflow automation.',
-    },
-    {
-      icon: Code2,
-      title: 'Enterprise-Grade Code Quality',
-      description:
-        'Strict TypeScript typing, clean modular architecture, automated CI/CD checks, and zero technical debt.',
-    },
-    {
-      icon: Gauge,
-      title: 'Performance & Core Web Vitals',
-      description:
-        'Sub-second FCP page load times, Core Web Vitals green scores, and modern AVIF/WebP image optimization.',
-    },
-    {
-      icon: Sparkles,
-      title: 'Future-Proof Tech Choices',
-      description:
-        'Standardized open-source tech stack preventing vendor lock-in or fragile page-builder dependency.',
+        'Work directly with Chief Systems Architect M. Mujahid and senior developers — zero account manager bloat.',
     },
   ];
 
   return (
-    <div className="space-y-8">
-      <div className="space-y-2 border-b border-obsidian-border pb-4">
-        <div className="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
-          <ShieldCheck className="h-4 w-4" />
-          <span>GLOBAL_TRUST_FOUNDATION</span>
-        </div>
-        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-          Why International Clients Choose Axorks
-        </h2>
-        <p className="text-xs text-steel leading-relaxed max-w-3xl">
-          Engineered for business leaders in the UK, US, EU, UAE, and worldwide who require enterprise-grade reliability, transparent communication, and technical accountability.
-        </p>
-      </div>
+    <section className="w-full bg-sys-light py-16 sm:py-20 border-y border-sys-ink/10 shadow-sm">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+        <ScrollReveal direction="up">
+          <div className="space-y-3 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-sys-blue/30 bg-sys-blue/10 px-4 py-1.5 font-mono text-xs font-bold text-sys-blue uppercase tracking-widest">
+              <Sparkles className="h-4 w-4 text-sys-blue" />
+              <span>THE_AXORKS_ENGINEERING_ADVANTAGE</span>
+            </div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-sys-ink leading-tight">
+              Why Global Enterprise Teams Choose Axorks
+            </h2>
+            <p className="text-sm text-sys-ink-muted leading-relaxed">
+              Standardized engineering practices, transparent milestone accountability, and direct senior architect access.
+            </p>
+          </div>
+        </ScrollReveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {trustCards.map((card, idx) => {
-          const Icon = card.icon;
-          return (
-            <div
-              key={idx}
-              className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-3 flex flex-col justify-between hover:border-gold/40 transition-colors"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center gap-2.5">
-                  <div className="rounded border border-gold/30 bg-gold/10 p-2">
-                    <Icon className="h-4 w-4 text-gold shrink-0" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {trustCards.map((card, idx) => {
+            const Icon = card.icon;
+            return (
+              <ScrollReveal key={idx} delay={idx * 0.06} direction="up">
+                <div className="h-full rounded-2xl border border-sys-ink/10 bg-sys-white p-6 space-y-4 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-sys-blue/40 group">
+                  <div className="h-12 w-12 rounded-xl bg-sys-light border border-sys-blue/20 flex items-center justify-center transition-colors group-hover:bg-sys-blue group-hover:text-white">
+                    <Icon className="h-6 w-6 text-sys-blue transition-colors group-hover:text-white" />
                   </div>
-                  <h3 className="font-serif text-base font-bold text-paper">
+                  <h3 className="font-serif text-lg font-bold text-sys-ink group-hover:text-sys-blue transition-colors">
                     {card.title}
                   </h3>
+                  <p className="text-xs text-sys-ink-muted leading-relaxed">
+                    {card.description}
+                  </p>
                 </div>
-                <p className="text-xs text-steel leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            </div>
-          );
-        })}
+              </ScrollReveal>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

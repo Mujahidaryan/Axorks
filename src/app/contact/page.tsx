@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { Mail, Phone, MapPin, Clock, ShieldCheck, Building2, Linkedin, Lock, FileCheck } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
+import { Mail, Phone, MapPin, Clock, ShieldCheck, Building2, Linkedin, Lock, FileCheck, Globe, CheckCircle2, UserCheck } from 'lucide-react';
 import {
   SITE_URL,
   SITE_NAME,
@@ -63,14 +64,12 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20">
-      <head>
+    <div className="py-12 sm:py-20 space-y-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
         />
-      </head>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: 'Contact & Project Discovery' }]} />
 
         <div className="border-b border-obsidian-border pb-6">
@@ -86,7 +85,7 @@ export default function ContactPage() {
         </div>
 
         {/* Low-commitment CTA notice banner */}
-        <div className="mt-8 schematic-bracket border border-gold/40 bg-obsidian-raised p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="schematic-bracket border border-gold/40 bg-obsidian-raised p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-2xl">
           <div className="flex items-center gap-3">
             <FileCheck className="h-5 w-5 text-gold shrink-0" />
             <div className="text-xs">
@@ -96,7 +95,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           {/* Main Form Col */}
           <div className="lg:col-span-2">
             <ContactForm />
@@ -104,7 +103,7 @@ export default function ContactPage() {
 
           {/* Right Info Col */}
           <div className="space-y-6">
-            <div className="schematic-bracket border border-gold/40 bg-obsidian-raised p-6 space-y-4">
+            <div className="schematic-bracket border border-gold/40 bg-obsidian-raised p-6 space-y-4 rounded-2xl">
               <div className="flex items-center gap-2 border-b border-obsidian-border pb-3 text-gold">
                 <ShieldCheck className="h-5 w-5" />
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider">
@@ -116,7 +115,7 @@ export default function ContactPage() {
                 Axorks Engineering Office
               </h2>
               <p className="text-xs text-steel">
-                Software House & Systems Studio
+                Software House &amp; Systems Studio
               </p>
 
               <div className="space-y-3 pt-2 text-xs font-mono">
@@ -161,7 +160,7 @@ export default function ContactPage() {
 
                 <div className="flex items-center gap-2 text-steel">
                   <MapPin className="h-4 w-4 text-gold shrink-0" />
-                  <span>Serving: Karachi, Islamabad & Worldwide</span>
+                  <span>Serving: Karachi, Islamabad &amp; Worldwide</span>
                 </div>
 
                 <div className="flex items-center gap-2 text-steel">
@@ -172,7 +171,7 @@ export default function ContactPage() {
             </div>
 
             {/* Static USD Investment Reference Card */}
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-3">
+            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-3 rounded-2xl">
               <span className="font-mono text-xs text-gold uppercase font-bold">
                 ENGAGEMENT_TIER_SUMMARY
               </span>
@@ -201,10 +200,10 @@ export default function ContactPage() {
             </div>
 
             {/* Security & Confidentiality Card */}
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-2 text-xs">
+            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-2 text-xs rounded-2xl">
               <div className="flex items-center gap-2 text-gold font-mono font-bold uppercase">
                 <Lock className="h-4 w-4" />
-                <span>NDA & Confidentiality</span>
+                <span>NDA &amp; Confidentiality</span>
               </div>
               <p className="text-steel leading-relaxed">
                 All client proposals and conversations are executed under strict mutual confidentiality protocols. Source code ownership and IP are transferred upon delivery.
@@ -213,6 +212,63 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* Full-Width Light Section: Global Response SLA & Consultation Guarantee (40%+ Light Background Ratio) */}
+      <section className="w-full bg-sys-white py-16 sm:py-20 border-y border-sys-ink/10 shadow-sm">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <ScrollReveal direction="up">
+            <div className="text-center space-y-3 max-w-3xl mx-auto">
+              <span className="font-mono text-xs font-bold uppercase tracking-widest text-sys-blue">
+                [ DIRECT_ENGINEERING_ACCESS ]
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-sys-ink">
+                Guaranteed Response SLA &amp; Consultation Protocol
+              </h2>
+              <p className="text-sm text-sys-ink-muted leading-relaxed">
+                We respect your business timeline. Every inquiry receives a direct technical response from studio leadership.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <ScrollReveal direction="up" delay={0.05}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue">
+                  <Clock className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">24-Hour Guaranteed SLA</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  Every project quote request and technical discovery inquiry is answered within 24 business hours.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.1}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue">
+                  <UserCheck className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">Architect-Led Review</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  Your requirements are reviewed directly by Chief Systems Architect M. Mujahid — no sales rep fluff.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.15}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue">
+                  <Globe className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">Global Timezone Support</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  Dedicated meeting slots configured for US, UK, European, and Middle East (GCC) business hours.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

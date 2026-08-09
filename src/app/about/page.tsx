@@ -106,8 +106,11 @@ export default function AboutPage() {
           <span className="font-mono text-xs text-gold uppercase tracking-wider">
             INTERNATIONAL_ENGINEERING_LEADERSHIP
           </span>
-          <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
+          <h1 className="mt-2 font-serif text-3xl sm:text-4xl font-bold tracking-tight text-paper leading-tight">
             About Axorks Engineering Studio
+            <span className="block font-sans text-xl sm:text-2xl font-normal text-gold mt-1">
+              Leadership, Governance &amp; Engineering Culture
+            </span>
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
             Axorks (registered as <strong className="text-paper">Axorks Pvt Limited</strong>) is an independent international software engineering company serving decision-makers across the UK, Europe, GCC, North America, and worldwide. Operating with a senior team of 7+ engineers and designers, we architect custom web applications, AI automations, mobile apps, and enterprise platforms.

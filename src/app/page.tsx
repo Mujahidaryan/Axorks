@@ -132,9 +132,11 @@ export default function HomePage() {
                 <span>International Software Engineering Studio · Global Remote Delivery</span>
               </div>
 
-              <h1 className="font-serif text-4xl font-bold tracking-tight text-paper sm:text-5xl lg:text-6xl lg:leading-[1.12]">
-                Architecting Enterprise AI Systems &{' '}
-                <span className="italic text-gold">Bespoke Software Platforms.</span>
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-paper leading-tight">
+                Architecting Enterprise AI Systems
+                <span className="block text-gold italic font-serif text-2xl sm:text-3xl lg:text-4xl font-normal mt-1">
+                  &amp; Bespoke Software Platforms
+                </span>
               </h1>
 
               <p className="text-base leading-relaxed text-steel sm:text-lg">

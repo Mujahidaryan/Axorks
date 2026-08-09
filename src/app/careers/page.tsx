@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { ArrowUpRight, Mail, Users, ShieldCheck, Briefcase, CheckCircle2, Star } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
+import { ArrowUpRight, Mail, Users, ShieldCheck, Briefcase, CheckCircle2, Star, Zap, Award, Sparkles, HeartHandshake } from 'lucide-react';
 import { SITE_URL, SITE_NAME, CAREERS_EMAIL } from '@/lib/config';
 
 export const metadata: Metadata = {
@@ -98,105 +99,44 @@ export default function CareersPage() {
       requirements: [
         '3+ years of experience designing complex web and mobile user interfaces.',
         'Expertise in Figma design systems, component tokens, responsive layouts, and auto-layout.',
-        'Ability to translate technical data structures into intuitive dark-mode schematics and dashboard views.',
-        'Strong understanding of mobile-first UX patterns and interactive micro-animations.',
-        'Comprehensive portfolio demonstrating shipped digital product interfaces.',
+        'Strong grasp of dark-mode UI design, WCAG contrast standards, and responsive web principles.',
+        'Ability to collaborate directly with frontend engineers to ensure design precision.',
       ],
       offers: [
-        'Opportunity to shape visual design systems for client platforms.',
-        'Collaborative workflow directly with engineering team members.',
-        'Exposure to diverse product domains (AgriTech, Quant Systems, Healthcare, Public Sector).',
-        'Flexible working arrangement (Remote / Hybrid / On-site).',
-      ],
-    },
-    {
-      id: 'ai-automation-engineer',
-      title: 'AI & Automation Engineer',
-      isFeatured: false,
-      department: 'AI & Machine Learning',
-      location: 'Karachi & Islamabad, Pakistan',
-      arrangement: 'Flexible work arrangement (Remote / Hybrid / On-site) evaluated per role.',
-      employmentType: 'Full-time / Contract',
-      experience: '3+ years AI/ML / backend engineering experience',
-      education: "Bachelor's degree in CS/Data Science preferred or equivalent practical AI implementation background.",
-      compensation: 'Competitive market rate based on AI pipeline engineering experience.',
-      summary:
-        'Engineer practical AI automation pipelines integrating OpenAI APIs, automated document parsing (PDF/Image) workflows, vector search embeddings, and statistical machine learning models.',
-      requirements: [
-        '3+ years of experience in backend development, AI integration, or machine learning engineering.',
-        'Hands-on experience with OpenAI GPT APIs, LangChain/LlamaIndex, and vector databases.',
-        'Proficiency in Python (FastAPI), Node.js, and asynchronous background worker queues.',
-        'Understanding of prompt tuning, token usage cost optimization, and rate limiting pipelines.',
-        'Practical experience building document extraction workflows and predictive models.',
-      ],
-      offers: [
-        'Lead practical AI integration across high-ROI client automation projects.',
-        'R&D flexibility on cutting-edge LLM toolchains and statistical algorithms.',
-        'Direct collaboration with studio founder on quantitative engine development.',
+        'Design leadership on international enterprise applications.',
+        'Creative freedom with high-fidelity visual design standards.',
         'Flexible working arrangement (Remote / Hybrid / On-site).',
       ],
     },
   ];
 
   return (
-    <div className="py-12 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ label: 'Careers' }]} />
+    <div className="py-12 sm:py-20 space-y-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
+        <Breadcrumbs items={[{ label: 'Careers & Opportunities' }]} />
 
-        {/* Page Header */}
         <div className="border-b border-obsidian-border pb-6">
           <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold mb-3">
             <Briefcase className="h-4 w-4" />
-            <span>TALENT_ACQUISITION_PROTOCOL · STATUS_ACTIVE</span>
+            <span>Join Axorks Engineering Studio</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Join the Axorks Engineering Team
+            Career Opportunities &amp; Talent Network
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            We are hiring selective talent across Sales, Web Development, UI/UX Design, and AI Engineering. Build production software directly alongside studio leadership.
+            Work on production systems across international clients. We value high engineering standards, clear communication, and direct execution over bureaucracy.
           </p>
         </div>
 
-        {/* Application Protocol Guidance Box */}
-        <div className="mt-8 schematic-bracket border border-gold/40 bg-obsidian-raised p-6">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="space-y-1">
-              <span className="font-mono text-xs font-semibold text-gold uppercase tracking-wider block">
-                APPLICATION_SUBMISSION_INSTRUCTIONS
-              </span>
-              <p className="text-xs text-paper/90 leading-relaxed">
-                To apply for any role below, send your resume and portfolio directly to{' '}
-                <strong className="text-gold font-mono">{CAREERS_EMAIL}</strong> using the required subject line format:
-              </p>
-              <div className="mt-2 inline-block rounded bg-obsidian border border-obsidian-border px-3 py-1.5 font-mono text-xs text-gold">
-                Subject: Application – [Role Title] – [Candidate Full Name]
-              </div>
-            </div>
-
-            <a
-              href={`mailto:${CAREERS_EMAIL}?subject=General%20Application%20%E2%80%93%20Axorks`}
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded bg-signal-blue px-5 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
-            >
-              <Mail className="h-4 w-4" />
-              Direct Email Apply
-            </a>
-          </div>
-        </div>
-
-        {/* Job Listings Grid */}
-        <div className="mt-12 space-y-10">
+        {/* Roles List */}
+        <div className="space-y-8">
           {roles.map((role) => (
             <div
               key={role.id}
-              className={`schematic-bracket border bg-obsidian-raised p-6 sm:p-8 space-y-6 transition-colors ${
-                role.isFeatured
-                  ? 'border-gold/60 shadow-[0_0_30px_rgba(201,162,75,0.12)]'
-                  : 'border-obsidian-border hover:border-steel/40'
-              }`}
+              className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8 space-y-6 rounded-2xl"
             >
-              {/* Header Info */}
-              <div className="flex flex-col gap-4 border-b border-obsidian-border pb-5 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between border-b border-obsidian-border pb-4">
                 <div>
                   <div className="flex flex-wrap items-center gap-2.5 mb-2">
                     <span className="font-mono text-[10px] uppercase tracking-wider text-gold font-semibold">
@@ -241,12 +181,6 @@ export default function CareersPage() {
                 </div>
               </div>
 
-              {/* Work Arrangement Note */}
-              <div className="rounded border border-obsidian-border bg-obsidian p-3 font-mono text-xs text-steel">
-                <span className="text-gold font-bold">Work Arrangement: </span>
-                <span>{role.arrangement}</span>
-              </div>
-
               {/* Overview & Compensation */}
               <div className="space-y-3">
                 <p className="text-xs leading-relaxed text-steel sm:text-sm">
@@ -259,12 +193,11 @@ export default function CareersPage() {
                 </div>
               </div>
 
-              {/* Requirements & What We Offer Grid */}
+              {/* Requirements & Offers Grid */}
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 pt-2">
-                {/* Requirements */}
                 <div className="space-y-3">
                   <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-paper">
-                    Key Requirements & Qualifications
+                    Key Requirements &amp; Qualifications
                   </h3>
                   <ul className="space-y-2 text-xs text-steel">
                     {role.requirements.map((req, idx) => (
@@ -273,16 +206,9 @@ export default function CareersPage() {
                         <span>{req}</span>
                       </li>
                     ))}
-                    <li className="flex items-start gap-2 pt-1 border-t border-obsidian-border/50">
-                      <span className="font-mono text-[11px] text-paper">
-                        <strong className="text-gold">Education: </strong>
-                        {role.education}
-                      </span>
-                    </li>
                   </ul>
                 </div>
 
-                {/* What Axorks Offers */}
                 <div className="space-y-3">
                   <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-paper">
                     What Axorks Offers
@@ -297,25 +223,79 @@ export default function CareersPage() {
                   </ul>
                 </div>
               </div>
-
-              {/* Bottom Apply CTA */}
-              <div className="pt-4 border-t border-obsidian-border flex items-center justify-between">
-                <span className="font-mono text-[11px] text-steel">
-                  Submit resume to <strong className="text-gold">{CAREERS_EMAIL}</strong>
-                </span>
-                <a
-                  href={`mailto:${CAREERS_EMAIL}?subject=Application%20%E2%80%93%20${encodeURIComponent(
-                    role.title
-                  )}%20%E2%80%93%20`}
-                  className="font-mono text-xs text-signal-blue font-semibold hover:underline inline-flex items-center gap-1"
-                >
-                  Click to Apply via Email →
-                </a>
-              </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Full-Width Light Section: Studio Culture & Environment Perks (40%+ Light Background Ratio) */}
+      <section className="w-full bg-sys-white py-16 sm:py-20 border-y border-sys-ink/10 shadow-sm">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <ScrollReveal direction="up">
+            <div className="text-center space-y-3 max-w-3xl mx-auto">
+              <span className="font-mono text-xs font-bold uppercase tracking-widest text-sys-blue">
+                [ STUDIO_CULTURE_&amp;_PERKS ]
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-sys-ink">
+                Why Work at Axorks Software Studio
+              </h2>
+              <p className="text-sm text-sys-ink-muted leading-relaxed">
+                An engineering-first environment designed for high autonomy, zero management bloat, and international software exposure.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <ScrollReveal direction="up" delay={0.05}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue">
+                  <Users className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">Direct Architect Access</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  Collaborate directly with Chief Systems Architect M. Mujahid and senior leadership on live architecture decisions.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.1}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue">
+                  <Zap className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">Modern Tech Stack</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  Engineered with Next.js 14/15 App Router, TypeScript, Python, serverless Postgres, and AI vector search APIs.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.15}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue">
+                  <HeartHandshake className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">Flexible Work Models</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  Remote, hybrid, and physical office opportunities across Karachi and Islamabad software house facilities.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.2}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue">
+                  <Award className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">Competitive Growth</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  Market-leading base salaries, performance commission structures, and long-term studio trajectory.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

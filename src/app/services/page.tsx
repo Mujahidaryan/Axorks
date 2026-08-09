@@ -69,8 +69,11 @@ export default function ServicesHubPage() {
             <ShieldCheck className="h-3.5 w-3.5" />
             <span>PRODUCTIZED_SOFTWARE_SERVICES_&_TIERS</span>
           </div>
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            International Software Engineering Services
+          <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-paper leading-tight">
+            Software Engineering Services
+            <span className="block text-gold text-2xl sm:text-3xl font-sans font-normal mt-1 text-steel">
+              Productized Capabilities &amp; Pricing Ladders
+            </span>
           </h1>
           <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
             Every software service leads with transparent entry pricing and milestone deliverables. Explore full deliverable checklists, expand Professional or Enterprise tiers, or schedule a technical discovery call directly with Chief Systems Architect Muhammad Mujahid.

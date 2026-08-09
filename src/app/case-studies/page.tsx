@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
-import { ShieldCheck, Info } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
+import AnimatedCounter from '@/components/AnimatedCounter';
+import { ShieldCheck, Info, Award, Cpu, Database, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 
 export const metadata: Metadata = {
@@ -164,12 +167,12 @@ export default function CaseStudiesPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="py-12 sm:py-20 space-y-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="border-b border-obsidian-border pb-6">
           <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold mb-3">
             <ShieldCheck className="h-4 w-4" />
-            <span>Technical Engineering Portfolio & Case Studies</span>
+            <span>Technical Engineering Portfolio &amp; Case Studies</span>
           </div>
 
           <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
@@ -181,11 +184,11 @@ export default function CaseStudiesPage() {
         </div>
 
         {/* NDA Disclaimer Block */}
-        <div className="mt-8 schematic-bracket border border-gold/30 bg-obsidian-raised p-6 flex items-start gap-3 text-xs text-steel">
+        <div className="schematic-bracket border border-gold/30 bg-obsidian-raised p-6 flex items-start gap-3 text-xs text-steel rounded-2xl">
           <Info className="h-5 w-5 text-gold shrink-0 mt-0.5" />
           <div className="space-y-1">
             <strong className="font-mono text-gold uppercase tracking-wider block">
-              CONFIDENTIALITY_&_ATTRIBUTION_DISCLAIMER
+              CONFIDENTIALITY_&amp;_ATTRIBUTION_DISCLAIMER
             </strong>
             <p className="leading-relaxed">
               Select systems presented below were engineered by our founder and technical team in a senior engineering/subcontracting capacity for client partner studios. Specific client names, exact proprietary production endpoints, and confidential financial metrics are withheld per non-disclosure agreements (NDAs).
@@ -193,12 +196,91 @@ export default function CaseStudiesPage() {
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <SchematicCard key={project.id} project={project} />
           ))}
         </div>
       </div>
+
+      {/* Full-Width Light Section: Proven Performance & Delivery Standards (40%+ light ratio) */}
+      <section className="w-full bg-sys-white py-16 sm:py-20 border-y border-sys-ink/10 shadow-sm">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <ScrollReveal direction="up">
+            <div className="text-center space-y-3 max-w-3xl mx-auto">
+              <span className="font-mono text-xs font-bold uppercase tracking-widest text-sys-blue">
+                [ ARCHITECTURAL_DELIVERY_GUARANTEE ]
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-sys-ink">
+                Built for High Reliability & Enterprise Compliance
+              </h2>
+              <p className="text-sm text-sys-ink-muted leading-relaxed">
+                Every project follows strict technical specifications, automated testing pipelines, and complete source code ownership handoff.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <ScrollReveal direction="up" delay={0.05}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue font-bold">
+                  <Cpu className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">Sub-Second Latency</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  Optimized database queries and serverless edge functions delivering real-time telemetry and instant user interactions.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.1}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue font-bold">
+                  <Database className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">Zero Data Loss SLA</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  PostgreSQL atomic transactions, automated backups, and encrypted environment variables protecting critical client data.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.15}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue font-bold">
+                  <ShieldCheck className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">Complete IP Transfer</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  100% source code assignment and complete GitHub repository handoff upon project delivery completion.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={0.2}>
+              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
+                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue font-bold">
+                  <Award className="h-5 w-5" />
+                </div>
+                <h3 className="font-serif text-lg font-bold text-sys-ink">24-Hour SLA Support</h3>
+                <p className="text-xs text-sys-ink-muted leading-relaxed">
+                  Direct communication with Chief Systems Architect M. Mujahid and senior developers on business days.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <div className="text-center pt-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-sys-blue px-8 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-sys-blue-hover hover:shadow-lg hover:shadow-sys-blue/20"
+            >
+              Discuss Your Project Architecture
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

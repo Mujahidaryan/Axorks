@@ -1,4 +1,7 @@
-import { Layers, ArrowRight } from 'lucide-react';
+'use client';
+
+import { Layers, ArrowRight, Sparkles } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function ServiceProcess() {
   const phases = [
@@ -55,43 +58,46 @@ export default function ServiceProcess() {
   ];
 
   return (
-    <div className="space-y-8">
-      <div className="space-y-2 border-b border-obsidian-border pb-4">
-        <div className="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
-          <Layers className="h-4 w-4" />
-          <span>ENGINEERING_EXECUTION_WORKFLOW</span>
-        </div>
-        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-          Our 10-Phase Visual Process
-        </h2>
-        <p className="text-xs text-steel leading-relaxed max-w-3xl">
-          A disciplined, transparent engineering pipeline designed for predictability, zero technical debt, and rapid time-to-market.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-        {phases.map((p, idx) => (
-          <div
-            key={idx}
-            className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5 space-y-3 flex flex-col justify-between"
-          >
-            <div className="space-y-2">
-              <div className="flex items-center justify-between font-mono">
-                <span className="text-gold font-bold text-base">{p.num}</span>
-                {idx < phases.length - 1 && (
-                  <ArrowRight className="h-3.5 w-3.5 text-steel/40 hidden lg:block" />
-                )}
-              </div>
-              <h3 className="font-serif text-sm font-bold text-paper">
-                {p.title}
-              </h3>
-              <p className="text-[11px] text-steel leading-relaxed">
-                {p.desc}
-              </p>
+    <section className="w-full bg-sys-light py-16 sm:py-20 border-y border-sys-ink/10 shadow-sm">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+        <ScrollReveal direction="up">
+          <div className="space-y-3 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-sys-blue/30 bg-sys-blue/10 px-4 py-1.5 font-mono text-xs font-bold text-sys-blue uppercase tracking-widest">
+              <Layers className="h-4 w-4 text-sys-blue" />
+              <span>END_TO_END_ENGINEERING_PROCESS</span>
             </div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-sys-ink leading-tight">
+              10-Step Software Delivery Lifecycle
+            </h2>
+            <p className="text-sm text-sys-ink-muted leading-relaxed">
+              Standardized engineering lifecycle ensuring predictable timelines, transparent progress tracking, and high-performance delivery.
+            </p>
           </div>
-        ))}
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+          {phases.map((phase, idx) => (
+            <ScrollReveal key={idx} delay={idx * 0.04} direction="up">
+              <div className="h-full rounded-2xl border border-sys-ink/10 bg-sys-white p-5 space-y-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-sys-blue/40 flex flex-col justify-between group">
+                <div>
+                  <div className="flex items-center justify-between font-mono text-xs text-sys-blue">
+                    <span className="font-bold text-sm bg-sys-blue/10 px-2.5 py-1 rounded border border-sys-blue/20">
+                      {phase.num}
+                    </span>
+                    <ArrowRight className="h-3.5 w-3.5 text-sys-blue/40 group-hover:text-sys-blue transition-colors" />
+                  </div>
+                  <h3 className="mt-3 font-serif text-base font-bold text-sys-ink group-hover:text-sys-blue transition-colors">
+                    {phase.title}
+                  </h3>
+                  <p className="mt-2 text-xs text-sys-ink-muted leading-relaxed">
+                    {phase.desc}
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

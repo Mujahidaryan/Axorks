@@ -1,4 +1,7 @@
-import { Cpu, CheckCircle2 } from 'lucide-react';
+'use client';
+
+import { Cpu, CheckCircle2, Sparkles } from 'lucide-react';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export interface TechChoice {
   name: string;
@@ -19,58 +22,58 @@ export default function WhyThisTech({
   techChoices,
 }: WhyThisTechProps) {
   return (
-    <div className="space-y-8">
-      <div className="space-y-2 border-b border-obsidian-border pb-4">
-        <div className="inline-flex items-center gap-2 font-mono text-xs text-gold uppercase tracking-wider">
-          <Cpu className="h-4 w-4" />
-          <span>BUSINESS_FIRST_TECH_SELECTION</span>
-        </div>
-        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-          {heading}
-        </h2>
-        <p className="text-xs text-steel leading-relaxed max-w-3xl">
-          {subheading}
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {techChoices.map((tech, idx) => (
-          <div
-            key={idx}
-            className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-4 flex flex-col justify-between"
-          >
-            <div className="space-y-3">
-              <div className="flex items-center justify-between border-b border-obsidian-border pb-2">
-                <span className="font-serif text-lg font-bold text-paper">
-                  {tech.name}
-                </span>
-                <span className="font-mono text-[10px] text-gold uppercase px-2 py-0.5 rounded border border-gold/30 bg-gold/10">
-                  {tech.category}
-                </span>
-              </div>
-
-              <div className="space-y-2 text-xs text-steel">
-                <div>
-                  <strong className="text-paper block font-mono text-[11px] mb-1">
-                    Technical Rationale:
-                  </strong>
-                  <p className="leading-relaxed">{tech.whySelected}</p>
-                </div>
-
-                <div className="pt-2 border-t border-obsidian-border/50">
-                  <strong className="text-gold block font-mono text-[11px] mb-1 flex items-center gap-1">
-                    <CheckCircle2 className="h-3.5 w-3.5" />
-                    Business Outcome:
-                  </strong>
-                  <p className="leading-relaxed text-paper/90 font-medium">
-                    {tech.businessOutcome}
-                  </p>
-                </div>
-              </div>
+    <section className="w-full bg-sys-white py-16 sm:py-20 border-y border-sys-ink/10 shadow-sm">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+        <ScrollReveal direction="up">
+          <div className="space-y-3 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-sys-blue/30 bg-sys-blue/10 px-4 py-1.5 font-mono text-xs font-bold text-sys-blue uppercase tracking-widest">
+              <Cpu className="h-4 w-4 text-sys-blue" />
+              <span>BUSINESS_FIRST_TECH_SELECTION</span>
             </div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-sys-ink leading-tight">
+              {heading}
+            </h2>
+            <p className="text-sm text-sys-ink-muted leading-relaxed">
+              {subheading}
+            </p>
           </div>
-        ))}
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {techChoices.map((tech, idx) => (
+            <ScrollReveal key={idx} delay={idx * 0.05} direction="up">
+              <div className="h-full rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-4 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-sys-blue/40 flex flex-col justify-between group">
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between border-b border-sys-ink/10 pb-3">
+                    <span className="font-serif text-xl font-bold text-sys-ink group-hover:text-sys-blue transition-colors">
+                      {tech.name}
+                    </span>
+                    <span className="font-mono text-[10px] text-sys-blue font-bold uppercase px-2.5 py-1 rounded border border-sys-blue/20 bg-sys-blue/10">
+                      {tech.category}
+                    </span>
+                  </div>
+
+                  <div className="space-y-3 text-xs">
+                    <div>
+                      <strong className="text-sys-ink block font-mono text-[11px] mb-1 uppercase font-bold">
+                        Technical Rationale:
+                      </strong>
+                      <p className="text-sys-ink-muted leading-relaxed">{tech.whySelected}</p>
+                    </div>
+
+                    <div className="pt-2 border-t border-sys-ink/10">
+                      <strong className="text-sys-blue block font-mono text-[11px] mb-1 uppercase font-bold">
+                        Business &amp; ROI Outcome:
+                      </strong>
+                      <p className="text-sys-ink-muted leading-relaxed">{tech.businessOutcome}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
