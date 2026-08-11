@@ -69,7 +69,7 @@ export default function AboutPage() {
           name: 'Bahria University',
         },
         description:
-          'Muhammad Mujahid is the Founder & Chief Systems Architect of Axorks Pvt Limited. BS Software Engineering (Bahria University) and Microsoft Innovative Educator Expert (MIEE 2025).',
+          'Muhammad Mujahid is the Founder & Chief Systems Architect of Axorks Pvt Limited. Personally architected and shipped 6+ production systems including AgroTrace (cold-chain telemetry), Sindh Food Security Dashboard (FAO/WFP-grade), FUME brand platform, and IPMI-OS probabilistic engine. BS Software Engineering (Bahria University).',
         award: 'Microsoft Innovative Educator Expert (MIEE 2025)',
         sameAs: [LINKEDIN_URL, 'https://wa.me/923141030223'],
       },
@@ -156,11 +156,11 @@ export default function AboutPage() {
                     </div>
 
                     <p className="text-xs leading-relaxed text-steel">
-                      Specializing in full-stack web applications, serverless database architectures, and AI API integrations. Led engineering on <strong className="text-paper">6+ major production systems across international clients</strong>.
+                      Senior software engineer and Chief Systems Architect who personally architects and ships high-performance production platforms. Led engineering on <strong className="text-paper">6+ major production systems for international and enterprise clients</strong> with direct client collaboration and zero account-manager handoff.
                     </p>
 
                     <p className="text-xs leading-relaxed text-steel">
-                      Engineering record includes public sector telemetry platforms — <strong className="text-gold">AgroTrace</strong> (cold-chain grid telemetry), <strong className="text-gold">Sindh Food Security Dashboard</strong> (FAO/WFP standards), and <strong className="text-gold">IPMI-OS</strong> engine.
+                      Flagship production deployments include <strong className="text-gold">AgroTrace</strong> (cold-chain &amp; FWO grid telemetry platform), <strong className="text-gold">Sindh Food Security Dashboard</strong> (FAO/WFP-grade public-sector monitoring system), <strong className="text-gold">FUME</strong> brand digital platform, and the <strong className="text-gold">IPMI-OS</strong> probabilistic inference engine.
                     </p>
                   </div>
 
@@ -168,20 +168,20 @@ export default function AboutPage() {
                   <div className="rounded-xl border border-obsidian-border bg-obsidian p-4 space-y-2.5 font-mono text-xs">
                     <div className="flex items-center gap-2 text-gold font-bold text-[11px]">
                       <GraduationCap className="h-4 w-4 shrink-0" />
-                      <span>Qualifications & Recognition</span>
+                      <span>Engineering Credentials &amp; Track Record</span>
                     </div>
                     <ul className="space-y-1.5 text-steel text-[11px]">
                       <li className="flex items-center gap-2">
                         <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0" />
-                        <span>BS Software Engineering (Bahria Univ)</span>
+                        <span>BS Software Engineering (Bahria University)</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0" />
-                        <span>Computer Science Educator (4+ Yrs CAIE)</span>
+                        <span>6+ Production Systems Shipped Worldwide</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle2 className="h-3.5 w-3.5 text-gold shrink-0" />
-                        <span>Microsoft Educator Expert (MIEE 2025)</span>
+                        <span className="text-steel/80">Computer Science Educator (4+ Yrs CAIE / MIEE 2025)</span>
                       </li>
                     </ul>
                   </div>

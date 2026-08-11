@@ -107,20 +107,20 @@ export default function HomePage() {
     <div className="space-y-16 pb-16 pt-4 sm:space-y-24 sm:pb-24">
       {/* Hero Section with Video & Dynamic Artwork Backdrop */}
       <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian-raised/60 shadow-2xl mx-auto max-w-7xl">
-        {/* Background Kling AI Video Player */}
-        <div className="absolute inset-0 z-0 overflow-hidden opacity-30">
+        {/* Background Kling AI Video Player — subtle ambient motion */}
+        <div className="absolute inset-0 z-0 overflow-hidden opacity-45">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="h-full w-full object-cover scale-110 translate-x-4 filter blur-[1px]"
+            className="h-full w-full object-cover scale-105 filter blur-[0.5px]"
             style={{ objectPosition: '60% center' }}
           >
             <source src="/assets/hero_motion.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/85 to-obsidian/40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-obsidian/60 via-transparent to-obsidian" />
+          <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/70 to-obsidian/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-obsidian/50 via-transparent to-obsidian" />
         </div>
 
         {/* Hero Content */}
@@ -324,172 +324,182 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Tiers Capabilities Section with Systems Ltd Style Top-Radius Cards */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-obsidian-border pb-4 gap-4">
-          <div>
-            <span className="font-mono text-xs text-gold uppercase tracking-wider">
-              PRODUCTIZED_CAPABILITIES_&_PRICING
-            </span>
-            <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
-              Enterprise Software Offerings & Pricing Ladders
-            </h2>
-          </div>
-          <Link
-            href="/services"
-            className="font-mono text-xs text-signal-blue hover:text-signal-blue-hover inline-flex items-center gap-1 font-semibold"
-          >
-            Explore All Tiered Pricing Ladders
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
-        </div>
+      {/* Services Tiers Capabilities Section with Systems Ltd Style Executive Cards */}
+      <section className="w-full bg-gradient-to-b from-slate-50 via-white to-slate-100/80 py-16 sm:py-20 border-y border-slate-200 shadow-sm relative overflow-hidden">
+        {/* Subtle mesh background */}
+        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-teal-500/5 blur-3xl pointer-events-none" />
 
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {/* Card 1: Custom Website Development */}
-          <div className="group rounded-2xl border border-white/10 bg-obsidian-raised overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-slate-200 pb-4 gap-4">
             <div>
-              <div className="relative h-44 w-full overflow-hidden bg-obsidian">
-                <img
-                  src="/assets/web_art.png"
-                  alt="Custom Website Development"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian-raised via-transparent to-transparent" />
-                <span className="absolute top-3 left-3 rounded bg-obsidian/80 px-2.5 py-1 font-mono text-[10px] font-bold text-gold uppercase tracking-widest border border-gold/30 backdrop-blur-md">
-                  [ CUSTOM WEB ]
-                </span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-lg font-bold text-paper group-hover:text-gold transition-colors">
-                  Custom Website Development
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-steel">
-                  Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure.
-                </p>
-              </div>
+              <span className="font-mono text-xs font-bold text-indigo-700 uppercase tracking-wider">
+                PRODUCTIZED_CAPABILITIES_&amp;_PRICING
+              </span>
+              <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-slate-900">
+                Enterprise Software Offerings &amp; Pricing Ladders
+              </h2>
             </div>
-            <div className="p-6 pt-0 border-t border-obsidian-border/60 mt-4 space-y-3 font-mono text-xs">
-              <div className="flex items-center justify-between">
-                <span className="text-steel">Floor Pricing:</span>
-                <span className="text-gold font-bold">{PRICING.websiteDevelopment.shortRange}</span>
-              </div>
-              <Link
-                href="/services#website-development"
-                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-2 rounded-xl hover:border-gold/50 hover:bg-gold/10 transition-all font-semibold"
-              >
-                {getTierRangeLabel('websiteDevelopment')}
-              </Link>
-            </div>
+            <Link
+              href="/services"
+              className="font-mono text-xs text-indigo-600 hover:text-indigo-800 inline-flex items-center gap-1 font-semibold"
+            >
+              Explore All Tiered Pricing Ladders
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
 
-          {/* Card 2: Web Applications & Systems */}
-          <div className="group rounded-2xl border border-white/10 bg-obsidian-raised overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1">
-            <div>
-              <div className="relative h-44 w-full overflow-hidden bg-obsidian">
-                <img
-                  src="/assets/cloud_art.png"
-                  alt="Web Applications & Systems"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian-raised via-transparent to-transparent" />
-                <span className="absolute top-3 left-3 rounded bg-obsidian/80 px-2.5 py-1 font-mono text-[10px] font-bold text-gold uppercase tracking-widest border border-gold/30 backdrop-blur-md">
-                  [ CLOUD & SYSTEMS ]
-                </span>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {/* Card 1: Custom Website Development */}
+            <div className="group relative rounded-2xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-indigo-600 z-20" />
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                  <img
+                    src="/assets/web_art.png"
+                    alt="Custom Website Development"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 rounded bg-slate-900/90 px-2.5 py-1 font-mono text-[10px] font-bold text-indigo-300 uppercase tracking-widest border border-indigo-400/30 backdrop-blur-md">
+                    [ CUSTOM WEB ]
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">
+                    Custom Website Development
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                    Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure.
+                  </p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="font-serif text-lg font-bold text-paper group-hover:text-gold transition-colors">
-                  Web Applications & Systems
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-steel">
-                  Full-stack web portals, CRMs, and internal tools with serverless PostgreSQL databases and RBAC permissions.
-                </p>
+              <div className="p-6 pt-0 border-t border-slate-100 mt-4 space-y-3 font-mono text-xs">
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-500">Floor Pricing:</span>
+                  <span className="text-indigo-700 font-bold">{PRICING.websiteDevelopment.shortRange}</span>
+                </div>
+                <Link
+                  href="/services#website-development"
+                  className="flex items-center justify-center gap-1 text-[11px] text-slate-900 bg-slate-50 border border-slate-200 py-2 rounded-xl hover:border-indigo-300 hover:bg-indigo-50/60 transition-all font-semibold"
+                >
+                  {getTierRangeLabel('websiteDevelopment')}
+                </Link>
               </div>
             </div>
-            <div className="p-6 pt-0 border-t border-obsidian-border/60 mt-4 space-y-3 font-mono text-xs">
-              <div className="flex items-center justify-between">
-                <span className="text-steel">Floor Pricing:</span>
-                <span className="text-gold font-bold">{PRICING.webApplications.shortRange}</span>
-              </div>
-              <Link
-                href="/services#web-applications"
-                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-2 rounded-xl hover:border-gold/50 hover:bg-gold/10 transition-all font-semibold"
-              >
-                {getTierRangeLabel('webApplications')}
-              </Link>
-            </div>
-          </div>
 
-          {/* Card 3: AI Solutions & Automation */}
-          <div className="group rounded-2xl border border-white/10 bg-obsidian-raised overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1">
-            <div>
-              <div className="relative h-44 w-full overflow-hidden bg-obsidian">
-                <img
-                  src="/assets/ai_art.png"
-                  alt="AI Solutions & Automation"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian-raised via-transparent to-transparent" />
-                <span className="absolute top-3 left-3 rounded bg-obsidian/80 px-2.5 py-1 font-mono text-[10px] font-bold text-gold uppercase tracking-widest border border-gold/30 backdrop-blur-md">
-                  [ AI & AUTOMATION ]
-                </span>
+            {/* Card 2: Web Applications & Systems */}
+            <div className="group relative rounded-2xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-teal-600 z-20" />
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                  <img
+                    src="/assets/cloud_art.png"
+                    alt="Web Applications & Systems"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 rounded bg-slate-900/90 px-2.5 py-1 font-mono text-[10px] font-bold text-teal-300 uppercase tracking-widest border border-teal-400/30 backdrop-blur-md">
+                    [ CLOUD &amp; SYSTEMS ]
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+                    Web Applications &amp; Systems
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                    Full-stack web portals, CRMs, and internal tools with serverless PostgreSQL databases and RBAC permissions.
+                  </p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="font-serif text-lg font-bold text-paper group-hover:text-gold transition-colors">
-                  AI Solutions & Automation
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-steel">
-                  Integrating OpenAI API pipelines, document processing workflows, and vector embeddings into software.
-                </p>
+              <div className="p-6 pt-0 border-t border-slate-100 mt-4 space-y-3 font-mono text-xs">
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-500">Floor Pricing:</span>
+                  <span className="text-teal-700 font-bold">{PRICING.webApplications.shortRange}</span>
+                </div>
+                <Link
+                  href="/services#web-applications"
+                  className="flex items-center justify-center gap-1 text-[11px] text-slate-900 bg-slate-50 border border-slate-200 py-2 rounded-xl hover:border-teal-300 hover:bg-teal-50/60 transition-all font-semibold"
+                >
+                  {getTierRangeLabel('webApplications')}
+                </Link>
               </div>
             </div>
-            <div className="p-6 pt-0 border-t border-obsidian-border/60 mt-4 space-y-3 font-mono text-xs">
-              <div className="flex items-center justify-between">
-                <span className="text-steel">Floor Pricing:</span>
-                <span className="text-gold font-bold">{PRICING.aiIntegration.shortRange}</span>
-              </div>
-              <Link
-                href="/services#ai-integration"
-                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-2 rounded-xl hover:border-gold/50 hover:bg-gold/10 transition-all font-semibold"
-              >
-                {getTierRangeLabel('aiIntegration')}
-              </Link>
-            </div>
-          </div>
 
-          {/* Card 4: Mobile App Development */}
-          <div className="group rounded-2xl border border-white/10 bg-obsidian-raised overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 hover:-translate-y-1">
-            <div>
-              <div className="relative h-44 w-full overflow-hidden bg-obsidian">
-                <img
-                  src="/assets/hero_art.png"
-                  alt="Mobile App Development"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian-raised via-transparent to-transparent" />
-                <span className="absolute top-3 left-3 rounded bg-obsidian/80 px-2.5 py-1 font-mono text-[10px] font-bold text-gold uppercase tracking-widest border border-gold/30 backdrop-blur-md">
-                  [ MOBILE APPS ]
-                </span>
+            {/* Card 3: AI Solutions & Automation */}
+            <div className="group relative rounded-2xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-violet-600 z-20" />
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                  <img
+                    src="/assets/ai_art.png"
+                    alt="AI Solutions & Automation"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 rounded bg-slate-900/90 px-2.5 py-1 font-mono text-[10px] font-bold text-violet-300 uppercase tracking-widest border border-violet-400/30 backdrop-blur-md">
+                    [ AI &amp; AUTOMATION ]
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-violet-700 transition-colors">
+                    AI Solutions &amp; Automation
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                    Integrating OpenAI API pipelines, document processing workflows, and vector embeddings into software.
+                  </p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="font-serif text-lg font-bold text-paper group-hover:text-gold transition-colors">
-                  Mobile App Development
-                </h3>
-                <p className="mt-2 text-xs leading-relaxed text-steel">
-                  Cross-platform iOS and Android mobile applications built for performance and offline data synchronization.
-                </p>
+              <div className="p-6 pt-0 border-t border-slate-100 mt-4 space-y-3 font-mono text-xs">
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-500">Floor Pricing:</span>
+                  <span className="text-violet-700 font-bold">{PRICING.aiIntegration.shortRange}</span>
+                </div>
+                <Link
+                  href="/services#ai-integration"
+                  className="flex items-center justify-center gap-1 text-[11px] text-slate-900 bg-slate-50 border border-slate-200 py-2 rounded-xl hover:border-violet-300 hover:bg-violet-50/60 transition-all font-semibold"
+                >
+                  {getTierRangeLabel('aiIntegration')}
+                </Link>
               </div>
             </div>
-            <div className="p-6 pt-0 border-t border-obsidian-border/60 mt-4 space-y-3 font-mono text-xs">
-              <div className="flex items-center justify-between">
-                <span className="text-steel">Floor Pricing:</span>
-                <span className="text-gold font-bold">{PRICING.mobileAppDevelopment.shortRange}</span>
+
+            {/* Card 4: Mobile App Development */}
+            <div className="group relative rounded-2xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-amber-600 z-20" />
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                  <img
+                    src="/assets/hero_art.png"
+                    alt="Mobile App Development"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 rounded bg-slate-900/90 px-2.5 py-1 font-mono text-[10px] font-bold text-amber-300 uppercase tracking-widest border border-amber-400/30 backdrop-blur-md">
+                    [ MOBILE APPS ]
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-amber-700 transition-colors">
+                    Mobile App Development
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                    Cross-platform iOS and Android mobile applications built for performance and offline data synchronization.
+                  </p>
+                </div>
               </div>
-              <Link
-                href="/services#mobile-app-development"
-                className="flex items-center justify-center gap-1 text-[11px] text-paper bg-obsidian border border-obsidian-border py-2 rounded-xl hover:border-gold/50 hover:bg-gold/10 transition-all font-semibold"
-              >
-                {getTierRangeLabel('mobileAppDevelopment')}
-              </Link>
+              <div className="p-6 pt-0 border-t border-slate-100 mt-4 space-y-3 font-mono text-xs">
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-500">Floor Pricing:</span>
+                  <span className="text-amber-700 font-bold">{PRICING.mobileAppDevelopment.shortRange}</span>
+                </div>
+                <Link
+                  href="/services#mobile-app-development"
+                  className="flex items-center justify-center gap-1 text-[11px] text-slate-900 bg-slate-50 border border-slate-200 py-2 rounded-xl hover:border-amber-300 hover:bg-amber-50/60 transition-all font-semibold"
+                >
+                  {getTierRangeLabel('mobileAppDevelopment')}
+                </Link>
+              </div>
             </div>
           </div>
         </div>

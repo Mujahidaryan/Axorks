@@ -203,18 +203,21 @@ export default function CaseStudiesPage() {
         </div>
       </div>
 
-      {/* Full-Width Light Section: Proven Performance & Delivery Standards (40%+ light ratio) */}
-      <section className="w-full bg-sys-white py-16 sm:py-20 border-y border-sys-ink/10 shadow-sm">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+      {/* Full-Width Light Section: Proven Performance & Delivery Standards */}
+      <section className="w-full bg-gradient-to-b from-slate-50 via-sys-light to-slate-100/90 py-16 sm:py-20 border-y border-slate-200 shadow-sm relative overflow-hidden">
+        {/* Background Soft Executive Accent Mesh */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[450px] rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
+
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
           <ScrollReveal direction="up">
             <div className="text-center space-y-3 max-w-3xl mx-auto">
-              <span className="font-mono text-xs font-bold uppercase tracking-widest text-sys-blue">
-                [ ARCHITECTURAL_DELIVERY_GUARANTEE ]
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-sys-ink">
-                Built for High Reliability & Enterprise Compliance
+              <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest">
+                <span>ARCHITECTURAL_DELIVERY_GUARANTEE</span>
+              </div>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+                Built for High Reliability &amp; Enterprise Compliance
               </h2>
-              <p className="text-sm text-sys-ink-muted leading-relaxed">
+              <p className="text-sm text-slate-600 leading-relaxed">
                 Every project follows strict technical specifications, automated testing pipelines, and complete source code ownership handoff.
               </p>
             </div>
@@ -222,50 +225,62 @@ export default function CaseStudiesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <ScrollReveal direction="up" delay={0.05}>
-              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
-                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue font-bold">
-                  <Cpu className="h-5 w-5" />
+              <div className="relative rounded-2xl border border-slate-200/90 bg-white p-6 space-y-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:-translate-y-1.5 transition-all duration-300 hover:shadow-lg hover:border-slate-300 group overflow-hidden">
+                <div className="absolute left-0 top-4 bottom-4 w-1 bg-indigo-600 rounded-r-full" />
+                <div className="pl-1 space-y-3">
+                  <div className="h-10 w-10 rounded-xl bg-indigo-50 border border-indigo-200/60 flex items-center justify-center text-indigo-700 font-bold">
+                    <Cpu className="h-5 w-5" />
+                  </div>
+                  <h3 className="font-serif text-lg font-bold text-slate-900">Sub-Second Latency</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Optimized database queries and serverless edge functions delivering real-time telemetry and instant user interactions.
+                  </p>
                 </div>
-                <h3 className="font-serif text-lg font-bold text-sys-ink">Sub-Second Latency</h3>
-                <p className="text-xs text-sys-ink-muted leading-relaxed">
-                  Optimized database queries and serverless edge functions delivering real-time telemetry and instant user interactions.
-                </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.1}>
-              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
-                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue font-bold">
-                  <Database className="h-5 w-5" />
+              <div className="relative rounded-2xl border border-slate-200/90 bg-white p-6 space-y-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:-translate-y-1.5 transition-all duration-300 hover:shadow-lg hover:border-slate-300 group overflow-hidden">
+                <div className="absolute left-0 top-4 bottom-4 w-1 bg-teal-600 rounded-r-full" />
+                <div className="pl-1 space-y-3">
+                  <div className="h-10 w-10 rounded-xl bg-teal-50 border border-teal-200/60 flex items-center justify-center text-teal-700 font-bold">
+                    <Database className="h-5 w-5" />
+                  </div>
+                  <h3 className="font-serif text-lg font-bold text-slate-900">Zero Data Loss SLA</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    PostgreSQL atomic transactions, automated backups, and encrypted environment variables protecting critical client data.
+                  </p>
                 </div>
-                <h3 className="font-serif text-lg font-bold text-sys-ink">Zero Data Loss SLA</h3>
-                <p className="text-xs text-sys-ink-muted leading-relaxed">
-                  PostgreSQL atomic transactions, automated backups, and encrypted environment variables protecting critical client data.
-                </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.15}>
-              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
-                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue font-bold">
-                  <ShieldCheck className="h-5 w-5" />
+              <div className="relative rounded-2xl border border-slate-200/90 bg-white p-6 space-y-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:-translate-y-1.5 transition-all duration-300 hover:shadow-lg hover:border-slate-300 group overflow-hidden">
+                <div className="absolute left-0 top-4 bottom-4 w-1 bg-violet-600 rounded-r-full" />
+                <div className="pl-1 space-y-3">
+                  <div className="h-10 w-10 rounded-xl bg-violet-50 border border-violet-200/60 flex items-center justify-center text-violet-700 font-bold">
+                    <ShieldCheck className="h-5 w-5" />
+                  </div>
+                  <h3 className="font-serif text-lg font-bold text-slate-900">Complete IP Transfer</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    100% source code assignment and complete GitHub repository handoff upon project delivery completion.
+                  </p>
                 </div>
-                <h3 className="font-serif text-lg font-bold text-sys-ink">Complete IP Transfer</h3>
-                <p className="text-xs text-sys-ink-muted leading-relaxed">
-                  100% source code assignment and complete GitHub repository handoff upon project delivery completion.
-                </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.2}>
-              <div className="rounded-2xl border border-sys-ink/10 bg-sys-light p-6 space-y-3 shadow-sm hover:-translate-y-1.5 transition-all duration-300 hover:shadow-xl hover:border-sys-blue/40">
-                <div className="h-10 w-10 rounded-xl bg-sys-blue/10 flex items-center justify-center text-sys-blue font-bold">
-                  <Award className="h-5 w-5" />
+              <div className="relative rounded-2xl border border-slate-200/90 bg-white p-6 space-y-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:-translate-y-1.5 transition-all duration-300 hover:shadow-lg hover:border-slate-300 group overflow-hidden">
+                <div className="absolute left-0 top-4 bottom-4 w-1 bg-amber-600 rounded-r-full" />
+                <div className="pl-1 space-y-3">
+                  <div className="h-10 w-10 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-700 font-bold">
+                    <Award className="h-5 w-5" />
+                  </div>
+                  <h3 className="font-serif text-lg font-bold text-slate-900">24-Hour SLA Support</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Direct communication with Chief Systems Architect M. Mujahid and senior developers on business days.
+                  </p>
                 </div>
-                <h3 className="font-serif text-lg font-bold text-sys-ink">24-Hour SLA Support</h3>
-                <p className="text-xs text-sys-ink-muted leading-relaxed">
-                  Direct communication with Chief Systems Architect M. Mujahid and senior developers on business days.
-                </p>
               </div>
             </ScrollReveal>
           </div>
@@ -273,7 +288,7 @@ export default function CaseStudiesPage() {
           <div className="text-center pt-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-sys-blue px-8 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-sys-blue-hover hover:shadow-lg hover:shadow-sys-blue/20"
+              className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/20"
             >
               Discuss Your Project Architecture
               <ArrowUpRight className="h-4 w-4" />
