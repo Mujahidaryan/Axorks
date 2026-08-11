@@ -106,7 +106,7 @@ export default function HomePage() {
   return (
     <div className="space-y-16 pb-16 pt-4 sm:space-y-24 sm:pb-24">
       {/* Hero Section with Video & Dynamic Artwork Backdrop */}
-      <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian-raised/60 shadow-2xl mx-auto max-w-7xl">
+      <section className="relative overflow-hidden rounded-3xl border border-white/15 bg-obsidian-raised/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] mx-auto max-w-7xl">
         {/* Background Kling AI Video Player — subtle ambient motion */}
         <div className="absolute inset-0 z-0 overflow-hidden opacity-45">
           <video
@@ -119,16 +119,16 @@ export default function HomePage() {
           >
             <source src="/assets/hero_motion.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/70 to-obsidian/40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-obsidian/50 via-transparent to-obsidian" />
+          <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/75 to-obsidian/45" />
+          <div className="absolute inset-0 bg-gradient-to-b from-obsidian/60 via-transparent to-obsidian" />
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 px-6 py-12 sm:px-10 sm:py-20 lg:px-12">
           <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
             <div className="max-w-3xl space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 font-mono text-xs font-semibold text-gold backdrop-blur-md">
-                <ShieldCheck className="h-4 w-4" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 font-mono text-xs font-semibold text-gold backdrop-blur-md shadow-sm">
+                <ShieldCheck className="h-4 w-4 text-gold" />
                 <span>International Software Engineering Studio · Global Remote Delivery</span>
               </div>
 
@@ -144,7 +144,7 @@ export default function HomePage() {
               </p>
 
               {/* Direct Collaboration Line */}
-              <div className="rounded-xl border border-white/10 bg-obsidian/90 p-4 font-mono text-xs text-steel flex items-center gap-3 backdrop-blur-md">
+              <div className="rounded-xl border border-white/15 bg-obsidian/90 p-4 font-mono text-xs text-steel flex items-center gap-3 backdrop-blur-md shadow-md">
                 <UserCheck className="h-5 w-5 text-gold shrink-0" />
                 <span>You collaborate directly with Chief Systems Architect <strong>Muhammad Mujahid</strong> and senior engineers — zero account-manager handoff.</span>
               </div>
@@ -152,7 +152,7 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Link
                   href="/contact?cta=discovery"
-                  className="group flex items-center gap-2.5 rounded-full border border-paper/20 bg-paper px-7 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all hover:bg-white hover:shadow-xl hover:shadow-paper/10 hover:scale-[1.02] active:scale-[0.98]"
+                  className="group flex items-center gap-2.5 rounded-full border border-paper/30 bg-paper px-7 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-paper/20 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Book Free Discovery Call
                   <ArrowUpRight className="h-4 w-4 text-obsidian transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -160,7 +160,7 @@ export default function HomePage() {
 
                 <Link
                   href="/contact?cta=quote"
-                  className="flex items-center gap-2 rounded-full border border-gold/40 bg-obsidian/80 px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-gold transition-all hover:bg-gold/10 hover:border-gold backdrop-blur-md"
+                  className="flex items-center gap-2 rounded-full border border-gold/50 bg-obsidian/80 px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-gold transition-all duration-300 hover:bg-gold/15 hover:border-gold backdrop-blur-md hover:shadow-lg hover:shadow-gold/10"
                 >
                   <FileText className="h-4 w-4 text-gold" />
                   Get a Quick Quote
@@ -170,7 +170,8 @@ export default function HomePage() {
 
             {/* Right Hero Schematic Matrix */}
             <div className="w-full lg:w-[380px]">
-              <div className="rounded-2xl border border-gold/40 bg-obsidian/90 p-6 shadow-2xl backdrop-blur-xl">
+              <div className="rounded-2xl border border-gold/40 bg-gradient-to-br from-obsidian-raised via-obsidian-card to-obsidian p-6 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold/40 via-gold to-gold/40" />
                 <div className="flex items-center justify-between border-b border-white/10 pb-3 font-mono text-xs text-gold">
                   <span>STUDIO_CAPABILITY_MATRIX</span>
                   <span className="flex items-center gap-1.5 text-emerald-400 font-bold">
@@ -206,88 +207,88 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Signature Quantifiable Proof Bar — Systems Limited Style White Stats Section */}
-      <section className="w-full bg-sys-white">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      {/* Signature Quantifiable Proof Bar — Executive White Stats Section */}
+      <section className="w-full bg-gradient-to-b from-slate-50 via-white to-slate-100/90 border-y border-slate-200/90 shadow-sm relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 relative z-10">
           {/* Section Label */}
-          <div className="text-center mb-10">
-            <span className="font-mono text-xs font-bold uppercase tracking-widest text-sys-blue">
-              [ PROVABLE_STUDIO_METRICS ]
-            </span>
-            <p className="mt-2 font-sans text-sm text-sys-ink-muted">
+          <div className="text-center mb-10 space-y-1">
+            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1 font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest">
+              <span>PROVABLE_STUDIO_METRICS</span>
+            </div>
+            <p className="mt-2 font-sans text-sm text-slate-600 font-medium">
               Quantifiable engineering delivery — no fluff, no filler.
             </p>
           </div>
 
           {/* Large Impact Number Grid */}
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-            <div className="text-center space-y-2">
-              <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 text-center space-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+              <span className="block font-serif text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight">
                 <AnimatedCounter target={6} suffix="+" />
               </span>
-              <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
-              <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">Systems Shipped</span>
+              <div className="h-[3px] w-10 bg-indigo-600 mx-auto rounded-full" />
+              <span className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">Systems Shipped</span>
             </div>
-            <div className="text-center space-y-2">
-              <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 text-center space-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+              <span className="block font-serif text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight">
                 <AnimatedCounter target={7} suffix="+" />
               </span>
-              <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
-              <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">Senior Engineers</span>
+              <div className="h-[3px] w-10 bg-teal-600 mx-auto rounded-full" />
+              <span className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">Senior Engineers</span>
             </div>
-            <div className="text-center space-y-2">
-              <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 text-center space-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+              <span className="block font-serif text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight">
                 <AnimatedCounter target={5} suffix="+" />
               </span>
-              <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
-              <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">Enterprise Clients</span>
+              <div className="h-[3px] w-10 bg-violet-600 mx-auto rounded-full" />
+              <span className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">Enterprise Clients</span>
             </div>
-            <div className="text-center space-y-2">
-              <span className="block font-serif text-5xl sm:text-6xl font-bold text-sys-ink tracking-tight">
+            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 text-center space-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+              <span className="block font-serif text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight">
                 <AnimatedCounter target={100} suffix="%" />
               </span>
-              <div className="h-[2px] w-10 bg-sys-blue mx-auto rounded-full" />
-              <span className="block font-mono text-xs uppercase tracking-wider text-sys-ink-muted">On-Time Delivery</span>
+              <div className="h-[3px] w-10 bg-amber-600 mx-auto rounded-full" />
+              <span className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">On-Time Delivery</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Physical Office & Leadership Visual Proof Block */}
-      <section className="w-full bg-sys-light">
+      <section className="w-full bg-gradient-to-b from-slate-100/90 via-slate-50 to-white border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-0">
-          <div className="relative overflow-hidden shadow-2xl">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
             <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-              {/* Office Image Visual Anchor — stays dark/cinematic */}
+              {/* Office Image Visual Anchor */}
               <div className="relative lg:col-span-7 h-72 sm:h-96 lg:h-[460px] overflow-hidden">
                 <img
                   src="/AxorkOffice.png"
                   alt="Axorks Software House Corporate Office"
                   className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-sys-ink/50 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-sys-light" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-white" />
               </div>
 
-              {/* Office Text Panel — Systems Ltd white/light-gray right panel */}
-              <div className="lg:col-span-5 bg-sys-light p-8 sm:p-12 space-y-5 flex flex-col justify-center">
-                <span className="font-mono text-[11px] font-bold text-sys-blue uppercase tracking-widest">
-                  [ PHYSICAL_WORKSPACE_&_HEADQUARTERS ]
+              {/* Office Text Panel */}
+              <div className="lg:col-span-5 bg-white p-8 sm:p-12 space-y-5 flex flex-col justify-center">
+                <span className="font-mono text-[11px] font-bold text-indigo-700 uppercase tracking-widest">
+                  [ PHYSICAL_WORKSPACE_&amp;_HEADQUARTERS ]
                 </span>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-sys-ink leading-tight">
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">
                   Real Office. Real Engineers. Global Delivery.
                 </h2>
-                <p className="text-sm text-sys-ink-muted leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   Operating from our modern software house facilities in Karachi &amp; Islamabad, Axorks combines physical office infrastructure with transparent, asynchronous global remote delivery for international clients.
                 </p>
-                <div className="pt-4 flex items-center gap-6 border-t border-sys-ink/10 font-mono text-xs">
+                <div className="pt-4 flex items-center gap-6 border-t border-slate-100 font-mono text-xs">
                   <div>
-                    <span className="block text-sys-blue font-bold text-sm">100% In-House</span>
-                    <span className="text-sys-ink-muted text-[11px] mt-0.5 block">Zero Outsourcing</span>
+                    <span className="block text-indigo-700 font-bold text-sm">100% In-House</span>
+                    <span className="text-slate-500 text-[11px] mt-0.5 block font-sans">Zero Outsourcing</span>
                   </div>
-                  <div className="h-8 w-[1px] bg-sys-ink/10" />
+                  <div className="h-8 w-[1px] bg-slate-200" />
                   <div>
-                    <span className="block text-sys-ink font-bold text-sm">Direct Access</span>
-                    <span className="text-sys-ink-muted text-[11px] mt-0.5 block">Chief Systems Architect</span>
+                    <span className="block text-slate-900 font-bold text-sm">Direct Access</span>
+                    <span className="text-slate-500 text-[11px] mt-0.5 block font-sans">Chief Systems Architect</span>
                   </div>
                 </div>
               </div>
@@ -296,26 +297,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Risk-Reversal Payment Structure — Systems Limited white with top blue accent line */}
-      <section className="w-full bg-sys-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+      {/* Risk-Reversal Payment Structure — Executive Light Banner */}
+      <section className="w-full bg-gradient-to-r from-slate-50 via-white to-indigo-50/50 border-y border-slate-200/90 shadow-sm">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             {/* Left: Blue top-accent label + headline */}
-            <div className="flex-1 space-y-1">
+            <div className="space-y-1.5">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="h-5 w-5 text-sys-blue shrink-0" />
-                <span className="font-mono text-[11px] font-bold text-sys-blue uppercase tracking-widest">
+                <ShieldCheck className="h-5 w-5 text-indigo-600 shrink-0" />
+                <span className="font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest">
                   RISK-REVERSAL MILESTONE BILLING
                 </span>
               </div>
-              <p className="font-sans text-sm text-sys-ink-muted leading-relaxed">
-                Milestone-based billing: <strong className="text-sys-ink">40% to begin, 40% at midpoint review, 20% on final delivery</strong>. You're never paying for work you haven't seen.
+              <p className="font-sans text-sm text-slate-700 leading-relaxed">
+                Milestone-based billing: <strong className="text-slate-900">40% to begin, 40% at midpoint review, 20% on final delivery</strong>. You're never paying for work you haven't seen.
               </p>
             </div>
             {/* Right: CTA */}
             <a
               href="/contact"
-              className="shrink-0 flex items-center gap-2 rounded-full bg-sys-blue px-6 py-2.5 font-mono text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-sys-blue-hover hover:shadow-lg hover:shadow-sys-blue/20"
+              className="shrink-0 flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/20 active:scale-[0.98]"
             >
               Start with No Risk
               <ArrowUpRight className="h-4 w-4" />

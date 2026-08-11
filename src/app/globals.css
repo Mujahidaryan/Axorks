@@ -6,12 +6,19 @@
 
 :root {
   --obsidian: #0B0C0F;
-  --obsidian-raised: #16181D;
+  --obsidian-raised: #14161C;
+  --obsidian-card: #1A1C24;
   --steel: #8A8F98;
   --paper: #ECEAE4;
   --gold: #C9A24B;
   --signal-blue: #2E6FBD;
-  
+
+  --executive-indigo: #4F46E5;
+  --executive-teal: #0D9488;
+  --executive-violet: #7C3AED;
+  --executive-amber: #D97706;
+  --executive-blue: #2563EB;
+
   --font-fraunces: 'Fraunces', Georgia, serif;
   --font-inter: 'Inter', system-ui, sans-serif;
   --font-jetbrains-mono: 'JetBrains Mono', monospace;
@@ -22,9 +29,11 @@ body {
   color: var(--paper);
   font-family: var(--font-inter);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Scrollbar */
+/* Custom Executive Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -32,8 +41,8 @@ body {
   background: #0B0C0F;
 }
 ::-webkit-scrollbar-thumb {
-  background: #16181D;
-  border: 1px solid #242730;
+  background: #1A1C24;
+  border: 1px solid #282C38;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -49,66 +58,93 @@ body {
 .schematic-bracket::after {
   content: '';
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-color: rgba(201, 162, 75, 0.4);
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .schematic-bracket::before {
   top: -1px;
   left: -1px;
-  border-top: 1px solid rgba(201, 162, 75, 0.5);
-  border-left: 1px solid rgba(201, 162, 75, 0.5);
+  border-top: 1.5px solid rgba(201, 162, 75, 0.6);
+  border-left: 1.5px solid rgba(201, 162, 75, 0.6);
 }
 
 .schematic-bracket::after {
   bottom: -1px;
   right: -1px;
-  border-bottom: 1px solid rgba(201, 162, 75, 0.5);
-  border-right: 1px solid rgba(201, 162, 75, 0.5);
+  border-bottom: 1.5px solid rgba(201, 162, 75, 0.6);
+  border-right: 1.5px solid rgba(201, 162, 75, 0.6);
 }
 
 .schematic-bracket:hover::before,
 .schematic-bracket:hover::after {
   border-color: #C9A24B;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
 }
 
-/* Glassmorphism Surface Utility */
-.glass-card {
-  background: rgba(22, 24, 29, 0.75);
+/* Executive Glassmorphism Cards (Dark Mode) */
+.glass-card-dark {
+  background: rgba(22, 25, 33, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6);
+}
+
+.glass-card-dark:hover {
+  border-color: rgba(201, 162, 75, 0.4);
+  box-shadow: 0 30px 60px -12px rgba(201, 162, 75, 0.15);
+}
+
+/* Executive Light Section Glassmorphism & Depth (Strict Dark Text Compliant) */
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
 }
 
-.glass-card:hover {
-  border-color: rgba(201, 162, 75, 0.35);
-  box-shadow: 0 25px 50px -12px rgba(201, 162, 75, 0.15);
+.glass-card-light:hover {
+  border-color: rgba(203, 213, 225, 1);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
 }
 
-/* Light Section Glassmorphism Utility (Strict Dark Text Rule Compliant) */
-.glass-card-light {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(10, 11, 13, 0.08);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+/* Subtle Executive Grid Background Pattern */
+.executive-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Gradient Text FX for Dark Sections */
+/* Light Section Grid Background Pattern */
+.executive-grid-pattern-light {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+/* Executive Gradient Text */
 .gradient-text-gold {
-  background: linear-gradient(135deg, #ECEAE4 30%, #C9A24B 100%);
+  background: linear-gradient(135deg, #ECEAE4 20%, #C9A24B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-indigo {
+  background: linear-gradient(135deg, #1E1B4B 0%, #4F46E5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Smooth selection styling */
 ::selection {
-  background-color: rgba(46, 111, 189, 0.3);
-  color: #ECEAE4;
+  background-color: rgba(79, 70, 229, 0.35);
+  color: #FFFFFF;
 }
