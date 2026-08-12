@@ -68,22 +68,23 @@ export default function ServiceProcess() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-slate-50 via-sys-light to-slate-100/90 py-16 sm:py-20 border-y border-slate-200 shadow-sm relative overflow-hidden">
-      {/* Background Soft Executive Accent Mesh */}
-      <div className="absolute top-1/3 right-12 h-80 w-80 rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/3 left-12 h-80 w-80 rounded-full bg-teal-500/5 blur-3xl pointer-events-none" />
+    <section className="w-full bg-gradient-to-b from-slate-50 via-slate-100/70 to-slate-50 py-16 sm:py-24 border-y border-slate-200 shadow-sm relative overflow-hidden">
+      {/* Background Soft Executive Accent Mesh & Grid */}
+      <div className="absolute top-1/3 right-12 h-80 w-80 rounded-full bg-indigo-500/8 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/3 left-12 h-80 w-80 rounded-full bg-teal-500/8 blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 executive-grid-pattern-light opacity-40 pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         <ScrollReveal direction="up">
-          <div className="space-y-3 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest">
+          <div className="space-y-3.5 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200/90 bg-indigo-50 px-4 py-1.5 font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest shadow-2xs">
               <Layers className="h-4 w-4 text-indigo-600" />
               <span>END_TO_END_ENGINEERING_PROCESS</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
               10-Step Software Delivery Lifecycle
             </h2>
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <p className="text-sm text-slate-600 leading-relaxed font-medium">
               Standardized engineering lifecycle ensuring predictable timelines, transparent progress tracking, and high-performance delivery.
             </p>
           </div>
@@ -91,32 +92,32 @@ export default function ServiceProcess() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
           {phases.map((phase, idx) => (
-            <ScrollReveal key={idx} delay={idx * 0.04} direction="up">
-              <div className="relative h-full rounded-2xl border border-slate-200/90 bg-white p-5 space-y-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-slate-300 flex flex-col justify-between group overflow-hidden">
-                {/* Left accent bar */}
+            <ScrollReveal key={idx} delay={idx * 0.03} direction="up">
+              <div className="group relative h-full rounded-2xl border border-slate-200/90 bg-white p-6 space-y-3.5 shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_20px_40px_-10px_rgba(15,23,42,0.09)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 flex flex-col justify-between overflow-hidden">
+                {/* Top Accent Gradient Line */}
                 <div
-                  className="absolute left-0 top-3 bottom-3 w-1 rounded-r-full opacity-80 group-hover:opacity-100 transition-opacity"
-                  style={{ backgroundColor: phase.accent }}
+                  className="absolute top-0 left-0 right-0 h-1 transition-opacity opacity-80 group-hover:opacity-100"
+                  style={{ background: `linear-gradient(90deg, ${phase.accent}, ${phase.accent}70)` }}
                 />
 
-                <div className="pl-1">
+                <div className="space-y-3">
                   <div className="flex items-center justify-between font-mono text-xs">
                     <span
-                      className="font-bold text-xs px-2.5 py-1 rounded border"
+                      className="font-bold text-xs px-2.5 py-1 rounded-md border shadow-2xs"
                       style={{
                         backgroundColor: `${phase.accent}12`,
-                        borderColor: `${phase.accent}30`,
+                        borderColor: `${phase.accent}28`,
                         color: phase.accent,
                       }}
                     >
                       {phase.num}
                     </span>
-                    <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-indigo-600 transition-colors" />
+                    <ArrowRight className="h-3.5 w-3.5 text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-0.5 transition-all" />
                   </div>
-                  <h3 className="mt-3 font-serif text-base font-bold text-slate-900 group-hover:text-indigo-900 transition-colors">
+                  <h3 className="font-serif text-base font-bold text-slate-900 group-hover:text-indigo-950 transition-colors leading-snug">
                     {phase.title}
                   </h3>
-                  <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                  <p className="text-xs text-slate-600 leading-relaxed font-normal">
                     {phase.desc}
                   </p>
                 </div>

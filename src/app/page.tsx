@@ -325,25 +325,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Tiers Capabilities Section with Systems Ltd Style Executive Cards */}
-      <section className="w-full bg-gradient-to-b from-slate-50 via-white to-slate-100/80 py-16 sm:py-20 border-y border-slate-200 shadow-sm relative overflow-hidden">
-        {/* Subtle mesh background */}
-        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-teal-500/5 blur-3xl pointer-events-none" />
+      {/* Services Tiers Capabilities Section with Executive Cards */}
+      <section className="w-full bg-gradient-to-b from-slate-50 via-white to-slate-100/90 py-16 sm:py-24 border-y border-slate-200 shadow-sm relative overflow-hidden">
+        {/* Rich Ambient Meshes & Grid */}
+        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-indigo-500/8 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-teal-500/8 blur-3xl pointer-events-none" />
+        <div className="absolute inset-0 executive-grid-pattern-light opacity-40 pointer-events-none" />
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-slate-200 pb-4 gap-4">
-            <div>
-              <span className="font-mono text-xs font-bold text-indigo-700 uppercase tracking-wider">
-                PRODUCTIZED_CAPABILITIES_&amp;_PRICING
-              </span>
-              <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-slate-900">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-slate-200/80 pb-5 gap-4">
+            <div className="space-y-1.5">
+              <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200/90 bg-indigo-50 px-3.5 py-1 font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest shadow-2xs">
+                <span>PRODUCTIZED_CAPABILITIES_&amp;_PRICING</span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
                 Enterprise Software Offerings &amp; Pricing Ladders
               </h2>
             </div>
             <Link
               href="/services"
-              className="font-mono text-xs text-indigo-600 hover:text-indigo-800 inline-flex items-center gap-1 font-semibold"
+              className="font-mono text-xs text-indigo-700 hover:text-indigo-900 inline-flex items-center gap-1 font-bold bg-indigo-50 px-4 py-2 rounded-full border border-indigo-200/80 transition-all hover:shadow-xs shrink-0"
             >
               Explore All Tiered Pricing Ladders
               <ArrowUpRight className="h-3.5 w-3.5" />
@@ -352,153 +353,157 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {/* Card 1: Custom Website Development */}
-            <div className="group relative rounded-2xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-indigo-600 z-20" />
+            <div className="group relative rounded-3xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_24px_50px_-12px_rgba(15,23,42,0.12)] transition-all duration-400 hover:-translate-y-1.5 hover:border-slate-300">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-600 to-indigo-400 z-20" />
               <div>
-                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
                   <img
                     src="/assets/web_art.png"
                     alt="Custom Website Development"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                  <span className="absolute top-3 left-3 rounded bg-slate-900/90 px-2.5 py-1 font-mono text-[10px] font-bold text-indigo-300 uppercase tracking-widest border border-indigo-400/30 backdrop-blur-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                  <span className="absolute top-3 left-3 rounded-full bg-slate-950/90 px-3 py-1 font-mono text-[10px] font-bold text-indigo-300 uppercase tracking-widest border border-indigo-400/40 backdrop-blur-md shadow-xs">
                     [ CUSTOM WEB ]
                   </span>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-indigo-700 transition-colors">
+                <div className="p-6 sm:p-7 space-y-2.5">
+                  <h3 className="font-serif text-xl font-bold text-slate-900 group-hover:text-indigo-700 transition-colors leading-snug">
                     Custom Website Development
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                  <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
                     Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure.
                   </p>
                 </div>
               </div>
-              <div className="p-6 pt-0 border-t border-slate-100 mt-4 space-y-3 font-mono text-xs">
+              <div className="p-6 sm:p-7 pt-0 border-t border-slate-100/90 mt-4 space-y-3.5 font-mono text-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-500">Floor Pricing:</span>
-                  <span className="text-indigo-700 font-bold">{PRICING.websiteDevelopment.shortRange}</span>
+                  <span className="text-slate-500 font-medium">Floor Pricing:</span>
+                  <span className="text-indigo-700 font-bold bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-200/80">{PRICING.websiteDevelopment.shortRange}</span>
                 </div>
                 <Link
                   href="/services#website-development"
-                  className="flex items-center justify-center gap-1 text-[11px] text-slate-900 bg-slate-50 border border-slate-200 py-2 rounded-xl hover:border-indigo-300 hover:bg-indigo-50/60 transition-all font-semibold"
+                  className="flex items-center justify-center gap-1.5 text-xs text-slate-900 bg-slate-50 border border-slate-200/90 py-2.5 rounded-xl hover:border-indigo-300 hover:bg-indigo-50/70 hover:text-indigo-900 transition-all font-bold shadow-2xs"
                 >
                   {getTierRangeLabel('websiteDevelopment')}
+                  <ArrowUpRight className="h-3.5 w-3.5 text-indigo-600" />
                 </Link>
               </div>
             </div>
 
             {/* Card 2: Web Applications & Systems */}
-            <div className="group relative rounded-2xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-teal-600 z-20" />
+            <div className="group relative rounded-3xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_24px_50px_-12px_rgba(15,23,42,0.12)] transition-all duration-400 hover:-translate-y-1.5 hover:border-slate-300">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-600 to-teal-400 z-20" />
               <div>
-                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
                   <img
                     src="/assets/cloud_art.png"
                     alt="Web Applications & Systems"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                  <span className="absolute top-3 left-3 rounded bg-slate-900/90 px-2.5 py-1 font-mono text-[10px] font-bold text-teal-300 uppercase tracking-widest border border-teal-400/30 backdrop-blur-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                  <span className="absolute top-3 left-3 rounded-full bg-slate-950/90 px-3 py-1 font-mono text-[10px] font-bold text-teal-300 uppercase tracking-widest border border-teal-400/40 backdrop-blur-md shadow-xs">
                     [ CLOUD &amp; SYSTEMS ]
                   </span>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+                <div className="p-6 sm:p-7 space-y-2.5">
+                  <h3 className="font-serif text-xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors leading-snug">
                     Web Applications &amp; Systems
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                  <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
                     Full-stack web portals, CRMs, and internal tools with serverless PostgreSQL databases and RBAC permissions.
                   </p>
                 </div>
               </div>
-              <div className="p-6 pt-0 border-t border-slate-100 mt-4 space-y-3 font-mono text-xs">
+              <div className="p-6 sm:p-7 pt-0 border-t border-slate-100/90 mt-4 space-y-3.5 font-mono text-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-500">Floor Pricing:</span>
-                  <span className="text-teal-700 font-bold">{PRICING.webApplications.shortRange}</span>
+                  <span className="text-slate-500 font-medium">Floor Pricing:</span>
+                  <span className="text-teal-700 font-bold bg-teal-50 px-2.5 py-0.5 rounded-full border border-teal-200/80">{PRICING.webApplications.shortRange}</span>
                 </div>
                 <Link
                   href="/services#web-applications"
-                  className="flex items-center justify-center gap-1 text-[11px] text-slate-900 bg-slate-50 border border-slate-200 py-2 rounded-xl hover:border-teal-300 hover:bg-teal-50/60 transition-all font-semibold"
+                  className="flex items-center justify-center gap-1.5 text-xs text-slate-900 bg-slate-50 border border-slate-200/90 py-2.5 rounded-xl hover:border-teal-300 hover:bg-teal-50/70 hover:text-teal-900 transition-all font-bold shadow-2xs"
                 >
                   {getTierRangeLabel('webApplications')}
+                  <ArrowUpRight className="h-3.5 w-3.5 text-teal-600" />
                 </Link>
               </div>
             </div>
 
             {/* Card 3: AI Solutions & Automation */}
-            <div className="group relative rounded-2xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-violet-600 z-20" />
+            <div className="group relative rounded-3xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_24px_50px_-12px_rgba(15,23,42,0.12)] transition-all duration-400 hover:-translate-y-1.5 hover:border-slate-300">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-600 to-violet-400 z-20" />
               <div>
-                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
                   <img
                     src="/assets/ai_art.png"
                     alt="AI Solutions & Automation"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                  <span className="absolute top-3 left-3 rounded bg-slate-900/90 px-2.5 py-1 font-mono text-[10px] font-bold text-violet-300 uppercase tracking-widest border border-violet-400/30 backdrop-blur-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                  <span className="absolute top-3 left-3 rounded-full bg-slate-950/90 px-3 py-1 font-mono text-[10px] font-bold text-violet-300 uppercase tracking-widest border border-violet-400/40 backdrop-blur-md shadow-xs">
                     [ AI &amp; AUTOMATION ]
                   </span>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-violet-700 transition-colors">
+                <div className="p-6 sm:p-7 space-y-2.5">
+                  <h3 className="font-serif text-xl font-bold text-slate-900 group-hover:text-violet-700 transition-colors leading-snug">
                     AI Solutions &amp; Automation
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                  <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
                     Integrating OpenAI API pipelines, document processing workflows, and vector embeddings into software.
                   </p>
                 </div>
               </div>
-              <div className="p-6 pt-0 border-t border-slate-100 mt-4 space-y-3 font-mono text-xs">
+              <div className="p-6 sm:p-7 pt-0 border-t border-slate-100/90 mt-4 space-y-3.5 font-mono text-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-500">Floor Pricing:</span>
-                  <span className="text-violet-700 font-bold">{PRICING.aiIntegration.shortRange}</span>
+                  <span className="text-slate-500 font-medium">Floor Pricing:</span>
+                  <span className="text-violet-700 font-bold bg-violet-50 px-2.5 py-0.5 rounded-full border border-violet-200/80">{PRICING.aiIntegration.shortRange}</span>
                 </div>
                 <Link
                   href="/services#ai-integration"
-                  className="flex items-center justify-center gap-1 text-[11px] text-slate-900 bg-slate-50 border border-slate-200 py-2 rounded-xl hover:border-violet-300 hover:bg-violet-50/60 transition-all font-semibold"
+                  className="flex items-center justify-center gap-1.5 text-xs text-slate-900 bg-slate-50 border border-slate-200/90 py-2.5 rounded-xl hover:border-violet-300 hover:bg-violet-50/70 hover:text-violet-900 transition-all font-bold shadow-2xs"
                 >
                   {getTierRangeLabel('aiIntegration')}
+                  <ArrowUpRight className="h-3.5 w-3.5 text-violet-600" />
                 </Link>
               </div>
             </div>
 
             {/* Card 4: Mobile App Development */}
-            <div className="group relative rounded-2xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-slate-300 hover:shadow-lg hover:-translate-y-1">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-amber-600 z-20" />
+            <div className="group relative rounded-3xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_24px_50px_-12px_rgba(15,23,42,0.12)] transition-all duration-400 hover:-translate-y-1.5 hover:border-slate-300">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-400 z-20" />
               <div>
-                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
                   <img
                     src="/assets/hero_art.png"
                     alt="Mobile App Development"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-90"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                  <span className="absolute top-3 left-3 rounded bg-slate-900/90 px-2.5 py-1 font-mono text-[10px] font-bold text-amber-300 uppercase tracking-widest border border-amber-400/30 backdrop-blur-md">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                  <span className="absolute top-3 left-3 rounded-full bg-slate-950/90 px-3 py-1 font-mono text-[10px] font-bold text-amber-300 uppercase tracking-widest border border-amber-400/40 backdrop-blur-md shadow-xs">
                     [ MOBILE APPS ]
                   </span>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-lg font-bold text-slate-900 group-hover:text-amber-700 transition-colors">
+                <div className="p-6 sm:p-7 space-y-2.5">
+                  <h3 className="font-serif text-xl font-bold text-slate-900 group-hover:text-amber-700 transition-colors leading-snug">
                     Mobile App Development
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-600">
+                  <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
                     Cross-platform iOS and Android mobile applications built for performance and offline data synchronization.
                   </p>
                 </div>
               </div>
-              <div className="p-6 pt-0 border-t border-slate-100 mt-4 space-y-3 font-mono text-xs">
+              <div className="p-6 sm:p-7 pt-0 border-t border-slate-100/90 mt-4 space-y-3.5 font-mono text-xs">
                 <div className="flex items-center justify-between">
-                  <span className="text-slate-500">Floor Pricing:</span>
-                  <span className="text-amber-700 font-bold">{PRICING.mobileAppDevelopment.shortRange}</span>
+                  <span className="text-slate-500 font-medium">Floor Pricing:</span>
+                  <span className="text-amber-700 font-bold bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/80">{PRICING.mobileAppDevelopment.shortRange}</span>
                 </div>
                 <Link
                   href="/services#mobile-app-development"
-                  className="flex items-center justify-center gap-1 text-[11px] text-slate-900 bg-slate-50 border border-slate-200 py-2 rounded-xl hover:border-amber-300 hover:bg-amber-50/60 transition-all font-semibold"
+                  className="flex items-center justify-center gap-1.5 text-xs text-slate-900 bg-slate-50 border border-slate-200/90 py-2.5 rounded-xl hover:border-amber-300 hover:bg-amber-50/70 hover:text-amber-900 transition-all font-bold shadow-2xs"
                 >
                   {getTierRangeLabel('mobileAppDevelopment')}
+                  <ArrowUpRight className="h-3.5 w-3.5 text-amber-600" />
                 </Link>
               </div>
             </div>

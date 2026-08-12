@@ -48,48 +48,49 @@ export default function AgencyComparisonTable() {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-b from-white via-slate-50 to-slate-100/70 py-16 sm:py-20 border-y border-slate-200 shadow-sm relative overflow-hidden">
-      {/* Background Soft Executive Accent Mesh */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
+    <section className="w-full bg-gradient-to-b from-white via-slate-50 to-slate-100/90 py-16 sm:py-24 border-y border-slate-200 shadow-sm relative overflow-hidden">
+      {/* Background Soft Executive Accent Mesh & Pattern */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[550px] w-[550px] rounded-full bg-indigo-500/8 blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 executive-grid-pattern-light opacity-40 pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         <ScrollReveal direction="up">
-          <div className="space-y-3 text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest">
+          <div className="space-y-3.5 text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200/90 bg-indigo-50 px-4 py-1.5 font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest shadow-2xs">
               <Scale className="h-4 w-4 text-indigo-600" />
               <span>FACTUAL_COMPARISON_MATRIX</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
               Traditional Agency vs Axorks Engineering
             </h2>
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <p className="text-sm text-slate-600 leading-relaxed font-medium">
               Factual architectural comparison highlighting how our direct-access engineering approach differs from traditional software vendors.
             </p>
           </div>
         </ScrollReveal>
 
-        <ScrollReveal direction="up" delay={0.1}>
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <ScrollReveal direction="up" delay={0.08}>
+          <div className="overflow-hidden rounded-3xl border border-slate-200/90 bg-white shadow-[0_12px_40px_-15px_rgba(15,23,42,0.08)]">
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse font-sans text-xs">
+              <table className="w-full text-left border-collapse font-sans text-xs sm:text-sm">
                 <thead>
-                  <tr className="border-b border-slate-200 bg-slate-50 font-mono text-xs text-slate-900">
-                    <th className="p-4 sm:p-5 font-bold uppercase tracking-wider">Engineering Dimension</th>
-                    <th className="p-4 sm:p-5 font-bold uppercase tracking-wider text-rose-700">Traditional Agency</th>
-                    <th className="p-4 sm:p-5 font-bold uppercase tracking-wider text-indigo-800 bg-indigo-50/60">Axorks Software Studio</th>
+                  <tr className="border-b border-slate-200 bg-slate-50/90 font-mono text-xs text-slate-900">
+                    <th className="p-5 sm:p-6 font-bold uppercase tracking-wider text-slate-900">Engineering Dimension</th>
+                    <th className="p-5 sm:p-6 font-bold uppercase tracking-wider text-rose-700">Traditional Agency</th>
+                    <th className="p-5 sm:p-6 font-bold uppercase tracking-wider text-indigo-900 bg-indigo-50/70 border-l border-indigo-100">Axorks Software Studio</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                   {comparisonRows.map((row, idx) => (
                     <tr key={idx} className="transition-colors hover:bg-slate-50/80">
-                      <td className="p-4 sm:p-5 font-semibold text-slate-900">{row.feature}</td>
-                      <td className="p-4 sm:p-5 text-slate-600 flex items-center gap-2">
-                        <XCircle className="h-4 w-4 text-rose-600 shrink-0" />
+                      <td className="p-5 sm:p-6 font-semibold text-slate-900">{row.feature}</td>
+                      <td className="p-5 sm:p-6 text-slate-600 flex items-center gap-2.5">
+                        <XCircle className="h-4 w-4 text-rose-500 shrink-0" />
                         <span>{row.agency}</span>
                       </td>
-                      <td className="p-4 sm:p-5 font-medium text-slate-900 bg-indigo-50/40 flex items-center gap-2">
+                      <td className="p-5 sm:p-6 font-semibold text-slate-900 bg-indigo-50/30 border-l border-indigo-100/60 flex items-center gap-2.5">
                         <CheckCircle2 className="h-4 w-4 text-indigo-600 shrink-0" />
-                        <span>{row.axorks}</span>
+                        <span className="text-indigo-950 font-medium">{row.axorks}</span>
                       </td>
                     </tr>
                   ))}

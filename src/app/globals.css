@@ -88,46 +88,82 @@ body {
 
 /* Executive Glassmorphism Cards (Dark Mode) */
 .glass-card-dark {
-  background: rgba(22, 25, 33, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.6);
+  background: rgba(20, 22, 28, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 10px 30px -10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card-dark:hover {
-  border-color: rgba(201, 162, 75, 0.4);
-  box-shadow: 0 30px 60px -12px rgba(201, 162, 75, 0.15);
+  border-color: rgba(201, 162, 75, 0.45);
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.5),
+    0 25px 60px -15px rgba(201, 162, 75, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
 }
 
-/* Executive Light Section Glassmorphism & Depth (Strict Dark Text Compliant) */
+/* Executive Light Section Glassmorphism & Material Depth (Strict Dark Text Compliant) */
 .glass-card-light {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 
+    0 1px 3px rgba(15, 23, 42, 0.03),
+    0 12px 32px -8px rgba(15, 23, 42, 0.06),
+    0 4px 6px -2px rgba(15, 23, 42, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card-light:hover {
   border-color: rgba(203, 213, 225, 1);
-  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
+  box-shadow: 
+    0 1px 3px rgba(15, 23, 42, 0.04),
+    0 24px 50px -12px rgba(15, 23, 42, 0.12),
+    0 8px 16px -4px rgba(15, 23, 42, 0.04);
+  transform: translateY(-4px);
+}
+
+/* Elevated Light Card with Ambient Halo */
+.executive-card-elevated {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  border: 1px solid #E2E8F0;
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 10px 30px -5px rgba(15, 23, 42, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.executive-card-elevated:hover {
+  border-color: #CBD5E1;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.05),
+    0 25px 50px -12px rgba(15, 23, 42, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  transform: translateY(-4px);
 }
 
 /* Subtle Executive Grid Background Pattern */
 .executive-grid-pattern {
-  background-size: 32px 32px;
+  background-size: 36px 36px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
 }
 
 /* Light Section Grid Background Pattern */
 .executive-grid-pattern-light {
-  background-size: 32px 32px;
+  background-size: 36px 36px;
   background-image: 
-    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
 }
 
 /* Executive Gradient Text */
@@ -138,7 +174,7 @@ body {
 }
 
 .gradient-text-indigo {
-  background: linear-gradient(135deg, #1E1B4B 0%, #4F46E5 100%);
+  background: linear-gradient(135deg, #0F172A 0%, #4F46E5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
