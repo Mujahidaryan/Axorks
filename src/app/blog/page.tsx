@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight, BookOpen, Clock } from 'lucide-react';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Engineering Blog & Technical Insights | Axorks Studio',
@@ -70,30 +71,45 @@ export default function BlogHubPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
-            <BookOpen className="h-3.5 w-3.5" />
-            <span>TECHNICAL_PUBLICATIONS</span>
-          </div>
-
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Engineering Blog & Resources
-          </h1>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Plain-language, factual guides on web architecture, software costs, AI implementation, and public-sector engineering standards.
-          </p>
+    <div className="pb-12 sm:pb-20">
+      {/* Hero Band */}
+      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[28rem] w-[28rem] opacity-50" />
+          <div className="exec-mesh mesh-violet-dark absolute -right-24 bottom-0 h-[22rem] w-[22rem] opacity-40" />
+          <div className="exec-grid absolute inset-0 opacity-30" />
+          <div className="fund-ring absolute -bottom-40 left-1/2 h-[32rem] w-[70rem] -translate-x-1/2 opacity-40" />
         </div>
 
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+          <Breadcrumbs items={[{ label: 'Engineering Blog & Resources' }]} />
+
+          <div className="mt-4">
+            <div className="exec-eyebrow exec-eyebrow-gold">
+              <BookOpen className="h-4 w-4 text-gold" />
+              <span>TECHNICAL_PUBLICATIONS</span>
+            </div>
+            <h1 className="mt-4 font-serif text-hero font-bold tracking-tight text-paper leading-tight sm:text-display">
+              Engineering Blog{' '}
+              <span className="gradient-text-gold">& Resources</span>
+            </h1>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+              Plain-language, factual guides on web architecture, software costs, AI implementation, and public-sector engineering standards.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {posts.map((post) => (
             <article
               key={post.slug}
-              className="schematic-bracket group flex flex-col justify-between border border-obsidian-border bg-obsidian-raised p-6 sm:p-8 transition-colors hover:border-gold/40"
+              className="glass-card-dark group relative flex flex-col justify-between overflow-hidden rounded-2xl p-6 transition-all duration-400 hover:-translate-y-1 hover:border-gold/30 sm:p-8"
             >
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
               <div>
-                <div className="flex items-center gap-3 text-xs font-mono text-steel border-b border-obsidian-border pb-3">
+                <div className="flex items-center gap-3 text-xs font-mono text-steel border-b border-white/10 pb-3">
                   <span>{post.date}</span>
                   <span>·</span>
                   <span className="flex items-center gap-1">
@@ -111,10 +127,10 @@ export default function BlogHubPage() {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-obsidian-border/60">
+              <div className="mt-6 pt-4 border-t border-white/10">
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-1.5 font-mono text-xs text-signal-blue font-semibold hover:text-signal-blue-hover transition-colors"
+                  className="inline-flex items-center gap-1.5 font-mono text-xs text-gold font-semibold transition-all group-hover:gap-2.5"
                 >
                   Read Article
                   <ArrowUpRight className="h-3.5 w-3.5" />

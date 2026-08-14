@@ -89,20 +89,26 @@ export default function SystemsCarousel() {
   const activeSlide = slides[currentIndex];
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian-raised/90 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+    <div className="exec-hero-stage relative overflow-hidden rounded-3xl p-6 sm:p-10">
+      {/* Ambient meshes */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="exec-mesh mesh-indigo-dark absolute -right-32 -top-32 h-96 w-96 opacity-70" />
+        <div className="exec-mesh mesh-teal-dark absolute -bottom-32 -left-32 h-96 w-96 opacity-60" />
+        <div className="exec-grid absolute inset-0 opacity-30" />
+      </div>
+
       {/* Header Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-6 gap-4">
+      <div className="relative z-10 flex flex-col justify-between gap-6 border-b border-white/10 pb-6 sm:flex-row sm:items-center">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3.5 py-1 font-mono text-[11px] font-bold text-gold uppercase tracking-wider">
+          <div className="exec-eyebrow exec-eyebrow-gold mb-3">
             <Sparkles className="h-3.5 w-3.5" />
-            <span>INTERACTIVE_SYSTEMS_SHOWCASE</span>
+            Interactive Systems Showcase
           </div>
-          <h3 className="mt-2 font-serif text-2xl sm:text-3xl font-bold text-paper">
-            Flagship Engineering & Systems Architecture
+          <h3 className="font-serif text-2xl font-bold tracking-tight text-paper sm:text-3xl">
+            Flagship Engineering &amp; Systems Architecture
           </h3>
         </div>
 
-        {/* Slide Counter & Navigation Controls */}
         <div className="flex items-center gap-4">
           <span className="font-mono text-xs text-steel">
             [ <strong className="text-gold">0{currentIndex + 1}</strong> / 0{slides.length} ]
@@ -111,14 +117,14 @@ export default function SystemsCarousel() {
             <button
               onClick={prevSlide}
               aria-label="Previous Slide"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-obsidian text-steel transition-all hover:border-gold hover:text-paper hover:scale-105 active:scale-95"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-obsidian/70 text-steel backdrop-blur-md transition-all duration-300 hover:border-gold/50 hover:text-paper hover:scale-105 active:scale-95"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={nextSlide}
               aria-label="Next Slide"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-obsidian text-steel transition-all hover:border-gold hover:text-paper hover:scale-105 active:scale-95"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-obsidian/70 text-steel backdrop-blur-md transition-all duration-300 hover:border-gold/50 hover:text-paper hover:scale-105 active:scale-95"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
@@ -126,10 +132,10 @@ export default function SystemsCarousel() {
         </div>
       </div>
 
-      {/* Main Active Slide Display */}
-      <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        {/* Media Box (Video or Artwork Image) */}
-        <div className="relative lg:col-span-6 h-64 sm:h-80 lg:h-[360px] overflow-hidden rounded-2xl border border-white/10 bg-obsidian shadow-xl group">
+      {/* Main Active Slide */}
+      <div className="relative z-10 mt-8 grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+        {/* Media */}
+        <div className="group relative h-64 overflow-hidden rounded-2xl border border-white/10 bg-obsidian shadow-obsidian-md sm:h-80 lg:col-span-6 lg:h-[360px]">
           {activeSlide.isVideo && activeSlide.videoSrc ? (
             <video
               key={activeSlide.id}
@@ -151,8 +157,8 @@ export default function SystemsCarousel() {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80" />
 
-          {/* Axorks Studio Brand Bug — flush top-left corner, fully covers watermark */}
-          <div className="absolute top-0 left-0 flex items-center gap-1.5 rounded-br-lg border-b border-r border-gold/30 bg-obsidian/90 px-3 py-2 backdrop-blur-md z-10">
+          {/* Brand bug */}
+          <div className="absolute left-0 top-0 flex items-center gap-1.5 rounded-br-lg border-b border-r border-gold/30 bg-obsidian/90 px-3 py-2 backdrop-blur-md">
             <img
               src="/logo.png"
               alt="Axorks"
@@ -160,80 +166,82 @@ export default function SystemsCarousel() {
               height={16}
               className="h-4 w-4 object-contain"
             />
-            <span className="font-mono text-[10px] font-bold text-gold uppercase tracking-widest">
+            <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-gold">
               AXORKS
             </span>
           </div>
 
-          <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-xs text-paper">
-            <span className="rounded bg-obsidian/90 px-3 py-1 text-[10px] font-bold text-gold uppercase tracking-wider border border-gold/30 backdrop-blur-md">
+          <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 font-mono text-xs text-paper">
+            <span className="rounded border border-gold/30 bg-obsidian/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold backdrop-blur-md">
               {activeSlide.sysId}
             </span>
-            <span className="text-[11px] text-steel/90 bg-obsidian/80 px-2.5 py-1 rounded backdrop-blur-md">
+            <span className="rounded bg-obsidian/80 px-2.5 py-1 text-[11px] text-steel/90 backdrop-blur-md">
               {activeSlide.category}
             </span>
           </div>
         </div>
 
-        {/* Text Details & Metrics Column */}
-        <div className="lg:col-span-6 space-y-5">
+        {/* Text details */}
+        <div className="lg:col-span-6">
           <div>
-            <h4 className="font-serif text-2xl font-bold text-paper leading-tight">
+            <h4 className="font-serif text-2xl font-bold leading-tight text-paper sm:text-[1.7rem]">
               {activeSlide.title}
             </h4>
-            <p className="mt-2 text-xs font-mono text-gold italic">
-              "{activeSlide.tagline}"
+            <p className="mt-2 font-mono text-xs text-gold italic">
+              &ldquo;{activeSlide.tagline}&rdquo;
             </p>
           </div>
 
-          <p className="text-xs sm:text-sm text-steel leading-relaxed">
+          <p className="mt-5 text-sm leading-relaxed text-steel">
             {activeSlide.description}
           </p>
 
-          {/* Metrics Grid */}
-          <div className="grid grid-cols-3 gap-3 pt-2 font-mono text-xs">
+          {/* Metrics */}
+          <div className="mt-6 grid grid-cols-3 gap-3">
             {activeSlide.metrics.map((m, idx) => (
-              <div key={idx} className="rounded-xl border border-white/10 bg-obsidian p-3 text-center">
-                <span className="block text-[10px] text-steel uppercase">{m.label}</span>
-                <span className="block font-bold text-paper text-xs mt-1 text-gold">{m.value}</span>
+              <div key={idx} className="rounded-xl border border-white/[0.08] bg-obsidian/70 p-3.5 text-center backdrop-blur-md transition-colors duration-300 hover:border-gold/30">
+                <span className="block font-mono text-[10px] uppercase tracking-wider text-steel">{m.label}</span>
+                <span className="mt-1.5 block font-mono text-xs font-bold text-gold">{m.value}</span>
               </div>
             ))}
           </div>
 
-          {/* Tech Stack Badges */}
-          <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-[11px]">
+          {/* Stack */}
+          <div className="mt-5 flex flex-wrap items-center gap-2">
             {activeSlide.stack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-md border border-white/10 bg-obsidian px-2.5 py-1 text-steel"
+                className="rounded-md border border-white/[0.08] bg-obsidian/70 px-2.5 py-1 font-mono text-[11px] text-steel"
               >
                 {tech}
               </span>
             ))}
           </div>
 
-          {/* CTA Link */}
-          <div className="pt-2">
+          {/* CTA */}
+          <div className="mt-7">
             <Link
               href={activeSlide.link}
-              className="inline-flex items-center gap-2 rounded-full border border-paper/20 bg-paper px-6 py-2.5 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all hover:bg-white hover:scale-[1.02]"
+              className="btn btn-white group"
             >
               Explore Architecture Details
-              <ArrowUpRight className="h-4 w-4 text-obsidian" />
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
         </div>
       </div>
 
       {/* Progress Dots */}
-      <div className="mt-8 flex items-center justify-center gap-2">
+      <div className="relative z-10 mt-8 flex items-center justify-center gap-2">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
             aria-label={`Go to slide ${idx + 1}`}
             className={`h-2 rounded-full transition-all duration-300 ${
-              currentIndex === idx ? 'w-8 bg-gold' : 'w-2 bg-white/20 hover:bg-white/40'
+              currentIndex === idx
+                ? 'w-8 bg-gradient-to-r from-gold to-gold/70 shadow-[0_0_12px_rgba(201,162,75,0.4)]'
+                : 'w-2 bg-white/20 hover:bg-white/40'
             }`}
           />
         ))}

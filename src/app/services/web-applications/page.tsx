@@ -139,7 +139,7 @@ export default function WebApplicationsPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
+    <div className="space-y-16 sm:space-y-24">
       <head>
         <script
           type="application/ld+json"
@@ -147,44 +147,61 @@ export default function WebApplicationsPage() {
         />
       </head>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-        <Breadcrumbs
-          items={[
-            { label: 'Services', href: '/services' },
-            { label: 'Web Applications' },
-          ]}
-        />
-
-        {/* SECTION 1: VALUE PROPOSITION */}
-        <div className="border-b border-obsidian-border pb-8 space-y-4">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
-            <Code className="h-3.5 w-3.5" />
-            <span>CUSTOM_SOFTWARE_ENGINEERING</span>
-          </div>
-
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Custom Web Applications & Enterprise Systems
-          </h1>
-
-          <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
-            Axorks architects full-stack custom web applications, internal operational dashboards, client portals, and CRMs tailored to complex business demands across global markets. Engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL to replace legacy manual workflows with automated software systems.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-steel pt-2">
-            <span>Lead Entry Price: <strong className="text-gold font-bold">Starting at {serviceData.leadPrice}</strong></span>
-            <span>·</span>
-            <span>SLA: <strong className="text-paper">3 – 8 Weeks</strong></span>
-            <span>·</span>
-            <span>Code Ownership: <strong className="text-gold">100% Client Owned</strong></span>
-          </div>
+      {/* Hero Band */}
+      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
+        {/* Ambient background */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[34rem] w-[34rem] opacity-50" />
+          <div className="exec-mesh mesh-teal-dark absolute -right-24 bottom-0 h-[26rem] w-[26rem] opacity-40" />
+          <div className="exec-grid absolute inset-0 opacity-30" />
+          <div className="fund-ring absolute -bottom-40 left-1/2 h-[36rem] w-[70rem] -translate-x-1/2 opacity-40" />
         </div>
 
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+          <Breadcrumbs
+            items={[
+              { label: 'Services', href: '/services' },
+              { label: 'Web Applications' },
+            ]}
+          />
+
+          <div className="mt-4">
+            <div className="exec-eyebrow exec-eyebrow-gold">
+              <Code className="h-4 w-4 text-gold" />
+              <span>CUSTOM_SOFTWARE_ENGINEERING</span>
+            </div>
+
+            <h1 className="mt-4 font-serif text-hero font-bold tracking-tight text-paper leading-tight sm:text-display">
+              Custom Web Applications &{' '}
+              <span className="gradient-text-gold">Enterprise Systems</span>
+            </h1>
+
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+              Axorks architects full-stack custom web applications, internal operational dashboards, client portals, and CRMs tailored to complex business demands across global markets. Engineered with Next.js App Router, TypeScript, Node.js, and serverless PostgreSQL to replace legacy manual workflows with automated software systems.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-2.5 pt-5">
+              <span className="rounded-full border border-white/10 bg-obsidian/80 px-4 py-2 font-mono text-xs text-steel">
+                Lead Entry Price: <strong className="text-gold font-bold">Starting at {serviceData.leadPrice}</strong>
+              </span>
+              <span className="rounded-full border border-white/10 bg-obsidian/80 px-4 py-2 font-mono text-xs text-steel">
+                SLA: <strong className="text-paper">3 – 8 Weeks</strong>
+              </span>
+              <span className="rounded-full border border-white/10 bg-obsidian/80 px-4 py-2 font-mono text-xs text-steel">
+                Code Ownership: <strong className="text-gold">100% Client Owned</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Risk-Reversal Payment Structure Note Banner */}
         <PaymentTermsNote />
 
         {/* Tier Pricing Ladder (Starter, Professional & Enterprise) */}
         <div className="space-y-6">
-          <div className="border-b border-obsidian-border pb-4">
+          <div className="border-b border-white/10 pb-4">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
               Select Your Web Application Engagement Tier
             </h2>
@@ -201,10 +218,11 @@ export default function WebApplicationsPage() {
                 return (
                   <div
                     key={tier.name}
-                    className="schematic-bracket flex flex-col justify-between border border-gold/60 bg-obsidian-raised p-6 space-y-6 shadow-[0_0_25px_rgba(201,162,75,0.12)]"
+                    className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-gold/40 bg-obsidian p-6 space-y-6 shadow-[0_0_30px_rgba(201,162,75,0.1)]"
                   >
+                    <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
                     <div className="space-y-4">
-                      <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
+                      <div className="flex items-center justify-between border-b border-white/10 pb-3">
                         <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
                           ENTERPRISE TIER · BESPOKE ARCHITECTURE
                         </span>
@@ -217,7 +235,7 @@ export default function WebApplicationsPage() {
                       </div>
 
                       {/* Narrative Highlights */}
-                      <div className="space-y-2 pt-2 border-t border-obsidian-border/60">
+                      <div className="space-y-2 pt-2 border-t border-white/10">
                         <span className="font-mono text-[10px] uppercase text-gold font-bold block">
                           Narrative Architecture Highlights:
                         </span>
@@ -232,7 +250,7 @@ export default function WebApplicationsPage() {
                       </div>
 
                       {/* Case Study Embedding */}
-                      <div className="rounded border border-gold/30 bg-gold/10 p-3 text-xs font-mono">
+                      <div className="rounded-xl border border-gold/25 bg-gold/10 p-3.5 text-xs font-mono">
                         <span className="text-gold font-bold block mb-1">Architectural Case Reference:</span>
                         <Link href={serviceData.caseStudyLink.href} className="text-paper hover:underline inline-flex items-center gap-1 font-semibold">
                           {serviceData.caseStudyLink.title}
@@ -247,10 +265,10 @@ export default function WebApplicationsPage() {
                       </div>
                     </div>
 
-                    <div className="pt-4 border-t border-obsidian-border">
+                    <div className="pt-4 border-t border-white/10">
                       <Link
                         href={`/contact?service=Web%20Applications%20%26%20Custom%20Systems&tier=Enterprise&cta=discovery`}
-                        className="flex items-center justify-center gap-2 w-full rounded bg-gold px-4 py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian hover:bg-gold-hover transition-colors text-center"
+                        className="btn btn-gold flex w-full items-center justify-center gap-2"
                       >
                         <PhoneCall className="h-4 w-4" />
                         Let's scope this together
@@ -263,10 +281,10 @@ export default function WebApplicationsPage() {
               return (
                 <div
                   key={tier.name}
-                  className="schematic-bracket flex flex-col justify-between border border-gold/50 bg-obsidian-raised p-6 space-y-6 shadow-[0_0_20px_rgba(201,162,75,0.08)]"
+                  className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-obsidian-card p-6 space-y-6 shadow-obsidian-md"
                 >
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
+                    <div className="flex items-center justify-between border-b border-white/10 pb-3">
                       <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
                         {tier.name} TIER
                       </span>
@@ -278,7 +296,7 @@ export default function WebApplicationsPage() {
                       <p className="mt-2 text-xs leading-relaxed text-steel italic">"{tier.outcome}"</p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-obsidian-border/60">
+                    <div className="space-y-2 pt-2 border-t border-white/10">
                       <span className="font-mono text-[10px] uppercase text-gold font-bold block">Deliverables ({tier.deliverables.length} Items):</span>
                       <ul className="space-y-2 text-xs text-steel">
                         {tier.deliverables.map((item, dIdx) => (
@@ -291,10 +309,10 @@ export default function WebApplicationsPage() {
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-obsidian-border">
+                  <div className="pt-4 border-t border-white/10">
                     <Link
                       href={`/contact?service=Web%20Applications%20%26%20Custom%20Systems&tier=${tier.name}&cta=quote`}
-                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors text-center"
+                      className="btn btn-primary flex w-full items-center justify-center gap-2"
                     >
                       <FileText className="h-3.5 w-3.5" />
                       Get a Quick Quote

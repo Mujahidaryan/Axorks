@@ -91,19 +91,20 @@ function ContactFormInner() {
   };
 
   return (
-    <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8">
-      <div className="border-b border-obsidian-border pb-4">
+    <div className="glass-card-dark relative overflow-hidden rounded-3xl p-6 sm:p-8">
+      <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-gold/30 via-gold to-gold/30" />
+      <div className="border-b border-white/10 pb-5">
         <div className="flex items-center justify-between">
-          <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            PROJECT_INITIATION_PROTOCOL
+          <span className="font-mono text-xs font-bold uppercase tracking-widest text-gold">
+            Project Initiation Protocol
           </span>
           {formData.selectedTier && (
-            <span className="font-mono text-[11px] font-bold text-gold bg-gold/15 border border-gold/40 px-2.5 py-1 rounded">
-              Selected Tier: {formData.selectedTier}
+            <span className="rounded-full border border-gold/40 bg-gold/15 px-3 py-1 font-mono text-[11px] font-bold text-gold">
+              Tier: {formData.selectedTier}
             </span>
           )}
         </div>
-        <h2 className="mt-1 font-serif text-2xl font-bold text-paper flex items-center gap-2">
+        <h2 className="mt-2 font-serif text-2xl font-bold text-paper flex items-center gap-2">
           {formData.ctaMode === 'discovery' ? (
             <>
               <PhoneCall className="h-5 w-5 text-gold" />
@@ -111,13 +112,13 @@ function ContactFormInner() {
             </>
           ) : (
             <>
-              <FileText className="h-5 w-5 text-signal-blue" />
+              <FileText className="h-5 w-5 text-gold" />
               Request a Quick Project Quote
             </>
           )}
         </h2>
-        <p className="mt-1 text-xs text-steel">
-          Direct line to our founder & engineering leads. Guaranteed response within 24 hours.
+        <p className="mt-2 text-xs text-steel">
+          Direct line to our founder &amp; engineering leads. Guaranteed response within 24 hours.
         </p>
       </div>
 
@@ -149,7 +150,7 @@ function ContactFormInner() {
               placeholder="e.g. Alex Morgan"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="mt-1.5 w-full rounded border border-obsidian-border bg-obsidian px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-colors focus:border-signal-blue focus:outline-none"
+              className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-all focus:border-indigo-400/60 focus:bg-obsidian focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
             />
           </div>
 
@@ -165,7 +166,7 @@ function ContactFormInner() {
               placeholder="alex@company.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="mt-1.5 w-full rounded border border-obsidian-border bg-obsidian px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-colors focus:border-signal-blue focus:outline-none"
+              className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-all focus:border-indigo-400/60 focus:bg-obsidian focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
             />
           </div>
         </div>
@@ -182,7 +183,7 @@ function ContactFormInner() {
               placeholder="+1 (555) 000-0000"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="mt-1.5 w-full rounded border border-obsidian-border bg-obsidian px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-colors focus:border-signal-blue focus:outline-none"
+              className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-all focus:border-indigo-400/60 focus:bg-obsidian focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
             />
           </div>
 
@@ -196,7 +197,7 @@ function ContactFormInner() {
               required
               value={formData.service}
               onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-              className="mt-1.5 w-full rounded border border-obsidian-border bg-obsidian px-3 py-2.5 text-xs text-paper transition-colors focus:border-signal-blue focus:outline-none"
+              className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3 py-2.5 text-xs text-paper transition-all focus:border-indigo-400/60 focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
             >
               {services.map((svc) => (
                 <option key={svc} value={svc} className="bg-obsidian text-paper">
@@ -217,7 +218,7 @@ function ContactFormInner() {
             required
             value={formData.budget}
             onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-            className="mt-1.5 w-full rounded border border-gold/40 bg-obsidian px-3 py-2.5 text-xs font-mono text-gold transition-colors focus:border-signal-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-gold/40 bg-obsidian/80 px-3 py-2.5 text-xs font-mono text-gold transition-all focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,162,75,0.15)] focus:outline-none"
           >
             {BUDGET_RANGES_USD.map((b) => (
               <option key={b} value={b} className="bg-obsidian text-paper">
@@ -230,7 +231,7 @@ function ContactFormInner() {
         {/* Message */}
         <div>
           <label htmlFor="message" className="block font-mono text-xs font-medium text-paper">
-            Project Scope & System Details <span className="text-gold">*</span>
+            Project Scope &amp; System Details <span className="text-gold">*</span>
           </label>
           <textarea
             id="message"
@@ -239,20 +240,20 @@ function ContactFormInner() {
             placeholder="Tell us about your core requirements, target features, expected timeline, or key technical goals..."
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="mt-1.5 w-full rounded border border-obsidian-border bg-obsidian px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-colors focus:border-signal-blue focus:outline-none"
+            className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-all focus:border-indigo-400/60 focus:bg-obsidian focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
           />
         </div>
 
         {/* Status Alerts */}
         {status === 'success' && (
-          <div className="flex items-center gap-2.5 rounded border border-emerald-500/30 bg-emerald-500/10 p-3 text-xs text-emerald-400">
+          <div className="flex items-center gap-2.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-3.5 text-xs text-emerald-400">
             <CheckCircle2 className="h-4 w-4 shrink-0" />
             <span>Inquiry received! Our founder will reach out to you within 24 hours.</span>
           </div>
         )}
 
         {status === 'error' && (
-          <div className="flex items-center gap-2.5 rounded border border-red-500/30 bg-red-500/10 p-3 text-xs text-red-400">
+          <div className="flex items-center gap-2.5 rounded-xl border border-red-500/30 bg-red-500/10 p-3.5 text-xs text-red-400">
             <AlertCircle className="h-4 w-4 shrink-0" />
             <span>{errorMessage}</span>
           </div>
@@ -263,7 +264,7 @@ function ContactFormInner() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="flex w-full items-center justify-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper transition-all hover:bg-signal-blue-hover disabled:opacity-50 sm:w-auto"
+            className="btn btn-primary flex w-full items-center justify-center gap-2 disabled:opacity-60 sm:w-auto"
           >
             {status === 'loading' ? (
               <span>Dispatching...</span>
@@ -279,7 +280,7 @@ function ContactFormInner() {
             href="https://wa.me/923141030223"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded border border-gold/40 bg-gold/10 px-5 py-3 font-mono text-xs font-semibold text-gold transition-colors hover:bg-gold/20 sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-5 py-3 font-mono text-xs font-semibold text-gold transition-colors hover:bg-gold/20 sm:w-auto"
           >
             <Phone className="h-3.5 w-3.5" />
             <span>Instant WhatsApp Connect</span>

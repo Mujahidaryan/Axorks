@@ -59,27 +59,86 @@ export default function ServicesHubPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-        <Breadcrumbs items={[{ label: 'Services & Tiered Pricing' }]} />
-
-        {/* Section Header */}
-        <div className="border-b border-obsidian-border pb-8 space-y-4">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
-            <ShieldCheck className="h-3.5 w-3.5" />
-            <span>PRODUCTIZED_SOFTWARE_SERVICES_&_TIERS</span>
-          </div>
-          <h1 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-paper leading-tight">
-            Software Engineering Services
-            <span className="block text-gold text-2xl sm:text-3xl font-sans font-normal mt-1 text-steel">
-              Productized Capabilities &amp; Pricing Ladders
-            </span>
-          </h1>
-          <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
-            Every software service leads with transparent entry pricing and milestone deliverables. Explore full deliverable checklists, expand Professional or Enterprise tiers, or schedule a technical discovery call directly with Chief Systems Architect Muhammad Mujahid.
-          </p>
+    <div className="space-y-16 sm:space-y-24">
+      {/* Hero Band */}
+      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
+        {/* Ambient background */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[34rem] w-[34rem] opacity-50" />
+          <div className="exec-mesh mesh-teal-dark absolute -right-24 bottom-0 h-[26rem] w-[26rem] opacity-40" />
+          <div className="exec-grid absolute inset-0 opacity-30" />
+          <div className="fund-ring absolute -bottom-40 left-1/2 h-[36rem] w-[70rem] -translate-x-1/2 opacity-40" />
         </div>
 
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
+          <Breadcrumbs items={[{ label: 'Services & Tiered Pricing' }]} />
+
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
+            {/* Left column */}
+            <div className="space-y-6">
+              <div className="exec-eyebrow exec-eyebrow-gold">
+                <ShieldCheck className="h-4 w-4 text-gold" />
+                <span>PRODUCTIZED_SOFTWARE_SERVICES_&_TIERS</span>
+              </div>
+
+              <h1 className="font-serif text-hero font-bold leading-tight tracking-tight text-paper sm:text-display">
+                Software Engineering{' '}
+                <span className="gradient-text-gold">Services</span>
+              </h1>
+
+              <p className="max-w-2xl text-sm leading-relaxed text-steel sm:text-base">
+                Every software service leads with transparent entry pricing and milestone deliverables. Explore full
+                deliverable checklists, expand Professional or Enterprise tiers, or schedule a technical discovery call
+                directly with Chief Systems Architect Muhammad Mujahid.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a href="/contact?cta=discovery" className="btn btn-gold">
+                  <PhoneCall className="h-4 w-4" />
+                  Book a Discovery Call
+                </a>
+                <a href="#website-development" className="btn btn-outline-dark">
+                  <FileText className="h-4 w-4" />
+                  Explore Pricing Tiers
+                </a>
+              </div>
+            </div>
+
+            {/* Right column — trust metrics panel */}
+            <div className="space-y-3">
+              <div className="glass-card-dark rounded-2xl p-5">
+                <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                  <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-gold">
+                    Transparent Pricing Ladder
+                  </span>
+                  <span className="flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-emerald-400">
+                    <span className="h-1.5 w-1.5 animate-pulse-soft rounded-full bg-emerald-400" />
+                    Live
+                  </span>
+                </div>
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  {[
+                    { label: 'Entry Landings', value: 'From $1,000' },
+                    { label: 'Live Systems', value: '6+' },
+                    { label: 'Milestone Billing', value: '40/40/20' },
+                    { label: 'Response SLA', value: '<24 h' },
+                  ].map((m) => (
+                    <div key={m.label} className="rounded-xl border border-white/10 bg-obsidian/80 p-3">
+                      <div className="font-mono text-[10px] uppercase tracking-wider text-steel">{m.label}</div>
+                      <div className="mt-1 font-serif text-lg font-bold text-paper">{m.value}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <p className="px-2 font-mono text-[11px] text-steel">
+                Configuration beats jargon — fixed milestone plans, live staging, zero hidden scope.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Risk-Reversal Payment Structure Note Banner */}
         <PaymentTermsNote />
 
@@ -95,13 +154,15 @@ export default function ServicesHubPage() {
               <section
                 key={cat.id}
                 id={cat.id}
-                className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-10 space-y-8"
+                className="glass-card-dark relative overflow-hidden rounded-3xl p-6 sm:p-10"
               >
+                {/* Gold hairline top */}
+                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
                 {/* Header */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-obsidian-border pb-6">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-b border-white/10 pb-6">
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 font-mono text-xs text-gold">
-                      <Icon className="h-4 w-4" />
+                    <div className="exec-eyebrow exec-eyebrow-gold">
+                      <Icon className="h-4 w-4 text-gold" />
                       <span>SERVICE_0{sIdx + 1} · {sData.title.toUpperCase()}</span>
                     </div>
                     <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
@@ -112,14 +173,14 @@ export default function ServicesHubPage() {
                     </p>
                   </div>
 
-                  <div className="flex flex-col sm:items-end gap-2 shrink-0 bg-obsidian border border-obsidian-border p-4 rounded-lg">
+                  <div className="flex flex-col sm:items-end gap-2 shrink-0 rounded-xl border border-gold/25 bg-obsidian/80 p-4 shadow-[0_8px_24px_-8px_rgba(0,0,0,0.5)]">
                     <span className="font-mono text-[10px] uppercase text-steel">Lead Entry Price:</span>
-                    <span className="font-serif text-3xl font-bold text-gold">
+                    <span className="font-serif text-3xl font-bold gradient-text-gold">
                       Starting at {sData.leadPrice}
                     </span>
                     <Link
                       href={cat.detailHref}
-                      className="font-mono text-xs text-signal-blue hover:underline inline-flex items-center gap-1 font-semibold"
+                      className="font-mono text-xs text-gold hover:underline inline-flex items-center gap-1 font-semibold"
                     >
                       View Full Specifications Page
                       <ArrowUpRight className="h-3.5 w-3.5" />
@@ -128,7 +189,7 @@ export default function ServicesHubPage() {
                 </div>
 
                 {/* Lead Tier Prominent Display */}
-                <div className="space-y-4">
+                <div className="mt-8 space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
                       PRIMARY OFFER · {leadTier.name.toUpperCase()} TIER ({leadTier.formattedPrice})
@@ -136,15 +197,16 @@ export default function ServicesHubPage() {
                     <span className="font-mono text-xs text-steel">Turnaround: {leadTier.turnaround}</span>
                   </div>
 
-                  <div className="schematic-bracket border border-gold/40 bg-obsidian p-6 space-y-6">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-obsidian-border pb-4">
+                  <div className="relative overflow-hidden rounded-2xl border border-gold/30 bg-obsidian p-6 shadow-obsidian-md space-y-6">
+                    <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-4">
                       <div>
                         <div className="font-serif text-2xl font-bold text-paper">{leadTier.formattedPrice}</div>
                         <p className="text-xs text-steel italic mt-1">"{leadTier.outcome}"</p>
                       </div>
                       <Link
                         href={`/contact?service=${encodeURIComponent(sData.title)}&tier=${leadTier.name}&cta=quote`}
-                        className="inline-flex items-center justify-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors shrink-0"
+                        className="btn btn-primary inline-flex shrink-0 items-center justify-center gap-2"
                       >
                         <FileText className="h-4 w-4" />
                         Get a Quick Quote
@@ -168,10 +230,10 @@ export default function ServicesHubPage() {
                 </div>
 
                 {/* Expand / Collapse Button */}
-                <div className="pt-2">
+                <div className="pt-6">
                   <button
                     onClick={() => toggleExpand(cat.id)}
-                    className="w-full flex items-center justify-between rounded border border-obsidian-border bg-obsidian px-5 py-3.5 font-mono text-xs font-semibold text-paper hover:border-gold/40 hover:text-gold transition-colors"
+                    className="w-full flex items-center justify-between rounded-xl border border-white/10 bg-obsidian/60 px-5 py-3.5 font-mono text-xs font-semibold text-paper hover:border-gold/40 hover:text-gold transition-colors"
                   >
                     <span className="flex items-center gap-2">
                       <Sparkles className="h-4 w-4 text-gold" />
@@ -185,12 +247,12 @@ export default function ServicesHubPage() {
 
                 {/* Professional & Enterprise Expandable Drawer */}
                 {isExpanded && (
-                  <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-6 animate-fadeIn">
+                  <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Professional Tier */}
                     {sData.tiers.find((t) => t.name === 'Professional') && (
-                      <div className="schematic-bracket flex flex-col justify-between border border-obsidian-border bg-obsidian p-6 space-y-6">
+                      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-obsidian-card flex flex-col justify-between p-6 space-y-6 shadow-obsidian-md">
                         <div className="space-y-4">
-                          <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
+                          <div className="flex items-center justify-between border-b border-white/10 pb-3">
                             <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
                               PROFESSIONAL TIER
                             </span>
@@ -208,7 +270,7 @@ export default function ServicesHubPage() {
                             </p>
                           </div>
 
-                          <div className="space-y-2 pt-2 border-t border-obsidian-border/60">
+                          <div className="space-y-2 pt-2 border-t border-white/10">
                             <span className="font-mono text-[10px] uppercase text-gold font-bold block">
                               Deliverables ({sData.tiers.find((t) => t.name === 'Professional')?.deliverables.length} Items):
                             </span>
@@ -225,10 +287,10 @@ export default function ServicesHubPage() {
                           </div>
                         </div>
 
-                        <div className="pt-4 border-t border-obsidian-border">
+                        <div className="pt-4 border-t border-white/10">
                           <Link
                             href={`/contact?service=${encodeURIComponent(sData.title)}&tier=Professional&cta=quote`}
-                            className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors text-center"
+                            className="btn btn-primary flex w-full items-center justify-center gap-2"
                           >
                             <FileText className="h-3.5 w-3.5" />
                             Get a Quick Quote
@@ -239,9 +301,10 @@ export default function ServicesHubPage() {
 
                     {/* Enterprise Tier Narrative Rework */}
                     {sData.tiers.find((t) => t.name === 'Enterprise') && (
-                      <div className="schematic-bracket flex flex-col justify-between border border-gold/60 bg-obsidian p-6 space-y-6 shadow-[0_0_25px_rgba(201,162,75,0.12)]">
+                      <div className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-gold/40 bg-obsidian p-6 space-y-6 shadow-[0_0_30px_rgba(201,162,75,0.1)]">
+                        <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
                         <div className="space-y-4">
-                          <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
+                          <div className="flex items-center justify-between border-b border-white/10 pb-3">
                             <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
                               ENTERPRISE TIER · BESPOKE ARCHITECTURE
                             </span>
@@ -260,7 +323,7 @@ export default function ServicesHubPage() {
                           </div>
 
                           {/* Narrative Outcome Highlights */}
-                          <div className="space-y-2.5 pt-2 border-t border-obsidian-border/60">
+                          <div className="space-y-2.5 pt-2 border-t border-white/10">
                             <span className="font-mono text-[10px] uppercase text-gold font-bold block">
                               Narrative Architecture Highlights:
                             </span>
@@ -275,7 +338,7 @@ export default function ServicesHubPage() {
                           </div>
 
                           {/* Case Study Embedding */}
-                          <div className="rounded border border-gold/30 bg-gold/10 p-3 text-xs font-mono">
+                          <div className="rounded-xl border border-gold/25 bg-gold/10 p-3.5 text-xs font-mono">
                             <span className="text-gold font-bold block mb-1">Architectural Case Reference:</span>
                             <Link href={sData.caseStudyLink.href} className="text-paper hover:underline inline-flex items-center gap-1 font-semibold">
                               {sData.caseStudyLink.title}
@@ -291,10 +354,10 @@ export default function ServicesHubPage() {
                         </div>
 
                         {/* Enterprise CTA — Discovery Call Only */}
-                        <div className="pt-4 border-t border-obsidian-border">
+                        <div className="pt-4 border-t border-white/10">
                           <Link
                             href={`/contact?service=${encodeURIComponent(sData.title)}&tier=Enterprise&cta=discovery`}
-                            className="flex items-center justify-center gap-2 w-full rounded bg-gold px-4 py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian hover:bg-gold-hover transition-colors text-center"
+                            className="btn btn-gold flex w-full items-center justify-center gap-2"
                           >
                             <PhoneCall className="h-4 w-4" />
                             Let's scope this together
@@ -310,32 +373,41 @@ export default function ServicesHubPage() {
         </div>
 
         {/* Custom / Government-Scale Engineering Section */}
-        <div className="schematic-bracket border border-gold/60 bg-obsidian-raised p-8 sm:p-10 space-y-6 shadow-[0_0_30px_rgba(201,162,75,0.12)]">
-          <div className="flex items-center gap-2 text-gold font-mono text-xs font-bold uppercase tracking-wider">
-            <Landmark className="h-5 w-5" />
-            <span>CUSTOM_ENGINEERING · NO_PUBLIC_PRICING</span>
-          </div>
+        <div className="relative overflow-hidden rounded-3xl border border-gold/35 bg-gradient-to-br from-obsidian-raised via-obsidian to-obsidian p-8 sm:p-10 shadow-obsidian-lg">
+          <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full opacity-20 blur-3xl"
+            style={{ background: 'radial-gradient(circle, rgba(201,162,75,0.7), transparent 70%)' }}
+          />
 
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-obsidian-border pb-6">
-            <div className="max-w-3xl space-y-2">
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
-                {CUSTOM_ENTERPRISE_SERVICE.title}
-              </h2>
-              <p className="text-xs font-mono text-gold font-semibold">
-                {CUSTOM_ENTERPRISE_SERVICE.subtitle}
-              </p>
-              <p className="text-xs text-steel leading-relaxed">
-                {CUSTOM_ENTERPRISE_SERVICE.description}
-              </p>
+          <div className="relative z-10 space-y-6">
+            <div className="exec-eyebrow exec-eyebrow-gold">
+              <Landmark className="h-5 w-5 text-gold" />
+              <span>CUSTOM_ENGINEERING · NO_PUBLIC_PRICING</span>
             </div>
 
-            <Link
-              href="/contact?service=Government%20%26%20Enterprise%20Digital%20Solutions&cta=discovery"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded bg-gold px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-obsidian hover:bg-gold-hover transition-colors"
-            >
-              <PhoneCall className="h-4 w-4" />
-              Book a Discovery Call
-            </Link>
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-white/10 pb-6">
+              <div className="max-w-3xl space-y-2">
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
+                  {CUSTOM_ENTERPRISE_SERVICE.title}
+                </h2>
+                <p className="text-xs font-mono text-gold font-semibold">
+                  {CUSTOM_ENTERPRISE_SERVICE.subtitle}
+                </p>
+                <p className="text-xs text-steel leading-relaxed">
+                  {CUSTOM_ENTERPRISE_SERVICE.description}
+                </p>
+              </div>
+
+              <Link
+                href="/contact?service=Government%20%26%20Enterprise%20Digital%20Solutions&cta=discovery"
+                className="btn btn-gold shrink-0"
+              >
+                <PhoneCall className="h-4 w-4" />
+                Book a Discovery Call
+              </Link>
+            </div>
           </div>
         </div>
 

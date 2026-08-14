@@ -54,22 +54,34 @@ export default function ProcessPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-20 space-y-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-        <Breadcrumbs items={[{ label: 'Engineering Process & FAQ' }]} />
-
-        <div className="border-b border-obsidian-border pb-6">
-          <span className="font-mono text-xs text-gold uppercase tracking-wider">
-            NO_AGILE_THEATER
-          </span>
-          <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Honest 5-Step Execution Process
-          </h1>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Real engineering steps only. No unnecessary daily standup theater, invented ceremonies, or middle-management bloat.
-          </p>
+    <div className="space-y-16">
+      {/* Hero Band */}
+      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[28rem] w-[28rem] opacity-50" />
+          <div className="exec-mesh mesh-teal-dark absolute -right-24 bottom-0 h-[22rem] w-[22rem] opacity-40" />
+          <div className="exec-grid absolute inset-0 opacity-30" />
+          <div className="fund-ring absolute -bottom-40 left-1/2 h-[32rem] w-[70rem] -translate-x-1/2 opacity-40" />
         </div>
-      </div>
+
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+          <Breadcrumbs items={[{ label: 'Engineering Process & FAQ' }]} />
+
+          <div className="mt-4">
+            <div className="exec-eyebrow exec-eyebrow-gold">
+              <Search className="h-4 w-4 text-gold" />
+              <span>NO_AGILE_THEATER</span>
+            </div>
+            <h1 className="mt-4 font-serif text-hero font-bold tracking-tight text-paper leading-tight sm:text-display">
+              Honest 5-Step{' '}
+              <span className="gradient-text-gold">Execution Process</span>
+            </h1>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+              Real engineering steps only. No unnecessary daily standup theater, invented ceremonies, or middle-management bloat.
+            </p>
+          </div>
+        </div>
+      </header>
 
       {/* Full-Width Light Section: 5-Step Process Execution Cards (40%+ Light Background Ratio) */}
       <section className="w-full bg-gradient-to-b from-slate-50 via-white to-slate-100/80 py-16 sm:py-20 border-y border-slate-200 shadow-sm relative overflow-hidden">

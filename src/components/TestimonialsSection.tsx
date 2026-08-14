@@ -1,4 +1,4 @@
-import { ShieldCheck, Quote, Building2, Sparkles } from 'lucide-react';
+import { ShieldCheck, Quote, Building2, Sparkles, Star } from 'lucide-react';
 
 export interface Testimonial {
   id: string;
@@ -17,79 +17,123 @@ export default function TestimonialsSection({ testimonials = [] }: TestimonialsS
   // If zero real testimonials exist yet, render a clean executive authority proof banner
   if (!testimonials || testimonials.length === 0) {
     return (
-      <div className="rounded-3xl bg-gradient-to-b from-slate-50 via-white to-slate-100/90 border border-slate-200 p-7 sm:p-10 relative overflow-hidden shadow-[0_10px_35px_-10px_rgba(15,23,42,0.05)]">
-        <div className="absolute top-0 right-0 h-72 w-72 rounded-full bg-indigo-500/8 blur-3xl pointer-events-none" />
-        <div className="absolute inset-0 executive-grid-pattern-light opacity-40 pointer-events-none" />
+      <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-b from-slate-50 via-white to-slate-100/90 p-7 shadow-executive-lg sm:p-10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-light absolute -right-20 -top-20 h-72 w-72" />
+          <div className="exec-mesh mesh-teal-light absolute -bottom-20 -left-20 h-72 w-72 opacity-60" />
+          <div className="exec-dots-light absolute inset-0 opacity-30" />
+        </div>
 
-        <div className="relative z-10 space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200/80 pb-4">
-            <div className="inline-flex items-center gap-2 text-indigo-700 font-mono text-xs font-bold uppercase tracking-widest bg-indigo-50 px-3.5 py-1 rounded-full border border-indigo-200/80 shadow-xs">
+        <div className="relative z-10">
+          <div className="flex flex-col justify-between gap-4 border-b border-slate-200/80 pb-6 sm:flex-row sm:items-center">
+            <div className="exec-eyebrow exec-eyebrow-light">
               <ShieldCheck className="h-4 w-4 text-indigo-600" />
-              <span>CLIENT_VERIFICATION_&amp;_NDA_POLICY</span>
+              Client Verification &amp; NDA Policy
             </div>
-            <span className="font-mono text-xs font-semibold text-slate-700 bg-white px-3 py-1 rounded-full border border-slate-200 shadow-2xs">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 font-mono text-xs font-semibold text-slate-700 shadow-executive-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
               5 Clients Served · 2+ International Clients
             </span>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed max-w-3xl font-medium">
-            Axorks enforces strict client confidentiality across all engagements. References and redacted case-study walkthroughs are provided directly to qualified decision-makers during technical discovery calls.
-          </p>
+          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+            <div className="flex items-start gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-executive-sm">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-50 ring-1 ring-indigo-100">
+                <ShieldCheck className="h-5 w-5 text-indigo-600" />
+              </div>
+              <div>
+                <h3 className="font-serif text-base font-bold text-slate-900">NDA-Protected References</h3>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">
+                  References and redacted walkthroughs shared only with qualified decision-makers.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-executive-sm">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-teal-50 ring-1 ring-teal-100">
+                <Quote className="h-5 w-5 text-teal-600" />
+              </div>
+              <div>
+                <h3 className="font-serif text-base font-bold text-slate-900">Direct Founder Access</h3>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">
+                  Every engagement is led by Chief Systems Architect Muhammad Mujahid.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-executive-sm">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-50 ring-1 ring-violet-100">
+                <Star className="h-5 w-5 text-violet-600" />
+              </div>
+              <div>
+                <h3 className="font-serif text-base font-bold text-slate-900">Executive Case Walkthroughs</h3>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600">
+                  Live technical deep-dives during discovery calls for senior stakeholders.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="rounded-3xl bg-gradient-to-b from-slate-50 via-white to-slate-100/90 border border-slate-200 p-8 sm:p-12 space-y-8 shadow-[0_10px_40px_-15px_rgba(15,23,42,0.06)] relative overflow-hidden">
-      <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-indigo-500/8 blur-3xl pointer-events-none" />
-      <div className="absolute inset-0 executive-grid-pattern-light opacity-40 pointer-events-none" />
-
-      <div className="border-b border-slate-200/80 pb-5 flex items-center justify-between relative z-10">
-        <div className="inline-flex items-center gap-2 text-indigo-700 font-mono text-xs font-bold uppercase tracking-widest bg-indigo-50 px-3.5 py-1 rounded-full border border-indigo-200/80 shadow-xs">
-          <Quote className="h-4 w-4 text-indigo-600" />
-          <span>VERIFIED_CLIENT_TESTIMONIALS</span>
-        </div>
-        <span className="font-mono text-xs text-slate-600 font-medium">Executive Feedback</span>
+    <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-b from-slate-50 via-white to-slate-100/90 p-8 shadow-executive-lg sm:p-12">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="exec-mesh mesh-indigo-light absolute -right-20 -top-20 h-96 w-96" />
+        <div className="exec-mesh mesh-violet-light absolute -bottom-24 -left-24 h-96 w-96 opacity-60" />
+        <div className="exec-dots-light absolute inset-0 opacity-30" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
-        {testimonials.map((t) => (
-          <div
-            key={t.id}
-            className="group relative bg-white rounded-2xl border border-slate-200/90 p-7 space-y-5 flex flex-col justify-between shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.09)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300"
-          >
-            <div className="space-y-3.5">
-              <div className="flex items-center justify-between">
-                <Quote className="h-6 w-6 text-indigo-600/80" />
-                <Sparkles className="h-4 w-4 text-indigo-400 opacity-50 group-hover:opacity-100 transition-opacity" />
-              </div>
-              <p className="text-xs sm:text-sm text-slate-800 leading-relaxed italic font-medium">
-                "{t.quote}"
-              </p>
-            </div>
-
-            <div className="pt-4 border-t border-slate-100 flex items-center justify-between font-mono text-xs">
-              <div>
-                <span className="text-slate-900 font-bold block">{t.author}</span>
-                <span className="text-slate-600 text-[11px] font-sans font-medium">{t.role}</span>
-              </div>
-              <div className="text-right">
-                {t.isConfidentialNDA ? (
-                  <span className="inline-flex items-center gap-1.5 text-[10px] text-indigo-800 bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-full font-bold shadow-2xs">
-                    <ShieldCheck className="h-3 w-3 text-indigo-600" />
-                    NDA Protected
-                  </span>
-                ) : (
-                  <span className="text-slate-700 font-semibold flex items-center gap-1.5 bg-slate-50 px-2.5 py-1 rounded-full border border-slate-200 text-[11px]">
-                    <Building2 className="h-3.5 w-3.5 text-indigo-600" />
-                    {t.company}
-                  </span>
-                )}
-              </div>
-            </div>
+      <div className="relative z-10">
+        <div className="flex items-center justify-between border-b border-slate-200/80 pb-6">
+          <div className="exec-eyebrow exec-eyebrow-light">
+            <Quote className="h-4 w-4 text-indigo-600" />
+            Verified Client Testimonials
           </div>
-        ))}
+          <span className="hidden font-mono text-xs font-medium text-slate-600 sm:block">Executive Feedback</span>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+          {testimonials.map((t) => (
+            <article
+              key={t.id}
+              className="group relative flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-7 shadow-executive-sm transition-all duration-400 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-executive-lg"
+            >
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-indigo-600 via-indigo-400 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 ring-1 ring-indigo-100">
+                    <Quote className="h-5 w-5 text-indigo-600" />
+                  </div>
+                  <Sparkles className="h-4 w-4 text-indigo-300 opacity-50 transition-opacity duration-300 group-hover:opacity-100" />
+                </div>
+                <p className="text-sm leading-relaxed text-slate-800 italic font-medium">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+              </div>
+
+              <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-5">
+                <div>
+                  <span className="block font-mono text-xs font-bold text-slate-900">{t.author}</span>
+                  <span className="mt-0.5 block font-sans text-[11px] font-medium text-slate-600">{t.role}</span>
+                </div>
+                <div className="text-right">
+                  {t.isConfidentialNDA ? (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-1 text-[10px] font-bold text-indigo-800">
+                      <ShieldCheck className="h-3 w-3 text-indigo-600" />
+                      NDA Protected
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-[11px] font-semibold text-slate-700">
+                      <Building2 className="h-3.5 w-3.5 text-indigo-600" />
+                      {t.company}
+                    </span>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   );

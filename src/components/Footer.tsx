@@ -5,20 +5,28 @@ import { CONTACT_EMAIL, LINKEDIN_URL } from '@/lib/config';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-obsidian text-steel">
+    <footer className="relative border-t border-white/10 bg-obsidian text-steel">
+      {/* Ambient top hairline */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+
       {/* Top Call to Action Strip */}
-      <div className="border-b border-white/10 bg-obsidian-raised/60 backdrop-blur-md">
-        <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3 font-mono text-xs">
-              <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-paper font-semibold">All Systems Operational</span>
-              <span className="text-steel/60">·</span>
-              <span className="text-steel">Guaranteed 24hr Response SLA</span>
+      <div className="border-b border-white/[0.06] bg-obsidian-raised/60 backdrop-blur-md">
+        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-5 sm:flex-row">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-xs sm:justify-start">
+              <span className="flex items-center gap-2.5">
+                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse-soft" />
+                <span className="font-semibold text-paper">All Systems Operational</span>
+              </span>
+              <span className="hidden h-4 w-px bg-white/10 sm:block" />
+              <span className="flex items-center gap-2.5">
+                <span className="h-2 w-2 rounded-full bg-gold" />
+                <span>Guaranteed 24hr Response SLA</span>
+              </span>
             </div>
             <Link
               href="/contact"
-              className="group flex items-center gap-2 rounded-full border border-paper/20 bg-paper px-5 py-2 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all hover:bg-white hover:scale-[1.02]"
+              className="group flex items-center gap-2 rounded-full border border-paper/20 bg-paper px-6 py-2.5 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all duration-300 hover:bg-white hover:scale-[1.02] active:scale-[0.98]"
             >
               Start a Project
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -28,21 +36,21 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Grid */}
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-5 lg:gap-12">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-5 lg:gap-x-12">
           {/* Brand Column */}
-          <div className="col-span-2 md:col-span-1 space-y-5">
+          <div className="col-span-2 space-y-5 md:col-span-1">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-9 w-9 overflow-hidden rounded-md border border-gold/40 bg-obsidian-raised p-1 shadow-sm shadow-gold/20">
+              <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-gold/40 bg-obsidian-raised p-1 shadow-sm shadow-gold/20">
                 <Image
                   src="/logo.png"
                   alt="Axorks"
-                  width={36}
-                  height={36}
+                  width={40}
+                  height={40}
                   className="h-full w-full object-contain"
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col leading-tight">
                 <span className="font-serif text-lg font-bold tracking-tight text-paper">Axorks</span>
                 <span className="font-mono text-[9px] tracking-widest text-gold uppercase">Software Studio</span>
               </div>
@@ -50,13 +58,17 @@ export default function Footer() {
             <p className="text-xs leading-relaxed text-steel">
               International software engineering company. Precision-engineered custom web platforms, AI automations, and enterprise cloud systems.
             </p>
-            <div className="space-y-2 font-mono text-[11px] text-steel">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-3.5 w-3.5 text-gold shrink-0" />
+            <div className="space-y-2.5 font-mono text-[11px] text-steel">
+              <div className="flex items-center gap-2.5">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10">
+                  <MapPin className="h-3.5 w-3.5 text-gold" />
+                </span>
                 <span>Karachi &amp; Islamabad, Pakistan</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Globe className="h-3.5 w-3.5 text-gold shrink-0" />
+              <div className="flex items-center gap-2.5">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10">
+                  <Globe className="h-3.5 w-3.5 text-gold" />
+                </span>
                 <span>US · UK · EU · GCC</span>
               </div>
             </div>
@@ -65,7 +77,7 @@ export default function Footer() {
           {/* Services Column */}
           <div>
             <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-paper">Services</h3>
-            <ul className="mt-4 space-y-2.5 text-xs">
+            <ul className="mt-5 space-y-3 text-xs">
               {[
                 { label: 'Custom Website Development', href: '/services/website-development' },
                 { label: 'Web Applications & Systems', href: '/services/web-applications' },
@@ -75,7 +87,8 @@ export default function Footer() {
                 { label: 'Maintenance & Support', href: '/services/maintenance-support' },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="transition-colors hover:text-gold flex items-center gap-1 group">
+                  <Link href={item.href} className="group inline-flex items-center gap-1.5 leading-relaxed transition-colors hover:text-paper">
+                    <span className="h-px w-0 bg-gold transition-all duration-300 group-hover:w-3" />
                     <span>{item.label}</span>
                   </Link>
                 </li>
@@ -86,7 +99,7 @@ export default function Footer() {
           {/* Company Column */}
           <div>
             <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-paper">Company</h3>
-            <ul className="mt-4 space-y-2.5 text-xs">
+            <ul className="mt-5 space-y-3 text-xs">
               {[
                 { label: 'About Axorks', href: '/about' },
                 { label: 'Engineering Process', href: '/process' },
@@ -96,8 +109,9 @@ export default function Footer() {
                 { label: 'Contact', href: '/contact' },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="transition-colors hover:text-gold">
-                    {item.label}
+                  <Link href={item.href} className="group inline-flex items-center gap-1.5 leading-relaxed transition-colors hover:text-paper">
+                    <span className="h-px w-0 bg-gold transition-all duration-300 group-hover:w-3" />
+                    <span>{item.label}</span>
                   </Link>
                 </li>
               ))}
@@ -107,22 +121,22 @@ export default function Footer() {
           {/* Global Delivery Column */}
           <div>
             <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-paper">Global Delivery</h3>
-            <ul className="mt-4 space-y-2.5 font-mono text-xs text-steel">
-              <li className="flex flex-col gap-0.5">
-                <span className="text-paper font-semibold">United Kingdom</span>
-                <span className="text-[11px]">GMT / BST Overlap</span>
+            <ul className="mt-5 space-y-3.5 font-mono text-xs text-steel">
+              <li className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3 transition-colors hover:border-white/[0.12] hover:bg-white/[0.04]">
+                <span className="block font-semibold text-paper">United Kingdom</span>
+                <span className="mt-0.5 block text-[11px]">GMT / BST Overlap</span>
               </li>
-              <li className="flex flex-col gap-0.5">
-                <span className="text-paper font-semibold">North America</span>
-                <span className="text-[11px]">EST / PST Coverage</span>
+              <li className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3 transition-colors hover:border-white/[0.12] hover:bg-white/[0.04]">
+                <span className="block font-semibold text-paper">North America</span>
+                <span className="mt-0.5 block text-[11px]">EST / PST Coverage</span>
               </li>
-              <li className="flex flex-col gap-0.5">
-                <span className="text-paper font-semibold">Europe / EU</span>
-                <span className="text-[11px]">CET / CEST Overlap</span>
+              <li className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3 transition-colors hover:border-white/[0.12] hover:bg-white/[0.04]">
+                <span className="block font-semibold text-paper">Europe / EU</span>
+                <span className="mt-0.5 block text-[11px]">CET / CEST Overlap</span>
               </li>
-              <li className="flex flex-col gap-0.5">
-                <span className="text-paper font-semibold">GCC / MENA</span>
-                <span className="text-[11px]">AST / GST Region</span>
+              <li className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3 transition-colors hover:border-white/[0.12] hover:bg-white/[0.04]">
+                <span className="block font-semibold text-paper">GCC / MENA</span>
+                <span className="mt-0.5 block text-[11px]">AST / GST Region</span>
               </li>
             </ul>
           </div>
@@ -130,25 +144,29 @@ export default function Footer() {
           {/* Direct Channels Column */}
           <div>
             <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-paper">Direct Channels</h3>
-            <ul className="mt-4 space-y-3 text-xs">
+            <ul className="mt-5 space-y-3.5 text-xs">
               <li>
                 <a
                   href="https://wa.me/923141030223"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-paper"
+                  className="group inline-flex items-center gap-2.5 leading-relaxed transition-colors hover:text-paper"
                 >
-                  <Phone className="h-3.5 w-3.5 text-gold shrink-0" />
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-gold/10 group-hover:ring-gold/30">
+                    <Phone className="h-3.5 w-3.5 text-gold" />
+                  </span>
                   +92 314 1030223
-                  <ArrowUpRight className="h-3 w-3 text-steel/50" />
+                  <ArrowUpRight className="h-3 w-3 text-steel/50 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="inline-flex items-center gap-2 transition-colors hover:text-paper"
+                  className="group inline-flex items-center gap-2.5 leading-relaxed transition-colors hover:text-paper"
                 >
-                  <Mail className="h-3.5 w-3.5 text-gold shrink-0" />
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-gold/10 group-hover:ring-gold/30">
+                    <Mail className="h-3.5 w-3.5 text-gold" />
+                  </span>
                   {CONTACT_EMAIL}
                 </a>
               </li>
@@ -157,19 +175,21 @@ export default function Footer() {
                   href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-paper"
+                  className="group inline-flex items-center gap-2.5 leading-relaxed transition-colors hover:text-paper"
                 >
-                  <Linkedin className="h-3.5 w-3.5 text-gold shrink-0" />
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/10 transition-colors group-hover:bg-gold/10 group-hover:ring-gold/30">
+                    <Linkedin className="h-3.5 w-3.5 text-gold" />
+                  </span>
                   linkedin.com/in/axorks
-                  <ArrowUpRight className="h-3 w-3 text-steel/50" />
+                  <ArrowUpRight className="h-3 w-3 text-steel/50 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               </li>
             </ul>
 
             {/* Legal Links */}
-            <div className="mt-8">
+            <div className="mt-9">
               <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-paper">Legal</h3>
-              <ul className="mt-3 space-y-2 text-xs">
+              <ul className="mt-4 space-y-2.5 text-xs">
                 <li>
                   <Link href="/privacy" className="transition-colors hover:text-paper">Privacy Policy</Link>
                 </li>
@@ -182,14 +202,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Strip */}
-        <div className="mt-12 border-t border-white/10 pt-6 flex flex-col items-center justify-between gap-3 text-[11px] text-steel sm:flex-row">
+        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/[0.07] pt-7 text-[11px] text-steel sm:flex-row">
           <p>© {new Date().getFullYear()} Axorks Pvt Limited. All rights reserved.</p>
           <div className="flex items-center gap-4 font-mono">
-            <span>Precision Engineering</span>
-            <span className="text-white/20">·</span>
-            <span>AI-Native Delivery</span>
-            <span className="text-white/20">·</span>
-            <span className="text-gold">Global Remote</span>
+            <span className="transition-colors hover:text-paper">Precision Engineering</span>
+            <span className="h-1 w-1 rounded-full bg-white/20" />
+            <span className="transition-colors hover:text-paper">AI-Native Delivery</span>
+            <span className="h-1 w-1 rounded-full bg-white/20" />
+            <span className="font-semibold text-gold">Global Remote</span>
           </div>
         </div>
       </div>

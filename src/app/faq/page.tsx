@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowUpRight, HelpCircle } from 'lucide-react';
 import { SITE_URL, SITE_NAME, FOUNDER_NAME } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions (FAQ) | Axorks Software Studio',
@@ -68,7 +69,7 @@ export default function FaqPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="pb-12 sm:pb-20">
       <head>
         <script
           type="application/ld+json"
@@ -76,50 +77,71 @@ export default function FaqPage() {
         />
       </head>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
-            <HelpCircle className="h-3.5 w-3.5" />
-            <span>KNOWLEDGE_BASE_&_FACTUAL_QA</span>
-          </div>
-
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Frequently Asked Questions
-          </h1>
-          <p className="mt-3 text-sm leading-relaxed text-steel">
-            Direct, factual answers regarding our studio architecture, technical standards, founder credentials, and investment ranges.
-          </p>
+      {/* Hero Band */}
+      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[28rem] w-[28rem] opacity-50" />
+          <div className="exec-mesh mesh-teal-dark absolute -right-24 bottom-0 h-[22rem] w-[22rem] opacity-40" />
+          <div className="exec-grid absolute inset-0 opacity-30" />
+          <div className="fund-ring absolute -bottom-40 left-1/2 h-[32rem] w-[70rem] -translate-x-1/2 opacity-40" />
         </div>
 
-        <div className="mt-10 space-y-6">
+        <div className="relative z-10 mx-auto max-w-4xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+          <Breadcrumbs items={[{ label: 'Frequently Asked Questions' }]} />
+
+          <div className="mt-4">
+            <div className="exec-eyebrow exec-eyebrow-gold">
+              <HelpCircle className="h-4 w-4 text-gold" />
+              <span>KNOWLEDGE_BASE_&_FACTUAL_QA</span>
+            </div>
+            <h1 className="mt-4 font-serif text-hero font-bold tracking-tight text-paper leading-tight sm:text-display">
+              Frequently Asked{' '}
+              <span className="gradient-text-gold">Questions</span>
+            </h1>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-steel sm:text-base">
+              Direct, factual answers regarding our studio architecture, technical standards, founder credentials, and investment ranges.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="mt-10 space-y-5">
           {faqs.map((faq, idx) => (
-            <div
+            <article
               key={idx}
-              className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8"
+              className="glass-card-dark relative overflow-hidden rounded-2xl p-6 sm:p-7 transition-all duration-400 hover:-translate-y-0.5 hover:border-gold/25"
             >
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
               <h2 className="font-serif text-lg sm:text-xl font-bold text-paper flex items-start gap-3">
-                <span className="font-mono text-xs font-bold text-gold mt-1 shrink-0">
-                  Q{idx + 1}.
+                <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-gold/30 bg-gold/10 font-mono text-[11px] font-bold text-gold">
+                  {idx + 1}
                 </span>
                 <span>{faq.q}</span>
               </h2>
-              <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm pl-8">
+              <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm pl-10">
                 {faq.a}
               </p>
-            </div>
+            </article>
           ))}
         </div>
 
-        <div className="mt-12 schematic-bracket border border-gold/40 bg-obsidian-raised p-8 text-center">
-          <h3 className="font-serif text-xl font-bold text-paper">
+        <div className="relative mt-12 overflow-hidden rounded-3xl border border-gold/35 bg-gradient-to-br from-obsidian-raised via-obsidian to-obsidian p-8 text-center shadow-obsidian-lg">
+          <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-1/2 top-0 h-40 w-40 -translate-x-1/2 rounded-full opacity-20 blur-3xl"
+            style={{ background: 'radial-gradient(circle, rgba(201,162,75,0.7), transparent 70%)' }}
+          />
+          <h3 className="relative font-serif text-xl font-bold text-paper">
             Have a specific technical question?
           </h3>
-          <p className="mt-2 text-xs text-steel">
+          <p className="relative mt-2 text-xs text-steel">
             Book a direct technical discovery call with our engineering team.
           </p>
           <Link
             href="/contact"
-            className="mt-5 inline-flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
+            className="btn btn-gold mt-6 inline-flex items-center gap-2"
           >
             Book Discovery Call
             <ArrowUpRight className="h-4 w-4" />

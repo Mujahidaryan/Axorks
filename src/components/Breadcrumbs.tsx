@@ -39,30 +39,33 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <ol className="flex flex-wrap items-center gap-2 font-mono text-xs text-steel">
+      <ol className="flex flex-wrap items-center gap-1.5 font-mono text-[11px] text-steel">
         <li>
           <Link
             href="/"
-            className="flex items-center gap-1 transition-colors hover:text-paper"
+            className="group flex items-center gap-1.5 rounded-full border border-white/10 bg-obsidian-raised/70 px-3 py-1.5 transition-all duration-300 hover:border-gold/40 hover:shadow-[0_0_12px_rgba(201,162,75,0.12)]"
           >
-            <Home className="h-3.5 w-3.5 text-gold" />
-            <span>Home</span>
+            <Home className="h-3.5 w-3.5 text-gold transition-transform duration-300 group-hover:-translate-y-px" />
+            <span className="text-paper/70 transition-colors group-hover:text-paper">Home</span>
           </Link>
         </li>
 
         {items.map((item, idx) => {
           const isLast = idx === items.length - 1;
           return (
-            <li key={idx} className="flex items-center gap-2">
-              <ChevronRight className="h-3 w-3 text-steel/50" />
+            <li key={idx} className="flex items-center gap-1.5">
+              <ChevronRight className="h-3 w-3 text-gold/50" />
               {isLast || !item.href ? (
-                <span className="font-semibold text-paper" aria-current="page">
+                <span
+                  className="rounded-full border border-gold/30 bg-gold/10 px-3 py-1.5 font-semibold text-gold shadow-[0_2px_10px_rgba(201,162,75,0.08)]"
+                  aria-current="page"
+                >
                   {item.label}
                 </span>
               ) : (
                 <Link
                   href={item.href}
-                  className="transition-colors hover:text-paper"
+                  className="rounded-full border border-transparent bg-obsidian-raised/70 px-3 py-1.5 text-paper/70 transition-all duration-300 hover:border-white/15 hover:text-paper"
                 >
                   {item.label}
                 </Link>

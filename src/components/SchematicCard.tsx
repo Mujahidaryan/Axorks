@@ -1,4 +1,4 @@
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck, ArrowUpRight } from 'lucide-react';
 
 export interface ProjectData {
   id: string;
@@ -23,32 +23,35 @@ export default function SchematicCard({ project }: { project: ProjectData }) {
 
   return (
     <div
-      className={`schematic-bracket group relative flex flex-col justify-between rounded-2xl border bg-gradient-to-br from-obsidian-raised via-obsidian-card to-obsidian p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 ${
-        project.isGovernment
-          ? 'border-gold/50 hover:border-gold shadow-[0_10px_35px_rgba(201,162,75,0.12)]'
-          : 'border-obsidian-border hover:border-indigo-500/40 shadow-xl'
+      className={`glass-card-dark group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl p-6 sm:p-7 ${
+        project.isGovernment ? 'before:content-none' : ''
       }`}
     >
+      {/* Government glow edge */}
+      {project.isGovernment && (
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+      )}
+
       <div>
-        {/* Schematic Header Bar */}
+        {/* Header Bar */}
         <div className="border-b border-white/10 pb-4">
           <div className="flex items-center justify-between gap-2">
             <span className="font-mono text-xs font-bold tracking-widest text-gold">
               {sysTag}
             </span>
             {project.isGovernment ? (
-              <span className="inline-flex items-center gap-1 shrink-0 rounded-full border border-gold/50 bg-gold/15 px-2.5 py-1 font-mono text-[9px] font-bold text-gold tracking-wide backdrop-blur-md">
+              <span className="inline-flex shrink-0 items-center gap-1 rounded-full border border-gold/50 bg-gold/15 px-2.5 py-1 font-mono text-[9px] font-bold text-gold tracking-wide backdrop-blur-md">
                 <ShieldCheck className="h-3 w-3 shrink-0 text-gold" />
                 GOVERNMENT GRADE
               </span>
             ) : (
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-wider text-steel shrink-0 bg-white/5 px-2.5 py-1 rounded border border-white/10">
-                REPRESENTATIVE WORK
+              <span className="rounded border border-white/10 bg-white/5 px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-steel">
+                REPRESENTATIVE
               </span>
             )}
           </div>
           {sysSlug && (
-            <div className="mt-2 font-mono text-[11px] font-semibold text-steel/90 tracking-wider uppercase break-words">
+            <div className="mt-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-steel/90 break-words">
               {sysSlug}
             </div>
           )}
@@ -56,49 +59,50 @@ export default function SchematicCard({ project }: { project: ProjectData }) {
 
         {/* Title & Category */}
         <div className="mt-5">
-          <span className="font-mono text-[10px] uppercase tracking-widest text-indigo-400 font-bold block mb-1">
+          <span className="mb-2 block font-mono text-[10px] font-bold uppercase tracking-widest text-indigo-400">
             {project.category}
           </span>
-          <h3 className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-paper group-hover:text-gold transition-colors">
+          <h3 className="font-serif text-xl font-bold tracking-tight text-paper transition-colors duration-300 group-hover:text-gold sm:text-2xl">
             {project.name}
           </h3>
         </div>
 
-        {/* Core Overview / Problem & Solution */}
+        {/* Overview */}
         <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm">
           {project.description}
         </p>
 
+        {/* Problem & Solution */}
         <div className="mt-5 space-y-2.5 border-t border-white/10 pt-4 text-xs">
-          <div>
-            <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-gold">Problem: </span>
-            <span className="text-paper/90">{project.problem}</span>
+          <div className="flex items-start gap-2.5">
+            <span className="mt-px shrink-0 rounded bg-gold/10 px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-gold">Problem</span>
+            <span className="text-paper/85">{project.problem}</span>
           </div>
-          <div>
-            <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-gold">Solution Built: </span>
-            <span className="text-paper/90">{project.built}</span>
+          <div className="flex items-start gap-2.5">
+            <span className="mt-px shrink-0 rounded bg-indigo-500/10 px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-indigo-300">Built</span>
+            <span className="text-paper/85">{project.built}</span>
           </div>
           {project.challenges && (
-            <div>
-              <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-gold">Engineering Challenge: </span>
-              <span className="text-paper/90">{project.challenges}</span>
+            <div className="flex items-start gap-2.5">
+              <span className="mt-px shrink-0 rounded bg-violet-500/10 px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-violet-300">Challenge</span>
+              <span className="text-paper/85">{project.challenges}</span>
             </div>
           )}
           {project.outcome && (
-            <div>
-              <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-gold">Outcome: </span>
-              <span className="text-paper/90">{project.outcome}</span>
+            <div className="flex items-start gap-2.5">
+              <span className="mt-px shrink-0 rounded bg-teal-500/10 px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-teal-300">Outcome</span>
+              <span className="text-paper/85">{project.outcome}</span>
             </div>
           )}
         </div>
 
-        {/* Impact Stats if any */}
+        {/* Impact Stats */}
         {project.stats && project.stats.length > 0 && (
-          <div className="mt-4 grid grid-cols-2 gap-2.5 border-t border-white/10 pt-3">
+          <div className="mt-4 grid grid-cols-2 gap-2.5 border-t border-white/10 pt-4">
             {project.stats.map((stat, idx) => (
-              <div key={idx} className="rounded-xl bg-obsidian/80 p-2.5 text-center border border-white/10 backdrop-blur-md">
+              <div key={idx} className="rounded-xl border border-white/[0.07] bg-obsidian/70 p-3 text-center backdrop-blur-md">
                 <div className="font-mono text-xs font-bold text-gold">{stat.value}</div>
-                <div className="font-mono text-[9px] uppercase tracking-wider text-steel mt-0.5">{stat.label}</div>
+                <div className="mt-0.5 font-mono text-[9px] uppercase tracking-wider text-steel">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -111,11 +115,15 @@ export default function SchematicCard({ project }: { project: ProjectData }) {
           {project.stack.map((item, idx) => (
             <span
               key={idx}
-              className="rounded-lg bg-obsidian px-2.5 py-1 font-mono text-[10px] text-steel border border-white/10"
+              className="rounded-lg border border-white/[0.07] bg-obsidian px-2.5 py-1 font-mono text-[10px] text-steel"
             >
               {item}
             </span>
           ))}
+        </div>
+        <div className="mt-4 inline-flex items-center gap-1.5 font-mono text-[11px] font-semibold uppercase tracking-wider text-gold opacity-0 transition-all duration-300 group-hover:opacity-100">
+          View case study
+          <ArrowUpRight className="h-3 w-3" />
         </div>
       </div>
     </div>

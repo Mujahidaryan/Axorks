@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { ArrowUpRight, ArrowLeft, Wrench, CheckCircle2, HelpCircle } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { PRICING } from '@/lib/pricing';
@@ -74,7 +75,7 @@ export default function MaintenanceSupportPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20">
+    <div className="space-y-16 sm:space-y-24">
       <head>
         <script
           type="application/ld+json"
@@ -86,32 +87,56 @@ export default function MaintenanceSupportPage() {
         />
       </head>
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/services"
-          className="inline-flex items-center gap-2 font-mono text-xs text-steel transition-colors hover:text-paper"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" />
-          Back to All Services
-        </Link>
-
-        <div className="mt-6 border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
-            <Wrench className="h-3.5 w-3.5" />
-            <span>CORE_SERVICE_06</span>
-          </div>
-
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Maintenance & Support Retainer
-          </h1>
-
-          <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-steel">
-            <span>Typical Investment: <strong className="text-gold font-bold">{PRICING.maintenanceSupport.formattedRange}</strong></span>
-            <span>·</span>
-            <span>Availability: <strong className="text-paper">Monthly Retainer SLA</strong></span>
-          </div>
+      {/* Hero Band */}
+      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
+        {/* Ambient background */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[34rem] w-[34rem] opacity-50" />
+          <div className="exec-mesh mesh-teal-dark absolute -right-24 bottom-0 h-[26rem] w-[26rem] opacity-40" />
+          <div className="exec-grid absolute inset-0 opacity-30" />
+          <div className="fund-ring absolute -bottom-40 left-1/2 h-[36rem] w-[70rem] -translate-x-1/2 opacity-40" />
         </div>
 
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 font-mono text-xs text-steel transition-colors hover:text-paper"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" />
+            Back to All Services
+          </Link>
+
+          <Breadcrumbs
+            items={[
+              { label: 'Services', href: '/services' },
+              { label: 'Maintenance & Support' },
+            ]}
+          />
+
+          <div className="mt-4">
+            <div className="exec-eyebrow exec-eyebrow-gold">
+              <Wrench className="h-4 w-4 text-gold" />
+              <span>CORE_SERVICE_06</span>
+            </div>
+
+            <h1 className="mt-4 font-serif text-hero font-bold tracking-tight text-paper leading-tight sm:text-display">
+              Maintenance &{' '}
+              <span className="gradient-text-gold">Support Retainer</span>
+            </h1>
+
+            <div className="flex flex-wrap items-center gap-2.5 pt-5">
+              <span className="rounded-full border border-white/10 bg-obsidian/80 px-4 py-2 font-mono text-xs text-steel">
+                Typical Investment: <strong className="text-gold font-bold">{PRICING.maintenanceSupport.formattedRange}</strong>
+              </span>
+              <span className="rounded-full border border-white/10 bg-obsidian/80 px-4 py-2 font-mono text-xs text-steel">
+                Availability: <strong className="text-paper">Monthly Retainer SLA</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Rich Factual Prose */}
         <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
           <p className="text-paper/95 text-base">
@@ -128,7 +153,8 @@ export default function MaintenanceSupportPage() {
         </div>
 
         {/* Deliverables List */}
-        <div className="mt-10 schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 sm:p-8">
+        <div className="mt-10 relative overflow-hidden rounded-2xl border border-white/10 bg-obsidian-card p-6 sm:p-8 shadow-obsidian-md">
+          <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
           <h2 className="font-serif text-xl font-bold text-paper mb-4">
             What's Included in Maintenance & Support
           </h2>
@@ -168,7 +194,8 @@ export default function MaintenanceSupportPage() {
           </h2>
 
           <div className="space-y-4">
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-obsidian-card p-5 shadow-obsidian-sm">
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
               <h3 className="font-serif text-base font-bold text-paper">
                 What is included in a monthly support retainer?
               </h3>
@@ -177,7 +204,8 @@ export default function MaintenanceSupportPage() {
               </p>
             </div>
 
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-obsidian-card p-5 shadow-obsidian-sm">
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
               <h3 className="font-serif text-base font-bold text-paper">
                 Can you maintain software built by another development team?
               </h3>
@@ -186,7 +214,8 @@ export default function MaintenanceSupportPage() {
               </p>
             </div>
 
-            <div className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-5">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-obsidian-card p-5 shadow-obsidian-sm">
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
               <h3 className="font-serif text-base font-bold text-paper">
                 What is the typical investment for a maintenance retainer?
               </h3>
@@ -198,7 +227,7 @@ export default function MaintenanceSupportPage() {
         </div>
 
         {/* CTA & Internal Navigation Links */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-obsidian-border pt-8 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row">
           <div className="flex items-center gap-4 text-xs font-mono text-steel">
             <Link href="/case-studies" className="hover:text-paper transition-colors">
               Explore Case Studies →
@@ -211,7 +240,7 @@ export default function MaintenanceSupportPage() {
 
           <Link
             href="/contact?service=Maintenance%20%26%20Support%20retainer"
-            className="inline-flex items-center gap-2 rounded bg-signal-blue px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-paper hover:bg-signal-blue-hover transition-colors"
+            className="btn btn-primary inline-flex items-center gap-2"
           >
             Inquire for Maintenance Retainer
             <ArrowUpRight className="h-4 w-4" />

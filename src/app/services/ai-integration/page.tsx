@@ -113,7 +113,7 @@ export default function AiIntegrationPage() {
   };
 
   return (
-    <div className="py-12 sm:py-20 space-y-16 sm:space-y-24">
+    <div className="space-y-16 sm:space-y-24">
       <head>
         <script
           type="application/ld+json"
@@ -121,44 +121,61 @@ export default function AiIntegrationPage() {
         />
       </head>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-        <Breadcrumbs
-          items={[
-            { label: 'Services', href: '/services' },
-            { label: 'AI Solutions & Automation' },
-          ]}
-        />
-
-        {/* SECTION 1: VALUE PROPOSITION */}
-        <div className="border-b border-obsidian-border pb-8 space-y-4">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold">
-            <Bot className="h-3.5 w-3.5" />
-            <span>AI_SOLUTIONS_&_WORKFLOW_AUTOMATION</span>
-          </div>
-
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            AI Solutions & Business Workflow Automation
-          </h1>
-
-          <p className="max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
-            Axorks builds practical AI automations that integrate intelligent assistants, document parsing pipelines, and automated workflows directly into your business software. We focus on high-ROI business tools that eliminate manual data entry hours and streamline daily operations for companies in the UK, US, EU, and worldwide.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-steel pt-2">
-            <span>Lead Entry Price: <strong className="text-gold font-bold">Starting at {serviceData.leadPrice}</strong></span>
-            <span>·</span>
-            <span>SLA: <strong className="text-paper">1 – 5 Weeks</strong></span>
-            <span>·</span>
-            <span>Data Privacy: <strong className="text-gold">Zero AI Training on Your Data</strong></span>
-          </div>
+      {/* Hero Band */}
+      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
+        {/* Ambient background */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[34rem] w-[34rem] opacity-50" />
+          <div className="exec-mesh mesh-teal-dark absolute -right-24 bottom-0 h-[26rem] w-[26rem] opacity-40" />
+          <div className="exec-grid absolute inset-0 opacity-30" />
+          <div className="fund-ring absolute -bottom-40 left-1/2 h-[36rem] w-[70rem] -translate-x-1/2 opacity-40" />
         </div>
 
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+          <Breadcrumbs
+            items={[
+              { label: 'Services', href: '/services' },
+              { label: 'AI Solutions & Automation' },
+            ]}
+          />
+
+          <div className="mt-4">
+            <div className="exec-eyebrow exec-eyebrow-gold">
+              <Bot className="h-4 w-4 text-gold" />
+              <span>AI_SOLUTIONS_&_WORKFLOW_AUTOMATION</span>
+            </div>
+
+            <h1 className="mt-4 font-serif text-hero font-bold tracking-tight text-paper leading-tight sm:text-display">
+              AI Solutions & Business{' '}
+              <span className="gradient-text-gold">Workflow Automation</span>
+            </h1>
+
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+              Axorks builds practical AI automations that integrate intelligent assistants, document parsing pipelines, and automated workflows directly into your business software. We focus on high-ROI business tools that eliminate manual data entry hours and streamline daily operations for companies in the UK, US, EU, and worldwide.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-2.5 pt-5">
+              <span className="rounded-full border border-white/10 bg-obsidian/80 px-4 py-2 font-mono text-xs text-steel">
+                Lead Entry Price: <strong className="text-gold font-bold">Starting at {serviceData.leadPrice}</strong>
+              </span>
+              <span className="rounded-full border border-white/10 bg-obsidian/80 px-4 py-2 font-mono text-xs text-steel">
+                SLA: <strong className="text-paper">1 – 5 Weeks</strong>
+              </span>
+              <span className="rounded-full border border-white/10 bg-obsidian/80 px-4 py-2 font-mono text-xs text-steel">
+                Data Privacy: <strong className="text-gold">Zero AI Training on Your Data</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Risk-Reversal Payment Structure Note Banner */}
         <PaymentTermsNote />
 
         {/* 3-Tier Pricing Ladder */}
         <div className="space-y-6">
-          <div className="border-b border-obsidian-border pb-4">
+          <div className="border-b border-white/10 pb-4">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-paper">
               Select Your AI Automation Tier
             </h2>
@@ -175,10 +192,11 @@ export default function AiIntegrationPage() {
                 return (
                   <div
                     key={tier.name}
-                    className="schematic-bracket flex flex-col justify-between border border-gold/60 bg-obsidian-raised p-6 space-y-6 shadow-[0_0_25px_rgba(201,162,75,0.12)]"
+                    className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-gold/40 bg-obsidian p-6 space-y-6 shadow-[0_0_30px_rgba(201,162,75,0.1)]"
                   >
+                    <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
                     <div className="space-y-4">
-                      <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
+                      <div className="flex items-center justify-between border-b border-white/10 pb-3">
                         <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
                           ENTERPRISE TIER · BESPOKE ARCHITECTURE
                         </span>
@@ -191,7 +209,7 @@ export default function AiIntegrationPage() {
                       </div>
 
                       {/* Narrative Highlights */}
-                      <div className="space-y-2 pt-2 border-t border-obsidian-border/60">
+                      <div className="space-y-2 pt-2 border-t border-white/10">
                         <span className="font-mono text-[10px] uppercase text-gold font-bold block">
                           Narrative Architecture Highlights:
                         </span>
@@ -206,7 +224,7 @@ export default function AiIntegrationPage() {
                       </div>
 
                       {/* Case Study Embedding */}
-                      <div className="rounded border border-gold/30 bg-gold/10 p-3 text-xs font-mono">
+                      <div className="rounded-xl border border-gold/25 bg-gold/10 p-3.5 text-xs font-mono">
                         <span className="text-gold font-bold block mb-1">Architectural Case Reference:</span>
                         <Link href={serviceData.caseStudyLink.href} className="text-paper hover:underline inline-flex items-center gap-1 font-semibold">
                           {serviceData.caseStudyLink.title}
@@ -221,10 +239,10 @@ export default function AiIntegrationPage() {
                       </div>
                     </div>
 
-                    <div className="pt-4 border-t border-obsidian-border">
+                    <div className="pt-4 border-t border-white/10">
                       <Link
                         href={`/contact?service=AI%20Solutions%20%26%20Automation&tier=Enterprise&cta=discovery`}
-                        className="flex items-center justify-center gap-2 w-full rounded bg-gold px-4 py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian hover:bg-gold-hover transition-colors text-center"
+                        className="btn btn-gold flex w-full items-center justify-center gap-2"
                       >
                         <PhoneCall className="h-4 w-4" />
                         Let's scope this together
@@ -237,14 +255,10 @@ export default function AiIntegrationPage() {
               return (
                 <div
                   key={tier.name}
-                  className={`schematic-bracket flex flex-col justify-between border bg-obsidian-raised p-6 space-y-6 ${
-                    tier.name === 'Starter'
-                      ? 'border-gold/60 shadow-[0_0_20px_rgba(201,162,75,0.12)]'
-                      : 'border-obsidian-border'
-                  }`}
+                  className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-obsidian-card p-6 space-y-6 shadow-obsidian-md"
                 >
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between border-b border-obsidian-border pb-3">
+                    <div className="flex items-center justify-between border-b border-white/10 pb-3">
                       <span className="font-mono text-xs font-bold text-gold uppercase tracking-wider">
                         {tier.name} TIER
                       </span>
@@ -256,7 +270,7 @@ export default function AiIntegrationPage() {
                       <p className="mt-2 text-xs leading-relaxed text-steel italic">"{tier.outcome}"</p>
                     </div>
 
-                    <div className="space-y-2 pt-2 border-t border-obsidian-border/60">
+                    <div className="space-y-2 pt-2 border-t border-white/10">
                       <span className="font-mono text-[10px] uppercase text-gold font-bold block">
                         Deliverables ({tier.deliverables.length} Items):
                       </span>
@@ -271,10 +285,10 @@ export default function AiIntegrationPage() {
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-obsidian-border">
+                  <div className="pt-4 border-t border-white/10">
                     <Link
                       href={`/contact?service=AI%20Solutions%20%26%20Automation&tier=${tier.name}&cta=quote`}
-                      className="flex items-center justify-center gap-2 w-full rounded bg-signal-blue px-4 py-2.5 font-mono text-xs font-semibold uppercase text-paper hover:bg-signal-blue-hover transition-colors"
+                      className="btn btn-primary flex w-full items-center justify-center gap-2"
                     >
                       <FileText className="h-3.5 w-3.5" />
                       Get a Quick Quote
@@ -302,8 +316,9 @@ export default function AiIntegrationPage() {
           </button>
 
           {showTechnicalOverview && (
-            <div className="mt-4 schematic-bracket border border-obsidian-border bg-obsidian p-6 space-y-6 text-xs text-steel leading-relaxed animate-fadeIn">
-              <div className="border-b border-obsidian-border pb-3">
+            <div className="mt-4 relative overflow-hidden rounded-2xl border border-white/10 bg-obsidian p-6 space-y-6 text-xs text-steel leading-relaxed animate-fade-in shadow-obsidian-md">
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
+              <div className="border-b border-white/10 pb-3">
                 <span className="font-mono text-xs font-bold text-paper uppercase block">
                   TECHNICAL ARCHITECTURE & API INTEGRATION SPECS
                 </span>
@@ -313,7 +328,7 @@ export default function AiIntegrationPage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="rounded border border-obsidian-border bg-obsidian-raised p-4 space-y-2">
+                <div className="rounded-xl border border-white/10 bg-obsidian-raised p-4 space-y-2">
                   <div className="flex items-center gap-2 text-gold font-mono font-bold">
                     <Server className="h-4 w-4" />
                     Model APIs & LLM Pipeline
@@ -323,7 +338,7 @@ export default function AiIntegrationPage() {
                   </p>
                 </div>
 
-                <div className="rounded border border-obsidian-border bg-obsidian-raised p-4 space-y-2">
+                <div className="rounded-xl border border-white/10 bg-obsidian-raised p-4 space-y-2">
                   <div className="flex items-center gap-2 text-gold font-mono font-bold">
                     <Database className="h-4 w-4" />
                     Vector Embeddings & Retrieval (RAG)
@@ -333,7 +348,7 @@ export default function AiIntegrationPage() {
                   </p>
                 </div>
 
-                <div className="rounded border border-obsidian-border bg-obsidian-raised p-4 space-y-2">
+                <div className="rounded-xl border border-white/10 bg-obsidian-raised p-4 space-y-2">
                   <div className="flex items-center gap-2 text-gold font-mono font-bold">
                     <Cpu className="h-4 w-4" />
                     Token Optimization & Cache Layer
@@ -343,7 +358,7 @@ export default function AiIntegrationPage() {
                   </p>
                 </div>
 
-                <div className="rounded border border-obsidian-border bg-obsidian-raised p-4 space-y-2">
+                <div className="rounded-xl border border-white/10 bg-obsidian-raised p-4 space-y-2">
                   <div className="flex items-center gap-2 text-gold font-mono font-bold">
                     <Lock className="h-4 w-4" />
                     Data Isolation & Privacy Security

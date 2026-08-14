@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, Code2, Users, Smartphone, Bot, Info, Layout, FileText, CheckCircle2, PhoneCall, UserCheck } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Users, Smartphone, Bot, Info, FileText, UserCheck, Sparkles, Globe, Award, Zap, Clock, Building2, Code2 } from 'lucide-react';
 import GoldSwooshLine from '@/components/GoldSwooshLine';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -104,502 +104,647 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="space-y-16 pb-16 pt-4 sm:space-y-24 sm:pb-24">
-      {/* Hero Section with Video & Dynamic Artwork Backdrop */}
-      <section className="relative overflow-hidden rounded-3xl border border-white/15 bg-obsidian-raised/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] mx-auto max-w-7xl">
-        {/* Background Kling AI Video Player — subtle ambient motion */}
-        <div className="absolute inset-0 z-0 overflow-hidden opacity-45">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="h-full w-full object-cover scale-105 filter blur-[0.5px]"
-            style={{ objectPosition: '60% center' }}
-          >
-            <source src="/assets/hero_motion.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/75 to-obsidian/45" />
-          <div className="absolute inset-0 bg-gradient-to-b from-obsidian/60 via-transparent to-obsidian" />
-        </div>
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="space-y-16 pt-4 sm:space-y-24 pb-16 sm:pb-24">
+        {/* ============================================================
+            HERO — EXECUTIVE STAGE
+        ============================================================ */}
+        <section className="exec-hero-stage relative overflow-hidden">
+          {/* Ambient meshes + grid */}
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+            <div className="exec-mesh mesh-indigo-dark animate-drift-slow absolute -left-32 -top-32 h-[520px] w-[520px]" />
+            <div className="exec-mesh mesh-teal-dark absolute -bottom-32 -right-32 h-[520px] w-[520px]" />
+            <div className="exec-mesh mesh-violet-dark absolute left-1/2 top-1/2 h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 opacity-40" />
+            <div className="exec-grid absolute inset-0 opacity-40" />
+          </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 px-6 py-12 sm:px-10 sm:py-20 lg:px-12">
-          <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
-            <div className="max-w-3xl space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 font-mono text-xs font-semibold text-gold backdrop-blur-md shadow-sm">
-                <ShieldCheck className="h-4 w-4 text-gold" />
-                <span>International Software Engineering Studio · Global Remote Delivery</span>
+          {/* Background video — quiet ambient motion */}
+          <div className="absolute inset-0 z-0 overflow-hidden opacity-20">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full scale-105 object-cover"
+              style={{ objectPosition: '60% center' }}
+            >
+              <source src="/assets/hero_motion.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/70 to-obsidian/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-obsidian/70 via-transparent to-obsidian/50" />
+          </div>
+
+          {/* Hero content */}
+          <div className="relative z-10 px-6 py-14 sm:px-10 sm:py-20 lg:px-14 lg:py-24">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+              {/* Left column */}
+              <div className="lg:col-span-7">
+                <ScrollReveal direction="none">
+                  <div className="exec-eyebrow exec-eyebrow-gold mb-8">
+                    <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse-soft" />
+                    International Software Engineering Studio · Global Remote Delivery
+                  </div>
+                </ScrollReveal>
+
+                <ScrollReveal direction="up" delay={0.05}>
+                  <h1 className="font-serif text-3xl font-bold leading-[1.08] tracking-tight text-paper sm:text-5xl lg:text-6xl">
+                    Architecting Enterprise
+                    <span className="gradient-text-gold mt-2 block italic">AI Systems &amp; Bespoke Software</span>
+                  </h1>
+                </ScrollReveal>
+
+                <ScrollReveal direction="up" delay={0.12}>
+                  <p className="mt-6 max-w-xl text-base leading-relaxed text-steel sm:text-lg">
+                    Axorks is an independent software engineering company serving ambitious startups, SMEs, and enterprises across the UK, Europe, GCC, North America, and worldwide. Powered by a core team of <strong className="font-semibold text-paper">7+ senior engineers and designers</strong>, we architect custom web applications, AI automations, and mobile platforms engineered for high performance, enterprise security, and long-term scalability.
+                  </p>
+                </ScrollReveal>
+
+                {/* Direct collaboration trust line */}
+                <ScrollReveal direction="up" delay={0.18}>
+                  <div className="mt-7 flex max-w-xl items-start gap-3 rounded-2xl border border-white/10 bg-obsidian/60 p-4 backdrop-blur-xl shadow-obsidian-sm">
+                    <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gold/15 ring-1 ring-gold/30">
+                      <UserCheck className="h-5 w-5 text-gold" />
+                    </div>
+                    <p className="font-mono text-xs leading-relaxed text-steel">
+                      You collaborate directly with Chief Systems Architect{' '}
+                      <strong className="font-semibold text-paper">Muhammad Mujahid</strong> and senior engineers —{' '}
+                      <span className="text-gold">zero account-manager handoff.</span>
+                    </p>
+                  </div>
+                </ScrollReveal>
+
+                <ScrollReveal direction="up" delay={0.24}>
+                  <div className="mt-9 flex flex-wrap items-center gap-4">
+                    <Link href="/contact?cta=discovery" className="btn btn-white group">
+                      Book Free Discovery Call
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </Link>
+                    <Link href="/contact?cta=quote" className="btn btn-outline-dark">
+                      <FileText className="h-4 w-4 text-gold" />
+                      Get a Quick Quote
+                    </Link>
+                  </div>
+                </ScrollReveal>
               </div>
 
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-paper leading-tight">
-                Architecting Enterprise AI Systems
-                <span className="block text-gold italic font-serif text-2xl sm:text-3xl lg:text-4xl font-normal mt-1">
-                  &amp; Bespoke Software Platforms
-                </span>
-              </h1>
+              {/* Right column — Capability Matrix Panel */}
+              <div className="lg:col-span-5">
+                <ScrollReveal direction="up" delay={0.2}>
+                  <div className="glass-card-dark relative overflow-hidden rounded-3xl p-6 sm:p-7">
+                    {/* Top accent bar */}
+                    <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-gold/30 via-gold to-gold/30" />
 
-              <p className="text-base leading-relaxed text-steel sm:text-lg">
-                Axorks is an independent software engineering company serving ambitious startups, SMEs, and enterprises across the UK, Europe, GCC, North America, and worldwide. Powered by a core team of <strong className="text-paper">7+ senior engineers and designers</strong>, we architect custom web applications, AI automations, and mobile platforms engineered for high performance, enterprise security, and long-term scalability.
-              </p>
+                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/15 ring-1 ring-indigo-400/25">
+                          <Code2 className="h-5 w-5 text-indigo-300" />
+                        </div>
+                        <div>
+                          <div className="font-mono text-xs font-semibold tracking-wider text-paper">Studio Capability Matrix</div>
+                          <div className="font-mono text-[10px] uppercase tracking-widest text-steel">Global Remote Delivery</div>
+                        </div>
+                      </div>
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse-soft" />
+                        Active
+                      </span>
+                    </div>
 
-              {/* Direct Collaboration Line */}
-              <div className="rounded-xl border border-white/15 bg-obsidian/90 p-4 font-mono text-xs text-steel flex items-center gap-3 backdrop-blur-md shadow-md">
-                <UserCheck className="h-5 w-5 text-gold shrink-0" />
-                <span>You collaborate directly with Chief Systems Architect <strong>Muhammad Mujahid</strong> and senior engineers — zero account-manager handoff.</span>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-4 pt-2">
-                <Link
-                  href="/contact?cta=discovery"
-                  className="group flex items-center gap-2.5 rounded-full border border-paper/30 bg-paper px-7 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-paper/20 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  Book Free Discovery Call
-                  <ArrowUpRight className="h-4 w-4 text-obsidian transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-
-                <Link
-                  href="/contact?cta=quote"
-                  className="flex items-center gap-2 rounded-full border border-gold/50 bg-obsidian/80 px-6 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-gold transition-all duration-300 hover:bg-gold/15 hover:border-gold backdrop-blur-md hover:shadow-lg hover:shadow-gold/10"
-                >
-                  <FileText className="h-4 w-4 text-gold" />
-                  Get a Quick Quote
-                </Link>
+                    <ul className="mt-5 space-y-3">
+                      <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
+                        <span className="flex items-center gap-3">
+                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/15 ring-1 ring-indigo-400/20">
+                            <Sparkles className="h-4 w-4 text-indigo-300" />
+                          </span>
+                          <span className="font-mono text-xs text-steel">Chief Systems Architect</span>
+                        </span>
+                        <span className="font-mono text-xs font-bold text-paper">M. Mujahid</span>
+                      </li>
+                      <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
+                        <span className="flex items-center gap-3">
+                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-500/15 ring-1 ring-teal-400/20">
+                            <Users className="h-4 w-4 text-teal-300" />
+                          </span>
+                          <span className="font-mono text-xs text-steel">Core Engineering Team</span>
+                        </span>
+                        <span className="font-mono text-xs font-bold text-gold">7+ Senior Engineers</span>
+                      </li>
+                      <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
+                        <span className="flex items-center gap-3">
+                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-500/15 ring-1 ring-violet-400/20">
+                            <Award className="h-4 w-4 text-violet-300" />
+                          </span>
+                          <span className="font-mono text-xs text-steel">Production Systems Shipped</span>
+                        </span>
+                        <span className="font-mono text-xs font-bold text-paper">6+ Live Systems</span>
+                      </li>
+                      <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
+                        <span className="flex items-center gap-3">
+                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500/15 ring-1 ring-amber-400/20">
+                            <Globe className="h-4 w-4 text-amber-300" />
+                          </span>
+                          <span className="font-mono text-xs text-steel">Delivery Model</span>
+                        </span>
+                        <span className="font-mono text-xs font-bold text-gold">Global Remote</span>
+                      </li>
+                      <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
+                        <span className="flex items-center gap-3">
+                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/15 ring-1 ring-blue-400/20">
+                            <Zap className="h-4 w-4 text-blue-300" />
+                          </span>
+                          <span className="font-mono text-xs text-steel">Timezone Overlap</span>
+                        </span>
+                        <span className="font-mono text-xs font-semibold text-paper">US / UK / EU / GCC</span>
+                      </li>
+                      <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
+                        <span className="flex items-center gap-3">
+                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/15 ring-1 ring-emerald-400/20">
+                            <Clock className="h-4 w-4 text-emerald-300" />
+                          </span>
+                          <span className="font-mono text-xs text-steel">Response SLA</span>
+                        </span>
+                        <span className="font-mono text-xs font-bold text-paper">&lt; 24 Hours</span>
+                      </li>
+                    </ul>
+                  </div>
+                </ScrollReveal>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Right Hero Schematic Matrix */}
-            <div className="w-full lg:w-[380px]">
-              <div className="rounded-2xl border border-gold/40 bg-gradient-to-br from-obsidian-raised via-obsidian-card to-obsidian p-6 shadow-2xl backdrop-blur-xl relative overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold/40 via-gold to-gold/40" />
-                <div className="flex items-center justify-between border-b border-white/10 pb-3 font-mono text-xs text-gold">
-                  <span>STUDIO_CAPABILITY_MATRIX</span>
-                  <span className="flex items-center gap-1.5 text-emerald-400 font-bold">
-                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                    ACTIVE
-                  </span>
+        {/* ============================================================
+            STATS — SIGNATURE PROOF BAR
+        ============================================================ */}
+        <section className="relative">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-b from-slate-50 via-white to-slate-100/90 px-6 py-12 shadow-executive-lg sm:px-10 sm:py-14">
+            {/* Rich ambient color presence */}
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+              <div className="exec-mesh mesh-indigo-light absolute -right-24 -top-24 h-96 w-96" />
+              <div className="exec-mesh mesh-teal-light absolute -bottom-24 -left-24 h-96 w-96" />
+              <div className="exec-mesh mesh-amber-light absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 opacity-50" />
+              <div className="exec-dots-light absolute inset-0 opacity-40" />
+            </div>
+
+            <div className="relative z-10">
+              <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+                <div className="exec-eyebrow exec-eyebrow-light">
+                  <Award className="h-4 w-4 text-indigo-600" />
+                  Provable Studio Metrics
                 </div>
-                <ul className="mt-4 space-y-3.5 font-mono text-xs text-steel">
-                  <li className="flex items-center justify-between">
-                    <span>Chief Systems Architect:</span>
-                    <span className="font-bold text-paper">M. Mujahid</span>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Core Engineering Team:</span>
-                    <span className="font-bold text-gold">7+ Senior Engineers</span>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Track Record:</span>
-                    <span className="font-bold text-paper">6+ Shipped Systems</span>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Delivery Model:</span>
-                    <span className="font-bold text-gold">Global Remote Delivery</span>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Timezone Overlap:</span>
-                    <span className="text-paper font-semibold">US / UK / EU Shifts</span>
-                  </li>
-                </ul>
+                <p className="text-sm font-medium text-slate-600">Quantifiable engineering delivery — no fluff, no filler.</p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+                <ScrollReveal direction="up" delay={0.03}>
+                  <div className="exec-stat p-6 text-center sm:p-8">
+                    <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-indigo-700 via-indigo-500 to-indigo-400" />
+                    <span className="block font-serif text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+                      <AnimatedCounter target={6} suffix="+" />
+                    </span>
+                    <div className="mx-auto mt-4 h-[3px] w-10 rounded-full bg-indigo-600" />
+                    <span className="mt-4 block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">Systems Shipped</span>
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal direction="up" delay={0.08}>
+                  <div className="exec-stat p-6 text-center sm:p-8">
+                    <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-teal-700 via-teal-500 to-teal-400" />
+                    <span className="block font-serif text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+                      <AnimatedCounter target={7} suffix="+" />
+                    </span>
+                    <div className="mx-auto mt-4 h-[3px] w-10 rounded-full bg-teal-600" />
+                    <span className="mt-4 block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">Senior Engineers</span>
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal direction="up" delay={0.13}>
+                  <div className="exec-stat p-6 text-center sm:p-8">
+                    <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-violet-700 via-violet-500 to-violet-400" />
+                    <span className="block font-serif text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+                      <AnimatedCounter target={5} suffix="+" />
+                    </span>
+                    <div className="mx-auto mt-4 h-[3px] w-10 rounded-full bg-violet-600" />
+                    <span className="mt-4 block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">Enterprise Clients</span>
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal direction="up" delay={0.18}>
+                  <div className="exec-stat p-6 text-center sm:p-8">
+                    <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-amber-600 via-amber-500 to-amber-400" />
+                    <span className="block font-serif text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl">
+                      <AnimatedCounter target={100} suffix="%" />
+                    </span>
+                    <div className="mx-auto mt-4 h-[3px] w-10 rounded-full bg-amber-600" />
+                    <span className="mt-4 block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">On-Time Delivery</span>
+                  </div>
+                </ScrollReveal>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Signature Quantifiable Proof Bar — Executive White Stats Section */}
-      <section className="w-full bg-gradient-to-b from-slate-50 via-white to-slate-100/90 border-y border-slate-200/90 shadow-sm relative overflow-hidden">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 relative z-10">
-          {/* Section Label */}
-          <div className="text-center mb-10 space-y-1">
-            <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1 font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest">
-              <span>PROVABLE_STUDIO_METRICS</span>
+        {/* ============================================================
+            OFFICE & LEADERSHIP PROOF
+        ============================================================ */}
+        <section className="relative">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-executive-xl">
+            {/* Ambient color authority */}
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+              <div className="exec-mesh mesh-indigo-light absolute right-0 top-0 h-96 w-96" />
+              <div className="exec-mesh mesh-teal-light absolute bottom-0 left-0 h-96 w-96" />
             </div>
-            <p className="mt-2 font-sans text-sm text-slate-600 font-medium">
-              Quantifiable engineering delivery — no fluff, no filler.
-            </p>
-          </div>
 
-          {/* Large Impact Number Grid */}
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 text-center space-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
-              <span className="block font-serif text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight">
-                <AnimatedCounter target={6} suffix="+" />
-              </span>
-              <div className="h-[3px] w-10 bg-indigo-600 mx-auto rounded-full" />
-              <span className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">Systems Shipped</span>
-            </div>
-            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 text-center space-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
-              <span className="block font-serif text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight">
-                <AnimatedCounter target={7} suffix="+" />
-              </span>
-              <div className="h-[3px] w-10 bg-teal-600 mx-auto rounded-full" />
-              <span className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">Senior Engineers</span>
-            </div>
-            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 text-center space-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
-              <span className="block font-serif text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight">
-                <AnimatedCounter target={5} suffix="+" />
-              </span>
-              <div className="h-[3px] w-10 bg-violet-600 mx-auto rounded-full" />
-              <span className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">Enterprise Clients</span>
-            </div>
-            <div className="bg-white rounded-2xl border border-slate-200/90 p-6 text-center space-y-2 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
-              <span className="block font-serif text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight">
-                <AnimatedCounter target={100} suffix="%" />
-              </span>
-              <div className="h-[3px] w-10 bg-amber-600 mx-auto rounded-full" />
-              <span className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-600">On-Time Delivery</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Physical Office & Leadership Visual Proof Block */}
-      <section className="w-full bg-gradient-to-b from-slate-100/90 via-slate-50 to-white border-b border-slate-200">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-0">
-          <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
-            <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-              {/* Office Image Visual Anchor */}
-              <div className="relative lg:col-span-7 h-72 sm:h-96 lg:h-[460px] overflow-hidden">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch">
+              {/* Office image */}
+              <div className="relative lg:col-span-7 h-72 sm:h-96 lg:h-auto lg:min-h-[460px] overflow-hidden">
                 <img
                   src="/AxorkOffice.png"
                   alt="Axorks Software House Corporate Office"
-                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                  className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-white" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-white/30" />
+                <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/15 bg-slate-950/70 px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur-md">
+                  <Building2 className="h-3.5 w-3.5 text-gold" />
+                  Karachi · Islamabad
+                </div>
               </div>
 
-              {/* Office Text Panel */}
-              <div className="lg:col-span-5 bg-white p-8 sm:p-12 space-y-5 flex flex-col justify-center">
-                <span className="font-mono text-[11px] font-bold text-indigo-700 uppercase tracking-widest">
-                  [ PHYSICAL_WORKSPACE_&amp;_HEADQUARTERS ]
-                </span>
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">
-                  Real Office. Real Engineers. Global Delivery.
+              {/* Office text panel */}
+              <div className="relative lg:col-span-5 flex flex-col justify-center p-8 sm:p-12">
+                <div className="exec-eyebrow exec-eyebrow-light mb-5">
+                  <Building2 className="h-4 w-4 text-indigo-600" />
+                  Physical Workspace &amp; Headquarters
+                </div>
+                <h2 className="font-serif text-2xl font-bold leading-tight text-slate-900 sm:text-3xl">
+                  Real office. Real engineers.
+                  <span className="gradient-text-indigo block">Global delivery.</span>
                 </h2>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="mt-4 text-sm leading-relaxed text-slate-600">
                   Operating from our modern software house facilities in Karachi &amp; Islamabad, Axorks combines physical office infrastructure with transparent, asynchronous global remote delivery for international clients.
                 </p>
-                <div className="pt-4 flex items-center gap-6 border-t border-slate-100 font-mono text-xs">
-                  <div>
-                    <span className="block text-indigo-700 font-bold text-sm">100% In-House</span>
-                    <span className="text-slate-500 text-[11px] mt-0.5 block font-sans">Zero Outsourcing</span>
+
+                <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-slate-200 bg-slate-200">
+                  <div className="bg-white p-5">
+                    <span className="block font-mono text-xs font-bold text-indigo-700">100% In-House</span>
+                    <span className="mt-1 block font-sans text-[11px] text-slate-500">Zero Outsourcing</span>
                   </div>
-                  <div className="h-8 w-[1px] bg-slate-200" />
-                  <div>
-                    <span className="block text-slate-900 font-bold text-sm">Direct Access</span>
-                    <span className="text-slate-500 text-[11px] mt-0.5 block font-sans">Chief Systems Architect</span>
+                  <div className="bg-white p-5">
+                    <span className="block font-mono text-xs font-bold text-slate-900">Direct Access</span>
+                    <span className="mt-1 block font-sans text-[11px] text-slate-500">Chief Systems Architect</span>
+                  </div>
+                  <div className="bg-white p-5">
+                    <span className="block font-mono text-xs font-bold text-teal-700">24hr Response</span>
+                    <span className="mt-1 block font-sans text-[11px] text-slate-500">Guaranteed SLA</span>
+                  </div>
+                  <div className="bg-white p-5">
+                    <span className="block font-mono text-xs font-bold text-violet-700">NDA Standard</span>
+                    <span className="mt-1 block font-sans text-[11px] text-slate-500">Every Engagement</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Risk-Reversal Payment Structure — Executive Light Banner */}
-      <section className="w-full bg-gradient-to-r from-slate-50 via-white to-indigo-50/50 border-y border-slate-200/90 shadow-sm">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            {/* Left: Blue top-accent label + headline */}
-            <div className="space-y-1.5">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="h-5 w-5 text-indigo-600 shrink-0" />
-                <span className="font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest">
-                  RISK-REVERSAL MILESTONE BILLING
-                </span>
-              </div>
-              <p className="font-sans text-sm text-slate-700 leading-relaxed">
-                Milestone-based billing: <strong className="text-slate-900">40% to begin, 40% at midpoint review, 20% on final delivery</strong>. You're never paying for work you haven't seen.
-              </p>
+        {/* ============================================================
+            RISK-REVERSAL PAYMENT BANNER
+        ============================================================ */}
+        <section className="relative">
+          <div className="relative overflow-hidden rounded-3xl border border-indigo-200/60 bg-gradient-to-r from-indigo-50/90 via-white to-teal-50/80 px-6 py-8 shadow-executive-lg sm:px-10 sm:py-10">
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+              <div className="exec-mesh mesh-indigo-light absolute -left-24 -top-24 h-72 w-72" />
+              <div className="exec-mesh mesh-teal-light absolute -bottom-24 right-0 h-72 w-72" />
             </div>
-            {/* Right: CTA */}
-            <a
-              href="/contact"
-              className="shrink-0 flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 font-mono text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/20 active:scale-[0.98]"
-            >
-              Start with No Risk
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
-      </section>
 
-      {/* Services Tiers Capabilities Section with Executive Cards */}
-      <section className="w-full bg-gradient-to-b from-slate-50 via-white to-slate-100/90 py-16 sm:py-24 border-y border-slate-200 shadow-sm relative overflow-hidden">
-        {/* Rich Ambient Meshes & Grid */}
-        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-indigo-500/8 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-teal-500/8 blur-3xl pointer-events-none" />
-        <div className="absolute inset-0 executive-grid-pattern-light opacity-40 pointer-events-none" />
-
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-slate-200/80 pb-5 gap-4">
-            <div className="space-y-1.5">
-              <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200/90 bg-indigo-50 px-3.5 py-1 font-mono text-xs font-bold text-indigo-700 uppercase tracking-widest shadow-2xs">
-                <span>PRODUCTIZED_CAPABILITIES_&amp;_PRICING</span>
-              </div>
-              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
-                Enterprise Software Offerings &amp; Pricing Ladders
-              </h2>
-            </div>
-            <Link
-              href="/services"
-              className="font-mono text-xs text-indigo-700 hover:text-indigo-900 inline-flex items-center gap-1 font-bold bg-indigo-50 px-4 py-2 rounded-full border border-indigo-200/80 transition-all hover:shadow-xs shrink-0"
-            >
-              Explore All Tiered Pricing Ladders
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {/* Card 1: Custom Website Development */}
-            <div className="group relative rounded-3xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_24px_50px_-12px_rgba(15,23,42,0.12)] transition-all duration-400 hover:-translate-y-1.5 hover:border-slate-300">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-600 to-indigo-400 z-20" />
-              <div>
-                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
-                  <img
-                    src="/assets/web_art.png"
-                    alt="Custom Website Development"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-90"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
-                  <span className="absolute top-3 left-3 rounded-full bg-slate-950/90 px-3 py-1 font-mono text-[10px] font-bold text-indigo-300 uppercase tracking-widest border border-indigo-400/40 backdrop-blur-md shadow-xs">
-                    [ CUSTOM WEB ]
+            <div className="relative z-10 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+              <div className="max-w-2xl space-y-2">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-indigo-600 shadow-sm ring-1 ring-indigo-100">
+                    <ShieldCheck className="h-5 w-5" />
+                  </div>
+                  <span className="font-mono text-xs font-bold uppercase tracking-widest text-indigo-700">
+                    Risk-Reversal Milestone Billing
                   </span>
                 </div>
-                <div className="p-6 sm:p-7 space-y-2.5">
-                  <h3 className="font-serif text-xl font-bold text-slate-900 group-hover:text-indigo-700 transition-colors leading-snug">
-                    Custom Website Development
-                  </h3>
-                  <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
-                    Corporate website development built with Next.js App Router, TypeScript, and serverless infrastructure.
-                  </p>
-                </div>
+                <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
+                  Milestone-based billing: <strong className="font-semibold text-slate-900">40% to begin, 40% at midpoint review, 20% on final delivery</strong>. You&apos;re never paying for work you haven&apos;t seen.
+                </p>
               </div>
-              <div className="p-6 sm:p-7 pt-0 border-t border-slate-100/90 mt-4 space-y-3.5 font-mono text-xs">
-                <div className="flex items-center justify-between">
-                  <span className="text-slate-500 font-medium">Floor Pricing:</span>
-                  <span className="text-indigo-700 font-bold bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-200/80">{PRICING.websiteDevelopment.shortRange}</span>
-                </div>
-                <Link
-                  href="/services#website-development"
-                  className="flex items-center justify-center gap-1.5 text-xs text-slate-900 bg-slate-50 border border-slate-200/90 py-2.5 rounded-xl hover:border-indigo-300 hover:bg-indigo-50/70 hover:text-indigo-900 transition-all font-bold shadow-2xs"
-                >
-                  {getTierRangeLabel('websiteDevelopment')}
-                  <ArrowUpRight className="h-3.5 w-3.5 text-indigo-600" />
-                </Link>
-              </div>
+              <Link href="/contact" className="btn btn-primary shrink-0">
+                Start with No Risk
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================
+            SERVICES — TIERED CAPABILITIES
+        ============================================================ */}
+        <section className="relative">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-200/80 bg-gradient-to-b from-slate-50 via-white to-slate-100/90 px-6 py-12 shadow-executive-lg sm:px-10 sm:py-16">
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+              <div className="exec-mesh mesh-indigo-light absolute -right-24 top-0 h-96 w-96" />
+              <div className="exec-mesh mesh-teal-light absolute -bottom-24 left-0 h-96 w-96" />
+              <div className="exec-grid-light absolute inset-0 opacity-40" />
             </div>
 
-            {/* Card 2: Web Applications & Systems */}
-            <div className="group relative rounded-3xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_24px_50px_-12px_rgba(15,23,42,0.12)] transition-all duration-400 hover:-translate-y-1.5 hover:border-slate-300">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-600 to-teal-400 z-20" />
-              <div>
-                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
-                  <img
-                    src="/assets/cloud_art.png"
-                    alt="Web Applications & Systems"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-90"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
-                  <span className="absolute top-3 left-3 rounded-full bg-slate-950/90 px-3 py-1 font-mono text-[10px] font-bold text-teal-300 uppercase tracking-widest border border-teal-400/40 backdrop-blur-md shadow-xs">
-                    [ CLOUD &amp; SYSTEMS ]
-                  </span>
-                </div>
-                <div className="p-6 sm:p-7 space-y-2.5">
-                  <h3 className="font-serif text-xl font-bold text-slate-900 group-hover:text-teal-700 transition-colors leading-snug">
-                    Web Applications &amp; Systems
-                  </h3>
-                  <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
-                    Full-stack web portals, CRMs, and internal tools with serverless PostgreSQL databases and RBAC permissions.
-                  </p>
-                </div>
-              </div>
-              <div className="p-6 sm:p-7 pt-0 border-t border-slate-100/90 mt-4 space-y-3.5 font-mono text-xs">
-                <div className="flex items-center justify-between">
-                  <span className="text-slate-500 font-medium">Floor Pricing:</span>
-                  <span className="text-teal-700 font-bold bg-teal-50 px-2.5 py-0.5 rounded-full border border-teal-200/80">{PRICING.webApplications.shortRange}</span>
+            <div className="relative z-10">
+              <div className="flex flex-col justify-between gap-6 border-b border-slate-200/80 pb-8 sm:flex-row sm:items-end">
+                <div className="max-w-2xl space-y-4">
+                  <div className="exec-eyebrow exec-eyebrow-light">
+                    <Sparkles className="h-4 w-4 text-indigo-600" />
+                    Productized Capabilities &amp; Pricing
+                  </div>
+                  <h2 className="font-serif text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl lg:text-4xl">
+                    Enterprise software offerings
+                    <span className="gradient-text-indigo block">&amp; transparent pricing ladders</span>
+                  </h2>
                 </div>
                 <Link
-                  href="/services#web-applications"
-                  className="flex items-center justify-center gap-1.5 text-xs text-slate-900 bg-slate-50 border border-slate-200/90 py-2.5 rounded-xl hover:border-teal-300 hover:bg-teal-50/70 hover:text-teal-900 transition-all font-bold shadow-2xs"
+                  href="/services"
+                  className="group inline-flex shrink-0 items-center gap-2 rounded-full border border-indigo-200 bg-white px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider text-indigo-700 shadow-executive-sm transition-all duration-300 hover:border-indigo-300 hover:shadow-executive-glow"
                 >
-                  {getTierRangeLabel('webApplications')}
-                  <ArrowUpRight className="h-3.5 w-3.5 text-teal-600" />
+                  Explore All Tiered Pricing Ladders
+                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </div>
-            </div>
 
-            {/* Card 3: AI Solutions & Automation */}
-            <div className="group relative rounded-3xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_24px_50px_-12px_rgba(15,23,42,0.12)] transition-all duration-400 hover:-translate-y-1.5 hover:border-slate-300">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-600 to-violet-400 z-20" />
-              <div>
-                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
-                  <img
-                    src="/assets/ai_art.png"
-                    alt="AI Solutions & Automation"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-90"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
-                  <span className="absolute top-3 left-3 rounded-full bg-slate-950/90 px-3 py-1 font-mono text-[10px] font-bold text-violet-300 uppercase tracking-widest border border-violet-400/40 backdrop-blur-md shadow-xs">
-                    [ AI &amp; AUTOMATION ]
-                  </span>
-                </div>
-                <div className="p-6 sm:p-7 space-y-2.5">
-                  <h3 className="font-serif text-xl font-bold text-slate-900 group-hover:text-violet-700 transition-colors leading-snug">
-                    AI Solutions &amp; Automation
-                  </h3>
-                  <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
-                    Integrating OpenAI API pipelines, document processing workflows, and vector embeddings into software.
-                  </p>
-                </div>
-              </div>
-              <div className="p-6 sm:p-7 pt-0 border-t border-slate-100/90 mt-4 space-y-3.5 font-mono text-xs">
-                <div className="flex items-center justify-between">
-                  <span className="text-slate-500 font-medium">Floor Pricing:</span>
-                  <span className="text-violet-700 font-bold bg-violet-50 px-2.5 py-0.5 rounded-full border border-violet-200/80">{PRICING.aiIntegration.shortRange}</span>
-                </div>
-                <Link
-                  href="/services#ai-integration"
-                  className="flex items-center justify-center gap-1.5 text-xs text-slate-900 bg-slate-50 border border-slate-200/90 py-2.5 rounded-xl hover:border-violet-300 hover:bg-violet-50/70 hover:text-violet-900 transition-all font-bold shadow-2xs"
-                >
-                  {getTierRangeLabel('aiIntegration')}
-                  <ArrowUpRight className="h-3.5 w-3.5 text-violet-600" />
-                </Link>
-              </div>
-            </div>
+              <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+                {/* Card 1 — Custom Website */}
+                <ScrollReveal direction="up" delay={0.02}>
+                  <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-executive-md transition-all duration-400 hover:-translate-y-1.5 hover:border-indigo-300/60 hover:shadow-executive-glow">
+                    <div className="absolute inset-x-0 top-0 z-20 h-[3px] bg-gradient-to-r from-indigo-700 via-indigo-500 to-indigo-400" />
+                    <div className="relative h-44 overflow-hidden bg-slate-900">
+                      <img
+                        src="/assets/web_art.png"
+                        alt="Custom Website Development"
+                        className="h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-108"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                      <span className="absolute left-3 top-3 rounded-full border border-indigo-400/40 bg-indigo-950/80 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-indigo-200 backdrop-blur-md">
+                        Custom Web
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="font-serif text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-indigo-800">
+                        Custom Website Development
+                      </h3>
+                      <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
+                        Corporate websites built with Next.js App Router, TypeScript, and serverless infrastructure.
+                      </p>
+                      <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                        <span className="font-mono text-xs text-slate-500">Floor Pricing:</span>
+                        <span className="rounded-full border border-indigo-200 bg-indigo-50 px-2.5 py-0.5 font-mono text-xs font-bold text-indigo-700">
+                          {PRICING.websiteDevelopment.shortRange}
+                        </span>
+                      </div>
+                      <Link
+                        href="/services#website-development"
+                        className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 py-2.5 font-mono text-xs font-bold text-slate-900 transition-all duration-300 group-hover:border-indigo-300 group-hover:bg-indigo-50/70 group-hover:text-indigo-900"
+                      >
+                        {getTierRangeLabel('websiteDevelopment')}
+                        <ArrowUpRight className="h-3.5 w-3.5 text-indigo-600" />
+                      </Link>
+                    </div>
+                  </article>
+                </ScrollReveal>
 
-            {/* Card 4: Mobile App Development */}
-            <div className="group relative rounded-3xl border border-slate-200/90 bg-white overflow-hidden flex flex-col justify-between shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_24px_50px_-12px_rgba(15,23,42,0.12)] transition-all duration-400 hover:-translate-y-1.5 hover:border-slate-300">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-400 z-20" />
-              <div>
-                <div className="relative h-48 w-full overflow-hidden bg-slate-900">
-                  <img
-                    src="/assets/hero_art.png"
-                    alt="Mobile App Development"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-108 opacity-90"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
-                  <span className="absolute top-3 left-3 rounded-full bg-slate-950/90 px-3 py-1 font-mono text-[10px] font-bold text-amber-300 uppercase tracking-widest border border-amber-400/40 backdrop-blur-md shadow-xs">
-                    [ MOBILE APPS ]
-                  </span>
-                </div>
-                <div className="p-6 sm:p-7 space-y-2.5">
-                  <h3 className="font-serif text-xl font-bold text-slate-900 group-hover:text-amber-700 transition-colors leading-snug">
-                    Mobile App Development
-                  </h3>
-                  <p className="text-xs sm:text-sm leading-relaxed text-slate-600 font-normal">
-                    Cross-platform iOS and Android mobile applications built for performance and offline data synchronization.
-                  </p>
-                </div>
-              </div>
-              <div className="p-6 sm:p-7 pt-0 border-t border-slate-100/90 mt-4 space-y-3.5 font-mono text-xs">
-                <div className="flex items-center justify-between">
-                  <span className="text-slate-500 font-medium">Floor Pricing:</span>
-                  <span className="text-amber-700 font-bold bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/80">{PRICING.mobileAppDevelopment.shortRange}</span>
-                </div>
-                <Link
-                  href="/services#mobile-app-development"
-                  className="flex items-center justify-center gap-1.5 text-xs text-slate-900 bg-slate-50 border border-slate-200/90 py-2.5 rounded-xl hover:border-amber-300 hover:bg-amber-50/70 hover:text-amber-900 transition-all font-bold shadow-2xs"
-                >
-                  {getTierRangeLabel('mobileAppDevelopment')}
-                  <ArrowUpRight className="h-3.5 w-3.5 text-amber-600" />
-                </Link>
+                {/* Card 2 — Web Apps */}
+                <ScrollReveal direction="up" delay={0.07}>
+                  <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-executive-md transition-all duration-400 hover:-translate-y-1.5 hover:border-teal-300/60 hover:shadow-executive-glow-teal">
+                    <div className="absolute inset-x-0 top-0 z-20 h-[3px] bg-gradient-to-r from-teal-700 via-teal-500 to-teal-400" />
+                    <div className="relative h-44 overflow-hidden bg-slate-900">
+                      <img
+                        src="/assets/cloud_art.png"
+                        alt="Web Applications & Systems"
+                        className="h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-108"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                      <span className="absolute left-3 top-3 rounded-full border border-teal-400/40 bg-teal-950/80 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-teal-200 backdrop-blur-md">
+                        Cloud &amp; Systems
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="font-serif text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-teal-800">
+                        Web Applications &amp; Systems
+                      </h3>
+                      <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
+                        Full-stack web portals, CRMs, and internal tools with serverless PostgreSQL and RBAC permissions.
+                      </p>
+                      <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                        <span className="font-mono text-xs text-slate-500">Floor Pricing:</span>
+                        <span className="rounded-full border border-teal-200 bg-teal-50 px-2.5 py-0.5 font-mono text-xs font-bold text-teal-700">
+                          {PRICING.webApplications.shortRange}
+                        </span>
+                      </div>
+                      <Link
+                        href="/services#web-applications"
+                        className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 py-2.5 font-mono text-xs font-bold text-slate-900 transition-all duration-300 group-hover:border-teal-300 group-hover:bg-teal-50/70 group-hover:text-teal-900"
+                      >
+                        {getTierRangeLabel('webApplications')}
+                        <ArrowUpRight className="h-3.5 w-3.5 text-teal-600" />
+                      </Link>
+                    </div>
+                  </article>
+                </ScrollReveal>
+
+                {/* Card 3 — AI */}
+                <ScrollReveal direction="up" delay={0.12}>
+                  <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-executive-md transition-all duration-400 hover:-translate-y-1.5 hover:border-violet-300/60 hover:shadow-executive-glow-violet">
+                    <div className="absolute inset-x-0 top-0 z-20 h-[3px] bg-gradient-to-r from-violet-700 via-violet-500 to-violet-400" />
+                    <div className="relative h-44 overflow-hidden bg-slate-900">
+                      <img
+                        src="/assets/ai_art.png"
+                        alt="AI Solutions & Automation"
+                        className="h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-108"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                      <span className="absolute left-3 top-3 rounded-full border border-violet-400/40 bg-violet-950/80 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-violet-200 backdrop-blur-md">
+                        AI &amp; Automation
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="font-serif text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-violet-800">
+                        AI Solutions &amp; Automation
+                      </h3>
+                      <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
+                        OpenAI API pipelines, document processing workflows, and vector embeddings into software.
+                      </p>
+                      <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                        <span className="font-mono text-xs text-slate-500">Floor Pricing:</span>
+                        <span className="rounded-full border border-violet-200 bg-violet-50 px-2.5 py-0.5 font-mono text-xs font-bold text-violet-700">
+                          {PRICING.aiIntegration.shortRange}
+                        </span>
+                      </div>
+                      <Link
+                        href="/services#ai-integration"
+                        className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 py-2.5 font-mono text-xs font-bold text-slate-900 transition-all duration-300 group-hover:border-violet-300 group-hover:bg-violet-50/70 group-hover:text-violet-900"
+                      >
+                        {getTierRangeLabel('aiIntegration')}
+                        <ArrowUpRight className="h-3.5 w-3.5 text-violet-600" />
+                      </Link>
+                    </div>
+                  </article>
+                </ScrollReveal>
+
+                {/* Card 4 — Mobile */}
+                <ScrollReveal direction="up" delay={0.17}>
+                  <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-executive-md transition-all duration-400 hover:-translate-y-1.5 hover:border-amber-300/60 hover:shadow-executive-glow-gold">
+                    <div className="absolute inset-x-0 top-0 z-20 h-[3px] bg-gradient-to-r from-amber-600 via-amber-500 to-amber-400" />
+                    <div className="relative h-44 overflow-hidden bg-slate-900">
+                      <img
+                        src="/assets/hero_art.png"
+                        alt="Mobile App Development"
+                        className="h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-108"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                      <span className="absolute left-3 top-3 rounded-full border border-amber-400/40 bg-amber-950/80 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-amber-200 backdrop-blur-md">
+                        Mobile Apps
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="font-serif text-xl font-bold leading-snug text-slate-900 transition-colors group-hover:text-amber-800">
+                        Mobile App Development
+                      </h3>
+                      <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
+                        Cross-platform iOS and Android apps built for performance and offline data synchronization.
+                      </p>
+                      <div className="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                        <span className="font-mono text-xs text-slate-500">Floor Pricing:</span>
+                        <span className="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 font-mono text-xs font-bold text-amber-700">
+                          {PRICING.mobileAppDevelopment.shortRange}
+                        </span>
+                      </div>
+                      <Link
+                        href="/services#mobile-app-development"
+                        className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 py-2.5 font-mono text-xs font-bold text-slate-900 transition-all duration-300 group-hover:border-amber-300 group-hover:bg-amber-50/70 group-hover:text-amber-900"
+                      >
+                        {getTierRangeLabel('mobileAppDevelopment')}
+                        <ArrowUpRight className="h-3.5 w-3.5 text-amber-600" />
+                      </Link>
+                    </div>
+                  </article>
+                </ScrollReveal>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Interactive Systems Showcase Carousel */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SystemsCarousel />
-      </section>
+        {/* ============================================================
+            INTERACTIVE SYSTEMS SHOWCASE
+        ============================================================ */}
+        <section>
+          <SystemsCarousel />
+        </section>
 
-      {/* Featured Case Studies Preview */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b border-obsidian-border pb-4 gap-4">
-          <div>
-            <span className="font-mono text-xs text-gold uppercase tracking-wider">
-              PROOF_OF_ENGINEERING_CAPABILITY
-            </span>
-            <h2 className="mt-1 font-serif text-2xl sm:text-3xl font-bold text-paper">
-              Representative Systems Architecture
-            </h2>
+        {/* ============================================================
+            FEATURED CASE STUDIES
+        ============================================================ */}
+        <section>
+          <ScrollReveal direction="up">
+            <div className="flex flex-col justify-between gap-4 border-b border-white/10 pb-5 sm:flex-row sm:items-end">
+              <div>
+                <div className="exec-eyebrow exec-eyebrow-gold mb-3">
+                  <ShieldCheck className="h-4 w-4" />
+                  Proof of Engineering Capability
+                </div>
+                <h2 className="font-serif text-2xl font-bold tracking-tight text-paper sm:text-3xl">
+                  Representative Systems Architecture
+                </h2>
+              </div>
+              <Link
+                href="/case-studies"
+                className="group inline-flex shrink-0 items-center gap-2 font-mono text-xs font-semibold uppercase tracking-wider text-gold transition-colors hover:text-gold-light"
+              >
+                View All Case Studies
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+            </div>
+          </ScrollReveal>
+
+          {/* NDA disclaimer */}
+          <div className="mt-6 flex items-start gap-3 rounded-xl border border-gold/25 bg-obsidian-raised/70 p-4 text-xs text-steel backdrop-blur-md">
+            <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gold/10 ring-1 ring-gold/25">
+              <Info className="h-4 w-4 text-gold" />
+            </div>
+            <p className="leading-relaxed">
+              Representative software systems engineered by our technical team in senior engineering capacities. Specific client identities and proprietary metrics are protected under NDA.
+            </p>
           </div>
-          <Link
-            href="/case-studies"
-            className="font-mono text-xs text-signal-blue hover:text-signal-blue-hover inline-flex items-center gap-1 font-semibold"
-          >
-            View All Representative Case Studies
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </Link>
-        </div>
 
-        {/* Grounded NDA Disclaimer Note */}
-        <div className="mt-6 rounded-xl border border-gold/30 bg-obsidian-raised p-4 flex items-start gap-3 text-xs text-steel">
-          <Info className="h-4 w-4 text-gold shrink-0 mt-0.5" />
-          <p className="leading-relaxed">
-            Representative software systems engineered by our technical team in senior engineering capacities. Specific client identities and proprietary metrics are protected under NDA.
-          </p>
-        </div>
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featuredProjects.map((project, idx) => (
+              <ScrollReveal key={project.id} direction="up" delay={idx * 0.05}>
+                <SchematicCard project={project} />
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-          {featuredProjects.map((project) => (
-            <SchematicCard key={project.id} project={project} />
-          ))}
-        </div>
-      </section>
+        <GoldSwooshLine />
 
-      {/* Testimonials Structure Section */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <TestimonialsSection />
-      </section>
+        {/* ============================================================
+            TESTIMONIALS
+        ============================================================ */}
+        <section>
+          <TestimonialsSection />
+        </section>
 
-      {/* Split Homepage Conversion & Contact Section (Systems Limited Pattern) */}
-      <section id="contact-section" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian-raised/80 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            {/* Left Brand Call to Action */}
-            <div className="lg:col-span-5 space-y-6">
-              <span className="font-mono text-xs text-gold uppercase tracking-wider">
-                [ LET'S_BUILD_WHAT'S_NEXT ]
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-paper leading-[1.15]">
-                Let's build what's next, <span className="italic text-gold">together.</span>
-              </h2>
-              <p className="text-sm text-steel leading-relaxed">
-                Whether you need a bespoke web application, enterprise AI pipeline, or full-stack software system, our senior engineering team is ready to deliver.
-              </p>
-              
-              <div className="space-y-3 pt-2 font-mono text-xs text-paper">
-                <div className="flex items-center gap-3">
-                  <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Guaranteed 24-Hour Technical Response</span>
+        {/* ============================================================
+            CONTACT — SPLIT CONVERSION
+        ============================================================ */}
+        <section id="contact-section">
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian-raised/80 p-6 shadow-obsidian-lg backdrop-blur-xl sm:p-10">
+            <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+              <div className="exec-mesh mesh-indigo-dark absolute -left-32 -top-32 h-[420px] w-[420px]" />
+              <div className="exec-mesh mesh-teal-dark absolute -bottom-32 -right-32 h-[420px] w-[420px]" />
+              <div className="exec-grid absolute inset-0 opacity-30" />
+            </div>
+
+            <div className="relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+              {/* Left */}
+              <div className="lg:col-span-5">
+                <div className="exec-eyebrow exec-eyebrow-gold mb-6">
+                  <Sparkles className="h-4 w-4" />
+                  Let&apos;s build what&apos;s next
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-2 w-2 rounded-full bg-gold" />
-                  <span>Direct Chief Systems Architect Consultation</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-2 w-2 rounded-full bg-signal-blue" />
-                  <span>Milestone Billing — 40 / 40 / 20 Structure</span>
-                </div>
+                <h2 className="font-serif text-3xl font-bold leading-[1.15] tracking-tight text-paper sm:text-4xl lg:text-5xl">
+                  Let&apos;s build what&apos;s next, <span className="gradient-text-gold italic">together.</span>
+                </h2>
+                <p className="mt-5 max-w-md text-sm leading-relaxed text-steel">
+                  Whether you need a bespoke web application, enterprise AI pipeline, or full-stack software system, our senior engineering team is ready to deliver.
+                </p>
+
+                <ul className="mt-8 space-y-4">
+                  <li className="flex items-center gap-3 font-mono text-xs text-paper">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse-soft" />
+                    Guaranteed 24-Hour Technical Response
+                  </li>
+                  <li className="flex items-center gap-3 font-mono text-xs text-paper">
+                    <span className="h-2 w-2 rounded-full bg-gold" />
+                    Direct Chief Systems Architect Consultation
+                  </li>
+                  <li className="flex items-center gap-3 font-mono text-xs text-paper">
+                    <span className="h-2 w-2 rounded-full bg-indigo-400" />
+                    Milestone Billing — 40 / 40 / 20 Structure
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right — form */}
+              <div className="lg:col-span-7">
+                <ContactForm />
               </div>
             </div>
-
-            {/* Right High-Contrast Floating Form Card */}
-            <div className="lg:col-span-7">
-              <ContactForm />
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* International Client Objection Handling FAQ */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <InternationalFAQSection />
-      </section>
+        {/* ============================================================
+            INTERNATIONAL FAQ
+        ============================================================ */}
+        <section>
+          <InternationalFAQSection />
+        </section>
+      </div>
     </div>
   );
 }

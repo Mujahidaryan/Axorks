@@ -26,32 +26,45 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="py-12 sm:py-20">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 font-mono text-xs text-steel transition-colors hover:text-paper"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" />
-          Back to Homepage
-        </Link>
+    <div className="pb-12 sm:pb-20">
+      {/* Hero Band */}
+      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[26rem] w-[26rem] opacity-50" />
+          <div className="exec-mesh mesh-amber-dark absolute -right-24 bottom-0 h-[20rem] w-[20rem] opacity-40" />
+          <div className="exec-grid absolute inset-0 opacity-30" />
+          <div className="fund-ring absolute -bottom-40 left-1/2 h-[30rem] w-[70rem] -translate-x-1/2 opacity-40" />
+        </div>
 
-        <header className="mt-6 border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3 py-1 font-mono text-xs font-semibold text-gold mb-3">
-            <ShieldCheck className="h-3.5 w-3.5" />
-            <span>DATA_PROTECTION_&_PRIVACY</span>
+        <div className="relative z-10 mx-auto max-w-4xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-obsidian/80 px-4 py-2 font-mono text-xs text-steel transition-all duration-300 hover:border-gold/40 hover:text-paper"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" />
+            Back to Homepage
+          </Link>
+
+          <div className="mt-6">
+            <div className="exec-eyebrow exec-eyebrow-gold">
+              <ShieldCheck className="h-4 w-4 text-gold" />
+              <span>DATA_PROTECTION_&_PRIVACY</span>
+            </div>
+
+            <h1 className="mt-4 font-serif text-hero font-bold tracking-tight text-paper leading-tight sm:text-display">
+              Privacy <span className="gradient-text-gold">&amp; Cookie Policy</span>
+            </h1>
+            <p className="mt-3 font-mono text-xs text-steel">
+              Last Updated: July 2026
+            </p>
           </div>
+        </div>
+      </header>
 
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Privacy & Cookie Policy
-          </h1>
-          <p className="mt-2 font-mono text-xs text-steel">
-            Last Updated: July 2026
-          </p>
-        </header>
-
-        <div className="mt-8 space-y-6 text-sm leading-relaxed text-steel">
-          <section className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-3">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="mt-10 space-y-5 text-sm leading-relaxed text-steel">
+          <section className="glass-card-dark relative overflow-hidden rounded-2xl p-6 space-y-3">
+            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
             <h2 className="font-serif text-lg font-bold text-paper">
               1. Information We Collect
             </h2>
@@ -60,7 +73,8 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-3">
+          <section className="glass-card-dark relative overflow-hidden rounded-2xl p-6 space-y-3">
+            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
             <h2 className="font-serif text-lg font-bold text-paper">
               2. Data Protection & Security
             </h2>
@@ -69,7 +83,8 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-3">
+          <section className="glass-card-dark relative overflow-hidden rounded-2xl p-6 space-y-3">
+            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
             <h2 className="font-serif text-lg font-bold text-paper">
               3. Cookie Policy & Analytics
             </h2>
@@ -78,7 +93,8 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="schematic-bracket border border-obsidian-border bg-obsidian-raised p-6 space-y-3">
+          <section className="glass-card-dark relative overflow-hidden rounded-2xl p-6 space-y-3">
+            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
             <h2 className="font-serif text-lg font-bold text-paper">
               4. Data Deletion Requests
             </h2>

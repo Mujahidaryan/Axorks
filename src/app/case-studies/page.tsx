@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import SchematicCard, { ProjectData } from '@/components/SchematicCard';
 import ScrollReveal from '@/components/ScrollReveal';
 import AnimatedCounter from '@/components/AnimatedCounter';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { ShieldCheck, Info, Award, Cpu, Database, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
@@ -167,32 +168,49 @@ export default function CaseStudiesPage() {
   ];
 
   return (
-    <div className="py-12 sm:py-20 space-y-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
-        <div className="border-b border-obsidian-border pb-6">
-          <div className="inline-flex items-center gap-2 rounded border border-gold/40 bg-gold/10 px-3.5 py-1.5 font-mono text-xs font-semibold text-gold mb-3">
-            <ShieldCheck className="h-4 w-4" />
-            <span>Technical Engineering Portfolio &amp; Case Studies</span>
-          </div>
-
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-paper sm:text-4xl lg:text-5xl">
-            Representative Engineering Work
-          </h1>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-steel">
-            Technical case studies detailing 6 production systems engineered across agri-tech telemetry, public-sector humanitarian platforms, clinical operations, and quantitative AI systems.
-          </p>
+    <div className="space-y-16">
+      {/* Hero Band */}
+      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[28rem] w-[28rem] opacity-50" />
+          <div className="exec-mesh mesh-amber-dark absolute -right-24 bottom-0 h-[22rem] w-[22rem] opacity-40" />
+          <div className="exec-grid absolute inset-0 opacity-30" />
+          <div className="fund-ring absolute -bottom-40 left-1/2 h-[32rem] w-[70rem] -translate-x-1/2 opacity-40" />
         </div>
 
-        {/* NDA Disclaimer Block */}
-        <div className="schematic-bracket border border-gold/30 bg-obsidian-raised p-6 flex items-start gap-3 text-xs text-steel rounded-2xl">
-          <Info className="h-5 w-5 text-gold shrink-0 mt-0.5" />
-          <div className="space-y-1">
-            <strong className="font-mono text-gold uppercase tracking-wider block">
-              CONFIDENTIALITY_&amp;_ATTRIBUTION_DISCLAIMER
-            </strong>
-            <p className="leading-relaxed">
-              Select systems presented below were engineered by our founder and technical team in a senior engineering/subcontracting capacity for client partner studios. Specific client names, exact proprietary production endpoints, and confidential financial metrics are withheld per non-disclosure agreements (NDAs).
+        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+          <Breadcrumbs items={[{ label: 'Case Studies' }]} />
+
+          <div className="mt-4">
+            <div className="exec-eyebrow exec-eyebrow-gold">
+              <ShieldCheck className="h-4 w-4 text-gold" />
+              <span>Technical Engineering Portfolio &amp; Case Studies</span>
+            </div>
+            <h1 className="mt-4 font-serif text-hero font-bold tracking-tight text-paper leading-tight sm:text-display">
+              Representative{' '}
+              <span className="gradient-text-gold">Engineering Work</span>
+            </h1>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-steel sm:text-base">
+              Technical case studies detailing 6 production systems engineered across agri-tech telemetry, public-sector humanitarian platforms, clinical operations, and quantitative AI systems.
             </p>
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
+        {/* NDA Disclaimer Block */}
+        <div className="relative overflow-hidden rounded-2xl border border-gold/30 bg-gradient-to-br from-obsidian-raised via-obsidian to-obsidian p-6 shadow-obsidian-sm">
+          <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+          <div className="relative flex items-start gap-3 text-xs text-steel">
+            <Info className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+            <div className="space-y-1">
+              <strong className="font-mono text-gold uppercase tracking-wider block">
+                CONFIDENTIALITY_&amp;_ATTRIBUTION_DISCLAIMER
+              </strong>
+              <p className="leading-relaxed">
+                Select systems presented below were engineered by our founder and technical team in a senior engineering/subcontracting capacity for client partner studios. Specific client names, exact proprietary production endpoints, and confidential financial metrics are withheld per non-disclosure agreements (NDAs).
+              </p>
+            </div>
           </div>
         </div>
 
@@ -204,7 +222,7 @@ export default function CaseStudiesPage() {
       </div>
 
       {/* Full-Width Light Section: Proven Performance & Delivery Standards */}
-      <section className="w-full bg-gradient-to-b from-slate-50 via-sys-light to-slate-100/90 py-16 sm:py-20 border-y border-slate-200 shadow-sm relative overflow-hidden">
+      <section className="w-full bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100/90 py-16 sm:py-20 border-y border-slate-200 shadow-sm relative overflow-hidden">
         {/* Background Soft Executive Accent Mesh */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[450px] rounded-full bg-indigo-500/5 blur-3xl pointer-events-none" />
 
@@ -288,7 +306,7 @@ export default function CaseStudiesPage() {
           <div className="text-center pt-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-8 py-3.5 font-mono text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/20"
+              className="btn btn-primary inline-flex items-center gap-2"
             >
               Discuss Your Project Architecture
               <ArrowUpRight className="h-4 w-4" />
