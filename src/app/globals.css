@@ -692,4 +692,18 @@
     white-space: normal;
     text-align: center;
   }
+
+  /* Long mono eyebrow pills (PRODUCTIZED_SOFTWARE_SERVICES_&_TIERS, etc.)
+     had no break points -> they overflowed the screen on phones. */
+  .exec-eyebrow {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* Underlined mono labels/badges (CONFIDENTIALITY_&_ATTRIBUTION_DISCLAIMER,
+     REPRESENTATIVE, FACTUAL_COMPARISON_MATRIX) were clipped by parent
+     overflow-hidden on narrow screens. Allow safe wrapping only on mobile. */
+  .font-mono {
+    overflow-wrap: anywhere;
+  }
 }

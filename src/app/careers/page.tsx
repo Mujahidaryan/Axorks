@@ -121,7 +121,7 @@ export default function CareersPage() {
           <div className="fund-ring absolute -bottom-40 left-1/2 h-[32rem] w-[70rem] -translate-x-1/2 opacity-40" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
           <Breadcrumbs items={[{ label: 'Careers & Opportunities' }]} />
 
           <div className="mt-4">
@@ -140,7 +140,7 @@ export default function CareersPage() {
         </div>
       </header>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 space-y-10">
         {/* Roles List */}
         <div className="space-y-8">
           {roles.map((role) => (
@@ -249,7 +249,7 @@ export default function CareersPage() {
           <div className="exec-dots-light absolute inset-x-0 top-0 h-px" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 space-y-12">
           <ScrollReveal direction="up">
             <div className="text-center space-y-3.5 max-w-3xl mx-auto">
               <div className="exec-eyebrow exec-eyebrow-light justify-center">
