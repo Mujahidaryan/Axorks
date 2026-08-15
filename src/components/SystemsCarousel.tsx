@@ -171,7 +171,7 @@ export default function SystemsCarousel() {
             </span>
           </div>
 
-          <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 font-mono text-xs text-paper">
+          <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-2 font-mono text-xs text-paper">
             <span className="rounded border border-gold/30 bg-obsidian/90 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gold backdrop-blur-md">
               {activeSlide.sysId}
             </span>
@@ -197,9 +197,9 @@ export default function SystemsCarousel() {
           </p>
 
           {/* Metrics */}
-          <div className="mt-6 grid grid-cols-3 gap-3">
+          <div className="mt-6 grid grid-cols-3 gap-2 sm:gap-3">
             {activeSlide.metrics.map((m, idx) => (
-              <div key={idx} className="rounded-xl border border-white/[0.08] bg-obsidian/70 p-3.5 text-center backdrop-blur-md transition-colors duration-300 hover:border-gold/30">
+              <div key={idx} className="rounded-xl border border-white/[0.08] bg-obsidian/70 p-3 text-center backdrop-blur-md transition-colors duration-300 hover:border-gold/30 sm:p-3.5">
                 <span className="block font-mono text-[10px] uppercase tracking-wider text-steel">{m.label}</span>
                 <span className="mt-1.5 block font-mono text-xs font-bold text-gold">{m.value}</span>
               </div>

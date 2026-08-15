@@ -112,7 +112,7 @@ export default function TestimonialsSection({ testimonials = [] }: TestimonialsS
                 </p>
               </div>
 
-              <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-5">
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-5">
                 <div>
                   <span className="block font-mono text-xs font-bold text-slate-900">{t.author}</span>
                   <span className="mt-0.5 block font-sans text-[11px] font-medium text-slate-600">{t.role}</span>

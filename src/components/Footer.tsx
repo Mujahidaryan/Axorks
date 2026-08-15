@@ -142,7 +142,7 @@ export default function Footer() {
           </div>
 
           {/* Direct Channels Column */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-paper">Direct Channels</h3>
             <ul className="mt-5 space-y-3.5 text-xs">
               <li>

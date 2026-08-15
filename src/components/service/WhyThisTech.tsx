@@ -61,12 +61,12 @@ export default function WhyThisTech({
                   />
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
                       <span className="font-serif text-xl font-bold text-slate-900 transition-colors group-hover:text-indigo-950">
                         {tech.name}
                       </span>
                       <span
-                        className="rounded-lg border px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-wider"
+                        className="shrink-0 rounded-lg border px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-wider"
                         style={{
                           backgroundColor: `${accent}10`,
                           borderColor: `${accent}28`,

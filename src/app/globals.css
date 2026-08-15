@@ -679,3 +679,17 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transform: translateY(-3px);
 }
+
+/* ============================================================
+   MOBILE REFINEMENTS (max-width 639px only) — desktop untouched
+   ============================================================ */
+@media (max-width: 639px) {
+  /* Buttons: full-width, wrap-safe, comfortable tap targets on phones.
+     Never affects sm+ viewports (>= 640px). */
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+}
