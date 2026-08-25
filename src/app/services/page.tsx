@@ -107,12 +107,12 @@ export default function ServicesHubPage() {
             {/* Right column — trust metrics panel */}
             <div className="space-y-3">
               <div className="glass-card-dark rounded-2xl p-5">
-                <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-3">
                   <span className="font-mono text-[11px] font-bold uppercase tracking-widest text-gold">
                     Transparent Pricing Ladder
                   </span>
-                  <span className="flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-emerald-400">
-                    <span className="h-1.5 w-1.5 animate-pulse-soft rounded-full bg-emerald-400" />
+                  <span className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-emerald-400">
+                    <span className="h-1.5 w-1.5 shrink-0 animate-pulse-soft rounded-full bg-emerald-400" />
                     Live
                   </span>
                 </div>

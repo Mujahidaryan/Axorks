@@ -204,8 +204,8 @@ export default function HomePage() {
                           <div className="font-mono text-[10px] uppercase tracking-widest text-steel">Global Remote Delivery</div>
                         </div>
                       </div>
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse-soft" />
+                      <span className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400 animate-pulse-soft" />
                         Active
                       </span>
                     </div>
