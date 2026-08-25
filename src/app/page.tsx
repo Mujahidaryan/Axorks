@@ -194,49 +194,49 @@ export default function HomePage() {
                     {/* Top accent bar */}
                     <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-gold/30 via-gold to-gold/30" />
 
-                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/15 ring-1 ring-indigo-400/25">
+                    <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-4">
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-500/15 ring-1 ring-indigo-400/25">
                           <Code2 className="h-5 w-5 text-indigo-300" />
                         </div>
-                        <div>
-                          <div className="font-mono text-xs font-semibold tracking-wider text-paper">Studio Capability Matrix</div>
-                          <div className="font-mono text-[10px] uppercase tracking-widest text-steel">Global Remote Delivery</div>
+                        <div className="min-w-0">
+                          <div className="font-mono text-xs font-semibold tracking-wider text-paper truncate">Studio Capability Matrix</div>
+                          <div className="font-mono text-[10px] uppercase tracking-widest text-steel truncate">Global Remote Delivery</div>
                         </div>
                       </div>
-                      <span className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+                      <span className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-emerald-300 leading-none select-none">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400 animate-pulse-soft" />
-                        Active
+                        <span className="leading-none tracking-wider">Active</span>
                       </span>
                     </div>
 
                     <ul className="mt-5 space-y-3">
                       <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
-                        <span className="flex items-center gap-3">
-                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/15 ring-1 ring-indigo-400/20">
+                        <span className="flex items-center gap-3 min-w-0">
+                          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-indigo-500/15 ring-1 ring-indigo-400/20">
                             <Sparkles className="h-4 w-4 text-indigo-300" />
                           </span>
-                          <span className="font-mono text-xs text-steel">Chief Systems Architect</span>
+                          <span className="font-mono text-xs text-steel truncate">Chief Systems Architect</span>
                         </span>
-                        <span className="font-mono text-xs font-bold text-paper">M. Mujahid</span>
+                        <span className="font-mono text-xs font-semibold text-paper shrink-0 whitespace-nowrap">M. Mujahid</span>
                       </li>
                       <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
-                        <span className="flex items-center gap-3">
-                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-500/15 ring-1 ring-teal-400/20">
+                        <span className="flex items-center gap-3 min-w-0">
+                          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-teal-500/15 ring-1 ring-teal-400/20">
                             <Users className="h-4 w-4 text-teal-300" />
                           </span>
-                          <span className="font-mono text-xs text-steel">Core Engineering Team</span>
+                          <span className="font-mono text-xs text-steel truncate">Core Engineering Team</span>
                         </span>
-                        <span className="font-mono text-xs font-bold text-gold">7+ Senior Engineers</span>
+                        <span className="font-mono text-xs font-bold text-gold shrink-0 whitespace-nowrap">7+ Senior Engineers</span>
                       </li>
                       <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
-                        <span className="flex items-center gap-3">
-                          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet-500/15 ring-1 ring-violet-400/20">
+                        <span className="flex items-center gap-3 min-w-0">
+                          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-violet-500/15 ring-1 ring-violet-400/20">
                             <Award className="h-4 w-4 text-violet-300" />
                           </span>
-                          <span className="font-mono text-xs text-steel">Production Systems Shipped</span>
+                          <span className="font-mono text-xs text-steel truncate">Production Systems Shipped</span>
                         </span>
-                        <span className="font-mono text-xs font-bold text-paper">6+ Live Systems</span>
+                        <span className="font-mono text-xs font-bold text-paper shrink-0 whitespace-nowrap">6+ Live Systems</span>
                       </li>
                       <li className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-obsidian/50 px-4 py-3.5 transition-colors duration-300 hover:border-white/15 hover:bg-obsidian/70">
                         <span className="flex items-center gap-3">

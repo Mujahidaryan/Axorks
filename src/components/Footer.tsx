@@ -14,14 +14,14 @@ export default function Footer() {
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-5 sm:flex-row">
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-xs sm:justify-start">
-              <span className="flex items-center gap-2.5">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse-soft" />
-                <span className="font-semibold text-paper">All Systems Operational</span>
+              <span className="flex items-center gap-2.5 shrink-0 whitespace-nowrap">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 animate-pulse-soft" />
+                <span className="font-semibold text-paper leading-none">All Systems Operational</span>
               </span>
               <span className="hidden h-4 w-px bg-white/10 sm:block" />
-              <span className="flex items-center gap-2.5">
-                <span className="h-2 w-2 rounded-full bg-gold" />
-                <span>Guaranteed 24hr Response SLA</span>
+              <span className="flex items-center gap-2.5 shrink-0 whitespace-nowrap">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-gold" />
+                <span className="leading-none">Guaranteed 24hr Response SLA</span>
               </span>
             </div>
             <Link
