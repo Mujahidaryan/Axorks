@@ -89,7 +89,7 @@ export default function HomePage() {
       name: 'IPMI-OS',
       category: 'Quant Systems · Probabilistic AI Engine',
       description:
-        'Institutional Probabilistic Market Intelligence OS. Bayesian Hidden Markov regime detection, recursive signal fusion with statistical confidence intervals, and risk engine.',
+        'Real-time market intelligence and risk-management platform engineered for institutional trading, delivering sub-2.5ms live predictive data processing and automated downside capital protection.',
       problem: 'Rule-based indicators failed during volatile market regime shifts.',
       built: 'Event-driven probabilistic engine delivering sub-millisecond inference on live tick microstructure data.',
       challenges: 'Maintaining low inference latency under high-frequency market tick volume without thread blocking.',
