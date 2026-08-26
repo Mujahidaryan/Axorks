@@ -94,9 +94,9 @@ function ContactFormInner() {
     <div className="glass-card-dark relative overflow-hidden rounded-3xl p-6 sm:p-8">
       <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-gold/30 via-gold to-gold/30" />
       <div className="border-b border-white/10 pb-5">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="font-mono text-xs font-bold uppercase tracking-widest text-gold">
-            Project Initiation Protocol
+            Start Your Project with Senior Engineers
           </span>
           {formData.selectedTier && (
             <span className="rounded-full border border-gold/40 bg-gold/15 px-3 py-1 font-mono text-[11px] font-bold text-gold">
@@ -108,18 +108,29 @@ function ContactFormInner() {
           {formData.ctaMode === 'discovery' ? (
             <>
               <PhoneCall className="h-5 w-5 text-gold" />
-              Book a Technical Discovery Call
+              Book a Free Discovery Call
             </>
           ) : (
             <>
               <FileText className="h-5 w-5 text-gold" />
-              Request a Quick Project Quote
+              Request a Fixed-Price Project Quote
             </>
           )}
         </h2>
-        <p className="mt-2 text-xs text-steel">
-          Direct line to our founder &amp; engineering leads. Guaranteed response within 24 hours.
-        </p>
+        <div className="mt-3 flex flex-wrap items-center gap-3 font-mono text-[11px] text-steel">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-obsidian-raised px-2.5 py-1">
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse-soft" />
+            &lt; 24h Response SLA
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-obsidian-raised px-2.5 py-1">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
+            40/40/20 Milestone Billing
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-obsidian-raised px-2.5 py-1">
+            <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
+            Strict NDA Protocol
+          </span>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-5">

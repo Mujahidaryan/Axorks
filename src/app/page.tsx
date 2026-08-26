@@ -148,14 +148,14 @@ export default function HomePage() {
 
                 <ScrollReveal direction="up" delay={0.05}>
                   <h1 className="font-serif text-3xl font-bold leading-[1.08] tracking-tight text-paper sm:text-5xl lg:text-6xl">
-                    Architecting Enterprise
-                    <span className="gradient-text-gold mt-2 block italic">AI Systems &amp; Bespoke Software</span>
+                    Custom Software &amp; AI Systems
+                    <span className="gradient-text-gold mt-2 block italic">Engineered for Scalable Growth</span>
                   </h1>
                 </ScrollReveal>
 
                 <ScrollReveal direction="up" delay={0.12}>
                   <p className="mt-6 max-w-xl text-base leading-relaxed text-steel sm:text-lg">
-                    Axorks is an independent software engineering company serving ambitious startups, SMEs, and enterprises across the UK, Europe, GCC, North America, and worldwide. Powered by a core team of <strong className="font-semibold text-paper">7+ senior engineers and designers</strong>, we architect custom web applications, AI automations, and mobile platforms engineered for high performance, enterprise security, and long-term scalability.
+                    Axorks is an independent software engineering studio serving ambitious startups, SMEs, and enterprises worldwide. Powered by an in-house core team of <strong className="font-semibold text-paper">7+ senior engineers and designers</strong>, we engineer high-performance web platforms, bespoke web applications, and practical AI integrations built for speed, security, and measurable business ROI.
                   </p>
                 </ScrollReveal>
 
