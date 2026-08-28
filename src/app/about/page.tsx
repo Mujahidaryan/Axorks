@@ -6,11 +6,11 @@ import { SITE_URL, SITE_NAME, FOUNDER_NAME, LINKEDIN_URL } from '@/lib/config';
 export const metadata: Metadata = {
   title: 'About | Axorks',
   description:
-    'Axorks is a registered software company helping growing businesses build custom web applications and automate manual work with AI. Meet our leadership.',
+    'Axorks is a registered software engineering company helping growing businesses build custom web applications and automate manual work with AI. Meet our leadership.',
   openGraph: {
     title: 'About | Axorks',
     description:
-      'Axorks is a registered software company helping growing businesses build custom web applications and automate manual work with AI.',
+      'Axorks is a registered software engineering company helping growing businesses build custom web applications and automate manual work with AI.',
     url: `${SITE_URL}/about`,
     siteName: SITE_NAME,
     type: 'profile',
@@ -30,9 +30,9 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* ============================================================
-          HEADER
+          HEADER — SOFT IVORY
       ============================================================ */}
-      <section className="border-b border-slate-200 bg-slate-50">
+      <section className="border-b border-slate-200/80 bg-[#FBFBFA]">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
@@ -46,9 +46,9 @@ export default function AboutPage() {
       </section>
 
       {/* ============================================================
-          COMPANY
+          COMPANY — REAL OFFICE & REGISTRATION
       ============================================================ */}
-      <section className="border-b border-slate-200 bg-white">
+      <section className="border-b border-slate-200/80 bg-white">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
             <div>
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 Axorks is registered as Axorks Pvt Limited. We serve clients across the UK, US, EU, and worldwide with transparent communication, direct access to leadership, and overlapping working hours.
               </p>
             </div>
-            <div className="overflow-hidden rounded-[12px] border border-slate-200 bg-slate-100">
+            <div className="overflow-hidden rounded-[12px] border border-slate-200/90 bg-slate-100 shadow-sm">
               <img
                 src="/AxorkOffice.png"
                 alt="Axorks corporate office"
@@ -76,7 +76,7 @@ export default function AboutPage() {
       {/* ============================================================
           LEADERSHIP — FOUNDER & CO-FOUNDER PROFILES
       ============================================================ */}
-      <section className="border-b border-slate-200 bg-slate-50">
+      <section className="border-b border-slate-200/80 bg-[#FBFBFA]">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="max-w-2xl">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
@@ -89,30 +89,32 @@ export default function AboutPage() {
 
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Muhammad Mujahid — Founder & Chief Systems Architect */}
-            <div className="flex flex-col rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-[12px] border border-slate-200 bg-slate-100">
-                  <img
-                    src="/assets/founder_mujahid.jpg"
-                    alt="Muhammad Mujahid"
-                    className="h-full w-full object-cover"
-                  />
+            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/90 bg-white p-7 sm:p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+              <div>
+                <div className="flex items-start gap-4">
+                  <div className="h-16 w-16 shrink-0 overflow-hidden rounded-[12px] border border-slate-200 bg-slate-100 shadow-sm">
+                    <img
+                      src="/assets/founder_mujahid.jpg"
+                      alt="Muhammad Mujahid"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900">{FOUNDER_NAME}</h3>
+                    <p className="text-sm font-semibold text-slate-600">
+                      Founder &amp; Chief Systems Architect
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900">{FOUNDER_NAME}</h3>
-                  <p className="text-sm font-semibold text-slate-600">
-                    Founder &amp; Chief Systems Architect
+
+                <div className="mt-5 space-y-3 text-sm leading-relaxed text-slate-600">
+                  <p>
+                    Muhammad Mujahid founded Axorks to help growing businesses solve real operational challenges through custom software and AI automations. He works directly with clients to translate requirements into clear, reliable systems.
+                  </p>
+                  <p>
+                    He oversees software architecture, system delivery, and engineering quality across all engagements. BS in Software Engineering from Bahria University.
                   </p>
                 </div>
-              </div>
-
-              <div className="mt-5 space-y-3 text-sm leading-relaxed text-slate-600">
-                <p>
-                  Muhammad Mujahid founded Axorks to help growing businesses solve real operational challenges through custom software and AI automations. He works directly with clients to translate requirements into clear, reliable systems.
-                </p>
-                <p>
-                  He oversees software architecture, system delivery, and engineering quality across all engagements. BS in Software Engineering from Bahria University.
-                </p>
               </div>
 
               <div className="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between">
@@ -120,34 +122,37 @@ export default function AboutPage() {
                   href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-slate-700"
+                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-slate-700"
                 >
-                  Connect on LinkedIn <ArrowRight className="h-3.5 w-3.5" />
+                  <span>Connect on LinkedIn</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </a>
               </div>
             </div>
 
             {/* Farhana Bakht — Co-Founder */}
-            <div className="flex flex-col rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[12px] border border-slate-200 bg-slate-100 text-xl font-bold text-slate-700">
-                  FB
+            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/90 bg-white p-7 sm:p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+              <div>
+                <div className="flex items-start gap-4">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[12px] border border-slate-200 bg-slate-50 text-xl font-bold text-slate-700 shadow-sm">
+                    FB
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900">Farhana Bakht</h3>
+                    <p className="text-sm font-semibold text-slate-600">
+                      Co-Founder
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900">Farhana Bakht</h3>
-                  <p className="text-sm font-semibold text-slate-600">
-                    Co-Founder
+
+                <div className="mt-5 space-y-3 text-sm leading-relaxed text-slate-600">
+                  <p>
+                    Farhana Bakht is the Co-Founder of Axorks. She oversees quality assurance, client workflow validation, and delivery standards across all projects.
+                  </p>
+                  <p>
+                    Her focus ensures that every web platform, AI integration, and mobile application meets strict usability, reliability, and business requirements before launch.
                   </p>
                 </div>
-              </div>
-
-              <div className="mt-5 space-y-3 text-sm leading-relaxed text-slate-600">
-                <p>
-                  Farhana Bakht is the Co-Founder of Axorks. She oversees quality assurance, client workflow validation, and delivery standards across all projects.
-                </p>
-                <p>
-                  Her focus ensures that every web platform, AI integration, and mobile application meets strict usability, reliability, and business requirements before launch.
-                </p>
               </div>
 
               <div className="mt-6 pt-5 border-t border-slate-100 flex items-center">
@@ -161,9 +166,9 @@ export default function AboutPage() {
       </section>
 
       {/* ============================================================
-          WHAT WE DO
+          WHAT WE DO — CRISP WHITE
       ============================================================ */}
-      <section className="border-b border-slate-200 bg-white">
+      <section className="border-b border-slate-200/80 bg-white">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             What we build
@@ -172,44 +177,44 @@ export default function AboutPage() {
             We focus on four areas where we can deliver the most value for growing businesses.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div className="rounded-[12px] border border-slate-200 bg-slate-50 p-5">
+            <div className="rounded-[12px] border border-slate-200/80 bg-[#FBFBFA] p-6 shadow-sm transition-all hover:border-slate-300">
               <h3 className="text-sm font-semibold text-slate-900">Custom Web Applications</h3>
-              <p className="mt-1 text-sm text-slate-600">We build tailored web applications around how your business actually works.</p>
+              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We build tailored web applications around how your business actually works.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200 bg-slate-50 p-5">
+            <div className="rounded-[12px] border border-slate-200/80 bg-[#FBFBFA] p-6 shadow-sm transition-all hover:border-slate-300">
               <h3 className="text-sm font-semibold text-slate-900">AI Automation</h3>
-              <p className="mt-1 text-sm text-slate-600">We use AI to automate repetitive work, improve decisions, and reduce manual effort.</p>
+              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We use AI to automate repetitive work, improve decisions, and reduce manual effort.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200 bg-slate-50 p-5">
+            <div className="rounded-[12px] border border-slate-200/80 bg-[#FBFBFA] p-6 shadow-sm transition-all hover:border-slate-300">
               <h3 className="text-sm font-semibold text-slate-900">Mobile Apps</h3>
-              <p className="mt-1 text-sm text-slate-600">We create mobile applications that make your products and services easier to access.</p>
+              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We create mobile applications that make your products and services easier to access.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200 bg-slate-50 p-5">
+            <div className="rounded-[12px] border border-slate-200/80 bg-[#FBFBFA] p-6 shadow-sm transition-all hover:border-slate-300">
               <h3 className="text-sm font-semibold text-slate-900">Ongoing Support &amp; Maintenance</h3>
-              <p className="mt-1 text-sm text-slate-600">We keep your software secure, reliable, and improving after launch.</p>
+              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We keep your software secure, reliable, and improving after launch.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============================================================
-          CTA
+          CTA — DEEP CONTRAST STAGE
       ============================================================ */}
-      <section className="bg-slate-50">
+      <section className="border-t border-white/[0.08] bg-[#0B0C10] text-white">
         <div className="mx-auto max-w-5xl px-5 py-16 text-center sm:px-8 sm:py-20">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Ready to work together?
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-base text-slate-600">
+          <p className="mx-auto mt-3 max-w-xl text-base text-slate-300">
             Tell us about your project. We&apos;ll get back to you within 24 hours with an honest assessment.
           </p>
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-[12px] bg-slate-900 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-slate-800"
+              className="group inline-flex items-center gap-2 rounded-[12px] bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg"
             >
-              Book a free discovery call
-              <ArrowRight className="h-4 w-4" />
+              <span>Book a free discovery call</span>
+              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>

@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-50 text-slate-600">
+    <footer className="border-t border-slate-200/90 bg-[#FBFBFA] text-slate-600">
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4 md:gap-12">
           {/* Brand */}
           <div className="space-y-3 md:col-span-1">
-            <Link href="/" className="text-lg font-semibold tracking-tight text-slate-900">
+            <Link href="/" className="text-lg font-bold tracking-tight text-slate-900 transition-opacity hover:opacity-90">
               Axorks
             </Link>
             <p className="text-sm leading-relaxed text-slate-500">
@@ -20,22 +20,22 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-slate-900">Company</h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/services" className="text-slate-600 transition-colors hover:text-slate-900">
+                <Link href="/services" className="text-slate-600 transition-colors hover:text-slate-950">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="text-slate-600 transition-colors hover:text-slate-900">
+                <Link href="/case-studies" className="text-slate-600 transition-colors hover:text-slate-950">
                   Our Work
                 </Link>
               </li>
               <li>
-                <Link href="/process" className="text-slate-600 transition-colors hover:text-slate-900">
+                <Link href="/process" className="text-slate-600 transition-colors hover:text-slate-950">
                   Process
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-slate-600 transition-colors hover:text-slate-900">
+                <Link href="/about" className="text-slate-600 transition-colors hover:text-slate-950">
                   About
                 </Link>
               </li>
@@ -47,12 +47,12 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-slate-900">Legal</h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/privacy" className="text-slate-600 transition-colors hover:text-slate-900">
+                <Link href="/privacy" className="text-slate-600 transition-colors hover:text-slate-950">
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-slate-600 transition-colors hover:text-slate-900">
+                <Link href="/terms" className="text-slate-600 transition-colors hover:text-slate-950">
                   Terms
                 </Link>
               </li>
@@ -66,7 +66,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:hello@axorks.com"
-                  className="text-slate-600 transition-colors hover:text-slate-900"
+                  className="text-slate-600 transition-colors hover:text-slate-950 font-medium"
                 >
                   hello@axorks.com
                 </a>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 text-sm text-slate-500 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200/80 pt-8 text-sm text-slate-500 sm:flex-row">
           <p>© 2026 Axorks Pvt Limited. All rights reserved.</p>
           <Link
             href="/careers"

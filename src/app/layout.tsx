@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -20,6 +20,13 @@ import {
 } from '@/lib/config';
 import './globals.css';
 
+export const viewport: Viewport = {
+  themeColor: '#0B0C10',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.axorks.com'),
   title: {
@@ -30,13 +37,15 @@ export const metadata: Metadata = {
     'Axorks helps growing businesses build custom web applications and automate manual work with AI. Projects start from $600. Book a free discovery call.',
   keywords: [
     'Axorks',
+    'Axorks Pvt Limited',
     'custom web application development',
     'AI automation for business',
-    'custom software development UK',
-    'web app development US',
-    'business automation software',
     'custom software company',
-    'mobile app development',
+    'software engineering company',
+    'web app development UK',
+    'custom software development US',
+    'business automation software',
+    'cross platform mobile app development',
   ],
   authors: [{ name: FOUNDER_NAME, url: SITE_URL }],
   creator: FOUNDER_NAME,
@@ -70,7 +79,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Axorks — Custom Software & AI Automation',
+        alt: 'Axorks — Custom Web Applications & AI Automation',
       },
       {
         url: `${SITE_URL}/logo.png`,
@@ -104,15 +113,17 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': ['Organization', 'ProfessionalService'],
+        '@type': ['Organization', 'ProfessionalService', 'Corporation'],
         '@id': `${SITE_URL}/#organization`,
-        name: SITE_NAME,
-        alternateName: ['Axorks', 'Axorks Pvt Limited'],
+        name: 'Axorks',
+        legalName: 'Axorks Pvt Limited',
+        alternateName: ['Axorks', 'Axorks Software Engineering Company', 'Axorks Pvt Limited'],
         url: SITE_URL,
         logo: `${SITE_URL}/logo.png`,
         image: `${SITE_URL}/logo.png`,
         description:
           'Axorks helps growing businesses build custom web applications and automate manual work with AI.',
+        slogan: 'Custom Web Applications & AI Automation for Growing Businesses',
         priceRange: '$$',
         telephone: '+923141030223',
         email: CONTACT_EMAIL,
@@ -132,18 +143,59 @@ export default function RootLayout({
         areaServed: [
           { '@type': 'Country', name: 'United Kingdom' },
           { '@type': 'Country', name: 'United States' },
-          { '@type': 'Country', name: 'Australia' },
           { '@type': 'Country', name: 'Germany' },
+          { '@type': 'Country', name: 'Australia' },
           { '@type': 'Country', name: 'United Arab Emirates' },
           { '@type': 'AdministrativeArea', name: 'Worldwide' },
         ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Software Engineering Services',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Custom Web Applications',
+                description: 'We build tailored web applications around how your business actually works.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'AI Automation',
+                description: 'We use AI to automate repetitive work, improve decisions, and reduce manual effort.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Mobile Apps',
+                description: 'We create mobile applications that make your products and services easier to access.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Ongoing Support & Maintenance',
+                description: 'We keep your software secure, reliable, and improving after launch.',
+              },
+            },
+          ],
+        },
         founder: {
           '@type': 'Person',
           '@id': `${SITE_URL}/#founder`,
           name: FOUNDER_NAME,
-          jobTitle: 'Founder',
+          jobTitle: 'Founder & Chief Systems Architect',
           worksFor: { '@id': `${SITE_URL}/#organization` },
-          alumniOf: 'Bahria University',
+          alumniOf: {
+            '@type': 'EducationalOrganization',
+            name: 'Bahria University',
+          },
           sameAs: [
             LINKEDIN_URL,
             'https://wa.me/923141030223',
@@ -158,7 +210,7 @@ export default function RootLayout({
         '@type': 'Person',
         '@id': `${SITE_URL}/#founder`,
         name: FOUNDER_NAME,
-        jobTitle: 'Founder',
+        jobTitle: 'Founder & Chief Systems Architect',
         worksFor: { '@id': `${SITE_URL}/#organization` },
         url: `${SITE_URL}/about`,
         image: `${SITE_URL}/logo.png`,
@@ -208,9 +260,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex min-h-screen flex-col bg-white text-slate-900 antialiased">
+      <body className="flex min-h-screen flex-col bg-white text-slate-900 antialiased selection:bg-indigo-500/20 selection:text-indigo-900">
         <Navigation />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

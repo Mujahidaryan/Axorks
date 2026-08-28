@@ -126,7 +126,7 @@ export default function CaseStudiesPage() {
       {/* ============================================================
           PAGE HEADER
       ============================================================ */}
-      <section className="border-b border-slate-200 bg-slate-50">
+      <section className="border-b border-slate-200/80 bg-[#FBFBFA]">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
@@ -142,17 +142,17 @@ export default function CaseStudiesPage() {
       {/* ============================================================
           CASE STUDIES LIST
       ============================================================ */}
-      <section className="py-16 sm:py-20 lg:py-24">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="mx-auto max-w-6xl px-5 sm:px-8 space-y-20 sm:space-y-28">
           {caseStudies.map((study) => (
             <article
               key={study.id}
-              className="rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8 lg:p-10 shadow-sm"
+              className="rounded-[12px] border border-slate-200/90 bg-white p-6 sm:p-8 lg:p-10 shadow-sm transition-shadow hover:shadow-md"
             >
               {/* Header: Category, Title & Action */}
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                     {study.category}
                   </span>
                   <h2 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -161,15 +161,15 @@ export default function CaseStudiesPage() {
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-[12px] bg-slate-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-slate-800 self-start sm:self-auto"
+                  className="group inline-flex items-center gap-2 rounded-[12px] bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow self-start sm:self-auto"
                 >
-                  Start a similar project
-                  <ArrowRight className="h-4 w-4" />
+                  <span>Start a similar project</span>
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
               </div>
 
               {/* Large Hero Screenshot — Fully visible, uncropped framing */}
-              <div className="mt-8 overflow-hidden rounded-[12px] border border-slate-200 bg-slate-900/[0.02]">
+              <div className="mt-8 overflow-hidden rounded-[12px] border border-slate-200 bg-slate-900/[0.02] shadow-sm">
                 <img
                   src={study.heroImage}
                   alt={study.heroAlt}
@@ -179,7 +179,7 @@ export default function CaseStudiesPage() {
 
               {/* Problem → Solution → Result */}
               <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-                <div className="rounded-[12px] border border-slate-100 bg-slate-50 p-6">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#FBFBFA] p-6 shadow-sm">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Problem
                   </h3>
@@ -188,7 +188,7 @@ export default function CaseStudiesPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[12px] border border-slate-100 bg-slate-50 p-6">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#FBFBFA] p-6 shadow-sm">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Solution
                   </h3>
@@ -197,7 +197,7 @@ export default function CaseStudiesPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[12px] border border-slate-100 bg-slate-50 p-6">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#FBFBFA] p-6 shadow-sm">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Result
                   </h3>
@@ -216,7 +216,7 @@ export default function CaseStudiesPage() {
                   {study.additionalImages.map((img, idx) => (
                     <div
                       key={idx}
-                      className="overflow-hidden rounded-[12px] border border-slate-200 bg-slate-900/[0.02] flex flex-col"
+                      className="overflow-hidden rounded-[12px] border border-slate-200 bg-slate-900/[0.02] flex flex-col shadow-sm"
                     >
                       <div className="overflow-hidden">
                         <img
@@ -226,7 +226,7 @@ export default function CaseStudiesPage() {
                         />
                       </div>
                       {img.caption && (
-                        <div className="border-t border-slate-100 bg-slate-50 px-4 py-2.5 text-xs text-slate-600 font-medium">
+                        <div className="border-t border-slate-100 bg-[#FBFBFA] px-4 py-2.5 text-xs text-slate-600 font-medium">
                           {img.caption}
                         </div>
                       )}
@@ -242,9 +242,10 @@ export default function CaseStudiesPage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-slate-700"
+                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-slate-700"
                 >
-                  Start a similar project <ArrowRight className="h-4 w-4" />
+                  <span>Start a similar project</span>
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
               </div>
             </article>
@@ -253,23 +254,23 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* ============================================================
-          BOTTOM CTA
+          BOTTOM CTA — DEEP CONTRAST STAGE
       ============================================================ */}
-      <section className="border-t border-slate-200 bg-slate-50">
+      <section className="border-t border-white/[0.08] bg-[#0B0C10] text-white">
         <div className="mx-auto max-w-5xl px-5 py-16 text-center sm:px-8 sm:py-20">
-          <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Have a project in mind?
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-base text-slate-600">
+          <p className="mx-auto mt-3 max-w-xl text-base text-slate-300">
             Tell us what you need. We&apos;ll get back to you within 24 hours with an honest assessment and a clear fixed-price plan.
           </p>
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-[12px] bg-slate-900 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-slate-800"
+              className="group inline-flex items-center gap-2 rounded-[12px] bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg"
             >
-              Book a free discovery call
-              <ArrowRight className="h-4 w-4" />
+              <span>Book a free discovery call</span>
+              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>

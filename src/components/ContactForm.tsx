@@ -57,9 +57,9 @@ function ContactFormInner() {
   };
 
   return (
-    <div className="rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
+    <div className="rounded-[12px] border border-slate-200/90 bg-white p-6 sm:p-8 shadow-md text-slate-900">
       <div className="border-b border-slate-100 pb-5">
-        <h2 className="text-2xl font-bold text-slate-900">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900">
           Book a free discovery call
         </h2>
         <p className="mt-2 text-sm text-slate-600">
@@ -85,7 +85,7 @@ function ContactFormInner() {
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {/* Name */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-slate-700">
+            <label htmlFor="name" className="block text-sm font-semibold text-slate-800">
               Name <span className="text-blue-600">*</span>
             </label>
             <input
@@ -95,13 +95,13 @@ function ContactFormInner() {
               placeholder="Your full name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
+              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FBFBFA] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-slate-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-900"
             />
           </div>
 
           {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-slate-700">
+            <label htmlFor="email" className="block text-sm font-semibold text-slate-800">
               Email <span className="text-blue-600">*</span>
             </label>
             <input
@@ -111,14 +111,14 @@ function ContactFormInner() {
               placeholder="you@company.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
+              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FBFBFA] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-slate-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-900"
             />
           </div>
         </div>
 
         {/* Phone / WhatsApp */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-slate-700">
+          <label htmlFor="phone" className="block text-sm font-semibold text-slate-800">
             Phone / WhatsApp <span className="font-normal text-slate-400">(Optional)</span>
           </label>
           <input
@@ -127,13 +127,13 @@ function ContactFormInner() {
             placeholder="+1 (555) 000-0000"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
+            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FBFBFA] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-slate-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-900"
           />
         </div>
 
         {/* What do you need help with? */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-slate-700">
+          <label htmlFor="message" className="block text-sm font-semibold text-slate-800">
             What do you need help with? <span className="text-blue-600">*</span>
           </label>
           <textarea
@@ -143,22 +143,22 @@ function ContactFormInner() {
             placeholder="Tell us about what you want to build or improve..."
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
+            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FBFBFA] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-slate-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-900"
           />
         </div>
 
         {/* Status Alerts */}
         {status === 'success' && (
-          <div className="flex items-center gap-3 rounded-[12px] border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">
+          <div className="flex items-center gap-3 rounded-[12px] border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800 animate-fade-in">
             <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
-            <p className="font-medium">Thanks! We&apos;ll be in touch within 24 hours.</p>
+            <p className="font-semibold">Thanks! We&apos;ll be in touch within 24 hours.</p>
           </div>
         )}
 
         {status === 'error' && (
-          <div className="flex items-center gap-3 rounded-[12px] border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+          <div className="flex items-center gap-3 rounded-[12px] border border-red-200 bg-red-50 p-4 text-sm text-red-800 animate-fade-in">
             <AlertCircle className="h-5 w-5 shrink-0 text-red-600" />
-            <p className="font-medium">{errorMessage}</p>
+            <p className="font-semibold">{errorMessage}</p>
           </div>
         )}
 
@@ -167,17 +167,17 @@ function ContactFormInner() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-[12px] bg-slate-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 disabled:opacity-60 sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-[12px] bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 disabled:opacity-60 sm:w-auto"
           >
             <span>{status === 'loading' ? 'Sending...' : 'Send message'}</span>
-            <Send className="h-4 w-4" />
+            <Send className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
           </button>
 
           <a
             href="https://wa.me/923141030223"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-[12px] border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-slate-900 sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-[12px] border border-slate-200/90 bg-white px-5 py-3.5 text-sm font-semibold text-slate-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-50 hover:text-slate-900 sm:w-auto"
           >
             <MessageCircle className="h-4 w-4 text-emerald-600" />
             <span>Chat on WhatsApp</span>
