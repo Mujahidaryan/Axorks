@@ -32,25 +32,21 @@ export default function ProcessPage() {
       number: '01',
       title: 'Discovery Call',
       description: 'We learn about your business, your goals, and the problem you need to solve.',
-      accent: 'text-amber-500',
     },
     {
       number: '02',
       title: 'Proposal',
       description: 'We turn your requirements into a clear scope, timeline, and fixed-price proposal.',
-      accent: 'text-teal-600',
     },
     {
       number: '03',
       title: 'Build & Launch',
       description: 'Once approved, we build, test, deploy, and launch your solution.',
-      accent: 'text-indigo-600',
     },
     {
       number: '04',
       title: 'Ongoing Support',
       description: 'After launch we can continue maintaining, improving, and supporting your software.',
-      accent: 'text-violet-600',
     },
   ];
 
@@ -60,7 +56,7 @@ export default function ProcessPage() {
           HEADER — SOFT IVORY
       ============================================================ */}
       <section className="border-b border-slate-200/80 bg-[#FBFBFA]">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24 text-center">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24 text-center">
           <div className="max-w-2xl mx-auto space-y-4">
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
               How we work
@@ -75,17 +71,17 @@ export default function ProcessPage() {
       {/* ============================================================
           4 STEPS GRID & PAYMENT NOTE
       ============================================================ */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-20 sm:py-24 bg-white">
         <div className="mx-auto max-w-5xl px-5 sm:px-8 space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="group relative flex flex-col justify-between rounded-[12px] border border-slate-200/80 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-md"
+                className="group relative flex flex-col justify-between rounded-[12px] border border-slate-200/85 bg-white p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_12px_24px_-6px_rgba(15,23,42,0.08)]"
               >
                 <div>
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center justify-center rounded-[8px] bg-slate-100 px-3 py-1 font-mono text-sm font-bold text-slate-900">
+                  <div className="flex items-center gap-3.5">
+                    <span className="inline-flex items-center justify-center rounded-[8px] bg-[#C9A24B]/10 px-3 py-1 font-mono text-sm font-bold text-[#C9A24B]">
                       {step.number}
                     </span>
                     <h2 className="text-xl font-bold text-slate-900">{step.title}</h2>
@@ -99,7 +95,7 @@ export default function ProcessPage() {
           </div>
 
           {/* Payment Note */}
-          <div className="rounded-[12px] border border-slate-200/90 bg-[#FBFBFA] p-6 sm:p-7 text-center sm:text-left shadow-sm">
+          <div className="rounded-[12px] border border-slate-200/85 bg-[#FBFBFA] p-7 text-center sm:text-left shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
             <p className="text-sm sm:text-base font-medium text-slate-800">
               Payment is structured around clear project milestones.
             </p>
@@ -111,7 +107,7 @@ export default function ProcessPage() {
           BOTTOM CTA — DEEP CONTRAST STAGE
       ============================================================ */}
       <section className="border-t border-white/[0.08] bg-[#0B0C10] text-white">
-        <div className="mx-auto max-w-5xl px-5 py-16 text-center sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-24">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Ready to start?
           </h2>
@@ -121,7 +117,7 @@ export default function ProcessPage() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-[12px] bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg"
+              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-[#C9A24B] px-7 py-4 text-base font-semibold text-slate-950 shadow-md shadow-[#C9A24B]/15 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D4AF37] hover:shadow-lg hover:shadow-[#C9A24B]/25"
             >
               <span>Book a free discovery call</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />

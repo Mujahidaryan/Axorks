@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { SITE_URL, SITE_NAME, FOUNDER_NAME, LINKEDIN_URL } from '@/lib/config';
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function AboutPage() {
           HEADER — SOFT IVORY
       ============================================================ */}
       <section className="border-b border-slate-200/80 bg-[#FBFBFA]">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
               About Axorks
@@ -49,7 +49,7 @@ export default function AboutPage() {
           COMPANY — REAL OFFICE & REGISTRATION
       ============================================================ */}
       <section className="border-b border-slate-200/80 bg-white">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
             <div>
               <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
@@ -62,7 +62,7 @@ export default function AboutPage() {
                 Axorks is registered as Axorks Pvt Limited. We serve clients across the UK, US, EU, and worldwide with transparent communication, direct access to leadership, and overlapping working hours.
               </p>
             </div>
-            <div className="overflow-hidden rounded-[12px] border border-slate-200/90 bg-slate-100 shadow-sm">
+            <div className="overflow-hidden rounded-[12px] border border-slate-200/85 bg-slate-100 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.05)]">
               <img
                 src="/AxorkOffice.png"
                 alt="Axorks corporate office"
@@ -77,7 +77,7 @@ export default function AboutPage() {
           LEADERSHIP — FOUNDER & CO-FOUNDER PROFILES
       ============================================================ */}
       <section className="border-b border-slate-200/80 bg-[#FBFBFA]">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <div className="max-w-2xl">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
               Leadership
@@ -89,7 +89,7 @@ export default function AboutPage() {
 
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Muhammad Mujahid — Founder & Chief Systems Architect */}
-            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/90 bg-white p-7 sm:p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/85 bg-white p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.05)] transition-all duration-300 hover:shadow-[0_12px_24px_-6px_rgba(15,23,42,0.08)] hover:border-slate-300">
               <div>
                 <div className="flex items-start gap-4">
                   <div className="h-16 w-16 shrink-0 overflow-hidden rounded-[12px] border border-slate-200 bg-slate-100 shadow-sm">
@@ -122,7 +122,7 @@ export default function AboutPage() {
                   href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-slate-700"
+                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-[#C9A24B]"
                 >
                   <span>Connect on LinkedIn</span>
                   <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -131,7 +131,7 @@ export default function AboutPage() {
             </div>
 
             {/* Farhana Bakht — Co-Founder */}
-            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/90 bg-white p-7 sm:p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300">
+            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/85 bg-white p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.05)] transition-all duration-300 hover:shadow-[0_12px_24px_-6px_rgba(15,23,42,0.08)] hover:border-slate-300">
               <div>
                 <div className="flex items-start gap-4">
                   <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[12px] border border-slate-200 bg-slate-50 text-xl font-bold text-slate-700 shadow-sm">
@@ -169,7 +169,7 @@ export default function AboutPage() {
           WHAT WE DO — CRISP WHITE
       ============================================================ */}
       <section className="border-b border-slate-200/80 bg-white">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
             What we build
           </h2>
@@ -177,19 +177,19 @@ export default function AboutPage() {
             We focus on four areas where we can deliver the most value for growing businesses.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div className="rounded-[12px] border border-slate-200/80 bg-[#FBFBFA] p-6 shadow-sm transition-all hover:border-slate-300">
+            <div className="rounded-[12px] border border-slate-200/85 bg-[#FBFBFA] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.03)] transition-all hover:border-slate-300">
               <h3 className="text-sm font-semibold text-slate-900">Custom Web Applications</h3>
               <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We build tailored web applications around how your business actually works.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200/80 bg-[#FBFBFA] p-6 shadow-sm transition-all hover:border-slate-300">
+            <div className="rounded-[12px] border border-slate-200/85 bg-[#FBFBFA] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.03)] transition-all hover:border-slate-300">
               <h3 className="text-sm font-semibold text-slate-900">AI Automation</h3>
               <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We use AI to automate repetitive work, improve decisions, and reduce manual effort.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200/80 bg-[#FBFBFA] p-6 shadow-sm transition-all hover:border-slate-300">
+            <div className="rounded-[12px] border border-slate-200/85 bg-[#FBFBFA] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.03)] transition-all hover:border-slate-300">
               <h3 className="text-sm font-semibold text-slate-900">Mobile Apps</h3>
               <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We create mobile applications that make your products and services easier to access.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200/80 bg-[#FBFBFA] p-6 shadow-sm transition-all hover:border-slate-300">
+            <div className="rounded-[12px] border border-slate-200/85 bg-[#FBFBFA] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.03)] transition-all hover:border-slate-300">
               <h3 className="text-sm font-semibold text-slate-900">Ongoing Support &amp; Maintenance</h3>
               <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We keep your software secure, reliable, and improving after launch.</p>
             </div>
@@ -201,7 +201,7 @@ export default function AboutPage() {
           CTA — DEEP CONTRAST STAGE
       ============================================================ */}
       <section className="border-t border-white/[0.08] bg-[#0B0C10] text-white">
-        <div className="mx-auto max-w-5xl px-5 py-16 text-center sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-24">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Ready to work together?
           </h2>
@@ -211,7 +211,7 @@ export default function AboutPage() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-[12px] bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg"
+              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-[#C9A24B] px-7 py-4 text-base font-semibold text-slate-950 shadow-md shadow-[#C9A24B]/15 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D4AF37] hover:shadow-lg hover:shadow-[#C9A24B]/25"
             >
               <span>Book a free discovery call</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
