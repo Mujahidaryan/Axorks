@@ -38,34 +38,36 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — RESTORED ANIMATED BACKGROUND TREATMENT
+          HERO — RESTORED AMBIENT BACKGROUND ANIMATION
       ============================================================ */}
-      <section className="relative overflow-hidden bg-white">
-        {/* Ambient meshes + animated video background */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+      <section className="relative overflow-hidden bg-white border-b border-slate-100">
+        {/* Ambient meshes + animated video background with watermark cropped */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
           {/* Ambient glowing drift meshes */}
           <div className="exec-mesh mesh-indigo-light animate-drift-slow absolute -left-32 -top-32 h-[520px] w-[520px] opacity-40" />
-          <div className="exec-mesh mesh-teal-light animate-drift-slower absolute -bottom-32 -right-32 h-[520px] w-[520px] opacity-35" />
-          <div className="exec-mesh mesh-amber-light absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 opacity-25" />
+          <div className="exec-mesh mesh-teal-light animate-drift-slower absolute -bottom-32 -right-32 h-[520px] w-[520px] opacity-30" />
+          <div className="exec-mesh mesh-amber-light absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 opacity-20" />
 
-          {/* Background video — quiet ambient motion */}
-          <div className="absolute inset-0 z-0 overflow-hidden opacity-10">
+          {/* Background video — Watermark cropped from bottom-right via container clipping */}
+          <div className="absolute inset-0 z-0 overflow-hidden opacity-[0.16]">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="h-full w-full scale-105 object-cover"
-              style={{ objectPosition: '60% center' }}
+              preload="auto"
+              className="absolute inset-0 h-[116%] w-full origin-top scale-105 object-cover"
+              style={{ objectPosition: 'center 15%' }}
             >
               <source src="/assets/hero_motion.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-white/40" />
-            <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white" />
+            {/* Multi-layer gradient overlays ensuring light text contrast & soft diffusion */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white" />
           </div>
 
           {/* Fine subtle grid overlay */}
-          <div className="exec-grid-light absolute inset-0 opacity-40" />
+          <div className="exec-grid-light absolute inset-0 opacity-30" />
         </div>
 
         {/* Hero content */}
