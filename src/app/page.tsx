@@ -39,80 +39,36 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — 2-COLUMN EXECUTIVE STAGE WITH SEAMLESS FULL-HEIGHT ANIMATION
+          HERO — CLEAN, STRONG, EXECUTIVE DARK HERO (NO MOTION/VIDEO)
       ============================================================ */}
       <section className="relative overflow-hidden bg-[#0B0C10] border-b border-white/[0.08] text-white">
-        {/* Ambient drift meshes */}
+        {/* Subtle, calm static depth atmosphere */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
-          <div className="exec-mesh mesh-indigo-dark animate-drift-slow absolute -left-32 -top-32 h-[560px] w-[560px] opacity-25" />
-          <div className="exec-mesh mesh-teal-dark animate-drift-slower absolute -bottom-32 -right-32 h-[560px] w-[560px] opacity-20" />
-          <div className="exec-mesh mesh-amber-dark absolute left-1/2 top-1/2 h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 opacity-15" />
-          <div className="exec-grid absolute inset-0 opacity-35" />
+          <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-indigo-900/15 via-teal-900/10 to-transparent blur-3xl opacity-60" />
+          <div className="absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-gradient-to-tr from-amber-900/10 via-slate-900/10 to-transparent blur-3xl opacity-50" />
+          <div className="exec-grid absolute inset-0 opacity-25" />
         </div>
 
-        {/* Desktop: Seamless full-height background animation (original natural visuals, soft edge dissolution) */}
-        <div className="hidden lg:block pointer-events-none absolute inset-y-0 right-0 w-[56%] xl:w-[54%] overflow-hidden z-0 select-none">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover"
-            style={{ objectPosition: 'center 12%' }}
-          >
-            <source src="/assets/hero_motion.mp4" type="video/mp4" />
-          </video>
-          {/* Soft directional gradient masks to dissolve video naturally into the dark background */}
-          <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#0B0C10] via-[#0B0C10]/90 via-[#0B0C10]/50 to-transparent" />
-          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0B0C10] via-[#0B0C10]/50 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0B0C10] via-[#0B0C10]/60 to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#0B0C10] via-[#0B0C10]/25 to-transparent" />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 lg:items-center">
-            {/* Left Column (Protected Safe Space) — Dominant Text & Primary CTA */}
-            <div className="lg:col-span-6 xl:col-span-6 space-y-6">
-              <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-                We build custom software that helps your business grow
-              </h1>
-              <p className="max-w-xl text-lg leading-relaxed text-slate-300">
-                Axorks helps growing businesses build custom web applications and automate manual work with AI. Projects start from $600.
-              </p>
-              <div className="pt-2 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-2 rounded-[12px] bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg"
-                >
-                  <span>Book a free discovery call</span>
-                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-                </Link>
-              </div>
-              <p className="pt-2 text-sm text-slate-400">
-                We&apos;ve delivered real solutions in agriculture, healthcare, and AI decision systems.
-              </p>
+        <div className="relative z-10 mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:py-32">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              We build custom software that helps your business grow
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
+              Axorks helps growing businesses build custom web applications and automate manual work with AI. Projects start from $600.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2 rounded-[12px] bg-white px-7 py-4 text-base font-semibold text-slate-950 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg"
+              >
+                <span>Book a free discovery call</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+              </Link>
             </div>
-
-            {/* Mobile / Tablet Animation Stage (stacks cleanly below text with soft edge) */}
-            <div className="lg:hidden">
-              <div className="relative w-full h-[260px] sm:h-[340px] overflow-hidden rounded-[12px] bg-[#0A0B0E]">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover"
-                  style={{ objectPosition: 'center 12%' }}
-                >
-                  <source src="/assets/hero_motion.mp4" type="video/mp4" />
-                </video>
-                {/* Soft gradient masks for mobile */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-[#0B0C10]/40 pointer-events-none" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0B0C10]/40 via-transparent to-[#0B0C10]/40 pointer-events-none" />
-              </div>
-            </div>
+            <p className="mt-6 text-sm text-slate-400">
+              We&apos;ve delivered real solutions in agriculture, healthcare, and AI decision systems.
+            </p>
           </div>
         </div>
       </section>
