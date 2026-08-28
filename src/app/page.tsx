@@ -39,7 +39,7 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — 2-COLUMN EXECUTIVE STAGE WITH LARGE RIGHT ANIMATION (45-50% WIDTH)
+          HERO — 2-COLUMN EXECUTIVE STAGE WITH FULL-HEIGHT RIGHT ANIMATION (NO BORDER)
       ============================================================ */}
       <section className="relative overflow-hidden bg-[#0B0C10] border-b border-white/[0.08] text-white">
         {/* Subtle glowing ambient drift meshes */}
@@ -50,10 +50,30 @@ export default function HomePage() {
           <div className="exec-grid absolute inset-0 opacity-40" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+        {/* Desktop: Right-side full-height seamless animation (spanning ~46-48% width, no border, natural soft fade) */}
+        <div className="hidden lg:block pointer-events-none absolute inset-y-0 right-0 w-[48%] xl:w-[46%] overflow-hidden z-0 select-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover"
+            style={{ objectPosition: 'center 12%' }}
+          >
+            <source src="/assets/hero_motion.mp4" type="video/mp4" />
+          </video>
+          {/* Soft directional gradient masks to blend naturally into the dark background */}
+          <div className="absolute inset-y-0 left-0 w-36 bg-gradient-to-r from-[#0B0C10] via-[#0B0C10]/80 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B0C10] to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0B0C10] to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0B0C10] to-transparent" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 lg:items-center">
-            {/* Left Column (50-55% width) — Dominant Text & Primary CTA */}
-            <div className="lg:col-span-6 xl:col-span-6 space-y-6">
+            {/* Left Column (52% width) — Dominant Text & Primary CTA */}
+            <div className="lg:col-span-7 xl:col-span-6 space-y-6">
               <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
                 We build custom software that helps your business grow
               </h1>
@@ -74,28 +94,23 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Right Column (45-50% width) — Large Integrated Motion Video Canvas */}
-            <div className="lg:col-span-6 xl:col-span-6">
-              <div className="relative w-full overflow-hidden rounded-[16px] border border-white/10 bg-[#12141C] p-2 sm:p-2.5 shadow-2xl ring-1 ring-white/5">
-                {/* Hairline gradient top highlight */}
-                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-teal-500/40 via-gold/60 to-indigo-500/40" />
-
-                {/* Video container with watermark cropped out from bottom-right via container clipping */}
-                <div className="relative h-[280px] sm:h-[380px] lg:h-[480px] w-full overflow-hidden rounded-[12px] bg-[#0A0B0E]">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="auto"
-                    className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover"
-                    style={{ objectPosition: 'center 12%' }}
-                  >
-                    <source src="/assets/hero_motion.mp4" type="video/mp4" />
-                  </video>
-                  {/* Subtle inner vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/50 via-transparent to-[#0B0C10]/20 pointer-events-none" />
-                </div>
+            {/* Mobile / Tablet Animation Stage (stacks cleanly below text with soft edge and no border) */}
+            <div className="lg:hidden">
+              <div className="relative w-full h-[260px] sm:h-[340px] overflow-hidden rounded-[12px] bg-[#0A0B0E]">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover"
+                  style={{ objectPosition: 'center 12%' }}
+                >
+                  <source src="/assets/hero_motion.mp4" type="video/mp4" />
+                </video>
+                {/* Soft gradient masks for mobile */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-[#0B0C10]/40 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0B0C10]/40 via-transparent to-[#0B0C10]/40 pointer-events-none" />
               </div>
             </div>
           </div>

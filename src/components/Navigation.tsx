@@ -36,14 +36,14 @@ export default function Navigation() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-8">
-        {/* Logo */}
+        {/* Logo with new white logo */}
         <Link
           href="/"
           className="group flex items-center gap-2.5 transition-transform duration-200 hover:scale-[1.02]"
         >
           <div className="relative h-9 w-9 overflow-hidden rounded-[12px] border border-slate-200 bg-white p-0.5 shadow-sm transition-shadow duration-200 group-hover:border-slate-300 group-hover:shadow">
             <Image
-              src="/logo.png"
+              src="/Axorks_white_logo.png"
               alt="Axorks"
               width={36}
               height={36}
