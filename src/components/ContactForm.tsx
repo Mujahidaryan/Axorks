@@ -1,21 +1,13 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { Send, CheckCircle2, AlertCircle, Phone, FileText, PhoneCall } from 'lucide-react';
-import { BUDGET_RANGES_USD } from '@/lib/pricing';
+import { useState, Suspense } from 'react';
+import { Send, CheckCircle2, AlertCircle, MessageCircle } from 'lucide-react';
 
 function ContactFormInner() {
-  const searchParams = useSearchParams();
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    service: 'Web Applications & Custom Systems',
-    budget: '$1,500 – $3,500',
-    selectedTier: '',
-    ctaMode: 'quote',
     message: '',
     company_website: '', // Honeypot field
   });
@@ -23,41 +15,19 @@ function ContactFormInner() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const services = [
-    'Custom Website Development',
-    'Web Applications & Custom Systems',
-    'Mobile App Development',
-    'AI Solutions & Automation',
-    'Government & Enterprise Digital Solutions',
-    'Maintenance & Support Retainer',
-  ];
-
-  useEffect(() => {
-    const serviceParam = searchParams.get('service');
-    const tierParam = searchParams.get('tier');
-    const ctaParam = searchParams.get('cta');
-
-    if (serviceParam || tierParam || ctaParam) {
-      setFormData((prev) => ({
-        ...prev,
-        service: serviceParam ? decodeURIComponent(serviceParam) : prev.service,
-        selectedTier: tierParam ? decodeURIComponent(tierParam) : prev.selectedTier,
-        ctaMode: ctaParam === 'discovery' ? 'discovery' : 'quote',
-      }));
-    }
-  }, [searchParams]);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
     setErrorMessage('');
 
     try {
-      const tierNote = formData.selectedTier ? ` [Tier Selected: ${formData.selectedTier}]` : '';
-      const ctaTypeNote = formData.ctaMode === 'discovery' ? ' [Request Type: Book Discovery Call]' : ' [Request Type: Get Quick Quote]';
       const payload = {
-        ...formData,
-        message: `[Expected Budget: ${formData.budget}]${tierNote}${ctaTypeNote}\n\n${formData.message}`,
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        service: 'Discovery Call',
+        message: formData.message.trim(),
+        company_website: formData.company_website,
       };
 
       const res = await fetch('/api/contact', {
@@ -69,7 +39,7 @@ function ContactFormInner() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'Failed to submit inquiry.');
+        throw new Error(data.error || 'Failed to send message. Please try again.');
       }
 
       setStatus('success');
@@ -77,10 +47,6 @@ function ContactFormInner() {
         name: '',
         email: '',
         phone: '',
-        service: 'Web Applications & Custom Systems',
-        budget: '$1,500 – $3,500',
-        selectedTier: '',
-        ctaMode: 'quote',
         message: '',
         company_website: '',
       });
@@ -91,46 +57,14 @@ function ContactFormInner() {
   };
 
   return (
-    <div className="glass-card-dark relative overflow-hidden rounded-3xl p-6 sm:p-8">
-      <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-gold/30 via-gold to-gold/30" />
-      <div className="border-b border-white/10 pb-5">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="font-mono text-xs font-bold uppercase tracking-widest text-gold">
-            Start Your Project with Senior Engineers
-          </span>
-          {formData.selectedTier && (
-            <span className="rounded-full border border-gold/40 bg-gold/15 px-3 py-1 font-mono text-[11px] font-bold text-gold">
-              Tier: {formData.selectedTier}
-            </span>
-          )}
-        </div>
-        <h2 className="mt-2 font-serif text-2xl font-bold text-paper flex items-center gap-2">
-          {formData.ctaMode === 'discovery' ? (
-            <>
-              <PhoneCall className="h-5 w-5 text-gold" />
-              Book a Free Discovery Call
-            </>
-          ) : (
-            <>
-              <FileText className="h-5 w-5 text-gold" />
-              Request a Fixed-Price Project Quote
-            </>
-          )}
+    <div className="rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
+      <div className="border-b border-slate-100 pb-5">
+        <h2 className="text-2xl font-bold text-slate-900">
+          Book a free discovery call
         </h2>
-        <div className="mt-3 flex flex-wrap items-center gap-3 font-mono text-[11px] text-steel">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-obsidian-raised px-2.5 py-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse-soft" />
-            &lt; 24h Response SLA
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-obsidian-raised px-2.5 py-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-            40/40/20 Milestone Billing
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-obsidian-raised px-2.5 py-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
-            Strict NDA Protocol
-          </span>
-        </div>
+        <p className="mt-2 text-sm text-slate-600">
+          Tell us about your project. We&apos;ll get back to you within 24 hours.
+        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-5">
@@ -151,122 +85,80 @@ function ContactFormInner() {
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {/* Name */}
           <div>
-            <label htmlFor="name" className="block font-mono text-xs font-medium text-paper">
-              Full Name <span className="text-gold">*</span>
+            <label htmlFor="name" className="block text-sm font-medium text-slate-700">
+              Name <span className="text-blue-600">*</span>
             </label>
             <input
               type="text"
               id="name"
               required
-              placeholder="e.g. Alex Morgan"
+              placeholder="Your full name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-all focus:border-indigo-400/60 focus:bg-obsidian focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
+              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
             />
           </div>
 
           {/* Email */}
           <div>
-            <label htmlFor="email" className="block font-mono text-xs font-medium text-paper">
-              Business Email <span className="text-gold">*</span>
+            <label htmlFor="email" className="block text-sm font-medium text-slate-700">
+              Email <span className="text-blue-600">*</span>
             </label>
             <input
               type="email"
               id="email"
               required
-              placeholder="alex@company.com"
+              placeholder="you@company.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-all focus:border-indigo-400/60 focus:bg-obsidian focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
+              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          {/* Phone */}
-          <div>
-            <label htmlFor="phone" className="block font-mono text-xs font-medium text-paper">
-              Phone / WhatsApp <span className="text-steel/70">(Optional)</span>
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              placeholder="+1 (555) 000-0000"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-all focus:border-indigo-400/60 focus:bg-obsidian focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
-            />
-          </div>
-
-          {/* Service Selection */}
-          <div>
-            <label htmlFor="service" className="block font-mono text-xs font-medium text-paper">
-              Required Service <span className="text-gold">*</span>
-            </label>
-            <select
-              id="service"
-              required
-              value={formData.service}
-              onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-              className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3 py-2.5 text-xs text-paper transition-all focus:border-indigo-400/60 focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
-            >
-              {services.map((svc) => (
-                <option key={svc} value={svc} className="bg-obsidian text-paper">
-                  {svc}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        {/* Budget Selector */}
+        {/* Phone / WhatsApp */}
         <div>
-          <label htmlFor="budget" className="block font-mono text-xs font-medium text-paper">
-            Expected Project Investment Band <span className="text-gold">*</span>
+          <label htmlFor="phone" className="block text-sm font-medium text-slate-700">
+            Phone / WhatsApp <span className="font-normal text-slate-400">(Optional)</span>
           </label>
-          <select
-            id="budget"
-            required
-            value={formData.budget}
-            onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-            className="mt-1.5 w-full rounded-xl border border-gold/40 bg-obsidian/80 px-3 py-2.5 text-xs font-mono text-gold transition-all focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,162,75,0.15)] focus:outline-none"
-          >
-            {BUDGET_RANGES_USD.map((b) => (
-              <option key={b} value={b} className="bg-obsidian text-paper">
-                {b}
-              </option>
-            ))}
-          </select>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="+1 (555) 000-0000"
+            value={formData.phone}
+            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
+          />
         </div>
 
-        {/* Message */}
+        {/* What do you need help with? */}
         <div>
-          <label htmlFor="message" className="block font-mono text-xs font-medium text-paper">
-            Project Scope &amp; System Details <span className="text-gold">*</span>
+          <label htmlFor="message" className="block text-sm font-medium text-slate-700">
+            What do you need help with? <span className="text-blue-600">*</span>
           </label>
           <textarea
             id="message"
             required
             rows={4}
-            placeholder="Tell us about your core requirements, target features, expected timeline, or key technical goals..."
+            placeholder="Tell us about what you want to build or improve..."
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="mt-1.5 w-full rounded-xl border border-white/10 bg-obsidian/80 px-3.5 py-2.5 text-xs text-paper placeholder-steel/50 transition-all focus:border-indigo-400/60 focus:bg-obsidian focus:shadow-[0_0_0_3px_rgba(79,70,229,0.15)] focus:outline-none"
+            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900"
           />
         </div>
 
         {/* Status Alerts */}
         {status === 'success' && (
-          <div className="flex items-center gap-2.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-3.5 text-xs text-emerald-400">
-            <CheckCircle2 className="h-4 w-4 shrink-0" />
-            <span>Inquiry received! Our founder will reach out to you within 24 hours.</span>
+          <div className="flex items-center gap-3 rounded-[12px] border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">
+            <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-600" />
+            <p className="font-medium">Thanks! We&apos;ll be in touch within 24 hours.</p>
           </div>
         )}
 
         {status === 'error' && (
-          <div className="flex items-center gap-2.5 rounded-xl border border-red-500/30 bg-red-500/10 p-3.5 text-xs text-red-400">
-            <AlertCircle className="h-4 w-4 shrink-0" />
-            <span>{errorMessage}</span>
+          <div className="flex items-center gap-3 rounded-[12px] border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+            <AlertCircle className="h-5 w-5 shrink-0 text-red-600" />
+            <p className="font-medium">{errorMessage}</p>
           </div>
         )}
 
@@ -275,26 +167,20 @@ function ContactFormInner() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="btn btn-primary flex w-full items-center justify-center gap-2 disabled:opacity-60 sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-[12px] bg-slate-900 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 disabled:opacity-60 sm:w-auto"
           >
-            {status === 'loading' ? (
-              <span>Dispatching...</span>
-            ) : (
-              <>
-                <span>{formData.ctaMode === 'discovery' ? 'Book Discovery Call' : 'Submit Quick Quote Inquiry'}</span>
-                <Send className="h-3.5 w-3.5" />
-              </>
-            )}
+            <span>{status === 'loading' ? 'Sending...' : 'Send message'}</span>
+            <Send className="h-4 w-4" />
           </button>
 
           <a
             href="https://wa.me/923141030223"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-5 py-3 font-mono text-xs font-semibold text-gold transition-colors hover:bg-gold/20 sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-[12px] border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-slate-900 sm:w-auto"
           >
-            <Phone className="h-3.5 w-3.5" />
-            <span>Instant WhatsApp Connect</span>
+            <MessageCircle className="h-4 w-4 text-emerald-600" />
+            <span>Chat on WhatsApp</span>
           </a>
         </div>
       </form>
@@ -304,7 +190,7 @@ function ContactFormInner() {
 
 export default function ContactForm() {
   return (
-    <Suspense fallback={<div className="p-8 font-mono text-xs text-steel">Loading contact protocol...</div>}>
+    <Suspense fallback={<div className="p-8 text-center text-sm text-slate-500">Loading form...</div>}>
       <ContactFormInner />
     </Suspense>
   );

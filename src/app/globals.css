@@ -52,10 +52,7 @@
   --shadow-ring-light: 0 0 0 1px rgba(255, 255, 255, 0.06);
   --shadow-ring-dark: 0 0 0 1px rgba(15, 23, 42, 0.04);
 
-  --radius-sm: 0.75rem;   /* 12px - rounded-xl (Inputs, buttons, list rows) */
-  --radius-md: 1.0rem;    /* 16px - rounded-2xl (Cards, case studies, modals) */
-  --radius-lg: 1.5rem;    /* 24px - rounded-3xl (Section containers, hero stage) */
-  --radius-full: 9999px;  /* rounded-full (Status chips, pills, action buttons) */
+  --radius: 0.75rem;     /* 12px — global consistent border radius */
 }
 
 @layer base {

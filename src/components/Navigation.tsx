@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,87 +12,78 @@ export default function Navigation() {
 
   const navItems = [
     { label: 'Services', href: '/services' },
-    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'Our Work', href: '/case-studies' },
     { label: 'Process', href: '/process' },
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-obsidian/85 backdrop-blur-xl transition-all duration-300">
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        {/* Ambient hairline */}
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/25 to-transparent" />
-
-        {/* Brand Mark with Full Logo */}
-        <Link href="/" className="group flex items-center gap-3 transition-opacity hover:opacity-95">
-          <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-gold/40 bg-obsidian-raised p-1 shadow-sm shadow-gold/20 transition-transform duration-300 group-hover:scale-105">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-8">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2.5">
+          <div className="relative h-9 w-9 overflow-hidden rounded-[12px] border border-slate-200 bg-white p-0.5">
             <Image
               src="/logo.png"
-              alt="Axorks Mark"
-              width={40}
-              height={40}
+              alt="Axorks"
+              width={36}
+              height={36}
               className="h-full w-full object-contain"
               priority
             />
           </div>
-          <div className="flex flex-col leading-tight">
-            <span className="font-serif text-xl font-bold tracking-tight text-paper">
-              Axorks
-            </span>
-            <span className="font-mono text-[9px] tracking-widest text-gold uppercase">
-              Software Studio
-            </span>
-          </div>
+          <span className="text-lg font-semibold tracking-tight text-slate-900">
+            Axorks
+          </span>
         </Link>
 
-        {/* Desktop Nav Items */}
-        <nav className="hidden md:flex md:items-center md:gap-8">
+        {/* Desktop Nav */}
+        <nav className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative font-sans text-xs font-semibold uppercase tracking-wider transition-colors duration-300 ${
-                  isActive ? 'text-paper' : 'text-steel hover:text-paper'
+                className={`text-sm font-medium transition-colors ${
+                  isActive
+                    ? 'text-slate-900'
+                    : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
                 {item.label}
-                {isActive && (
-                  <span className="absolute -bottom-[22px] left-0 h-[2px] w-full bg-gradient-to-r from-gold via-gold to-transparent" />
-                )}
               </Link>
             );
           })}
         </nav>
 
-        {/* Desktop CTA Button */}
-        <div className="hidden md:flex md:items-center">
+        {/* Desktop CTA */}
+        <div className="hidden md:block">
           <Link
             href="/contact"
-            className="group flex items-center gap-2 rounded-full border border-paper/20 bg-paper px-5 py-2.5 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all duration-300 hover:bg-white hover:shadow-lg hover:shadow-paper/10 hover:scale-[1.02] active:scale-[0.98]"
+            className="inline-flex items-center gap-2 rounded-[12px] bg-slate-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-slate-800"
           >
-            Book Discovery Call
-            <ArrowUpRight className="h-4 w-4 text-obsidian transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            Book a free discovery call
+            <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 
-        {/* Mobile Hamburger Button */}
+        {/* Mobile Menu Button */}
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex items-center justify-center rounded-xl p-2 text-steel transition-colors hover:bg-obsidian-raised hover:text-paper focus:outline-none md:hidden"
-          aria-label="Toggle navigation menu"
+          className="inline-flex items-center justify-center rounded-[12px] p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900 md:hidden"
+          aria-label="Toggle menu"
         >
-          {isOpen ? <X className="h-6 w-6 text-gold" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="border-t border-white/5 bg-obsidian-raised/95 px-4 pb-6 pt-4 backdrop-blur-xl md:hidden">
-          <div className="flex flex-col space-y-1">
+        <div className="border-t border-slate-100 bg-white px-5 pb-5 pt-3 md:hidden">
+          <div className="flex flex-col gap-1">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -100,25 +91,24 @@ export default function Navigation() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`flex items-center justify-between rounded-xl px-4 py-3 font-mono text-sm font-semibold uppercase tracking-wider transition-colors ${
+                  className={`rounded-[12px] px-4 py-2.5 text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-gold/10 text-gold'
-                      : 'text-steel hover:bg-obsidian hover:text-paper'
+                      ? 'bg-slate-100 text-slate-900'
+                      : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                   }`}
                 >
                   {item.label}
-                  {isActive && <span className="h-1.5 w-1.5 rounded-full bg-gold" />}
                 </Link>
               );
             })}
-            <div className="pt-3">
+            <div className="mt-3">
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-paper py-3 font-mono text-xs font-bold uppercase tracking-wider text-obsidian transition-all hover:bg-white"
+                className="flex w-full items-center justify-center gap-2 rounded-[12px] bg-slate-900 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
               >
-                Book Discovery Call
-                <ArrowUpRight className="h-4 w-4" />
+                Book a free discovery call
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
