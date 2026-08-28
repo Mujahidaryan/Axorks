@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
@@ -39,10 +38,38 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO
+          HERO — RESTORED ANIMATED BACKGROUND TREATMENT
       ============================================================ */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24 lg:py-28">
+      <section className="relative overflow-hidden bg-white">
+        {/* Ambient meshes + animated video background */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+          {/* Ambient glowing drift meshes */}
+          <div className="exec-mesh mesh-indigo-light animate-drift-slow absolute -left-32 -top-32 h-[520px] w-[520px] opacity-40" />
+          <div className="exec-mesh mesh-teal-light animate-drift-slower absolute -bottom-32 -right-32 h-[520px] w-[520px] opacity-35" />
+          <div className="exec-mesh mesh-amber-light absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 opacity-25" />
+
+          {/* Background video — quiet ambient motion */}
+          <div className="absolute inset-0 z-0 overflow-hidden opacity-10">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full scale-105 object-cover"
+              style={{ objectPosition: '60% center' }}
+            >
+              <source src="/assets/hero_motion.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-white/40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white" />
+          </div>
+
+          {/* Fine subtle grid overlay */}
+          <div className="exec-grid-light absolute inset-0 opacity-40" />
+        </div>
+
+        {/* Hero content */}
+        <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24 lg:py-28">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
               We build custom software that helps your business grow
@@ -148,7 +175,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          CASE STUDIES
+          CASE STUDIES — CLEAN PROPERLY FRAMED SCREENSHOTS
       ============================================================ */}
       <section className="border-t border-slate-200 bg-white">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
@@ -171,65 +198,71 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {/* AgroTrace */}
-            <div className="overflow-hidden rounded-[12px] border border-slate-200">
-              <div className="relative h-48 overflow-hidden bg-slate-100">
-                <img
-                  src="/projects/Agrotrace.jpeg"
-                  alt="AgroTrace supply chain platform"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <span className="text-xs font-medium uppercase tracking-wider text-slate-400">Agriculture</span>
-                <h3 className="mt-2 text-lg font-semibold text-slate-900">AgroTrace</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  Supply-chain tracking platform with live thermal monitoring, automated alerts, and export-compliance validation.
-                </p>
-                <p className="mt-3 text-sm font-medium text-slate-900">
-                  Result: Gave logistics teams real-time visibility into temperature problems, shipment delays, and export compliance.
-                </p>
+            <div className="overflow-hidden rounded-[12px] border border-slate-200 flex flex-col justify-between bg-white shadow-sm">
+              <div>
+                <div className="overflow-hidden border-b border-slate-100 bg-slate-900/[0.02]">
+                  <img
+                    src="/projects/Agrotrace.jpeg"
+                    alt="AgroTrace supply chain platform"
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Agriculture</span>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900">AgroTrace</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    Supply-chain tracking platform with live thermal monitoring, automated alerts, and export-compliance validation.
+                  </p>
+                  <p className="mt-3 text-sm font-medium text-slate-900">
+                    Result: Gave logistics teams real-time visibility into temperature problems, shipment delays, and export compliance.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* IPMI-OS */}
-            <div className="overflow-hidden rounded-[12px] border border-slate-200">
-              <div className="relative h-48 overflow-hidden bg-slate-100">
-                <img
-                  src="/projects/IPMI-OS.jpeg"
-                  alt="AI decision system"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <span className="text-xs font-medium uppercase tracking-wider text-slate-400">AI Decision Systems</span>
-                <h3 className="mt-2 text-lg font-semibold text-slate-900">AI Decision System</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  Adaptive AI-powered decision system that analyses changing conditions in real time and selects strategies according to current confidence levels.
-                </p>
-                <p className="mt-3 text-sm font-medium text-slate-900">
-                  Result: Helped teams identify changing conditions in real time and choose strategies based on the current situation.
-                </p>
+            <div className="overflow-hidden rounded-[12px] border border-slate-200 flex flex-col justify-between bg-white shadow-sm">
+              <div>
+                <div className="overflow-hidden border-b border-slate-100 bg-slate-900/[0.02]">
+                  <img
+                    src="/projects/IPMI-OS.jpeg"
+                    alt="AI decision system"
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">AI Decision Systems</span>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900">AI Decision System</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    Adaptive AI-powered decision system that analyses changing conditions in real time and selects strategies according to current confidence levels.
+                  </p>
+                  <p className="mt-3 text-sm font-medium text-slate-900">
+                    Result: Helped teams identify changing conditions in real time and choose strategies based on the current situation.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* MediVerse */}
-            <div className="overflow-hidden rounded-[12px] border border-slate-200">
-              <div className="relative h-48 overflow-hidden bg-slate-100">
-                <img
-                  src="/projects/mediverse2.jpeg"
-                  alt="MediVerse healthcare platform"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <span className="text-xs font-medium uppercase tracking-wider text-slate-400">Healthcare</span>
-                <h3 className="mt-2 text-lg font-semibold text-slate-900">MediVerse</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  Centralized platform for patients, doctors, and assistants with appointment scheduling, bilingual interface, and virtual consultation management.
-                </p>
-                <p className="mt-3 text-sm font-medium text-slate-900">
-                  Result: Brought patient, doctor, and assistant workflows into one system, making appointments and administration easier to manage.
-                </p>
+            <div className="overflow-hidden rounded-[12px] border border-slate-200 flex flex-col justify-between bg-white shadow-sm">
+              <div>
+                <div className="overflow-hidden border-b border-slate-100 bg-slate-900/[0.02]">
+                  <img
+                    src="/projects/mediverse2.jpeg"
+                    alt="MediVerse healthcare platform"
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <div className="p-6">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">Healthcare</span>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900">MediVerse</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    Centralized platform for patients, doctors, and assistants with appointment scheduling, bilingual interface, and virtual consultation management.
+                  </p>
+                  <p className="mt-3 text-sm font-medium text-slate-900">
+                    Result: Brought patient, doctor, and assistant workflows into one system, making appointments and administration easier to manage.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -38,6 +38,7 @@ interface CaseStudy {
   additionalImages: {
     src: string;
     alt: string;
+    caption?: string;
   }[];
 }
 
@@ -53,15 +54,17 @@ const caseStudies: CaseStudy[] = [
     result:
       'Gave logistics teams real-time visibility into temperature problems, shipment delays, and export compliance.',
     heroImage: '/projects/Agrotrace.jpeg',
-    heroAlt: 'AgroTrace supply chain tracking and telemetry platform',
+    heroAlt: 'AgroTrace supply chain tracking and logistics telemetry platform',
     additionalImages: [
       {
         src: '/projects/agrotrace2.jpeg',
         alt: 'AgroTrace thermal monitoring and sensor alert interface',
+        caption: 'Live Supply Chain Dashboard & Monitoring',
       },
       {
         src: '/projects/Agrotrace3.jpeg',
         alt: 'AgroTrace route tracking and export compliance validation',
+        caption: 'Logistics Route Tracking & Export Compliance',
       },
     ],
   },
@@ -81,10 +84,12 @@ const caseStudies: CaseStudy[] = [
       {
         src: '/projects/IPMI-OS2.jpeg',
         alt: 'AI decision system real-time monitoring and strategy confidence levels',
+        caption: 'Real-Time Strategy Confidence & Execution Readiness',
       },
       {
         src: '/projects/IPMI-OS3.jpeg',
         alt: 'AI decision system analytics and performance tracking',
+        caption: 'Performance Analytics & Signal History',
       },
     ],
   },
@@ -104,10 +109,12 @@ const caseStudies: CaseStudy[] = [
       {
         src: '/projects/Mediverse3.jpeg',
         alt: 'MediVerse doctor consultation and patient booking management',
+        caption: 'Clinical Service Management & Patient Booking',
       },
       {
         src: '/projects/Mediverse4.jpeg',
         alt: 'MediVerse clinical records and administrative dashboard',
+        caption: 'Administrative Scheduling & Records Portal',
       },
     ],
   },
@@ -161,15 +168,13 @@ export default function CaseStudiesPage() {
                 </Link>
               </div>
 
-              {/* Large Hero Screenshot */}
-              <div className="mt-8 overflow-hidden rounded-[12px] border border-slate-200 bg-slate-100">
-                <div className="relative aspect-[16/9] w-full">
-                  <img
-                    src={study.heroImage}
-                    alt={study.heroAlt}
-                    className="h-full w-full object-cover object-top"
-                  />
-                </div>
+              {/* Large Hero Screenshot — Fully visible, uncropped framing */}
+              <div className="mt-8 overflow-hidden rounded-[12px] border border-slate-200 bg-slate-900/[0.02]">
+                <img
+                  src={study.heroImage}
+                  alt={study.heroAlt}
+                  className="w-full h-auto block rounded-[12px]"
+                />
               </div>
 
               {/* Problem → Solution → Result */}
@@ -202,7 +207,7 @@ export default function CaseStudiesPage() {
                 </div>
               </div>
 
-              {/* Additional Screenshots Grid */}
+              {/* Additional Screenshots Grid — Fully visible without clipping */}
               <div className="mt-8">
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">
                   Additional Screenshots
@@ -211,15 +216,20 @@ export default function CaseStudiesPage() {
                   {study.additionalImages.map((img, idx) => (
                     <div
                       key={idx}
-                      className="overflow-hidden rounded-[12px] border border-slate-200 bg-slate-100"
+                      className="overflow-hidden rounded-[12px] border border-slate-200 bg-slate-900/[0.02] flex flex-col"
                     >
-                      <div className="relative aspect-[16/10] w-full">
+                      <div className="overflow-hidden">
                         <img
                           src={img.src}
                           alt={img.alt}
-                          className="h-full w-full object-cover object-top"
+                          className="w-full h-auto block rounded-t-[12px]"
                         />
                       </div>
+                      {img.caption && (
+                        <div className="border-t border-slate-100 bg-slate-50 px-4 py-2.5 text-xs text-slate-600 font-medium">
+                          {img.caption}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
