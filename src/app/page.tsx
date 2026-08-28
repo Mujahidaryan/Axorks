@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Building2, Layers, Bot, Smartphone, Clock, Award } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 
@@ -39,59 +39,65 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — DEEP OBSIDIAN EXECUTIVE STAGE (35% DARK ACCENT)
+          HERO — 2-COLUMN EXECUTIVE STAGE (SYSTEMS LIMITED STYLE)
       ============================================================ */}
       <section className="relative overflow-hidden bg-[#0B0C10] border-b border-white/[0.08] text-white">
-        {/* Ambient meshes + animated video background with watermark cropped */}
+        {/* Subtle glowing ambient drift meshes */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
-          {/* Subtle glowing ambient drift meshes */}
-          <div className="exec-mesh mesh-indigo-dark animate-drift-slow absolute -left-32 -top-32 h-[560px] w-[560px] opacity-40" />
-          <div className="exec-mesh mesh-teal-dark animate-drift-slower absolute -bottom-32 -right-32 h-[560px] w-[560px] opacity-35" />
-          <div className="exec-mesh mesh-amber-dark absolute left-1/2 top-1/2 h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 opacity-20" />
-
-          {/* Background video — Watermark cropped from bottom-right via container clipping */}
-          <div className="absolute inset-0 z-0 overflow-hidden opacity-[0.22]">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              className="absolute inset-0 h-[116%] w-full origin-top scale-105 object-cover"
-              style={{ objectPosition: 'center 15%' }}
-            >
-              <source src="/assets/hero_motion.mp4" type="video/mp4" />
-            </video>
-            {/* Multi-layer gradient overlays for text contrast and depth */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0B0C10] via-[#0B0C10]/85 to-[#0B0C10]/45" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0B0C10]/60 via-transparent to-[#0B0C10]" />
-          </div>
-
-          {/* Fine subtle grid overlay */}
+          <div className="exec-mesh mesh-indigo-dark animate-drift-slow absolute -left-32 -top-32 h-[560px] w-[560px] opacity-35" />
+          <div className="exec-mesh mesh-teal-dark animate-drift-slower absolute -bottom-32 -right-32 h-[560px] w-[560px] opacity-30" />
+          <div className="exec-mesh mesh-amber-dark absolute left-1/2 top-1/2 h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 opacity-15" />
           <div className="exec-grid absolute inset-0 opacity-40" />
         </div>
 
-        {/* Hero content */}
-        <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-24 lg:py-28">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              We build custom software that helps your business grow
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
-              Axorks helps growing businesses build custom web applications and automate manual work with AI. Projects start from $600.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-2 rounded-[12px] bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg"
-              >
-                <span>Book a free discovery call</span>
-                <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-              </Link>
+        <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+            {/* Left Column — Dominant Text & Primary CTA */}
+            <div className="lg:col-span-7 space-y-6">
+              <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+                We build custom software that helps your business grow
+              </h1>
+              <p className="max-w-xl text-lg leading-relaxed text-slate-300">
+                Axorks helps growing businesses build custom web applications and automate manual work with AI. Projects start from $600.
+              </p>
+              <div className="pt-2 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/contact"
+                  className="group inline-flex items-center gap-2 rounded-[12px] bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg"
+                >
+                  <span>Book a free discovery call</span>
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </Link>
+              </div>
+              <p className="pt-2 text-sm text-slate-400">
+                We&apos;ve delivered real solutions in agriculture, healthcare, and AI decision systems.
+              </p>
             </div>
-            <p className="mt-6 text-sm text-slate-400">
-              We&apos;ve delivered real solutions in agriculture, healthcare, and AI decision systems.
-            </p>
+
+            {/* Right Column — Systems Limited Style Framed Motion Video Canvas */}
+            <div className="lg:col-span-5">
+              <div className="relative overflow-hidden rounded-[16px] border border-white/10 bg-[#12141C] p-2 shadow-2xl ring-1 ring-white/5">
+                {/* Hairline gradient top highlight */}
+                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-teal-500/30 via-gold/50 to-indigo-500/30" />
+
+                {/* Video container with watermark cropped out from bottom-right via container clipping */}
+                <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full overflow-hidden rounded-[12px] bg-[#0A0B0E]">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="absolute inset-0 h-[116%] w-full origin-top scale-105 object-cover"
+                    style={{ objectPosition: 'center 15%' }}
+                  >
+                    <source src="/assets/hero_motion.mp4" type="video/mp4" />
+                  </video>
+                  {/* Subtle inner vignette */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/40 via-transparent to-[#0B0C10]/20 pointer-events-none" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
