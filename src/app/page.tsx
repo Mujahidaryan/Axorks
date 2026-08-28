@@ -39,7 +39,7 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — 2-COLUMN EXECUTIVE STAGE WITH FULL-HEIGHT RIGHT ANIMATION (NO BORDER)
+          HERO — 2-COLUMN EXECUTIVE STAGE WITH SEAMLESS FULL-HEIGHT ANIMATION
       ============================================================ */}
       <section className="relative overflow-hidden bg-[#0B0C10] border-b border-white/[0.08] text-white">
         {/* Subtle, calm ambient drift meshes */}
@@ -50,32 +50,32 @@ export default function HomePage() {
           <div className="exec-grid absolute inset-0 opacity-30" />
         </div>
 
-        {/* Desktop: Right-side full-height seamless animation (soft, subtle, toned down brightness) */}
-        <div className="hidden lg:block pointer-events-none absolute inset-y-0 right-0 w-[48%] xl:w-[46%] overflow-hidden z-0 select-none">
+        {/* Desktop: Seamless full-height background animation (expanded naturally, soft gradient dissolution) */}
+        <div className="hidden lg:block pointer-events-none absolute inset-y-0 right-0 w-[56%] xl:w-[54%] overflow-hidden z-0 select-none">
           <video
             autoPlay
             loop
             muted
             playsInline
             preload="auto"
-            className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover opacity-70 brightness-[0.72] contrast-[0.92] saturate-[0.82]"
+            className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover opacity-65 brightness-[0.70] contrast-[0.92] saturate-[0.80]"
             style={{ objectPosition: 'center 12%' }}
           >
             <source src="/assets/hero_motion.mp4" type="video/mp4" />
           </video>
           {/* Subtle dark tint overlay to soften highlights and shine */}
-          <div className="absolute inset-0 bg-[#0B0C10]/30 pointer-events-none" />
-          {/* Soft directional gradient masks to blend naturally into the dark background */}
-          <div className="absolute inset-y-0 left-0 w-36 bg-gradient-to-r from-[#0B0C10] via-[#0B0C10]/80 to-transparent" />
-          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B0C10] to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0B0C10] to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#0B0C10] to-transparent" />
+          <div className="absolute inset-0 bg-[#0B0C10]/25 pointer-events-none" />
+          {/* Deep multi-stop soft gradient masks to dissolve video naturally into the dark background */}
+          <div className="absolute inset-y-0 left-0 w-64 bg-gradient-to-r from-[#0B0C10] via-[#0B0C10]/95 via-[#0B0C10]/60 via-[#0B0C10]/20 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0B0C10] via-[#0B0C10]/60 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#0B0C10] via-[#0B0C10]/70 to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0B0C10] via-[#0B0C10]/30 to-transparent" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 lg:items-center">
-            {/* Left Column (52% width) — Dominant Text & Primary CTA */}
-            <div className="lg:col-span-7 xl:col-span-6 space-y-6">
+            {/* Left Column (Protected Safe Space) — Dominant Text & Primary CTA */}
+            <div className="lg:col-span-6 xl:col-span-6 space-y-6">
               <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
                 We build custom software that helps your business grow
               </h1>
@@ -105,13 +105,13 @@ export default function HomePage() {
                   muted
                   playsInline
                   preload="auto"
-                  className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover opacity-70 brightness-[0.72] contrast-[0.92] saturate-[0.82]"
+                  className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover opacity-65 brightness-[0.70] contrast-[0.92] saturate-[0.80]"
                   style={{ objectPosition: 'center 12%' }}
                 >
                   <source src="/assets/hero_motion.mp4" type="video/mp4" />
                 </video>
                 {/* Subtle dark tint overlay */}
-                <div className="absolute inset-0 bg-[#0B0C10]/35 pointer-events-none" />
+                <div className="absolute inset-0 bg-[#0B0C10]/30 pointer-events-none" />
                 {/* Soft gradient masks for mobile */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10] via-transparent to-[#0B0C10]/40 pointer-events-none" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0B0C10]/40 via-transparent to-[#0B0C10]/40 pointer-events-none" />
