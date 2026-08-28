@@ -39,7 +39,7 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — 2-COLUMN EXECUTIVE STAGE (SYSTEMS LIMITED STYLE)
+          HERO — 2-COLUMN EXECUTIVE STAGE WITH LARGE RIGHT ANIMATION (45-50% WIDTH)
       ============================================================ */}
       <section className="relative overflow-hidden bg-[#0B0C10] border-b border-white/[0.08] text-white">
         {/* Subtle glowing ambient drift meshes */}
@@ -51,9 +51,9 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
-            {/* Left Column — Dominant Text & Primary CTA */}
-            <div className="lg:col-span-7 space-y-6">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12 lg:items-center">
+            {/* Left Column (50-55% width) — Dominant Text & Primary CTA */}
+            <div className="lg:col-span-6 xl:col-span-6 space-y-6">
               <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
                 We build custom software that helps your business grow
               </h1>
@@ -74,27 +74,27 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Right Column — Systems Limited Style Framed Motion Video Canvas */}
-            <div className="lg:col-span-5">
-              <div className="relative overflow-hidden rounded-[16px] border border-white/10 bg-[#12141C] p-2 shadow-2xl ring-1 ring-white/5">
+            {/* Right Column (45-50% width) — Large Integrated Motion Video Canvas */}
+            <div className="lg:col-span-6 xl:col-span-6">
+              <div className="relative w-full overflow-hidden rounded-[16px] border border-white/10 bg-[#12141C] p-2 sm:p-2.5 shadow-2xl ring-1 ring-white/5">
                 {/* Hairline gradient top highlight */}
-                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-teal-500/30 via-gold/50 to-indigo-500/30" />
+                <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-teal-500/40 via-gold/60 to-indigo-500/40" />
 
                 {/* Video container with watermark cropped out from bottom-right via container clipping */}
-                <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full overflow-hidden rounded-[12px] bg-[#0A0B0E]">
+                <div className="relative h-[280px] sm:h-[380px] lg:h-[480px] w-full overflow-hidden rounded-[12px] bg-[#0A0B0E]">
                   <video
                     autoPlay
                     loop
                     muted
                     playsInline
                     preload="auto"
-                    className="absolute inset-0 h-[116%] w-full origin-top scale-105 object-cover"
-                    style={{ objectPosition: 'center 15%' }}
+                    className="absolute inset-0 h-[118%] w-full origin-top scale-105 object-cover"
+                    style={{ objectPosition: 'center 12%' }}
                   >
                     <source src="/assets/hero_motion.mp4" type="video/mp4" />
                   </video>
                   {/* Subtle inner vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/40 via-transparent to-[#0B0C10]/20 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C10]/50 via-transparent to-[#0B0C10]/20 pointer-events-none" />
                 </div>
               </div>
             </div>
