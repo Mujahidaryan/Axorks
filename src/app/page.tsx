@@ -39,7 +39,7 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — HIGH-END CINEMATIC MOTION HERO (DESKTOP + MOBILE)
+          HERO — HIGH-END CINEMATIC MOTION HERO (DESKTOP SPAN + CLEAN MOBILE)
       ============================================================ */}
       <section className="relative min-h-[660px] overflow-hidden bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0B0D14] border-b border-white/[0.08] text-white flex items-center">
         {/* Layered luxury ambient lighting & glows */}
@@ -50,10 +50,10 @@ export default function HomePage() {
           <div className="exec-grid absolute inset-0 opacity-[0.2]" />
         </div>
 
-        {/* Hero Motion Video — Beautiful on desktop (56-58% span) & mobile (ambient alive background) */}
+        {/* Desktop Hero Motion Video — Spans 56-58% on desktop with seamless natural blending */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[56%] overflow-hidden select-none z-0 opacity-55 lg:opacity-90"
+          className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block w-full lg:w-[58%] xl:w-[56%] overflow-hidden select-none z-0 opacity-90"
         >
           <div className="hero-video-blend relative h-full w-full overflow-hidden">
             <video
@@ -68,14 +68,13 @@ export default function HomePage() {
             </video>
           </div>
 
-          {/* Precision multi-stop gradient overlays for seamless edge blending and text dominance */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/45 to-transparent hidden lg:block" />
+          {/* Multi-stop gradient overlays for seamless desktop edge blending */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/45 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D14] via-transparent to-[#07080C]/70" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#0B0D14]" />
-          <div className="absolute inset-0 bg-[#07080C]/55 lg:hidden" />
         </div>
 
-        {/* Hero Foreground Content — Dominant text & high contrast */}
+        {/* Hero Foreground Content — High contrast & dominant */}
         <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-32 lg:py-40">
           <div className="max-w-2xl lg:max-w-[590px] xl:max-w-[640px]">
             <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-sm">
@@ -96,6 +95,23 @@ export default function HomePage() {
             <p className="mt-7 text-sm text-slate-400 font-medium">
               We&apos;ve delivered real solutions in agriculture, healthcare, and AI decision systems.
             </p>
+
+            {/* Mobile Clean Motion Showcase (Cleanly positioned below text content) */}
+            <div className="mt-10 overflow-hidden rounded-[14px] border border-white/10 bg-[#0E111A] shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:hidden">
+              <div className="relative aspect-video w-full overflow-hidden">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="h-full w-full object-cover object-[center_35%] scale-[1.08]"
+                >
+                  <source src="/assets/hero_motion.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E111A]/60 via-transparent to-transparent pointer-events-none" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
