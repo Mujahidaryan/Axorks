@@ -39,15 +39,15 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — HIGH-END CINEMATIC MOTION HERO (DESKTOP SPAN + CLEAN MOBILE)
+          HERO — HIGH-END CINEMATIC MOTION HERO (DESKTOP + CLEAN MOBILE)
       ============================================================ */}
-      <section className="relative min-h-[660px] overflow-hidden bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0B0D14] border-b border-white/[0.08] text-white flex items-center">
+      <section className="relative min-h-[680px] overflow-hidden bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0B0D14] border-b border-white/[0.08] text-white flex items-center">
         {/* Layered luxury ambient lighting & glows */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
-          <div className="absolute -top-40 right-1/4 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-[#4F46E5]/18 via-[#0D9488]/14 to-transparent blur-3xl opacity-60" />
-          <div className="absolute top-1/3 left-[-100px] h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-[#C9A24B]/10 via-[#7C3AED]/10 to-transparent blur-3xl opacity-50" />
-          <div className="absolute -bottom-32 right-1/3 h-[450px] w-[450px] rounded-full bg-gradient-to-t from-[#0D9488]/15 to-transparent blur-3xl opacity-40" />
-          <div className="exec-grid absolute inset-0 opacity-[0.2]" />
+          <div className="absolute -top-40 right-1/4 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-[#4F46E5]/20 via-[#0D9488]/15 to-transparent blur-3xl opacity-65" />
+          <div className="absolute top-1/3 left-[-100px] h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-[#C9A24B]/12 via-[#7C3AED]/12 to-transparent blur-3xl opacity-55" />
+          <div className="absolute -bottom-32 right-1/3 h-[450px] w-[450px] rounded-full bg-gradient-to-t from-[#0D9488]/18 to-transparent blur-3xl opacity-45" />
+          <div className="exec-grid absolute inset-0 opacity-[0.22]" />
         </div>
 
         {/* Desktop Hero Motion Video — Spans 56-58% on desktop with seamless natural blending */}
@@ -68,7 +68,7 @@ export default function HomePage() {
             </video>
           </div>
 
-          {/* Multi-stop gradient overlays for seamless desktop edge blending */}
+          {/* Precision multi-stop gradient overlays for seamless edge blending */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/45 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D14] via-transparent to-[#07080C]/70" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#0B0D14]" />
@@ -119,11 +119,11 @@ export default function HomePage() {
       {/* ============================================================
           SERVICES — COMPLETE ELEGANT COLOR FILLS (RICH TINTS)
       ============================================================ */}
-      <section className="relative border-t border-slate-200/80 bg-[#FAF9F6]">
+      <section className="relative border-t border-slate-200/80 bg-gradient-to-b from-[#FAF9F6] via-[#F4F2EB] to-[#FAF9F6]">
         {/* Subtle ambient light glows */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
-          <div className="absolute top-0 right-1/4 h-96 w-96 rounded-full bg-indigo-100/40 blur-3xl" />
-          <div className="absolute bottom-0 left-1/4 h-96 w-96 rounded-full bg-teal-100/40 blur-3xl" />
+          <div className="absolute top-0 right-1/4 h-96 w-96 rounded-full bg-indigo-100/50 blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 h-96 w-96 rounded-full bg-teal-100/50 blur-3xl" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
@@ -138,20 +138,20 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
             {/* Service 1: Custom Web Applications (Complete Rich Indigo Color Fill) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-indigo-200/80 bg-gradient-to-b from-[#EEF2FF] to-[#E0E7FF] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(79,70,229,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:bg-gradient-to-b hover:from-[#E0E7FF] hover:to-[#C7D2FE] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-indigo-200/90 bg-gradient-to-br from-[#EEF2FF] via-[#E0E7FF] to-[#D5DEFF] p-8 sm:p-9 shadow-[0_4px_18px_-4px_rgba(79,70,229,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-400/80 hover:bg-gradient-to-br hover:from-[#E0E7FF] hover:via-[#D5DEFF] hover:to-[#C7D2FE] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-indigo-600 shadow-sm ring-1 ring-indigo-200/80 transition-transform duration-300 group-hover:scale-105">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-indigo-600 shadow-sm ring-1 ring-indigo-200/90 transition-transform duration-300 group-hover:scale-105">
                   <Layers className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold text-indigo-950 transition-colors">
                   Custom Web Applications
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-700">
+                <p className="mt-3.5 text-base leading-relaxed text-slate-800">
                   We build tailored web applications around how your business actually works.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-indigo-200/80">
+              <div className="mt-8 pt-5 border-t border-indigo-200/90">
                 <Link
                   href="/contact?service=web-applications"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-700 transition-colors group-hover:text-indigo-950"
@@ -163,20 +163,20 @@ export default function HomePage() {
             </div>
 
             {/* Service 2: AI Automation (Complete Rich Teal Color Fill) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-teal-200/80 bg-gradient-to-b from-[#E6FAF4] to-[#CCFBF1] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(13,148,136,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:bg-gradient-to-b hover:from-[#CCFBF1] hover:to-[#99F6E4] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-teal-200/90 bg-gradient-to-br from-[#E6FAF4] via-[#CCFBF1] to-[#B6F5E8] p-8 sm:p-9 shadow-[0_4px_18px_-4px_rgba(13,148,136,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-400/80 hover:bg-gradient-to-br hover:from-[#CCFBF1] hover:via-[#B6F5E8] hover:to-[#99F6E4] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-teal-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#0D9488] shadow-sm ring-1 ring-teal-200/80 transition-transform duration-300 group-hover:scale-105">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#0D9488] shadow-sm ring-1 ring-teal-200/90 transition-transform duration-300 group-hover:scale-105">
                   <Cpu className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold text-teal-950 transition-colors">
                   AI Automation
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-700">
+                <p className="mt-3.5 text-base leading-relaxed text-slate-800">
                   We use AI to automate repetitive work, improve decisions, and reduce manual effort.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-teal-200/80">
+              <div className="mt-8 pt-5 border-t border-teal-200/90">
                 <Link
                   href="/contact?service=ai-automation"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-800 transition-colors group-hover:text-teal-950"
@@ -188,20 +188,20 @@ export default function HomePage() {
             </div>
 
             {/* Service 3: Mobile Apps (Complete Rich Champagne Gold Color Fill) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-amber-200/80 bg-gradient-to-b from-[#FDF2D6] to-[#FDE8B5] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:bg-gradient-to-b hover:from-[#FDE8B5] hover:to-[#FCD34D]/60 hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-amber-200/90 bg-gradient-to-br from-[#FEF3C7] via-[#FDE68A]/80 to-[#FCD34D]/60 p-8 sm:p-9 shadow-[0_4px_18px_-4px_rgba(201,162,75,0.12),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-400/80 hover:bg-gradient-to-br hover:from-[#FDE68A] hover:via-[#FCD34D]/80 hover:to-[#FBBF24]/60 hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.26),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#C9A24B] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#B88E2F] shadow-sm ring-1 ring-amber-200/80 transition-transform duration-300 group-hover:scale-105">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#B88E2F] shadow-sm ring-1 ring-amber-200/90 transition-transform duration-300 group-hover:scale-105">
                   <Smartphone className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold text-amber-950 transition-colors">
                   Mobile Apps
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-700">
+                <p className="mt-3.5 text-base leading-relaxed text-slate-800">
                   We create mobile applications that make your products and services easier to access.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-amber-200/80">
+              <div className="mt-8 pt-5 border-t border-amber-200/90">
                 <Link
                   href="/contact?service=mobile-apps"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#9E7E32] transition-colors group-hover:text-amber-950"
@@ -213,20 +213,20 @@ export default function HomePage() {
             </div>
 
             {/* Service 4: Ongoing Support & Maintenance (Complete Rich Emerald Color Fill) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-emerald-200/80 bg-gradient-to-b from-[#E1F9EB] to-[#D1FAE5] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(16,185,129,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:bg-gradient-to-b hover:from-[#D1FAE5] hover:to-[#A7F3D0] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-emerald-200/90 bg-gradient-to-br from-[#E1F9EB] via-[#D1FAE5] to-[#B3F5D3] p-8 sm:p-9 shadow-[0_4px_18px_-4px_rgba(16,185,129,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-400/80 hover:bg-gradient-to-br hover:from-[#D1FAE5] hover:via-[#B3F5D3] hover:to-[#A7F3D0] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-emerald-600 shadow-sm ring-1 ring-emerald-200/80 transition-transform duration-300 group-hover:scale-105">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-emerald-600 shadow-sm ring-1 ring-emerald-200/90 transition-transform duration-300 group-hover:scale-105">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold text-emerald-950 transition-colors">
                   Ongoing Support &amp; Maintenance
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-700">
+                <p className="mt-3.5 text-base leading-relaxed text-slate-800">
                   We keep your software secure, reliable, and improving after launch.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-emerald-200/80">
+              <div className="mt-8 pt-5 border-t border-emerald-200/90">
                 <Link
                   href="/contact?service=support"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-800 transition-colors group-hover:text-emerald-950"
@@ -239,7 +239,7 @@ export default function HomePage() {
           </div>
 
           {/* Pricing Banner */}
-          <div className="mt-10 rounded-[12px] border border-amber-200/70 bg-gradient-to-r from-[#FDF2D6] via-white to-[#FDF2D6] p-8 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.08)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="mt-10 rounded-[12px] border border-amber-200/80 bg-gradient-to-r from-[#FEF3C7] via-[#FFFBEB] to-[#FEF3C7] p-8 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.1)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <p className="text-base leading-relaxed text-slate-800">
               <strong className="font-semibold text-slate-950">Simple pricing.</strong>{' '}
               Projects start from $600. Every project receives a clear fixed-price proposal before development begins.
@@ -280,7 +280,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {/* AgroTrace */}
-            <article className="overflow-hidden rounded-[12px] border border-emerald-200/70 bg-gradient-to-b from-white to-[#F0FDF6] shadow-[0_4px_16px_-4px_rgba(16,185,129,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
+            <article className="overflow-hidden rounded-[12px] border border-emerald-200/80 bg-gradient-to-b from-white to-[#F0FDF6] shadow-[0_4px_18px_-4px_rgba(16,185,129,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.16),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
               <div>
                 <div className="overflow-hidden border-b border-emerald-100 bg-slate-900/[0.02]">
                   <img
@@ -307,7 +307,7 @@ export default function HomePage() {
             </article>
 
             {/* IPMI-OS */}
-            <article className="overflow-hidden rounded-[12px] border border-indigo-200/70 bg-gradient-to-b from-white to-[#EEF2FF] shadow-[0_4px_16px_-4px_rgba(79,70,229,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
+            <article className="overflow-hidden rounded-[12px] border border-indigo-200/80 bg-gradient-to-b from-white to-[#EEF2FF] shadow-[0_4px_18px_-4px_rgba(79,70,229,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.16),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
               <div>
                 <div className="overflow-hidden border-b border-indigo-100 bg-slate-900/[0.02]">
                   <img
@@ -334,7 +334,7 @@ export default function HomePage() {
             </article>
 
             {/* MediVerse */}
-            <article className="overflow-hidden rounded-[12px] border border-teal-200/70 bg-gradient-to-b from-white to-[#E6FAF4] shadow-[0_4px_16px_-4px_rgba(13,148,136,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
+            <article className="overflow-hidden rounded-[12px] border border-teal-200/80 bg-gradient-to-b from-white to-[#E6FAF4] shadow-[0_4px_18px_-4px_rgba(13,148,136,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.16),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
               <div>
                 <div className="overflow-hidden border-b border-teal-100 bg-slate-900/[0.02]">
                   <img
@@ -418,7 +418,7 @@ export default function HomePage() {
       {/* ============================================================
           WHY AXORKS — TINTED CARDS WITH ACCENTS
       ============================================================ */}
-      <section className="border-t border-slate-200/80 bg-[#FAF9F6]">
+      <section className="border-t border-slate-200/80 bg-gradient-to-b from-[#FAF9F6] via-[#F4F2EB] to-[#FAF9F6]">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <div className="mb-14">
             <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
@@ -428,12 +428,12 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Fixed-price proposals', desc: 'You know the cost before we start. No surprises.', border: 'border-amber-200/70 hover:border-amber-300', bg: 'from-white to-[#FDF2D6]' },
-              { title: 'Direct access to engineers', desc: 'You work directly with the people building your software. No middlemen.', border: 'border-indigo-200/70 hover:border-indigo-300', bg: 'from-white to-[#EEF2FF]' },
-              { title: 'Real office, real team', desc: 'We operate from real offices in Karachi and Islamabad with a dedicated in-house team.', border: 'border-teal-200/70 hover:border-teal-300', bg: 'from-white to-[#E6FAF4]' },
-              { title: 'Payment on milestones', desc: 'Payment is structured around clear project milestones. You pay for progress you can see.', border: 'border-amber-200/70 hover:border-amber-300', bg: 'from-white to-[#FDF2D6]' },
-              { title: 'UK, US & EU time zones', desc: 'We overlap with your working hours for meetings and updates.', border: 'border-indigo-200/70 hover:border-indigo-300', bg: 'from-white to-[#EEF2FF]' },
-              { title: '24-hour response guarantee', desc: 'Every message gets a response within 24 hours.', border: 'border-emerald-200/70 hover:border-emerald-300', bg: 'from-white to-[#E1F9EB]' },
+              { title: 'Fixed-price proposals', desc: 'You know the cost before we start. No surprises.', border: 'border-amber-200/80 hover:border-amber-400', bg: 'from-white to-[#FEF3C7]/40' },
+              { title: 'Direct access to engineers', desc: 'You work directly with the people building your software. No middlemen.', border: 'border-indigo-200/80 hover:border-indigo-400', bg: 'from-white to-[#EEF2FF]/60' },
+              { title: 'Real office, real team', desc: 'We operate from real offices in Karachi and Islamabad with a dedicated in-house team.', border: 'border-teal-200/80 hover:border-teal-400', bg: 'from-white to-[#E6FAF4]/60' },
+              { title: 'Payment on milestones', desc: 'Payment is structured around clear project milestones. You pay for progress you can see.', border: 'border-amber-200/80 hover:border-amber-400', bg: 'from-white to-[#FEF3C7]/40' },
+              { title: 'UK, US & EU time zones', desc: 'We overlap with your working hours for meetings and updates.', border: 'border-indigo-200/80 hover:border-indigo-400', bg: 'from-white to-[#EEF2FF]/60' },
+              { title: '24-hour response guarantee', desc: 'Every message gets a response within 24 hours.', border: 'border-emerald-200/80 hover:border-emerald-400', bg: 'from-white to-[#E1F9EB]/60' },
             ].map((item) => (
               <div
                 key={item.title}

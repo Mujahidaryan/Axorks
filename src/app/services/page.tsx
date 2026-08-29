@@ -33,13 +33,13 @@ const services = [
       'We build tailored web applications around how your business actually works.',
     href: '/contact?service=web-applications',
     accentColor: 'via-indigo-500',
-    cardBg: 'from-[#EEF2FF] to-[#E0E7FF] hover:from-[#E0E7FF] hover:to-[#C7D2FE]',
-    borderColor: 'border-indigo-200/80 hover:border-indigo-300',
+    cardBg: 'from-[#EEF2FF] via-[#E0E7FF] to-[#D5DEFF] hover:from-[#E0E7FF] hover:via-[#D5DEFF] hover:to-[#C7D2FE]',
+    borderColor: 'border-indigo-200/90 hover:border-indigo-400/80',
     titleColor: 'text-indigo-950',
-    shadowStyle: 'shadow-[0_4px_16px_-4px_rgba(79,70,229,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
-    dividerColor: 'border-indigo-200/80',
+    shadowStyle: 'shadow-[0_4px_18px_-4px_rgba(79,70,229,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
+    dividerColor: 'border-indigo-200/90',
     icon: <Layers className="h-5 w-5" />,
-    iconBox: 'bg-white text-indigo-600 ring-1 ring-indigo-200/80 shadow-xs',
+    iconBox: 'bg-white text-indigo-600 ring-1 ring-indigo-200/90 shadow-xs',
     linkColor: 'text-indigo-700 hover:text-indigo-950',
   },
   {
@@ -48,13 +48,13 @@ const services = [
       'We use AI to automate repetitive work, improve decisions, and reduce manual effort.',
     href: '/contact?service=ai-automation',
     accentColor: 'via-teal-500',
-    cardBg: 'from-[#E6FAF4] to-[#CCFBF1] hover:from-[#CCFBF1] hover:to-[#99F6E4]',
-    borderColor: 'border-teal-200/80 hover:border-teal-300',
+    cardBg: 'from-[#E6FAF4] via-[#CCFBF1] to-[#B6F5E8] hover:from-[#CCFBF1] hover:via-[#B6F5E8] hover:to-[#99F6E4]',
+    borderColor: 'border-teal-200/90 hover:border-teal-400/80',
     titleColor: 'text-teal-950',
-    shadowStyle: 'shadow-[0_4px_16px_-4px_rgba(13,148,136,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
-    dividerColor: 'border-teal-200/80',
+    shadowStyle: 'shadow-[0_4px_18px_-4px_rgba(13,148,136,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
+    dividerColor: 'border-teal-200/90',
     icon: <Cpu className="h-5 w-5" />,
-    iconBox: 'bg-white text-[#0D9488] ring-1 ring-teal-200/80 shadow-xs',
+    iconBox: 'bg-white text-[#0D9488] ring-1 ring-teal-200/90 shadow-xs',
     linkColor: 'text-teal-800 hover:text-teal-950',
   },
   {
@@ -63,13 +63,13 @@ const services = [
       'We create mobile applications that make your products and services easier to access.',
     href: '/contact?service=mobile-apps',
     accentColor: 'via-[#C9A24B]',
-    cardBg: 'from-[#FDF2D6] to-[#FDE8B5] hover:from-[#FDE8B5] hover:to-[#FCD34D]/60',
-    borderColor: 'border-amber-200/80 hover:border-amber-300',
+    cardBg: 'from-[#FEF3C7] via-[#FDE68A]/80 to-[#FCD34D]/60 hover:from-[#FDE68A] hover:via-[#FCD34D]/80 hover:to-[#FBBF24]/60',
+    borderColor: 'border-amber-200/90 hover:border-amber-400/80',
     titleColor: 'text-amber-950',
-    shadowStyle: 'shadow-[0_4px_16px_-4px_rgba(201,162,75,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
-    dividerColor: 'border-amber-200/80',
+    shadowStyle: 'shadow-[0_4px_18px_-4px_rgba(201,162,75,0.12),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.26),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
+    dividerColor: 'border-amber-200/90',
     icon: <Smartphone className="h-5 w-5" />,
-    iconBox: 'bg-white text-[#B88E2F] ring-1 ring-amber-200/80 shadow-xs',
+    iconBox: 'bg-white text-[#B88E2F] ring-1 ring-amber-200/90 shadow-xs',
     linkColor: 'text-[#9E7E32] hover:text-amber-950',
   },
   {
@@ -78,13 +78,13 @@ const services = [
       'We keep your software secure, reliable, and improving after launch.',
     href: '/contact?service=support',
     accentColor: 'via-emerald-500',
-    cardBg: 'from-[#E1F9EB] to-[#D1FAE5] hover:from-[#D1FAE5] hover:to-[#A7F3D0]',
-    borderColor: 'border-emerald-200/80 hover:border-emerald-300',
+    cardBg: 'from-[#E1F9EB] via-[#D1FAE5] to-[#B3F5D3] hover:from-[#D1FAE5] hover:via-[#B3F5D3] hover:to-[#A7F3D0]',
+    borderColor: 'border-emerald-200/90 hover:border-emerald-400/80',
     titleColor: 'text-emerald-950',
-    shadowStyle: 'shadow-[0_4px_16px_-4px_rgba(16,185,129,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
-    dividerColor: 'border-emerald-200/80',
+    shadowStyle: 'shadow-[0_4px_18px_-4px_rgba(16,185,129,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
+    dividerColor: 'border-emerald-200/90',
     icon: <ShieldCheck className="h-5 w-5" />,
-    iconBox: 'bg-white text-emerald-600 ring-1 ring-emerald-200/80 shadow-xs',
+    iconBox: 'bg-white text-emerald-600 ring-1 ring-emerald-200/90 shadow-xs',
     linkColor: 'text-emerald-800 hover:text-emerald-950',
   },
 ];
@@ -93,9 +93,9 @@ export default function ServicesPage() {
   return (
     <div className="bg-[#FAF9F6]">
       {/* ============================================================
-          HEADER — SOFT IVORY
+          HEADER — SOFT IVORY WITH AMBIENT GLOW
       ============================================================ */}
-      <section className="relative border-b border-slate-200/80 bg-[#FBFBFA]">
+      <section className="relative border-b border-slate-200/80 bg-gradient-to-b from-[#FBFBFA] via-[#F6F4EE] to-[#FAF9F6]">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
@@ -111,14 +111,14 @@ export default function ServicesPage() {
       {/* ============================================================
           SERVICES & PRICING BANNER
       ============================================================ */}
-      <section className="py-20 sm:py-28">
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#FAF9F6] via-[#F4F2EB] to-[#FAF9F6]">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           {/* 4 Services Grid */}
           <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
             {services.map((service) => (
               <div
                 key={service.title}
-                className={`group relative flex flex-col justify-between overflow-hidden rounded-[12px] border ${service.borderColor} bg-gradient-to-b ${service.cardBg} p-8 sm:p-9 ${service.shadowStyle} transition-all duration-300 hover:-translate-y-1.5`}
+                className={`group relative flex flex-col justify-between overflow-hidden rounded-[12px] border ${service.borderColor} bg-gradient-to-br ${service.cardBg} p-8 sm:p-9 ${service.shadowStyle} transition-all duration-300 hover:-translate-y-1.5`}
               >
                 <div
                   className={`absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent ${service.accentColor} to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
@@ -130,7 +130,7 @@ export default function ServicesPage() {
                   <h2 className={`text-xl font-semibold ${service.titleColor} transition-colors`}>
                     {service.title}
                   </h2>
-                  <p className="mt-3.5 text-base leading-relaxed text-slate-700">
+                  <p className="mt-3.5 text-base leading-relaxed text-slate-800">
                     {service.description}
                   </p>
                 </div>
@@ -148,7 +148,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Pricing Banner */}
-          <div className="mt-10 rounded-[12px] border border-amber-200/70 bg-gradient-to-r from-[#FDF2D6] via-white to-[#FDF2D6] p-8 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.08)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="mt-10 rounded-[12px] border border-amber-200/80 bg-gradient-to-r from-[#FEF3C7] via-[#FFFBEB] to-[#FEF3C7] p-8 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.1)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <p className="text-base leading-relaxed text-slate-800">
               <strong className="font-semibold text-slate-950">Simple pricing.</strong>{' '}
               Projects start from $600. Every project receives a clear fixed-price proposal before development begins.
