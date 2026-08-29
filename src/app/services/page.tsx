@@ -33,11 +33,11 @@ const services = [
       'We build tailored web applications around how your business actually works.',
     href: '/contact?service=web-applications',
     accentColor: 'via-indigo-500',
-    cardBg: 'from-white via-[#F8FAFC] to-[#F1F5F9]',
+    hoverBg: 'hover:bg-indigo-50/50',
     hoverBorder: 'hover:border-indigo-300',
     hoverShadow: 'hover:shadow-[0_20px_40px_-12px_rgba(79,70,229,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
     icon: <Layers className="h-5 w-5" />,
-    iconBox: 'bg-indigo-50 text-indigo-600 ring-1 ring-indigo-200/70',
+    iconBox: 'bg-indigo-50 text-indigo-600 ring-1 ring-indigo-200/70 group-hover:bg-indigo-100 group-hover:text-indigo-700',
     hoverText: 'group-hover:text-indigo-600',
   },
   {
@@ -46,11 +46,11 @@ const services = [
       'We use AI to automate repetitive work, improve decisions, and reduce manual effort.',
     href: '/contact?service=ai-automation',
     accentColor: 'via-teal-500',
-    cardBg: 'from-white via-[#F0FDF4]/30 to-[#F1F5F9]',
+    hoverBg: 'hover:bg-teal-50/50',
     hoverBorder: 'hover:border-teal-300',
     hoverShadow: 'hover:shadow-[0_20px_40px_-12px_rgba(13,148,136,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
     icon: <Cpu className="h-5 w-5" />,
-    iconBox: 'bg-teal-50 text-[#0D9488] ring-1 ring-teal-200/70',
+    iconBox: 'bg-teal-50 text-[#0D9488] ring-1 ring-teal-200/70 group-hover:bg-teal-100 group-hover:text-teal-800',
     hoverText: 'group-hover:text-[#0D9488]',
   },
   {
@@ -59,11 +59,11 @@ const services = [
       'We create mobile applications that make your products and services easier to access.',
     href: '/contact?service=mobile-apps',
     accentColor: 'via-[#C9A24B]',
-    cardBg: 'from-white via-[#FEF3C7]/20 to-[#F1F5F9]',
+    hoverBg: 'hover:bg-amber-50/50',
     hoverBorder: 'hover:border-amber-300',
     hoverShadow: 'hover:shadow-[0_20px_40px_-12px_rgba(201,162,75,0.14),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
     icon: <Smartphone className="h-5 w-5" />,
-    iconBox: 'bg-amber-50 text-[#B88E2F] ring-1 ring-amber-200/70',
+    iconBox: 'bg-amber-50 text-[#B88E2F] ring-1 ring-amber-200/70 group-hover:bg-amber-100 group-hover:text-amber-800',
     hoverText: 'group-hover:text-[#C9A24B]',
   },
   {
@@ -72,11 +72,11 @@ const services = [
       'We keep your software secure, reliable, and improving after launch.',
     href: '/contact?service=support',
     accentColor: 'via-emerald-500',
-    cardBg: 'from-white via-[#ECFDF5]/30 to-[#F1F5F9]',
+    hoverBg: 'hover:bg-emerald-50/50',
     hoverBorder: 'hover:border-emerald-300',
     hoverShadow: 'hover:shadow-[0_20px_40px_-12px_rgba(16,185,129,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
     icon: <ShieldCheck className="h-5 w-5" />,
-    iconBox: 'bg-emerald-50 text-emerald-600 ring-1 ring-emerald-200/70',
+    iconBox: 'bg-emerald-50 text-emerald-600 ring-1 ring-emerald-200/70 group-hover:bg-emerald-100 group-hover:text-emerald-700',
     hoverText: 'group-hover:text-emerald-600',
   },
 ];
@@ -110,19 +110,19 @@ export default function ServicesPage() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className={`group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-gradient-to-b ${service.cardBg} p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 ${service.hoverBorder} ${service.hoverShadow}`}
+                className={`group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-white p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 ${service.hoverBg} ${service.hoverBorder} ${service.hoverShadow}`}
               >
                 <div
                   className={`absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent ${service.accentColor} to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
                 />
                 <div>
-                  <div className={`mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] ${service.iconBox}`}>
+                  <div className={`mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] ${service.iconBox} transition-colors`}>
                     {service.icon}
                   </div>
                   <h2 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-slate-950">
                     {service.title}
                   </h2>
-                  <p className="mt-3.5 text-base leading-relaxed text-slate-600">
+                  <p className="mt-3.5 text-base leading-relaxed text-slate-600 transition-colors group-hover:text-slate-700">
                     {service.description}
                   </p>
                 </div>

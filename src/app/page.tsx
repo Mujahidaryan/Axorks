@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Sparkles, Layers, Cpu, Smartphone, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Layers, Cpu, Smartphone, ShieldCheck } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 
@@ -39,7 +39,7 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — HIGH-END CINEMATIC MOTION HERO (PREMIUM SOFTWARE TIER)
+          HERO — HIGH-END CINEMATIC MOTION HERO (EXPANDED NATURAL SPAN)
       ============================================================ */}
       <section className="relative min-h-[660px] overflow-hidden bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0B0D14] border-b border-white/[0.08] text-white flex items-center">
         {/* Layered luxury ambient lighting & glows */}
@@ -50,10 +50,10 @@ export default function HomePage() {
           <div className="exec-grid absolute inset-0 opacity-[0.2]" />
         </div>
 
-        {/* Hero Motion Video — Spans right 48-52% on desktop, seamlessly blended */}
+        {/* Hero Motion Video — Spans 56-58% on desktop with natural subtle overlap */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[52%] xl:w-[50%] overflow-hidden select-none z-0 opacity-45 lg:opacity-90"
+          className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[56%] overflow-hidden select-none z-0 opacity-45 lg:opacity-90"
         >
           <div className="hero-video-blend relative h-full w-full overflow-hidden">
             <video
@@ -68,14 +68,14 @@ export default function HomePage() {
             </video>
           </div>
 
-          {/* Precision multi-stop gradient overlays for seamless edge blending */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/50 to-transparent hidden lg:block" />
+          {/* Smooth multi-stop gradient overlays for seamless edge blending and text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/45 to-transparent hidden lg:block" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D14] via-transparent to-[#07080C]/70" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#0B0D14]" />
           <div className="absolute inset-0 bg-[#07080C]/40 lg:hidden" />
         </div>
 
-        {/* Hero Foreground Content */}
+        {/* Hero Foreground Content — High contrast & dominant */}
         <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-32 lg:py-40">
           <div className="max-w-2xl lg:max-w-[590px] xl:max-w-[640px]">
             <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-sm">
@@ -101,7 +101,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          SERVICES — RICH SOPHISTICATED CARDS (COLOR IDENTITIES)
+          SERVICES — ELEGANT COLOR FILL ON HOVER
       ============================================================ */}
       <section className="relative border-t border-slate-200/80 bg-[#FAF9F6]">
         {/* Subtle ambient light glows */}
@@ -121,17 +121,17 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
-            {/* Service 1: Custom Web Applications (Royal Indigo Accent) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-gradient-to-b from-white via-[#F8FAFC] to-[#F1F5F9] p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:shadow-[0_20px_40px_-12px_rgba(79,70,229,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            {/* Service 1: Custom Web Applications (Soft Indigo Color Fill on Hover) */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-white p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:bg-indigo-50/50 hover:border-indigo-300 hover:shadow-[0_20px_40px_-12px_rgba(79,70,229,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-indigo-50 text-indigo-600 ring-1 ring-indigo-200/70">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-indigo-50 text-indigo-600 ring-1 ring-indigo-200/70 transition-colors group-hover:bg-indigo-100 group-hover:text-indigo-700">
                   <Layers className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-indigo-950">
                   Custom Web Applications
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-600">
+                <p className="mt-3.5 text-base leading-relaxed text-slate-600 transition-colors group-hover:text-slate-700">
                   We build tailored web applications around how your business actually works.
                 </p>
               </div>
@@ -146,17 +146,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 2: AI Automation (Sovereign Teal Accent) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-gradient-to-b from-white via-[#F0FDF4]/30 to-[#F1F5F9] p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-[0_20px_40px_-12px_rgba(13,148,136,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            {/* Service 2: AI Automation (Soft Teal Color Fill on Hover) */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-white p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:bg-teal-50/50 hover:border-teal-300 hover:shadow-[0_20px_40px_-12px_rgba(13,148,136,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-teal-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-teal-50 text-[#0D9488] ring-1 ring-teal-200/70">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-teal-50 text-[#0D9488] ring-1 ring-teal-200/70 transition-colors group-hover:bg-teal-100 group-hover:text-teal-800">
                   <Cpu className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-teal-950">
                   AI Automation
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-600">
+                <p className="mt-3.5 text-base leading-relaxed text-slate-600 transition-colors group-hover:text-slate-700">
                   We use AI to automate repetitive work, improve decisions, and reduce manual effort.
                 </p>
               </div>
@@ -171,17 +171,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 3: Mobile Apps (Champagne Gold Accent) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-gradient-to-b from-white via-[#FEF3C7]/20 to-[#F1F5F9] p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:shadow-[0_20px_40px_-12px_rgba(201,162,75,0.14),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            {/* Service 3: Mobile Apps (Soft Amber Color Fill on Hover) */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-white p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:bg-amber-50/50 hover:border-amber-300 hover:shadow-[0_20px_40px_-12px_rgba(201,162,75,0.14),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#C9A24B] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-amber-50 text-[#B88E2F] ring-1 ring-amber-200/70">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-amber-50 text-[#B88E2F] ring-1 ring-amber-200/70 transition-colors group-hover:bg-amber-100 group-hover:text-amber-800">
                   <Smartphone className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-amber-950">
                   Mobile Apps
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-600">
+                <p className="mt-3.5 text-base leading-relaxed text-slate-600 transition-colors group-hover:text-slate-700">
                   We create mobile applications that make your products and services easier to access.
                 </p>
               </div>
@@ -196,17 +196,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 4: Ongoing Support & Maintenance (Emerald Accent) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-gradient-to-b from-white via-[#ECFDF5]/30 to-[#F1F5F9] p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-[0_20px_40px_-12px_rgba(16,185,129,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            {/* Service 4: Ongoing Support & Maintenance (Soft Emerald Color Fill on Hover) */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/90 bg-white p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:bg-emerald-50/50 hover:border-emerald-300 hover:shadow-[0_20px_40px_-12px_rgba(16,185,129,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-emerald-50 text-emerald-600 ring-1 ring-emerald-200/70">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-emerald-50 text-emerald-600 ring-1 ring-emerald-200/70 transition-colors group-hover:bg-emerald-100 group-hover:text-emerald-700">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-emerald-950">
                   Ongoing Support &amp; Maintenance
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-600">
+                <p className="mt-3.5 text-base leading-relaxed text-slate-600 transition-colors group-hover:text-slate-700">
                   We keep your software secure, reliable, and improving after launch.
                 </p>
               </div>
