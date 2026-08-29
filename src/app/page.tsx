@@ -123,7 +123,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
             {/* Service 1: Custom Web Applications (Soft Indigo Tinted Card) */}
             <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-indigo-200/60 bg-gradient-to-b from-[#F4F6FF] to-[#EBF0FE] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(79,70,229,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:bg-gradient-to-b hover:from-[#EEF2FF] hover:to-[#E0E7FF] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.15),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-indigo-600 shadow-sm ring-1 ring-indigo-200/70 transition-transform duration-300 group-hover:scale-105">
                   <Layers className="h-5 w-5" />
@@ -148,7 +148,7 @@ export default function HomePage() {
 
             {/* Service 2: AI Automation (Soft Teal Tinted Card) */}
             <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-teal-200/60 bg-gradient-to-b from-[#F0FDF9] to-[#E6F7F3] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(13,148,136,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:bg-gradient-to-b hover:from-[#E6FAF4] hover:to-[#CCFBF1] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.15),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-teal-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#0D9488] shadow-sm ring-1 ring-teal-200/70 transition-transform duration-300 group-hover:scale-105">
                   <Cpu className="h-5 w-5" />
@@ -173,7 +173,7 @@ export default function HomePage() {
 
             {/* Service 3: Mobile Apps (Soft Champagne Gold Tinted Card) */}
             <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-amber-200/60 bg-gradient-to-b from-[#FEFBF2] to-[#FDF4E1] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:bg-gradient-to-b hover:from-[#FDF2D6] hover:to-[#FDE8B5] hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#C9A24B] to-transparent" />
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#C9A24B] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#B88E2F] shadow-sm ring-1 ring-amber-200/70 transition-transform duration-300 group-hover:scale-105">
                   <Smartphone className="h-5 w-5" />
@@ -198,7 +198,8 @@ export default function HomePage() {
 
             {/* Service 4: Ongoing Support & Maintenance (Soft Mint/Emerald Tinted Card) */}
             <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-emerald-200/60 bg-gradient-to-b from-[#F0FDF6] to-[#E5F9EE] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(16,185,129,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:bg-gradient-to-b hover:from-[#E1F9EB] hover:to-[#D1FAE5] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.15),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
               <div>
                 <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-emerald-600 shadow-sm ring-1 ring-emerald-200/70 transition-transform duration-300 group-hover:scale-105">
                   <ShieldCheck className="h-5 w-5" />
