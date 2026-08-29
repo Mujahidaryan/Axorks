@@ -88,11 +88,11 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
-            {/* Muhammad Mujahid — Founder & Chief Systems Architect */}
-            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/90 bg-gradient-to-b from-white to-[#F8FAFC] p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_24px_48px_-12px_rgba(15,23,42,0.09),0_8px_16px_-4px_rgba(15,23,42,0.04)] hover:-translate-y-1.5 hover:border-indigo-300">
+            {/* Muhammad Mujahid — Founder & Chief Systems Architect (Soft Indigo Card) */}
+            <div className="flex flex-col justify-between rounded-[12px] border border-indigo-200/60 bg-gradient-to-b from-[#F4F6FF] to-[#EBF0FE] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(79,70,229,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.15),0_8px_16px_-4px_rgba(15,23,42,0.04)] hover:-translate-y-1.5 hover:border-indigo-300">
               <div>
                 <div className="flex items-start gap-4">
-                  <div className="h-16 w-16 shrink-0 overflow-hidden rounded-[12px] border border-slate-200 bg-slate-100 shadow-sm">
+                  <div className="h-16 w-16 shrink-0 overflow-hidden rounded-[12px] border border-indigo-200 bg-white shadow-sm">
                     <img
                       src="/assets/founder_mujahid.jpg"
                       alt="Muhammad Mujahid"
@@ -101,13 +101,13 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900">{FOUNDER_NAME}</h3>
-                    <p className="text-sm font-semibold text-slate-600">
+                    <p className="text-sm font-semibold text-indigo-700">
                       Founder &amp; Chief Systems Architect
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-5 space-y-3 text-sm leading-relaxed text-slate-600">
+                <div className="mt-5 space-y-3 text-sm leading-relaxed text-slate-700">
                   <p>
                     Muhammad Mujahid founded Axorks to help growing businesses solve real operational challenges through custom software and AI automations. He works directly with clients to translate requirements into clear, reliable systems.
                   </p>
@@ -117,12 +117,12 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="mt-6 pt-5 border-t border-slate-200/70 flex items-center justify-between">
+              <div className="mt-6 pt-5 border-t border-indigo-200/60 flex items-center justify-between">
                 <a
                   href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-[#C9A24B]"
+                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-700 transition-colors hover:text-indigo-950"
                 >
                   <span>Connect on LinkedIn</span>
                   <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -130,22 +130,22 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Farhana Bakht — Co-Founder */}
-            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/90 bg-gradient-to-b from-white to-[#F8FAFC] p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_24px_48px_-12px_rgba(15,23,42,0.09),0_8px_16px_-4px_rgba(15,23,42,0.04)] hover:-translate-y-1.5 hover:border-teal-300">
+            {/* Farhana Bakht — Co-Founder (Soft Teal Card) */}
+            <div className="flex flex-col justify-between rounded-[12px] border border-teal-200/60 bg-gradient-to-b from-[#F0FDF9] to-[#E6F7F3] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(13,148,136,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.15),0_8px_16px_-4px_rgba(15,23,42,0.04)] hover:-translate-y-1.5 hover:border-teal-300">
               <div>
                 <div className="flex items-start gap-4">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[12px] border border-teal-200 bg-teal-50 text-xl font-bold text-teal-800 shadow-sm">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[12px] border border-teal-200 bg-white text-xl font-bold text-teal-800 shadow-sm">
                     FB
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900">Farhana Bakht</h3>
-                    <p className="text-sm font-semibold text-slate-600">
+                    <p className="text-sm font-semibold text-teal-700">
                       Co-Founder
                     </p>
                   </div>
                 </div>
 
-                <div className="mt-5 space-y-3 text-sm leading-relaxed text-slate-600">
+                <div className="mt-5 space-y-3 text-sm leading-relaxed text-slate-700">
                   <p>
                     Farhana Bakht is the Co-Founder of Axorks. She oversees quality assurance, client workflow validation, and delivery standards across all projects.
                   </p>
@@ -155,8 +155,8 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="mt-6 pt-5 border-t border-slate-200/70 flex items-center">
-                <span className="text-xs text-slate-500 font-medium">
+              <div className="mt-6 pt-5 border-t border-teal-200/60 flex items-center">
+                <span className="text-xs text-teal-800 font-medium">
                   Quality Assurance &amp; Delivery Standards
                 </span>
               </div>
@@ -177,21 +177,21 @@ export default function AboutPage() {
             We focus on four areas where we can deliver the most value for growing businesses.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div className="rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-indigo-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(79,70,229,0.08)]">
+            <div className="rounded-[12px] border border-indigo-200/60 bg-gradient-to-b from-[#F4F6FF] to-[#EBF0FE] p-6 shadow-[0_2px_10px_-2px_rgba(79,70,229,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-indigo-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(79,70,229,0.12)]">
               <h3 className="text-base font-semibold text-slate-900">Custom Web Applications</h3>
-              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We build tailored web applications around how your business actually works.</p>
+              <p className="mt-1.5 text-sm text-slate-700 leading-relaxed">We build tailored web applications around how your business actually works.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-teal-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(13,148,136,0.08)]">
+            <div className="rounded-[12px] border border-teal-200/60 bg-gradient-to-b from-[#F0FDF9] to-[#E6F7F3] p-6 shadow-[0_2px_10px_-2px_rgba(13,148,136,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-teal-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(13,148,136,0.12)]">
               <h3 className="text-base font-semibold text-slate-900">AI Automation</h3>
-              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We use AI to automate repetitive work, improve decisions, and reduce manual effort.</p>
+              <p className="mt-1.5 text-sm text-slate-700 leading-relaxed">We use AI to automate repetitive work, improve decisions, and reduce manual effort.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-amber-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(201,162,75,0.08)]">
+            <div className="rounded-[12px] border border-amber-200/60 bg-gradient-to-b from-[#FEFBF2] to-[#FDF4E1] p-6 shadow-[0_2px_10px_-2px_rgba(201,162,75,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-amber-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(201,162,75,0.14)]">
               <h3 className="text-base font-semibold text-slate-900">Mobile Apps</h3>
-              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We create mobile applications that make your products and services easier to access.</p>
+              <p className="mt-1.5 text-sm text-slate-700 leading-relaxed">We create mobile applications that make your products and services easier to access.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-emerald-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(16,185,129,0.08)]">
+            <div className="rounded-[12px] border border-emerald-200/60 bg-gradient-to-b from-[#F0FDF6] to-[#E5F9EE] p-6 shadow-[0_2px_10px_-2px_rgba(16,185,129,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-emerald-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(16,185,129,0.12)]">
               <h3 className="text-base font-semibold text-slate-900">Ongoing Support &amp; Maintenance</h3>
-              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We keep your software secure, reliable, and improving after launch.</p>
+              <p className="mt-1.5 text-sm text-slate-700 leading-relaxed">We keep your software secure, reliable, and improving after launch.</p>
             </div>
           </div>
         </div>

@@ -32,25 +32,37 @@ export default function ProcessPage() {
       number: '01',
       title: 'Discovery Call',
       description: 'We learn about your business, your goals, and the problem you need to solve.',
-      glowColor: 'group-hover:border-amber-300',
+      cardBg: 'from-[#FEFBF2] to-[#FDF4E1] hover:from-[#FDF2D6] hover:to-[#FDE8B5]',
+      borderStyle: 'border-amber-200/60 hover:border-amber-300',
+      shadowStyle: 'shadow-[0_4px_16px_-4px_rgba(201,162,75,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.18)]',
+      badgeBg: 'bg-white text-[#B88E2F] ring-amber-200/70',
     },
     {
       number: '02',
       title: 'Proposal',
       description: 'We turn your requirements into a clear scope, timeline, and fixed-price proposal.',
-      glowColor: 'group-hover:border-indigo-300',
+      cardBg: 'from-[#F4F6FF] to-[#EBF0FE] hover:from-[#EEF2FF] hover:to-[#E0E7FF]',
+      borderStyle: 'border-indigo-200/60 hover:border-indigo-300',
+      shadowStyle: 'shadow-[0_4px_16px_-4px_rgba(79,70,229,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.15)]',
+      badgeBg: 'bg-white text-indigo-600 ring-indigo-200/70',
     },
     {
       number: '03',
       title: 'Build & Launch',
       description: 'Once approved, we build, test, deploy, and launch your solution.',
-      glowColor: 'group-hover:border-teal-300',
+      cardBg: 'from-[#F0FDF9] to-[#E6F7F3] hover:from-[#E6FAF4] hover:to-[#CCFBF1]',
+      borderStyle: 'border-teal-200/60 hover:border-teal-300',
+      shadowStyle: 'shadow-[0_4px_16px_-4px_rgba(13,148,136,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.15)]',
+      badgeBg: 'bg-white text-[#0D9488] ring-teal-200/70',
     },
     {
       number: '04',
       title: 'Ongoing Support',
       description: 'After launch we can continue maintaining, improving, and supporting your software.',
-      glowColor: 'group-hover:border-emerald-300',
+      cardBg: 'from-[#F0FDF6] to-[#E5F9EE] hover:from-[#E1F9EB] hover:to-[#D1FAE5]',
+      borderStyle: 'border-emerald-200/60 hover:border-emerald-300',
+      shadowStyle: 'shadow-[0_4px_16px_-4px_rgba(16,185,129,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.15)]',
+      badgeBg: 'bg-white text-emerald-600 ring-emerald-200/70',
     },
   ];
 
@@ -81,16 +93,16 @@ export default function ProcessPage() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className={`group relative flex flex-col justify-between rounded-[12px] border border-slate-200/90 bg-gradient-to-b from-white to-[#F8FAFC] p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 ${step.glowColor} hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]`}
+                className={`group relative flex flex-col justify-between rounded-[12px] border ${step.borderStyle} bg-gradient-to-b ${step.cardBg} p-8 sm:p-9 ${step.shadowStyle} transition-all duration-300 hover:-translate-y-1.5`}
               >
                 <div>
                   <div className="flex items-center gap-3.5">
-                    <span className="inline-flex items-center justify-center rounded-[8px] bg-amber-50 px-3 py-1 font-mono text-sm font-bold text-[#B88E2F] ring-1 ring-amber-200/70">
+                    <span className={`inline-flex items-center justify-center rounded-[8px] ${step.badgeBg} px-3 py-1 font-mono text-sm font-bold shadow-2xs ring-1`}>
                       {step.number}
                     </span>
                     <h2 className="text-xl font-bold text-slate-900">{step.title}</h2>
                   </div>
-                  <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">
+                  <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-700">
                     {step.description}
                   </p>
                 </div>
@@ -99,7 +111,7 @@ export default function ProcessPage() {
           </div>
 
           {/* Payment Note */}
-          <div className="rounded-[12px] border border-slate-200/85 bg-white p-7 text-center sm:text-left shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
+          <div className="rounded-[12px] border border-amber-200/60 bg-gradient-to-r from-[#FEFBF2] via-white to-[#FEFBF2] p-7 text-center sm:text-left shadow-[0_4px_16px_-4px_rgba(201,162,75,0.06)]">
             <p className="text-sm sm:text-base font-medium text-slate-800">
               Payment is structured around clear project milestones.
             </p>
