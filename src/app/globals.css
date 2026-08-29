@@ -709,3 +709,11 @@
     overflow-wrap: anywhere;
   }
 }
+
+/* ============================================================
+   HERO MOTION VIDEO BLEND — NATURAL SEAMLESS INTEGRATION
+   ============================================================ */
+.hero-video-blend {
+  mask-image: radial-gradient(ellipse 90% 85% at 60% 50%, black 40%, rgba(0, 0, 0, 0.7) 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 85% at 60% 50%, black 40%, rgba(0, 0, 0, 0.7) 70%, transparent 100%);
+}

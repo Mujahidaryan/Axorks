@@ -39,22 +39,49 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — SOFT PREMIUM EXECUTIVE DARK HERO (CALM, STRONG, LUXURIOUS)
+          HERO — PREMIUM INTEGRATED MOTION HERO (SEAMLESS BLEND)
       ============================================================ */}
-      <section className="relative overflow-hidden bg-[#0A0B0E] border-b border-white/[0.08] text-white">
-        {/* Subtle, calm static depth atmosphere */}
+      <section className="relative min-h-[640px] overflow-hidden bg-[#0A0B0E] border-b border-white/[0.08] text-white flex items-center">
+        {/* Ambient background depth atmosphere */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
-          <div className="absolute -top-40 right-1/4 h-[550px] w-[550px] rounded-full bg-gradient-to-br from-[#0D9488]/12 via-[#C9A24B]/6 to-transparent blur-3xl opacity-50" />
-          <div className="absolute -bottom-32 left-1/3 h-[400px] w-[400px] rounded-full bg-gradient-to-tr from-[#3730A3]/10 to-transparent blur-3xl opacity-40" />
+          <div className="absolute -top-32 left-1/4 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-[#0D9488]/12 via-[#C9A24B]/6 to-transparent blur-3xl opacity-40" />
+          <div className="absolute -bottom-24 left-1/3 h-[400px] w-[400px] rounded-full bg-gradient-to-tr from-[#3730A3]/10 to-transparent blur-3xl opacity-35" />
           <div className="exec-grid absolute inset-0 opacity-[0.18]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-5 py-28 sm:px-8 sm:py-32 lg:py-40">
-          <div className="max-w-3xl">
+        {/* Hero Motion Video — Spans right 48-50% on desktop, perfectly blended */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[50%] xl:w-[48%] overflow-hidden select-none z-0 opacity-40 lg:opacity-85"
+        >
+          {/* Natural radial and linear gradient blend masks */}
+          <div className="hero-video-blend relative h-full w-full overflow-hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="h-full w-full object-cover object-[center_35%] scale-[1.08] -translate-y-1"
+            >
+              <source src="/assets/hero_motion.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          {/* Soft multi-stop gradient overlays to eliminate any visible edge */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0B0E] via-[#0A0B0E]/40 to-transparent hidden lg:block" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0B0E] via-transparent to-[#0A0B0E]/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0B0E]/70 via-transparent to-[#0A0B0E]" />
+          <div className="absolute inset-0 bg-[#0A0B0E]/30 lg:hidden" />
+        </div>
+
+        {/* Hero Foreground Content */}
+        <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-28 lg:py-36">
+          <div className="max-w-2xl lg:max-w-[580px] xl:max-w-[620px]">
             <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl">
               We build custom software that helps your business grow
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl">
               Axorks helps growing businesses build custom web applications and automate manual work with AI. Projects start from $600.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -74,7 +101,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          SERVICES — SOFT OFF-WHITE (65% LIGHT DOMINANT)
+          SERVICES — SOFT OFF-WHITE WITH TINTED CARDS
       ============================================================ */}
       <section className="border-t border-slate-200/80 bg-[#FBFBFA]">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
@@ -89,7 +116,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
             {/* Service 1 */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/80 bg-white p-8 sm:p-9 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-8 sm:p-9 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24B]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
                 <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-slate-950">
@@ -99,7 +126,7 @@ export default function HomePage() {
                   We build tailored web applications around how your business actually works.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-slate-100">
+              <div className="mt-8 pt-5 border-t border-slate-200/70">
                 <Link
                   href="/contact?service=web-applications"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors group-hover:text-[#C9A24B]"
@@ -111,7 +138,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 2 */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/80 bg-white p-8 sm:p-9 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-8 sm:p-9 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#0D9488]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
                 <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-slate-950">
@@ -121,7 +148,7 @@ export default function HomePage() {
                   We use AI to automate repetitive work, improve decisions, and reduce manual effort.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-slate-100">
+              <div className="mt-8 pt-5 border-t border-slate-200/70">
                 <Link
                   href="/contact?service=ai-automation"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors group-hover:text-[#0D9488]"
@@ -133,7 +160,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 3 */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/80 bg-white p-8 sm:p-9 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-8 sm:p-9 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#C9A24B]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
                 <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-slate-950">
@@ -143,7 +170,7 @@ export default function HomePage() {
                   We create mobile applications that make your products and services easier to access.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-slate-100">
+              <div className="mt-8 pt-5 border-t border-slate-200/70">
                 <Link
                   href="/contact?service=mobile-apps"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors group-hover:text-[#C9A24B]"
@@ -155,7 +182,7 @@ export default function HomePage() {
             </div>
 
             {/* Service 4 */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/80 bg-white p-8 sm:p-9 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-8 sm:p-9 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#0D9488]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
                 <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-slate-950">
@@ -165,7 +192,7 @@ export default function HomePage() {
                   We keep your software secure, reliable, and improving after launch.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-slate-100">
+              <div className="mt-8 pt-5 border-t border-slate-200/70">
                 <Link
                   href="/contact?service=support"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors group-hover:text-[#0D9488]"
@@ -178,7 +205,7 @@ export default function HomePage() {
           </div>
 
           {/* Pricing Banner */}
-          <div className="mt-10 rounded-[12px] border border-slate-200/85 bg-white p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
+          <div className="mt-10 rounded-[12px] border border-slate-200/85 bg-white p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)]">
             <p className="text-base leading-relaxed text-slate-700">
               <strong className="font-semibold text-slate-950">Simple pricing.</strong>{' '}
               Projects start from $600. Every project receives a clear fixed-price proposal before development begins.
@@ -188,7 +215,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          CASE STUDIES — CRISP WHITE (65% LIGHT DOMINANT)
+          CASE STUDIES — CRISP WHITE (REAL PROJECT PROOF)
       ============================================================ */}
       <section className="border-t border-slate-200/80 bg-white">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
@@ -331,7 +358,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          WHY AXORKS — SOFT LIGHT (65% LIGHT DOMINANT)
+          WHY AXORKS — SOFT LIGHT WITH TINTED CARDS
       ============================================================ */}
       <section className="border-t border-slate-200/80 bg-[#F8F9FA]">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
@@ -352,7 +379,7 @@ export default function HomePage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="flex items-start gap-4 rounded-[12px] border border-slate-200/85 bg-white p-7 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_12px_24px_-6px_rgba(15,23,42,0.06)]"
+                className="flex items-start gap-4 rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-7 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:border-slate-300 hover:shadow-[0_12px_24px_-6px_rgba(15,23,42,0.06)]"
               >
                 <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-[8px] bg-teal-50 text-[#0D9488] ring-1 ring-teal-200/60">
                   <CheckCircle2 className="h-4 w-4" />
@@ -368,7 +395,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          OFFICE — CRISP WHITE (65% LIGHT DOMINANT)
+          OFFICE — CRISP WHITE (REAL TEAM PROOF)
       ============================================================ */}
       <section className="border-t border-slate-200/80 bg-white">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">

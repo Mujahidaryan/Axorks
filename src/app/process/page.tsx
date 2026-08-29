@@ -51,7 +51,7 @@ export default function ProcessPage() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#F8F9FA]">
       {/* ============================================================
           HEADER — SOFT IVORY
       ============================================================ */}
@@ -71,13 +71,13 @@ export default function ProcessPage() {
       {/* ============================================================
           4 STEPS GRID & PAYMENT NOTE
       ============================================================ */}
-      <section className="py-20 sm:py-24 bg-white">
+      <section className="py-20 sm:py-28 bg-white">
         <div className="mx-auto max-w-5xl px-5 sm:px-8 space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="group relative flex flex-col justify-between rounded-[12px] border border-slate-200/85 bg-white p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_12px_24px_-6px_rgba(15,23,42,0.08)]"
+                className="group relative flex flex-col justify-between rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]"
               >
                 <div>
                   <div className="flex items-center gap-3.5">
@@ -95,7 +95,7 @@ export default function ProcessPage() {
           </div>
 
           {/* Payment Note */}
-          <div className="rounded-[12px] border border-slate-200/85 bg-[#FBFBFA] p-7 text-center sm:text-left shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
+          <div className="rounded-[12px] border border-slate-200/85 bg-[#FBFBFA] p-7 text-center sm:text-left shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)]">
             <p className="text-sm sm:text-base font-medium text-slate-800">
               Payment is structured around clear project milestones.
             </p>
@@ -106,8 +106,8 @@ export default function ProcessPage() {
       {/* ============================================================
           BOTTOM CTA — DEEP CONTRAST STAGE
       ============================================================ */}
-      <section className="border-t border-white/[0.08] bg-[#0B0C10] text-white">
-        <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-24">
+      <section className="border-t border-white/[0.08] bg-[#0D0F14] text-white">
+        <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-28">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Ready to start?
           </h2>
@@ -117,7 +117,7 @@ export default function ProcessPage() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-[#C9A24B] px-7 py-4 text-base font-semibold text-slate-950 shadow-md shadow-[#C9A24B]/15 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D4AF37] hover:shadow-lg hover:shadow-[#C9A24B]/25"
+              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-[#C9A24B] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_20px_rgba(201,162,75,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D4AF37] hover:shadow-[0_8px_30px_rgba(201,162,75,0.35)]"
             >
               <span>Book a free discovery call</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />

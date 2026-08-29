@@ -63,7 +63,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-[#F8F9FA]">
       {/* ============================================================
           HEADER — SOFT IVORY
       ============================================================ */}
@@ -83,14 +83,14 @@ export default function ServicesPage() {
       {/* ============================================================
           SERVICES & PRICING BANNER
       ============================================================ */}
-      <section className="bg-white py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           {/* 4 Services Grid */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/85 bg-white p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_12px_24px_-6px_rgba(15,23,42,0.08)]"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]"
               >
                 <div
                   className={`absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent ${service.accentColor} to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
@@ -103,7 +103,7 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
                 </div>
-                <div className="mt-8 pt-4 border-t border-slate-100">
+                <div className="mt-8 pt-4 border-t border-slate-200/70">
                   <Link
                     href={service.href}
                     className={`inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors ${service.hoverText}`}
@@ -117,7 +117,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Pricing Banner */}
-          <div className="mt-10 rounded-[12px] border border-slate-200/85 bg-white p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
+          <div className="mt-10 rounded-[12px] border border-slate-200/85 bg-white p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)]">
             <p className="text-base leading-relaxed text-slate-700">
               Projects start from $600. Every project receives a clear fixed-price proposal before development begins.
             </p>
@@ -128,8 +128,8 @@ export default function ServicesPage() {
       {/* ============================================================
           BOTTOM CTA — DEEP CONTRAST STAGE
       ============================================================ */}
-      <section className="border-t border-white/[0.08] bg-[#0B0C10] text-white">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+      <section className="border-t border-white/[0.08] bg-[#0D0F14] text-white">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Ready to build your next project?
@@ -140,7 +140,7 @@ export default function ServicesPage() {
             <div className="mt-8 flex justify-center">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2.5 rounded-[12px] bg-[#C9A24B] px-7 py-4 text-base font-semibold text-slate-950 shadow-md shadow-[#C9A24B]/15 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D4AF37] hover:shadow-lg hover:shadow-[#C9A24B]/25"
+                className="group inline-flex items-center gap-2.5 rounded-[12px] bg-[#C9A24B] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_20px_rgba(201,162,75,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D4AF37] hover:shadow-[0_8px_30px_rgba(201,162,75,0.35)]"
               >
                 <span>Book a free discovery call</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />

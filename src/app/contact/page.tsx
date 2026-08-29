@@ -51,7 +51,7 @@ export default function ContactPage() {
       {/* ============================================================
           MAIN CONTACT SECTION — 2-COLUMN BALANCED LAYOUT
       ============================================================ */}
-      <section className="bg-white py-20 sm:py-24">
+      <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 items-start">
             {/* Left Info Column */}
@@ -66,7 +66,7 @@ export default function ContactPage() {
               </div>
 
               {/* Trust Points */}
-              <div className="space-y-4 rounded-[12px] border border-slate-200/85 bg-[#FBFBFA] p-7 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
+              <div className="space-y-4 rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-7 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)]">
                 <div className="flex items-center gap-3 text-sm font-medium text-slate-800">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-50 text-[#0D9488] ring-1 ring-teal-200/60">
                     <CheckCircle2 className="h-4 w-4" />
@@ -95,7 +95,7 @@ export default function ContactPage() {
                 <div className="space-y-3">
                   <a
                     href={`mailto:${CONTACT_EMAIL}`}
-                    className="flex items-center gap-3 rounded-[12px] border border-slate-200/85 bg-white p-4 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:border-slate-300 hover:shadow"
+                    className="flex items-center gap-3 rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-4 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:border-slate-300 hover:shadow hover:bg-white"
                   >
                     <Mail className="h-5 w-5 text-slate-700" />
                     <span>{CONTACT_EMAIL}</span>
@@ -105,13 +105,13 @@ export default function ContactPage() {
                     href="https://wa.me/923141030223"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 rounded-[12px] border border-slate-200/85 bg-white p-4 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:border-slate-300 hover:shadow"
+                    className="flex items-center gap-3 rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-4 text-sm font-semibold text-slate-900 shadow-sm transition-all hover:border-slate-300 hover:shadow hover:bg-white"
                   >
                     <MessageCircle className="h-5 w-5 text-emerald-600" />
                     <span>Chat on WhatsApp (+92 314 1030223)</span>
                   </a>
 
-                  <div className="flex items-start gap-3 rounded-[12px] border border-slate-200/85 bg-white p-4 text-sm text-slate-700 shadow-sm">
+                  <div className="flex items-start gap-3 rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-4 text-sm text-slate-700 shadow-sm">
                     <Building2 className="mt-0.5 h-5 w-5 text-slate-700 shrink-0" />
                     <div>
                       <p className="font-semibold text-slate-900">Offices</p>
