@@ -717,3 +717,66 @@
   mask-image: radial-gradient(ellipse 90% 85% at 60% 50%, black 40%, rgba(0, 0, 0, 0.7) 70%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 90% 85% at 60% 50%, black 40%, rgba(0, 0, 0, 0.7) 70%, transparent 100%);
 }
+
+/* ============================================================
+   RICH PREMIUM DESIGN ENHANCEMENTS (INTERNATIONAL TIER)
+   ============================================================ */
+.glow-gold {
+  box-shadow: 0 0 35px -5px rgba(201, 162, 75, 0.28), 0 0 15px rgba(201, 162, 75, 0.15);
+}
+
+.glow-gold-lg {
+  box-shadow: 0 4px 24px rgba(201, 162, 75, 0.35), 0 0 50px -10px rgba(201, 162, 75, 0.2);
+}
+
+.glow-indigo {
+  box-shadow: 0 0 35px -5px rgba(79, 70, 229, 0.25), 0 0 15px rgba(79, 70, 229, 0.12);
+}
+
+.glow-teal {
+  box-shadow: 0 0 35px -5px rgba(13, 148, 136, 0.25), 0 0 15px rgba(13, 148, 136, 0.12);
+}
+
+.card-luxury {
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF9F6 100%);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 12px;
+  box-shadow:
+    0 1px 3px 0 rgba(15, 23, 42, 0.03),
+    0 8px 24px -4px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxury:hover {
+  transform: translateY(-4px);
+  border-color: rgba(203, 213, 225, 1);
+  box-shadow:
+    0 2px 6px 0 rgba(15, 23, 42, 0.04),
+    0 24px 48px -12px rgba(15, 23, 42, 0.09),
+    0 0 0 1px rgba(201, 162, 75, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.card-luxury-dark {
+  position: relative;
+  background: linear-gradient(180deg, #141720 0%, #0F121A 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.4),
+    0 12px 32px -8px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxury-dark:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 162, 75, 0.35);
+  box-shadow:
+    0 2px 6px 0 rgba(0, 0, 0, 0.5),
+    0 20px 48px -12px rgba(0, 0, 0, 0.7),
+    0 0 20px -5px rgba(201, 162, 75, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}

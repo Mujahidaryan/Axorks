@@ -28,17 +28,17 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-[#F8F9FA]">
+    <div className="bg-[#FAF9F6]">
       {/* ============================================================
           HEADER — SOFT IVORY
       ============================================================ */}
-      <section className="border-b border-slate-200/80 bg-[#FBFBFA]">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+      <section className="relative border-b border-slate-200/80 bg-[#FBFBFA]">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
               About Axorks
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
               Axorks helps growing businesses build custom web applications and automate manual work with AI. We&apos;re a registered private software company with real offices, a dedicated in-house team, and real projects delivered.
             </p>
           </div>
@@ -62,11 +62,11 @@ export default function AboutPage() {
                 Axorks is registered as Axorks Pvt Limited. We serve clients across the UK, US, EU, and worldwide with transparent communication, direct access to leadership, and overlapping working hours.
               </p>
             </div>
-            <div className="overflow-hidden rounded-[12px] border border-slate-200/85 bg-slate-100 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)]">
+            <div className="overflow-hidden rounded-[12px] border border-slate-200/85 bg-slate-100 shadow-[0_4px_16px_-4px_rgba(15,23,42,0.06)]">
               <img
                 src="/AxorkOffice.png"
                 alt="Axorks corporate office"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
               />
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
       {/* ============================================================
           LEADERSHIP — FOUNDER & CO-FOUNDER PROFILES
       ============================================================ */}
-      <section className="border-b border-slate-200/80 bg-[#FBFBFA]">
+      <section className="border-b border-slate-200/80 bg-[#FAF9F6]">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <div className="max-w-2xl">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
@@ -89,7 +89,7 @@ export default function AboutPage() {
 
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Muhammad Mujahid — Founder & Chief Systems Architect */}
-            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)] hover:-translate-y-1 hover:border-slate-300">
+            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/90 bg-gradient-to-b from-white to-[#F8FAFC] p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_24px_48px_-12px_rgba(15,23,42,0.09),0_8px_16px_-4px_rgba(15,23,42,0.04)] hover:-translate-y-1.5 hover:border-indigo-300">
               <div>
                 <div className="flex items-start gap-4">
                   <div className="h-16 w-16 shrink-0 overflow-hidden rounded-[12px] border border-slate-200 bg-slate-100 shadow-sm">
@@ -125,16 +125,16 @@ export default function AboutPage() {
                   className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-[#C9A24B]"
                 >
                   <span>Connect on LinkedIn</span>
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
 
             {/* Farhana Bakht — Co-Founder */}
-            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-8 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)] hover:-translate-y-1 hover:border-slate-300">
+            <div className="flex flex-col justify-between rounded-[12px] border border-slate-200/90 bg-gradient-to-b from-white to-[#F8FAFC] p-8 sm:p-9 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_24px_48px_-12px_rgba(15,23,42,0.09),0_8px_16px_-4px_rgba(15,23,42,0.04)] hover:-translate-y-1.5 hover:border-teal-300">
               <div>
                 <div className="flex items-start gap-4">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[12px] border border-slate-200 bg-slate-50 text-xl font-bold text-slate-700 shadow-sm">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[12px] border border-teal-200 bg-teal-50 text-xl font-bold text-teal-800 shadow-sm">
                     FB
                   </div>
                   <div>
@@ -177,20 +177,20 @@ export default function AboutPage() {
             We focus on four areas where we can deliver the most value for growing businesses.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div className="rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-slate-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <h3 className="text-sm font-semibold text-slate-900">Custom Web Applications</h3>
+            <div className="rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-indigo-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(79,70,229,0.08)]">
+              <h3 className="text-base font-semibold text-slate-900">Custom Web Applications</h3>
               <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We build tailored web applications around how your business actually works.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-slate-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <h3 className="text-sm font-semibold text-slate-900">AI Automation</h3>
+            <div className="rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-teal-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(13,148,136,0.08)]">
+              <h3 className="text-base font-semibold text-slate-900">AI Automation</h3>
               <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We use AI to automate repetitive work, improve decisions, and reduce manual effort.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-slate-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <h3 className="text-sm font-semibold text-slate-900">Mobile Apps</h3>
+            <div className="rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-amber-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(201,162,75,0.08)]">
+              <h3 className="text-base font-semibold text-slate-900">Mobile Apps</h3>
               <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We create mobile applications that make your products and services easier to access.</p>
             </div>
-            <div className="rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-slate-300 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <h3 className="text-sm font-semibold text-slate-900">Ongoing Support &amp; Maintenance</h3>
+            <div className="rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all hover:border-emerald-300 hover:-translate-y-1 hover:shadow-[0_16px_32px_-8px_rgba(16,185,129,0.08)]">
+              <h3 className="text-base font-semibold text-slate-900">Ongoing Support &amp; Maintenance</h3>
               <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">We keep your software secure, reliable, and improving after launch.</p>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
       {/* ============================================================
           CTA — DEEP CONTRAST STAGE
       ============================================================ */}
-      <section className="border-t border-white/[0.08] bg-[#0D0F14] text-white">
+      <section className="relative border-t border-white/[0.08] bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0D0F14] text-white">
         <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-28">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Ready to work together?
@@ -211,10 +211,10 @@ export default function AboutPage() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-[#C9A24B] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_20px_rgba(201,162,75,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D4AF37] hover:shadow-[0_8px_30px_rgba(201,162,75,0.35)]"
+              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-gradient-to-r from-[#DFBD6C] via-[#C9A24B] to-[#B88E2F] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_24px_rgba(201,162,75,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,162,75,0.48)] hover:brightness-105"
             >
               <span>Book a free discovery call</span>
-              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </div>
         </div>

@@ -30,6 +30,7 @@ interface CaseStudy {
   id: string;
   name: string;
   category: string;
+  badgeStyle: string;
   problem: string;
   solution: string;
   result: string;
@@ -47,6 +48,7 @@ const caseStudies: CaseStudy[] = [
     id: 'agrotrace',
     name: 'AgroTrace',
     category: 'Agriculture',
+    badgeStyle: 'bg-emerald-50 text-emerald-700 ring-emerald-200/70',
     problem:
       'Agricultural exporters lacked real-time visibility into temperature problems and logistics delays during international transit, creating risks of cargo spoilage and compliance failures.',
     solution:
@@ -72,6 +74,7 @@ const caseStudies: CaseStudy[] = [
     id: 'ai-decision-system',
     name: 'AI Decision System',
     category: 'AI & Data Systems',
+    badgeStyle: 'bg-indigo-50 text-indigo-700 ring-indigo-200/70',
     problem:
       'Traditional rule-based indicators became unreliable during rapid market changes and liquidity spikes.',
     solution:
@@ -97,6 +100,7 @@ const caseStudies: CaseStudy[] = [
     id: 'mediverse',
     name: 'MediVerse',
     category: 'Healthcare',
+    badgeStyle: 'bg-teal-50 text-teal-700 ring-teal-200/70',
     problem:
       'Patients faced disconnected booking processes for specialist appointments and home visits, while staff spent significant time coordinating schedules manually.',
     solution:
@@ -122,17 +126,17 @@ const caseStudies: CaseStudy[] = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="bg-[#F8F9FA]">
+    <div className="bg-[#FAF9F6]">
       {/* ============================================================
           PAGE HEADER — SOFT IVORY
       ============================================================ */}
-      <section className="border-b border-slate-200/80 bg-[#FBFBFA]">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+      <section className="relative border-b border-slate-200/80 bg-[#FBFBFA]">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl">
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
               Our work
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
               Real projects we&apos;ve built for real businesses.
             </p>
           </div>
@@ -147,39 +151,39 @@ export default function CaseStudiesPage() {
           {caseStudies.map((study) => (
             <article
               key={study.id}
-              className="rounded-[12px] border border-slate-200/85 bg-white p-7 sm:p-9 lg:p-11 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-shadow duration-300 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.08),0_8px_16px_-4px_rgba(15,23,42,0.04)]"
+              className="rounded-[12px] border border-slate-200/85 bg-white p-7 sm:p-9 lg:p-11 shadow-[0_2px_12px_-2px_rgba(15,23,42,0.05),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_24px_48px_-12px_rgba(15,23,42,0.09),0_8px_16px_-4px_rgba(15,23,42,0.04)]"
             >
               {/* Header: Category, Title & Action */}
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ${study.badgeStyle}`}>
                     {study.category}
                   </span>
-                  <h2 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                  <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                     {study.name}
                   </h2>
                 </div>
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center gap-2 rounded-[12px] bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-md self-start sm:self-auto"
+                  className="group inline-flex items-center gap-2 rounded-[12px] bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow self-start sm:self-auto"
                 >
                   <span>Start a similar project</span>
-                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
               </div>
 
               {/* Large Hero Screenshot — Fully visible, uncropped framing */}
-              <div className="mt-8 overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
+              <div className="mt-8 overflow-hidden rounded-[12px] border border-slate-200/85 bg-slate-900/[0.02] shadow-sm">
                 <img
                   src={study.heroImage}
                   alt={study.heroAlt}
-                  className="w-full h-auto block rounded-[12px]"
+                  className="w-full h-auto block rounded-[12px] transition-transform duration-700 hover:scale-[1.01]"
                 />
               </div>
 
               {/* Problem → Solution → Result */}
               <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-                <div className="rounded-[12px] border border-slate-200/70 bg-[#F7F6F3] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-sm">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Problem
                   </h3>
@@ -188,7 +192,7 @@ export default function CaseStudiesPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[12px] border border-slate-200/70 bg-[#F7F6F3] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-sm">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Solution
                   </h3>
@@ -197,7 +201,7 @@ export default function CaseStudiesPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[12px] border border-slate-200/70 bg-[#F7F6F3] p-6 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-sm">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Result
                   </h3>
@@ -216,17 +220,17 @@ export default function CaseStudiesPage() {
                   {study.additionalImages.map((img, idx) => (
                     <div
                       key={idx}
-                      className="overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#F7F6F3] flex flex-col shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]"
+                      className="overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] flex flex-col shadow-sm transition-all duration-300 hover:border-slate-300"
                     >
                       <div className="overflow-hidden">
                         <img
                           src={img.src}
                           alt={img.alt}
-                          className="w-full h-auto block rounded-t-[12px]"
+                          className="w-full h-auto block rounded-t-[12px] transition-transform duration-500 hover:scale-[1.02]"
                         />
                       </div>
                       {img.caption && (
-                        <div className="border-t border-slate-200/70 bg-[#F7F6F3] px-4 py-2.5 text-xs text-slate-600 font-medium">
+                        <div className="border-t border-slate-200/70 bg-[#FAF9F6] px-4 py-2.5 text-xs text-slate-600 font-medium">
                           {img.caption}
                         </div>
                       )}
@@ -245,7 +249,7 @@ export default function CaseStudiesPage() {
                   className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-[#C9A24B]"
                 >
                   <span>Start a similar project</span>
-                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
               </div>
             </article>
@@ -256,7 +260,7 @@ export default function CaseStudiesPage() {
       {/* ============================================================
           BOTTOM CTA — DEEP CONTRAST STAGE
       ============================================================ */}
-      <section className="border-t border-white/[0.08] bg-[#0D0F14] text-white">
+      <section className="relative border-t border-white/[0.08] bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0D0F14] text-white">
         <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-28">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Have a project in mind?
@@ -267,10 +271,10 @@ export default function CaseStudiesPage() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-[#C9A24B] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_20px_rgba(201,162,75,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#D4AF37] hover:shadow-[0_8px_30px_rgba(201,162,75,0.35)]"
+              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-gradient-to-r from-[#DFBD6C] via-[#C9A24B] to-[#B88E2F] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_24px_rgba(201,162,75,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,162,75,0.48)] hover:brightness-105"
             >
               <span>Book a free discovery call</span>
-              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </div>
         </div>

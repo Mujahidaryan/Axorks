@@ -57,7 +57,7 @@ function ContactFormInner() {
   };
 
   return (
-    <div className="rounded-[12px] border border-slate-200/90 bg-white p-6 sm:p-8 shadow-md text-slate-900">
+    <div className="rounded-[12px] border border-slate-200/90 bg-white p-6 sm:p-9 shadow-[0_4px_24px_-4px_rgba(15,23,42,0.08)] text-slate-900">
       <div className="border-b border-slate-100 pb-5">
         <h2 className="text-2xl font-bold tracking-tight text-slate-900">
           Book a free discovery call
@@ -95,7 +95,7 @@ function ContactFormInner() {
               placeholder="Your full name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FBFBFA] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-slate-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-900"
+              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FAF9F6] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-[#C9A24B] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#C9A24B]"
             />
           </div>
 
@@ -111,7 +111,7 @@ function ContactFormInner() {
               placeholder="you@company.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FBFBFA] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-slate-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-900"
+              className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FAF9F6] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-[#C9A24B] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#C9A24B]"
             />
           </div>
         </div>
@@ -127,7 +127,7 @@ function ContactFormInner() {
             placeholder="+1 (555) 000-0000"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FBFBFA] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-slate-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-900"
+            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FAF9F6] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-[#C9A24B] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#C9A24B]"
           />
         </div>
 
@@ -143,7 +143,7 @@ function ContactFormInner() {
             placeholder="Tell us about what you want to build or improve..."
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FBFBFA] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-slate-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-900"
+            className="mt-1.5 w-full rounded-[12px] border border-slate-200 bg-[#FAF9F6] px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 transition-all focus:border-[#C9A24B] focus:bg-white focus:outline-none focus:ring-1 focus:ring-[#C9A24B]"
           />
         </div>
 
@@ -167,10 +167,10 @@ function ContactFormInner() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-[12px] bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2 disabled:opacity-60 sm:w-auto"
+            className="group inline-flex w-full items-center justify-center gap-2 rounded-[12px] bg-gradient-to-r from-[#DFBD6C] via-[#C9A24B] to-[#B88E2F] px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-[0_4px_16px_rgba(201,162,75,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_22px_rgba(201,162,75,0.4)] disabled:opacity-60 sm:w-auto"
           >
             <span>{status === 'loading' ? 'Sending...' : 'Send message'}</span>
-            <Send className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+            <Send className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
           </button>
 
           <a
