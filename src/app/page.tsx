@@ -39,7 +39,7 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — HIGH-END CINEMATIC MOTION HERO (EXPANDED NATURAL SPAN)
+          HERO — HIGH-END CINEMATIC MOTION HERO (DESKTOP + MOBILE)
       ============================================================ */}
       <section className="relative min-h-[660px] overflow-hidden bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0B0D14] border-b border-white/[0.08] text-white flex items-center">
         {/* Layered luxury ambient lighting & glows */}
@@ -50,10 +50,10 @@ export default function HomePage() {
           <div className="exec-grid absolute inset-0 opacity-[0.2]" />
         </div>
 
-        {/* Hero Motion Video — Spans 56-58% on desktop with natural subtle overlap */}
+        {/* Hero Motion Video — Beautiful on desktop (56-58% span) & mobile (ambient alive background) */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[56%] overflow-hidden select-none z-0 opacity-45 lg:opacity-90"
+          className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%] xl:w-[56%] overflow-hidden select-none z-0 opacity-55 lg:opacity-90"
         >
           <div className="hero-video-blend relative h-full w-full overflow-hidden">
             <video
@@ -68,14 +68,14 @@ export default function HomePage() {
             </video>
           </div>
 
-          {/* Smooth multi-stop gradient overlays for seamless edge blending and text readability */}
+          {/* Precision multi-stop gradient overlays for seamless edge blending and text dominance */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/45 to-transparent hidden lg:block" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D14] via-transparent to-[#07080C]/70" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#0B0D14]" />
-          <div className="absolute inset-0 bg-[#07080C]/40 lg:hidden" />
+          <div className="absolute inset-0 bg-[#07080C]/55 lg:hidden" />
         </div>
 
-        {/* Hero Foreground Content — High contrast & dominant */}
+        {/* Hero Foreground Content — Dominant text & high contrast */}
         <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-32 lg:py-40">
           <div className="max-w-2xl lg:max-w-[590px] xl:max-w-[640px]">
             <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-sm">
@@ -101,13 +101,13 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          SERVICES — ELEGANT COLORED CARDS (PERMANENT SOFT TINTS)
+          SERVICES — COMPLETE ELEGANT COLOR FILLS (RICH TINTS)
       ============================================================ */}
       <section className="relative border-t border-slate-200/80 bg-[#FAF9F6]">
         {/* Subtle ambient light glows */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
-          <div className="absolute top-0 right-1/4 h-96 w-96 rounded-full bg-indigo-100/30 blur-3xl" />
-          <div className="absolute bottom-0 left-1/4 h-96 w-96 rounded-full bg-teal-100/30 blur-3xl" />
+          <div className="absolute top-0 right-1/4 h-96 w-96 rounded-full bg-indigo-100/40 blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 h-96 w-96 rounded-full bg-teal-100/40 blur-3xl" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
@@ -121,24 +121,24 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
-            {/* Service 1: Custom Web Applications (Soft Indigo Tinted Card) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-indigo-200/60 bg-gradient-to-b from-[#F4F6FF] to-[#EBF0FE] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(79,70,229,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:bg-gradient-to-b hover:from-[#EEF2FF] hover:to-[#E0E7FF] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.15),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            {/* Service 1: Custom Web Applications (Complete Rich Indigo Color Fill) */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-indigo-200/80 bg-gradient-to-b from-[#EEF2FF] to-[#E0E7FF] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(79,70,229,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:bg-gradient-to-b hover:from-[#E0E7FF] hover:to-[#C7D2FE] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-indigo-600 shadow-sm ring-1 ring-indigo-200/70 transition-transform duration-300 group-hover:scale-105">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-indigo-600 shadow-sm ring-1 ring-indigo-200/80 transition-transform duration-300 group-hover:scale-105">
                   <Layers className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-indigo-950">
+                <h3 className="text-xl font-semibold text-indigo-950 transition-colors">
                   Custom Web Applications
                 </h3>
                 <p className="mt-3.5 text-base leading-relaxed text-slate-700">
                   We build tailored web applications around how your business actually works.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-indigo-200/60">
+              <div className="mt-8 pt-5 border-t border-indigo-200/80">
                 <Link
                   href="/contact?service=web-applications"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-700 transition-colors group-hover:text-indigo-900"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-700 transition-colors group-hover:text-indigo-950"
                 >
                   <span>Discuss your project</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -146,24 +146,24 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 2: AI Automation (Soft Teal Tinted Card) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-teal-200/60 bg-gradient-to-b from-[#F0FDF9] to-[#E6F7F3] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(13,148,136,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:bg-gradient-to-b hover:from-[#E6FAF4] hover:to-[#CCFBF1] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.15),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            {/* Service 2: AI Automation (Complete Rich Teal Color Fill) */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-teal-200/80 bg-gradient-to-b from-[#E6FAF4] to-[#CCFBF1] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(13,148,136,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:bg-gradient-to-b hover:from-[#CCFBF1] hover:to-[#99F6E4] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-teal-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#0D9488] shadow-sm ring-1 ring-teal-200/70 transition-transform duration-300 group-hover:scale-105">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#0D9488] shadow-sm ring-1 ring-teal-200/80 transition-transform duration-300 group-hover:scale-105">
                   <Cpu className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-teal-950">
+                <h3 className="text-xl font-semibold text-teal-950 transition-colors">
                   AI Automation
                 </h3>
                 <p className="mt-3.5 text-base leading-relaxed text-slate-700">
                   We use AI to automate repetitive work, improve decisions, and reduce manual effort.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-teal-200/60">
+              <div className="mt-8 pt-5 border-t border-teal-200/80">
                 <Link
                   href="/contact?service=ai-automation"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 transition-colors group-hover:text-teal-900"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-800 transition-colors group-hover:text-teal-950"
                 >
                   <span>Discuss your project</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -171,21 +171,21 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 3: Mobile Apps (Soft Champagne Gold Tinted Card) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-amber-200/60 bg-gradient-to-b from-[#FEFBF2] to-[#FDF4E1] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:bg-gradient-to-b hover:from-[#FDF2D6] hover:to-[#FDE8B5] hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            {/* Service 3: Mobile Apps (Complete Rich Champagne Gold Color Fill) */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-amber-200/80 bg-gradient-to-b from-[#FDF2D6] to-[#FDE8B5] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:bg-gradient-to-b hover:from-[#FDE8B5] hover:to-[#FCD34D]/60 hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#C9A24B] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#B88E2F] shadow-sm ring-1 ring-amber-200/70 transition-transform duration-300 group-hover:scale-105">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#B88E2F] shadow-sm ring-1 ring-amber-200/80 transition-transform duration-300 group-hover:scale-105">
                   <Smartphone className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-amber-950">
+                <h3 className="text-xl font-semibold text-amber-950 transition-colors">
                   Mobile Apps
                 </h3>
                 <p className="mt-3.5 text-base leading-relaxed text-slate-700">
                   We create mobile applications that make your products and services easier to access.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-amber-200/60">
+              <div className="mt-8 pt-5 border-t border-amber-200/80">
                 <Link
                   href="/contact?service=mobile-apps"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#9E7E32] transition-colors group-hover:text-amber-950"
@@ -196,25 +196,24 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 4: Ongoing Support & Maintenance (Soft Mint/Emerald Tinted Card) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-emerald-200/60 bg-gradient-to-b from-[#F0FDF6] to-[#E5F9EE] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(16,185,129,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:bg-gradient-to-b hover:from-[#E1F9EB] hover:to-[#D1FAE5] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.15),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
+            {/* Service 4: Ongoing Support & Maintenance (Complete Rich Emerald Color Fill) */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-emerald-200/80 bg-gradient-to-b from-[#E1F9EB] to-[#D1FAE5] p-8 sm:p-9 shadow-[0_4px_16px_-4px_rgba(16,185,129,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:bg-gradient-to-b hover:from-[#D1FAE5] hover:to-[#A7F3D0] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.18),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
               <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
               <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-emerald-600 shadow-sm ring-1 ring-emerald-200/70 transition-transform duration-300 group-hover:scale-105">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-emerald-600 shadow-sm ring-1 ring-emerald-200/80 transition-transform duration-300 group-hover:scale-105">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 transition-colors group-hover:text-emerald-950">
+                <h3 className="text-xl font-semibold text-emerald-950 transition-colors">
                   Ongoing Support &amp; Maintenance
                 </h3>
                 <p className="mt-3.5 text-base leading-relaxed text-slate-700">
                   We keep your software secure, reliable, and improving after launch.
                 </p>
               </div>
-              <div className="mt-8 pt-5 border-t border-emerald-200/60">
+              <div className="mt-8 pt-5 border-t border-emerald-200/80">
                 <Link
                   href="/contact?service=support"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 transition-colors group-hover:text-emerald-900"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-800 transition-colors group-hover:text-emerald-950"
                 >
                   <span>Discuss your project</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -224,8 +223,8 @@ export default function HomePage() {
           </div>
 
           {/* Pricing Banner */}
-          <div className="mt-10 rounded-[12px] border border-amber-200/60 bg-gradient-to-r from-[#FEFBF2] via-white to-[#FEFBF2] p-8 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.06)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <p className="text-base leading-relaxed text-slate-700">
+          <div className="mt-10 rounded-[12px] border border-amber-200/70 bg-gradient-to-r from-[#FDF2D6] via-white to-[#FDF2D6] p-8 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.08)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <p className="text-base leading-relaxed text-slate-800">
               <strong className="font-semibold text-slate-950">Simple pricing.</strong>{' '}
               Projects start from $600. Every project receives a clear fixed-price proposal before development begins.
             </p>
@@ -265,7 +264,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {/* AgroTrace */}
-            <article className="overflow-hidden rounded-[12px] border border-emerald-200/60 bg-gradient-to-b from-white to-[#F6FCF9] shadow-[0_4px_16px_-4px_rgba(16,185,129,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
+            <article className="overflow-hidden rounded-[12px] border border-emerald-200/70 bg-gradient-to-b from-white to-[#F0FDF6] shadow-[0_4px_16px_-4px_rgba(16,185,129,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
               <div>
                 <div className="overflow-hidden border-b border-emerald-100 bg-slate-900/[0.02]">
                   <img
@@ -292,7 +291,7 @@ export default function HomePage() {
             </article>
 
             {/* IPMI-OS */}
-            <article className="overflow-hidden rounded-[12px] border border-indigo-200/60 bg-gradient-to-b from-white to-[#F6F8FE] shadow-[0_4px_16px_-4px_rgba(79,70,229,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
+            <article className="overflow-hidden rounded-[12px] border border-indigo-200/70 bg-gradient-to-b from-white to-[#EEF2FF] shadow-[0_4px_16px_-4px_rgba(79,70,229,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
               <div>
                 <div className="overflow-hidden border-b border-indigo-100 bg-slate-900/[0.02]">
                   <img
@@ -319,7 +318,7 @@ export default function HomePage() {
             </article>
 
             {/* MediVerse */}
-            <article className="overflow-hidden rounded-[12px] border border-teal-200/60 bg-gradient-to-b from-white to-[#F4FAF8] shadow-[0_4px_16px_-4px_rgba(13,148,136,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
+            <article className="overflow-hidden rounded-[12px] border border-teal-200/70 bg-gradient-to-b from-white to-[#E6FAF4] shadow-[0_4px_16px_-4px_rgba(13,148,136,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.12),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
               <div>
                 <div className="overflow-hidden border-b border-teal-100 bg-slate-900/[0.02]">
                   <img
@@ -401,7 +400,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          WHY AXORKS — ELEGANT CARDS WITH SUBTLE ACCENTS
+          WHY AXORKS — TINTED CARDS WITH ACCENTS
       ============================================================ */}
       <section className="border-t border-slate-200/80 bg-[#FAF9F6]">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
@@ -413,12 +412,12 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Fixed-price proposals', desc: 'You know the cost before we start. No surprises.', border: 'border-amber-200/60 hover:border-amber-300', bg: 'from-white to-[#FEFBF2]' },
-              { title: 'Direct access to engineers', desc: 'You work directly with the people building your software. No middlemen.', border: 'border-indigo-200/60 hover:border-indigo-300', bg: 'from-white to-[#F4F6FF]' },
-              { title: 'Real office, real team', desc: 'We operate from real offices in Karachi and Islamabad with a dedicated in-house team.', border: 'border-teal-200/60 hover:border-teal-300', bg: 'from-white to-[#F0FDF9]' },
-              { title: 'Payment on milestones', desc: 'Payment is structured around clear project milestones. You pay for progress you can see.', border: 'border-amber-200/60 hover:border-amber-300', bg: 'from-white to-[#FEFBF2]' },
-              { title: 'UK, US & EU time zones', desc: 'We overlap with your working hours for meetings and updates.', border: 'border-indigo-200/60 hover:border-indigo-300', bg: 'from-white to-[#F4F6FF]' },
-              { title: '24-hour response guarantee', desc: 'Every message gets a response within 24 hours.', border: 'border-emerald-200/60 hover:border-emerald-300', bg: 'from-white to-[#F0FDF6]' },
+              { title: 'Fixed-price proposals', desc: 'You know the cost before we start. No surprises.', border: 'border-amber-200/70 hover:border-amber-300', bg: 'from-white to-[#FDF2D6]' },
+              { title: 'Direct access to engineers', desc: 'You work directly with the people building your software. No middlemen.', border: 'border-indigo-200/70 hover:border-indigo-300', bg: 'from-white to-[#EEF2FF]' },
+              { title: 'Real office, real team', desc: 'We operate from real offices in Karachi and Islamabad with a dedicated in-house team.', border: 'border-teal-200/70 hover:border-teal-300', bg: 'from-white to-[#E6FAF4]' },
+              { title: 'Payment on milestones', desc: 'Payment is structured around clear project milestones. You pay for progress you can see.', border: 'border-amber-200/70 hover:border-amber-300', bg: 'from-white to-[#FDF2D6]' },
+              { title: 'UK, US & EU time zones', desc: 'We overlap with your working hours for meetings and updates.', border: 'border-indigo-200/70 hover:border-indigo-300', bg: 'from-white to-[#EEF2FF]' },
+              { title: '24-hour response guarantee', desc: 'Every message gets a response within 24 hours.', border: 'border-emerald-200/70 hover:border-emerald-300', bg: 'from-white to-[#E1F9EB]' },
             ].map((item) => (
               <div
                 key={item.title}

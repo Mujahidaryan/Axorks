@@ -43,7 +43,7 @@ export default function Navigation() {
         >
           <div className="relative h-9 w-9 overflow-hidden rounded-[12px] border border-slate-200 bg-white p-0.5 shadow-sm transition-shadow duration-200 group-hover:border-amber-300 group-hover:shadow-[0_0_12px_rgba(201,162,75,0.25)]">
             <Image
-              src="/Axorks_white_logo.png"
+              src="/logo.png"
               alt="Axorks"
               width={36}
               height={36}
