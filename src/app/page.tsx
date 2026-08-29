@@ -39,39 +39,39 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — HIGH-END CINEMATIC MOTION HERO (DESKTOP + CLEAN MOBILE)
+          HERO — UNIFIED DARK OBSIDIAN HERO WITH SEAMLESS MOTION
       ============================================================ */}
-      <section className="relative min-h-[680px] overflow-hidden bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0B0D14] border-b border-white/[0.08] text-white flex items-center">
+      <section className="relative min-h-[680px] overflow-hidden bg-[#07080C] border-b border-white/[0.08] text-white flex items-center">
         {/* Layered luxury ambient lighting & glows */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
           <div className="absolute -top-40 right-1/4 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-[#4F46E5]/20 via-[#0D9488]/15 to-transparent blur-3xl opacity-65" />
           <div className="absolute top-1/3 left-[-100px] h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-[#C9A24B]/12 via-[#7C3AED]/12 to-transparent blur-3xl opacity-55" />
           <div className="absolute -bottom-32 right-1/3 h-[450px] w-[450px] rounded-full bg-gradient-to-t from-[#0D9488]/18 to-transparent blur-3xl opacity-45" />
-          <div className="exec-grid absolute inset-0 opacity-[0.22]" />
+          <div className="exec-grid absolute inset-0 opacity-[0.2]" />
         </div>
 
-        {/* Desktop Hero Motion Video — Spans 56-58% on desktop with seamless natural blending */}
+        {/* Desktop Hero Motion Video — Seamless full-stage blend with zero hard lines */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 right-0 hidden lg:block w-full lg:w-[58%] xl:w-[56%] overflow-hidden select-none z-0 opacity-90"
+          className="pointer-events-none absolute inset-0 hidden lg:flex justify-end overflow-hidden select-none z-0"
         >
-          <div className="hero-video-blend relative h-full w-full overflow-hidden">
+          <div className="hero-video-blend relative h-full w-[60%] xl:w-[58%] overflow-hidden">
             <video
               autoPlay
               loop
               muted
               playsInline
-              preload="metadata"
+              preload="auto"
               className="h-full w-full object-cover object-[center_35%] scale-[1.08] -translate-y-1"
             >
               <source src="/assets/hero_motion.mp4" type="video/mp4" />
             </video>
           </div>
 
-          {/* Precision multi-stop gradient overlays for seamless edge blending */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/45 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D14] via-transparent to-[#07080C]/70" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#0B0D14]" />
+          {/* Full-width continuous overlays matching base background #07080C */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
         </div>
 
         {/* Hero Foreground Content — High contrast & dominant */}
@@ -104,7 +104,7 @@ export default function HomePage() {
                   loop
                   muted
                   playsInline
-                  preload="metadata"
+                  preload="auto"
                   className="h-full w-full object-cover object-[center_35%] scale-[1.08]"
                 >
                   <source src="/assets/hero_motion.mp4" type="video/mp4" />

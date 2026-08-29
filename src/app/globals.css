@@ -61,8 +61,8 @@
   }
 
   body {
-    background-color: var(--obsidian);
-    color: var(--paper);
+    background-color: #FAF9F6;
+    color: #0F172A;
     font-family: var(--font-inter);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -97,12 +97,23 @@
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(40, 44, 56, 0.9);
-  border: 2px solid var(--obsidian);
+  background: rgba(148, 163, 184, 0.5);
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(79, 70, 229, 0.55);
+}
+
+/* ============================================================
+   HERO MOTION VIDEO BLEND — SEAMLESS CONTINUOUS INTEGRATION
+   ============================================================ */
+.hero-video-blend {
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.7) 60%, black 90%),
+              linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.7) 60%, black 90%),
+                      linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
 }
 
 /* ============================================================

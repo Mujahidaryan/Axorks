@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -8,17 +8,8 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const isDarkHero = pathname === '/';
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navItems = [
     { label: 'Services', href: '/services' },
@@ -28,23 +19,14 @@ export default function Navigation() {
     { label: 'Contact', href: '/contact' },
   ];
 
-  // Dynamic header styles based on dark hero vs light pages and scroll position
-  const getHeaderStyles = () => {
-    if (isDarkHero) {
-      if (isScrolled) {
-        return 'border-b border-white/[0.08] bg-[#07080C]/90 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.6)] backdrop-blur-md text-white';
-      }
-      return 'border-b border-white/[0.08] bg-transparent backdrop-blur-xs text-white';
-    }
-
-    if (isScrolled) {
-      return 'border-b border-slate-200/90 bg-white/90 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06)] backdrop-blur-md text-slate-900';
-    }
-    return 'border-b border-slate-200/70 bg-transparent backdrop-blur-xs text-slate-900';
-  };
-
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${getHeaderStyles()}`}>
+    <header
+      className={`sticky top-0 z-50 w-full transition-colors duration-200 ${
+        isDarkHero
+          ? 'border-b border-white/[0.08] bg-[#07080C] text-white shadow-[0_4px_20px_rgba(0,0,0,0.6)]'
+          : 'border-b border-slate-200/90 bg-white/95 text-slate-900 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06)] backdrop-blur-md'
+      }`}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-8">
         {/* Logo with original logo.png */}
         <Link
@@ -53,10 +35,8 @@ export default function Navigation() {
         >
           <div
             className={`relative h-9 w-9 overflow-hidden rounded-[12px] p-0.5 shadow-sm transition-all duration-200 ${
-              isDarkHero && !isScrolled
+              isDarkHero
                 ? 'border border-white/20 bg-white/10 group-hover:border-amber-400/60 group-hover:shadow-[0_0_14px_rgba(201,162,75,0.35)]'
-                : isDarkHero && isScrolled
-                ? 'border border-white/15 bg-white/5 group-hover:border-amber-400/60 group-hover:shadow-[0_0_14px_rgba(201,162,75,0.35)]'
                 : 'border border-slate-200 bg-white group-hover:border-amber-300 group-hover:shadow-[0_0_12px_rgba(201,162,75,0.25)]'
             }`}
           >
@@ -139,10 +119,10 @@ export default function Navigation() {
       {/* Mobile Menu Drawer */}
       {isOpen && (
         <div
-          className={`border-t px-5 pb-6 pt-3 shadow-lg backdrop-blur-md md:hidden animate-fade-in ${
+          className={`border-t px-5 pb-6 pt-3 shadow-lg md:hidden animate-fade-in ${
             isDarkHero
-              ? 'border-white/10 bg-[#0B0D14]/98 text-white'
-              : 'border-slate-100 bg-white/98 text-slate-900'
+              ? 'border-white/10 bg-[#07080C] text-white'
+              : 'border-slate-100 bg-white text-slate-900'
           }`}
         >
           <div className="flex flex-col gap-1.5">
