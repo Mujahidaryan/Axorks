@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Layers, Cpu, Smartphone, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Layers, Cpu, Smartphone, ShieldCheck, Clock, Zap, Users, ShieldAlert, Award } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 
@@ -77,12 +77,15 @@ export default function HomePage() {
         {/* Hero Foreground Content — High contrast & dominant */}
         <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-32 lg:py-40">
           <div className="max-w-2xl lg:max-w-[590px] xl:max-w-[640px]">
+            {/* Value Proposition Header */}
             <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-sm">
               We build custom software that helps your business grow
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl font-normal">
               Axorks helps growing businesses build custom web applications and automate manual work with AI. Projects start from $600.
             </p>
+
+            {/* Primary Action Button */}
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <Link
                 href="/contact"
@@ -92,11 +95,13 @@ export default function HomePage() {
                 <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
+
+            {/* Factual Proof Subtext */}
             <p className="mt-7 text-sm text-slate-400 font-medium">
               We&apos;ve delivered real solutions in agriculture, healthcare, and AI decision systems.
             </p>
 
-            {/* Mobile Clean Motion Showcase (Cleanly positioned below text content) */}
+            {/* Mobile Clean Motion Showcase (Positioned cleanly below text with 1.25x scale to crop watermark) */}
             <div className="mt-10 overflow-hidden rounded-[14px] border border-white/10 bg-[#0E111A] shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:hidden">
               <div className="relative aspect-video w-full overflow-hidden">
                 <video
@@ -105,7 +110,7 @@ export default function HomePage() {
                   muted
                   playsInline
                   preload="auto"
-                  className="h-full w-full object-cover object-[center_35%] scale-[1.08]"
+                  className="h-full w-full object-cover object-[center_30%] scale-[1.25]"
                 >
                   <source src="/assets/hero_motion.mp4" type="video/mp4" />
                 </video>
@@ -147,9 +152,22 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-indigo-950 transition-colors">
                   Custom Web Applications
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-800">
+                <p className="mt-3 text-base leading-relaxed text-slate-800">
                   We build tailored web applications around how your business actually works.
                 </p>
+
+                {/* Deliverable Tags (Eliminates dead empty space) */}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-indigo-900 ring-1 ring-indigo-200/70">
+                    Client Portals
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-indigo-900 ring-1 ring-indigo-200/70">
+                    Internal Dashboards
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-indigo-900 ring-1 ring-indigo-200/70">
+                    SaaS Platforms
+                  </span>
+                </div>
               </div>
               <div className="mt-8 pt-5 border-t border-indigo-200/90">
                 <Link
@@ -172,9 +190,22 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-teal-950 transition-colors">
                   AI Automation
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-800">
+                <p className="mt-3 text-base leading-relaxed text-slate-800">
                   We use AI to automate repetitive work, improve decisions, and reduce manual effort.
                 </p>
+
+                {/* Deliverable Tags (Eliminates dead empty space) */}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-teal-900 ring-1 ring-teal-200/70">
+                    Document AI Pipelines
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-teal-900 ring-1 ring-teal-200/70">
+                    Automated Workflows
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-teal-900 ring-1 ring-teal-200/70">
+                    Decision Engines
+                  </span>
+                </div>
               </div>
               <div className="mt-8 pt-5 border-t border-teal-200/90">
                 <Link
@@ -197,9 +228,22 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-amber-950 transition-colors">
                   Mobile Apps
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-800">
+                <p className="mt-3 text-base leading-relaxed text-slate-800">
                   We create mobile applications that make your products and services easier to access.
                 </p>
+
+                {/* Deliverable Tags (Eliminates dead empty space) */}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-amber-900 ring-1 ring-amber-200/70">
+                    iOS &amp; Android Apps
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-amber-900 ring-1 ring-amber-200/70">
+                    Offline Data Sync
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-amber-900 ring-1 ring-amber-200/70">
+                    Customer Experience
+                  </span>
+                </div>
               </div>
               <div className="mt-8 pt-5 border-t border-amber-200/90">
                 <Link
@@ -222,9 +266,22 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold text-emerald-950 transition-colors">
                   Ongoing Support &amp; Maintenance
                 </h3>
-                <p className="mt-3.5 text-base leading-relaxed text-slate-800">
+                <p className="mt-3 text-base leading-relaxed text-slate-800">
                   We keep your software secure, reliable, and improving after launch.
                 </p>
+
+                {/* Deliverable Tags (Eliminates dead empty space) */}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-emerald-900 ring-1 ring-emerald-200/70">
+                    Security Patches
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-emerald-900 ring-1 ring-emerald-200/70">
+                    Performance Tuning
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-emerald-900 ring-1 ring-emerald-200/70">
+                    Feature Releases
+                  </span>
+                </div>
               </div>
               <div className="mt-8 pt-5 border-t border-emerald-200/90">
                 <Link
@@ -383,33 +440,72 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="group relative rounded-[12px] border border-white/[0.08] bg-gradient-to-b from-[#141722] to-[#0F121A] p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A24B]/40 hover:shadow-[0_12px_32px_rgba(201,162,75,0.12)]">
-              <span className="text-2xl font-bold text-[#C9A24B] font-mono tracking-tight drop-shadow-[0_0_12px_rgba(201,162,75,0.3)]">01</span>
-              <h3 className="mt-4 text-base font-semibold text-white">Discovery Call</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
-                We learn about your business, your goals, and the problem you need to solve.
-              </p>
+            {/* Step 1 */}
+            <div className="group relative rounded-[12px] border border-white/[0.08] bg-gradient-to-b from-[#141722] to-[#0F121A] p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A24B]/40 hover:shadow-[0_12px_32px_rgba(201,162,75,0.12)] flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-[#C9A24B] font-mono tracking-tight drop-shadow-[0_0_12px_rgba(201,162,75,0.3)]">01</span>
+                  <span className="text-[11px] font-medium text-slate-400 bg-white/5 px-2 py-0.5 rounded-full">1–2 Days</span>
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-white">Discovery Call</h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
+                  We learn about your business, your goals, and the problem you need to solve.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/[0.06] text-xs text-slate-400">
+                Deliverable: Requirements Alignment
+              </div>
             </div>
-            <div className="group relative rounded-[12px] border border-white/[0.08] bg-gradient-to-b from-[#141722] to-[#0F121A] p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A24B]/40 hover:shadow-[0_12px_32px_rgba(201,162,75,0.12)]">
-              <span className="text-2xl font-bold text-[#C9A24B] font-mono tracking-tight drop-shadow-[0_0_12px_rgba(201,162,75,0.3)]">02</span>
-              <h3 className="mt-4 text-base font-semibold text-white">Proposal</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
-                We turn your requirements into a clear scope, timeline, and fixed-price proposal.
-              </p>
+
+            {/* Step 2 */}
+            <div className="group relative rounded-[12px] border border-white/[0.08] bg-gradient-to-b from-[#141722] to-[#0F121A] p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A24B]/40 hover:shadow-[0_12px_32px_rgba(201,162,75,0.12)] flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-[#C9A24B] font-mono tracking-tight drop-shadow-[0_0_12px_rgba(201,162,75,0.3)]">02</span>
+                  <span className="text-[11px] font-medium text-slate-400 bg-white/5 px-2 py-0.5 rounded-full">48 Hours</span>
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-white">Proposal</h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
+                  We turn your requirements into a clear scope, timeline, and fixed-price proposal.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/[0.06] text-xs text-slate-400">
+                Deliverable: Fixed-Price Quote
+              </div>
             </div>
-            <div className="group relative rounded-[12px] border border-white/[0.08] bg-gradient-to-b from-[#141722] to-[#0F121A] p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A24B]/40 hover:shadow-[0_12px_32px_rgba(201,162,75,0.12)]">
-              <span className="text-2xl font-bold text-[#C9A24B] font-mono tracking-tight drop-shadow-[0_0_12px_rgba(201,162,75,0.3)]">03</span>
-              <h3 className="mt-4 text-base font-semibold text-white">Build &amp; Launch</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
-                Once approved, we build, test, deploy, and launch your solution.
-              </p>
+
+            {/* Step 3 */}
+            <div className="group relative rounded-[12px] border border-white/[0.08] bg-gradient-to-b from-[#141722] to-[#0F121A] p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A24B]/40 hover:shadow-[0_12px_32px_rgba(201,162,75,0.12)] flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-[#C9A24B] font-mono tracking-tight drop-shadow-[0_0_12px_rgba(201,162,75,0.3)]">03</span>
+                  <span className="text-[11px] font-medium text-slate-400 bg-white/5 px-2 py-0.5 rounded-full">2–6 Weeks</span>
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-white">Build &amp; Launch</h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
+                  Once approved, we build, test, deploy, and launch your solution.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/[0.06] text-xs text-slate-400">
+                Deliverable: Production Deployment
+              </div>
             </div>
-            <div className="group relative rounded-[12px] border border-white/[0.08] bg-gradient-to-b from-[#141722] to-[#0F121A] p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A24B]/40 hover:shadow-[0_12px_32px_rgba(201,162,75,0.12)]">
-              <span className="text-2xl font-bold text-[#C9A24B] font-mono tracking-tight drop-shadow-[0_0_12px_rgba(201,162,75,0.3)]">04</span>
-              <h3 className="mt-4 text-base font-semibold text-white">Ongoing Support</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
-                After launch we can continue maintaining, improving, and supporting your software.
-              </p>
+
+            {/* Step 4 */}
+            <div className="group relative rounded-[12px] border border-white/[0.08] bg-gradient-to-b from-[#141722] to-[#0F121A] p-8 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-[#C9A24B]/40 hover:shadow-[0_12px_32px_rgba(201,162,75,0.12)] flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-2xl font-bold text-[#C9A24B] font-mono tracking-tight drop-shadow-[0_0_12px_rgba(201,162,75,0.3)]">04</span>
+                  <span className="text-[11px] font-medium text-slate-400 bg-white/5 px-2 py-0.5 rounded-full">Continuous</span>
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-white">Ongoing Support</h3>
+                <p className="mt-2.5 text-sm leading-relaxed text-slate-300">
+                  After launch we can continue maintaining, improving, and supporting your software.
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/[0.06] text-xs text-slate-400">
+                Deliverable: SLA Maintenance
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Inter, JetBrains_Mono } from 'next/font/google';
 import Script from 'next/script';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -7,6 +8,8 @@ import {
   SITE_NAME,
   FOUNDER_NAME,
   CONTACT_EMAIL,
+  CONTACT_WHATSAPP,
+  CONTACT_WHATSAPP_FORMATTED,
   LINKEDIN_URL,
   ADDRESS_STREET,
   ADDRESS_CITY,
@@ -20,15 +23,27 @@ import {
 } from '@/lib/config';
 import './globals.css';
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains-mono',
+});
+
 export const viewport: Viewport = {
-  themeColor: '#0B0C10',
+  themeColor: '#07080C',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.axorks.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Axorks | Custom Web Applications & AI Automation for Growing Businesses',
     template: '%s | Axorks',
@@ -76,16 +91,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${SITE_URL}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Axorks — Custom Web Applications & AI Automation',
-      },
-      {
         url: `${SITE_URL}/logo.png`,
         width: 800,
         height: 800,
-        alt: 'Axorks',
+        alt: 'Axorks — Custom Web Applications & AI Automation',
       },
     ],
   },
@@ -94,7 +103,7 @@ export const metadata: Metadata = {
     title: 'Axorks | Custom Software & AI Automation',
     description:
       'Custom web applications and AI automation for growing businesses. Projects from $600.',
-    images: [`${SITE_URL}/og-image.png`, `${SITE_URL}/logo.png`],
+    images: [`${SITE_URL}/logo.png`],
   },
   alternates: {
     canonical: '/',
@@ -125,7 +134,7 @@ export default function RootLayout({
           'Axorks helps growing businesses build custom web applications and automate manual work with AI.',
         slogan: 'Custom Web Applications & AI Automation for Growing Businesses',
         priceRange: '$$',
-        telephone: '+923141030223',
+        telephone: CONTACT_WHATSAPP,
         email: CONTACT_EMAIL,
         address: {
           '@type': 'PostalAddress',
@@ -198,29 +207,12 @@ export default function RootLayout({
           },
           sameAs: [
             LINKEDIN_URL,
-            'https://wa.me/923141030223',
+            `https://wa.me/${CONTACT_WHATSAPP.replace(/[^0-9]/g, '')}`,
           ],
         },
         sameAs: [
           LINKEDIN_URL,
-          'https://wa.me/923141030223',
-        ],
-      },
-      {
-        '@type': 'Person',
-        '@id': `${SITE_URL}/#founder`,
-        name: FOUNDER_NAME,
-        jobTitle: 'Founder & Chief Systems Architect',
-        worksFor: { '@id': `${SITE_URL}/#organization` },
-        url: `${SITE_URL}/about`,
-        image: `${SITE_URL}/logo.png`,
-        alumniOf: {
-          '@type': 'EducationalOrganization',
-          name: 'Bahria University',
-        },
-        sameAs: [
-          LINKEDIN_URL,
-          'https://wa.me/923141030223',
+          `https://wa.me/${CONTACT_WHATSAPP.replace(/[^0-9]/g, '')}`,
         ],
       },
       {
@@ -236,7 +228,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -260,7 +252,14 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex min-h-screen flex-col bg-white text-slate-900 antialiased selection:bg-indigo-500/20 selection:text-indigo-900">
+      <body className="flex min-h-screen flex-col bg-[#FAF9F6] text-slate-900 font-sans antialiased selection:bg-indigo-500/20 selection:text-indigo-900">
+        {/* Accessible Skip to Content Link */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-[8px] focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         <Navigation />
         <main id="main-content" className="flex-1">
           {children}

@@ -28,9 +28,11 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    id: 'web-applications',
     title: 'Custom Web Applications',
     description:
       'We build tailored web applications around how your business actually works.',
+    deliverables: ['Client Portals', 'Internal Dashboards', 'SaaS Platforms'],
     href: '/contact?service=web-applications',
     accentColor: 'via-indigo-500',
     cardBg: 'from-[#EEF2FF] via-[#E0E7FF] to-[#D5DEFF] hover:from-[#E0E7FF] hover:via-[#D5DEFF] hover:to-[#C7D2FE]',
@@ -40,12 +42,15 @@ const services = [
     dividerColor: 'border-indigo-200/90',
     icon: <Layers className="h-5 w-5" />,
     iconBox: 'bg-white text-indigo-600 ring-1 ring-indigo-200/90 shadow-xs',
+    tagStyle: 'bg-white/80 text-indigo-900 ring-indigo-200/70',
     linkColor: 'text-indigo-700 hover:text-indigo-950',
   },
   {
+    id: 'ai-automation',
     title: 'AI Automation',
     description:
       'We use AI to automate repetitive work, improve decisions, and reduce manual effort.',
+    deliverables: ['Document AI Pipelines', 'Automated Workflows', 'Decision Engines'],
     href: '/contact?service=ai-automation',
     accentColor: 'via-teal-500',
     cardBg: 'from-[#E6FAF4] via-[#CCFBF1] to-[#B6F5E8] hover:from-[#CCFBF1] hover:via-[#B6F5E8] hover:to-[#99F6E4]',
@@ -55,12 +60,15 @@ const services = [
     dividerColor: 'border-teal-200/90',
     icon: <Cpu className="h-5 w-5" />,
     iconBox: 'bg-white text-[#0D9488] ring-1 ring-teal-200/90 shadow-xs',
+    tagStyle: 'bg-white/80 text-teal-900 ring-teal-200/70',
     linkColor: 'text-teal-800 hover:text-teal-950',
   },
   {
+    id: 'mobile-apps',
     title: 'Mobile Apps',
     description:
       'We create mobile applications that make your products and services easier to access.',
+    deliverables: ['iOS & Android Apps', 'Offline Data Sync', 'Customer Experience'],
     href: '/contact?service=mobile-apps',
     accentColor: 'via-[#C9A24B]',
     cardBg: 'from-[#FEF3C7] via-[#FDE68A]/80 to-[#FCD34D]/60 hover:from-[#FDE68A] hover:via-[#FCD34D]/80 hover:to-[#FBBF24]/60',
@@ -70,12 +78,15 @@ const services = [
     dividerColor: 'border-amber-200/90',
     icon: <Smartphone className="h-5 w-5" />,
     iconBox: 'bg-white text-[#B88E2F] ring-1 ring-amber-200/90 shadow-xs',
+    tagStyle: 'bg-white/80 text-amber-900 ring-amber-200/70',
     linkColor: 'text-[#9E7E32] hover:text-amber-950',
   },
   {
+    id: 'support',
     title: 'Ongoing Support & Maintenance',
     description:
       'We keep your software secure, reliable, and improving after launch.',
+    deliverables: ['Security Patches', 'Performance Tuning', 'Feature Releases'],
     href: '/contact?service=support',
     accentColor: 'via-emerald-500',
     cardBg: 'from-[#E1F9EB] via-[#D1FAE5] to-[#B3F5D3] hover:from-[#D1FAE5] hover:via-[#B3F5D3] hover:to-[#A7F3D0]',
@@ -85,6 +96,7 @@ const services = [
     dividerColor: 'border-emerald-200/90',
     icon: <ShieldCheck className="h-5 w-5" />,
     iconBox: 'bg-white text-emerald-600 ring-1 ring-emerald-200/90 shadow-xs',
+    tagStyle: 'bg-white/80 text-emerald-900 ring-emerald-200/70',
     linkColor: 'text-emerald-800 hover:text-emerald-950',
   },
 ];
@@ -102,7 +114,7 @@ export default function ServicesPage() {
               What we build
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-              We focus on building software that solves real business problems.
+              We focus on building software that solves real business problems. Every project gets a clear fixed-price proposal before development begins.
             </p>
           </div>
         </div>
@@ -118,6 +130,7 @@ export default function ServicesPage() {
             {services.map((service) => (
               <div
                 key={service.title}
+                id={service.id}
                 className={`group relative flex flex-col justify-between overflow-hidden rounded-[12px] border ${service.borderColor} bg-gradient-to-br ${service.cardBg} p-8 sm:p-9 ${service.shadowStyle} transition-all duration-300 hover:-translate-y-1.5`}
               >
                 <div
@@ -133,6 +146,18 @@ export default function ServicesPage() {
                   <p className="mt-3.5 text-base leading-relaxed text-slate-800">
                     {service.description}
                   </p>
+
+                  {/* Deliverables tags to eliminate empty dead space */}
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {service.deliverables.map((tag) => (
+                      <span
+                        key={tag}
+                        className={`inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium ring-1 ${service.tagStyle}`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 <div className={`mt-8 pt-5 border-t ${service.dividerColor}`}>
                   <Link

@@ -1,26 +1,24 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, HelpCircle } from 'lucide-react';
+import { ArrowRight, HelpCircle, ChevronRight } from 'lucide-react';
 import { SITE_URL, SITE_NAME, FOUNDER_NAME } from '@/lib/config';
-import { PRICING } from '@/lib/pricing';
-import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions (FAQ) | Axorks Software Studio',
+  title: 'Frequently Asked Questions | Axorks',
   description:
-    'Factual Q&A detailing Axorks services, founder background, tech stacks, investment ranges, project timelines, and development guarantees.',
+    'Factual answers about custom software development, AI automation, pricing, engagement models, and working with Axorks.',
   openGraph: {
-    title: 'Frequently Asked Questions (FAQ) | Axorks',
+    title: 'Frequently Asked Questions | Axorks',
     description:
-      'Clear, factual Q&A covering Axorks capabilities, founder background, investment ranges, and technical workflows.',
+      'Clear answers about our software engineering services, fixed-price proposals, and working with our in-house team.',
     url: `${SITE_URL}/faq`,
     siteName: SITE_NAME,
     images: [{ url: `${SITE_URL}/logo.png` }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frequently Asked Questions (FAQ) | Axorks',
-    description: 'Factual Q&A covering Axorks capabilities, pricing ranges, and technical workflows.',
+    title: 'Frequently Asked Questions | Axorks',
+    description: 'Factual answers about custom software development, AI automation, and fixed-price proposals.',
   },
   alternates: {
     canonical: '/faq',
@@ -30,28 +28,34 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   const faqs = [
     {
-      q: 'What is Axorks and what services does it provide?',
-      a: 'Axorks is an independent software engineering studio serving clients across the UK, Europe, GCC, North America, and worldwide. We specialize in custom web application development, corporate website engineering, cross-platform mobile app development, AI integration & automation, enterprise digital solutions, and monthly technical maintenance retainers.',
+      q: 'What is Axorks and what services do you provide?',
+      a: 'Axorks is an independent software engineering company. We build custom web applications, automate repetitive business workflows with AI, develop cross-platform mobile apps, and provide ongoing software maintenance and support for growing businesses worldwide.',
+      tag: 'Overview',
     },
     {
-      q: 'Who is the founder of Axorks and what are their credentials?',
-      a: 'Axorks was founded by a Full-Stack Software Engineer (BS Software Engineering, Bahria University) and Computer Science Educator with 4+ years of experience across CAIE O/A-Levels instruction and shipped production systems. Our founder is recognized as a Microsoft Innovative Educator Expert (MIEE 2025).',
+      q: 'How does your fixed-price proposal process work?',
+      a: 'Every project begins with a free discovery call. We review your requirements and provide a clear fixed-price proposal with defined deliverables and milestones within 48 hours. You know the exact cost before development starts — no hidden fees or scope surprises.',
+      tag: 'Pricing & Scope',
     },
     {
-      q: 'What technologies and frameworks does Axorks use?',
-      a: 'We build with Next.js App Router, TypeScript, React, Node.js, Python (FastAPI), serverless PostgreSQL (Neon), Prisma ORM, Tailwind CSS, OpenAI API, and Docker.',
+      q: 'What technologies and frameworks do you use?',
+      a: 'We specialize in modern, reliable tech stacks: Next.js App Router, TypeScript, React, Node.js, Python (FastAPI), serverless PostgreSQL, Prisma ORM, Tailwind CSS, and OpenAI API integrations.',
+      tag: 'Technology',
     },
     {
-      q: 'How much does a custom web application or website cost at Axorks?',
-      a: `Axorks operates on transparent static investment ranges: Custom Websites range from ${PRICING.websiteDevelopment.formattedRange}; Custom Web Applications range from ${PRICING.webApplications.formattedRange}; Mobile Applications range from ${PRICING.mobileAppDevelopment.formattedRange}; AI Integrations range from ${PRICING.aiIntegration.formattedRange}; Government/Enterprise solutions are custom quoted; Maintenance Retainers range from ${PRICING.maintenanceSupport.formattedRange}.`,
+      q: 'How long does a typical software project take?',
+      a: 'Most single-purpose web tools and internal portals take ~2–3 weeks. Full custom web platforms and mobile applications take ~4–8 weeks depending on database complexity and third-party integrations.',
+      tag: 'Timeline',
     },
     {
-      q: 'What experience does Axorks have with government and public-sector software?',
-      a: 'Our engineering leadership has architected public-sector systems including AgroTrace (connected to FWO grid telemetry) and the Sindh Food Security Dashboard (aligned with international FAO/WFP humanitarian standards).',
+      q: 'How do you structure payments?',
+      a: 'Payment is structured around clear project milestones. You only pay for progress you can inspect, test, and approve on staging before production deployment.',
+      tag: 'Commercial',
     },
     {
-      q: 'How long does a typical software development project take?',
-      a: 'Corporate websites typically take 2–4 weeks. Custom web applications and cross-platform mobile apps typically take 4–8 weeks depending on database complexity and API integrations.',
+      q: 'How do you handle time zone differences for international clients?',
+      a: 'We overlap directly with UK, US, and EU business hours for meetings, real-time updates, and sprint reviews. Every client message receives a response within 24 hours.',
+      tag: 'Communication',
     },
   ];
 
@@ -69,7 +73,7 @@ export default function FaqPage() {
   };
 
   return (
-    <div className="pb-12 sm:pb-20">
+    <div className="bg-[#FAF9F6]">
       <head>
         <script
           type="application/ld+json"
@@ -77,77 +81,102 @@ export default function FaqPage() {
         />
       </head>
 
-      {/* Hero Band */}
-      <header className="exec-hero-stage relative overflow-hidden border-b border-white/10">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div className="exec-mesh mesh-indigo-dark absolute -left-32 top-0 h-[28rem] w-[28rem] opacity-50" />
-          <div className="exec-mesh mesh-teal-dark absolute -right-24 bottom-0 h-[22rem] w-[22rem] opacity-40" />
-          <div className="exec-grid absolute inset-0 opacity-30" />
-          <div className="fund-ring absolute -bottom-40 left-1/2 h-[32rem] w-[70rem] -translate-x-1/2 opacity-40" />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-4xl px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
-          <Breadcrumbs items={[{ label: 'Frequently Asked Questions' }]} />
-
-          <div className="mt-4">
-            <div className="exec-eyebrow exec-eyebrow-gold">
-              <HelpCircle className="h-4 w-4 text-gold" />
-              <span>KNOWLEDGE_BASE_&_FACTUAL_QA</span>
-            </div>
-            <h1 className="mt-4 font-serif text-hero font-bold tracking-tight text-paper leading-tight sm:text-display">
-              Frequently Asked{' '}
-              <span className="gradient-text-gold">Questions</span>
+      {/* ============================================================
+          HEADER — SOFT IVORY
+      ============================================================ */}
+      <section className="relative border-b border-slate-200/80 bg-[#FBFBFA]">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800 ring-1 ring-amber-200/70 mb-4">
+              <HelpCircle className="h-3.5 w-3.5" />
+              <span>Knowledge Base &amp; FAQ</span>
+            </span>
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+              Frequently Asked Questions
             </h1>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-steel sm:text-base">
-              Direct, factual answers regarding our studio architecture, technical standards, founder credentials, and investment ranges.
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+              Clear, direct answers regarding our services, fixed-price proposals, technology stack, and development process.
             </p>
           </div>
         </div>
-      </header>
+      </section>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="mt-10 space-y-5">
-          {faqs.map((faq, idx) => (
-            <article
-              key={idx}
-              className="glass-card-dark relative overflow-hidden rounded-2xl p-6 sm:p-7 transition-all duration-400 hover:-translate-y-0.5 hover:border-gold/25"
-            >
-              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-              <h2 className="font-serif text-lg sm:text-xl font-bold text-paper flex items-start gap-3">
-                <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-gold/30 bg-gold/10 font-mono text-[11px] font-bold text-gold">
-                  {idx + 1}
-                </span>
-                <span>{faq.q}</span>
-              </h2>
-              <p className="mt-3 text-xs leading-relaxed text-steel sm:text-sm pl-10">
-                {faq.a}
+      {/* ============================================================
+          FAQ ACCORDION / CARDS
+      ============================================================ */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-4xl px-5 sm:px-8">
+          <div className="space-y-6">
+            {faqs.map((faq, idx) => (
+              <article
+                key={idx}
+                className="group rounded-[12px] border border-slate-200/85 bg-white p-7 sm:p-8 shadow-[0_2px_10px_-2px_rgba(15,23,42,0.04),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_16px_32px_-8px_rgba(15,23,42,0.08)]"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex items-start gap-4">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[8px] bg-[#FAF9F6] border border-slate-200 font-mono text-xs font-bold text-slate-700">
+                      0{idx + 1}
+                    </span>
+                    <div>
+                      <span className="inline-block text-[11px] font-semibold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded ring-1 ring-indigo-200/60 mb-2">
+                        {faq.tag}
+                      </span>
+                      <h2 className="text-lg font-bold text-slate-900 sm:text-xl">
+                        {faq.q}
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 pl-12 text-base leading-relaxed text-slate-600">
+                  {faq.a}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          {/* Quick Contact Prompt */}
+          <div className="mt-12 rounded-[12px] border border-amber-200/80 bg-gradient-to-r from-[#FEF3C7] via-[#FFFBEB] to-[#FEF3C7] p-8 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h3 className="text-base font-bold text-slate-900">
+                Have a specific question about your project?
+              </h3>
+              <p className="mt-1 text-sm text-slate-700">
+                Talk directly with our engineers. We respond within 24 hours.
               </p>
-            </article>
-          ))}
+            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#9E7E32] hover:text-amber-950 shrink-0 transition-colors"
+            >
+              <span>Book discovery call</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
+      </section>
 
-        <div className="relative mt-12 overflow-hidden rounded-3xl border border-gold/35 bg-gradient-to-br from-obsidian-raised via-obsidian to-obsidian p-8 text-center shadow-obsidian-lg">
-          <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute left-1/2 top-0 h-40 w-40 -translate-x-1/2 rounded-full opacity-20 blur-3xl"
-            style={{ background: 'radial-gradient(circle, rgba(201,162,75,0.7), transparent 70%)' }}
-          />
-          <h3 className="relative font-serif text-xl font-bold text-paper">
-            Have a specific technical question?
-          </h3>
-          <p className="relative mt-2 text-xs text-steel">
-            Book a direct technical discovery call with our engineering team.
+      {/* ============================================================
+          BOTTOM CTA — DEEP CONTRAST STAGE
+      ============================================================ */}
+      <section className="relative border-t border-white/[0.08] bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0D0F14] text-white">
+        <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-28">
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            Ready to discuss your software requirements?
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-base text-slate-300">
+            Book a free discovery call. We&apos;ll assess your technical requirements and provide an honest proposal.
           </p>
-          <Link
-            href="/contact"
-            className="btn btn-gold mt-6 inline-flex items-center gap-2"
-          >
-            Book Discovery Call
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-gradient-to-r from-[#DFBD6C] via-[#C9A24B] to-[#B88E2F] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_24px_rgba(201,162,75,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,162,75,0.48)] hover:brightness-105"
+            >
+              <span>Book a free discovery call</span>
+              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

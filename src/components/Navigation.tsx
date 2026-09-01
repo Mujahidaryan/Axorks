@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -11,11 +11,23 @@ export default function Navigation() {
   const pathname = usePathname();
   const isDarkHero = pathname === '/';
 
+  // Handle ESC key to dismiss mobile drawer
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
+
   const navItems = [
     { label: 'Services', href: '/services' },
     { label: 'Our Work', href: '/case-studies' },
     { label: 'Process', href: '/process' },
     { label: 'About', href: '/about' },
+    { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -32,6 +44,7 @@ export default function Navigation() {
         <Link
           href="/"
           className="group flex items-center gap-2.5 transition-transform duration-200 hover:scale-[1.02]"
+          aria-label="Axorks Homepage"
         >
           <div
             className={`relative h-9 w-9 overflow-hidden rounded-[12px] p-0.5 shadow-sm transition-all duration-200 ${
@@ -59,7 +72,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main Navigation">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Main Navigation">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -109,8 +122,9 @@ export default function Navigation() {
               ? 'text-slate-300 hover:bg-white/10 hover:text-white'
               : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
           }`}
-          aria-label="Toggle menu"
+          aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
+          aria-controls="mobile-nav-drawer"
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -119,6 +133,7 @@ export default function Navigation() {
       {/* Mobile Menu Drawer */}
       {isOpen && (
         <div
+          id="mobile-nav-drawer"
           className={`border-t px-5 pb-6 pt-3 shadow-lg md:hidden animate-fade-in ${
             isDarkHero
               ? 'border-white/10 bg-[#07080C] text-white'
