@@ -56,9 +56,9 @@ export default function HeroSlideshow() {
       })}
 
       {/* Optical Gradient Scrim — Guarantees 100% text contrast on left while artwork breathes on right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/85 to-transparent lg:via-[#0B0F19]/70" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-[#0B0F19]/75" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/80 via-transparent to-[#0B0F19]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19]/95 via-[#0B0F19]/90 to-transparent lg:via-[#0B0F19]/75" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19]/90 via-transparent to-[#0B0F19]/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/85 via-transparent to-[#0B0F19]/40" />
 
       {/* Ambient atmospheric lighting accents */}
       <div className="absolute -top-32 left-1/4 h-[500px] w-[500px] rounded-full bg-[#1E293B]/40 blur-3xl opacity-60" />

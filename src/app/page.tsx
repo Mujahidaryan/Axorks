@@ -56,7 +56,7 @@ export default function HomePage() {
               We build custom software that helps your business grow
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl font-normal">
-              Axorks helps growing businesses build custom web applications and automate manual work with AI. Projects start from $600.
+              Axorks helps growing businesses build custom web applications and automate manual work with AI. Partnering with enterprises from Karachi and Islamabad to global markets. Projects start from $600.
             </p>
 
             {/* Primary Action Button */}

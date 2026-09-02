@@ -31,11 +31,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="bg-[#FAF9F6]">
+    <div className="bg-[#F8F7F4]">
       {/* ============================================================
           HEADER — SOFT IVORY WITH PROPER BREATHING ROOM
       ============================================================ */}
-      <section className="relative border-b border-slate-200/80 bg-[#FBFBFA]">
+      <section className="relative border-b border-slate-200/80 bg-[#F8F7F4]">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">

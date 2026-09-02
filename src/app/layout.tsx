@@ -155,6 +155,9 @@ export default function RootLayout({
           { '@type': 'Country', name: 'Germany' },
           { '@type': 'Country', name: 'Australia' },
           { '@type': 'Country', name: 'United Arab Emirates' },
+          { '@type': 'Country', name: 'Pakistan' },
+          { '@type': 'City', name: 'Karachi' },
+          { '@type': 'City', name: 'Islamabad' },
           { '@type': 'AdministrativeArea', name: 'Worldwide' },
         ],
         hasOfferCatalog: {

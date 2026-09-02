@@ -128,45 +128,41 @@ export default function ServicesPage() {
       </section>
 
       {/* ============================================================
-          SERVICES CARDS — RICH CINEMATIC ILLUSTRATION CARDS
+          SERVICES CARDS — LIGHT BACKGROUND CARDS
       ============================================================ */}
-      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#F8F7F4] via-[#F4F2EB] to-[#F8F7F4]">
+      <section className="py-20 sm:py-28 bg-[#F8F7F4]">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {services.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
-                className={`group relative flex flex-col justify-between overflow-hidden rounded-[16px] border ${service.borderColor} bg-gradient-to-br from-[#111827] via-[#161F33] to-[#0E1524] p-8 sm:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.7)] text-[#F8FAFC]`}
+                className={`group relative flex flex-col justify-between overflow-hidden rounded-[16px] border border-slate-200/60 bg-white p-8 sm:p-10 shadow-[0_4px_16px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)]`}
               >
-                {/* Background Illustration with dark overlay for perfect text contrast */}
-                <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden opacity-30 transition-opacity duration-500 group-hover:opacity-40">
+                {/* Subtle Image Hint (No heavy dark overlays) */}
+                <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden opacity-[0.03] transition-opacity duration-500 group-hover:opacity-[0.06]">
                   <Image
                     src={service.illustration}
                     alt=""
                     fill
-                    className="object-cover object-right scale-[1.05] transition-transform duration-700 group-hover:scale-[1.1]"
+                    className="object-cover object-right scale-[1.05] transition-transform duration-700 group-hover:scale-[1.1] grayscale"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#111827] via-[#111827]/85 to-[#111827]/60" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-transparent" />
                 </div>
 
                 {/* Content Overlay */}
                 <div className="relative z-10">
                   <div className="flex items-center justify-between">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-white/10 backdrop-blur-md border border-white/15 text-slate-200 shadow-sm">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-slate-100 border border-slate-200 text-[#0F172A] shadow-sm">
                       {service.icon}
                     </div>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                       Fixed-Price Scope
                     </span>
                   </div>
-
-                  <h2 className="mt-6 text-2xl font-bold tracking-tight text-[#F8FAFC] transition-colors">
+                  <h2 className="mt-8 text-2xl font-bold tracking-tight text-[#0F172A]">
                     {service.title}
                   </h2>
-
-                  <p className="mt-3 text-base leading-relaxed text-slate-300">
+                  <p className="mt-4 text-base leading-relaxed text-slate-600">
                     {service.description}
                   </p>
 
@@ -175,7 +171,7 @@ export default function ServicesPage() {
                     {service.deliverables.map((tag) => (
                       <span
                         key={tag}
-                        className={`inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border backdrop-blur-xs ${service.tagStyle}`}
+                        className={`inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border bg-slate-50 border-slate-200 text-slate-700`}
                       >
                         {tag}
                       </span>
@@ -183,20 +179,20 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Capabilities List */}
-                  <div className="mt-6 space-y-2 border-t border-white/10 pt-5">
+                  <div className="mt-6 space-y-2 border-t border-slate-200 pt-5">
                     {service.capabilities.map((cap, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-[#DFBD6C] shrink-0" />
+                      <div key={i} className="flex items-center gap-2 text-xs text-slate-600">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-[#C9A227] shrink-0" />
                         <span>{cap}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="relative z-10 mt-8 pt-5 border-t border-white/10">
+                <div className="relative z-10 mt-8 pt-5 border-t border-slate-200">
                   <Link
                     href={service.href}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#DFBD6C] transition-colors hover:text-white"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#0F172A] transition-colors hover:text-[#C9A227]"
                   >
                     <span>Discuss your project</span>
                     <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />

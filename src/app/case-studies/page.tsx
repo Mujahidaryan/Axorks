@@ -152,15 +152,15 @@ export default function CaseStudiesPage() {
             muted
             playsInline
             poster="/assets/illustrations/work_hero_architecture.png"
-            className="absolute inset-0 h-full w-full object-cover object-[75%_center] sm:object-[82%_center] lg:object-[95%_center] scale-[1.28] origin-right opacity-85 lg:translate-x-8"
+            className="absolute inset-0 h-full w-full object-cover object-[15%_center] sm:object-[10%_center] lg:object-[5%_center] scale-[1.35] origin-left opacity-90 lg:-translate-x-8"
           >
             <source src="/assets/hero_motion.mp4" type="video/mp4" />
           </video>
 
-          {/* Optical Gradient Scrim — Ensures 100% text dominance while core glows on the right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/85 to-transparent lg:via-[#0B0F19]/65 lg:to-transparent" />
+          {/* Optical Gradient Scrim — Ensures 100% text dominance while core glows heavily on the left */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19]/95 via-[#0B0F19]/80 to-transparent lg:via-[#0B0F19]/70" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-[#0B0F19]/75" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/75 via-transparent to-[#0B0F19]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/80 via-transparent to-[#0B0F19]" />
 
           {/* Ambient atmospheric lighting with subtle pulse */}
           <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-[#1E293B]/40 blur-3xl opacity-60 animate-glow-pulse" />
