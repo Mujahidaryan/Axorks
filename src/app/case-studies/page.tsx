@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, CheckCircle2, ShieldCheck, Layers, Cpu, HeartPulse } from 'lucide-react';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 
 export const metadata: Metadata = {
@@ -30,12 +31,15 @@ interface CaseStudy {
   id: string;
   name: string;
   category: string;
+  domain: string;
+  icon: any;
   badgeStyle: string;
   problem: string;
   solution: string;
   result: string;
   heroImage: string;
   heroAlt: string;
+  accentGradient: string;
   additionalImages: {
     src: string;
     alt: string;
@@ -47,8 +51,11 @@ const caseStudies: CaseStudy[] = [
   {
     id: 'agrotrace',
     name: 'AgroTrace',
-    category: 'Agriculture',
+    category: 'Agriculture & IoT Telemetry',
+    domain: 'agrotrace.live',
+    icon: <Layers className="h-4 w-4" />,
     badgeStyle: 'bg-emerald-50 text-emerald-700 ring-emerald-200/70',
+    accentGradient: 'from-emerald-500/10 via-teal-500/5 to-transparent',
     problem:
       'Agricultural exporters lacked real-time visibility into temperature problems and logistics delays during international transit, creating risks of cargo spoilage and compliance failures.',
     solution:
@@ -73,8 +80,11 @@ const caseStudies: CaseStudy[] = [
   {
     id: 'ai-decision-system',
     name: 'AI Decision System',
-    category: 'AI & Data Systems',
+    category: 'AI & Real-Time Data',
+    domain: 'decision-engine.internal',
+    icon: <Cpu className="h-4 w-4" />,
     badgeStyle: 'bg-indigo-50 text-indigo-700 ring-indigo-200/70',
+    accentGradient: 'from-indigo-500/10 via-violet-500/5 to-transparent',
     problem:
       'Traditional rule-based indicators became unreliable during rapid market changes and liquidity spikes.',
     solution:
@@ -99,8 +109,11 @@ const caseStudies: CaseStudy[] = [
   {
     id: 'mediverse',
     name: 'MediVerse',
-    category: 'Healthcare',
+    category: 'Healthcare & Clinical Workflows',
+    domain: 'mediverse.clinic',
+    icon: <HeartPulse className="h-4 w-4" />,
     badgeStyle: 'bg-teal-50 text-teal-700 ring-teal-200/70',
+    accentGradient: 'from-teal-500/10 via-cyan-500/5 to-transparent',
     problem:
       'Patients faced disconnected booking processes for specialist appointments and home visits, while staff spent significant time coordinating schedules manually.',
     solution:
@@ -128,38 +141,83 @@ export default function CaseStudiesPage() {
   return (
     <div className="bg-[#FAF9F6]">
       {/* ============================================================
-          PAGE HEADER — SOFT IVORY
+          PAGE HERO — 2-COLUMN BALANCED WITH ELEGANT ARCHITECTURE ARTWORK
       ============================================================ */}
-      <section className="relative border-b border-slate-200/80 bg-[#FBFBFA]">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Our work
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-              Real projects we&apos;ve built for real businesses.
-            </p>
+      <section className="relative overflow-hidden border-b border-white/[0.08] bg-[#07080C] text-white">
+        {/* Ambient atmospheric lighting */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none">
+          <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-indigo-500/15 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-teal-500/10 blur-3xl" />
+          <div className="exec-grid absolute inset-0 opacity-[0.15]" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
+            {/* Left Content Column */}
+            <div className="lg:col-span-6">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-[#DFBD6C] ring-1 ring-white/15 mb-5">
+                <ShieldCheck className="h-3.5 w-3.5 text-[#C9A24B]" />
+                <span>Verified Client Systems Delivered</span>
+              </span>
+              <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Our work
+              </h1>
+              <p className="mt-6 text-lg leading-relaxed text-slate-300">
+                Real projects we&apos;ve built for real businesses. From global supply chain telemetry to automated healthcare scheduling and adaptive decision systems.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3 text-xs text-slate-400">
+                <span className="flex items-center gap-1.5 rounded-md bg-white/5 px-3 py-1.5 border border-white/10">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-teal-400" />
+                  100% In-House Architecture
+                </span>
+                <span className="flex items-center gap-1.5 rounded-md bg-white/5 px-3 py-1.5 border border-white/10">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#C9A24B]" />
+                  Live Production Systems
+                </span>
+              </div>
+            </div>
+
+            {/* Right Hero Illustration Column (Eliminates empty white space) */}
+            <div className="relative lg:col-span-6">
+              <div className="relative overflow-hidden rounded-[16px] border border-white/15 bg-gradient-to-br from-[#121520] to-[#0A0C14] p-2 shadow-[0_16px_48px_rgba(0,0,0,0.6)]">
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[12px]">
+                  <Image
+                    src="/assets/illustrations/work_hero_architecture.png"
+                    alt="Enterprise Software Systems Architecture"
+                    fill
+                    priority
+                    className="object-cover object-center scale-[1.03] transition-transform duration-700 hover:scale-[1.06]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C14]/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-white/90 bg-slate-950/60 backdrop-blur-md px-3.5 py-2 rounded-[8px] border border-white/10">
+                    <span className="font-semibold">Enterprise Architecture Framework</span>
+                    <span className="text-[#DFBD6C] font-mono">3 Shipped Platforms</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ============================================================
-          CASE STUDIES LIST — CLEAN CARDS & HIGH QUALITY PROOF
+          CASE STUDIES LIST — ELEVATED CARDS WITH BROWSER MOCKUPS
       ============================================================ */}
-      <section className="py-20 sm:py-28 bg-white">
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#FAF9F6] via-[#F4F2EB] to-[#FAF9F6]">
         <div className="mx-auto max-w-6xl px-5 sm:px-8 space-y-20 sm:space-y-28">
           {caseStudies.map((study) => (
             <article
               key={study.id}
-              className="rounded-[12px] border border-slate-200/85 bg-white p-7 sm:p-9 lg:p-11 shadow-[0_2px_12px_-2px_rgba(15,23,42,0.05),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_24px_48px_-12px_rgba(15,23,42,0.09),0_8px_16px_-4px_rgba(15,23,42,0.04)]"
+              className="relative overflow-hidden rounded-[14px] border border-slate-200/90 bg-white p-7 sm:p-9 lg:p-11 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:shadow-[0_24px_48px_-12px_rgba(15,23,42,0.1),0_8px_16px_-4px_rgba(15,23,42,0.04)]"
             >
               {/* Header: Category, Title & Action */}
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-slate-100 pb-6">
                 <div>
-                  <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ${study.badgeStyle}`}>
-                    {study.category}
+                  <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ring-1 ${study.badgeStyle}`}>
+                    {study.icon}
+                    <span>{study.category}</span>
                   </span>
-                  <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                  <h2 className="mt-2.5 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                     {study.name}
                   </h2>
                 </div>
@@ -172,18 +230,27 @@ export default function CaseStudiesPage() {
                 </Link>
               </div>
 
-              {/* Large Hero Screenshot — Fully visible, uncropped framing */}
-              <div className="mt-8 overflow-hidden rounded-[12px] border border-slate-200/85 bg-slate-900/[0.02] shadow-sm">
+              {/* Large Hero Screenshot with Browser Window Mockup Frame */}
+              <div className="mt-8 overflow-hidden rounded-[12px] border border-slate-200/90 bg-slate-900/[0.02] shadow-sm">
+                <div className="border-b border-slate-200/80 bg-slate-950/5 px-4 py-2.5 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                  </div>
+                  <span className="text-[11px] font-mono text-slate-500">{study.domain}</span>
+                  <div className="w-10" />
+                </div>
                 <img
                   src={study.heroImage}
                   alt={study.heroAlt}
-                  className="w-full h-auto block rounded-[12px] transition-transform duration-700 hover:scale-[1.01]"
+                  className="w-full h-auto block rounded-b-[12px] transition-transform duration-700 hover:scale-[1.01]"
                 />
               </div>
 
               {/* Problem → Solution → Result */}
               <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-sm">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-2xs">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Problem
                   </h3>
@@ -192,7 +259,7 @@ export default function CaseStudiesPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-sm">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-2xs">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Solution
                   </h3>
@@ -201,20 +268,20 @@ export default function CaseStudiesPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-sm">
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                <div className="rounded-[12px] border border-emerald-200/80 bg-gradient-to-b from-[#F0FDF6] to-[#E5F9EE] p-6 shadow-2xs">
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-emerald-800">
                     Result
                   </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-slate-900 font-medium">
+                  <p className="mt-2.5 text-sm leading-relaxed text-emerald-950 font-medium">
                     {study.result}
                   </p>
                 </div>
               </div>
 
-              {/* Additional Screenshots Grid — Fully visible without clipping */}
+              {/* Additional Screenshots Grid */}
               <div className="mt-8">
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">
-                  Additional Screenshots
+                  Additional System Screenshots
                 </h3>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   {study.additionalImages.map((img, idx) => (
@@ -230,7 +297,7 @@ export default function CaseStudiesPage() {
                         />
                       </div>
                       {img.caption && (
-                        <div className="border-t border-slate-200/70 bg-[#FAF9F6] px-4 py-2.5 text-xs text-slate-600 font-medium">
+                        <div className="border-t border-slate-200/70 bg-white px-4 py-2.5 text-xs text-slate-700 font-medium">
                           {img.caption}
                         </div>
                       )}
@@ -241,7 +308,7 @@ export default function CaseStudiesPage() {
 
               {/* Card Footer Link */}
               <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200/70 pt-6">
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-slate-600 font-medium">
                   Ready to build something similar for your business?
                 </p>
                 <Link

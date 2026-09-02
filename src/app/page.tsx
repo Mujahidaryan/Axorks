@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Layers, Cpu, Smartphone, ShieldCheck, Clock, Zap, Users, ShieldAlert, Award } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, CheckCircle2, Layers, Cpu, Smartphone, ShieldCheck } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 
@@ -39,44 +40,34 @@ export default function HomePage() {
   return (
     <div>
       {/* ============================================================
-          HERO — UNIFIED DARK OBSIDIAN HERO WITH SEAMLESS MOTION
+          HERO — 100% FULL-BLEED CINEMATIC STAGE (ZERO SEAMS)
+          Reference standard: Systems Limited (systemsltd.com)
       ============================================================ */}
-      <section className="relative min-h-[680px] overflow-hidden bg-[#07080C] border-b border-white/[0.08] text-white flex items-center">
-        {/* Layered luxury ambient lighting & glows */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
-          <div className="absolute -top-40 right-1/4 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-[#4F46E5]/20 via-[#0D9488]/15 to-transparent blur-3xl opacity-65" />
-          <div className="absolute top-1/3 left-[-100px] h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-[#C9A24B]/12 via-[#7C3AED]/12 to-transparent blur-3xl opacity-55" />
-          <div className="absolute -bottom-32 right-1/3 h-[450px] w-[450px] rounded-full bg-gradient-to-t from-[#0D9488]/18 to-transparent blur-3xl opacity-45" />
-          <div className="exec-grid absolute inset-0 opacity-[0.2]" />
-        </div>
+      <section className="relative min-h-[760px] lg:min-h-[840px] w-full overflow-hidden bg-[#07080C] text-white flex items-center">
+        {/* Full-Bleed 100% Background Canvas (Spans edge-to-edge across entire hero) */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden z-0">
+          <Image
+            src="/assets/illustrations/hero_flagship.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-[70%_center] lg:object-[right_center] scale-[1.03] opacity-80"
+          />
 
-        {/* Desktop Hero Motion Video — Seamless full-stage blend with zero hard lines */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 hidden lg:flex justify-end overflow-hidden select-none z-0"
-        >
-          <div className="hero-video-blend relative h-full w-[60%] xl:w-[58%] overflow-hidden">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              className="h-full w-full object-cover object-[center_35%] scale-[1.08] -translate-y-1"
-            >
-              <source src="/assets/hero_motion.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          {/* Full-width continuous overlays matching base background #07080C */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/50 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/70" />
+          {/* Optical Gradient Scrim — Guarantees 100% text contrast on left while luminescent core breathes on right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/85 to-transparent lg:via-[#07080C]/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/75" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
+
+          {/* Ambient atmospheric lighting accents */}
+          <div className="absolute -top-32 left-1/4 h-[500px] w-[500px] rounded-full bg-[#4F46E5]/15 blur-3xl opacity-60" />
+          <div className="absolute -bottom-24 right-1/3 h-[450px] w-[450px] rounded-full bg-[#0D9488]/15 blur-3xl opacity-50" />
+          <div className="exec-grid absolute inset-0 opacity-[0.14]" />
         </div>
 
-        {/* Hero Foreground Content — High contrast & dominant */}
-        <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-32 lg:py-40">
-          <div className="max-w-2xl lg:max-w-[590px] xl:max-w-[640px]">
+        {/* Hero Foreground Content — High contrast & authoritative */}
+        <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-28 sm:px-8 sm:py-36 lg:py-40">
+          <div className="max-w-2xl lg:max-w-[620px]">
             {/* Value Proposition Header */}
             <h1 className="text-4xl font-semibold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-sm">
               We build custom software that helps your business grow
@@ -100,79 +91,72 @@ export default function HomePage() {
             <p className="mt-7 text-sm text-slate-400 font-medium">
               We&apos;ve delivered real solutions in agriculture, healthcare, and AI decision systems.
             </p>
-
-            {/* Mobile Clean Motion Showcase (Positioned cleanly below text with 1.25x scale to crop watermark) */}
-            <div className="mt-10 overflow-hidden rounded-[14px] border border-white/10 bg-[#0E111A] shadow-[0_8px_32px_rgba(0,0,0,0.5)] lg:hidden">
-              <div className="relative aspect-video w-full overflow-hidden">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  className="h-full w-full object-cover object-[center_30%] scale-[1.25]"
-                >
-                  <source src="/assets/hero_motion.mp4" type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0E111A]/60 via-transparent to-transparent pointer-events-none" />
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* ============================================================
-          SERVICES — COMPLETE ELEGANT COLOR FILLS (RICH TINTS)
+          WHAT WE DO — CONTINUOUS CINEMATIC DARK STAGE
+          Eliminates zebra-striping friction by extending the dark stage
       ============================================================ */}
-      <section className="relative border-t border-slate-200/80 bg-gradient-to-b from-[#FAF9F6] via-[#F4F2EB] to-[#FAF9F6]">
-        {/* Subtle ambient light glows */}
+      <section className="relative border-t border-white/[0.08] bg-[#07080C] text-white py-20 sm:py-28">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
-          <div className="absolute top-0 right-1/4 h-96 w-96 rounded-full bg-indigo-100/50 blur-3xl" />
-          <div className="absolute bottom-0 left-1/4 h-96 w-96 rounded-full bg-teal-100/50 blur-3xl" />
+          <div className="absolute top-1/2 left-1/4 h-96 w-96 rounded-full bg-indigo-500/10 blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-teal-500/10 blur-3xl" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+        <div className="relative z-10 mx-auto max-w-6xl px-5 sm:px-8">
           <div className="mb-14">
-            <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               What we do
             </h2>
-            <p className="mt-3 max-w-2xl text-base text-slate-600">
+            <p className="mt-3 max-w-2xl text-base text-slate-300">
               We focus on building software that solves real business problems. Every project gets a clear fixed-price proposal before development begins.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
-            {/* Service 1: Custom Web Applications (Complete Rich Indigo Color Fill) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-indigo-200/90 bg-gradient-to-br from-[#EEF2FF] via-[#E0E7FF] to-[#D5DEFF] p-8 sm:p-9 shadow-[0_4px_18px_-4px_rgba(79,70,229,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-400/80 hover:bg-gradient-to-br hover:from-[#E0E7FF] hover:via-[#D5DEFF] hover:to-[#C7D2FE] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-indigo-600 shadow-sm ring-1 ring-indigo-200/90 transition-transform duration-300 group-hover:scale-105">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {/* Service 1: Custom Web Applications */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[16px] border border-indigo-500/30 bg-gradient-to-br from-[#0E111A] via-[#131724] to-[#0A0C14] p-8 sm:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.7)] text-white">
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden opacity-35 transition-opacity duration-500 group-hover:opacity-45">
+                <Image
+                  src="/assets/illustrations/service_web.png"
+                  alt=""
+                  fill
+                  className="object-cover object-right scale-[1.05] transition-transform duration-700 group-hover:scale-[1.1]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0E111A] via-[#0E111A]/85 to-[#0E111A]/60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E111A] via-transparent to-transparent" />
+              </div>
+
+              <div className="relative z-10">
+                <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white/10 backdrop-blur-md border border-white/15 text-indigo-400 shadow-sm transition-transform duration-300 group-hover:scale-105">
                   <Layers className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-indigo-950 transition-colors">
+                <h3 className="text-2xl font-bold tracking-tight text-white transition-colors">
                   Custom Web Applications
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-slate-800">
+                <p className="mt-3 text-base leading-relaxed text-slate-300">
                   We build tailored web applications around how your business actually works.
                 </p>
 
-                {/* Deliverable Tags (Eliminates dead empty space) */}
-                <div className="mt-5 flex flex-wrap gap-2">
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-indigo-900 ring-1 ring-indigo-200/70">
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-indigo-500/40 bg-indigo-500/20 text-indigo-300 backdrop-blur-xs">
                     Client Portals
                   </span>
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-indigo-900 ring-1 ring-indigo-200/70">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-indigo-500/40 bg-indigo-500/20 text-indigo-300 backdrop-blur-xs">
                     Internal Dashboards
                   </span>
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-indigo-900 ring-1 ring-indigo-200/70">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-indigo-500/40 bg-indigo-500/20 text-indigo-300 backdrop-blur-xs">
                     SaaS Platforms
                   </span>
                 </div>
               </div>
-              <div className="mt-8 pt-5 border-t border-indigo-200/90">
+
+              <div className="relative z-10 mt-8 pt-5 border-t border-white/10">
                 <Link
                   href="/contact?service=web-applications"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-700 transition-colors group-hover:text-indigo-950"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-300 transition-colors hover:text-white"
                 >
                   <span>Discuss your project</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -180,37 +164,47 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 2: AI Automation (Complete Rich Teal Color Fill) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-teal-200/90 bg-gradient-to-br from-[#E6FAF4] via-[#CCFBF1] to-[#B6F5E8] p-8 sm:p-9 shadow-[0_4px_18px_-4px_rgba(13,148,136,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-400/80 hover:bg-gradient-to-br hover:from-[#CCFBF1] hover:via-[#B6F5E8] hover:to-[#99F6E4] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-teal-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#0D9488] shadow-sm ring-1 ring-teal-200/90 transition-transform duration-300 group-hover:scale-105">
+            {/* Service 2: AI Automation */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[16px] border border-teal-500/30 bg-gradient-to-br from-[#0E111A] via-[#131724] to-[#0A0C14] p-8 sm:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.7)] text-white">
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden opacity-35 transition-opacity duration-500 group-hover:opacity-45">
+                <Image
+                  src="/assets/illustrations/service_ai.png"
+                  alt=""
+                  fill
+                  className="object-cover object-right scale-[1.05] transition-transform duration-700 group-hover:scale-[1.1]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0E111A] via-[#0E111A]/85 to-[#0E111A]/60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E111A] via-transparent to-transparent" />
+              </div>
+
+              <div className="relative z-10">
+                <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white/10 backdrop-blur-md border border-white/15 text-teal-400 shadow-sm transition-transform duration-300 group-hover:scale-105">
                   <Cpu className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-teal-950 transition-colors">
+                <h3 className="text-2xl font-bold tracking-tight text-white transition-colors">
                   AI Automation
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-slate-800">
+                <p className="mt-3 text-base leading-relaxed text-slate-300">
                   We use AI to automate repetitive work, improve decisions, and reduce manual effort.
                 </p>
 
-                {/* Deliverable Tags (Eliminates dead empty space) */}
-                <div className="mt-5 flex flex-wrap gap-2">
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-teal-900 ring-1 ring-teal-200/70">
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-teal-500/40 bg-teal-500/20 text-teal-300 backdrop-blur-xs">
                     Document AI Pipelines
                   </span>
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-teal-900 ring-1 ring-teal-200/70">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-teal-500/40 bg-teal-500/20 text-teal-300 backdrop-blur-xs">
                     Automated Workflows
                   </span>
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-teal-900 ring-1 ring-teal-200/70">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-teal-500/40 bg-teal-500/20 text-teal-300 backdrop-blur-xs">
                     Decision Engines
                   </span>
                 </div>
               </div>
-              <div className="mt-8 pt-5 border-t border-teal-200/90">
+
+              <div className="relative z-10 mt-8 pt-5 border-t border-white/10">
                 <Link
                   href="/contact?service=ai-automation"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-800 transition-colors group-hover:text-teal-950"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-300 transition-colors hover:text-white"
                 >
                   <span>Discuss your project</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -218,37 +212,47 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 3: Mobile Apps (Complete Rich Champagne Gold Color Fill) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-amber-200/90 bg-gradient-to-br from-[#FEF3C7] via-[#FDE68A]/80 to-[#FCD34D]/60 p-8 sm:p-9 shadow-[0_4px_18px_-4px_rgba(201,162,75,0.12),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-400/80 hover:bg-gradient-to-br hover:from-[#FDE68A] hover:via-[#FCD34D]/80 hover:to-[#FBBF24]/60 hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.26),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#C9A24B] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-[#B88E2F] shadow-sm ring-1 ring-amber-200/90 transition-transform duration-300 group-hover:scale-105">
+            {/* Service 3: Mobile Apps */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[16px] border border-amber-500/30 bg-gradient-to-br from-[#0E111A] via-[#131724] to-[#0A0C14] p-8 sm:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.7)] text-white">
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden opacity-35 transition-opacity duration-500 group-hover:opacity-45">
+                <Image
+                  src="/assets/illustrations/service_mobile.png"
+                  alt=""
+                  fill
+                  className="object-cover object-right scale-[1.05] transition-transform duration-700 group-hover:scale-[1.1]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0E111A] via-[#0E111A]/85 to-[#0E111A]/60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E111A] via-transparent to-transparent" />
+              </div>
+
+              <div className="relative z-10">
+                <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white/10 backdrop-blur-md border border-white/15 text-[#DFBD6C] shadow-sm transition-transform duration-300 group-hover:scale-105">
                   <Smartphone className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-amber-950 transition-colors">
+                <h3 className="text-2xl font-bold tracking-tight text-white transition-colors">
                   Mobile Apps
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-slate-800">
+                <p className="mt-3 text-base leading-relaxed text-slate-300">
                   We create mobile applications that make your products and services easier to access.
                 </p>
 
-                {/* Deliverable Tags (Eliminates dead empty space) */}
-                <div className="mt-5 flex flex-wrap gap-2">
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-amber-900 ring-1 ring-amber-200/70">
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-amber-500/40 bg-amber-500/20 text-[#DFBD6C] backdrop-blur-xs">
                     iOS &amp; Android Apps
                   </span>
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-amber-900 ring-1 ring-amber-200/70">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-amber-500/40 bg-amber-500/20 text-[#DFBD6C] backdrop-blur-xs">
                     Offline Data Sync
                   </span>
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-amber-900 ring-1 ring-amber-200/70">
-                    Customer Experience
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-amber-500/40 bg-amber-500/20 text-[#DFBD6C] backdrop-blur-xs">
+                    Customer Portals
                   </span>
                 </div>
               </div>
-              <div className="mt-8 pt-5 border-t border-amber-200/90">
+
+              <div className="relative z-10 mt-8 pt-5 border-t border-white/10">
                 <Link
                   href="/contact?service=mobile-apps"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#9E7E32] transition-colors group-hover:text-amber-950"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#DFBD6C] transition-colors hover:text-white"
                 >
                   <span>Discuss your project</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -256,37 +260,47 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Service 4: Ongoing Support & Maintenance (Complete Rich Emerald Color Fill) */}
-            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[12px] border border-emerald-200/90 bg-gradient-to-br from-[#E1F9EB] via-[#D1FAE5] to-[#B3F5D3] p-8 sm:p-9 shadow-[0_4px_18px_-4px_rgba(16,185,129,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-400/80 hover:bg-gradient-to-br hover:from-[#D1FAE5] hover:via-[#B3F5D3] hover:to-[#A7F3D0] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]">
-              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div>
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white text-emerald-600 shadow-sm ring-1 ring-emerald-200/90 transition-transform duration-300 group-hover:scale-105">
+            {/* Service 4: Ongoing Support & Maintenance */}
+            <div className="group relative flex flex-col justify-between overflow-hidden rounded-[16px] border border-emerald-500/30 bg-gradient-to-br from-[#0E111A] via-[#131724] to-[#0A0C14] p-8 sm:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.7)] text-white">
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden opacity-35 transition-opacity duration-500 group-hover:opacity-45">
+                <Image
+                  src="/assets/illustrations/process_flow.png"
+                  alt=""
+                  fill
+                  className="object-cover object-right scale-[1.05] transition-transform duration-700 group-hover:scale-[1.1]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0E111A] via-[#0E111A]/85 to-[#0E111A]/60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E111A] via-transparent to-transparent" />
+              </div>
+
+              <div className="relative z-10">
+                <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-[10px] bg-white/10 backdrop-blur-md border border-white/15 text-emerald-400 shadow-sm transition-transform duration-300 group-hover:scale-105">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-emerald-950 transition-colors">
+                <h3 className="text-2xl font-bold tracking-tight text-white transition-colors">
                   Ongoing Support &amp; Maintenance
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-slate-800">
+                <p className="mt-3 text-base leading-relaxed text-slate-300">
                   We keep your software secure, reliable, and improving after launch.
                 </p>
 
-                {/* Deliverable Tags (Eliminates dead empty space) */}
-                <div className="mt-5 flex flex-wrap gap-2">
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-emerald-900 ring-1 ring-emerald-200/70">
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-emerald-500/40 bg-emerald-500/20 text-emerald-300 backdrop-blur-xs">
                     Security Patches
                   </span>
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-emerald-900 ring-1 ring-emerald-200/70">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-emerald-500/40 bg-emerald-500/20 text-emerald-300 backdrop-blur-xs">
                     Performance Tuning
                   </span>
-                  <span className="inline-flex items-center rounded-md bg-white/80 px-2.5 py-1 text-xs font-medium text-emerald-900 ring-1 ring-emerald-200/70">
-                    Feature Releases
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border border-emerald-500/40 bg-emerald-500/20 text-emerald-300 backdrop-blur-xs">
+                    Continuous Releases
                   </span>
                 </div>
               </div>
-              <div className="mt-8 pt-5 border-t border-emerald-200/90">
+
+              <div className="relative z-10 mt-8 pt-5 border-t border-white/10">
                 <Link
                   href="/contact?service=support"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-800 transition-colors group-hover:text-emerald-950"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-300 transition-colors hover:text-white"
                 >
                   <span>Discuss your project</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -296,14 +310,14 @@ export default function HomePage() {
           </div>
 
           {/* Pricing Banner */}
-          <div className="mt-10 rounded-[12px] border border-amber-200/80 bg-gradient-to-r from-[#FEF3C7] via-[#FFFBEB] to-[#FEF3C7] p-8 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.1)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <p className="text-base leading-relaxed text-slate-800">
-              <strong className="font-semibold text-slate-950">Simple pricing.</strong>{' '}
+          <div className="mt-12 rounded-[14px] border border-amber-400/30 bg-gradient-to-r from-[#1A1811] via-[#241F14] to-[#1A1811] p-8 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-white">
+            <p className="text-base leading-relaxed text-slate-200">
+              <strong className="font-semibold text-[#DFBD6C]">Simple pricing.</strong>{' '}
               Projects start from $600. Every project receives a clear fixed-price proposal before development begins.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#9E7E32] hover:text-amber-950 shrink-0 transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#DFBD6C] hover:text-white shrink-0 transition-colors"
             >
               <span>Request proposal</span>
               <ArrowRight className="h-4 w-4" />
@@ -313,9 +327,9 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          CASE STUDIES — CRISP WHITE (REAL PROJECT PROOF)
+          CASE STUDIES — WARM EDITORIAL CANVAS WITH BROWSER MOCKUPS
       ============================================================ */}
-      <section className="border-t border-slate-200/80 bg-white">
+      <section className="border-t border-slate-200/80 bg-gradient-to-b from-[#FAF9F6] via-[#F4F2EB] to-[#FAF9F6]">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <div className="mb-14 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
@@ -337,8 +351,18 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {/* AgroTrace */}
-            <article className="overflow-hidden rounded-[12px] border border-emerald-200/80 bg-gradient-to-b from-white to-[#F0FDF6] shadow-[0_4px_18px_-4px_rgba(16,185,129,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.16),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
+            <article className="overflow-hidden rounded-[14px] border border-emerald-200/80 bg-gradient-to-b from-white to-[#F0FDF6] shadow-[0_4px_18px_-4px_rgba(16,185,129,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-emerald-300 hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.16),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
               <div>
+                {/* Browser Window Header Mockup */}
+                <div className="border-b border-emerald-100/80 bg-slate-950/5 px-4 py-2.5 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                  </div>
+                  <span className="text-[11px] font-mono text-slate-500">agrotrace.live</span>
+                  <div className="w-10" />
+                </div>
                 <div className="overflow-hidden border-b border-emerald-100 bg-slate-900/[0.02]">
                   <img
                     src="/projects/Agrotrace.jpeg"
@@ -348,7 +372,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-7">
                   <span className="inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200/60">
-                    Agriculture
+                    Agriculture &amp; Telemetry
                   </span>
                   <h3 className="mt-3 text-xl font-semibold text-slate-900">AgroTrace</h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">
@@ -364,8 +388,18 @@ export default function HomePage() {
             </article>
 
             {/* IPMI-OS */}
-            <article className="overflow-hidden rounded-[12px] border border-indigo-200/80 bg-gradient-to-b from-white to-[#EEF2FF] shadow-[0_4px_18px_-4px_rgba(79,70,229,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.16),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
+            <article className="overflow-hidden rounded-[14px] border border-indigo-200/80 bg-gradient-to-b from-white to-[#EEF2FF] shadow-[0_4px_18px_-4px_rgba(79,70,229,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-indigo-300 hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.16),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
               <div>
+                {/* Browser Window Header Mockup */}
+                <div className="border-b border-indigo-100/80 bg-slate-950/5 px-4 py-2.5 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                  </div>
+                  <span className="text-[11px] font-mono text-slate-500">decision-engine.internal</span>
+                  <div className="w-10" />
+                </div>
                 <div className="overflow-hidden border-b border-indigo-100 bg-slate-900/[0.02]">
                   <img
                     src="/projects/IPMI-OS.jpeg"
@@ -391,8 +425,18 @@ export default function HomePage() {
             </article>
 
             {/* MediVerse */}
-            <article className="overflow-hidden rounded-[12px] border border-teal-200/80 bg-gradient-to-b from-white to-[#E6FAF4] shadow-[0_4px_18px_-4px_rgba(13,148,136,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.16),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
+            <article className="overflow-hidden rounded-[14px] border border-teal-200/80 bg-gradient-to-b from-white to-[#E6FAF4] shadow-[0_4px_18px_-4px_rgba(13,148,136,0.08),0_1px_3px_0_rgba(15,23,42,0.02)] transition-all duration-300 hover:-translate-y-1.5 hover:border-teal-300 hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.16),0_8px_16px_-4px_rgba(15,23,42,0.04)] flex flex-col justify-between">
               <div>
+                {/* Browser Window Header Mockup */}
+                <div className="border-b border-teal-100/80 bg-slate-950/5 px-4 py-2.5 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
+                  </div>
+                  <span className="text-[11px] font-mono text-slate-500">mediverse.clinic</span>
+                  <div className="w-10" />
+                </div>
                 <div className="overflow-hidden border-b border-teal-100 bg-slate-900/[0.02]">
                   <img
                     src="/projects/mediverse2.jpeg"
@@ -402,7 +446,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-7">
                   <span className="inline-flex items-center rounded-full bg-teal-50 px-2.5 py-0.5 text-xs font-semibold text-teal-700 ring-1 ring-teal-200/60">
-                    Healthcare
+                    Healthcare &amp; Clinical Portals
                   </span>
                   <h3 className="mt-3 text-xl font-semibold text-slate-900">MediVerse</h3>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">
@@ -421,10 +465,9 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================
-          HOW WE WORK — DEEP OBSIDIAN STAGE WITH GLOWING ACCENTS
+          HOW WE WORK — MILESTONE WORKFLOW STAGE
       ============================================================ */}
       <section className="relative border-t border-white/[0.08] bg-gradient-to-b from-[#0B0D14] via-[#0E111A] to-[#0A0C12] text-white">
-        {/* Subtle background glow */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden select-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[800px] rounded-full bg-[#C9A24B]/5 blur-3xl opacity-50" />
         </div>
@@ -553,7 +596,7 @@ export default function HomePage() {
       ============================================================ */}
       <section className="border-t border-slate-200/80 bg-white">
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-          <div className="overflow-hidden rounded-[12px] border border-slate-200/85 bg-white shadow-[0_4px_16px_-4px_rgba(15,23,42,0.06)]">
+          <div className="overflow-hidden rounded-[14px] border border-slate-200/85 bg-white shadow-[0_4px_16px_-4px_rgba(15,23,42,0.06)]">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="relative h-64 overflow-hidden lg:h-auto lg:min-h-[360px] bg-slate-100">
                 <img

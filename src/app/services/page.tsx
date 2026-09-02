@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight, Layers, Cpu, Smartphone, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, Layers, Cpu, Smartphone, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
 
 export const metadata: Metadata = {
@@ -33,17 +34,14 @@ const services = [
     description:
       'We build tailored web applications around how your business actually works.',
     deliverables: ['Client Portals', 'Internal Dashboards', 'SaaS Platforms'],
+    capabilities: ['Next.js App Router', 'Serverless PostgreSQL', 'Role-Based Auth (RBAC)'],
     href: '/contact?service=web-applications',
-    accentColor: 'via-indigo-500',
-    cardBg: 'from-[#EEF2FF] via-[#E0E7FF] to-[#D5DEFF] hover:from-[#E0E7FF] hover:via-[#D5DEFF] hover:to-[#C7D2FE]',
-    borderColor: 'border-indigo-200/90 hover:border-indigo-400/80',
-    titleColor: 'text-indigo-950',
-    shadowStyle: 'shadow-[0_4px_18px_-4px_rgba(79,70,229,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(79,70,229,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
-    dividerColor: 'border-indigo-200/90',
-    icon: <Layers className="h-5 w-5" />,
-    iconBox: 'bg-white text-indigo-600 ring-1 ring-indigo-200/90 shadow-xs',
-    tagStyle: 'bg-white/80 text-indigo-900 ring-indigo-200/70',
-    linkColor: 'text-indigo-700 hover:text-indigo-950',
+    illustration: '/assets/illustrations/service_web.png',
+    accentGlow: 'bg-indigo-500/20',
+    borderColor: 'border-indigo-500/30 hover:border-indigo-400',
+    tagStyle: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40',
+    icon: <Layers className="h-5 w-5 text-indigo-400" />,
+    badgeColor: 'text-indigo-400',
   },
   {
     id: 'ai-automation',
@@ -51,53 +49,44 @@ const services = [
     description:
       'We use AI to automate repetitive work, improve decisions, and reduce manual effort.',
     deliverables: ['Document AI Pipelines', 'Automated Workflows', 'Decision Engines'],
+    capabilities: ['LLM & Agent Pipelines', 'FastAPI Microservices', 'Intelligent Extraction'],
     href: '/contact?service=ai-automation',
-    accentColor: 'via-teal-500',
-    cardBg: 'from-[#E6FAF4] via-[#CCFBF1] to-[#B6F5E8] hover:from-[#CCFBF1] hover:via-[#B6F5E8] hover:to-[#99F6E4]',
-    borderColor: 'border-teal-200/90 hover:border-teal-400/80',
-    titleColor: 'text-teal-950',
-    shadowStyle: 'shadow-[0_4px_18px_-4px_rgba(13,148,136,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(13,148,136,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
-    dividerColor: 'border-teal-200/90',
-    icon: <Cpu className="h-5 w-5" />,
-    iconBox: 'bg-white text-[#0D9488] ring-1 ring-teal-200/90 shadow-xs',
-    tagStyle: 'bg-white/80 text-teal-900 ring-teal-200/70',
-    linkColor: 'text-teal-800 hover:text-teal-950',
+    illustration: '/assets/illustrations/service_ai.png',
+    accentGlow: 'bg-teal-500/20',
+    borderColor: 'border-teal-500/30 hover:border-teal-400',
+    tagStyle: 'bg-teal-500/20 text-teal-300 border-teal-500/40',
+    icon: <Cpu className="h-5 w-5 text-teal-400" />,
+    badgeColor: 'text-teal-400',
   },
   {
     id: 'mobile-apps',
     title: 'Mobile Apps',
     description:
       'We create mobile applications that make your products and services easier to access.',
-    deliverables: ['iOS & Android Apps', 'Offline Data Sync', 'Customer Experience'],
+    deliverables: ['iOS & Android Apps', 'Offline Data Sync', 'Customer Portals'],
+    capabilities: ['React Native Cross-Platform', 'Native Performance', 'Offline-First Sync'],
     href: '/contact?service=mobile-apps',
-    accentColor: 'via-[#C9A24B]',
-    cardBg: 'from-[#FEF3C7] via-[#FDE68A]/80 to-[#FCD34D]/60 hover:from-[#FDE68A] hover:via-[#FCD34D]/80 hover:to-[#FBBF24]/60',
-    borderColor: 'border-amber-200/90 hover:border-amber-400/80',
-    titleColor: 'text-amber-950',
-    shadowStyle: 'shadow-[0_4px_18px_-4px_rgba(201,162,75,0.12),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(201,162,75,0.26),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
-    dividerColor: 'border-amber-200/90',
-    icon: <Smartphone className="h-5 w-5" />,
-    iconBox: 'bg-white text-[#B88E2F] ring-1 ring-amber-200/90 shadow-xs',
-    tagStyle: 'bg-white/80 text-amber-900 ring-amber-200/70',
-    linkColor: 'text-[#9E7E32] hover:text-amber-950',
+    illustration: '/assets/illustrations/service_mobile.png',
+    accentGlow: 'bg-amber-500/20',
+    borderColor: 'border-amber-500/30 hover:border-amber-400',
+    tagStyle: 'bg-amber-500/20 text-[#DFBD6C] border-amber-500/40',
+    icon: <Smartphone className="h-5 w-5 text-[#DFBD6C]" />,
+    badgeColor: 'text-[#DFBD6C]',
   },
   {
     id: 'support',
     title: 'Ongoing Support & Maintenance',
     description:
       'We keep your software secure, reliable, and improving after launch.',
-    deliverables: ['Security Patches', 'Performance Tuning', 'Feature Releases'],
+    deliverables: ['Security Patches', 'Performance Tuning', 'Continuous Releases'],
+    capabilities: ['24/7 Uptime Monitoring', 'Zero-Downtime Patching', 'Dedicated Retainers'],
     href: '/contact?service=support',
-    accentColor: 'via-emerald-500',
-    cardBg: 'from-[#E1F9EB] via-[#D1FAE5] to-[#B3F5D3] hover:from-[#D1FAE5] hover:via-[#B3F5D3] hover:to-[#A7F3D0]',
-    borderColor: 'border-emerald-200/90 hover:border-emerald-400/80',
-    titleColor: 'text-emerald-950',
-    shadowStyle: 'shadow-[0_4px_18px_-4px_rgba(16,185,129,0.1),0_1px_3px_0_rgba(15,23,42,0.02)] hover:shadow-[0_24px_48px_-12px_rgba(16,185,129,0.22),0_8px_16px_-4px_rgba(15,23,42,0.04)]',
-    dividerColor: 'border-emerald-200/90',
-    icon: <ShieldCheck className="h-5 w-5" />,
-    iconBox: 'bg-white text-emerald-600 ring-1 ring-emerald-200/90 shadow-xs',
-    tagStyle: 'bg-white/80 text-emerald-900 ring-emerald-200/70',
-    linkColor: 'text-emerald-800 hover:text-emerald-950',
+    illustration: '/assets/illustrations/process_flow.png',
+    accentGlow: 'bg-emerald-500/20',
+    borderColor: 'border-emerald-500/30 hover:border-emerald-400',
+    tagStyle: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
+    icon: <ShieldCheck className="h-5 w-5 text-emerald-400" />,
+    badgeColor: 'text-emerald-400',
   },
 ];
 
@@ -105,64 +94,101 @@ export default function ServicesPage() {
   return (
     <div className="bg-[#FAF9F6]">
       {/* ============================================================
-          HEADER — SOFT IVORY WITH AMBIENT GLOW
+          HEADER — DEEP OBSIDIAN ENTERPRISE STAGE
       ============================================================ */}
-      <section className="relative border-b border-slate-200/80 bg-gradient-to-b from-[#FBFBFA] via-[#F6F4EE] to-[#FAF9F6]">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+      <section className="relative overflow-hidden border-b border-white/[0.08] bg-[#07080C] text-white">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none">
+          <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-indigo-500/15 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-teal-500/10 blur-3xl" />
+          <div className="exec-grid absolute inset-0 opacity-[0.15]" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-[#DFBD6C] ring-1 ring-white/15 mb-4">
+              <Layers className="h-3.5 w-3.5 text-[#C9A24B]" />
+              <span>Full-Stack Software Capabilities</span>
+            </span>
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               What we build
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-              We focus on building software that solves real business problems. Every project gets a clear fixed-price proposal before development begins.
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+              We focus on building software that solves real business problems. Every engagement receives a clear fixed-price proposal before development begins.
             </p>
           </div>
         </div>
       </section>
 
       {/* ============================================================
-          SERVICES & PRICING BANNER
+          SERVICES CARDS — RICH CINEMATIC ILLUSTRATION CARDS
       ============================================================ */}
       <section className="py-20 sm:py-28 bg-gradient-to-b from-[#FAF9F6] via-[#F4F2EB] to-[#FAF9F6]">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          {/* 4 Services Grid */}
-          <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {services.map((service) => (
               <div
-                key={service.title}
+                key={service.id}
                 id={service.id}
-                className={`group relative flex flex-col justify-between overflow-hidden rounded-[12px] border ${service.borderColor} bg-gradient-to-br ${service.cardBg} p-8 sm:p-9 ${service.shadowStyle} transition-all duration-300 hover:-translate-y-1.5`}
+                className={`group relative flex flex-col justify-between overflow-hidden rounded-[16px] border ${service.borderColor} bg-gradient-to-br from-[#0E111A] via-[#131724] to-[#0A0C14] p-8 sm:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.6)] text-white`}
               >
-                <div
-                  className={`absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent ${service.accentColor} to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
-                />
-                <div>
-                  <div className={`mb-4 inline-flex h-11 w-11 items-center justify-center rounded-[10px] ${service.iconBox} transition-transform duration-300 group-hover:scale-105`}>
-                    {service.icon}
+                {/* Background Illustration with dark overlay for perfect text contrast */}
+                <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden opacity-35 transition-opacity duration-500 group-hover:opacity-45">
+                  <Image
+                    src={service.illustration}
+                    alt=""
+                    fill
+                    className="object-cover object-right scale-[1.05] transition-transform duration-700 group-hover:scale-[1.1]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#0E111A] via-[#0E111A]/85 to-[#0E111A]/60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0E111A] via-transparent to-transparent" />
+                </div>
+
+                {/* Content Overlay */}
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-[10px] bg-white/10 backdrop-blur-md border border-white/15 shadow-sm">
+                      {service.icon}
+                    </div>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                      Fixed-Price Scope
+                    </span>
                   </div>
-                  <h2 className={`text-xl font-semibold ${service.titleColor} transition-colors`}>
+
+                  <h2 className="mt-6 text-2xl font-bold tracking-tight text-white transition-colors">
                     {service.title}
                   </h2>
-                  <p className="mt-3.5 text-base leading-relaxed text-slate-800">
+
+                  <p className="mt-3 text-base leading-relaxed text-slate-300">
                     {service.description}
                   </p>
 
-                  {/* Deliverables tags to eliminate empty dead space */}
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  {/* Deliverable Tags */}
+                  <div className="mt-6 flex flex-wrap gap-2">
                     {service.deliverables.map((tag) => (
                       <span
                         key={tag}
-                        className={`inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium ring-1 ${service.tagStyle}`}
+                        className={`inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium border backdrop-blur-xs ${service.tagStyle}`}
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+
+                  {/* Capabilities List */}
+                  <div className="mt-6 space-y-2 border-t border-white/10 pt-5">
+                    {service.capabilities.map((cap, i) => (
+                      <div key={i} className="flex items-center gap-2 text-xs text-slate-300">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-[#C9A24B] shrink-0" />
+                        <span>{cap}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className={`mt-8 pt-5 border-t ${service.dividerColor}`}>
+
+                <div className="relative z-10 mt-8 pt-5 border-t border-white/10">
                   <Link
                     href={service.href}
-                    className={`inline-flex items-center gap-1.5 text-sm font-semibold ${service.linkColor} transition-colors`}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-[#DFBD6C]"
                   >
                     <span>Discuss your project</span>
                     <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -173,7 +199,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Pricing Banner */}
-          <div className="mt-10 rounded-[12px] border border-amber-200/80 bg-gradient-to-r from-[#FEF3C7] via-[#FFFBEB] to-[#FEF3C7] p-8 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.1)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="mt-12 rounded-[14px] border border-amber-200/80 bg-gradient-to-r from-[#FEF3C7] via-[#FFFBEB] to-[#FEF3C7] p-8 shadow-[0_4px_16px_-4px_rgba(201,162,75,0.1)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <p className="text-base leading-relaxed text-slate-800">
               <strong className="font-semibold text-slate-950">Simple pricing.</strong>{' '}
               Projects start from $600. Every project receives a clear fixed-price proposal before development begins.

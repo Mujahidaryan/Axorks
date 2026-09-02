@@ -33,10 +33,10 @@ export default function Navigation() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-colors duration-200 ${
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isDarkHero
-          ? 'border-b border-white/[0.08] bg-[#07080C] text-white shadow-[0_4px_20px_rgba(0,0,0,0.6)]'
-          : 'border-b border-slate-200/90 bg-white/95 text-slate-900 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06)] backdrop-blur-md'
+          ? 'border-b border-white/[0.08] bg-[#07080C]/75 backdrop-blur-md text-white shadow-[0_4px_24px_rgba(0,0,0,0.5)]'
+          : 'border-b border-slate-200/90 bg-white/95 backdrop-blur-md text-slate-900 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06)]'
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-8">
@@ -136,8 +136,8 @@ export default function Navigation() {
           id="mobile-nav-drawer"
           className={`border-t px-5 pb-6 pt-3 shadow-lg md:hidden animate-fade-in ${
             isDarkHero
-              ? 'border-white/10 bg-[#07080C] text-white'
-              : 'border-slate-100 bg-white text-slate-900'
+              ? 'border-white/10 bg-[#07080C]/95 backdrop-blur-xl text-white'
+              : 'border-slate-100 bg-white/95 backdrop-blur-xl text-slate-900'
           }`}
         >
           <div className="flex flex-col gap-1.5">
