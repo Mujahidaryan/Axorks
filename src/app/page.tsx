@@ -52,15 +52,15 @@ export default function HomePage() {
             muted
             playsInline
             poster="/assets/illustrations/hero_flagship.png"
-            className="absolute inset-0 h-full w-full object-cover object-[70%_center] lg:object-[right_center] scale-[1.03] opacity-80"
+            className="absolute inset-0 h-full w-full object-cover object-[68%_center] sm:object-[75%_center] lg:object-[82%_center] scale-[1.2] origin-right opacity-85"
           >
             <source src="/assets/hero_motion.mp4" type="video/mp4" />
           </video>
 
-          {/* Optical Gradient Scrim — Guarantees 100% text contrast on left while video breathes on right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/85 to-transparent lg:via-[#0B0F19]/70" />
+          {/* Optical Gradient Scrim — Soft dark gradient allowing energy flow while guaranteeing 100% text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/80 to-transparent lg:via-[#0B0F19]/65 lg:to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-[#0B0F19]/75" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/80 via-transparent to-[#0B0F19]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/75 via-transparent to-[#0B0F19]" />
 
           {/* Ambient atmospheric lighting accents with subtle pulse */}
           <div className="absolute -top-32 left-1/4 h-[500px] w-[500px] rounded-full bg-[#1E293B]/40 blur-3xl opacity-60 animate-glow-pulse" />
