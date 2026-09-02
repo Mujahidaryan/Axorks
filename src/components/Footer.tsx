@@ -11,7 +11,7 @@ import { Mail, MessageCircle, ArrowRight, ShieldCheck, MapPin, Globe } from 'luc
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/[0.08] bg-[#07080C] text-slate-400 overflow-hidden">
+    <footer className="relative border-t border-white/[0.08] bg-[#0B0F19] text-slate-400 overflow-hidden">
       {/* Ambient background network texture with low opacity */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none opacity-15 mix-blend-screen">
         <Image
@@ -20,7 +20,7 @@ export default function Footer() {
           fill
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-[#07080C]/80 to-[#07080C]/90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-[#0B0F19]/80 to-[#0B0F19]/90" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
@@ -47,7 +47,7 @@ export default function Footer() {
             </p>
             <div className="pt-2 space-y-2 text-xs text-slate-400">
               <div className="flex items-center gap-2">
-                <MapPin className="h-3.5 w-3.5 text-[#C9A24B] shrink-0" />
+                <MapPin className="h-3.5 w-3.5 text-[#C9A227] shrink-0" />
                 <span>Offices in Karachi &amp; Islamabad, Pakistan</span>
               </div>
               <div className="flex items-center gap-2">

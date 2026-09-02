@@ -17,6 +17,7 @@ export default function Navigation() {
     pathname === '/services' ||
     pathname === '/about' ||
     pathname === '/process' ||
+    pathname === '/careers' ||
     pathname?.startsWith('/services/');
 
   // Handle ESC key to dismiss mobile drawer
@@ -35,7 +36,7 @@ export default function Navigation() {
     { label: 'Our Work', href: '/case-studies' },
     { label: 'Process', href: '/process' },
     { label: 'About', href: '/about' },
-    { label: 'FAQ', href: '/faq' },
+    { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -43,7 +44,7 @@ export default function Navigation() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isDarkHero
-          ? 'border-b border-white/[0.08] bg-[#07080C]/80 backdrop-blur-md text-white shadow-[0_4px_24px_rgba(0,0,0,0.6)]'
+          ? 'border-b border-white/[0.08] bg-[#0B0F19]/80 backdrop-blur-md text-white shadow-[0_4px_24px_rgba(0,0,0,0.6)]'
           : 'border-b border-slate-200/90 bg-white/95 backdrop-blur-md text-slate-900 shadow-[0_4px_20px_-4px_rgba(15,23,42,0.06)]'
       }`}
     >
@@ -144,7 +145,7 @@ export default function Navigation() {
           id="mobile-nav-drawer"
           className={`border-t px-5 pb-6 pt-3 shadow-lg md:hidden animate-fade-in ${
             isDarkHero
-              ? 'border-white/10 bg-[#07080C]/95 backdrop-blur-xl text-white'
+              ? 'border-white/10 bg-[#0B0F19]/95 backdrop-blur-xl text-white'
               : 'border-slate-100 bg-white/95 backdrop-blur-xl text-slate-900'
           }`}
         >

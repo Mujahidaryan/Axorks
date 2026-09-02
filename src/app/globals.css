@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --obsidian: #0B0C0F;
-  --obsidian-raised: #14161C;
-  --obsidian-card: #1A1C24;
-  --obsidian-border: #282C38;
+  --obsidian: #0B0F19;
+  --obsidian-raised: #111827;
+  --obsidian-card: #161F33;
+  --obsidian-border: #1E293B;
   --steel: #8A8F98;
-  --paper: #ECEAE4;
-  --gold: #C9A24B;
+  --paper: #F8FAFC;
+  --gold: #C9A227;
   --gold-light: #DFBD6C;
-  --gold-dark: #9E7E32;
+  --gold-dark: #D4AF37;
   --signal-blue: #2E6FBD;
   --signal-blue-hover: #3E82D5;
 
@@ -59,7 +59,7 @@
   }
 
   body {
-    background-color: #FAF9F6;
+    background-color: #F8F7F4;
     color: #0F172A;
     font-family: var(--font-inter);
     overflow-x: hidden;

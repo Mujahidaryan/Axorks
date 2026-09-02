@@ -83,11 +83,11 @@ const steps = [
 
 export default function ProcessPage() {
   return (
-    <div className="bg-[#FAF9F6]">
+    <div className="bg-[#F8F7F4]">
       {/* ============================================================
           PAGE HERO — 100% FULL-BLEED CINEMATIC STAGE (ZERO EMPTY GAP)
       ============================================================ */}
-      <section className="relative min-h-[520px] lg:min-h-[580px] w-full overflow-hidden bg-[#07080C] text-white flex items-center border-b border-white/[0.08]">
+      <section className="relative min-h-[520px] lg:min-h-[580px] w-full overflow-hidden bg-[#0B0F19] text-white flex items-center border-b border-white/[0.08]">
         {/* Full-Bleed 100% Background Canvas */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden z-0">
           <Image
@@ -95,16 +95,16 @@ export default function ProcessPage() {
             alt=""
             fill
             priority
-            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80 animate-cinematic-drift"
+            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80"
           />
 
           {/* Optical Gradient Scrim */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/85 to-transparent lg:via-[#07080C]/65" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/75" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/85 to-transparent lg:via-[#0B0F19]/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-[#0B0F19]/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/80 via-transparent to-[#0B0F19]" />
 
           {/* Ambient lighting with subtle pulse */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[350px] w-[700px] rounded-full bg-indigo-500/15 blur-3xl opacity-60 animate-glow-pulse" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[350px] w-[700px] rounded-full bg-[#1E293B]/40 blur-3xl opacity-60 animate-glow-pulse" />
           <div className="exec-grid absolute inset-0 opacity-[0.15]" />
         </div>
 
@@ -115,7 +115,7 @@ export default function ProcessPage() {
               <ShieldCheck className="h-3.5 w-3.5 text-teal-400" />
               <span>Milestone-Based Engineering Workflow</span>
             </span>
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-[#F8FAFC] sm:text-5xl lg:text-6xl">
               How we work
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-slate-300 sm:text-xl font-normal">
@@ -128,7 +128,7 @@ export default function ProcessPage() {
       {/* ============================================================
           PROCESS CARDS GRID — ELEVATED & STRUCTURED
       ============================================================ */}
-      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#FAF9F6] via-[#F4F2EB] to-[#FAF9F6]">
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#F8F7F4] via-[#F4F2EB] to-[#F8F7F4]">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {steps.map((step) => (
@@ -174,7 +174,7 @@ export default function ProcessPage() {
                 <div className="mt-8 pt-5 border-t border-slate-200/70">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-[#C9A24B]"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-[#C9A227]"
                   >
                     <span>Start with Step {step.num}</span>
                     <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -204,7 +204,7 @@ export default function ProcessPage() {
       {/* ============================================================
           BOTTOM CTA — DEEP CONTRAST STAGE
       ============================================================ */}
-      <section className="relative border-t border-white/[0.08] bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0D0F14] text-white">
+      <section className="relative border-t border-white/[0.08] bg-gradient-to-b from-[#0B0F19] via-[#0A0C12] to-[#0D0F14] text-white">
         <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-28">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Ready to start your project?
@@ -215,7 +215,7 @@ export default function ProcessPage() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-gradient-to-r from-[#DFBD6C] via-[#C9A24B] to-[#B88E2F] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_24px_rgba(201,162,75,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,162,75,0.48)] hover:brightness-105"
+              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-gradient-to-r from-[#DFBD6C] via-[#C9A227] to-[#B88E2F] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_24px_rgba(201,162,75,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,162,75,0.48)] hover:brightness-105"
             >
               <span>Book a free discovery call</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />

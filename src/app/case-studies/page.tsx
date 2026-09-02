@@ -54,8 +54,8 @@ const caseStudies: CaseStudy[] = [
     category: 'Agriculture & IoT Telemetry',
     domain: 'agrotrace.live',
     icon: <Layers className="h-4 w-4" />,
-    badgeStyle: 'bg-emerald-50 text-emerald-700 ring-emerald-200/70',
-    accentGradient: 'from-emerald-500/10 via-teal-500/5 to-transparent',
+    badgeStyle: 'bg-slate-100 text-slate-800 ring-slate-200',
+    accentGradient: 'from-slate-500/10 via-slate-500/5 to-transparent',
     problem:
       'Agricultural exporters lacked real-time visibility into temperature problems and logistics delays during international transit, creating risks of cargo spoilage and compliance failures.',
     solution:
@@ -83,8 +83,8 @@ const caseStudies: CaseStudy[] = [
     category: 'AI & Real-Time Data',
     domain: 'decision-engine.internal',
     icon: <Cpu className="h-4 w-4" />,
-    badgeStyle: 'bg-indigo-50 text-indigo-700 ring-indigo-200/70',
-    accentGradient: 'from-indigo-500/10 via-violet-500/5 to-transparent',
+    badgeStyle: 'bg-slate-100 text-slate-800 ring-slate-200',
+    accentGradient: 'from-slate-500/10 via-slate-500/5 to-transparent',
     problem:
       'Traditional rule-based indicators became unreliable during rapid market changes and liquidity spikes.',
     solution:
@@ -112,8 +112,8 @@ const caseStudies: CaseStudy[] = [
     category: 'Healthcare & Clinical Workflows',
     domain: 'mediverse.clinic',
     icon: <HeartPulse className="h-4 w-4" />,
-    badgeStyle: 'bg-teal-50 text-teal-700 ring-teal-200/70',
-    accentGradient: 'from-teal-500/10 via-cyan-500/5 to-transparent',
+    badgeStyle: 'bg-slate-100 text-slate-800 ring-slate-200',
+    accentGradient: 'from-slate-500/10 via-slate-500/5 to-transparent',
     problem:
       'Patients faced disconnected booking processes for specialist appointments and home visits, while staff spent significant time coordinating schedules manually.',
     solution:
@@ -139,29 +139,32 @@ const caseStudies: CaseStudy[] = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="bg-[#FAF9F6]">
+    <div className="bg-[#F8F7F4]">
       {/* ============================================================
-          PAGE HERO — 100% FULL-BLEED CINEMATIC STAGE (ZERO EMPTY SPACE)
+          PAGE HERO — 100% FULL-BLEED CINEMATIC HERO_MOTION (ZERO EMPTY SPACE)
       ============================================================ */}
-      <section className="relative min-h-[520px] lg:min-h-[580px] w-full overflow-hidden bg-[#07080C] text-white flex items-center border-b border-white/[0.08]">
-        {/* Full-Bleed 100% Background Canvas */}
+      <section className="relative min-h-[520px] lg:min-h-[580px] w-full overflow-hidden bg-[#0B0F19] text-[#F8FAFC] flex items-center border-b border-white/[0.08]">
+        {/* Full-Bleed 100% Background Canvas with Hero_motion Video */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden z-0">
-          <Image
-            src="/assets/illustrations/work_hero_architecture.png"
-            alt=""
-            fill
-            priority
-            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80 animate-cinematic-drift"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/assets/illustrations/work_hero_architecture.png"
+            className="absolute inset-0 h-full w-full object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80"
+          >
+            <source src="/assets/hero_motion.mp4" type="video/mp4" />
+          </video>
 
           {/* Optical Gradient Scrim — Ensures 100% text dominance and zero visual seams */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/85 to-transparent lg:via-[#07080C]/65" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/75" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/85 to-transparent lg:via-[#0B0F19]/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-[#0B0F19]/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/80 via-transparent to-[#0B0F19]" />
 
           {/* Ambient atmospheric lighting with subtle pulse */}
-          <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-indigo-500/15 blur-3xl opacity-60 animate-glow-pulse" />
-          <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-teal-500/10 blur-3xl opacity-50 animate-glow-pulse" />
+          <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-[#1E293B]/40 blur-3xl opacity-60 animate-glow-pulse" />
+          <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-[#334155]/30 blur-3xl opacity-50 animate-glow-pulse" />
           <div className="exec-grid absolute inset-0 opacity-[0.15]" />
         </div>
 
@@ -169,10 +172,10 @@ export default function CaseStudiesPage() {
         <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-32 lg:py-36">
           <div className="max-w-2xl lg:max-w-[620px]">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-[#DFBD6C] ring-1 ring-white/15 mb-5">
-              <ShieldCheck className="h-3.5 w-3.5 text-[#C9A24B]" />
+              <ShieldCheck className="h-3.5 w-3.5 text-[#C9A227]" />
               <span>Verified Client Systems Delivered</span>
             </span>
-            <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-[#F8FAFC] sm:text-5xl lg:text-6xl">
               Our work
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-slate-300 sm:text-xl font-normal">
@@ -180,11 +183,11 @@ export default function CaseStudiesPage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3 text-xs text-slate-400">
               <span className="flex items-center gap-1.5 rounded-md bg-white/5 px-3 py-1.5 border border-white/10">
-                <CheckCircle2 className="h-3.5 w-3.5 text-teal-400" />
+                <CheckCircle2 className="h-3.5 w-3.5 text-[#DFBD6C]" />
                 100% In-House Architecture
               </span>
               <span className="flex items-center gap-1.5 rounded-md bg-white/5 px-3 py-1.5 border border-white/10">
-                <CheckCircle2 className="h-3.5 w-3.5 text-[#C9A24B]" />
+                <CheckCircle2 className="h-3.5 w-3.5 text-[#DFBD6C]" />
                 Live Production Systems
               </span>
             </div>
@@ -195,7 +198,7 @@ export default function CaseStudiesPage() {
       {/* ============================================================
           CASE STUDIES LIST — ELEVATED CARDS WITH BROWSER MOCKUPS
       ============================================================ */}
-      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#FAF9F6] via-[#F4F2EB] to-[#FAF9F6]">
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-[#F8F7F4] via-[#F2F0EB] to-[#F8F7F4]">
         <div className="mx-auto max-w-6xl px-5 sm:px-8 space-y-20 sm:space-y-28">
           {caseStudies.map((study) => (
             <article
@@ -209,7 +212,7 @@ export default function CaseStudiesPage() {
                     {study.icon}
                     <span>{study.category}</span>
                   </span>
-                  <h2 className="mt-2.5 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                  <h2 className="mt-2.5 text-2xl font-bold tracking-tight text-[#0F172A] sm:text-3xl">
                     {study.name}
                   </h2>
                 </div>
@@ -242,7 +245,7 @@ export default function CaseStudiesPage() {
 
               {/* Problem → Solution → Result */}
               <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-2xs">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#F8F7F4] p-6 shadow-2xs">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Problem
                   </h3>
@@ -251,7 +254,7 @@ export default function CaseStudiesPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[12px] border border-slate-200/70 bg-[#FAF9F6] p-6 shadow-2xs">
+                <div className="rounded-[12px] border border-slate-200/70 bg-[#F8F7F4] p-6 shadow-2xs">
                   <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Solution
                   </h3>
@@ -260,11 +263,11 @@ export default function CaseStudiesPage() {
                   </p>
                 </div>
 
-                <div className="rounded-[12px] border border-emerald-200/80 bg-gradient-to-b from-[#F0FDF6] to-[#E5F9EE] p-6 shadow-2xs">
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-emerald-800">
+                <div className="rounded-[12px] border border-slate-200/80 bg-gradient-to-b from-slate-50 to-slate-100 p-6 shadow-2xs">
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-800">
                     Result
                   </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-emerald-950 font-medium">
+                  <p className="mt-2.5 text-sm leading-relaxed text-[#0F172A] font-medium">
                     {study.result}
                   </p>
                 </div>
@@ -279,7 +282,7 @@ export default function CaseStudiesPage() {
                   {study.additionalImages.map((img, idx) => (
                     <div
                       key={idx}
-                      className="overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#FAF9F6] flex flex-col shadow-sm transition-all duration-300 hover:border-slate-300"
+                      className="overflow-hidden rounded-[12px] border border-slate-200/85 bg-[#F8F7F4] flex flex-col shadow-sm transition-all duration-300 hover:border-slate-300"
                     >
                       <div className="overflow-hidden">
                         <img
@@ -305,7 +308,7 @@ export default function CaseStudiesPage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-[#C9A24B]"
+                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-[#0F172A] transition-colors hover:text-[#C9A227]"
                 >
                   <span>Start a similar project</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -319,9 +322,9 @@ export default function CaseStudiesPage() {
       {/* ============================================================
           BOTTOM CTA — DEEP CONTRAST STAGE
       ============================================================ */}
-      <section className="relative border-t border-white/[0.08] bg-gradient-to-b from-[#07080C] via-[#0A0C12] to-[#0D0F14] text-white">
+      <section className="relative border-t border-white/[0.08] bg-gradient-to-b from-[#0B0F19] via-[#111827] to-[#0B0F19] text-[#F8FAFC]">
         <div className="mx-auto max-w-5xl px-5 py-20 text-center sm:px-8 sm:py-28">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-[#F8FAFC] sm:text-4xl">
             Have a project in mind?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-base text-slate-300">
@@ -330,7 +333,7 @@ export default function CaseStudiesPage() {
           <div className="mt-8 flex justify-center">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-gradient-to-r from-[#DFBD6C] via-[#C9A24B] to-[#B88E2F] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_24px_rgba(201,162,75,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,162,75,0.48)] hover:brightness-105"
+              className="group inline-flex items-center gap-2.5 rounded-[12px] bg-gradient-to-r from-[#DFBD6C] via-[#C9A227] to-[#B88E2F] px-8 py-4 text-base font-semibold text-slate-950 shadow-[0_4px_24px_rgba(201,162,39,0.32)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(201,162,39,0.48)] hover:brightness-105"
             >
               <span>Book a free discovery call</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
