@@ -94,17 +94,33 @@ export default function ServicesPage() {
   return (
     <div className="bg-[#FAF9F6]">
       {/* ============================================================
-          HEADER — DEEP OBSIDIAN ENTERPRISE STAGE
+          PAGE HERO — 100% FULL-BLEED CINEMATIC STAGE (ZERO EMPTY SPACE)
       ============================================================ */}
-      <section className="relative overflow-hidden border-b border-white/[0.08] bg-[#07080C] text-white">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none">
+      <section className="relative min-h-[520px] lg:min-h-[580px] w-full overflow-hidden bg-[#07080C] text-white flex items-center border-b border-white/[0.08]">
+        {/* Full-Bleed 100% Background Canvas */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden z-0">
+          <Image
+            src="/assets/illustrations/service_web.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80"
+          />
+
+          {/* Optical Gradient Scrim */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/85 to-transparent lg:via-[#07080C]/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
+
+          {/* Ambient atmospheric lighting */}
           <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-indigo-500/15 blur-3xl" />
           <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-teal-500/10 blur-3xl" />
           <div className="exec-grid absolute inset-0 opacity-[0.15]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-          <div className="max-w-3xl">
+        {/* Foreground Content */}
+        <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-32 lg:py-36">
+          <div className="max-w-2xl lg:max-w-[620px]">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-[#DFBD6C] ring-1 ring-white/15 mb-4">
               <Layers className="h-3.5 w-3.5 text-[#C9A24B]" />
               <span>Full-Stack Software Capabilities</span>
@@ -112,7 +128,7 @@ export default function ServicesPage() {
             <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               What we build
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl font-normal">
               We focus on building software that solves real business problems. Every engagement receives a clear fixed-price proposal before development begins.
             </p>
           </div>

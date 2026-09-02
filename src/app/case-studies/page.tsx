@@ -141,60 +141,52 @@ export default function CaseStudiesPage() {
   return (
     <div className="bg-[#FAF9F6]">
       {/* ============================================================
-          PAGE HERO — 2-COLUMN BALANCED WITH ELEGANT ARCHITECTURE ARTWORK
+          PAGE HERO — 100% FULL-BLEED CINEMATIC STAGE (ZERO EMPTY SPACE)
       ============================================================ */}
-      <section className="relative overflow-hidden border-b border-white/[0.08] bg-[#07080C] text-white">
-        {/* Ambient atmospheric lighting */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none">
+      <section className="relative min-h-[520px] lg:min-h-[580px] w-full overflow-hidden bg-[#07080C] text-white flex items-center border-b border-white/[0.08]">
+        {/* Full-Bleed 100% Background Canvas */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden z-0">
+          <Image
+            src="/assets/illustrations/work_hero_architecture.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80"
+          />
+
+          {/* Optical Gradient Scrim — Ensures 100% text dominance and zero visual seams */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/85 to-transparent lg:via-[#07080C]/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
+
+          {/* Ambient atmospheric lighting */}
           <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-indigo-500/15 blur-3xl" />
           <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-teal-500/10 blur-3xl" />
           <div className="exec-grid absolute inset-0 opacity-[0.15]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
-            {/* Left Content Column */}
-            <div className="lg:col-span-6">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-[#DFBD6C] ring-1 ring-white/15 mb-5">
-                <ShieldCheck className="h-3.5 w-3.5 text-[#C9A24B]" />
-                <span>Verified Client Systems Delivered</span>
+        {/* Foreground Content */}
+        <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-32 lg:py-36">
+          <div className="max-w-2xl lg:max-w-[620px]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-[#DFBD6C] ring-1 ring-white/15 mb-5">
+              <ShieldCheck className="h-3.5 w-3.5 text-[#C9A24B]" />
+              <span>Verified Client Systems Delivered</span>
+            </span>
+            <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Our work
+            </h1>
+            <p className="mt-6 text-lg leading-relaxed text-slate-300 sm:text-xl font-normal">
+              Real projects we&apos;ve built for real businesses. From global supply chain telemetry to automated healthcare scheduling and adaptive decision systems.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3 text-xs text-slate-400">
+              <span className="flex items-center gap-1.5 rounded-md bg-white/5 px-3 py-1.5 border border-white/10">
+                <CheckCircle2 className="h-3.5 w-3.5 text-teal-400" />
+                100% In-House Architecture
               </span>
-              <h1 className="text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Our work
-              </h1>
-              <p className="mt-6 text-lg leading-relaxed text-slate-300">
-                Real projects we&apos;ve built for real businesses. From global supply chain telemetry to automated healthcare scheduling and adaptive decision systems.
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3 text-xs text-slate-400">
-                <span className="flex items-center gap-1.5 rounded-md bg-white/5 px-3 py-1.5 border border-white/10">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-teal-400" />
-                  100% In-House Architecture
-                </span>
-                <span className="flex items-center gap-1.5 rounded-md bg-white/5 px-3 py-1.5 border border-white/10">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-[#C9A24B]" />
-                  Live Production Systems
-                </span>
-              </div>
-            </div>
-
-            {/* Right Hero Illustration Column (Eliminates empty white space) */}
-            <div className="relative lg:col-span-6">
-              <div className="relative overflow-hidden rounded-[16px] border border-white/15 bg-gradient-to-br from-[#121520] to-[#0A0C14] p-2 shadow-[0_16px_48px_rgba(0,0,0,0.6)]">
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[12px]">
-                  <Image
-                    src="/assets/illustrations/work_hero_architecture.png"
-                    alt="Enterprise Software Systems Architecture"
-                    fill
-                    priority
-                    className="object-cover object-center scale-[1.03] transition-transform duration-700 hover:scale-[1.06]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C14]/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-white/90 bg-slate-950/60 backdrop-blur-md px-3.5 py-2 rounded-[8px] border border-white/10">
-                    <span className="font-semibold">Enterprise Architecture Framework</span>
-                    <span className="text-[#DFBD6C] font-mono">3 Shipped Platforms</span>
-                  </div>
-                </div>
-              </div>
+              <span className="flex items-center gap-1.5 rounded-md bg-white/5 px-3 py-1.5 border border-white/10">
+                <CheckCircle2 className="h-3.5 w-3.5 text-[#C9A24B]" />
+                Live Production Systems
+              </span>
             </div>
           </div>
         </div>

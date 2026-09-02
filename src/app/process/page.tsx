@@ -85,61 +85,42 @@ export default function ProcessPage() {
   return (
     <div className="bg-[#FAF9F6]">
       {/* ============================================================
-          HEADER — SOFT IVORY
+          PAGE HERO — 100% FULL-BLEED CINEMATIC STAGE (ZERO EMPTY GAP)
       ============================================================ */}
-      <section className="relative border-b border-slate-200/80 bg-gradient-to-b from-[#FBFBFA] via-[#F6F4EE] to-[#FAF9F6]">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28 text-center sm:text-left">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-3.5 py-1 text-xs font-semibold text-teal-800 ring-1 ring-teal-200/70 mb-4">
-              <ShieldCheck className="h-3.5 w-3.5" />
+      <section className="relative min-h-[520px] lg:min-h-[580px] w-full overflow-hidden bg-[#07080C] text-white flex items-center border-b border-white/[0.08]">
+        {/* Full-Bleed 100% Background Canvas */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden z-0">
+          <Image
+            src="/assets/illustrations/process_flow.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80"
+          />
+
+          {/* Optical Gradient Scrim */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-[#07080C]/85 to-transparent lg:via-[#07080C]/65" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
+
+          {/* Ambient lighting */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[350px] w-[700px] rounded-full bg-indigo-500/15 blur-3xl" />
+          <div className="exec-grid absolute inset-0 opacity-[0.15]" />
+        </div>
+
+        {/* Foreground Content */}
+        <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-24 sm:px-8 sm:py-32 lg:py-36">
+          <div className="max-w-2xl lg:max-w-[620px]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold text-teal-300 ring-1 ring-white/15 mb-5">
+              <ShieldCheck className="h-3.5 w-3.5 text-teal-400" />
               <span>Milestone-Based Engineering Workflow</span>
             </span>
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
               How we work
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+            <p className="mt-6 text-lg leading-relaxed text-slate-300 sm:text-xl font-normal">
               A simple, clear process from first conversation to finished product. You always know what is being built, when it will be delivered, and what it costs.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================
-          HORIZONTAL PROCESS CONNECTIVITY ILLUSTRATION (ELIMINATES EMPTY GAP)
-      ============================================================ */}
-      <section className="relative overflow-hidden border-b border-slate-200/80 bg-[#07080C] py-10 sm:py-14">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[700px] rounded-full bg-indigo-500/10 blur-3xl" />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-6xl px-5 sm:px-8">
-          <div className="relative overflow-hidden rounded-[16px] border border-white/10 bg-gradient-to-r from-[#0C0E17] via-[#121624] to-[#0C0E17] shadow-2xl">
-            <div className="relative h-44 sm:h-56 md:h-64 w-full overflow-hidden">
-              <Image
-                src="/assets/illustrations/process_flow.png"
-                alt="Systematic Software Engineering Workflow Architecture"
-                fill
-                priority
-                className="object-cover object-center opacity-85 scale-[1.02]"
-              />
-              {/* Soft dark gradient edge overlays */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#07080C] via-transparent to-[#07080C]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/60" />
-
-              {/* Workflow Step Markers Overlay */}
-              <div className="absolute bottom-4 left-4 right-4 hidden sm:flex items-center justify-between text-xs text-white/90 bg-slate-950/70 backdrop-blur-md px-5 py-2.5 rounded-[10px] border border-white/10">
-                <span className="flex items-center gap-2 font-semibold">
-                  <span className="h-2 w-2 rounded-full bg-[#C9A24B] animate-pulse" />
-                  Step 01 Discovery
-                </span>
-                <span className="text-slate-400">→</span>
-                <span className="font-semibold text-slate-200">Step 02 Scope &amp; Proposal</span>
-                <span className="text-slate-400">→</span>
-                <span className="font-semibold text-slate-200">Step 03 Build &amp; Milestone Launch</span>
-                <span className="text-slate-400">→</span>
-                <span className="font-semibold text-teal-300">Step 04 SLA Support</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
