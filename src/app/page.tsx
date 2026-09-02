@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Layers, Cpu, Smartphone, ShieldCheck } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 import { SITE_URL, SITE_NAME } from '@/lib/config';
+import HeroSlideshow from '@/components/HeroSlideshow';
 
 export const metadata: Metadata = {
   title: 'Axorks | Custom Web Applications & AI Automation for Growing Businesses',
@@ -44,26 +45,8 @@ export default function HomePage() {
           Reference standard: Systems Limited (systemsltd.com)
       ============================================================ */}
       <section className="relative min-h-[760px] lg:min-h-[840px] w-full overflow-hidden bg-[#0B0F19] text-[#F8FAFC] flex items-center">
-        {/* Full-Bleed 100% Background Canvas with Hero_motion Video */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 select-none overflow-hidden z-0">
-          <Image
-            src="/assets/illustrations/hero_flagship.png"
-            alt=""
-            fill
-            priority
-            className="object-cover object-[70%_center] lg:object-[right_center] scale-[1.03] opacity-80 animate-cinematic-drift"
-          />
-
-          {/* Optical Gradient Scrim — Guarantees 100% text contrast on left while luminescent core breathes on right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F19] via-[#0B0F19]/85 to-transparent lg:via-[#0B0F19]/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-transparent to-[#0B0F19]/75" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0B0F19]/80 via-transparent to-[#0B0F19]" />
-
-          {/* Ambient atmospheric lighting accents with subtle pulse */}
-          <div className="absolute -top-32 left-1/4 h-[500px] w-[500px] rounded-full bg-[#1E293B]/40 blur-3xl opacity-60 animate-glow-pulse" />
-          <div className="absolute -bottom-24 right-1/3 h-[450px] w-[450px] rounded-full bg-[#334155]/30 blur-3xl opacity-50 animate-glow-pulse" />
-          <div className="exec-grid absolute inset-0 opacity-[0.14]" />
-        </div>
+        {/* Full-Bleed 100% Background Canvas with Slideshow */}
+        <HeroSlideshow />
 
         {/* Hero Foreground Content — High contrast & authoritative */}
         <div className="relative z-10 mx-auto max-w-6xl w-full px-5 py-28 sm:px-8 sm:py-36 lg:py-40">
