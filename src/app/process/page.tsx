@@ -95,7 +95,7 @@ export default function ProcessPage() {
             alt=""
             fill
             priority
-            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80"
+            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80 animate-cinematic-drift"
           />
 
           {/* Optical Gradient Scrim */}
@@ -103,8 +103,8 @@ export default function ProcessPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/75" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
 
-          {/* Ambient lighting */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[350px] w-[700px] rounded-full bg-indigo-500/15 blur-3xl" />
+          {/* Ambient lighting with subtle pulse */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[350px] w-[700px] rounded-full bg-indigo-500/15 blur-3xl opacity-60 animate-glow-pulse" />
           <div className="exec-grid absolute inset-0 opacity-[0.15]" />
         </div>
 

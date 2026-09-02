@@ -789,3 +789,41 @@
     0 0 20px -5px rgba(201, 162, 75, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
+
+/* ============================================================
+   CINEMATIC FULL-BLEED SUBTLE MOTION SYSTEM
+   Slow, restrained, enterprise-grade ambient drift (Systems Ltd standard)
+   ============================================================ */
+@keyframes cinematic-drift {
+  0% {
+    transform: scale(1.02) translate(0%, 0%);
+  }
+  50% {
+    transform: scale(1.06) translate(-0.8%, -0.5%);
+  }
+  100% {
+    transform: scale(1.02) translate(0%, 0%);
+  }
+}
+
+@keyframes ambient-glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.06);
+  }
+}
+
+.animate-cinematic-drift {
+  animation: cinematic-drift 24s ease-in-out infinite;
+  transform-origin: center right;
+  will-change: transform;
+}
+
+.animate-glow-pulse {
+  animation: ambient-glow-pulse 10s ease-in-out infinite;
+  will-change: opacity, transform;
+}

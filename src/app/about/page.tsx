@@ -41,7 +41,7 @@ export default function AboutPage() {
             alt=""
             fill
             priority
-            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80"
+            className="object-cover object-[75%_center] lg:object-[right_center] scale-[1.04] opacity-80 animate-cinematic-drift"
           />
 
           {/* Optical Gradient Scrim */}
@@ -49,9 +49,9 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/75" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
 
-          {/* Ambient atmospheric lighting */}
-          <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-indigo-500/15 blur-3xl" />
-          <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-teal-500/10 blur-3xl" />
+          {/* Ambient atmospheric lighting with subtle pulse */}
+          <div className="absolute top-0 right-1/4 h-[500px] w-[500px] rounded-full bg-indigo-500/15 blur-3xl opacity-60 animate-glow-pulse" />
+          <div className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full bg-teal-500/10 blur-3xl opacity-50 animate-glow-pulse" />
           <div className="exec-grid absolute inset-0 opacity-[0.15]" />
         </div>
 

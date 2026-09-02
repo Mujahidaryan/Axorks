@@ -51,7 +51,7 @@ export default function HomePage() {
             alt=""
             fill
             priority
-            className="object-cover object-[70%_center] lg:object-[right_center] scale-[1.03] opacity-80"
+            className="object-cover object-[70%_center] lg:object-[right_center] scale-[1.03] opacity-80 animate-cinematic-drift"
           />
 
           {/* Optical Gradient Scrim — Guarantees 100% text contrast on left while luminescent core breathes on right */}
@@ -59,9 +59,9 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#07080C] via-transparent to-[#07080C]/75" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#07080C]/80 via-transparent to-[#07080C]" />
 
-          {/* Ambient atmospheric lighting accents */}
-          <div className="absolute -top-32 left-1/4 h-[500px] w-[500px] rounded-full bg-[#4F46E5]/15 blur-3xl opacity-60" />
-          <div className="absolute -bottom-24 right-1/3 h-[450px] w-[450px] rounded-full bg-[#0D9488]/15 blur-3xl opacity-50" />
+          {/* Ambient atmospheric lighting accents with subtle pulse */}
+          <div className="absolute -top-32 left-1/4 h-[500px] w-[500px] rounded-full bg-[#4F46E5]/15 blur-3xl opacity-60 animate-glow-pulse" />
+          <div className="absolute -bottom-24 right-1/3 h-[450px] w-[450px] rounded-full bg-[#0D9488]/15 blur-3xl opacity-50 animate-glow-pulse" />
           <div className="exec-grid absolute inset-0 opacity-[0.14]" />
         </div>
 
