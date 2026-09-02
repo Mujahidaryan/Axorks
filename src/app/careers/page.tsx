@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Users, Zap, Briefcase, Mail } from 'lucide-react';
-import { SITE_URL, SITE_NAME, CONTACT_EMAIL } from '@/lib/config';
+import { SITE_URL, SITE_NAME, CAREERS_EMAIL } from '@/lib/config';
 
 export const metadata: Metadata = {
   title: 'Careers | Axorks',
@@ -215,7 +215,7 @@ export default function CareersPage() {
                   </div>
 
                   <a
-                    href={`mailto:${CONTACT_EMAIL}?subject=Application%20for%20${encodeURIComponent(role.title)}`}
+                    href={`mailto:${CAREERS_EMAIL}?subject=Application%20for%20${encodeURIComponent(role.title)}`}
                     className="group inline-flex items-center gap-2 rounded-[12px] bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-800 self-start sm:self-auto shrink-0"
                   >
                     <span>Apply Now</span>
@@ -249,11 +249,11 @@ export default function CareersPage() {
                 Don&apos;t see the right role? Send us your CV anyway.
               </h3>
               <p className="mt-1 text-sm text-slate-600">
-                We are always interested in connecting with exceptional software engineers, designers, and growth specialists.
+                Email your CV and portfolio to <strong className="font-semibold text-slate-900">{CAREERS_EMAIL}</strong> — we are always looking for talented engineers and designers.
               </p>
             </div>
             <a
-              href={`mailto:${CONTACT_EMAIL}?subject=General%20Application%20%E2%80%93%20Axorks%20Talent%20Network`}
+              href={`mailto:${CAREERS_EMAIL}?subject=General%20Application%20%E2%80%93%20Axorks%20Talent%20Network`}
               className="inline-flex items-center gap-2 rounded-[12px] bg-gradient-to-r from-[#DFBD6C] via-[#C9A227] to-[#B88E2F] px-6 py-3 text-sm font-semibold text-slate-950 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow shrink-0"
             >
               <Mail className="h-4 w-4" />
