@@ -7,9 +7,16 @@ import { ProjectCarousel } from '../components/ProjectCarousel';
 import { SocialProofStrip } from '../components/SocialProofStrip';
 import { ClientStories } from '../components/ClientStories';
 import { GlobalReach } from '../components/GlobalReach';
+import { MetricBar } from '../components/MetricBar';
+import { GuaranteeSection } from '../components/GuaranteeSection';
+import { TestimonialGrid } from '../components/TestimonialGrid';
+import { FAQAccordion } from '../components/FAQAccordion';
+import { SEOHead } from '../components/SEOHead';
+import { useCal } from '../context/CalContext';
 
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
+  const { openCal } = useCal();
   const founder = TEAM_MEMBERS.find((m) => m.id === 'mujahid') || TEAM_MEMBERS[0];
   const featuredTeam = [
     TEAM_MEMBERS.find((m) => m.id === 'faisal'),
@@ -22,8 +29,17 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="w-full">
+      <SEOHead
+        title="AXORKS Technologies | AI Automation & Custom Software Engineering Studio"
+        description="High-converting, fixed-price software engineering studio based in Karachi & Islamabad. Autonomous AI agents, custom Next.js web applications, and Flutter mobile apps from $1,000. 100% IP ownership."
+        canonicalPath="/"
+      />
+
       {/* 1. Hero Section (Locked H1, Subline, Pricing, Atmospheric Motion) */}
-      <Hero onOpenDiscovery={() => navigate('/contact')} />
+      <Hero onOpenDiscovery={openCal} />
+
+      {/* 1.25. Verified Metrics Bar with Count-Up Animation */}
+      <MetricBar />
 
       {/* 1.5. Social Proof Strip (Direct Real Client Logos & Outcomes) */}
       <SocialProofStrip />
@@ -1031,6 +1047,15 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* 8. Verified Testimonials Grid (Real Client Accounts) */}
+      <TestimonialGrid />
+
+      {/* 8.5. 4-Point Commercial Guarantee */}
+      <GuaranteeSection />
+
+      {/* 8.75. Frequently Asked Questions (AEO Knowledge Base) */}
+      <FAQAccordion />
+
       {/* 9. Final Conversion Block */}
       <section className="w-full px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative">
         <div className="max-w-5xl mx-auto text-center glass-2 holographic-edge rounded-3xl p-8 sm:p-14 lg:p-16 border-[var(--gold)]/30">
@@ -1048,7 +1073,7 @@ export const HomePage: React.FC = () => {
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() => navigate('/contact')}
+              onClick={openCal}
               className="w-full sm:w-auto magnetic-btn inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs sm:text-sm font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-xl transition-all"
             >
               <span>Book Free Discovery Call</span>
