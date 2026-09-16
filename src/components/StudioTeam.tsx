@@ -92,9 +92,14 @@ export const StudioTeam: React.FC = () => {
               <p className="text-xs text-white/80 font-medium mb-4">
                 Scale your engineering capacity with Axorks dedicated developer allocations.
               </p>
-              <button onClick={() => navigate('/contact')} className="text-xs font-mono-code font-bold text-[var(--gold)] hover:text-white transition-colors underline decoration-[var(--gold)] underline-offset-4">
+              <a 
+                href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono-code font-bold text-[var(--gold)] hover:text-white transition-colors underline decoration-[var(--gold)] underline-offset-4"
+              >
                 Discuss Team Augmentation
-              </button>
+              </a>
             </div>
           </div>
         </div>

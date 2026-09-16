@@ -350,13 +350,15 @@ export const AboutPage: React.FC = () => {
             Get an itemized Technical Specification Document and fixed-price proposal for your custom system.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={() => navigate('/contact')}
+            <a
+              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+              target="_blank"
+              rel="noopener noreferrer"
               className="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-lg"
             >
               <span>Book Free Discovery Call</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
             <a
               href="https://wa.me/923141030223"
               target="_blank"

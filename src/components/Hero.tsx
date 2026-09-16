@@ -134,13 +134,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenDiscovery }) => {
             initial={{ opacity: 1, y: 0 }}
             className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5"
           >
-            <button
-              onClick={onOpenDiscovery}
+            <a
+              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+              target="_blank"
+              rel="noopener noreferrer"
               className="magnetic-btn inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs sm:text-sm font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-xl transition-all"
             >
               <span>Book Free Discovery Call</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
 
             <a
               href="https://wa.me/923141030223"

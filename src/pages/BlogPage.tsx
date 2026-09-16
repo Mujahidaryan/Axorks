@@ -170,12 +170,14 @@ export const BlogPage: React.FC = () => {
               Axorks engineers custom AI automations, web applications, and mobile systems with fixed-price milestones starting from $1,000.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button
-                onClick={() => navigate('/contact')}
+              <a
+                href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-lg"
               >
                 <span>Book Free Discovery Call</span>
-              </button>
+              </a>
               <a
                 href="https://wa.me/923141030223"
                 target="_blank"

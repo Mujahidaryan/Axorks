@@ -77,12 +77,14 @@ export const ClientStories: React.FC = () => {
                       
                     </div>
                   </div>
-                  <button 
-                    onClick={() => navigate('/contact')}
+                  <a 
+                    href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-8 w-full py-3 bg-[var(--bg-primary)] border border-[var(--glass-border)] text-[var(--text-primary)] rounded-xl text-xs font-headline font-bold tracking-wider uppercase hover:bg-[#0A0F1D] hover:text-white transition-colors flex items-center justify-center gap-2"
                   >
                     Request Similar System <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </a>
                 </div>
               </div>
             );

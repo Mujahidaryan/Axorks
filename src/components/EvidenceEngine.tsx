@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { PROJECTS, CLIENT_STORIES } from '../data/mockData';
 import { ProjectCarousel } from './ProjectCarousel';
 import { Quote, ArrowRight } from 'lucide-react';
@@ -96,13 +96,15 @@ export const EvidenceEngine: React.FC = () => {
                       </div>
                     </div>
                     
-                    <button 
-                      onClick={() => navigate('/contact')}
+                    <a 
+                      href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group inline-flex items-center gap-2 text-xs font-headline font-bold text-[var(--text-primary)] uppercase tracking-wider hover:text-[var(--gold)] transition-colors"
                     >
                       Request Similar Architecture 
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    </a>
                   </div>
                 </div>
 

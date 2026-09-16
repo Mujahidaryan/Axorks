@@ -66,12 +66,14 @@ export const TeamPage: React.FC = () => {
             <h2 className="font-display-hero text-3xl sm:text-4xl font-extrabold text-white mb-6">
               Need dedicated engineering capacity?
             </h2>
-            <button 
-              onClick={() => navigate('/contact')}
-              className="magnetic-btn px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider"
+            <a 
+              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="magnetic-btn inline-block px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider"
             >
               Discuss Team Augmentation
-            </button>
+            </a>
           </div>
         </section>
       </div>

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Hero } from '../components/Hero';
 import { ParadigmMatrix } from '../components/ParadigmMatrix';
 import { EvidenceEngine } from '../components/EvidenceEngine';
@@ -53,13 +53,15 @@ export const HomePage: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-4">
               <div className="flex flex-col gap-3 w-full sm:w-auto">
-                <button
-                  onClick={() => navigate('/contact')}
+                <a
+                  href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="magnetic-btn w-full sm:w-auto px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-[0_0_30px_rgba(201,151,46,0.3)] hover:bg-[var(--gold-light)] transition-colors flex items-center justify-center gap-3"
                 >
                   <span>Book Discovery Call</span>
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </a>
                 {/* Micro-commitment Sub-CTA */}
                 <span className="text-[10px] font-mono-code text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--emerald)] transition-colors cursor-pointer" onClick={() => navigate('/process')}>
                   Read our 24h SLA Process &rarr;

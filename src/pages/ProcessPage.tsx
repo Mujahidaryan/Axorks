@@ -86,13 +86,15 @@ export const ProcessPage: React.FC = () => {
                 <p className="text-xs text-[#475569] leading-relaxed">
                   Every scope item is priced down to the milestone. If engineering requires unexpected architectural refinement on our end, the cost is fully absorbed by AXORKS.
                 </p>
-                <button
-                  onClick={() => navigate('/contact')}
+                <a
+                  href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full py-3 rounded-xl bg-[#0F172A] text-white text-xs font-headline font-bold uppercase tracking-wider hover:bg-[#1E293B] transition-all cursor-pointer flex items-center justify-center gap-2"
                 >
                   <span>Book Phase 01 Discovery</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -226,13 +228,15 @@ export const ProcessPage: React.FC = () => {
               </div>
 
               <div className="lg:col-span-4 flex flex-col justify-center">
-                <button
-                  onClick={() => navigate('/contact')}
+                <a
+                  href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full py-4 rounded-xl bg-[#0F172A] text-white text-xs font-headline font-bold uppercase tracking-wider hover:bg-[#1E293B] transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg"
                 >
                   <span>Initiate Project Scope</span>
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -304,13 +308,15 @@ export const ProcessPage: React.FC = () => {
             </p>
           </div>
 
-          <button
-            onClick={() => navigate('/contact')}
+          <a
+            href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+            target="_blank"
+            rel="noopener noreferrer"
             className="shrink-0 px-8 py-4 rounded-xl bg-[#0F172A] text-white text-xs font-headline font-bold uppercase tracking-wider hover:bg-[#1E293B] transition-all cursor-pointer shadow-lg flex items-center gap-2"
           >
             <span>Request Fixed Proposal</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </a>
         </div>
       </section>
     </div>

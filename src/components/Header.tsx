@@ -117,8 +117,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
             >
               <MessageSquare className="w-4 h-4" />
             </a>
-            <button
-              onClick={handleCta}
+            <a
+              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`magnetic-btn px-5 py-2.5 rounded-xl font-headline text-[11px] uppercase tracking-wider font-bold transition-all duration-300 flex items-center gap-2 ${
                 isTransparent 
                   ? 'bg-[var(--gold)] text-[#0F172A] hover:bg-[var(--gold-light)] shadow-[0_0_20px_rgba(201,151,46,0.3)]'
@@ -127,7 +129,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
             >
               <span>Book Discovery Call</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
 
           <button
@@ -164,13 +166,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
                 </button>
               ))}
               <div className="h-px bg-[#0F172A]/10 my-2" />
-              <button
-                onClick={handleCta}
+              <a
+                href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full flex items-center justify-between px-4 py-3.5 bg-[#0F172A] text-white rounded-xl font-headline text-xs font-bold tracking-wider uppercase"
               >
                 <span>Book Discovery Call</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
               <a
                 href="https://wa.me/923141030223?text=I'm%20interested%20in%20a%20technical%20discovery%20call%20and%20fixed-price%20proposal."
                 target="_blank"
