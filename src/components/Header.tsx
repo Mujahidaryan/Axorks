@@ -7,8 +7,9 @@ interface HeaderProps {
   onOpenDiscovery?: () => void;
 }
 
-const NAV_LINKS: { label: string; path: RoutePath }[] = [
+const NAV_LINKS: { label: string; path: RoutePath; hash?: string; isPill?: boolean }[] = [
   { label: 'Services', path: '/services' },
+  { label: 'SEO • AEO • GEO', path: '/services', hash: 'visibility-packages', isPill: true },
   { label: 'Work', path: '/work' },
   { label: 'Process', path: '/process' },
   { label: 'Team', path: '/team' },
@@ -28,9 +29,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNavClick = (path: RoutePath) => {
+  const handleNavClick = (path: RoutePath, hash?: string) => {
     setIsOpen(false);
     navigate(path);
+    if (hash) {
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
+    }
   };
 
   const handleCta = () => {
@@ -86,20 +93,25 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
             </div>
           </button>
 
-          <nav className="hidden lg:flex items-center gap-2">
+          <nav className="hidden lg:flex items-center gap-1.5">
             {NAV_LINKS.map((link) => {
-              const isActive = currentPath === link.path;
+              const isActive = currentPath === link.path && !link.hash;
               return (
                 <button
-                  key={link.path}
-                  onClick={() => handleNavClick(link.path)}
-                  className={`px-4 py-2 text-[11px] font-headline uppercase tracking-wider transition-colors duration-300 rounded-lg cursor-pointer ${
-                    isTransparent
-                      ? (isActive ? 'bg-white/15 text-white font-bold' : 'text-white/80 hover:text-white hover:bg-white/10 font-semibold')
-                      : (isActive ? 'bg-[#0F172A]/10 text-[#0F172A] font-bold' : 'text-[#334155] hover:text-[#0F172A] hover:bg-[#0F172A]/5 font-semibold')
+                  key={link.label}
+                  onClick={() => handleNavClick(link.path, link.hash)}
+                  className={`px-3 py-2 text-[11px] font-headline uppercase tracking-wider transition-all duration-300 rounded-lg cursor-pointer flex items-center gap-1.5 ${
+                    link.isPill
+                      ? (isTransparent 
+                          ? 'border border-[var(--gold)]/50 text-[var(--gold)] hover:bg-[var(--gold)]/15 font-bold'
+                          : 'border border-[var(--gold)]/50 text-[var(--gold)] hover:bg-[var(--gold)]/10 font-bold bg-[var(--gold)]/5')
+                      : (isTransparent
+                          ? (isActive ? 'bg-white/15 text-white font-bold' : 'text-white/80 hover:text-white hover:bg-white/10 font-semibold')
+                          : (isActive ? 'bg-[#0F172A]/10 text-[#0F172A] font-bold' : 'text-[#334155] hover:text-[#0F172A] hover:bg-[#0F172A]/5 font-semibold'))
                   }`}
                 >
-                  {link.label}
+                  {link.isPill && <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] animate-pulse" />}
+                  <span>{link.label}</span>
                 </button>
               );
             })}
@@ -156,13 +168,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
             <div className="flex flex-col p-4 gap-1 max-w-7xl mx-auto">
               {NAV_LINKS.map((link) => (
                 <button
-                  key={link.path}
-                  onClick={() => handleNavClick(link.path)}
-                  className={`w-full text-left px-4 py-3 rounded-xl text-sm font-headline tracking-wide uppercase transition-colors ${
-                    currentPath === link.path ? 'bg-[#0F172A]/10 text-[#0F172A] font-bold' : 'text-[#334155] font-semibold hover:bg-[#0F172A]/5'
+                  key={link.label}
+                  onClick={() => handleNavClick(link.path, link.hash)}
+                  className={`w-full text-left px-4 py-3 rounded-xl text-sm font-headline tracking-wide uppercase transition-colors flex items-center justify-between ${
+                    link.isPill
+                      ? 'bg-[var(--gold)]/10 text-[var(--gold)] font-bold border border-[var(--gold)]/20 my-1'
+                      : (currentPath === link.path && !link.hash ? 'bg-[#0F172A]/10 text-[#0F172A] font-bold' : 'text-[#334155] font-semibold hover:bg-[#0F172A]/5')
                   }`}
                 >
-                  {link.label}
+                  <div className="flex items-center gap-2">
+                    {link.isPill && <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] animate-pulse" />}
+                    <span>{link.label}</span>
+                  </div>
+                  {link.isPill && (
+                    <span className="text-[10px] font-mono-code font-bold px-2 py-0.5 rounded-full bg-[var(--gold)]/20 text-[var(--gold)]">
+                      $250+
+                    </span>
+                  )}
                 </button>
               ))}
               <div className="h-px bg-[#0F172A]/10 my-2" />

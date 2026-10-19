@@ -1,6 +1,7 @@
 import React from 'react';
 import { Hero } from '../components/Hero';
 import { ParadigmMatrix } from '../components/ParadigmMatrix';
+import { VisibilityPackages } from '../components/VisibilityPackages';
 import { EvidenceEngine } from '../components/EvidenceEngine';
 import { GlobalDelivery } from '../components/GlobalDelivery';
 import { StudioTeam } from '../components/StudioTeam';
@@ -20,6 +21,9 @@ export const HomePage: React.FC = () => {
 
       {/* 2. THE PROOF & PARADIGM SHIFT: Verified Logos + AEO Decision Framework (LIGHT) */}
       <ParadigmMatrix />
+
+      {/* 2.5. STRATEGIC GROWTH: SEO • AEO • GEO Packages (LIGHT) */}
+      <VisibilityPackages id="home-visibility" />
 
       {/* 3. THE EVIDENCE ENGINE: Interwoven Work + Client Stories (LIGHT) */}
       <EvidenceEngine />

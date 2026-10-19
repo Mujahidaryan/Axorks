@@ -44,6 +44,23 @@ export const Footer: React.FC = () => {
             <h4 className="font-mono-code text-[10px] font-bold uppercase tracking-widest text-[var(--gold)] mb-6">Studio</h4>
             <ul className="space-y-4">
               <li><a href="/services" onClick={(e) => handleNavClick(e, '/services')} className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors">Capabilities</a></li>
+              <li>
+                <a 
+                  href="/services#visibility-packages" 
+                  onClick={(e) => { 
+                    e.preventDefault(); 
+                    navigate('/services'); 
+                    setTimeout(() => { 
+                      const el = document.getElementById('visibility-packages'); 
+                      el?.scrollIntoView({ behavior: 'smooth' }); 
+                    }, 150); 
+                  }} 
+                  className="text-sm text-[var(--gold)] font-semibold hover:underline transition-colors flex items-center gap-1.5"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] animate-pulse" />
+                  SEO, AEO &amp; GEO
+                </a>
+              </li>
               <li><a href="/work" onClick={(e) => handleNavClick(e, '/work')} className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors">Verified Work</a></li>
               <li><a href="/process" onClick={(e) => handleNavClick(e, '/process')} className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors">Delivery Process</a></li>
               <li><a href="/team" onClick={(e) => handleNavClick(e, '/team')} className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors">Engineering Team</a></li>
