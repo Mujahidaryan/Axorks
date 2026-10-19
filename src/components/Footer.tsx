@@ -12,7 +12,9 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="w-full border-t border-[var(--glass-border)] pt-20 pb-10 bg-[var(--bg-primary)]">
+    <footer className="w-full border-t border-[var(--glass-border)] pt-20 pb-10 bg-[var(--bg-primary)] relative">
+      {/* Top radiant accent line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/40 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
           
@@ -31,7 +33,7 @@ export const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-sm text-[var(--text-secondary)] leading-relaxed max-w-sm mb-8">
-              AI-first software engineering studio. Custom web applications, autonomous AI systems, and Flutter mobile platforms.
+              AI-first software engineering and discovery studio. Custom web applications, autonomous AI systems, Flutter mobile platforms, and SEO/AEO/GEO AI visibility packages.
             </p>
             <div className="flex items-center gap-4">
               <a href="https://linkedin.com/company/axorks-technologies" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors text-sm font-headline uppercase tracking-wider font-semibold">LinkedIn</a>

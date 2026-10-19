@@ -37,8 +37,12 @@ export const HomePage: React.FC = () => {
       {/* 6. THE ESCALATION: Final Conversion Punctuation (DARK) */}
       <div className="dark-surface">
         <section className="w-full bg-[var(--bg-primary)] py-24 lg:py-32 relative overflow-hidden">
+          {/* Top gradient accent line */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/50 to-transparent z-10" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A0F1D] to-[#040812] z-0" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--emerald)]/10 rounded-full blur-[120px] pointer-events-none z-0" />
+          {/* Dual ambient glow: emerald + gold */}
+          <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[var(--emerald)]/8 rounded-full blur-[120px] pointer-events-none z-0" />
+          <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--gold)]/5 rounded-full blur-[100px] pointer-events-none z-0" />
           
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}

@@ -90,7 +90,13 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-12 sm:mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--gold)]/10 border border-[var(--gold)]/30 text-xs uppercase text-[var(--gold)] tracking-widest font-bold font-mono-code mb-4 shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-[var(--gold)] animate-pulse" />
             <span>SEO • AEO • GEO Packages</span>
@@ -130,19 +136,23 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
               SEO vs. AEO vs. GEO Guide
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Tab 1: Packages Grid */}
         {activeTab === 'packages' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 items-stretch">
-            {VISIBILITY_PACKAGES.map((pkg) => {
+            {VISIBILITY_PACKAGES.map((pkg, idx) => {
               const styles = getAccentStyles(pkg.accent, pkg.popular);
               const icon = getPackageIcon(pkg.id);
 
               return (
-                <div
+                <motion.div
                   key={pkg.id}
-                  className={`bg-white dark:bg-[#0F172A] rounded-3xl p-6 sm:p-7 flex flex-col justify-between spatial-card relative transition-all duration-300 hover:-translate-y-1 ${styles.border}`}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.08 * idx, ease: [0.16, 1, 0.3, 1] }}
+                  className={`bg-white dark:bg-[#0F172A] rounded-3xl p-6 sm:p-7 flex flex-col justify-between spatial-card relative transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${styles.border} ${pkg.popular ? 'ring-1 ring-[var(--gold)]/30 shadow-[0_0_40px_rgba(245,199,97,0.15)]' : ''}`}
                 >
                   {/* Popular Banner */}
                   {pkg.popular && (
@@ -236,7 +246,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                       </span>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -244,7 +254,12 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
 
         {/* Tab 2: Comparison Guide */}
         {activeTab === 'comparison' && (
-          <div className="bg-white dark:bg-[#0F172A] rounded-3xl p-6 sm:p-10 spatial-card border border-[var(--glass-border)] shadow-sm">
+          <motion.div 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="bg-white dark:bg-[#0F172A] rounded-3xl p-6 sm:p-10 spatial-card border border-[var(--glass-border)] shadow-sm"
+          >
             <div className="max-w-2xl mb-8">
               <span className="font-mono-code text-xs uppercase text-[var(--gold)] tracking-widest font-bold block mb-2">
                 Executive Clarity
@@ -328,11 +343,17 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
 
         {/* Trust & Guarantee Strip */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-[var(--glass-border)] text-center sm:text-left">
+        <motion.div 
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-[var(--glass-border)] text-center sm:text-left"
+        >
           <div className="flex items-center gap-3 justify-center sm:justify-start">
             <ShieldCheck className="w-5 h-5 text-[var(--emerald)] shrink-0" />
             <div>
@@ -356,7 +377,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
               <p className="text-[11px] text-[var(--text-muted)]">Monthly audit tracking citations across Perplexity, ChatGPT &amp; Google.</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

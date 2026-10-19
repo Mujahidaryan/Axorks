@@ -1,6 +1,7 @@
 import React from 'react';
 import { TEAM_MEMBERS } from '../data/mockData';
 import { ArrowRight, Linkedin } from 'lucide-react';
+import { motion } from 'motion/react';
 import { useRouter } from '../router/Router';
 
 export const StudioTeam: React.FC = () => {
@@ -17,7 +18,13 @@ export const StudioTeam: React.FC = () => {
     <section className="w-full bg-[var(--bg-secondary)] py-20 lg:py-28" id="studio-team">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
+        <motion.div
+          className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        >
           <div className="max-w-2xl">
             <span className="font-mono-code text-[10px] font-bold tracking-widest uppercase text-[var(--gold)] mb-4 block">
               The Engineering Studio
@@ -32,10 +39,16 @@ export const StudioTeam: React.FC = () => {
           >
             View Full 10-Person Roster <ArrowRight className="w-4 h-4" />
           </button>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <div className="lg:col-span-5 bg-white border border-[var(--glass-border)] rounded-3xl p-6 sm:p-8 spatial-card flex flex-col sm:flex-row lg:flex-col gap-6 lg:gap-8">
+          <motion.div
+            className="lg:col-span-5 bg-white border border-[var(--glass-border)] rounded-3xl p-6 sm:p-8 spatial-card flex flex-col sm:flex-row lg:flex-col gap-6 lg:gap-8 transition-all duration-300 hover:border-[var(--gold)]/40 hover:shadow-[0_0_30px_rgba(245,199,97,0.08)]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
             <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 shrink-0 rounded-2xl overflow-hidden border-2 border-[var(--bg-primary)] shadow-sm">
               <img src={founder.image} alt={founder.name} className="w-full h-full object-cover object-[50%_15%]" />
             </div>
@@ -53,11 +66,18 @@ export const StudioTeam: React.FC = () => {
                 <Linkedin className="w-4 h-4" /> Connect with Founder
               </a>
             </div>
-          </div>
+          </motion.div>
 
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {featured.map((member) => (
-              <div key={member.id} className="bg-white border border-[var(--glass-border)] rounded-2xl p-6 spatial-card flex items-start gap-4">
+            {featured.map((member, idx) => (
+              <motion.div
+                key={member.id}
+                className="bg-white border border-[var(--glass-border)] rounded-2xl p-6 spatial-card flex items-start gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: 0.1 * idx, ease: [0.16, 1, 0.3, 1] }}
+              >
                 <div className="w-16 h-16 shrink-0 rounded-xl overflow-hidden bg-[var(--bg-primary)] border border-[var(--glass-border)] shadow-sm">
                   {member.image ? (
                     <img 
@@ -82,10 +102,16 @@ export const StudioTeam: React.FC = () => {
                     {member.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
             
-            <div className="bg-[var(--text-primary)] rounded-2xl p-6 spatial-card flex flex-col justify-center items-center text-center">
+            <motion.div
+              className="bg-gradient-to-br from-[#0F172A] to-[#1E293B] rounded-2xl p-6 spatial-card flex flex-col justify-center items-center text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            >
               <h4 className="font-headline text-base font-bold text-white mb-2">
                 Need a dedicated team?
               </h4>
@@ -100,7 +126,7 @@ export const StudioTeam: React.FC = () => {
               >
                 Discuss Team Augmentation
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
 
