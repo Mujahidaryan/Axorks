@@ -1,8 +1,9 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { RouterProvider, useRouter } from './router/Router';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { DiscoveryPortal } from './components/DiscoveryPortal';
+import { MobileStickyBar } from './components/MobileStickyBar';
 
 import { HomePage } from './pages/HomePage';
 import { ServicesPage } from './pages/ServicesPage';
@@ -47,7 +48,7 @@ const AppContent: React.FC = () => {
     <div className="flex flex-col min-h-screen relative w-full overflow-x-hidden">
       <Header onOpenDiscovery={() => setIsDiscoveryOpen(true)} />
       
-      <main className="flex-1 w-full flex flex-col relative z-0">
+      <main className="flex-1 w-full flex flex-col relative z-0 pb-16 lg:pb-0">
         {renderPage()}
       </main>
 
@@ -59,6 +60,9 @@ const AppContent: React.FC = () => {
         isOpen={isDiscoveryOpen} 
         onClose={() => setIsDiscoveryOpen(false)} 
       />
+
+      {/* Global Mobile Quick Action Bar */}
+      <MobileStickyBar />
     </div>
   );
 };

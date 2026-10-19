@@ -54,15 +54,23 @@ export const EvidenceEngine: React.FC = () => {
 
                 {/* Right/Left: The Business Outcome (Client Story) */}
                 <div className="w-full lg:w-[45%] flex flex-col justify-center">
-                  <div className="flex items-center gap-4 mb-6">
-                    {story.logo && (
-                      <div className="h-8 w-20 flex items-center justify-start shrink-0">
-                        <img src={story.logo} alt={story.clientName} className="h-full object-contain grayscale opacity-80" />
-                      </div>
+                  <div className="flex items-center justify-between gap-4 mb-5">
+                    <div className="flex items-center gap-3">
+                      {story.logo && (
+                        <div className="h-8 w-20 flex items-center justify-start shrink-0">
+                          <img src={story.logo} alt={story.clientName} className="h-full object-contain grayscale opacity-80" />
+                        </div>
+                      )}
+                      <span className="font-mono-code text-[10px] text-[var(--text-muted)] font-bold tracking-wider uppercase">
+                        {story.industry}
+                      </span>
+                    </div>
+
+                    {story.highlightMetric && (
+                      <span className="px-3 py-1 rounded-full bg-[var(--emerald)]/10 border border-[var(--emerald)]/30 text-[var(--emerald)] font-mono-code text-[11px] font-bold">
+                        {story.highlightMetric.value} {story.highlightMetric.label}
+                      </span>
                     )}
-                    <span className="font-mono-code text-[10px] text-[var(--text-muted)] font-bold tracking-wider uppercase">
-                      {story.industry}
-                    </span>
                   </div>
 
                   <h3 className="font-headline text-2xl sm:text-3xl font-bold text-[var(--text-primary)] leading-snug mb-6">

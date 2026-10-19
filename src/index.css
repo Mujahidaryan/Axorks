@@ -1,55 +1,57 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 :root {
-  /* Core Light-Dominant System (More Luxurious & Warm) */
-  --bg-primary: #FAF9F6;       /* Warm Pearl/Alabaster */
-  --bg-secondary: #F4F2EC;     /* Richer Soft Stone */
+  /* ─── Core Light-Dominant System (Warm Luxury Architectural Tone) ─── */
+  --bg-primary: #FAF9F6;       /* Warm Alabaster */
+  --bg-secondary: #F4F2EC;     /* Refined Soft Stone */
   --bg-tertiary: #EBE7DF;      /* Deep Cream */
   --bg-card: #FFFFFF;
-  --text-primary: #0F172A;     /* Even deeper charcoal */
+  --text-primary: #0A0F1D;     /* Deep Obsidian Charcoal */
   --text-secondary: #334155;   /* Refined Slate */
   --text-muted: #64748B;
   
-  /* Premium Jewel Accents (Richer, deeper tones on light) */
+  /* ─── High-Jewel Accent Tokens (Rich Metallic & Deep Mineral) ─── */
   --gold: #B48520;
-  --gold-light: #C9972E;
-  --gold-dark: #916613;
+  --gold-light: #D4A843;
+  --gold-dark: #8A6414;
   --emerald: #0F766E;
   --emerald-light: #14B8A6;
-  --emerald-dark: #0F524C;
+  --emerald-dark: #0D544E;
   --violet: #6D28D9;
-  --cyan: #0369A1;
-  --burgundy: #881337;
+  --cyan: #0284C7;
+  --wine: #9F1239;
 
-  /* Glass 2.0 Tokens (Light Default) */
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(15, 23, 42, 0.06);
-  --glass-highlight: rgba(255, 255, 255, 0.9);
-  --glass-shadow: 0 12px 40px -12px rgba(15, 23, 42, 0.06), 0 0 1px 1px rgba(255, 255, 255, 0.6) inset;
+  /* ─── Liquid Glass 3.0 Tokens (Light Surface) ─── */
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.95);
+  --glass-shadow: 0 20px 45px -15px rgba(10, 15, 29, 0.07), 0 0 1px 1px rgba(255, 255, 255, 0.8) inset;
 }
 
-/* Strategic Dark Punctuation (Hero, GlobalDelivery, Final Conversion, Footer) */
+/* ─── Strategic Dark Punctuation (Hero, GlobalDelivery, Final Conversion, Footer) ─── */
 .dark-surface {
-  --bg-primary: #030712;
-  --bg-secondary: #0A0F1D;
-  --bg-tertiary: #111827;
+  --bg-primary: #030712;       /* Cosmic Void */
+  --bg-secondary: #060A16;     /* Deep Oceanic Navy */
+  --bg-tertiary: #0D1326;      /* Dark Slate Navy */
   --bg-card: #0F172A;
-  --text-primary: #F8FAFC;
-  --text-secondary: #CBD5E1;
+  --text-primary: #F8FAFC;     /* Crisp Silver White */
+  --text-secondary: #CBD5E1;   /* Muted Platinum */
   --text-muted: #94A3B8;
-  --text-muted-dark: #64748B; /* Fallback */
+  --text-muted-dark: #64748B;
   
-  /* Brightened accents for dark backgrounds */
+  /* Brightened jewel accents for dark background luminescence */
   --gold: #F5C761;
   --gold-light: #FDE047;
+  --gold-dark: #C9972E;
   --emerald: #10B981;
+  --emerald-light: #34D399;
   --cyan: #38BDF8;
 
-  /* Dark Glass */
-  --glass-bg: rgba(10, 15, 29, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-highlight: rgba(255, 255, 255, 0.16);
-  --glass-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.75), 0 0 1px 1px rgba(255, 255, 255, 0.08) inset;
+  /* Liquid Glass 3.0 (Dark Surface) */
+  --glass-bg: rgba(10, 15, 29, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-highlight: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(255, 255, 255, 0.1) inset;
 }
 
 @layer base {
@@ -71,30 +73,30 @@
   }
   * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(201, 151, 46, 0.3) transparent;
+    scrollbar-color: rgba(201, 151, 46, 0.35) transparent;
   }
 }
 
-/* ─── TYPOGRAPHY HIERARCHY ─── */
+/* ─── TYPOGRAPHY CALIBRATION ─── */
 .font-display-hero {
-  font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: -0.045em;
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  letter-spacing: -0.04em;
   line-height: 1.08;
 }
 .font-headline {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
   letter-spacing: -0.025em;
 }
 .font-mono-code {
   font-family: 'JetBrains Mono', monospace;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
-/* ─── LIQUID GLASS 2.0 ─── */
+/* ─── LIQUID GLASS 3.0 & SPECULAR HIGHLIGHTS ─── */
 .glass-2 {
   background: var(--glass-bg);
-  backdrop-filter: blur(24px) saturate(1.8);
-  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  backdrop-filter: blur(28px) saturate(1.8);
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   position: relative;
@@ -104,40 +106,91 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(135deg, var(--glass-highlight) 0%, rgba(255, 255, 255, 0.02) 40%, transparent 100%);
+  background: linear-gradient(135deg, var(--glass-highlight) 0%, rgba(255, 255, 255, 0.03) 35%, transparent 100%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* ─── SPATIAL 3D DEPTH ─── */
+/* ─── SPATIAL 3D PERSPECTIVE & SKEUOMORPHIC DEPTH ─── */
 .spatial-stage {
   perspective: 1200px;
 }
 .spatial-card {
   border-radius: 1.5rem;
   overflow: hidden;
-  clip-path: inset(0 round 1.5rem);
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
-  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  will-change: transform, box-shadow;
 }
 .spatial-card:hover {
-  transform: translateY(-4px) scale(1.005);
-  box-shadow: 0 32px 64px -12px rgba(15, 23, 42, 0.12), 0 0 25px -4px rgba(180, 133, 32, 0.15);
+  transform: translateY(-4px) scale(1.004);
+  box-shadow: 0 28px 60px -12px rgba(10, 15, 29, 0.12), 0 0 20px -2px rgba(180, 133, 32, 0.15);
 }
 .dark-surface .spatial-card:hover {
-  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.8), 0 0 25px -4px rgba(245, 199, 97, 0.15);
+  transform: translateY(-4px) scale(1.004);
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.9), 0 0 25px -2px rgba(245, 199, 97, 0.2);
 }
 
-/* ─── MAGNETIC BUTTON ─── */
+/* ─── HIGH-END MAGNETIC BUTTONS & SHIMMER ─── */
 .magnetic-btn {
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, filter 0.2s ease;
   will-change: transform;
 }
 .magnetic-btn:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: 0 14px 28px -6px rgba(180, 133, 32, 0.35);
 }
 .magnetic-btn:active {
-  transform: translateY(1px) scale(0.98);
+  transform: translateY(1px) scale(0.985);
+}
+
+/* Subtle Shimmer Sweeper */
+.magnetic-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+.magnetic-btn:hover::after {
+  transform: translateX(100%);
+}
+
+/* ─── JEWEL GLOW TOKENS ─── */
+.glow-gold-jewel {
+  box-shadow: 0 0 25px -4px rgba(245, 199, 97, 0.35);
+}
+.glow-emerald-jewel {
+  box-shadow: 0 0 25px -4px rgba(16, 185, 129, 0.35);
+}
+.glow-cyan-jewel {
+  box-shadow: 0 0 25px -4px rgba(56, 189, 248, 0.35);
+}
+.glow-violet-jewel {
+  box-shadow: 0 0 25px -4px rgba(167, 139, 250, 0.35);
+}
+
+/* ─── PULSE ANIMATIONS ─── */
+@keyframes dual-ping {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.8); opacity: 0.2; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+.animate-dual-ping {
+  animation: dual-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
