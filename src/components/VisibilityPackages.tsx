@@ -140,7 +140,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
 
         {/* Tab 1: Packages Grid */}
         {activeTab === 'packages' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7 items-stretch pt-4">
             {VISIBILITY_PACKAGES.map((pkg, idx) => {
               const styles = getAccentStyles(pkg.accent, pkg.popular);
               const icon = getPackageIcon(pkg.id);
@@ -152,11 +152,12 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.08 * idx, ease: [0.16, 1, 0.3, 1] }}
-                  className={`bg-white dark:bg-[#0F172A] rounded-3xl p-6 sm:p-7 flex flex-col justify-between spatial-card relative transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${styles.border} ${pkg.popular ? 'ring-1 ring-[var(--gold)]/30 shadow-[0_0_40px_rgba(245,199,97,0.15)]' : ''}`}
+                  className={`bg-white dark:bg-[#0F172A] rounded-3xl p-6 sm:p-7 flex flex-col justify-between spatial-card !overflow-visible relative transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${styles.border} ${pkg.popular ? 'ring-1 ring-[var(--gold)]/30 shadow-[0_0_40px_rgba(245,199,97,0.15)]' : ''}`}
+                  style={{ overflow: 'visible' }}
                 >
                   {/* Popular Banner */}
                   {pkg.popular && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#B48520] to-[#D97706] text-white text-[10px] font-mono-code font-bold uppercase tracking-widest shadow-md">
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#B48520] to-[#D97706] text-white text-[10px] font-mono-code font-bold uppercase tracking-widest shadow-md whitespace-nowrap z-20 pointer-events-none">
                       Recommended • Save $300/mo
                     </div>
                   )}
