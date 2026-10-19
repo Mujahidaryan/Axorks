@@ -75,6 +75,74 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Founder Vision & Studio Philosophy (Wide Showcase Image) */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 mb-20">
+        <div className="max-w-7xl mx-auto rounded-3xl bg-[#0A0F1D] border border-white/10 p-8 sm:p-12 spatial-card overflow-hidden relative shadow-2xl">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--gold)]/5 rounded-full blur-[120px] pointer-events-none" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
+            {/* Full-body office photo */}
+            <div className="lg:col-span-5 order-2 lg:order-1">
+              <div className="w-full aspect-[3/4] max-h-[440px] rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl relative bg-[#060A16] group">
+                <img
+                  src="/Images/Founder_Office.jpg"
+                  alt="Muhammad Mujahid, Founder & Chief Systems Architect in the Axorks Engineering Studio"
+                  className="w-full h-full object-cover object-[center_18%] transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-black/70 backdrop-blur-md border border-white/10 text-center">
+                  <span className="block text-xs font-headline font-bold text-white uppercase tracking-wider">
+                    Muhammad Mujahid
+                  </span>
+                  <span className="block text-[10px] font-mono-code text-[var(--gold)] font-medium">
+                    Founder &amp; Chief Systems Architect · Axorks Studio
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Vision Copy */}
+            <div className="lg:col-span-7 order-1 lg:order-2 space-y-5 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[var(--gold)]/10 border border-[var(--gold)]/30 text-[var(--gold)] text-xs font-mono-code font-bold uppercase tracking-widest">
+                <span>Founder Vision</span>
+              </div>
+
+              <h2 className="font-display-hero text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                "We founded Axorks to replace agency bloat with direct senior architectural access."
+              </h2>
+
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                Traditional software houses hide behind account managers, junior developer handoffs, and open-ended hourly retainers. At Axorks, we operate as a dedicated engineering studio.
+              </p>
+
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                Every project is scoped and supervised directly by senior architects. We work with fixed-price proposals, testable milestones on live staging servers, and 100% intellectual property ownership transferred on day one.
+              </p>
+
+              <div className="pt-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10">
+                  <span className="font-headline text-xs font-bold text-white uppercase tracking-wider block mb-1">
+                    Zero Junior Delegation
+                  </span>
+                  <p className="text-[11px] text-slate-400 leading-relaxed">
+                    You interface with the software engineers writing and architecting your production systems.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10">
+                  <span className="font-headline text-xs font-bold text-white uppercase tracking-wider block mb-1">
+                    Staging Verification
+                  </span>
+                  <p className="text-[11px] text-slate-400 leading-relaxed">
+                    You test working code on staging servers before releasing any milestone payment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Founder Profile */}
       <section className="w-full px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto space-y-6">
@@ -88,9 +156,9 @@ export const AboutPage: React.FC = () => {
                 <div className="sm:col-span-5 flex flex-col items-center">
                   <div className="relative w-44 h-44 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shadow-2xl border-2 border-[var(--gold)]/40 bg-[#0A0F1D] shrink-0">
                     <img
-                      src={mujahid.image || '/Images/Founder and CEO SOFTWARE ENGINEER.jpeg'}
+                      src="/Images/Founder_Headshot.jpg"
                       alt="Muhammad Mujahid, Founder and CEO of Axorks Technologies"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <span className="mt-3 text-[11px] font-mono-code text-[var(--gold)] font-bold uppercase tracking-wider">

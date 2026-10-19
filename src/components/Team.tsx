@@ -35,11 +35,11 @@ export const Team: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Founder Photo */}
             <div className="md:col-span-4 flex flex-col items-center text-center">
-              <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-3xl overflow-hidden shadow-2xl border-2 border-[var(--gold)]/40 bg-[var(--bg-tertiary)] glow-gold-jewel group">
+              <div className="relative w-48 h-64 sm:w-56 sm:h-72 rounded-3xl overflow-hidden shadow-2xl border-2 border-[var(--gold)]/40 bg-[var(--bg-tertiary)] glow-gold-jewel group">
                 <img
-                  src="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
+                  src="/Images/Founder_Office.jpg"
                   alt="Muhammad Mujahid, Founder and CEO / Chief Systems Architect at AXORKS Technologies"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-[center_18%] transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
               </div>

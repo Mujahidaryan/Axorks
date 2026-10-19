@@ -49,8 +49,13 @@ export const StudioTeam: React.FC = () => {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 shrink-0 rounded-2xl overflow-hidden border-2 border-[var(--bg-primary)] shadow-sm">
-              <img src={founder.image} alt={founder.name} className="w-full h-full object-cover object-[50%_15%]" />
+            <div className="w-full sm:w-44 lg:w-full aspect-[4/5] max-h-72 lg:max-h-80 shrink-0 rounded-2xl overflow-hidden border-2 border-[var(--bg-primary)] shadow-md relative bg-[#0A0F1D]">
+              <img 
+                src={founder.showcaseImage || '/Images/Founder_Office.jpg'} 
+                alt={`${founder.name}, ${founder.role} at Axorks Technologies`} 
+                className="w-full h-full object-cover object-[center_18%]" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
             </div>
             <div>
               <h3 className="font-headline text-xl font-bold text-[var(--text-primary)] mb-1">

@@ -8,7 +8,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Muhammad Mujahid',
     role: 'Founder & CEO / Chief Systems Architect',
     description: 'System architecture, AI automation, full-stack engineering, accounts, and client partnerships. BS Software Engineering.',
-    image: '/Images/Founder and CEO SOFTWARE ENGINEER.jpeg',
+    image: '/Images/Founder_Headshot.jpg',
+    showcaseImage: '/Images/Founder_Office.jpg',
     accent: 'gold',
   },
   {

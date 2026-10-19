@@ -4,6 +4,7 @@ export interface TeamMember {
   role: string;
   description: string;
   image: string | null;
+  showcaseImage?: string | null;
   accent: 'gold' | 'emerald' | 'violet' | 'wine' | 'cyan';
 }
 

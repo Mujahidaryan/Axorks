@@ -35,7 +35,7 @@ export const TeamPage: React.FC = () => {
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className={`w-full h-full object-cover ${member.id === 'yousaf-piryani' ? 'object-[26%_40%]' : 'object-[50%_15%]'}`} 
+                    className={`w-full h-full object-cover ${member.id === 'yousaf-piryani' ? 'object-[26%_40%]' : member.id === 'mujahid' ? 'object-center' : 'object-[50%_15%]'}`} 
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-3xl font-headline font-bold text-[var(--text-muted)]">

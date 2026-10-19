@@ -91,8 +91,12 @@ export const BlogPage: React.FC = () => {
             {/* Author Strip */}
             <div className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl bg-[var(--gold)]/20 border border-[var(--gold)]/40 flex items-center justify-center font-mono-code text-sm font-bold text-[var(--gold)]">
-                  {activePost.author.name.slice(0, 2).toUpperCase()}
+                <div className="w-11 h-11 rounded-xl overflow-hidden border border-[var(--gold)]/40 shrink-0 bg-[#0A0F1D] shadow-sm">
+                  <img
+                    src="/Images/Founder_Headshot.jpg"
+                    alt={activePost.author.name}
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
                 <div>
                   <div className="font-headline text-sm font-bold text-white">
