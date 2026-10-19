@@ -144,9 +144,13 @@ export const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 rounded-xl border border-[rgba(203,195,182,0.9)] bg-white text-[#0A0F1D] text-sm focus:outline-none focus:ring-2 focus:ring-[#B48310] transition-all cursor-pointer"
                     >
                       <option value="AI Automation & Intelligent Systems">AI Automation &amp; Intelligent Systems</option>
+                      <option value="School & College Learning Management Systems (LMS)">School &amp; College Learning Management Systems (LMS)</option>
+                      <option value="Banking & Financial Management Systems">Banking &amp; Financial Management Systems</option>
+                      <option value="Hospital & Clinical Management Systems (HMS)">Hospital &amp; Clinical Management Systems (HMS)</option>
                       <option value="Custom Web Applications">Custom Web Applications</option>
                       <option value="Web3 & Decentralized Applications">Web3 &amp; Decentralized Applications</option>
                       <option value="Mobile Apps">Mobile Apps</option>
+                      <option value="SEO, AEO & GEO Visibility Packages">SEO, AEO &amp; GEO Visibility Packages</option>
                       <option value="Ongoing Support & Infrastructure">Ongoing Support &amp; Infrastructure</option>
                       <option value="Proprietary Product Development">Proprietary Product Development</option>
                     </select>

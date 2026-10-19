@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { SERVICES } from '../data/mockData';
-import { Globe, Brain, Smartphone, Blocks, Shield, Rocket, Check, ArrowRight } from 'lucide-react';
+import { Globe, Brain, Smartphone, Blocks, Shield, Rocket, Check, ArrowRight, GraduationCap, Landmark, Activity } from 'lucide-react';
 
 const ICON_MAP: Record<string, React.FC<{ className?: string; style?: React.CSSProperties }>> = {
-  Globe, Brain, Smartphone, Blocks, Shield, Rocket,
+  Globe, Brain, Smartphone, Blocks, Shield, Rocket, GraduationCap, Landmark, Activity,
 };
 
 const ACCENT_SYSTEM: Record<string, {

@@ -80,16 +80,16 @@ export const BlogPage: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="font-display-hero text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+            <h1 className="font-display-hero text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--text-primary)] tracking-tight leading-tight mb-6">
               {activePost.title}
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-8">
+            <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed font-normal mb-8">
               {activePost.excerpt}
             </p>
 
             {/* Author Strip */}
-            <div className="flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+            <div className="flex items-center justify-between p-4 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm">
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 rounded-xl overflow-hidden border border-[var(--gold)]/40 shrink-0 bg-[#0A0F1D] shadow-sm">
                   <img
@@ -99,7 +99,7 @@ export const BlogPage: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <div className="font-headline text-sm font-bold text-white">
+                  <div className="font-headline text-sm font-bold text-[var(--text-primary)]">
                     {activePost.author.name}
                   </div>
                   <div className="text-xs font-mono-code text-[var(--text-muted)]">
@@ -119,7 +119,7 @@ export const BlogPage: React.FC = () => {
           </div>
 
           {/* Table of Contents */}
-          <div className="p-6 rounded-2xl glass-2 border-white/10 mb-10">
+          <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm mb-10">
             <h4 className="font-mono-code text-xs font-bold uppercase tracking-wider text-[var(--gold)] mb-3">
               Table of Contents
             </h4>
@@ -134,14 +134,14 @@ export const BlogPage: React.FC = () => {
           </div>
 
           {/* Article Body */}
-          <article className="space-y-10 text-slate-200 leading-relaxed">
+          <article className="space-y-10 text-[var(--text-secondary)] leading-relaxed">
             {activePost.content.map((section, idx) => (
               <section key={idx} className="space-y-4">
-                <h2 className="font-display-hero text-2xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-2">
+                <h2 className="font-display-hero text-2xl font-bold text-[var(--text-primary)] tracking-tight border-b border-[var(--glass-border)] pb-2">
                   {section.heading}
                 </h2>
                 {section.paragraphs.map((p, pIdx) => (
-                  <p key={pIdx} className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                  <p key={pIdx} className="text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed font-normal">
                     {p}
                   </p>
                 ))}
@@ -166,14 +166,15 @@ export const BlogPage: React.FC = () => {
           </div>
 
           {/* Article Footer Conversion */}
-          <div className="mt-14 p-8 rounded-3xl glass-2 border-[var(--gold)]/30 text-center">
-            <h3 className="font-display-hero text-2xl font-bold text-white mb-2">
+          <div className="mt-14 p-8 rounded-3xl bg-[#0A0F1D] border border-[var(--gold)]/30 text-center shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[var(--gold)]/5 rounded-full blur-[100px] pointer-events-none" />
+            <h3 className="font-display-hero text-2xl font-bold text-white mb-2 relative z-10">
               Need Help Implementing This in Your Business?
             </h3>
-            <p className="text-sm text-slate-300 max-w-lg mx-auto mb-6">
+            <p className="text-sm text-slate-300 max-w-lg mx-auto mb-6 relative z-10">
               Axorks engineers custom AI automations, web applications, and mobile systems with fixed-price milestones starting from $1,000.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <a
                 href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
@@ -232,7 +233,7 @@ export const BlogPage: React.FC = () => {
                 className={`px-4 py-2 rounded-xl text-xs font-headline uppercase tracking-wider transition-all cursor-pointer ${
                   isSelected
                     ? 'bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] font-bold shadow-md'
-                    : 'glass-2 border-white/10 text-[var(--text-secondary)] hover:text-white hover:border-white/20'
+                    : 'bg-white border border-[var(--glass-border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--gold)]/40 shadow-sm'
                 }`}
               >
                 {cat}
@@ -249,11 +250,11 @@ export const BlogPage: React.FC = () => {
             <div
               key={post.slug}
               onClick={() => handleSelectPost(post.slug)}
-              className="glass-2 holographic-edge rounded-3xl p-6 sm:p-7 spatial-card cursor-pointer group flex flex-col justify-between border-white/10 hover:border-[var(--gold)]/50 transition-all"
+              className="bg-white border border-[var(--glass-border)] rounded-3xl p-6 sm:p-7 spatial-card cursor-pointer group flex flex-col justify-between hover:border-[var(--gold)]/50 hover:shadow-xl transition-all"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono-code font-bold uppercase tracking-wider bg-[var(--gold)]/15 text-[var(--gold)] border border-[var(--gold)]/30">
+                  <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono-code font-bold uppercase tracking-wider bg-[var(--gold)]/15 text-[#916613] dark:text-[var(--gold)] border border-[var(--gold)]/30">
                     {post.category}
                   </span>
                   <span className="text-[11px] font-mono-code text-[var(--text-muted)]">
@@ -261,7 +262,7 @@ export const BlogPage: React.FC = () => {
                   </span>
                 </div>
 
-                <h3 className="font-headline text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-[var(--gold)] transition-colors line-clamp-2">
+                <h3 className="font-headline text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-[var(--gold)] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
 
