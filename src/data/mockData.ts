@@ -303,100 +303,31 @@ export const CLIENT_STORIES: ClientStory[] = [
   },
 ];
 
-// ─── SERVICES (Official Order: 1. AI, 2. Web, 3. Web3, 4. Mobile) ───────────
+// ─── SERVICES (Locked Positioning Hierarchy: 1. Web Platforms, 2. Enterprise Systems, 3. AI, 4. Mobile, 5. Web3) ───
 
 export const SERVICES: Service[] = [
   {
-    id: 'ai-automation',
-    title: 'AI Automation & Intelligent Systems',
-    tagline: 'Intelligent Systems That Work Autonomously',
-    description:
-      'Intelligent multi-agent workflows, autonomous pipelines, RAG retrieval engines, and document processing systems that eliminate manual clerical bottlenecks and run 24/7.',
-    icon: 'Brain',
-    features: [
-      'Custom autonomous AI agent pipelines',
-      'Multi-agent workflow orchestration with human-in-the-loop triggers',
-      'Vector search and high-precision RAG systems',
-      'Enterprise API integrations and automated schema validation',
-    ],
-    deliverables: [
-      'Production AI agent or autonomous workflow pipeline',
-      'Vector database integration with semantic chunking',
-      'Secure API endpoints for inference and webhook triggers',
-      'Operational monitoring dashboard and audit logs',
-      'Full source code and technical architecture specification',
-    ],
-    technologies: ['Python', 'LangChain', 'LlamaIndex', 'OpenAI', 'Pinecone', 'FastAPI', 'PyTorch', 'Docker'],
-    accent: 'emerald',
-  },
-  {
     id: 'web-apps',
-    title: 'Custom Web Applications',
-    tagline: 'Bespoke Platforms Built for Scale',
+    title: 'Custom Web Applications & SaaS Platforms',
+    tagline: 'High-Concurrency Bespoke Platforms Built for Scale',
     description:
-      'Full-stack bespoke platforms, client portals, operations dashboards, and SaaS products engineered for high performance, enterprise security, and long-term maintainability.',
+      'Full-stack bespoke platforms, enterprise client portals, operations cockpits, and SaaS architectures engineered for sub-second execution, hardened security, and 100% full-code IP handover.',
     icon: 'Globe',
     features: [
-      'Modern Next.js, React, and Node.js architecture',
-      'Real-time data visualization and operational telemetry',
-      'Granular role-based access control (RBAC)',
-      'Automated CI/CD deployment pipelines on AWS or Vercel',
+      'Modern Next.js 15, React 19, and Node.js enterprise architecture',
+      'Real-time operational telemetry, WebSocket queues, and analytics',
+      'Granular role-based access control (RBAC) and audit-logged tenancy',
+      'Automated CI/CD deployment pipelines on AWS with zero-downtime blue/green deploys',
     ],
     deliverables: [
-      'Production-ready custom web application',
+      'Production-ready custom web application with source code',
       'Administrative dashboard and client portal',
       'Structured REST and GraphQL API layer',
       'Staging environment with automated testing',
       'Complete intellectual property transfer and documentation',
     ],
-    technologies: ['React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'AWS'],
+    technologies: ['React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'AWS'],
     accent: 'gold',
-  },
-  {
-    id: 'mobile-apps',
-    title: 'Mobile Apps',
-    tagline: 'Native Performance on Every Device',
-    description:
-      'Cross-platform iOS and Android applications with Flutter. 60fps native performance, offline-first data sync, hardware biometric security, and app store deployment.',
-    icon: 'Smartphone',
-    features: [
-      'Unified Flutter codebase for iOS and Android',
-      'Resilient offline-first local database caching',
-      'Hardware biometric authentication (Face ID / Fingerprint)',
-      'Apple App Store and Google Play Store publishing support',
-    ],
-    deliverables: [
-      'Cross-platform iOS and Android mobile app build',
-      'Cloud backend API and real-time push notification setup',
-      'App Store and Google Play submission assets and provisioning',
-      'Offline data synchronization queue architecture',
-      'Full source code and build instructions',
-    ],
-    technologies: ['Flutter', 'Dart', 'Firebase', 'Swift', 'Kotlin', 'Node.js', 'REST API', 'SQLite'],
-    accent: 'violet',
-  },
-  {
-    id: 'web3-blockchain',
-    title: 'Web3 & Decentralized Applications',
-    tagline: 'Decentralized Systems & Audited Smart Contracts',
-    description:
-      'Decentralized applications, audited smart contracts, DeFi settlement rails, and blockchain integrations engineered for security and transparency.',
-    icon: 'Blocks',
-    features: [
-      'Audited smart contracts in Solidity and Rust',
-      'DeFi protocols and automated settlement logic',
-      'Decentralized application frontends with Web3.js and Viem',
-      'Non-custodial wallet integrations and multi-chain bridges',
-    ],
-    deliverables: [
-      'Audited smart contracts with comprehensive test suites',
-      'Decentralized application frontend and wallet connection',
-      'Deployment scripts and gas optimization reports',
-      'Security audit report and documentation',
-      'Full source code ownership transfer',
-    ],
-    technologies: ['Solidity', 'Hardhat', 'Ethers.js', 'Rust', 'IPFS', 'The Graph', 'React', 'Web3.js'],
-    accent: 'cyan',
   },
   {
     id: 'lms-systems',
@@ -466,6 +397,75 @@ export const SERVICES: Service[] = [
     ],
     technologies: ['Next.js', 'FastAPI', 'PostgreSQL', 'HL7 / FHIR', 'AWS Healthcare', 'HIPAA', 'Docker'],
     accent: 'violet',
+  },
+  {
+    id: 'ai-automation',
+    title: 'AI Automation & Intelligent Systems',
+    tagline: 'Intelligent Systems That Work Autonomously',
+    description:
+      'Intelligent multi-agent workflows, autonomous pipelines, RAG retrieval engines, and document processing systems that eliminate manual clerical bottlenecks and run 24/7.',
+    icon: 'Brain',
+    features: [
+      'Custom autonomous AI agent pipelines',
+      'Multi-agent workflow orchestration with human-in-the-loop triggers',
+      'Vector search and high-precision RAG systems',
+      'Enterprise API integrations and automated schema validation',
+    ],
+    deliverables: [
+      'Production AI agent or autonomous workflow pipeline',
+      'Vector database integration with semantic chunking',
+      'Secure API endpoints for inference and webhook triggers',
+      'Operational monitoring dashboard and audit logs',
+      'Full source code and technical architecture specification',
+    ],
+    technologies: ['Python', 'LangChain', 'LlamaIndex', 'OpenAI', 'Pinecone', 'FastAPI', 'PyTorch', 'Docker'],
+    accent: 'emerald',
+  },
+  {
+    id: 'mobile-apps',
+    title: 'Mobile Apps (Flutter)',
+    tagline: 'Native Performance on iOS & Android',
+    description:
+      'Cross-platform iOS and Android applications with Flutter. 60fps native performance, offline-first data sync, hardware biometric security, and app store deployment.',
+    icon: 'Smartphone',
+    features: [
+      'Unified Flutter codebase for iOS and Android',
+      'Resilient offline-first local database caching',
+      'Hardware biometric authentication (Face ID / Fingerprint)',
+      'Apple App Store and Google Play Store publishing support',
+    ],
+    deliverables: [
+      'Cross-platform iOS and Android mobile app build',
+      'Cloud backend API and real-time push notification setup',
+      'App Store and Google Play submission assets and provisioning',
+      'Offline data synchronization queue architecture',
+      'Full source code and build instructions',
+    ],
+    technologies: ['Flutter', 'Dart', 'Firebase', 'Swift', 'Kotlin', 'Node.js', 'REST API', 'SQLite'],
+    accent: 'violet',
+  },
+  {
+    id: 'web3-blockchain',
+    title: 'Web3 & Decentralized Applications',
+    tagline: 'Decentralized Systems & Audited Smart Contracts',
+    description:
+      'Decentralized applications, audited smart contracts, DeFi settlement rails, and blockchain integrations engineered for security and transparency.',
+    icon: 'Blocks',
+    features: [
+      'Audited smart contracts in Solidity and Rust',
+      'DeFi protocols and automated settlement logic',
+      'Decentralized application frontends with Web3.js and Viem',
+      'Non-custodial wallet integrations and multi-chain bridges',
+    ],
+    deliverables: [
+      'Audited smart contracts with comprehensive test suites',
+      'Decentralized application frontend and wallet connection',
+      'Deployment scripts and gas optimization reports',
+      'Security audit report and documentation',
+      'Full source code ownership transfer',
+    ],
+    technologies: ['Solidity', 'Hardhat', 'Ethers.js', 'Rust', 'IPFS', 'The Graph', 'React', 'Web3.js'],
+    accent: 'cyan',
   },
   {
     id: 'support',

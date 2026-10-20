@@ -60,14 +60,14 @@ export const DeliveredWorkPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-white border border-[var(--glass-border)] spatial-card shadow-sm"
+                className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#0D1424] border border-white/[0.08] shadow-2xl"
               >
                 {/* Meta Header */}
-                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-[var(--glass-border)]">
+                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-white/[0.08]">
                   <div className="flex items-center gap-3">
                     {project.clientLogo && (
                       <div className="h-8 w-24 flex items-center shrink-0">
-                        <img src={project.clientLogo} alt={project.title} className="h-full object-contain grayscale opacity-80" />
+                        <img src={project.clientLogo} alt={project.title} className="h-full object-contain brightness-95 opacity-85" />
                       </div>
                     )}
                     <div>
@@ -98,22 +98,22 @@ export const DeliveredWorkPage: React.FC = () => {
                   {/* Right Column: Architectural Outcome */}
                   <div className="lg:col-span-5 flex flex-col justify-between">
                     <div>
-                      <h2 className="font-display-hero text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)] mb-2">
+                      <h2 className="font-display-hero text-2xl sm:text-3xl font-extrabold text-white mb-2">
                         {project.title}
                       </h2>
-                      <p className="text-xs font-mono-code text-[var(--text-muted)] font-bold uppercase tracking-wide mb-6">
+                      <p className="text-xs font-mono-code text-slate-400 font-bold uppercase tracking-wide mb-6">
                         {project.tagline}
                       </p>
 
                       {/* Highlight Metrics Grid */}
                       {project.metrics && project.metrics.length > 0 && (
-                        <div className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--glass-border)]">
+                        <div className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-2xl bg-[#050814] border border-white/10">
                           {project.metrics.map((m, mIdx) => (
                             <div key={mIdx}>
-                              <span className="block font-display-hero text-xl sm:text-2xl font-extrabold text-[var(--text-primary)]">
+                              <span className="block font-display-hero text-xl sm:text-2xl font-extrabold text-white">
                                 {m.value}
                               </span>
-                              <span className="block font-mono-code text-[10px] text-[var(--text-muted)] uppercase tracking-tight">
+                              <span className="block font-mono-code text-[10px] text-slate-400 uppercase tracking-tight">
                                 {m.label}
                               </span>
                             </div>
@@ -122,18 +122,18 @@ export const DeliveredWorkPage: React.FC = () => {
                       )}
 
                       {/* Problem & Solution */}
-                      <div className="space-y-4 text-xs text-[var(--text-secondary)] leading-relaxed mb-6">
+                      <div className="space-y-4 text-xs text-slate-300 leading-relaxed mb-6">
                         {project.problem && (
-                          <div className="pl-3 border-l-2 border-[var(--glass-border)]">
-                            <strong className="text-[var(--text-primary)] font-headline tracking-wide uppercase text-[10px] block mb-1">
+                          <div className="pl-3 border-l-2 border-white/20">
+                            <strong className="text-white font-headline tracking-wide uppercase text-[10px] block mb-1">
                               The Technical Challenge:
                             </strong>
                             <p>{project.problem}</p>
                           </div>
                         )}
                         {project.solution && (
-                          <div className="pl-3 border-l-2 border-[var(--emerald)]/40 bg-[var(--emerald)]/[0.03] py-2">
-                            <strong className="text-[var(--text-primary)] font-headline tracking-wide uppercase text-[10px] block mb-1">
+                          <div className="pl-3 border-l-2 border-[var(--emerald)]/40 bg-[var(--emerald)]/[0.05] py-2">
+                            <strong className="text-white font-headline tracking-wide uppercase text-[10px] block mb-1">
                               Delivered Solution:
                             </strong>
                             <p>{project.solution}</p>
@@ -143,14 +143,14 @@ export const DeliveredWorkPage: React.FC = () => {
 
                       {/* Tech Stack Pills */}
                       <div className="mb-6">
-                        <span className="text-[10px] font-mono-code uppercase text-[var(--text-muted)] font-bold tracking-wider block mb-2">
+                        <span className="text-[10px] font-mono-code uppercase text-slate-400 font-bold tracking-wider block mb-2">
                           Deployed Architecture:
                         </span>
                         <div className="flex flex-wrap gap-1.5">
                           {project.tags.map((tag, tIdx) => (
                             <span
                               key={tIdx}
-                              className="px-2 py-0.5 rounded-md bg-[var(--bg-secondary)] text-[10px] font-mono-code text-[var(--text-secondary)] font-medium"
+                              className="px-2 py-0.5 rounded-md bg-[#050814] text-[10px] font-mono-code text-slate-300 border border-white/10 font-medium"
                             >
                               {tag}
                             </span>
@@ -159,12 +159,12 @@ export const DeliveredWorkPage: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="pt-4 border-t border-[var(--glass-border)]">
+                    <div className="pt-4 border-t border-white/[0.08]">
                       <a
                         href={`mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Case%20Study%20Architecture%20Inquiry%20(${encodeURIComponent(project.title)})%20-%20Axorks`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-xs font-headline font-bold text-[var(--gold)] hover:text-[var(--text-primary)] transition-colors uppercase tracking-wider"
+                        className="inline-flex items-center gap-2 text-xs font-headline font-bold text-[var(--gold)] hover:text-white transition-colors uppercase tracking-wider"
                       >
                         <span>Discuss this tech stack</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -192,7 +192,7 @@ export const DeliveredWorkPage: React.FC = () => {
               We provide fixed-price proposals, itemized milestone contracts, and senior technical architects ready to deploy production software.
             </p>
             <a
-              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="magnetic-btn inline-block px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-lg"

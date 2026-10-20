@@ -32,20 +32,20 @@ export const Footer: React.FC = () => {
                 </span>
               </div>
             </div>
-            <p className="text-sm text-[var(--text-secondary)] leading-relaxed max-w-sm mb-8">
-              AI-first software engineering and discovery studio. Custom web applications, autonomous AI systems, Flutter mobile platforms, and SEO/AEO/GEO AI visibility packages.
+            <p className="text-sm text-slate-300 leading-relaxed max-w-sm mb-8">
+              Specialized software engineering studio. High-concurrency custom web platforms, specialized enterprise systems (ERP, LMS, Banking, Healthcare), and SEO/AEO/GEO search discovery packages.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://linkedin.com/company/axorks-technologies" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors text-sm font-headline uppercase tracking-wider font-semibold">LinkedIn</a>
-              <span className="text-[var(--text-muted)] opacity-50">•</span>
-              <a href="https://github.com/YousufPiryani" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors text-sm font-headline uppercase tracking-wider font-semibold">GitHub</a>
+              <a href="https://linkedin.com/company/axorks-technologies" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[var(--gold)] transition-colors text-sm font-headline uppercase tracking-wider font-semibold">LinkedIn</a>
+              <span className="text-slate-600">•</span>
+              <a href="https://github.com/YousufPiryani" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[var(--gold)] transition-colors text-sm font-headline uppercase tracking-wider font-semibold">GitHub</a>
             </div>
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="font-mono-code text-[10px] font-bold uppercase tracking-widest text-[var(--gold)] mb-6">Studio</h4>
+            <h4 className="font-mono-code text-[10px] font-bold uppercase tracking-widest text-[var(--gold)] mb-6">Capabilities</h4>
             <ul className="space-y-4">
-              <li><a href="/services" onClick={(e) => handleNavClick(e, '/services')} className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors">Capabilities</a></li>
+              <li><a href="/services" onClick={(e) => handleNavClick(e, '/services')} className="text-sm text-slate-300 hover:text-white transition-colors">Custom Web Platforms</a></li>
               <li>
                 <a 
                   href="/services#visibility-packages" 
@@ -63,9 +63,10 @@ export const Footer: React.FC = () => {
                   SEO, AEO &amp; GEO
                 </a>
               </li>
-              <li><a href="/work" onClick={(e) => handleNavClick(e, '/work')} className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors">Verified Work</a></li>
-              <li><a href="/process" onClick={(e) => handleNavClick(e, '/process')} className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors">Delivery Process</a></li>
-              <li><a href="/team" onClick={(e) => handleNavClick(e, '/team')} className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors">Engineering Team</a></li>
+              <li><a href="/services#capabilities" onClick={(e) => handleNavClick(e, '/services')} className="text-sm text-slate-300 hover:text-white transition-colors">Enterprise Systems</a></li>
+              <li><a href="/work" onClick={(e) => handleNavClick(e, '/work')} className="text-sm text-slate-300 hover:text-white transition-colors">Verified Work</a></li>
+              <li><a href="/process" onClick={(e) => handleNavClick(e, '/process')} className="text-sm text-slate-300 hover:text-white transition-colors">Delivery Process</a></li>
+              <li><a href="/team" onClick={(e) => handleNavClick(e, '/team')} className="text-sm text-slate-300 hover:text-white transition-colors">Engineering Team</a></li>
             </ul>
           </div>
 

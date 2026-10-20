@@ -9,7 +9,7 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = () => {
   return (
     <section
-      className="relative w-full overflow-hidden px-4 sm:px-6 lg:px-8 pt-32 pb-20 lg:pt-36 lg:pb-32 min-h-[90vh] flex items-center bg-[#060A16]"
+      className="relative w-full overflow-hidden px-4 sm:px-6 lg:px-8 pt-36 pb-24 lg:pt-40 lg:pb-36 min-h-[92vh] flex items-center bg-[#050814]"
     >
       {/* ─── ATMOSPHERIC RIGHT-SIDE MOTION (Seamless Radial Feather • Cinematic Canvas) ─── */}
       <div
@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = () => {
           className="hidden lg:block absolute inset-0 pointer-events-none"
           style={{
             background:
-              'linear-gradient(to right, #060A16 0%, #060A16 14%, rgba(6, 10, 22, 0.82) 35%, rgba(6, 10, 22, 0.3) 65%, transparent 88%)',
+              'linear-gradient(to right, #050814 0%, #050814 14%, rgba(5, 8, 20, 0.82) 35%, rgba(5, 8, 20, 0.3) 65%, transparent 88%)',
           }}
         />
 
@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = () => {
           className="lg:hidden absolute inset-0 pointer-events-none"
           style={{
             background:
-              'linear-gradient(to bottom, rgba(6, 10, 22, 0.95) 0%, rgba(6, 10, 22, 0.88) 50%, rgba(6, 10, 22, 0.92) 100%)',
+              'linear-gradient(to bottom, rgba(5, 8, 20, 0.96) 0%, rgba(5, 8, 20, 0.9) 50%, rgba(5, 8, 20, 0.94) 100%)',
           }}
         />
 
@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = () => {
         <div
           className="absolute top-0 left-0 right-0 h-20 pointer-events-none"
           style={{
-            background: 'linear-gradient(to bottom, #060A16 0%, transparent 100%)',
+            background: 'linear-gradient(to bottom, #050814 0%, transparent 100%)',
           }}
         />
 
@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = () => {
 
       {/* ─── HERO CONTENT (High Contrast • Razor Sharp • Maximum Polish) ─── */}
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <div className="max-w-2xl lg:max-w-xl xl:max-w-2xl space-y-7 text-left">
+        <div className="max-w-2xl lg:max-w-2xl xl:max-w-[640px] space-y-8 text-left">
           
           {/* Status Pill with Dual-Ring Pulse */}
           <motion.div
@@ -77,7 +77,7 @@ export const Hero: React.FC<HeroProps> = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10B981]" />
               </span>
               <span className="text-[11px] sm:text-xs font-mono-code font-bold uppercase tracking-wider text-[#10B981]">
-                AI-First Engineering Studio · Karachi &amp; Islamabad
+                Custom Web Platforms &amp; Business Systems · Karachi &amp; Islamabad
               </span>
             </div>
 
@@ -87,30 +87,30 @@ export const Hero: React.FC<HeroProps> = () => {
             </div>
           </motion.div>
 
-          {/* Master Display Headline (Clean, Powerful, Non-Wordy) */}
+          {/* Master Display Headline (Locked Positioning Hierarchy #1) */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display-hero text-4xl sm:text-5xl lg:text-[62px] xl:text-[68px] text-white font-extrabold tracking-tight leading-[1.05] drop-shadow-lg"
+            className="font-display-hero text-[40px] sm:text-[52px] lg:text-[60px] xl:text-[68px] text-white font-extrabold tracking-[-0.03em] leading-[1.04] drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]"
           >
-            Intelligent systems.<br />
-            <span className="bg-gradient-to-r from-[#F5C761] via-[#10B981] to-[#38BDF8] bg-clip-text text-transparent">
-              Engineered to scale.
+            Custom Web Platforms &amp;<br />
+            <span className="bg-gradient-to-r from-[#F5C761] via-[#34D399] to-[#38BDF8] bg-clip-text text-transparent drop-shadow-none">
+              Business Systems.
             </span>
           </motion.h1>
 
-          {/* Punchy 1-Sentence Value Proposition */}
+          {/* Punchy Value Proposition */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-base sm:text-lg lg:text-xl text-slate-200 leading-relaxed font-normal max-w-xl drop-shadow-sm"
           >
-            We architect autonomous AI multi-agent pipelines, bespoke enterprise web applications, and high-ranking search/AI discovery systems with guaranteed milestone delivery.
+            We architect mission-critical custom web applications, scalable SaaS architectures, and high-security enterprise systems with guaranteed milestone delivery and 100% full-code IP handover.
           </motion.p>
 
-          {/* Spatial Frosted Glass Telemetry Strip (3 Micro-Proofs) */}
+          {/* Spatial Frosted Glass Telemetry Strip (3 Hierarchy Pillars) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ export const Hero: React.FC<HeroProps> = () => {
             className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5"
           >
             <a
-              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="magnetic-btn inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#2A1800] text-xs sm:text-sm font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-xl transition-all"

@@ -73,8 +73,8 @@ export const RouterProvider: React.FC<RouterProviderProps> = ({ children }) => {
   // Sync document title and meta per page (Strictly zero em dashes or en dashes)
   useEffect(() => {
     const titles: Record<RoutePath, string> = {
-      '/': 'AXORKS Technologies | AI Automation and Custom Software Studio | From $1,000',
-      '/services': 'Capabilities and Engineering Services | AXORKS Technologies',
+      '/': 'AXORKS Technologies | Custom Web Platforms, Business Systems & AI Visibility',
+      '/services': 'Custom Web Platforms, SEO/AEO/GEO & Enterprise Systems | AXORKS',
       '/work': 'Delivered Work and Production Case Studies | AXORKS Technologies',
       '/process': 'How We Work: Milestone Execution Blueprint | AXORKS Technologies',
       '/team': 'Engineering Team and Leadership | AXORKS Technologies',
@@ -85,8 +85,8 @@ export const RouterProvider: React.FC<RouterProviderProps> = ({ children }) => {
     };
 
     const descriptions: Record<RoutePath, string> = {
-      '/': 'AI automation and custom software for growing companies. Projects from $1,000 with fixed-price milestones. Offices in Karachi and Islamabad.',
-      '/services': 'Intelligent AI automation, custom web applications, Web3 smart contracts, and cross-platform mobile systems built with fixed-price proposals.',
+      '/': 'Axorks is a specialized software engineering studio. Custom web platforms, SaaS architectures, mission-critical business systems (LMS, Banking, HMS), and SEO/AEO/GEO packages. Fixed-price from $1,000.',
+      '/services': 'Custom web platforms, scalable SaaS architectures, SEO/AEO/GEO search packages, and enterprise systems (LMS, Banking, HMS) built with fixed milestone proposals and 100% IP handover.',
       '/work': 'Production case studies in enterprise supply chains, algorithmic trading, healthcare AI, and luxury e-commerce delivered by Axorks.',
       '/process': 'Our 4-phase milestone framework. You verify working software on private staging before releasing milestone payments. Zero hourly billing surprises.',
       '/team': 'Meet the engineering leadership, AI researchers, and full-stack developers at Axorks Technologies. Work directly with experienced practitioners.',

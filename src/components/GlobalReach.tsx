@@ -119,7 +119,7 @@ export const GlobalReach: React.FC = () => {
 
             <div className="lg:col-span-4 flex flex-col gap-3.5">
               <a
-                href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-4 px-6 rounded-xl bg-[#0F172A] text-white text-xs font-headline font-bold uppercase tracking-wider hover:bg-[#1E293B] transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg"

@@ -33,16 +33,16 @@ export const ParadigmMatrix: React.FC = () => {
             ].map((client, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-4 sm:p-5 border border-[var(--glass-border)] shadow-sm hover:shadow-md hover:border-[var(--gold)]/40 transition-all flex flex-col items-center text-center group"
+                className="bg-[#0D1424]/90 rounded-2xl p-4 sm:p-5 border border-white/[0.08] shadow-lg hover:shadow-2xl hover:border-[var(--gold)]/50 transition-all flex flex-col items-center text-center group backdrop-blur-xl"
               >
                 <div className="h-10 sm:h-12 w-full flex items-center justify-center mb-3">
                   <img
                     src={client.logo}
                     alt={`${client.name} - ${client.role}`}
-                    className="max-h-8 sm:max-h-9 max-w-[120px] object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                    className="max-h-8 sm:max-h-9 max-w-[120px] object-contain brightness-90 contrast-125 opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
                   />
                 </div>
-                <span className="font-headline text-xs font-bold text-[var(--text-primary)]">
+                <span className="font-headline text-xs font-bold text-white">
                   {client.name}
                 </span>
                 <span className="text-[10px] font-mono-code text-[var(--emerald)] font-semibold mt-0.5">
@@ -71,27 +71,31 @@ export const ParadigmMatrix: React.FC = () => {
                 Architectural depth over generalist promises.
               </h2>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-8">
-                Axorks is a specialized software engineering studio. We architect production-grade software and AI systems across four foundational pillars:
+                Axorks is a specialized software engineering studio. We architect production-grade web platforms and high-intent discovery engines across three core strategic layers:
               </p>
 
               <dl className="space-y-4">
                 {[
-                  { title: 'AI Automation & Multi-Agents', icon: <Cpu className="w-5 h-5 text-[var(--emerald)]" />, stack: 'Python, LangChain, OpenAI, PyTorch, RAG Pipelines' },
-                  { title: 'Custom Web Applications', icon: <Code className="w-5 h-5 text-[#0284C7]" />, stack: 'Next.js, React, Node.js, PostgreSQL, AWS Cloud' },
-                  { title: 'Flutter Mobile Platforms', icon: <Smartphone className="w-5 h-5 text-[#7C3AED]" />, stack: 'Flutter, Dart, Firebase, REST/GraphQL, Offline Sync' },
-                  { title: 'Web3 & Audited Contracts', icon: <Blocks className="w-5 h-5 text-[var(--gold)]" />, stack: 'Solidity, Ethereum, Hardhat, Web3.js, EVM Rails' }
+                  { title: 'Custom Web Platforms & SaaS Architecture', icon: <Code className="w-5 h-5 text-[#38BDF8]" />, stack: 'Next.js, React, Node.js, PostgreSQL, Redis, AWS Cloud' },
+                  { title: 'Intelligent Visibility (SEO • AEO • GEO)', icon: <Sparkles className="w-5 h-5 text-[var(--gold)]" />, stack: 'SearchGPT, Perplexity Citations, Schema Graphs, Google Top 3' },
+                  { title: 'Enterprise Industry Systems (LMS, Banking, HMS)', icon: <Target className="w-5 h-5 text-[var(--emerald)]" />, stack: 'Multi-Tenant SIS, Core Banking Rails, EHR & Hospital Systems' },
+                  { title: 'Intelligent Automations & Cloud DevOps', icon: <Cpu className="w-5 h-5 text-[#8B5CF6]" />, stack: 'Python, Multi-Agent Orchestration, Docker, Zero-Downtime CI/CD' }
                 ].map((cap, i) => (
-                  <div key={i} className="flex items-start gap-3.5 p-3.5 bg-white rounded-2xl border border-[var(--glass-border)] hover:border-[var(--gold)]/30 transition-colors shadow-sm">
-                    <div className="p-2.5 bg-[var(--bg-secondary)] rounded-xl shrink-0">
+                  <div key={i} className="flex items-start gap-3.5 p-4 bg-[#0D1424]/90 rounded-2xl border border-white/[0.08] hover:border-[var(--gold)]/40 transition-colors shadow-lg backdrop-blur-xl">
+                    <div className="p-2.5 bg-[#050814] rounded-xl shrink-0 border border-white/5">
                       {cap.icon}
                     </div>
                     <div>
-                      <dt className="font-headline text-sm font-bold text-[var(--text-primary)] mb-0.5">{cap.title}</dt>
-                      <dd className="font-mono-code text-[11px] text-[var(--text-muted)] font-medium">{cap.stack}</dd>
+                      <dt className="font-headline text-sm font-bold text-white mb-0.5">{cap.title}</dt>
+                      <dd className="font-mono-code text-[11px] text-slate-400 font-medium">{cap.stack}</dd>
                     </div>
                   </div>
                 ))}
               </dl>
+              
+              <p className="mt-4 text-[11px] font-mono-code text-slate-500 italic">
+                * Dedicated Flutter mobile applications and audited Web3 smart contracts engineered upon specialized client specification.
+              </p>
             </motion.div>
           </div>
 
@@ -102,19 +106,19 @@ export const ParadigmMatrix: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-              className="bg-white border border-[var(--glass-border)] rounded-3xl p-1 spatial-card shadow-[0_12px_40px_rgba(10,15,29,0.06)]"
+              className="bg-gradient-to-b from-white/10 via-white/[0.04] to-white/[0.01] border border-white/10 rounded-3xl p-1 shadow-[0_20px_50px_rgba(0,0,0,0.7)] backdrop-blur-2xl"
             >
-              <div className="bg-[var(--bg-primary)] rounded-[22px] p-6 sm:p-8">
+              <div className="bg-[#0A0F1F] rounded-[22px] p-6 sm:p-8 border border-white/[0.05]">
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-mono-code text-[10px] font-bold tracking-widest uppercase text-[var(--gold)]">
                     Decision Framework
                   </span>
-                  <span className="text-[10px] font-mono-code px-2 py-0.5 rounded bg-[var(--emerald)]/10 text-[var(--emerald)] font-bold uppercase">
+                  <span className="text-[10px] font-mono-code px-2 py-0.5 rounded bg-[var(--emerald)]/10 text-[var(--emerald)] font-bold uppercase border border-[var(--emerald)]/20">
                     Risk-Free Delivery
                   </span>
                 </div>
 
-                <h3 className="font-display-hero text-2xl font-bold text-[var(--text-primary)] mb-6">
+                <h3 className="font-display-hero text-2xl font-bold text-white mb-6">
                   Axorks Studio Model vs. Traditional Agencies
                 </h3>
                 
@@ -122,32 +126,32 @@ export const ParadigmMatrix: React.FC = () => {
                 <div className="overflow-x-auto pb-2">
                   <table className="w-full text-left border-collapse min-w-[500px]" data-aeo-citation="studio-comparison">
                     <thead>
-                      <tr className="border-b-2 border-[var(--text-primary)]/10">
-                        <th className="pb-3.5 font-headline text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider w-1/3">Commercial Vector</th>
-                        <th className="pb-3.5 font-headline text-xs font-bold text-[var(--text-primary)] uppercase tracking-wider w-1/3">Axorks Studio Model</th>
-                        <th className="pb-3.5 font-headline text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider w-1/3">Traditional Agency</th>
+                      <tr className="border-b-2 border-white/10">
+                        <th className="pb-3.5 font-headline text-xs font-bold text-slate-400 uppercase tracking-wider w-1/3">Commercial Vector</th>
+                        <th className="pb-3.5 font-headline text-xs font-bold text-white uppercase tracking-wider w-1/3">Axorks Studio Model</th>
+                        <th className="pb-3.5 font-headline text-xs font-bold text-slate-500 uppercase tracking-wider w-1/3">Traditional Agency</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[var(--glass-border)] text-xs sm:text-sm">
+                    <tbody className="divide-y divide-white/[0.07] text-xs sm:text-sm">
                       <tr>
-                        <td className="py-4 font-mono-code text-xs font-bold text-[var(--text-secondary)]">Pricing Structure</td>
-                        <td className="py-4 text-[var(--text-primary)] font-bold flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[var(--emerald)] shrink-0" /> Fixed-Price Milestones from $1,000</td>
-                        <td className="py-4 text-[var(--text-muted)]">Open-ended hourly retainers</td>
+                        <td className="py-4 font-mono-code text-xs font-bold text-slate-300">Pricing Structure</td>
+                        <td className="py-4 text-white font-bold flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[var(--emerald)] shrink-0" /> Fixed-Price Milestones from $1,000</td>
+                        <td className="py-4 text-slate-400">Open-ended hourly retainers</td>
                       </tr>
                       <tr>
-                        <td className="py-4 font-mono-code text-xs font-bold text-[var(--text-secondary)]">Payment Security</td>
-                        <td className="py-4 text-[var(--text-primary)] font-bold flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[var(--emerald)] shrink-0" /> Released after staging verification</td>
-                        <td className="py-4 text-[var(--text-muted)]">Paid upfront / billed blindly</td>
+                        <td className="py-4 font-mono-code text-xs font-bold text-slate-300">Payment Security</td>
+                        <td className="py-4 text-white font-bold flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[var(--emerald)] shrink-0" /> Released after staging verification</td>
+                        <td className="py-4 text-slate-400">Paid upfront / billed blindly</td>
                       </tr>
                       <tr>
-                        <td className="py-4 font-mono-code text-xs font-bold text-[var(--text-secondary)]">IP Ownership</td>
-                        <td className="py-4 text-[var(--text-primary)] font-bold flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[var(--emerald)] shrink-0" /> 100% Full IP &amp; Git Repository Handover</td>
-                        <td className="py-4 text-[var(--text-muted)]">Held hostage / license lock-in</td>
+                        <td className="py-4 font-mono-code text-xs font-bold text-slate-300">IP Ownership</td>
+                        <td className="py-4 text-white font-bold flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[var(--emerald)] shrink-0" /> 100% Full IP &amp; Git Repository Handover</td>
+                        <td className="py-4 text-slate-400">Held hostage / license lock-in</td>
                       </tr>
                       <tr>
-                        <td className="py-4 font-mono-code text-xs font-bold text-[var(--text-secondary)]">Engineering Access</td>
-                        <td className="py-4 text-[var(--text-primary)] font-bold flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[var(--emerald)] shrink-0" /> Direct Senior Software Architects</td>
-                        <td className="py-4 text-[var(--text-muted)]">Account managers &amp; junior handoffs</td>
+                        <td className="py-4 font-mono-code text-xs font-bold text-slate-300">Engineering Access</td>
+                        <td className="py-4 text-white font-bold flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-[var(--emerald)] shrink-0" /> Direct Senior Software Architects</td>
+                        <td className="py-4 text-slate-400">Account managers &amp; junior handoffs</td>
                       </tr>
                     </tbody>
                   </table>

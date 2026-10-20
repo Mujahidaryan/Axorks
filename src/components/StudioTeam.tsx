@@ -43,31 +43,31 @@ export const StudioTeam: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <motion.div
-            className="lg:col-span-5 bg-white border border-[var(--glass-border)] rounded-3xl p-6 sm:p-8 spatial-card flex flex-col sm:flex-row lg:flex-col gap-6 lg:gap-8 transition-all duration-300 hover:border-[var(--gold)]/40 hover:shadow-[0_0_30px_rgba(245,199,97,0.08)]"
+            className="lg:col-span-5 bg-[#0D1424] border border-white/[0.08] rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col sm:flex-row lg:flex-col gap-6 lg:gap-8 transition-all duration-300 hover:border-[var(--gold)]/40 hover:shadow-[0_0_35px_rgba(245,199,97,0.12)]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="w-full sm:w-44 lg:w-full aspect-[4/5] max-h-72 lg:max-h-80 shrink-0 rounded-2xl overflow-hidden border-2 border-[var(--bg-primary)] shadow-md relative bg-[#0A0F1D]">
+            <div className="w-full sm:w-44 lg:w-full aspect-[4/5] max-h-72 lg:max-h-80 shrink-0 rounded-2xl overflow-hidden border border-white/10 shadow-md relative bg-[#0A0F1D]">
               <img 
                 src={founder.showcaseImage || '/Images/Founder_Office.jpg'} 
                 alt={`${founder.name}, ${founder.role} at Axorks Technologies`} 
                 className="w-full h-full object-cover object-[center_18%]" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050814]/80 via-transparent to-transparent pointer-events-none" />
             </div>
             <div>
-              <h3 className="font-headline text-xl font-bold text-[var(--text-primary)] mb-1">
+              <h3 className="font-headline text-xl font-bold text-white mb-1">
                 {founder.name}
               </h3>
               <p className="text-xs font-mono-code text-[var(--emerald)] font-bold mb-4">
                 {founder.role}
               </p>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
                 Leading the architectural vision and technical delivery at Axorks. Every client partners directly with Mujahid to lock scope, ensure rigorous staging verification, and guarantee production-grade deployments.
               </p>
-              <a href="https://linkedin.com/in/muhammad-mujahid-15949a202" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-headline font-bold text-[#0284C7] hover:text-[#0A0F1D] transition-colors uppercase tracking-wider">
+              <a href="https://linkedin.com/in/muhammad-mujahid-15949a202" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-headline font-bold text-[#38BDF8] hover:text-[var(--gold)] transition-colors uppercase tracking-wider">
                 <Linkedin className="w-4 h-4" /> Connect with Founder
               </a>
             </div>
@@ -77,13 +77,13 @@ export const StudioTeam: React.FC = () => {
             {featured.map((member, idx) => (
               <motion.div
                 key={member.id}
-                className="bg-white border border-[var(--glass-border)] rounded-2xl p-6 spatial-card flex items-start gap-4"
+                className="bg-[#0D1424] border border-white/[0.08] rounded-2xl p-6 shadow-xl hover:border-white/20 transition-all flex items-start gap-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: 0.1 * idx, ease: [0.16, 1, 0.3, 1] }}
               >
-                <div className="w-16 h-16 shrink-0 rounded-xl overflow-hidden bg-[var(--bg-primary)] border border-[var(--glass-border)] shadow-sm">
+                <div className="w-16 h-16 shrink-0 rounded-xl overflow-hidden bg-[#050814] border border-white/10 shadow-sm">
                   {member.image ? (
                     <img 
                       src={member.image} 
@@ -91,19 +91,19 @@ export const StudioTeam: React.FC = () => {
                       className={`w-full h-full object-cover ${member.id === 'yousaf-piryani' ? 'object-[26%_40%]' : 'object-center'}`} 
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center text-xl font-headline font-bold text-[var(--text-muted)]">
+                    <div className="w-full h-full flex items-center justify-center text-xl font-headline font-bold text-slate-400">
                       {member.name.charAt(0)}
                     </div>
                   )}
                 </div>
                 <div>
-                  <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">
+                  <h4 className="font-headline text-base font-bold text-white mb-1">
                     {member.name}
                   </h4>
-                  <p className="text-[10px] font-mono-code text-[var(--text-muted)] font-bold uppercase tracking-wider mb-2">
+                  <p className="text-[10px] font-mono-code text-[var(--gold)] font-bold uppercase tracking-wider mb-2">
                     {member.role}
                   </p>
-                  <p className="text-xs text-[var(--text-secondary)] leading-snug line-clamp-3">
+                  <p className="text-xs text-slate-300 leading-snug line-clamp-3">
                     {member.description}
                   </p>
                 </div>

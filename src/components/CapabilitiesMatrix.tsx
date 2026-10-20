@@ -8,32 +8,32 @@ export const CapabilitiesMatrix: React.FC = () => {
 
   const technicalPillars = [
     {
-      id: 'ai-sys',
-      title: 'AI Automation & Agents',
-      icon: <Cpu className="w-5 h-5 text-[var(--emerald)]" />,
-      stack: 'Python, TensorFlow, LangChain, OpenAI, PyTorch',
-      useCase: 'Eliminate manual workflows and automate complex decision-making with multi-agent systems.'
+      id: 'web-apps',
+      title: 'Custom Web Platforms & SaaS',
+      icon: <Code className="w-5 h-5 text-[#38BDF8]" />,
+      stack: 'Next.js 15, React 19, Node.js, PostgreSQL, Redis, AWS',
+      useCase: 'High-concurrency enterprise dashboards, SaaS platforms, and secure multi-tenant portals.'
     },
     {
-      id: 'web-apps',
-      title: 'Custom Web Applications',
-      icon: <Code className="w-5 h-5 text-[#0284C7]" />,
-      stack: 'Next.js, React, Node.js, PostgreSQL, AWS',
-      useCase: 'High-performance enterprise dashboards, SaaS platforms, and secure B2B portals.'
+      id: 'ai-sys',
+      title: 'Intelligent Automations & Multi-Agents',
+      icon: <Cpu className="w-5 h-5 text-[var(--emerald)]" />,
+      stack: 'Python, LangChain, OpenAI, PyTorch, RAG Retrieval',
+      useCase: 'Eliminate manual bottlenecks and orchestrate autonomous decision pipelines with human-in-the-loop triggers.'
     },
     {
       id: 'mobile',
       title: 'Flutter Mobile Platforms',
-      icon: <Smartphone className="w-5 h-5 text-[#7C3AED]" />,
-      stack: 'Flutter, Dart, Firebase, REST/GraphQL APIs',
-      useCase: 'Native iOS and Android applications built from a single high-performance codebase.'
+      icon: <Smartphone className="w-5 h-5 text-[#8B5CF6]" />,
+      stack: 'Flutter, Dart, Firebase, REST/GraphQL, Offline Sync',
+      useCase: 'Native 60fps iOS and Android applications built from a unified high-performance codebase.'
     },
     {
       id: 'web3',
-      title: 'Web3 & Smart Contracts',
+      title: 'Web3 & Audited Smart Contracts',
       icon: <Blocks className="w-5 h-5 text-[var(--gold)]" />,
-      stack: 'Solidity, Ethereum, Web3.js, Hardhat',
-      useCase: 'Secure decentralized applications, tokenomics architecture, and ledger integrations.'
+      stack: 'Solidity, Ethereum, Web3.js, Hardhat, EVM Rails',
+      useCase: 'Secure decentralized applications, immutable audit trails, and audited tokenomics.'
     }
   ];
 
@@ -114,34 +114,34 @@ export const CapabilitiesMatrix: React.FC = () => {
             {enterpriseDomainSystems.map((system) => (
               <div
                 key={system.id}
-                className="bg-white rounded-3xl p-7 sm:p-8 border border-[var(--glass-border)] shadow-md hover:shadow-xl hover:border-[var(--gold)]/40 transition-all flex flex-col justify-between spatial-card group"
+                className="bg-[#0D1424] rounded-3xl p-7 sm:p-8 border border-white/[0.08] shadow-2xl hover:border-[var(--gold)]/40 transition-all flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="p-3 bg-[var(--bg-secondary)] rounded-2xl border border-[var(--glass-border)] group-hover:scale-105 transition-transform">
+                    <div className="p-3 bg-[#050814] rounded-2xl border border-white/10 group-hover:scale-105 transition-transform">
                       {system.icon}
                     </div>
-                    <span className="px-2.5 py-1 rounded-md text-[10px] font-mono-code font-bold uppercase tracking-wider bg-[var(--bg-secondary)] text-[var(--text-primary)] border border-[var(--glass-border)]">
+                    <span className="px-2.5 py-1 rounded-md text-[10px] font-mono-code font-bold uppercase tracking-wider bg-[#050814] text-[var(--gold)] border border-white/10">
                       {system.badge}
                     </span>
                   </div>
 
-                  <h4 className="font-headline text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-2 leading-snug">
+                  <h4 className="font-headline text-lg sm:text-xl font-bold text-white mb-2 leading-snug">
                     {system.title}
                   </h4>
                   <p className="text-xs font-mono-code text-[var(--gold)] font-semibold mb-3">
                     {system.tagline}
                   </p>
-                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mb-6 font-normal">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6 font-normal">
                     {system.description}
                   </p>
 
-                  <div className="space-y-2 pt-4 border-t border-[var(--glass-border)] mb-6">
-                    <span className="text-[10px] font-mono-code uppercase text-[var(--text-muted)] font-bold tracking-wider block mb-2">
+                  <div className="space-y-2 pt-4 border-t border-white/[0.08] mb-6">
+                    <span className="text-[10px] font-mono-code uppercase text-slate-400 font-bold tracking-wider block mb-2">
                       Key Capabilities:
                     </span>
                     {system.deliverables.map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-[var(--text-secondary)]">
+                      <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[var(--emerald)] shrink-0" />
                         <span>{item}</span>
                       </div>
@@ -149,16 +149,16 @@ export const CapabilitiesMatrix: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-[var(--glass-border)]">
-                  <div className="flex items-center gap-1.5 text-[11px] font-mono-code text-[var(--text-muted)] mb-4">
-                    <span className="font-bold text-[var(--text-primary)]">Stack:</span>
+                <div className="pt-4 border-t border-white/[0.08]">
+                  <div className="flex items-center gap-1.5 text-[11px] font-mono-code text-slate-400 mb-4">
+                    <span className="font-bold text-white">Stack:</span>
                     <span>{system.stack}</span>
                   </div>
                   <a
                     href={`mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Inquiry%20regarding%20${encodeURIComponent(system.title)}%20-%20Axorks`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-2.5 px-4 rounded-xl bg-[var(--bg-primary)] hover:bg-[#0A0F1D] text-[var(--text-primary)] hover:text-white border border-[var(--glass-border)] font-headline font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
+                    className="w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 font-headline font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
                   >
                     <span>Request Architecture Brief</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -177,26 +177,26 @@ export const CapabilitiesMatrix: React.FC = () => {
             </span>
             <dl className="space-y-6">
               {technicalPillars.map((cap) => (
-                <div key={cap.id} className="p-6 sm:p-8 bg-white border border-[var(--glass-border)] rounded-2xl shadow-sm hover:shadow-md transition-shadow group relative overflow-hidden">
+                <div key={cap.id} className="p-6 sm:p-8 bg-[#0D1424] border border-white/[0.08] rounded-2xl shadow-xl hover:border-white/20 transition-all group relative overflow-hidden">
                   <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110">
                     {cap.icon}
                   </div>
                   
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-[var(--bg-primary)] rounded-lg">
+                    <div className="p-2.5 bg-[#050814] border border-white/10 rounded-xl">
                       {cap.icon}
                     </div>
-                    <dt className="font-headline text-lg sm:text-xl font-bold text-[var(--text-primary)]">
+                    <dt className="font-headline text-lg sm:text-xl font-bold text-white">
                       {cap.title}
                     </dt>
                   </div>
                   
                   <dd>
-                    <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4 font-normal">
+                    <p className="text-sm text-slate-300 leading-relaxed mb-4 font-normal">
                       {cap.useCase}
                     </p>
-                    <div className="flex items-center gap-2 text-xs font-mono-code text-[var(--text-primary)] font-semibold bg-[var(--bg-primary)] px-3 py-2 rounded-md w-fit">
-                      <span className="text-[var(--text-muted)]">Stack:</span> {cap.stack}
+                    <div className="flex items-center gap-2 text-xs font-mono-code text-white font-semibold bg-[#050814] border border-white/10 px-3 py-2 rounded-lg w-fit">
+                      <span className="text-slate-400">Stack:</span> {cap.stack}
                     </div>
                   </dd>
                 </div>
@@ -240,7 +240,7 @@ export const CapabilitiesMatrix: React.FC = () => {
 
               <div className="mt-10 pt-6 border-t border-white/10 relative z-10">
                 <a
-                  href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="magnetic-btn w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-lg flex items-center justify-center gap-2"

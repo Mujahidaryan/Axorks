@@ -89,7 +89,7 @@ export const BlogPage: React.FC = () => {
             </p>
 
             {/* Author Strip */}
-            <div className="flex items-center justify-between p-4 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm">
+            <div className="flex items-center justify-between p-4 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-xl">
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 rounded-xl overflow-hidden border border-[var(--gold)]/40 shrink-0 bg-[#0A0F1D] shadow-sm">
                   <img
@@ -99,10 +99,10 @@ export const BlogPage: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <div className="font-headline text-sm font-bold text-[var(--text-primary)]">
+                  <div className="font-headline text-sm font-bold text-white">
                     {activePost.author.name}
                   </div>
-                  <div className="text-xs font-mono-code text-[var(--text-muted)]">
+                  <div className="text-xs font-mono-code text-slate-400">
                     {activePost.author.role} · Axorks Technologies
                   </div>
                 </div>
@@ -119,13 +119,13 @@ export const BlogPage: React.FC = () => {
           </div>
 
           {/* Table of Contents */}
-          <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm mb-10">
+          <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-xl mb-10">
             <h4 className="font-mono-code text-xs font-bold uppercase tracking-wider text-[var(--gold)] mb-3">
               Table of Contents
             </h4>
             <ul className="space-y-2">
               {activePost.tableOfContents.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2 text-xs text-[var(--text-secondary)]">
+                <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
                   <span className="font-mono-code text-[var(--gold)] font-bold">0{idx + 1}.</span>
                   <span>{item}</span>
                 </li>
@@ -134,14 +134,14 @@ export const BlogPage: React.FC = () => {
           </div>
 
           {/* Article Body */}
-          <article className="space-y-10 text-[var(--text-secondary)] leading-relaxed">
+          <article className="space-y-10 text-slate-300 leading-relaxed">
             {activePost.content.map((section, idx) => (
               <section key={idx} className="space-y-4">
-                <h2 className="font-display-hero text-2xl font-bold text-[var(--text-primary)] tracking-tight border-b border-[var(--glass-border)] pb-2">
+                <h2 className="font-display-hero text-2xl font-bold text-white tracking-tight border-b border-white/[0.08] pb-2">
                   {section.heading}
                 </h2>
                 {section.paragraphs.map((p, pIdx) => (
-                  <p key={pIdx} className="text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <p key={pIdx} className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                     {p}
                   </p>
                 ))}
@@ -150,15 +150,15 @@ export const BlogPage: React.FC = () => {
           </article>
 
           {/* Key Takeaways Box on Refined Soft-Ivory Luxury Surface */}
-          <div className="mt-12 p-6 sm:p-8 rounded-3xl surface-ivory spatial-card shadow-2xl border border-[rgba(214,207,195,0.85)]">
-            <h3 className="font-display-hero text-lg font-bold text-[#0A0F1D] mb-4 flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[#058A5E]" />
+          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-[#0D1424] border border-white/[0.08] shadow-2xl">
+            <h3 className="font-display-hero text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 text-[var(--emerald)]" />
               <span>Key Architectural Takeaways</span>
             </h3>
             <ul className="space-y-3">
               {activePost.keyTakeaways.map((takeaway, idx) => (
-                <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-[#1E293B]">
-                  <span className="w-2 h-2 rounded-full bg-[#058A5E] mt-1.5 shrink-0" />
+                <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-300">
+                  <span className="w-2 h-2 rounded-full bg-[var(--emerald)] mt-1.5 shrink-0" />
                   <span className="leading-relaxed font-normal">{takeaway}</span>
                 </li>
               ))}
@@ -176,7 +176,7 @@ export const BlogPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <a
-                href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-lg"
@@ -232,8 +232,8 @@ export const BlogPage: React.FC = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-headline uppercase tracking-wider transition-all cursor-pointer ${
                   isSelected
-                    ? 'bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] font-bold shadow-md'
-                    : 'bg-white border border-[var(--glass-border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--gold)]/40 shadow-sm'
+                    ? 'bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#0A0F1D] font-bold shadow-md'
+                    : 'bg-[#0D1424] border border-white/10 text-slate-300 hover:text-white hover:border-[var(--gold)]/40 shadow-sm'
                 }`}
               >
                 {cat}
@@ -250,29 +250,29 @@ export const BlogPage: React.FC = () => {
             <div
               key={post.slug}
               onClick={() => handleSelectPost(post.slug)}
-              className="bg-white border border-[var(--glass-border)] rounded-3xl p-6 sm:p-7 spatial-card cursor-pointer group flex flex-col justify-between hover:border-[var(--gold)]/50 hover:shadow-xl transition-all"
+              className="bg-[#0D1424] border border-white/[0.08] rounded-3xl p-6 sm:p-7 shadow-xl cursor-pointer group flex flex-col justify-between hover:border-[var(--gold)]/50 hover:shadow-2xl transition-all"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono-code font-bold uppercase tracking-wider bg-[var(--gold)]/15 text-[#916613] dark:text-[var(--gold)] border border-[var(--gold)]/30">
+                  <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono-code font-bold uppercase tracking-wider bg-[var(--gold)]/15 text-[var(--gold)] border border-[var(--gold)]/30">
                     {post.category}
                   </span>
-                  <span className="text-[11px] font-mono-code text-[var(--text-muted)]">
+                  <span className="text-[11px] font-mono-code text-slate-400">
                     {post.readTime}
                   </span>
                 </div>
 
-                <h3 className="font-headline text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-3 group-hover:text-[var(--gold)] transition-colors line-clamp-2">
+                <h3 className="font-headline text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-[var(--gold)] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed line-clamp-3 mb-6 font-normal">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-3 mb-6 font-normal">
                   {post.excerpt}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[var(--glass-border)] flex items-center justify-between text-xs font-mono-code">
-                <span className="text-[var(--text-muted)]">{post.date}</span>
+              <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between text-xs font-mono-code">
+                <span className="text-slate-400">{post.date}</span>
                 <span className="flex items-center gap-1 text-[var(--gold)] font-bold group-hover:translate-x-1 transition-transform">
                   Read Technical Guide <ArrowRight className="w-3.5 h-3.5" />
                 </span>

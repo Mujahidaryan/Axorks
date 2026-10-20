@@ -26,7 +26,7 @@ export const TrustMatrix: React.FC = () => {
             {
               icon: <Target className="w-5 h-5 text-[var(--gold)]" />,
               title: "Fixed-Price Milestones",
-              desc: "Proposals within 24h. Projects from ,000. You know the exact investment before any code is written."
+              desc: "Proposals within 24h. Projects from $1,000. You know the exact investment before any code is written."
             },
             {
               icon: <ShieldCheck className="w-5 h-5 text-[var(--emerald)]" />,
@@ -34,24 +34,24 @@ export const TrustMatrix: React.FC = () => {
               desc: "Complete commercial rights and source code handed over upon project completion. No lock-in."
             },
             {
-              icon: <Code2 className="w-5 h-5 text-[#0284C7]" />,
+              icon: <Code2 className="w-5 h-5 text-[#38BDF8]" />,
               title: "Pay Post-Verification",
               desc: "Funds are tied strictly to milestones. You inspect working staging builds before invoices are cleared."
             },
             {
-              icon: <Clock className="w-5 h-5 text-[#7C3AED]" />,
+              icon: <Clock className="w-5 h-5 text-[#A78BFA]" />,
               title: "Senior Hands Only",
               desc: "Direct execution by lead architects in Karachi & Islamabad. Zero junior delegation or non-technical layers."
             }
           ].map((item, idx) => (
-            <div key={idx} className="flex flex-col p-6 rounded-2xl bg-white border border-[#0A0F1D]/5 shadow-sm hover:shadow-md transition-shadow">
-              <div className="mb-4 p-2.5 rounded-xl bg-[var(--bg-primary)] inline-flex w-fit">
+            <div key={idx} className="flex flex-col p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-xl hover:border-white/20 transition-all">
+              <div className="mb-4 p-2.5 rounded-xl bg-[#050814] border border-white/10 inline-flex w-fit">
                 {item.icon}
               </div>
-              <h3 className="font-headline text-sm font-bold text-[var(--text-primary)] mb-2 uppercase tracking-wide">
+              <h3 className="font-headline text-sm font-bold text-white mb-2 uppercase tracking-wide">
                 {item.title}
               </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed font-normal">
                 {item.desc}
               </p>
             </div>

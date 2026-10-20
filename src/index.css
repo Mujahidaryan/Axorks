@@ -1,57 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  /* ─── Core Light-Dominant System (Warm Luxury Architectural Tone) ─── */
-  --bg-primary: #FAF9F6;       /* Warm Alabaster */
-  --bg-secondary: #F4F2EC;     /* Refined Soft Stone */
-  --bg-tertiary: #EBE7DF;      /* Deep Cream */
-  --bg-card: #FFFFFF;
-  --text-primary: #0A0F1D;     /* Deep Obsidian Charcoal */
-  --text-secondary: #334155;   /* Refined Slate */
-  --text-muted: #64748B;
+  /* ─── Executive Dark System (Richer, Deeper, Refined Material Depth - $20,000 Standard) ─── */
+  --bg-primary: #050814;       /* Cosmic Obsidian Void */
+  --bg-secondary: #0A0F1F;     /* Deep Oceanic Midnight */
+  --bg-tertiary: #0F172A;      /* Elevated Slate Navy */
+  --bg-card: #0D1424;          /* Surface Card Foundation */
+  --text-primary: #F8FAFC;     /* Crisp Silver White */
+  --text-secondary: #94A3B8;   /* Refined Slate Platinum */
+  --text-muted: #64748B;       /* Deep Muted Technical */
+  --text-muted-dark: #475569;
   
-  /* ─── High-Jewel Accent Tokens (Rich Metallic & Deep Mineral) ─── */
-  --gold: #B48520;
-  --gold-light: #D4A843;
-  --gold-dark: #8A6414;
-  --emerald: #0F766E;
-  --emerald-light: #14B8A6;
-  --emerald-dark: #0D544E;
-  --violet: #6D28D9;
-  --cyan: #0284C7;
-  --wine: #9F1239;
+  /* ─── High-Jewel Accent Tokens (Gold & Emerald/Teal Restraint) ─── */
+  --gold: #F5C761;             /* Radiant Executive Gold */
+  --gold-light: #FDE047;
+  --gold-dark: #C9972E;
+  --emerald: #10B981;          /* Mineral Emerald */
+  --emerald-light: #34D399;
+  --emerald-dark: #059669;
+  --teal: #14B8A6;             /* Atmospheric Teal */
+  --cyan: #38BDF8;             /* Precision Cyan */
+  --violet: #8B5CF6;
+  --wine: #F43F5E;
 
-  /* ─── Liquid Glass 3.0 Tokens (Light Surface) ─── */
-  --glass-bg: rgba(255, 255, 255, 0.78);
-  --glass-border: rgba(15, 23, 42, 0.08);
-  --glass-highlight: rgba(255, 255, 255, 0.95);
-  --glass-shadow: 0 20px 45px -15px rgba(10, 15, 29, 0.07), 0 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+  /* ─── Liquid Glass 3.0 Tokens (Executive Material Depth) ─── */
+  --glass-bg: rgba(13, 20, 36, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.14);
+  --glass-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(255, 255, 255, 0.05) inset;
 }
 
-/* ─── Strategic Dark Punctuation (Hero, GlobalDelivery, Final Conversion, Footer) ─── */
+/* Strategic Dark Punctuation Token Consistency */
 .dark-surface {
-  --bg-primary: #030712;       /* Cosmic Void */
-  --bg-secondary: #060A16;     /* Deep Oceanic Navy */
-  --bg-tertiary: #0D1326;      /* Dark Slate Navy */
+  --bg-primary: #030712;
+  --bg-secondary: #060A16;
+  --bg-tertiary: #0D1326;
   --bg-card: #0F172A;
-  --text-primary: #F8FAFC;     /* Crisp Silver White */
-  --text-secondary: #CBD5E1;   /* Muted Platinum */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
   --text-muted: #94A3B8;
   --text-muted-dark: #64748B;
-  
-  /* Brightened jewel accents for dark background luminescence */
   --gold: #F5C761;
   --gold-light: #FDE047;
   --gold-dark: #C9972E;
   --emerald: #10B981;
   --emerald-light: #34D399;
   --cyan: #38BDF8;
-
-  /* Liquid Glass 3.0 (Dark Surface) */
   --glass-bg: rgba(10, 15, 29, 0.75);
   --glass-border: rgba(255, 255, 255, 0.12);
   --glass-highlight: rgba(255, 255, 255, 0.18);
   --glass-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+/* Legacy Ivory Surfaces gracefully rendered in refined executive obsidian */
+.surface-ivory {
+  background: #090E1D;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #F8FAFC;
 }
 
 @layer base {
@@ -59,6 +64,8 @@
     scroll-behavior: smooth;
     min-height: 100%;
     height: auto;
+    background-color: #050814;
+    color: #F8FAFC;
   }
   body {
     margin: 0;
@@ -73,7 +80,7 @@
   }
   * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(201, 151, 46, 0.35) transparent;
+    scrollbar-color: rgba(245, 199, 97, 0.35) transparent;
   }
 }
 
@@ -123,7 +130,7 @@
 }
 .spatial-card:hover {
   transform: translateY(-4px) scale(1.004);
-  box-shadow: 0 28px 60px -12px rgba(10, 15, 29, 0.12), 0 0 20px -2px rgba(180, 133, 32, 0.15);
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.9), 0 0 25px -2px rgba(245, 199, 97, 0.2);
 }
 .dark-surface .spatial-card:hover {
   transform: translateY(-4px) scale(1.004);
@@ -139,7 +146,7 @@
 }
 .magnetic-btn:hover {
   transform: translateY(-2px) scale(1.015);
-  box-shadow: 0 14px 28px -6px rgba(180, 133, 32, 0.35);
+  box-shadow: 0 14px 28px -6px rgba(245, 199, 97, 0.35);
 }
 .magnetic-btn:active {
   transform: translateY(1px) scale(0.985);
@@ -191,6 +198,63 @@
 }
 .animate-dual-ping {
   animation: dual-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ─── PREMIUM AMBIENT GLOW PULSE ─── */
+@keyframes ambient-breathe {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+.animate-ambient-breathe {
+  animation: ambient-breathe 8s ease-in-out infinite;
+}
+
+/* ─── HOLOGRAPHIC EDGE EFFECT (Premium Card Rim Light) ─── */
+.holographic-edge {
+  position: relative;
+}
+.holographic-edge::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(245, 199, 97, 0.15) 0%, rgba(16, 185, 129, 0.08) 50%, rgba(56, 189, 248, 0.12) 100%);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── SECTION GRADIENT TRANSITION BANDS ─── */
+.section-fade-top {
+  position: relative;
+}
+.section-fade-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, var(--bg-primary) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── SELECTION STYLING ─── */
+::selection {
+  background: rgba(245, 199, 97, 0.25);
+  color: #F8FAFC;
+}
+
+/* ─── FOCUS VISIBLE RINGS (Accessibility + Premium) ─── */
+:focus-visible {
+  outline: 2px solid rgba(245, 199, 97, 0.6);
+  outline-offset: 2px;
+  border-radius: 8px;
 }
 
 @media (prefers-reduced-motion: reduce) {

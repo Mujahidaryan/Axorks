@@ -29,8 +29,8 @@ export const TeamPage: React.FC = () => {
       <section className="w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {TEAM_MEMBERS.map((member) => (
-            <div key={member.id} className="bg-white border border-[var(--glass-border)] rounded-3xl p-6 spatial-card flex flex-col items-center text-center">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-6 bg-[var(--bg-primary)] border-2 border-[var(--glass-border)]">
+            <div key={member.id} className="bg-[#0D1424] border border-white/[0.08] rounded-3xl p-6 shadow-xl flex flex-col items-center text-center hover:border-white/20 transition-all">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-6 bg-[#050814] border-2 border-white/10 shadow-md">
                 {member.image ? (
                   <img 
                     src={member.image} 
@@ -38,21 +38,21 @@ export const TeamPage: React.FC = () => {
                     className={`w-full h-full object-cover ${member.id === 'yousaf-piryani' ? 'object-[26%_40%]' : member.id === 'mujahid' ? 'object-center' : 'object-[50%_15%]'}`} 
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-3xl font-headline font-bold text-[var(--text-muted)]">
+                  <div className="w-full h-full flex items-center justify-center text-3xl font-headline font-bold text-slate-400">
                     {member.name.charAt(0)}
                   </div>
                 )}
               </div>
-              <h3 className="font-headline text-lg font-bold text-[var(--text-primary)] mb-1">
+              <h3 className="font-headline text-lg font-bold text-white mb-1">
                 {member.name}
               </h3>
-              <p className="text-[10px] font-mono-code text-[var(--emerald)] font-bold uppercase tracking-wider mb-4">
+              <p className="text-[10px] font-mono-code text-[var(--gold)] font-bold uppercase tracking-wider mb-4">
                 {member.role}
               </p>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-6 line-clamp-4">
+              <p className="text-xs text-slate-300 leading-relaxed mb-6 line-clamp-4">
                 {member.description}
               </p>
-              <div className="mt-auto pt-4 w-full border-t border-[var(--glass-border)] flex justify-center gap-4">
+              <div className="mt-auto pt-4 w-full border-t border-white/[0.08] flex justify-center gap-4">
                 
               </div>
             </div>

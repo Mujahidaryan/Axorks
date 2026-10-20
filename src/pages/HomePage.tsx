@@ -1,6 +1,7 @@
 import React from 'react';
 import { Hero } from '../components/Hero';
 import { ParadigmMatrix } from '../components/ParadigmMatrix';
+import { PrimaryWebPlatforms } from '../components/PrimaryWebPlatforms';
 import { VisibilityPackages } from '../components/VisibilityPackages';
 import { EvidenceEngine } from '../components/EvidenceEngine';
 import { GlobalDelivery } from '../components/GlobalDelivery';
@@ -19,22 +20,25 @@ export const HomePage: React.FC = () => {
         <Hero onOpenDiscovery={() => navigate('/contact')} />
       </div>
 
-      {/* 2. THE PROOF & PARADIGM SHIFT: Verified Logos + AEO Decision Framework (LIGHT) */}
+      {/* 2. THE PROOF & PARADIGM SHIFT: Verified Logos + AEO Decision Framework */}
       <ParadigmMatrix />
 
-      {/* 2.5. STRATEGIC GROWTH: SEO • AEO • GEO Packages (LIGHT) */}
+      {/* 3. PRIMARY STRATEGIC OFFER: Custom Web Platforms & Business Systems (Locked Hierarchy #1) */}
+      <PrimaryWebPlatforms />
+
+      {/* 4. SECONDARY OFFER: SEO • AEO • GEO Packages (Locked Hierarchy #2) */}
       <VisibilityPackages id="home-visibility" />
 
-      {/* 3. THE EVIDENCE ENGINE: Interwoven Work + Client Stories (LIGHT) */}
+      {/* 5. THE EVIDENCE ENGINE: Interwoven Work + Client Stories */}
       <EvidenceEngine />
 
-      {/* 4. THE PROTOCOL: Global Delivery & Milestone Risk Removal (LIGHT) */}
+      {/* 6. THE PROTOCOL: Global Delivery & Milestone Risk Removal */}
       <GlobalDelivery />
 
-      {/* 5. THE ARCHITECTS: Leadership & Direct Access (LIGHT) */}
+      {/* 7. THE ARCHITECTS: Leadership & Direct Access */}
       <StudioTeam />
 
-      {/* 6. THE ESCALATION: Final Conversion Punctuation (DARK) */}
+      {/* 8. THE ESCALATION: Final Conversion Punctuation (DARK) */}
       <div className="dark-surface">
         <section className="w-full bg-[var(--bg-primary)] py-24 lg:py-32 relative overflow-hidden">
           {/* Top gradient accent line */}
@@ -62,16 +66,16 @@ export const HomePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-4">
               <div className="flex flex-col gap-3 w-full sm:w-auto">
                 <a
-                  href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="magnetic-btn w-full sm:w-auto px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-[0_0_30px_rgba(201,151,46,0.3)] hover:bg-[var(--gold-light)] transition-colors flex items-center justify-center gap-3"
+                  className="magnetic-btn w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#1A1000] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-[0_0_35px_rgba(245,199,97,0.35)] hover:brightness-105 transition-all flex items-center justify-center gap-3"
                 >
                   <span>Book Discovery Call</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 {/* Micro-commitment Sub-CTA */}
-                <span className="text-[10px] font-mono-code text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--emerald)] transition-colors cursor-pointer" onClick={() => navigate('/process')}>
+                <span className="text-[10px] font-mono-code text-slate-400 uppercase tracking-wider hover:text-[var(--emerald)] transition-colors cursor-pointer text-center" onClick={() => navigate('/process')}>
                   Read our 24h SLA Process &rarr;
                 </span>
               </div>
@@ -81,13 +85,14 @@ export const HomePage: React.FC = () => {
                   href="https://wa.me/923141030223"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="magnetic-btn w-full sm:w-auto px-8 py-4 bg-white/10 text-white rounded-xl font-headline font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors flex items-center justify-center gap-3"
+                  className="magnetic-btn w-full sm:w-auto px-8 py-4 bg-white/10 text-white rounded-xl font-headline font-bold text-sm uppercase tracking-wider hover:bg-white/20 transition-colors flex items-center justify-center gap-3 border border-white/15 backdrop-blur-xl"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <MessageSquare className="w-4 h-4 text-[#10B981]" />
                   <span>WhatsApp Us</span>
                 </a>
-                <span className="text-[10px] font-mono-code text-[var(--text-muted)] uppercase tracking-wider opacity-0 cursor-default">
-                  Placeholder
+                <span className="text-[10px] font-mono-code text-slate-400 uppercase tracking-wider flex items-center justify-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
+                  Live Engineering Chat
                 </span>
               </div>
             </div>

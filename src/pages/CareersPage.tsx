@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { useRouter } from '../router/Router';
 import { ArrowRight, Code2, Cpu, Smartphone, Database, TerminalSquare, CheckCircle2 } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -106,33 +106,33 @@ export const CareersPage: React.FC = () => {
                 key={role.id}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-white border border-[var(--glass-border)] rounded-3xl p-8 sm:p-10 spatial-card shadow-sm group"
+                className="bg-[#0D1424] border border-white/[0.08] rounded-3xl p-8 sm:p-10 shadow-2xl group hover:border-[var(--gold)]/40 transition-all"
               >
                 <div className="flex justify-between items-start mb-6">
-                  <div className="p-3 bg-[var(--bg-primary)] rounded-xl border border-[var(--glass-border)] group-hover:scale-110 transition-transform duration-500 ease-[0.16,1,0.3,1]">
+                  <div className="p-3 bg-[#050814] rounded-xl border border-white/10 group-hover:scale-110 transition-transform duration-500 ease-[0.16,1,0.3,1]">
                     {role.icon}
                   </div>
-                  <span className="px-3 py-1 bg-[var(--bg-secondary)] text-[var(--text-primary)] text-[10px] font-mono-code uppercase font-bold tracking-wider rounded-md border border-[var(--glass-border)]">
+                  <span className="px-3 py-1 bg-[#050814] text-[var(--gold)] text-[10px] font-mono-code uppercase font-bold tracking-wider rounded-md border border-white/10">
                     {role.experience}
                   </span>
                 </div>
                 
                 <div className="mb-6">
-                  <span className="text-[10px] font-mono-code text-[var(--text-muted)] font-bold uppercase tracking-wider mb-2 block">
+                  <span className="text-[10px] font-mono-code text-slate-400 font-bold uppercase tracking-wider mb-2 block">
                     {role.category}
                   </span>
-                  <h3 className="font-headline text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
+                  <h3 className="font-headline text-xl sm:text-2xl font-bold text-white">
                     {role.title}
                   </h3>
                 </div>
 
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-8 h-auto lg:h-16">
+                <p className="text-sm text-slate-300 leading-relaxed mb-8 h-auto lg:h-16">
                   {role.description}
                 </p>
 
                 <a 
                   href="mailto:careers@axorks.com"
-                  className="inline-flex items-center gap-2 text-xs font-headline font-bold text-[var(--text-primary)] uppercase tracking-wider hover:text-[var(--gold)] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-headline font-bold text-[var(--gold)] uppercase tracking-wider hover:text-white transition-colors"
                 >
                   Apply via Email <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>

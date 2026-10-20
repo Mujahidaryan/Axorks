@@ -54,36 +54,36 @@ export const ContactPage: React.FC = () => {
       {/* Main Intake Section */}
       <section className="w-full px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* ─── Proposal Intake Form on Refined Soft-Ivory Luxury Surface ─── */}
-          <div className="lg:col-span-7 surface-ivory rounded-3xl p-6 sm:p-8 lg:p-10 spatial-card shadow-2xl border border-[rgba(214,207,195,0.85)]">
-            <div className="flex items-center justify-between pb-4 mb-6 border-b border-[rgba(214,207,195,0.7)]">
+          {/* ─── Proposal Intake Form on Executive Dark Luxury Glass Surface ─── */}
+          <div className="lg:col-span-7 bg-[#0D1424]/90 backdrop-blur-2xl rounded-3xl p-6 sm:p-8 lg:p-10 spatial-card shadow-[0_24px_60px_-12px_rgba(0,0,0,0.85)] border border-white/[0.08]">
+            <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/[0.08]">
               <div>
-                <h2 className="font-headline text-xl sm:text-2xl font-bold text-[#0A0F1D]">
+                <h2 className="font-headline text-xl sm:text-2xl font-bold text-white">
                   Project Inquiry &amp; Scope Brief
                 </h2>
-                <p className="text-xs text-[#475569] font-mono-code mt-0.5 font-medium">
+                <p className="text-xs text-slate-400 font-mono-code mt-0.5 font-medium">
                   Milestone-backed delivery • Zero hourly surprises
                 </p>
               </div>
-              <span className="hidden sm:inline-block px-3 py-1 rounded-md bg-[#0F172A] text-white text-[10px] font-mono-code font-bold uppercase tracking-wider">
+              <span className="hidden sm:inline-block px-3 py-1 rounded-md bg-[var(--gold)]/15 text-[var(--gold)] border border-[var(--gold)]/30 text-[10px] font-mono-code font-bold uppercase tracking-wider">
                 Fixed-Price Proposal
               </span>
             </div>
 
             {submitted ? (
               <div className="py-12 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#058A5E]/15 text-[#058A5E] flex items-center justify-center mx-auto">
+                <div className="w-16 h-16 rounded-full bg-[var(--emerald)]/15 border border-[var(--emerald)]/40 text-[var(--emerald)] flex items-center justify-center mx-auto shadow-[0_0_25px_rgba(16,185,129,0.2)]">
                   <CheckCircle2 className="w-9 h-9" />
                 </div>
-                <h3 className="font-display-hero text-2xl font-bold text-[#0A0F1D]">
+                <h3 className="font-display-hero text-2xl font-bold text-white">
                   Proposal Request Dispatched
                 </h3>
-                <p className="text-sm text-[#1E293B] max-w-md mx-auto">
+                <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
                   Your project requirements have been prepared. An architect from AXORKS Technologies will review your specifications and contact you within 24 hours.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-xl bg-[#0F172A] text-white text-xs font-headline font-bold uppercase tracking-wider hover:bg-[#1E293B] transition-colors cursor-pointer"
+                  className="mt-4 px-6 py-2.5 rounded-xl bg-white/10 text-white text-xs font-headline font-bold uppercase tracking-wider hover:bg-white/20 transition-colors cursor-pointer border border-white/15"
                 >
                   Submit Another Scope
                 </button>
@@ -92,7 +92,7 @@ export const ContactPage: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-headline font-bold uppercase tracking-wider text-[#0A0F1D] mb-1.5">
+                    <label className="block text-xs font-headline font-bold uppercase tracking-wider text-slate-200 mb-1.5">
                       Full Name *
                     </label>
                     <input
@@ -101,12 +101,12 @@ export const ContactPage: React.FC = () => {
                       value={formState.fullName}
                       onChange={(e) => setFormState({ ...formState, fullName: e.target.value })}
                       placeholder="e.g. Tariq Malik"
-                      className="w-full px-4 py-3 rounded-xl border border-[rgba(203,195,182,0.9)] bg-white text-[#0A0F1D] placeholder-[#64748B] text-sm focus:outline-none focus:ring-2 focus:ring-[#B48310] transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[#070B16] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[var(--gold)]/60 focus:ring-1 focus:ring-[var(--gold)]/60 transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-headline font-bold uppercase tracking-wider text-[#0A0F1D] mb-1.5">
+                    <label className="block text-xs font-headline font-bold uppercase tracking-wider text-slate-200 mb-1.5">
                       Business Email *
                     </label>
                     <input
@@ -115,14 +115,14 @@ export const ContactPage: React.FC = () => {
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       placeholder="e.g. tariq@company.com"
-                      className="w-full px-4 py-3 rounded-xl border border-[rgba(203,195,182,0.9)] bg-white text-[#0A0F1D] placeholder-[#64748B] text-sm focus:outline-none focus:ring-2 focus:ring-[#B48310] transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[#070B16] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[var(--gold)]/60 focus:ring-1 focus:ring-[var(--gold)]/60 transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-headline font-bold uppercase tracking-wider text-[#0A0F1D] mb-1.5">
+                    <label className="block text-xs font-headline font-bold uppercase tracking-wider text-slate-200 mb-1.5">
                       Phone / WhatsApp (Optional)
                     </label>
                     <input
@@ -130,51 +130,49 @@ export const ContactPage: React.FC = () => {
                       value={formState.phone}
                       onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                       placeholder="e.g. +92 300 1234567"
-                      className="w-full px-4 py-3 rounded-xl border border-[rgba(203,195,182,0.9)] bg-white text-[#0A0F1D] placeholder-[#64748B] text-sm focus:outline-none focus:ring-2 focus:ring-[#B48310] transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[#070B16] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[var(--gold)]/60 focus:ring-1 focus:ring-[var(--gold)]/60 transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-headline font-bold uppercase tracking-wider text-[#0A0F1D] mb-1.5">
+                    <label className="block text-xs font-headline font-bold uppercase tracking-wider text-slate-200 mb-1.5">
                       Primary Service Category
                     </label>
                     <select
                       value={formState.service}
                       onChange={(e) => setFormState({ ...formState, service: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-[rgba(203,195,182,0.9)] bg-white text-[#0A0F1D] text-sm focus:outline-none focus:ring-2 focus:ring-[#B48310] transition-all cursor-pointer"
+                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[#070B16] text-white text-sm focus:outline-none focus:border-[var(--gold)]/60 focus:ring-1 focus:ring-[var(--gold)]/60 transition-all cursor-pointer"
                     >
-                      <option value="AI Automation & Intelligent Systems">AI Automation &amp; Intelligent Systems</option>
-                      <option value="School & College Learning Management Systems (LMS)">School &amp; College Learning Management Systems (LMS)</option>
-                      <option value="Banking & Financial Management Systems">Banking &amp; Financial Management Systems</option>
-                      <option value="Hospital & Clinical Management Systems (HMS)">Hospital &amp; Clinical Management Systems (HMS)</option>
-                      <option value="Custom Web Applications">Custom Web Applications</option>
-                      <option value="Web3 & Decentralized Applications">Web3 &amp; Decentralized Applications</option>
-                      <option value="Mobile Apps">Mobile Apps</option>
-                      <option value="SEO, AEO & GEO Visibility Packages">SEO, AEO &amp; GEO Visibility Packages</option>
-                      <option value="Ongoing Support & Infrastructure">Ongoing Support &amp; Infrastructure</option>
-                      <option value="Proprietary Product Development">Proprietary Product Development</option>
+                      <option value="Custom Web Platforms & SaaS Architecture" className="bg-[#0A0F1F] text-white">Custom Web Platforms &amp; SaaS Architecture (Primary)</option>
+                      <option value="Intelligent Visibility (SEO + AEO + GEO)" className="bg-[#0A0F1F] text-white">Intelligent Visibility (SEO + AEO + GEO Packages)</option>
+                      <option value="School & College Learning Management Systems (LMS)" className="bg-[#0A0F1F] text-white">School &amp; College Learning Management Systems (LMS)</option>
+                      <option value="Banking & Financial Management Systems" className="bg-[#0A0F1F] text-white">Banking &amp; Financial Management Systems</option>
+                      <option value="Hospital & Clinical Management Systems (HMS)" className="bg-[#0A0F1F] text-white">Hospital &amp; Clinical Management Systems (HMS)</option>
+                      <option value="Enterprise ERP & Intelligent Automations" className="bg-[#0A0F1F] text-white">Enterprise ERP &amp; Intelligent Automations</option>
+                      <option value="Mobile Applications (Flutter / Native)" className="bg-[#0A0F1F] text-white">Mobile Applications (Flutter / Native)</option>
+                      <option value="Ongoing Architecture & Retainer Support" className="bg-[#0A0F1F] text-white">Ongoing Architecture &amp; Retainer Support</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-headline font-bold uppercase tracking-wider text-[#0A0F1D] mb-1.5">
+                  <label className="block text-xs font-headline font-bold uppercase tracking-wider text-slate-200 mb-1.5">
                     Budget Target (Milestone-Based)
                   </label>
                   <select
                     value={formState.budget}
                     onChange={(e) => setFormState({ ...formState, budget: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-[rgba(203,195,182,0.9)] bg-white text-[#0A0F1D] text-sm focus:outline-none focus:ring-2 focus:ring-[#B48310] transition-all cursor-pointer"
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[#070B16] text-white text-sm focus:outline-none focus:border-[var(--gold)]/60 focus:ring-1 focus:ring-[var(--gold)]/60 transition-all cursor-pointer"
                   >
-                    <option value="$1,000 to $3,000 (Starter / MVP Milestone)">$1,000 to $3,000 (Starter / MVP Milestone)</option>
-                    <option value="$3,000 to $7,500 (Production System)">$3,000 to $7,500 (Production System)</option>
-                    <option value="$7,500 to $15,000+ (Enterprise Platform)">$7,500 to $15,000+ (Enterprise Platform)</option>
-                    <option value="Undetermined / Scoping Required">Undetermined / Scoping Required</option>
+                    <option value="$1,000 to $3,000 (Starter / MVP Milestone)" className="bg-[#0A0F1F] text-white">$1,000 to $3,000 (Starter / MVP Milestone)</option>
+                    <option value="$3,000 to $7,500 (Production System)" className="bg-[#0A0F1F] text-white">$3,000 to $7,500 (Production System)</option>
+                    <option value="$7,500 to $15,000+ (Enterprise Platform)" className="bg-[#0A0F1F] text-white">$7,500 to $15,000+ (Enterprise Platform)</option>
+                    <option value="Undetermined / Scoping Required" className="bg-[#0A0F1F] text-white">Undetermined / Scoping Required</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-headline font-bold uppercase tracking-wider text-[#0A0F1D] mb-1.5">
+                  <label className="block text-xs font-headline font-bold uppercase tracking-wider text-slate-200 mb-1.5">
                     Project Scope &amp; Functional Requirements *
                   </label>
                   <textarea
@@ -183,20 +181,20 @@ export const ContactPage: React.FC = () => {
                     value={formState.scope}
                     onChange={(e) => setFormState({ ...formState, scope: e.target.value })}
                     placeholder="Briefly describe what you need built, key technical features, desired delivery timeline, or any reference systems..."
-                    className="w-full px-4 py-3 rounded-xl border border-[rgba(203,195,182,0.9)] bg-white text-[#0A0F1D] placeholder-[#64748B] text-sm focus:outline-none focus:ring-2 focus:ring-[#B48310] transition-all resize-y"
+                    className="w-full px-4 py-3 rounded-xl border border-white/10 bg-[#070B16] text-white placeholder-slate-500 text-sm focus:outline-none focus:border-[var(--gold)]/60 focus:ring-1 focus:ring-[var(--gold)]/60 transition-all resize-y"
                   />
                 </div>
 
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-xl bg-[#0F172A] text-white text-xs font-headline font-bold uppercase tracking-wider hover:bg-[#1E293B] transition-all shadow-xl cursor-pointer flex items-center justify-center gap-2"
+                    className="magnetic-btn w-full py-4 rounded-xl bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#1A1000] text-xs font-headline font-bold uppercase tracking-wider hover:opacity-95 transition-all shadow-[0_0_30px_rgba(245,199,97,0.25)] hover:shadow-[0_0_40px_rgba(245,199,97,0.4)] cursor-pointer flex items-center justify-center gap-2"
                   >
                     <span>Dispatch Proposal Request</span>
                     <Send className="w-4 h-4" />
                   </button>
-                  <div className="mt-3 text-center text-[11px] font-mono-code text-[#475569]">
-                    <span>Direct email dispatch to contact@axorks.com</span>
+                  <div className="mt-3 text-center text-[11px] font-mono-code text-slate-400">
+                    <span>Direct technical dispatch to contact@axorks.com • 24hr response</span>
                   </div>
                 </div>
               </form>

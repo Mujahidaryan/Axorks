@@ -41,34 +41,34 @@ export const AboutPage: React.FC = () => {
       {/* Commercial Commitments Strip */}
       <section className="w-full px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm">
+          <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg">
             <Tag className="w-5 h-5 text-[var(--gold)] mb-3" />
-            <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">From $1,000</h4>
-            <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+            <h4 className="font-headline text-base font-bold text-white mb-1">From $1,000</h4>
+            <p className="text-xs text-slate-300 leading-relaxed">
               Accessible entry pricing for growing companies, MVPs, and targeted automation workflows.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm">
+          <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg">
             <ShieldCheck className="w-5 h-5 text-[var(--emerald)] mb-3" />
-            <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">Fixed-Price Milestones</h4>
-            <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+            <h4 className="font-headline text-base font-bold text-white mb-1">Fixed-Price Milestones</h4>
+            <p className="text-xs text-slate-300 leading-relaxed">
               Scope and investment locked before code begins. You review staging builds before payment.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm">
+          <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg">
             <Building2 className="w-5 h-5 text-[#A78BFA] mb-3" />
-            <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">Karachi &amp; Islamabad</h4>
-            <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+            <h4 className="font-headline text-base font-bold text-white mb-1">Karachi &amp; Islamabad</h4>
+            <p className="text-xs text-slate-300 leading-relaxed">
               Registered software engineering offices in Pakistan serving global enterprise clients.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm">
+          <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg">
             <Key className="w-5 h-5 text-[#38BDF8] mb-3" />
-            <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">100% IP Ownership</h4>
-            <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+            <h4 className="font-headline text-base font-bold text-white mb-1">100% IP Ownership</h4>
+            <p className="text-xs text-slate-300 leading-relaxed">
               Full repository transfer, documentation, and zero proprietary lock-in upon completion.
             </p>
           </div>
@@ -151,7 +151,7 @@ export const AboutPage: React.FC = () => {
           </span>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div className="lg:col-span-8 rounded-3xl bg-white border border-[var(--glass-border)] p-7 sm:p-10 spatial-card shadow-lg hover:border-[var(--gold)]/40 transition-all">
+            <div className="lg:col-span-8 rounded-3xl bg-[#0D1424] border border-white/[0.08] p-7 sm:p-10 shadow-2xl hover:border-[var(--gold)]/40 transition-all">
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center">
                 <div className="sm:col-span-5 flex flex-col items-center">
                   <div className="relative w-44 h-44 sm:w-48 sm:h-48 rounded-2xl overflow-hidden shadow-2xl border-2 border-[var(--gold)]/40 bg-[#0A0F1D] shrink-0">
@@ -170,24 +170,24 @@ export const AboutPage: React.FC = () => {
                   <span className="text-[10px] font-mono-code text-[var(--gold)] uppercase tracking-widest font-bold px-2 py-0.5 rounded bg-[var(--gold)]/15 border border-[var(--gold)]/30">
                     FOUNDER &amp; CEO
                   </span>
-                  <h2 className="font-display-hero text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)]">
+                  <h2 className="font-display-hero text-2xl sm:text-3xl font-extrabold text-white">
                     {mujahid.name}
                   </h2>
-                  <p className="text-xs font-mono-code text-[var(--text-muted)]">
+                  <p className="text-xs font-mono-code text-slate-400">
                     BS Software Engineering · Bahria University Alumnus
                   </p>
-                  <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                     Muhammad leads systems architecture, multi-AI workflow development, and commercial proposals. Every client engagement is scoped and supervised directly by senior leadership, guaranteeing direct accountability from specification to production launch.
                   </p>
 
                   <div className="pt-2 flex flex-wrap items-center gap-2">
-                    <span className="px-2.5 py-1 rounded-md bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-[11px] font-mono-code text-[var(--text-secondary)] font-medium">
+                    <span className="px-2.5 py-1 rounded-md bg-[#050814] border border-white/10 text-[11px] font-mono-code text-slate-300 font-medium">
                       System Architecture
                     </span>
-                    <span className="px-2.5 py-1 rounded-md bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-[11px] font-mono-code text-[var(--text-secondary)] font-medium">
+                    <span className="px-2.5 py-1 rounded-md bg-[#050814] border border-white/10 text-[11px] font-mono-code text-slate-300 font-medium">
                       AI Automations
                     </span>
-                    <span className="px-2.5 py-1 rounded-md bg-[var(--bg-secondary)] border border-[var(--glass-border)] text-[11px] font-mono-code text-[var(--text-secondary)] font-medium">
+                    <span className="px-2.5 py-1 rounded-md bg-[#050814] border border-white/10 text-[11px] font-mono-code text-slate-300 font-medium">
                       Commercial Governance
                     </span>
                   </div>
@@ -197,7 +197,7 @@ export const AboutPage: React.FC = () => {
 
             {/* Business Operations Partner */}
             {farhana && (
-              <div className="lg:col-span-4 rounded-3xl bg-white border border-[var(--glass-border)] p-6 sm:p-8 spatial-card flex flex-col justify-between shadow-lg hover:border-[var(--emerald)]/40 transition-all">
+              <div className="lg:col-span-4 rounded-3xl bg-[#0D1424] border border-white/[0.08] p-6 sm:p-8 shadow-2xl flex flex-col justify-between hover:border-[var(--emerald)]/40 transition-all">
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 rounded-xl bg-[var(--emerald)]/10 border border-[var(--emerald)]/30 flex items-center justify-center font-mono-code text-sm font-bold text-[var(--emerald)]">
@@ -208,18 +208,18 @@ export const AboutPage: React.FC = () => {
                     </span>
                   </div>
 
-                  <h3 className="font-headline text-lg font-bold text-[var(--text-primary)] mb-1">
+                  <h3 className="font-headline text-lg font-bold text-white mb-1">
                     {farhana.name}
                   </h3>
                   <div className="text-xs font-mono-code text-[var(--emerald)] mb-3">
                     {farhana.role}
                   </div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
                     Oversees financial operations, milestone governance, human resources, and business administration. Ensures every engagement meets strict legal compliance and milestone delivery schedules.
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-[var(--glass-border)] text-[11px] font-mono-code text-[var(--text-muted)]">
+                <div className="mt-4 pt-3 border-t border-white/10 text-[11px] font-mono-code text-slate-400">
                   BBA · Operations Management
                 </div>
               </div>
@@ -242,7 +242,7 @@ export const AboutPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {yousaf && (
-                <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm hover:border-[var(--gold)]/40 hover:shadow-md transition-all">
+                <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg hover:border-[var(--gold)]/40 transition-all">
                   <div className="flex items-center justify-between mb-4">
                     {yousaf.image ? (
                       <div className="w-12 h-12 rounded-xl overflow-hidden border border-[var(--gold)]/40 shadow-md bg-[#111622] shrink-0">
@@ -254,35 +254,35 @@ export const AboutPage: React.FC = () => {
                         />
                       </div>
                     ) : (
-                      <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] border border-[var(--glass-border)] flex items-center justify-center font-mono-code text-xs font-bold text-[var(--gold)]">
+                      <div className="w-10 h-10 rounded-xl bg-[#050814] border border-white/10 flex items-center justify-center font-mono-code text-xs font-bold text-[var(--gold)]">
                         Y
                       </div>
                     )}
-                    <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono-code font-bold uppercase bg-[var(--gold)]/15 text-[#916613] dark:text-[var(--gold)] border border-[var(--gold)]/30">
+                    <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono-code font-bold uppercase bg-[var(--gold)]/15 text-[var(--gold)] border border-[var(--gold)]/30">
                       Deep Learning / AI
                     </span>
                   </div>
-                  <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">{yousaf.name}</h4>
-                  <div className="text-xs font-mono-code text-[#B48310] dark:text-[var(--gold)] mb-3 font-semibold">{yousaf.role}</div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <h4 className="font-headline text-base font-bold text-white mb-1">{yousaf.name}</h4>
+                  <div className="text-xs font-mono-code text-[var(--gold)] mb-3 font-semibold">{yousaf.role}</div>
+                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
                     {yousaf.description}
                   </p>
                 </div>
               )}
 
               {alina && (
-                <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm hover:border-[#F43F5E]/40 hover:shadow-md transition-all">
+                <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg hover:border-[#F43F5E]/40 transition-all">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] border border-[var(--glass-border)] flex items-center justify-center font-mono-code text-xs font-bold text-[#F43F5E]">
+                    <div className="w-10 h-10 rounded-xl bg-[#050814] border border-white/10 flex items-center justify-center font-mono-code text-xs font-bold text-[#F43F5E]">
                       AL
                     </div>
                     <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono-code font-bold uppercase bg-[#F43F5E]/15 text-[#F43F5E] border border-[#F43F5E]/30">
                       Applied AI
                     </span>
                   </div>
-                  <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">{alina.name}</h4>
+                  <h4 className="font-headline text-base font-bold text-white mb-1">{alina.name}</h4>
                   <div className="text-xs font-mono-code text-[#F43F5E] mb-3 font-semibold">{alina.role}</div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
                     Specializes in autonomous multi-agent pipelines, vector search databases, semantic document intelligence, and enterprise API workflow automation.
                   </p>
                 </div>
@@ -293,28 +293,28 @@ export const AboutPage: React.FC = () => {
           {/* Web, Mobile & Decentralized Systems */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <span className="font-mono-code text-xs uppercase text-[#0369A1] dark:text-[#38BDF8] tracking-widest font-bold">
+              <span className="font-mono-code text-xs uppercase text-[#38BDF8] tracking-widest font-bold">
                 Web &amp; Mobile Engineering
               </span>
-              <div className="h-[1px] flex-1 bg-[var(--glass-border)]" />
+              <div className="h-[1px] flex-1 bg-white/[0.08]" />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {shayan && (
-                <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm hover:border-[#0369A1]/40 hover:shadow-md transition-all">
-                  <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] border border-[var(--glass-border)] flex items-center justify-center font-mono-code text-xs font-bold text-[#0369A1] mb-4">
+                <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg hover:border-[#38BDF8]/40 transition-all">
+                  <div className="w-10 h-10 rounded-xl bg-[#050814] border border-white/10 flex items-center justify-center font-mono-code text-xs font-bold text-[#38BDF8] mb-4">
                     SH
                   </div>
-                  <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">{shayan.name}</h4>
-                  <div className="text-xs font-mono-code text-[#0369A1] mb-3 font-semibold">{shayan.role}</div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <h4 className="font-headline text-base font-bold text-white mb-1">{shayan.name}</h4>
+                  <div className="text-xs font-mono-code text-[#38BDF8] mb-3 font-semibold">{shayan.role}</div>
+                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
                     Full-stack web developer building high-concurrency portals and interactive interfaces with modern React, TypeScript, Next.js, and Node.js.
                   </p>
                 </div>
               )}
 
               {faisal && (
-                <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm hover:border-[var(--gold)]/40 hover:shadow-md transition-all">
+                <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg hover:border-[var(--gold)]/40 transition-all">
                   <div className="flex items-center justify-between mb-4">
                     {faisal.image ? (
                       <div className="w-12 h-12 rounded-xl overflow-hidden border border-[var(--gold)]/40 shadow-md shrink-0 bg-[#111622]">
@@ -325,30 +325,30 @@ export const AboutPage: React.FC = () => {
                         />
                       </div>
                     ) : (
-                      <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] border border-[var(--glass-border)] flex items-center justify-center font-mono-code text-xs font-bold text-[var(--gold)]">
+                      <div className="w-10 h-10 rounded-xl bg-[#050814] border border-white/10 flex items-center justify-center font-mono-code text-xs font-bold text-[var(--gold)]">
                         FQ
                       </div>
                     )}
-                    <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono-code font-bold uppercase bg-[var(--gold)]/15 text-[#916613] dark:text-[var(--gold)] border border-[var(--gold)]/30">
+                    <span className="px-2.5 py-0.5 rounded-md text-[10px] font-mono-code font-bold uppercase bg-[var(--gold)]/15 text-[var(--gold)] border border-[var(--gold)]/30">
                       Full-Stack
                     </span>
                   </div>
-                  <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">{faisal.name}</h4>
-                  <div className="text-xs font-mono-code text-[#B48310] dark:text-[var(--gold)] mb-3 font-semibold">{faisal.role}</div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <h4 className="font-headline text-base font-bold text-white mb-1">{faisal.name}</h4>
+                  <div className="text-xs font-mono-code text-[var(--gold)] mb-3 font-semibold">{faisal.role}</div>
+                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
                     Builds reliable, scalable web applications and digital products with PHP, Laravel, modern React, WordPress/WooCommerce, backend APIs, and cross-platform mobile delivery.
                   </p>
                 </div>
               )}
 
               {aliHaider && (
-                <div className="p-6 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm hover:border-[var(--emerald)]/40 hover:shadow-md transition-all">
-                  <div className="w-10 h-10 rounded-xl bg-[var(--bg-secondary)] border border-[var(--glass-border)] flex items-center justify-center font-mono-code text-xs font-bold text-[var(--emerald)] mb-4">
+                <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg hover:border-[var(--emerald)]/40 transition-all">
+                  <div className="w-10 h-10 rounded-xl bg-[#050814] border border-white/10 flex items-center justify-center font-mono-code text-xs font-bold text-[var(--emerald)] mb-4">
                     AH
                   </div>
-                  <h4 className="font-headline text-base font-bold text-[var(--text-primary)] mb-1">{aliHaider.name}</h4>
+                  <h4 className="font-headline text-base font-bold text-white mb-1">{aliHaider.name}</h4>
                   <div className="text-xs font-mono-code text-[var(--emerald)] mb-3 font-semibold">{aliHaider.role}</div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-normal">
+                  <p className="text-xs text-slate-300 leading-relaxed font-normal">
                     Web3 and blockchain developer with extensive focus on EVM smart contract architecture, decentralized protocols, and custody integrations.
                   </p>
                 </div>
@@ -362,12 +362,12 @@ export const AboutPage: React.FC = () => {
               <span className="font-mono-code text-xs uppercase text-[var(--gold)] tracking-widest font-bold">
                 Partnerships &amp; Client Success
               </span>
-              <div className="h-[1px] flex-1 bg-[var(--glass-border)]" />
+              <div className="h-[1px] flex-1 bg-white/[0.08]" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {furqan && (
-                <div className="p-6 sm:p-7 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm hover:border-[var(--gold)]/40 hover:shadow-md transition-all flex flex-col sm:flex-row items-start gap-5">
+                <div className="p-6 sm:p-7 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg hover:border-[var(--gold)]/40 transition-all flex flex-col sm:flex-row items-start gap-5">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border border-[var(--gold)]/40 shadow-md shrink-0 bg-[#111622]">
                     <img
                       src={furqan.image || '/Images/FURQAN Business Development Officer.jpeg'}
@@ -376,9 +376,9 @@ export const AboutPage: React.FC = () => {
                     />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-headline text-lg font-bold text-[var(--text-primary)] mb-1">{furqan.name}</h4>
-                    <div className="text-xs font-mono-code text-[#B48310] dark:text-[var(--gold)] font-semibold mb-2">{furqan.role}</div>
-                    <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-normal">
+                    <h4 className="font-headline text-lg font-bold text-white mb-1">{furqan.name}</h4>
+                    <div className="text-xs font-mono-code text-[var(--gold)] font-semibold mb-2">{furqan.role}</div>
+                    <p className="text-xs text-slate-300 leading-relaxed font-normal">
                       {furqan.description}
                     </p>
                   </div>
@@ -386,7 +386,7 @@ export const AboutPage: React.FC = () => {
               )}
 
               {farwa && (
-                <div className="p-6 sm:p-7 rounded-2xl bg-white border border-[var(--glass-border)] shadow-sm hover:border-[#F43F5E]/40 hover:shadow-md transition-all flex flex-col sm:flex-row items-start gap-5">
+                <div className="p-6 sm:p-7 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg hover:border-[#F43F5E]/40 transition-all flex flex-col sm:flex-row items-start gap-5">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border border-[#F43F5E]/40 shadow-md shrink-0 bg-[#111622]">
                     <img
                       src={farwa.image || '/Images/FARWA Marketing & Outreach.jpeg'}
@@ -395,9 +395,9 @@ export const AboutPage: React.FC = () => {
                     />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-headline text-lg font-bold text-[var(--text-primary)] mb-1">{farwa.name}</h4>
+                    <h4 className="font-headline text-lg font-bold text-white mb-1">{farwa.name}</h4>
                     <div className="text-xs font-mono-code text-[#F43F5E] font-semibold mb-2">{farwa.role}</div>
-                    <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-normal">
+                    <p className="text-xs text-slate-300 leading-relaxed font-normal">
                       {farwa.description}
                     </p>
                   </div>
@@ -420,7 +420,7 @@ export const AboutPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
             <a
-              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-lg"

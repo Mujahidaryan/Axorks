@@ -21,13 +21,13 @@ export const ServicesPage: React.FC = () => {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="max-w-3xl">
               <span className="font-mono-code text-xs uppercase text-[var(--gold)] tracking-widest font-bold block mb-3">
-                Full-Spectrum Engineering &amp; AI Visibility
+                Locked Engineering Hierarchy · High-Intent Growth
               </span>
-              <h1 className="font-display-hero text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--text-primary)] tracking-tight">
-                Modern Capabilities. High-Intent Growth.
+              <h1 className="font-display-hero text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.08]">
+                Custom Web Platforms, AI Visibility &amp; Enterprise Systems.
               </h1>
-              <p className="mt-4 text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
-                From organic dominance on Google and AI platforms (AEO &amp; GEO) to mission-critical custom web, AI, and mobile systems. Delivered with fixed milestone pricing and 100% intellectual property transfer.
+              <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+                From high-concurrency custom web applications and regulated domain platforms (LMS, Core Banking, HMS) to complete search dominance on Google, ChatGPT, and Perplexity via SEO, AEO, and GEO packages. Delivered with fixed milestone pricing and 100% intellectual property transfer.
               </p>
             </div>
 
@@ -42,7 +42,7 @@ export const ServicesPage: React.FC = () => {
               </a>
               <a
                 href="#capabilities"
-                className="px-4 py-2 rounded-xl bg-[var(--bg-secondary)] hover:bg-[var(--bg-tertiary)] border border-[var(--glass-border)] text-[var(--text-secondary)] text-xs font-mono-code font-semibold uppercase tracking-wider transition-colors flex items-center gap-2"
+                className="px-4 py-2 rounded-xl bg-[#0D1424] hover:bg-[#121B30] border border-white/10 text-slate-300 text-xs font-mono-code font-semibold uppercase tracking-wider transition-colors flex items-center gap-2"
               >
                 <Cpu className="w-3.5 h-3.5 text-[var(--emerald)]" />
                 <span>Core Engineering Pillars</span>
@@ -76,7 +76,7 @@ export const ServicesPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a 
-                href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="magnetic-btn px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-lg flex items-center gap-2"

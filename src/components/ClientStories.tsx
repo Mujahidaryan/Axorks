@@ -23,65 +23,61 @@ export const ClientStories: React.FC = () => {
             return (
               <div
                 key={story.id}
-                className="bg-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between spatial-card border border-[var(--glass-border)] shadow-sm hover:shadow-md transition-shadow"
+                className="bg-[#0D1424] rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-white/[0.08] shadow-xl hover:border-white/20 transition-all"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-4 pb-6 mb-6 border-b border-[var(--glass-border)]">
+                  <div className="flex items-center justify-between gap-4 pb-6 mb-6 border-b border-white/[0.08]">
                     <div className="flex flex-col">
-                      <span className="font-headline text-lg sm:text-xl font-bold text-[var(--text-primary)]">
+                      <span className="font-headline text-lg sm:text-xl font-bold text-white">
                         {story.clientName}
                       </span>
-                      <span className="font-mono-code text-[10px] text-[var(--text-muted)] font-bold tracking-wider uppercase mt-1">
+                      <span className="font-mono-code text-[10px] text-[var(--gold)] font-bold tracking-wider uppercase mt-1">
                         {story.industry}
                       </span>
                     </div>
                     {story.logo && (
                       <div className="h-10 w-24 flex items-center justify-end shrink-0">
-                        <img src={story.logo} alt={story.clientName} className="h-full object-contain object-right grayscale opacity-70" />
+                        <img src={story.logo} alt={story.clientName} className="h-full object-contain object-right brightness-95 opacity-80" />
                       </div>
                     )}
                   </div>
 
-                  <h3 className="font-headline text-xl sm:text-2xl font-bold text-[var(--text-primary)] leading-snug mb-6">
+                  <h3 className="font-headline text-xl sm:text-2xl font-bold text-white leading-snug mb-6">
                     "{story.headline}"
                   </h3>
 
                   <div className="space-y-4 mb-8">
                     <div>
-                      <h4 className="text-[11px] font-mono-code text-[var(--text-muted)] uppercase tracking-wider font-bold mb-1">
+                      <h4 className="text-[11px] font-mono-code text-slate-400 uppercase tracking-wider font-bold mb-1">
                         The Problem
                       </h4>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                      <p className="text-sm text-slate-300 leading-relaxed font-normal">
                         {story.problem}
                       </p>
                     </div>
                     <div>
-                      <h4 className="text-[11px] font-mono-code text-[var(--text-muted)] uppercase tracking-wider font-bold mb-1">
+                      <h4 className="text-[11px] font-mono-code text-[var(--emerald)] uppercase tracking-wider font-bold mb-1">
                         Our Solution
                       </h4>
-                      <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                      <p className="text-sm text-slate-300 leading-relaxed font-normal">
                         {story.solution}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-[var(--glass-border)]">
+                <div className="pt-6 border-t border-white/[0.08]">
                   <div className="relative pl-6">
                     <Quote className="absolute left-0 top-0 w-4 h-4 text-[var(--gold)]/40" />
-                    <p className="text-sm font-headline italic text-[var(--text-primary)] leading-relaxed mb-4 font-medium">
+                    <p className="text-sm font-headline italic text-white leading-relaxed mb-4 font-medium">
                       "{story.testimonial}"
                     </p>
-                    <div className="flex flex-col">
-                      
-                      
-                    </div>
                   </div>
                   <a 
                     href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-8 w-full py-3 bg-[var(--bg-primary)] border border-[var(--glass-border)] text-[var(--text-primary)] rounded-xl text-xs font-headline font-bold tracking-wider uppercase hover:bg-[#0A0F1D] hover:text-white transition-colors flex items-center justify-center gap-2"
+                    className="mt-8 w-full py-3 bg-white/5 border border-white/10 text-white rounded-xl text-xs font-headline font-bold tracking-wider uppercase hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
                   >
                     Request Similar System <ArrowRight className="w-3.5 h-3.5" />
                   </a>
