@@ -151,7 +151,7 @@ export const Hero: React.FC<HeroProps> = () => {
             className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5"
           >
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="magnetic-btn inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#2A1800] text-xs sm:text-sm font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-xl transition-all"
@@ -183,7 +183,9 @@ export const Hero: React.FC<HeroProps> = () => {
             className="flex flex-wrap items-center gap-3 text-xs font-mono-code text-slate-300 pt-1"
           >
             <a
-              href="mailto:contact@axorks.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[#F5C761] hover:underline font-semibold"
             >
               contact@axorks.com

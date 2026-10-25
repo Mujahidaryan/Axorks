@@ -109,7 +109,9 @@ export const BlogPage: React.FC = () => {
               </div>
 
               <a
-                href={`mailto:contact@axorks.com?subject=Question on ${encodeURIComponent(activePost.title)}`}
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=${encodeURIComponent(`Question on ${activePost.title}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono-code text-[var(--gold)] hover:underline"
               >
                 <span>Discuss with Author</span>
@@ -176,7 +178,7 @@ export const BlogPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-lg"

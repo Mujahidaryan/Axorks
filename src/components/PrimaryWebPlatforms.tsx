@@ -129,7 +129,7 @@ export const PrimaryWebPlatforms: React.FC = () => {
             className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0"
           >
             <a
-              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Custom%20Web%20Platform%20Inquiry%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Custom%20Web%20Platform%20Inquiry%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="magnetic-btn px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#0A0F1D] font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(245,199,97,0.3)] hover:brightness-105 transition-all"
@@ -204,7 +204,7 @@ export const PrimaryWebPlatforms: React.FC = () => {
                 </div>
 
                 <a
-                  href={`mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Platform%20Architecture%20Inquiry%20(${encodeURIComponent(cap.title)})%20-%20Axorks`}
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=${encodeURIComponent(`Platform Architecture Inquiry (${cap.title}) - Axorks`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs font-headline font-bold text-[var(--gold)] hover:text-white uppercase tracking-wider transition-colors"
@@ -245,7 +245,7 @@ export const PrimaryWebPlatforms: React.FC = () => {
               <span className="block font-mono-code text-[11px] text-slate-400">Itemized Proposal Guarantee</span>
             </div>
             <a
-              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Technical%20Scope%20Consultation%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Technical%20Scope%20Consultation%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/15 text-xs font-headline font-bold uppercase tracking-wider transition-colors"

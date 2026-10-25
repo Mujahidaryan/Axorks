@@ -67,7 +67,7 @@ export const TeamPage: React.FC = () => {
               Need dedicated engineering capacity?
             </h2>
             <a 
-              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="magnetic-btn inline-block px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider"

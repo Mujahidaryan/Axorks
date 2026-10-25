@@ -100,7 +100,7 @@ export const CapabilitiesMatrix: React.FC = () => {
               </h3>
             </div>
             <a
-              href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Enterprise%20System%20Consultation%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Enterprise%20System%20Consultation%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 text-xs font-headline font-bold text-[var(--gold)] hover:underline uppercase tracking-wider"
@@ -155,7 +155,7 @@ export const CapabilitiesMatrix: React.FC = () => {
                     <span>{system.stack}</span>
                   </div>
                   <a
-                    href={`mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Inquiry%20regarding%20${encodeURIComponent(system.title)}%20-%20Axorks`}
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=${encodeURIComponent(`Inquiry regarding ${system.title} - Axorks`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 font-headline font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
@@ -240,7 +240,7 @@ export const CapabilitiesMatrix: React.FC = () => {
 
               <div className="mt-10 pt-6 border-t border-white/10 relative z-10">
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="magnetic-btn w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-lg flex items-center justify-center gap-2"

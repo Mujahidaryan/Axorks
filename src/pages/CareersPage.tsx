@@ -131,7 +131,9 @@ export const CareersPage: React.FC = () => {
                 </p>
 
                 <a 
-                  href="mailto:careers@axorks.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@axorks.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-headline font-bold text-[var(--gold)] uppercase tracking-wider hover:text-white transition-colors"
                 >
                   Apply via Email <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

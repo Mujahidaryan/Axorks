@@ -87,7 +87,7 @@ export const ProcessPage: React.FC = () => {
                   Every scope item is priced down to the milestone. If engineering requires unexpected architectural refinement on our end, the cost is fully absorbed by AXORKS.
                 </p>
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#0A0F1D] text-xs font-headline font-bold uppercase tracking-wider hover:brightness-105 transition-all cursor-pointer flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(245,199,97,0.3)]"
@@ -229,7 +229,7 @@ export const ProcessPage: React.FC = () => {
 
               <div className="lg:col-span-4 flex flex-col justify-center">
                 <a
-                  href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-4 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#0A0F1D] text-xs font-headline font-bold uppercase tracking-wider hover:brightness-105 transition-all cursor-pointer flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(245,199,97,0.3)]"
@@ -309,7 +309,7 @@ export const ProcessPage: React.FC = () => {
           </div>
 
           <a
-            href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 px-8 py-4 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#0A0F1D] text-xs font-headline font-bold uppercase tracking-wider hover:brightness-105 transition-all cursor-pointer shadow-[0_0_20px_rgba(245,199,97,0.3)] flex items-center gap-2"

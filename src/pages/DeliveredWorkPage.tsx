@@ -34,7 +34,7 @@ export const DeliveredWorkPage: React.FC = () => {
 
             <div className="flex items-center gap-3 shrink-0">
               <a
-                href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Custom%20Architecture%20Inquiry%20-%20Axorks"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Custom%20Architecture%20Inquiry%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="magnetic-btn px-6 py-3.5 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md flex items-center gap-2"
@@ -161,7 +161,7 @@ export const DeliveredWorkPage: React.FC = () => {
 
                     <div className="pt-4 border-t border-white/[0.08]">
                       <a
-                        href={`mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Case%20Study%20Architecture%20Inquiry%20(${encodeURIComponent(project.title)})%20-%20Axorks`}
+                        href={`https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=${encodeURIComponent(`Case Study Architecture Inquiry (${project.title}) - Axorks`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-xs font-headline font-bold text-[var(--gold)] hover:text-white transition-colors uppercase tracking-wider"
@@ -192,7 +192,7 @@ export const DeliveredWorkPage: React.FC = () => {
               We provide fixed-price proposals, itemized milestone contracts, and senior technical architects ready to deploy production software.
             </p>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="magnetic-btn inline-block px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-lg"

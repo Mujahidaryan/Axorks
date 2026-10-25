@@ -74,7 +74,7 @@ export const ClientStories: React.FC = () => {
                     </p>
                   </div>
                   <a 
-                    href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-8 w-full py-3 bg-white/5 border border-white/10 text-white rounded-xl text-xs font-headline font-bold tracking-wider uppercase hover:bg-white/10 transition-colors flex items-center justify-center gap-2"

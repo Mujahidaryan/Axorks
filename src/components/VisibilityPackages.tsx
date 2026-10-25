@@ -232,7 +232,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                   {/* Actions */}
                   <div className="pt-4 border-t border-[var(--glass-border)] mt-4">
                     <a
-                      href={`mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=${encodeURIComponent(pkg.emailSubject)}`}
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=${encodeURIComponent(pkg.emailSubject)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`magnetic-btn w-full py-3 px-4 rounded-xl font-headline font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all ${styles.btnBg}`}
@@ -324,7 +324,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
 
               <div className="flex items-center gap-3 shrink-0">
                 <a
-                  href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Full%20Visibility%20Package%20Inquiry%20(SEO%20%2B%20AEO%20%2B%20GEO%20-%20%24950%2Fmo)%20-%20Axorks"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Full%20Visibility%20Package%20Inquiry%20(SEO%20%2B%20AEO%20%2B%20GEO%20-%20%24950%2Fmo)%20-%20Axorks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="magnetic-btn px-6 py-3 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#1A1000] text-xs font-headline font-bold uppercase tracking-wider flex items-center gap-2 shadow-[0_0_25px_rgba(245,199,97,0.3)]"

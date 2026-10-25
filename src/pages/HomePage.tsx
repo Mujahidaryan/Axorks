@@ -66,7 +66,7 @@ export const HomePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-4">
               <div className="flex flex-col gap-3 w-full sm:w-auto">
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="magnetic-btn w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#1A1000] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-[0_0_35px_rgba(245,199,97,0.35)] hover:brightness-105 transition-all flex items-center justify-center gap-3"

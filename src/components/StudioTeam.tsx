@@ -124,7 +124,7 @@ export const StudioTeam: React.FC = () => {
                 Scale your engineering capacity with Axorks dedicated developer allocations.
               </p>
               <a 
-                href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-mono-code font-bold text-[var(--gold)] hover:text-white transition-colors underline decoration-[var(--gold)] underline-offset-4"

@@ -22,7 +22,7 @@ export const ContactPage: React.FC = () => {
     e.preventDefault();
     const { fullName, email, phone, service, budget, scope } = formState;
     const body = `Full Name: ${fullName}%0AEmail: ${email}%0APhone/WhatsApp: ${phone}%0AService Category: ${service}%0ABudget Target: ${budget}%0A%0AProject Scope & Requirements:%0A${scope}`;
-    window.open(`mailto:contact@axorks.com?subject=New Architecture Inquiry: ${fullName}&body=${body}`, '_blank');
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=New%20Architecture%20Inquiry:%20${encodeURIComponent(fullName)}&body=${body}`, '_blank');
     setSubmitted(true);
   };
 
@@ -234,7 +234,7 @@ export const ContactPage: React.FC = () => {
 
             {/* Direct Email Card */}
             <a
-              href="mailto:contact@axorks.com?subject=Project%20Inquiry%20-%20AXORKS%20Technologies"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Project%20Inquiry%20-%20AXORKS%20Technologies"
               target="_blank"
               rel="noopener noreferrer"
               className="block glass-2 holographic-edge rounded-3xl p-6 sm:p-7 spatial-card border-[var(--gold)]/35 hover:border-[var(--gold)] shadow-xl transition-all group cursor-pointer"

@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-mono-code text-[10px] font-bold uppercase tracking-widest text-[#0284C7] mb-6">Direct Access</h4>
             <ul className="space-y-4 mb-6">
               <li>
-                <a href="mailto:contact@axorks.com" className="group flex items-center gap-3">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3">
                   <span className="text-sm text-[var(--text-secondary)] group-hover:text-white transition-colors">contact@axorks.com</span>
                 </a>
               </li>

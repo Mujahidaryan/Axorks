@@ -123,7 +123,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
               <MessageSquare className="w-4 h-4" />
             </a>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
               className="magnetic-btn px-5 py-2.5 rounded-xl font-headline text-[11px] uppercase tracking-wider font-bold transition-all duration-300 flex items-center gap-2 bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#0A0F1D] shadow-[0_0_20px_rgba(245,199,97,0.3)] hover:shadow-[0_0_25px_rgba(245,199,97,0.45)] hover:brightness-105"
@@ -178,7 +178,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
               ))}
               <div className="h-px bg-white/10 my-2" />
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-between px-4 py-3.5 bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#0A0F1D] rounded-xl font-headline text-xs font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(245,199,97,0.3)]"

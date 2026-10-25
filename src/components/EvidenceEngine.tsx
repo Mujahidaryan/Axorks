@@ -105,7 +105,7 @@ export const EvidenceEngine: React.FC = () => {
                     </div>
                     
                     <a 
-                      href="mailto:contact@axorks.com,muhammad.mujahid@axorks.com?subject=Discovery%20Call%20Request%20-%20Axorks"
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group inline-flex items-center gap-2 text-xs font-headline font-bold text-[var(--text-primary)] uppercase tracking-wider hover:text-[var(--gold)] transition-colors"

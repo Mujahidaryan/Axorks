@@ -154,7 +154,7 @@ export const Careers: React.FC = () => {
             <Shield className="w-3.5 h-3.5 text-[var(--gold)]" />
             <span>Direct submission to senior leadership:</span>
             <a
-              href="mailto:careers@axorks.com?subject=Senior%20Engineering%20Role%20Inquiry%20-%20AXORKS%20Technologies"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@axorks.com&su=Senior%20Engineering%20Role%20Inquiry%20-%20AXORKS%20Technologies"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--gold)] font-bold hover:underline"
@@ -227,7 +227,7 @@ export const Careers: React.FC = () => {
                   </span>
 
                   <a
-                    href={`mailto:careers@axorks.com?subject=Application:%20${encodeURIComponent(role.title)}%20:%20AXORKS%20Technologies`}
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=careers@axorks.com&su=${encodeURIComponent(`Application: ${role.title} : AXORKS Technologies`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-xs font-headline font-bold uppercase tracking-wider transition-colors"
@@ -254,7 +254,7 @@ export const Careers: React.FC = () => {
           </div>
 
           <a
-            href="mailto:careers@axorks.com?subject=Senior%20Practice%20Submission%20-%20AXORKS%20Technologies"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@axorks.com&su=Senior%20Practice%20Submission%20-%20AXORKS%20Technologies"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider magnetic-btn shadow-md cursor-pointer"

@@ -24,7 +24,7 @@ export const MobileStickyBar: React.FC = () => {
         </a>
 
         <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@axorks.com,muhammad.mujahid@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-1.5 py-3 px-3 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] font-headline text-xs font-bold uppercase tracking-wider shadow-md active:scale-95 transition-transform"
