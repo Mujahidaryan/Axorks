@@ -59,6 +59,34 @@
   color: #F8FAFC;
 }
 
+/* ─── Refined Luxury Light System (Mandatory 30–35% Executive Balance) ─── */
+.surface-luxury-light {
+  --bg-primary: #FAF9F6;
+  --bg-secondary: #F5F3EC;
+  --bg-tertiary: #EAE6DD;
+  --bg-card: #FFFFFF;
+  --text-primary: #0A0F1D;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-muted-dark: #94A3B8;
+  --glass-border: rgba(10, 15, 29, 0.09);
+  background-color: #FAF9F6;
+  color: #0A0F1D;
+}
+
+.luxury-light-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(10, 15, 29, 0.09);
+  box-shadow: 0 16px 40px -8px rgba(10, 15, 29, 0.05), 0 1px 3px rgba(10, 15, 29, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.luxury-light-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 50px -10px rgba(10, 15, 29, 0.09), 0 2px 6px rgba(10, 15, 29, 0.04);
+  border-color: rgba(245, 199, 97, 0.6);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

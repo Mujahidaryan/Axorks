@@ -38,37 +38,37 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Commercial Commitments Strip */}
+      {/* Commercial Commitments Strip (Refined Luxury Light Cadence) */}
       <section className="w-full px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg">
-            <Tag className="w-5 h-5 text-[var(--gold)] mb-3" />
-            <h4 className="font-headline text-base font-bold text-white mb-1">From $1,000</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
+          <div className="p-6 rounded-2xl bg-[#FAF9F6] border border-[#E2DED4] shadow-sm hover:shadow-md transition-all surface-luxury-light">
+            <Tag className="w-5 h-5 text-[#B45309] mb-3" />
+            <h4 className="font-headline text-base font-bold text-[#0A0F1D] mb-1">From $1,000</h4>
+            <p className="text-xs text-[#475569] leading-relaxed">
               Accessible entry pricing for growing companies, MVPs, and targeted automation workflows.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg">
-            <ShieldCheck className="w-5 h-5 text-[var(--emerald)] mb-3" />
-            <h4 className="font-headline text-base font-bold text-white mb-1">Fixed-Price Milestones</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
+          <div className="p-6 rounded-2xl bg-[#FAF9F6] border border-[#E2DED4] shadow-sm hover:shadow-md transition-all surface-luxury-light">
+            <ShieldCheck className="w-5 h-5 text-[#059669] mb-3" />
+            <h4 className="font-headline text-base font-bold text-[#0A0F1D] mb-1">Fixed-Price Milestones</h4>
+            <p className="text-xs text-[#475569] leading-relaxed">
               Scope and investment locked before code begins. You review staging builds before payment.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg">
-            <Building2 className="w-5 h-5 text-[#A78BFA] mb-3" />
-            <h4 className="font-headline text-base font-bold text-white mb-1">Karachi &amp; Islamabad</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
+          <div className="p-6 rounded-2xl bg-[#FAF9F6] border border-[#E2DED4] shadow-sm hover:shadow-md transition-all surface-luxury-light">
+            <Building2 className="w-5 h-5 text-[#7C3AED] mb-3" />
+            <h4 className="font-headline text-base font-bold text-[#0A0F1D] mb-1">Karachi &amp; Islamabad</h4>
+            <p className="text-xs text-[#475569] leading-relaxed">
               Registered software engineering offices in Pakistan serving global enterprise clients.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-lg">
-            <Key className="w-5 h-5 text-[#38BDF8] mb-3" />
-            <h4 className="font-headline text-base font-bold text-white mb-1">100% IP Ownership</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
+          <div className="p-6 rounded-2xl bg-[#FAF9F6] border border-[#E2DED4] shadow-sm hover:shadow-md transition-all surface-luxury-light">
+            <Key className="w-5 h-5 text-[#0284C7] mb-3" />
+            <h4 className="font-headline text-base font-bold text-[#0A0F1D] mb-1">100% IP Ownership</h4>
+            <p className="text-xs text-[#475569] leading-relaxed">
               Full repository transfer, documentation, and zero proprietary lock-in upon completion.
             </p>
           </div>

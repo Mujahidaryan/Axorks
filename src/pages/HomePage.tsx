@@ -26,17 +26,21 @@ export const HomePage: React.FC = () => {
       {/* 3. PRIMARY STRATEGIC OFFER: Custom Web Platforms & Business Systems (Locked Hierarchy #1) */}
       <PrimaryWebPlatforms />
 
-      {/* 4. SECONDARY OFFER: SEO • AEO • GEO Packages (Locked Hierarchy #2) */}
+      {/* 4. SECONDARY OFFER: SEO • AEO • GEO Packages (Locked Hierarchy #2 - Refined Luxury Light #2) */}
       <VisibilityPackages id="home-visibility" />
 
-      {/* 5. THE EVIDENCE ENGINE: Interwoven Work + Client Stories */}
-      <EvidenceEngine />
+      {/* 5. THE EVIDENCE ENGINE: Interwoven Work + Client Stories (DARK) */}
+      <div className="dark-surface">
+        <EvidenceEngine />
+      </div>
 
-      {/* 6. THE PROTOCOL: Global Delivery & Milestone Risk Removal */}
+      {/* 6. THE PROTOCOL: Global Delivery & Milestone Risk Removal (DARK) */}
       <GlobalDelivery />
 
-      {/* 7. THE ARCHITECTS: Leadership & Direct Access */}
-      <StudioTeam />
+      {/* 7. THE ARCHITECTS: Leadership & Direct Access (DARK) */}
+      <div className="dark-surface">
+        <StudioTeam />
+      </div>
 
       {/* 8. THE ESCALATION: Final Conversion Punctuation (DARK) */}
       <div className="dark-surface">

@@ -244,50 +244,50 @@ export const ProcessPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Milestone Governance Pillars: Clean Typographic Ledger */}
+      {/* Milestone Governance Pillars: Clean Typographic Ledger (Refined Luxury Light Zone) */}
       <section className="w-full px-4 sm:px-6 lg:px-8 mt-20">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-[#0D1424] border border-white/[0.08] rounded-3xl p-8 sm:p-12 shadow-2xl">
-            <span className="font-mono-code text-xs uppercase text-[var(--gold)] tracking-widest font-bold block mb-2">
+          <div className="bg-[#FAF9F6] border border-[#E2DED4] rounded-3xl p-8 sm:p-12 shadow-[0_20px_50px_rgba(10,15,29,0.06)] surface-luxury-light">
+            <span className="font-mono-code text-xs uppercase text-[#B45309] tracking-widest font-bold block mb-2">
               Our Commitments
             </span>
-            <h2 className="font-display-hero text-2xl sm:text-3xl font-extrabold text-white mb-8">
+            <h2 className="font-display-hero text-2xl sm:text-3xl font-extrabold text-[#0A0F1D] mb-8">
               The Three Pillars of Milestone Delivery
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-white/10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-[#E2DED4]">
               <div className="pt-4 md:pt-0 md:pr-6 space-y-2">
-                <span className="font-mono-code text-xs text-[var(--gold)] font-bold uppercase">
+                <span className="font-mono-code text-xs text-[#B45309] font-bold uppercase">
                   Pillar 1: Budget Certainty
                 </span>
-                <h3 className="font-headline text-lg font-bold text-white">
+                <h3 className="font-headline text-lg font-bold text-[#0A0F1D]">
                   Fixed Scope &amp; Budget Lock
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-normal">
                   Before a single line of code is written, we deliver an itemized technical scope with guaranteed pricing. If an architectural feature requires more effort on our end, the cost is on us.
                 </p>
               </div>
 
               <div className="pt-6 md:pt-0 md:px-6 space-y-2">
-                <span className="font-mono-code text-xs text-[var(--emerald)] font-bold uppercase">
+                <span className="font-mono-code text-xs text-[#059669] font-bold uppercase">
                   Pillar 2: Quality Assurance
                 </span>
-                <h3 className="font-headline text-lg font-bold text-white">
+                <h3 className="font-headline text-lg font-bold text-[#0A0F1D]">
                   Staging Inspection Before Release
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-normal">
                   Every sprint concludes with a deployed staging environment where you can click, test, and verify completed features on real devices before signing off and releasing the milestone invoice.
                 </p>
               </div>
 
               <div className="pt-6 md:pt-0 md:pl-6 space-y-2">
-                <span className="font-mono-code text-xs text-[#A78BFA] font-bold uppercase">
+                <span className="font-mono-code text-xs text-[#7C3AED] font-bold uppercase">
                   Pillar 3: Full IP Ownership
                 </span>
-                <h3 className="font-headline text-lg font-bold text-white">
+                <h3 className="font-headline text-lg font-bold text-[#0A0F1D]">
                   Full IP &amp; Code Repository Transfer
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-normal">
                   You own 100% of your source code, configuration files, environment variables, smart contracts, and architecture diagrams. We hand over repository admin rights cleanly upon final milestone sign-off.
                 </p>
               </div>

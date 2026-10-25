@@ -4,7 +4,6 @@ import {
   Search, 
   Sparkles, 
   Bot, 
-  Layers, 
   Check, 
   ArrowRight, 
   MessageSquare, 
@@ -20,53 +19,53 @@ interface VisibilityPackagesProps {
   condensed?: boolean;
 }
 
-export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'visibility-packages', condensed = false }) => {
+export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'visibility-packages' }) => {
   const [activeTab, setActiveTab] = useState<'packages' | 'comparison'>('packages');
 
   const getAccentStyles = (accent: VisibilityPackage['accent'], isPopular?: boolean) => {
     switch (accent) {
       case 'gold':
         return {
-          badgeBg: 'bg-[#F5C761]/15',
-          badgeText: 'text-[#F5C761]',
-          badgeBorder: 'border-[#F5C761]/40',
+          badgeBg: 'bg-[#FEF3C7]',
+          badgeText: 'text-[#92400E]',
+          badgeBorder: 'border-[#FDE68A]',
           border: isPopular 
-            ? 'border-2 border-[#F5C761] shadow-[0_0_40px_rgba(245,199,97,0.2)]' 
-            : 'border border-[#F5C761]/30',
-          btnBg: 'bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#1A1000]',
-          iconBg: 'bg-[#F5C761]/15',
-          iconColor: 'text-[#F5C761]',
+            ? 'border-2 border-[#D97706] ring-4 ring-[#F5C761]/20 shadow-[0_16px_45px_-8px_rgba(217,119,6,0.2)]' 
+            : 'border border-[#E2DED4]',
+          btnBg: 'bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#1A1000] shadow-[0_4px_16px_rgba(245,199,97,0.4)] hover:brightness-105',
+          iconBg: 'bg-[#FEF3C7]',
+          iconColor: 'text-[#D97706]',
         };
       case 'emerald':
         return {
-          badgeBg: 'bg-[#10B981]/15',
-          badgeText: 'text-[#10B981]',
-          badgeBorder: 'border-[#10B981]/40',
-          border: 'border border-[#10B981]/30',
-          btnBg: 'bg-[#10B981] hover:bg-[#059669] text-[#042F2E]',
-          iconBg: 'bg-[#10B981]/15',
-          iconColor: 'text-[#10B981]',
+          badgeBg: 'bg-[#ECFDF5]',
+          badgeText: 'text-[#065F46]',
+          badgeBorder: 'border-[#A7F3D0]',
+          border: 'border border-[#E2DED4]',
+          btnBg: 'bg-[#059669] hover:bg-[#047857] text-white shadow-[0_4px_16px_rgba(5,150,105,0.25)]',
+          iconBg: 'bg-[#ECFDF5]',
+          iconColor: 'text-[#059669]',
         };
       case 'violet':
         return {
-          badgeBg: 'bg-[#8B5CF6]/15',
-          badgeText: 'text-[#A78BFA]',
-          badgeBorder: 'border-[#8B5CF6]/40',
-          border: 'border border-[#8B5CF6]/30',
-          btnBg: 'bg-[#8B5CF6] hover:bg-[#7C3AED] text-white',
-          iconBg: 'bg-[#8B5CF6]/15',
-          iconColor: 'text-[#A78BFA]',
+          badgeBg: 'bg-[#F5F3FF]',
+          badgeText: 'text-[#5B21B6]',
+          badgeBorder: 'border-[#DDD6FE]',
+          border: 'border border-[#E2DED4]',
+          btnBg: 'bg-[#7C3AED] hover:bg-[#6D28D9] text-white shadow-[0_4px_16px_rgba(124,58,237,0.25)]',
+          iconBg: 'bg-[#F5F3FF]',
+          iconColor: 'text-[#7C3AED]',
         };
       case 'cyan':
       default:
         return {
-          badgeBg: 'bg-[#38BDF8]/15',
-          badgeText: 'text-[#38BDF8]',
-          badgeBorder: 'border-[#38BDF8]/40',
-          border: 'border border-[#38BDF8]/30',
-          btnBg: 'bg-[#0F172A] hover:bg-[#1E293B] text-white border border-white/15',
-          iconBg: 'bg-[#38BDF8]/15',
-          iconColor: 'text-[#38BDF8]',
+          badgeBg: 'bg-[#F0F9FF]',
+          badgeText: 'text-[#075985]',
+          badgeBorder: 'border-[#BAE6FD]',
+          border: 'border border-[#E2DED4]',
+          btnBg: 'bg-[#0284C7] hover:bg-[#0369A1] text-white shadow-[0_4px_16px_rgba(2,132,199,0.25)]',
+          iconBg: 'bg-[#F0F9FF]',
+          iconColor: 'text-[#0284C7]',
         };
     }
   };
@@ -86,7 +85,11 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
   };
 
   return (
-    <section className="w-full py-16 sm:py-24 relative overflow-hidden" id={id}>
+    <section className="w-full bg-[#F8F7F4] py-16 sm:py-24 relative overflow-hidden border-b border-[#E2DED4] surface-luxury-light" id={id}>
+      {/* Soft champagne & blue ambient light for surface depth */}
+      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#F5C761]/6 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#38BDF8]/5 rounded-full blur-[120px] pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Section */}
@@ -97,30 +100,30 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--gold)]/10 border border-[var(--gold)]/30 text-xs uppercase text-[var(--gold)] tracking-widest font-bold font-mono-code mb-4 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[var(--gold)] animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-xs uppercase text-[#92400E] tracking-widest font-bold font-mono-code mb-4 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#D97706] animate-pulse" />
             <span>SEO • AEO • GEO Packages</span>
           </div>
 
-          <h2 className="font-display-hero text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--text-primary)] tracking-tight leading-tight">
+          <h2 className="font-display-hero text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A0F1D] tracking-tight leading-tight">
             Get Found on Google.<br />
-            <span className="bg-gradient-to-r from-[#F5C761] via-[#10B981] to-[#38BDF8] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#D97706] via-[#059669] to-[#0284C7] bg-clip-text text-transparent">
               Get Cited by AI.
             </span>
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed">
-            Discovery is no longer just keywords in a search box. Modern buyers and executives ask <span className="font-semibold text-[var(--text-primary)]">Perplexity, ChatGPT, and Claude</span> for vendor recommendations. We optimize your business across all three modern search layers.
+          <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
+            Discovery is no longer just keywords in a search box. Modern buyers and executives ask <span className="font-semibold text-[#0A0F1D]">Perplexity, ChatGPT, and Claude</span> for vendor recommendations. We optimize your business across all three modern search layers.
           </p>
 
           {/* Tab Selector */}
-          <div className="mt-8 inline-flex items-center p-1.5 rounded-2xl bg-[#090E1D] border border-white/10 shadow-inner">
+          <div className="mt-8 inline-flex items-center p-1.5 rounded-2xl bg-[#EAE6DF] border border-[#D5D0C5] shadow-inner">
             <button
               onClick={() => setActiveTab('packages')}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-headline font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'packages'
-                  ? 'bg-[#0D1424] text-white border border-white/15 shadow-lg'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-white text-[#0A0F1D] border border-[#D5D0C5] shadow-md'
+                  : 'text-[#64748B] hover:text-[#0A0F1D]'
               }`}
             >
               Service Packages &amp; Pricing
@@ -129,8 +132,8 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
               onClick={() => setActiveTab('comparison')}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-headline font-bold uppercase tracking-wider transition-all cursor-pointer ${
                 activeTab === 'comparison'
-                  ? 'bg-[#0D1424] text-white border border-white/15 shadow-lg'
-                  : 'text-slate-400 hover:text-white'
+                  ? 'bg-white text-[#0A0F1D] border border-[#D5D0C5] shadow-md'
+                  : 'text-[#64748B] hover:text-[#0A0F1D]'
               }`}
             >
               SEO vs. AEO vs. GEO Guide
@@ -152,7 +155,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.08 * idx, ease: [0.16, 1, 0.3, 1] }}
-                  className={`bg-[#0D1424] rounded-3xl p-6 sm:p-7 flex flex-col justify-between spatial-card !overflow-visible relative transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ${styles.border} ${pkg.popular ? 'ring-1 ring-[var(--gold)]/40 shadow-[0_0_40px_rgba(245,199,97,0.18)]' : 'border border-white/[0.08]'}`}
+                  className={`bg-white rounded-3xl p-6 sm:p-7 flex flex-col justify-between spatial-card !overflow-visible relative transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl shadow-[0_12px_35px_-8px_rgba(10,15,29,0.06)] ${styles.border}`}
                   style={{ overflow: 'visible' }}
                 >
                   {/* Popular Banner */}
@@ -174,38 +177,38 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                     </div>
 
                     {/* Name & Tagline */}
-                    <h3 className="font-headline text-lg sm:text-xl font-bold text-[var(--text-primary)] mb-1">
+                    <h3 className="font-headline text-lg sm:text-xl font-bold text-[#0A0F1D] mb-1">
                       {pkg.name}
                     </h3>
-                    <p className="text-xs text-[var(--text-muted)] font-medium mb-5">
+                    <p className="text-xs text-[#64748B] font-medium mb-5">
                       {pkg.tagline}
                     </p>
 
                     {/* Pricing */}
-                    <div className="mb-6 pb-5 border-b border-[var(--glass-border)]">
+                    <div className="mb-6 pb-5 border-b border-[#E2DED4]">
                       <div className="flex items-baseline gap-1">
-                        <span className="font-display-hero text-3xl sm:text-4xl font-extrabold text-[var(--text-primary)]">
+                        <span className="font-display-hero text-3xl sm:text-4xl font-extrabold text-[#0A0F1D]">
                           {pkg.price}
                         </span>
-                        <span className="text-xs text-[var(--text-muted)] font-mono-code">
+                        <span className="text-xs text-[#64748B] font-mono-code">
                           {pkg.billingPeriod}
                         </span>
                       </div>
-                      <p className="text-[11px] text-[var(--text-secondary)] mt-2 leading-relaxed">
+                      <p className="text-[11px] text-[#475569] mt-2 leading-relaxed">
                         {pkg.description}
                       </p>
                     </div>
 
                     {/* Target Search & AI Engines */}
                     <div className="mb-6">
-                      <span className="text-[10px] font-mono-code uppercase text-[var(--text-muted)] font-bold tracking-wider block mb-2">
+                      <span className="text-[10px] font-mono-code uppercase text-[#64748B] font-bold tracking-wider block mb-2">
                         Target Discovery Engines:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
                         {pkg.targetEngines.map((engine, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-0.5 rounded-md bg-[var(--bg-secondary)] text-[10px] font-mono-code text-[var(--text-secondary)] font-medium"
+                            className="px-2 py-0.5 rounded-md bg-[#F1EFEA] border border-[#E2DED4] text-[10px] font-mono-code text-[#1E293B] font-medium"
                           >
                             {engine}
                           </span>
@@ -215,10 +218,10 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
 
                     {/* Key Features List */}
                     <div className="mb-6">
-                      <span className="text-[10px] font-mono-code uppercase text-[var(--text-muted)] font-bold tracking-wider block mb-2.5">
+                      <span className="text-[10px] font-mono-code uppercase text-[#64748B] font-bold tracking-wider block mb-2.5">
                         Included Deliverables:
                       </span>
-                      <ul className="space-y-2 text-xs text-[var(--text-secondary)]">
+                      <ul className="space-y-2 text-xs text-[#334155]">
                         {pkg.features.map((feat, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <Check className={`w-3.5 h-3.5 mt-0.5 shrink-0 ${styles.iconColor}`} />
@@ -230,7 +233,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                   </div>
 
                   {/* Actions */}
-                  <div className="pt-4 border-t border-[var(--glass-border)] mt-4">
+                  <div className="pt-4 border-t border-[#E2DED4] mt-4">
                     <a
                       href={`https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=${encodeURIComponent(pkg.emailSubject)}`}
                       target="_blank"
@@ -242,7 +245,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                     </a>
 
                     <div className="mt-2.5 text-center">
-                      <span className="text-[10px] font-mono-code text-[var(--text-muted)]">
+                      <span className="text-[10px] font-mono-code text-[#64748B]">
                         No lock-in contract • Cancel anytime
                       </span>
                     </div>
@@ -259,16 +262,16 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="bg-[#0D1424] rounded-3xl p-6 sm:p-10 spatial-card border border-white/[0.08] shadow-2xl"
+            className="bg-white rounded-3xl p-6 sm:p-10 spatial-card border border-[#E2DED4] shadow-2xl"
           >
             <div className="max-w-2xl mb-8">
-              <span className="font-mono-code text-xs uppercase text-[var(--gold)] tracking-widest font-bold block mb-2">
+              <span className="font-mono-code text-xs uppercase text-[#B45309] tracking-widest font-bold block mb-2">
                 Executive Clarity
               </span>
-              <h3 className="font-display-hero text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">
+              <h3 className="font-display-hero text-2xl sm:text-3xl font-bold text-[#0A0F1D]">
                 Understanding the 3 Modern Discovery Vectors
               </h3>
-              <p className="mt-2 text-sm text-[var(--text-secondary)] leading-relaxed">
+              <p className="mt-2 text-sm text-[#475569] leading-relaxed">
                 Why classic SEO is no longer enough: Search has bifurcated into traditional web search, direct AI answers, and conversational recommendations. Here is how they differ:
               </p>
             </div>
@@ -276,25 +279,25 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse min-w-[700px]">
                 <thead>
-                  <tr className="border-b-2 border-[var(--glass-border)]">
-                    <th className="py-4 px-3 font-headline text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider w-1/4">
+                  <tr className="border-b-2 border-[#E2DED4]">
+                    <th className="py-4 px-3 font-headline text-xs font-bold text-[#64748B] uppercase tracking-wider w-1/4">
                       Dimension
                     </th>
-                    <th className="py-4 px-3 font-headline text-xs font-bold text-[#38BDF8] uppercase tracking-wider w-1/4">
+                    <th className="py-4 px-3 font-headline text-xs font-bold text-[#0284C7] uppercase tracking-wider w-1/4">
                       SEO (Search Engine Optimization)
                     </th>
-                    <th className="py-4 px-3 font-headline text-xs font-bold text-[#10B981] uppercase tracking-wider w-1/4">
+                    <th className="py-4 px-3 font-headline text-xs font-bold text-[#059669] uppercase tracking-wider w-1/4">
                       AEO (Answer Engine Optimization)
                     </th>
-                    <th className="py-4 px-3 font-headline text-xs font-bold text-[#A78BFA] uppercase tracking-wider w-1/4">
+                    <th className="py-4 px-3 font-headline text-xs font-bold text-[#7C3AED] uppercase tracking-wider w-1/4">
                       GEO (Generative Engine Optimization)
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[var(--glass-border)] text-xs sm:text-sm text-[var(--text-secondary)]">
+                <tbody className="divide-y divide-[#E2DED4] text-xs sm:text-sm text-[#334155]">
                   {VISIBILITY_COMPARISON.map((row, idx) => (
-                    <tr key={idx} className="hover:bg-[var(--bg-secondary)]/50 transition-colors">
-                      <td className="py-4 px-3 font-headline font-bold text-[var(--text-primary)]">
+                    <tr key={idx} className="hover:bg-[#FAF9F6] transition-colors">
+                      <td className="py-4 px-3 font-headline font-bold text-[#0A0F1D]">
                         {row.channel}
                       </td>
                       <td className="py-4 px-3 leading-relaxed">
@@ -312,12 +315,12 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
               </table>
             </div>
 
-            <div className="mt-10 p-6 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--glass-border)] flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="mt-10 p-6 rounded-2xl bg-[#FAF9F6] border border-[#E2DED4] flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h4 className="font-headline text-base font-bold text-[var(--text-primary)]">
+                <h4 className="font-headline text-base font-bold text-[#0A0F1D]">
                   Ready to deploy 360° visibility for your company?
                 </h4>
-                <p className="text-xs text-[var(--text-secondary)] mt-1">
+                <p className="text-xs text-[#475569] mt-1">
                   Start with the Full Visibility Package ($950/mo) and capture Google + AI answer engines simultaneously.
                 </p>
               </div>
@@ -327,7 +330,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Full%20Visibility%20Package%20Inquiry%20(SEO%20%2B%20AEO%20%2B%20GEO%20-%20%24950%2Fmo)%20-%20Axorks"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="magnetic-btn px-6 py-3 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#1A1000] text-xs font-headline font-bold uppercase tracking-wider flex items-center gap-2 shadow-[0_0_25px_rgba(245,199,97,0.3)]"
+                  className="magnetic-btn px-6 py-3 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#1A1000] text-xs font-headline font-bold uppercase tracking-wider flex items-center gap-2 shadow-[0_4px_16px_rgba(245,199,97,0.3)]"
                 >
                   <span>Book Full Visibility Package</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -337,9 +340,9 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                   href="https://wa.me/923141030223?text=Hi%20Axorks%20team,%20I'm%20interested%20in%20your%20SEO,%20AEO,%20and%20GEO%20service%20packages."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-3 rounded-xl bg-[var(--bg-primary)] border border-[var(--glass-border)] text-[var(--text-primary)] hover:text-[#0F766E] text-xs font-headline font-bold uppercase tracking-wider flex items-center gap-2"
+                  className="px-4 py-3 rounded-xl bg-white border border-[#E2DED4] text-[#0A0F1D] hover:bg-[#F1EFEA] text-xs font-headline font-bold uppercase tracking-wider flex items-center gap-2 transition-colors"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 text-[#0F766E]" />
+                  <MessageSquare className="w-3.5 h-3.5 text-[#059669]" />
                   <span>WhatsApp</span>
                 </a>
               </div>
@@ -353,29 +356,29 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-[var(--glass-border)] text-center sm:text-left"
+          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-[#E2DED4] text-center sm:text-left"
         >
           <div className="flex items-center gap-3 justify-center sm:justify-start">
-            <ShieldCheck className="w-5 h-5 text-[var(--emerald)] shrink-0" />
+            <ShieldCheck className="w-5 h-5 text-[#059669] shrink-0" />
             <div>
-              <p className="text-xs font-bold text-[var(--text-primary)]">Transparent Monthly Retainers</p>
-              <p className="text-[11px] text-[var(--text-muted)]">Fixed fee, zero hidden agency markups or surprises.</p>
+              <p className="text-xs font-bold text-[#0A0F1D]">Transparent Monthly Retainers</p>
+              <p className="text-[11px] text-[#64748B]">Fixed fee, zero hidden agency markups or surprises.</p>
             </div>
           </div>
 
           <div className="flex items-center gap-3 justify-center sm:justify-start">
-            <Zap className="w-5 h-5 text-[var(--gold)] shrink-0" />
+            <Zap className="w-5 h-5 text-[#D97706] shrink-0" />
             <div>
-              <p className="text-xs font-bold text-[var(--text-primary)]">Rapid Technical Implementation</p>
-              <p className="text-[11px] text-[var(--text-muted)]">Initial schema and technical audit live within 7 business days.</p>
+              <p className="text-xs font-bold text-[#0A0F1D]">Rapid Technical Implementation</p>
+              <p className="text-[11px] text-[#64748B]">Initial schema and technical audit live within 7 business days.</p>
             </div>
           </div>
 
           <div className="flex items-center gap-3 justify-center sm:justify-start">
-            <TrendingUp className="w-5 h-5 text-[#0369A1] shrink-0" />
+            <TrendingUp className="w-5 h-5 text-[#0284C7] shrink-0" />
             <div>
-              <p className="text-xs font-bold text-[var(--text-primary)]">Verified Citation Tracking</p>
-              <p className="text-[11px] text-[var(--text-muted)]">Monthly audit tracking citations across Perplexity, ChatGPT &amp; Google.</p>
+              <p className="text-xs font-bold text-[#0A0F1D]">Verified Citation Tracking</p>
+              <p className="text-[11px] text-[#64748B]">Monthly audit tracking citations across Perplexity, ChatGPT &amp; Google.</p>
             </div>
           </div>
         </motion.div>
