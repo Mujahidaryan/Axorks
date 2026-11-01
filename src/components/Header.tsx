@@ -58,10 +58,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
         scrolled
-          ? 'bg-[#050814]/90 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_12px_40px_rgba(0,0,0,0.7)] py-3'
+          ? 'bg-[#08080A]/92 backdrop-blur-2xl border-b border-[rgba(146,157,167,0.14)] shadow-[0_12px_40px_rgba(0,0,0,0.85)] py-3'
           : isHome
-            ? 'bg-gradient-to-b from-[#050814]/85 to-transparent border-b border-transparent py-5'
-            : 'bg-[#050814]/85 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_8px_32px_rgba(0,0,0,0.5)] py-4'
+            ? 'bg-gradient-to-b from-[#08080A]/90 to-transparent border-b border-transparent py-5'
+            : 'bg-[#08080A]/90 backdrop-blur-xl border-b border-[rgba(146,157,167,0.12)] shadow-[0_8px_32px_rgba(0,0,0,0.6)] py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -126,7 +126,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
-              className="magnetic-btn px-5 py-2.5 rounded-xl font-headline text-[11px] uppercase tracking-wider font-bold transition-all duration-300 flex items-center gap-2 bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#0A0F1D] shadow-[0_0_20px_rgba(245,199,97,0.3)] hover:shadow-[0_0_25px_rgba(245,199,97,0.45)] hover:brightness-105"
+              className="magnetic-btn px-5 py-2.5 rounded-xl font-headline text-[11px] uppercase tracking-wider font-bold transition-all duration-300 flex items-center gap-2 bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] shadow-[0_4px_16px_rgba(232,185,35,0.3)] hover:shadow-[0_4px_20px_rgba(232,185,35,0.45)] hover:brightness-105"
             >
               <span>Book Discovery Call</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -150,7 +150,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 pointer-events-auto bg-[#070B19]/98 backdrop-blur-2xl border-b border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.9)] overflow-hidden"
+            className="absolute top-full left-0 right-0 pointer-events-auto bg-[#08080A]/98 backdrop-blur-2xl border-b border-[rgba(146,157,167,0.18)] shadow-[0_20px_60px_rgba(0,0,0,0.95)] overflow-hidden"
           >
             <div className="flex flex-col p-4 gap-1.5 max-w-7xl mx-auto">
               {NAV_LINKS.map((link) => (
@@ -159,19 +159,19 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
                   onClick={() => handleNavClick(link.path, link.hash)}
                   className={`w-full text-left px-4 py-3 rounded-xl text-sm font-headline tracking-wide uppercase transition-colors flex items-center justify-between ${
                     link.isPill
-                      ? 'bg-[var(--gold)]/10 text-[var(--gold)] font-bold border border-[var(--gold)]/30 my-1'
+                      ? 'bg-[#E8B923]/10 text-[#E8B923] font-bold border border-[#E8B923]/30 my-1'
                       : currentPath === link.path && !link.hash
                         ? 'bg-white/15 text-white font-bold border border-white/10'
                         : 'text-slate-300 font-semibold hover:bg-white/[0.08] hover:text-white'
                   }`}
                 >
                   <div className="flex items-center gap-2">
-                    {link.isPill && <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)] animate-pulse" />}
+                    {link.isPill && <span className="w-1.5 h-1.5 rounded-full bg-[#E8B923] animate-pulse" />}
                     <span>{link.label}</span>
                   </div>
                   {link.isPill && (
-                    <span className="text-[10px] font-mono-code font-bold px-2 py-0.5 rounded-full bg-[var(--gold)]/20 text-[var(--gold)]">
-                      $250+
+                    <span className="text-[10px] font-mono-code font-bold px-2 py-0.5 rounded-full bg-[#E8B923]/20 text-[#E8B923]">
+                      $99+
                     </span>
                   )}
                 </button>
@@ -181,7 +181,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between px-4 py-3.5 bg-gradient-to-r from-[#F5C761] via-[#EAB308] to-[#D97706] text-[#0A0F1D] rounded-xl font-headline text-xs font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(245,199,97,0.3)]"
+                className="w-full flex items-center justify-between px-4 py-3.5 bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] rounded-xl font-headline text-xs font-bold tracking-wider uppercase shadow-[0_4px_16px_rgba(232,185,35,0.3)]"
               >
                 <span>Book Discovery Call</span>
                 <ArrowRight className="w-4 h-4" />

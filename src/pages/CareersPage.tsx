@@ -155,7 +155,7 @@ export const CareersPage: React.FC = () => {
                 Transparent Evaluation.
               </h2>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                We respect your time. Our hiring protocol is entirely technical and transparent. No brain-teasers, no whiteboard algorithms—just real system architecture.
+                We respect your time. Our hiring protocol is entirely technical and transparent. No brain-teasers, no whiteboard algorithms - just real system architecture.
               </p>
             </div>
 

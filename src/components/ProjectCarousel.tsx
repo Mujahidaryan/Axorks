@@ -72,13 +72,13 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
 
   return (
     <div
-      className={`overflow-hidden rounded-2xl bg-[#070C18] border border-white/15 shadow-2xl relative select-none group/carousel ${className}`}
+      className={`overflow-hidden rounded-2xl bg-[#121214] border border-[rgba(146,157,167,0.14)] shadow-2xl relative select-none group/carousel ${className}`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       {/* Chrome Status Header */}
       {showChromeHeader && (
-        <div className="flex items-center justify-between px-3.5 sm:px-4 py-2 sm:py-2.5 bg-[#0A1020] border-b border-white/[0.08] text-[10px] sm:text-[11px] font-mono-code text-white/50">
+        <div className="flex items-center justify-between px-3.5 sm:px-4 py-2 sm:py-2.5 bg-[#161618] border-b border-[rgba(146,157,167,0.12)] text-[10px] sm:text-[11px] font-mono-code text-white/50">
           <div className="flex items-center gap-2 min-w-0">
             <span className="w-2.5 h-2.5 rounded-full bg-[#EF4444]/70 shrink-0" />
             <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/70 shrink-0" />

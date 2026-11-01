@@ -38,37 +38,37 @@ export const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Commercial Commitments Strip (Refined Luxury Light Cadence) */}
+      {/* Commercial Commitments Strip */}
       <section className="w-full px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="p-6 rounded-2xl bg-[#FAF9F6] border border-[#E2DED4] shadow-sm hover:shadow-md transition-all surface-luxury-light">
-            <Tag className="w-5 h-5 text-[#B45309] mb-3" />
-            <h4 className="font-headline text-base font-bold text-[#0A0F1D] mb-1">From $1,000</h4>
-            <p className="text-xs text-[#475569] leading-relaxed">
-              Accessible entry pricing for growing companies, MVPs, and targeted automation workflows.
+          <div className="p-6 rounded-2xl bg-[#121214] border border-[rgba(146,157,167,0.14)] shadow-lg hover:border-[rgba(146,157,167,0.3)] transition-all">
+            <Tag className="w-5 h-5 text-[#E8B923] mb-3" />
+            <h4 className="font-headline text-base font-bold text-[#F4F4F5] mb-1">From $199 - $499</h4>
+            <p className="text-xs text-[#A1A1AA] leading-relaxed">
+              Accessible fixed milestone pricing for growing companies, MVPs, and production web systems.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#FAF9F6] border border-[#E2DED4] shadow-sm hover:shadow-md transition-all surface-luxury-light">
-            <ShieldCheck className="w-5 h-5 text-[#059669] mb-3" />
-            <h4 className="font-headline text-base font-bold text-[#0A0F1D] mb-1">Fixed-Price Milestones</h4>
-            <p className="text-xs text-[#475569] leading-relaxed">
-              Scope and investment locked before code begins. You review staging builds before payment.
+          <div className="p-6 rounded-2xl bg-[#121214] border border-[rgba(146,157,167,0.14)] shadow-lg hover:border-[rgba(146,157,167,0.3)] transition-all">
+            <ShieldCheck className="w-5 h-5 text-[#5EEAD4] mb-3" />
+            <h4 className="font-headline text-base font-bold text-[#F4F4F5] mb-1">Fixed-Price Milestones</h4>
+            <p className="text-xs text-[#A1A1AA] leading-relaxed">
+              Scope and investment locked before code begins. You review live staging builds before payment.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#FAF9F6] border border-[#E2DED4] shadow-sm hover:shadow-md transition-all surface-luxury-light">
-            <Building2 className="w-5 h-5 text-[#7C3AED] mb-3" />
-            <h4 className="font-headline text-base font-bold text-[#0A0F1D] mb-1">Karachi &amp; Islamabad</h4>
-            <p className="text-xs text-[#475569] leading-relaxed">
+          <div className="p-6 rounded-2xl bg-[#121214] border border-[rgba(146,157,167,0.14)] shadow-lg hover:border-[rgba(146,157,167,0.3)] transition-all">
+            <Building2 className="w-5 h-5 text-[#E85A3C] mb-3" />
+            <h4 className="font-headline text-base font-bold text-[#F4F4F5] mb-1">Karachi &amp; Islamabad</h4>
+            <p className="text-xs text-[#A1A1AA] leading-relaxed">
               Registered software engineering offices in Pakistan serving global enterprise clients.
             </p>
           </div>
 
-          <div className="p-6 rounded-2xl bg-[#FAF9F6] border border-[#E2DED4] shadow-sm hover:shadow-md transition-all surface-luxury-light">
-            <Key className="w-5 h-5 text-[#0284C7] mb-3" />
-            <h4 className="font-headline text-base font-bold text-[#0A0F1D] mb-1">100% IP Ownership</h4>
-            <p className="text-xs text-[#475569] leading-relaxed">
+          <div className="p-6 rounded-2xl bg-[#121214] border border-[rgba(146,157,167,0.14)] shadow-lg hover:border-[rgba(146,157,167,0.3)] transition-all">
+            <Key className="w-5 h-5 text-[#5EEAD4] mb-3" />
+            <h4 className="font-headline text-base font-bold text-[#F4F4F5] mb-1">100% IP Ownership</h4>
+            <p className="text-xs text-[#A1A1AA] leading-relaxed">
               Full repository transfer, documentation, and zero proprietary lock-in upon completion.
             </p>
           </div>
@@ -410,12 +410,12 @@ export const AboutPage: React.FC = () => {
 
       {/* Bottom Conversion Section */}
       <section className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center bg-[#0A0F1D] rounded-3xl p-8 sm:p-12 border border-[var(--gold)]/30 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[var(--gold)]/5 rounded-full blur-[100px] pointer-events-none" />
-          <h2 className="font-display-hero text-2xl sm:text-3xl font-extrabold text-white mb-3 relative z-10">
+        <div className="max-w-5xl mx-auto text-center bg-[#121214] rounded-3xl p-8 sm:p-12 border border-[rgba(146,157,167,0.14)] shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#E8B923]/4 rounded-full blur-[100px] pointer-events-none" />
+          <h2 className="font-display-hero text-2xl sm:text-3xl font-extrabold text-[#F4F4F5] mb-3 relative z-10">
             Collaborate Directly with Senior Engineers.
           </h2>
-          <p className="text-sm text-slate-300 max-w-xl mx-auto mb-6 relative z-10">
+          <p className="text-sm text-[#A1A1AA] max-w-xl mx-auto mb-6 relative z-10">
             Get an itemized Technical Specification Document and fixed-price proposal for your custom system.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
@@ -423,7 +423,7 @@ export const AboutPage: React.FC = () => {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
-              className="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-lg"
+              className="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-[0_4px_20px_rgba(232,185,35,0.35)]"
             >
               <span>Book Free Discovery Call</span>
               <ArrowRight className="w-4 h-4" />
@@ -432,9 +432,9 @@ export const AboutPage: React.FC = () => {
               href="https://wa.me/923141030223"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-black/50 border border-[#10B981]/50 text-white text-xs font-headline font-semibold uppercase tracking-wider"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#161618] border border-[#5EEAD4]/40 text-[#F4F4F5] text-xs font-headline font-semibold uppercase tracking-wider"
             >
-              <MessageSquare className="w-4 h-4 text-[#10B981]" />
+              <MessageSquare className="w-4 h-4 text-[#5EEAD4]" />
               <span>WhatsApp: +92 314 103 0223</span>
             </a>
           </div>
