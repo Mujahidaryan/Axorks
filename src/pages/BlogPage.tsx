@@ -39,11 +39,11 @@ export const BlogPage: React.FC = () => {
       publisher: {
         '@type': 'Organization',
         name: 'AXORKS Technologies',
-        url: 'https://axorks.com',
+        url: 'https://www.axorks.com',
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': `https://axorks.com/blog/${activePost.slug}`,
+        '@id': `https://www.axorks.com/blog/${activePost.slug}`,
       },
     };
 

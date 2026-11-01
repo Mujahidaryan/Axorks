@@ -105,7 +105,7 @@ export const RouterProvider: React.FC<RouterProviderProps> = ({ children }) => {
 
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
-      const canonicalUrl = path === '/' ? 'https://axorks.com' : `https://axorks.com${path}`;
+      const canonicalUrl = path === '/' ? 'https://www.axorks.com' : `https://www.axorks.com${path}`;
       canonical.setAttribute('href', canonicalUrl);
     }
   }, [path]);

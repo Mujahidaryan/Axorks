@@ -1,43 +1,45 @@
-# Robots.txt for AXORKS Technologies (axorks.com)
-# Configured for Maximum SEO, AEO, and GEO Indexing
+# =================================================================
+# AXORKS Technologies - robots.txt
+# Optimized for maximum search & AI visibility (SEO + AEO + GEO)
+# Last updated: November 2026
+# =================================================================
 
 User-agent: *
 Allow: /
 
-# OpenAI / ChatGPT Crawlers
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-# Anthropic / Claude Crawlers
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-# Perplexity AI Answer Engine Crawlers
-User-agent: PerplexityBot
-Allow: /
-
-# Google & Gemini Crawlers
+# -----------------------------
+# Major Search Engines
+# -----------------------------
 User-agent: Googlebot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-# Microsoft Bing & Copilot
 User-agent: Bingbot
 Allow: /
 
-# Apple Intelligence
 User-agent: Applebot
 Allow: /
 
-# Other Major AI & Search Crawlers
+# -----------------------------
+# AI / LLM Crawlers (AEO & GEO)
+# -----------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 User-agent: Amazonbot
 Allow: /
 
@@ -47,5 +49,7 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
+# -----------------------------
 # Sitemap
-Sitemap: https://axorks.com/sitemap.xml
+# -----------------------------
+Sitemap: https://www.axorks.com/sitemap.xml
