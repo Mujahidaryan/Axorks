@@ -107,7 +107,7 @@ export const Hero: React.FC<HeroProps> = () => {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-base sm:text-lg lg:text-xl text-[#A1A1AA] leading-relaxed font-normal max-w-xl"
           >
-            We architect mission-critical custom web applications, scalable SaaS architectures, and high-security enterprise systems with guaranteed milestone delivery and 100% full-code IP handover.
+            We architect mission-critical custom web applications, scalable SaaS architectures, and high-security business systems. Delivered with guaranteed fixed milestones, zero 4x agency markups, and 100% full-code IP handover.
           </motion.p>
 
           {/* Spatial Frosted Glass Telemetry Strip (Locked Pricing Visibility) */}

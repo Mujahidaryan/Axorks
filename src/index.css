@@ -42,10 +42,8 @@
   --glass-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.95), 0 0 1px 1px rgba(146, 157, 167, 0.08) inset;
 }
 
-/* 94-97% Monolithic Dark Standard across all sections */
-.dark-surface,
-.surface-luxury-light,
-.surface-ivory {
+/* Strategic Dark Punctuation */
+.dark-surface {
   --bg-primary: #08080A;
   --bg-secondary: #121214;
   --bg-tertiary: #161618;
@@ -59,17 +57,31 @@
   color: #F4F4F5;
 }
 
+/* Intentional High-Value Proof Light Section (18-20% Ratio Standard) */
+.surface-luxury-light {
+  --bg-primary: #FAF9F6;
+  --bg-secondary: #F5F3EC;
+  --bg-tertiary: #EAE6DD;
+  --bg-card: #FFFFFF;
+  --text-primary: #0A0F1D;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --glass-border: rgba(10, 15, 29, 0.09);
+  background-color: #FAF9F6;
+  color: #0A0F1D;
+}
+
 .luxury-light-card {
-  background-color: #121214;
-  border: 1px solid rgba(146, 157, 167, 0.14);
-  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.6);
+  background-color: #FFFFFF;
+  border: 1px solid rgba(10, 15, 29, 0.09);
+  box-shadow: 0 16px 40px -8px rgba(10, 15, 29, 0.06), 0 1px 3px rgba(10, 15, 29, 0.04);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
 .luxury-light-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.8);
-  border-color: rgba(232, 185, 35, 0.4);
+  box-shadow: 0 24px 50px -10px rgba(10, 15, 29, 0.10), 0 2px 6px rgba(10, 15, 29, 0.05);
+  border-color: rgba(232, 90, 60, 0.4);
 }
 
 @layer base {
