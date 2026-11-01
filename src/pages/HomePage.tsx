@@ -100,7 +100,7 @@ export const HomePage: React.FC = () => {
             <span className="text-[#71717A]">·</span> 
             <span className="flex items-center gap-1.5"><ArrowRight className="w-3 h-3 text-[#5EEAD4]" /> 100% IP.</span> 
             <span className="text-[#71717A]">·</span> 
-            <span className="flex items-center gap-1.5"><ArrowRight className="w-3 h-3 text-[#5EEAD4]" /> Web platforms from $199 - $499.</span>
+            <span className="flex items-center gap-1.5"><ArrowRight className="w-3 h-3 text-[#5EEAD4]" /> Fixed milestone scopes from $199.</span>
           </p>
         </motion.div>
       </section>

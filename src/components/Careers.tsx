@@ -257,7 +257,7 @@ export const Careers: React.FC = () => {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@axorks.com&su=Senior%20Practice%20Submission%20-%20AXORKS%20Technologies"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider magnetic-btn shadow-md cursor-pointer"
+            className="shrink-0 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] text-xs font-headline font-bold uppercase tracking-wider magnetic-btn shadow-[0_4px_16px_rgba(232,185,35,0.3)] hover:brightness-105 cursor-pointer"
           >
             <Mail className="w-3.5 h-3.5" />
             <span>careers@axorks.com</span>

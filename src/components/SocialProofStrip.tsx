@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { useRouter } from '../router/Router';
 
 interface ProofItem {
   id: string;
@@ -19,7 +20,7 @@ const PROOF_ITEMS: ProofItem[] = [
     logo: '/Logos/agrotrace_logo.png',
     metric: '42% Spoilage Drop',
     result: '14,000 active nodes tracked across cold-chain logistics in real time.',
-    accent: 'var(--emerald)',
+    accent: '#10B981',
   },
   {
     id: 'ipmi-os',
@@ -28,7 +29,7 @@ const PROOF_ITEMS: ProofItem[] = [
     logo: '/Logos/ipmios_logo.png',
     metric: '<1s Latency',
     result: 'Multi-tier TQE analysis and autonomous risk governance execution engine.',
-    accent: 'var(--gold)',
+    accent: '#E8B923',
   },
   {
     id: 'mediverse',
@@ -37,7 +38,7 @@ const PROOF_ITEMS: ProofItem[] = [
     logo: '/Logos/mediverse_logo.png',
     metric: 'WHO & HIPAA',
     result: 'Compliant cross-border telemedicine connecting verified specialists.',
-    accent: '#A78BFA',
+    accent: '#5EEAD4',
   },
   {
     id: 'fume',
@@ -46,22 +47,24 @@ const PROOF_ITEMS: ProofItem[] = [
     logo: '/Logos/fume_logo.jpg',
     metric: 'Bespoke UI',
     result: 'High-conversion sensory discovery boutique engineered end-to-end.',
-    accent: '#F43F5E',
+    accent: '#E85A3C',
   },
 ];
 
 export const SocialProofStrip: React.FC = () => {
+  const { navigate } = useRouter();
+
   return (
-    <section className="w-full py-10 sm:py-12 px-4 sm:px-6 lg:px-8 bg-[#040814] border-b border-[var(--glass-border)] relative z-10">
+    <section className="w-full py-10 sm:py-12 px-4 sm:px-6 lg:px-8 bg-[#08080A] border-b border-[rgba(146,157,167,0.14)] relative z-10">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/[0.06]">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-4 border-b border-[rgba(146,157,167,0.12)]">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-[#10B981] animate-ping" />
-            <span className="font-mono-code text-[11px] uppercase tracking-widest text-[var(--text-muted)] font-semibold">
+            <span className="font-mono-code text-[11px] uppercase tracking-widest text-[#A1A1AA] font-semibold">
               Live Production Platforms &amp; Client Deployments
             </span>
           </div>
-          <span className="text-xs font-mono-code text-[#F5C761]">
+          <span className="text-xs font-mono-code text-[#E8B923] font-bold">
             Verified Real-World Business Outcomes
           </span>
         </div>
@@ -70,10 +73,11 @@ export const SocialProofStrip: React.FC = () => {
           {PROOF_ITEMS.map((item) => (
             <div
               key={item.id}
-              className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-white/20 transition-all group flex flex-col justify-between"
+              onClick={() => navigate('/work')}
+              className="p-5 rounded-2xl bg-[#121214] border border-[rgba(146,157,167,0.14)] hover:border-[#E8B923]/40 transition-all group flex flex-col justify-between cursor-pointer"
             >
               <div>
-                <div className="h-12 flex items-center justify-between mb-4 pb-3 border-b border-white/[0.05]">
+                <div className="h-12 flex items-center justify-between mb-4 pb-3 border-b border-[rgba(146,157,167,0.1)]">
                   <div className="h-9 max-w-[140px] flex items-center">
                     <img
                       src={item.logo}
@@ -94,20 +98,20 @@ export const SocialProofStrip: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="text-[11px] font-mono-code text-[var(--text-muted)] mb-1">
+                <div className="text-[11px] font-mono-code text-[#71717A] mb-1">
                   {item.sector}
                 </div>
-                <h4 className="font-headline text-base font-bold text-white mb-2">
+                <h4 className="font-headline text-base font-bold text-[#F4F4F5] mb-2 group-hover:text-[#E8B923] transition-colors">
                   {item.name}
                 </h4>
-                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                <p className="text-xs text-[#A1A1AA] leading-relaxed">
                   {item.result}
                 </p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-white/[0.04] flex items-center justify-between text-[11px] font-mono-code text-[var(--text-muted)] group-hover:text-white transition-colors">
+              <div className="mt-4 pt-3 border-t border-[rgba(146,157,167,0.1)] flex items-center justify-between text-[11px] font-mono-code text-[#71717A] group-hover:text-[#F4F4F5] transition-colors">
                 <span>View Case Study</span>
-                <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-[#E8B923]" />
               </div>
             </div>
           ))}

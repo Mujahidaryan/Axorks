@@ -29,7 +29,7 @@ export const WhyAxorks: React.FC = () => {
           </h2>
 
           <p className="mt-4 max-w-2xl mx-auto text-[var(--text-secondary)] text-base sm:text-lg leading-relaxed font-normal">
-            Why growing companies choose AXORKS over traditional agency markups or unvetted freelancers. Clear proposals, direct builder communication, and milestone accountability.
+            Why growing companies choose AXORKS over fragmented legacy agencies or unvetted freelancers. Clear proposals, direct senior engineer communication, and milestone accountability.
           </p>
         </div>
 

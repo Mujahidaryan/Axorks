@@ -11,7 +11,7 @@ export const ContactPage: React.FC = () => {
     email: '',
     phone: '',
     service: 'Custom Web Platforms & SaaS Architecture',
-    budget: '$199 to $499 (Starter & MVP)',
+    budget: '$499 (Custom Web Platform & Strategic MVP)',
     scope: '',
   });
 
@@ -42,7 +42,7 @@ export const ContactPage: React.FC = () => {
           </h1>
 
           <p className="mt-4 text-base sm:text-lg text-[var(--text-secondary)] max-w-3xl leading-relaxed font-normal">
-            Projects start from $199 - $499. Share your system requirements below to receive an itemized technical scope, milestone schedule, and transparent commercial proposal from senior engineering within 24 hours.
+            Share your system requirements below. Our senior engineering team will deliver an itemized technical scope, milestone schedule, and transparent commercial proposal within 24 hours.
           </p>
 
           <div className="mt-5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#161618] border border-[rgba(146,157,167,0.18)] text-xs uppercase text-[#E8B923] tracking-widest font-semibold font-mono-code">
@@ -168,7 +168,7 @@ export const ContactPage: React.FC = () => {
                     <option value="$499 (Custom Web Platform & Strategic MVP)" className="bg-[#121214] text-[#F4F4F5]">$499 (Custom Web Platform &amp; Strategic MVP)</option>
                     <option value="$1,499 to $3,500 (Flagship Digital Product System)" className="bg-[#121214] text-[#F4F4F5]">$1,499 to $3,500 (Flagship Digital Product System)</option>
                     <option value="$1,999+ (Enterprise ERP / LMS / Banking / Hospital)" className="bg-[#121214] text-[#F4F4F5]">$1,999+ (Enterprise ERP / LMS / Banking / Hospital)</option>
-                    <option value="$99 to $299/mo (Search & AI Visibility Packages)" className="bg-[#121214] text-[#F4F4F5]">$99 to $299/mo (Search &amp; AI Visibility Packages)</option>
+                    <option value="$99 to $299 (/mo or one-time · Search & AI Visibility Packages)" className="bg-[#121214] text-[#F4F4F5]">$99 to $299 (/mo or one-time · Search &amp; AI Visibility Packages)</option>
                     <option value="Custom / Scoping Required" className="bg-[#121214] text-[#F4F4F5]">Custom / Scoping Required</option>
                   </select>
                 </div>

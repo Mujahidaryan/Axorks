@@ -23,15 +23,15 @@ export const ClientStories: React.FC = () => {
             return (
               <div
                 key={story.id}
-                className="bg-[#0D1424] rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-white/[0.08] shadow-xl hover:border-white/20 transition-all"
+                className="bg-[#121214] rounded-3xl p-8 sm:p-10 flex flex-col justify-between border border-[rgba(146,157,167,0.14)] shadow-xl hover:border-[rgba(146,157,167,0.3)] transition-all"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-4 pb-6 mb-6 border-b border-white/[0.08]">
+                  <div className="flex items-center justify-between gap-4 pb-6 mb-6 border-b border-[rgba(146,157,167,0.12)]">
                     <div className="flex flex-col">
-                      <span className="font-headline text-lg sm:text-xl font-bold text-white">
+                      <span className="font-headline text-lg sm:text-xl font-bold text-[#F4F4F5]">
                         {story.clientName}
                       </span>
-                      <span className="font-mono-code text-[10px] text-[var(--gold)] font-bold tracking-wider uppercase mt-1">
+                      <span className="font-mono-code text-[10px] text-[#E8B923] font-bold tracking-wider uppercase mt-1">
                         {story.industry}
                       </span>
                     </div>
@@ -42,34 +42,34 @@ export const ClientStories: React.FC = () => {
                     )}
                   </div>
 
-                  <h3 className="font-headline text-xl sm:text-2xl font-bold text-white leading-snug mb-6">
+                  <h3 className="font-headline text-xl sm:text-2xl font-bold text-[#F4F4F5] leading-snug mb-6">
                     "{story.headline}"
                   </h3>
 
                   <div className="space-y-4 mb-8">
                     <div>
-                      <h4 className="text-[11px] font-mono-code text-slate-400 uppercase tracking-wider font-bold mb-1">
+                      <h4 className="text-[11px] font-mono-code text-[#71717A] uppercase tracking-wider font-bold mb-1">
                         The Problem
                       </h4>
-                      <p className="text-sm text-slate-300 leading-relaxed font-normal">
+                      <p className="text-sm text-[#A1A1AA] leading-relaxed font-normal">
                         {story.problem}
                       </p>
                     </div>
                     <div>
-                      <h4 className="text-[11px] font-mono-code text-[var(--emerald)] uppercase tracking-wider font-bold mb-1">
+                      <h4 className="text-[11px] font-mono-code text-[#10B981] uppercase tracking-wider font-bold mb-1">
                         Our Solution
                       </h4>
-                      <p className="text-sm text-slate-300 leading-relaxed font-normal">
+                      <p className="text-sm text-[#A1A1AA] leading-relaxed font-normal">
                         {story.solution}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-white/[0.08]">
+                <div className="pt-6 border-t border-[rgba(146,157,167,0.12)]">
                   <div className="relative pl-6">
-                    <Quote className="absolute left-0 top-0 w-4 h-4 text-[var(--gold)]/40" />
-                    <p className="text-sm font-headline italic text-white leading-relaxed mb-4 font-medium">
+                    <Quote className="absolute left-0 top-0 w-4 h-4 text-[#E8B923]/50" />
+                    <p className="text-sm font-headline italic text-[#F4F4F5] leading-relaxed mb-4 font-medium">
                       "{story.testimonial}"
                     </p>
                   </div>
@@ -77,9 +77,10 @@ export const ClientStories: React.FC = () => {
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-8 w-full py-3 bg-white/5 border border-white/10 text-white rounded-xl text-xs font-headline font-bold tracking-wider uppercase hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+                    className="mt-8 w-full py-3.5 bg-[#161618] border border-[rgba(146,157,167,0.18)] hover:border-[#E8B923]/40 text-[#F4F4F5] hover:text-[#E8B923] rounded-xl text-xs font-headline font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-2 shadow-sm"
                   >
-                    Request Similar System <ArrowRight className="w-3.5 h-3.5" />
+                    <span>Request Similar System Architecture</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </div>

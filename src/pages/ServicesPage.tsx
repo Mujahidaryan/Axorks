@@ -27,7 +27,7 @@ export const ServicesPage: React.FC = () => {
                 Custom Web Platforms, AI Visibility &amp; Enterprise Systems.
               </h1>
               <p className="mt-4 text-base sm:text-lg text-[#A1A1AA] leading-relaxed font-normal">
-                From high-concurrency custom web applications and regulated domain platforms (LMS, Core Banking, HMS) to complete search dominance on Google, ChatGPT, and Perplexity via SEO, AEO, and GEO packages. Delivered with fixed milestone pricing starting from $199 - $499 and 100% intellectual property transfer.
+                From high-concurrency custom web applications and regulated domain platforms (LMS, Core Banking, HMS) to complete search dominance on Google, ChatGPT, and Perplexity via SEO, AEO, and GEO packages. All work delivered by senior systems architects with fixed milestone scopes and 100% intellectual property transfer.
               </p>
             </div>
 

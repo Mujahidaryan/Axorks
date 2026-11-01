@@ -88,7 +88,7 @@ export const GlobalReach: React.FC = () => {
         </div>
 
         {/* Gulf Strategic Advantage Banner */}
-        <div className="p-8 sm:p-10 lg:p-12 rounded-3xl surface-ivory text-[#0A0F1D] spatial-card shadow-2xl">
+        <div className="p-8 sm:p-10 lg:p-12 rounded-3xl surface-luxury-light bg-[#FAF9F6] border border-[#E2DED4] text-[#0A0F1D] spatial-card shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-8">
               <span className="font-mono-code text-xs font-bold uppercase tracking-widest text-[#059669] block mb-2">
@@ -122,7 +122,7 @@ export const GlobalReach: React.FC = () => {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 px-6 rounded-xl bg-[#0F172A] text-white text-xs font-headline font-bold uppercase tracking-wider hover:bg-[#1E293B] transition-all cursor-pointer flex items-center justify-center gap-2 shadow-lg"
+                className="magnetic-btn w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] text-xs font-headline font-bold uppercase tracking-wider hover:brightness-105 transition-all cursor-pointer flex items-center justify-center gap-2 shadow-[0_4px_16px_rgba(232,185,35,0.3)]"
               >
                 <span>Book Free Discovery Call</span>
                 <ArrowRight className="w-4 h-4" />
@@ -132,9 +132,9 @@ export const GlobalReach: React.FC = () => {
                 href="https://wa.me/923141030223"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-headline font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg text-center"
+                className="w-full py-4 px-6 rounded-xl bg-[#08080A] border border-[#059669]/40 text-[#F4F4F5] hover:text-[#5EEAD4] text-xs font-headline font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-sm text-center"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-[#5EEAD4]" />
                 <span>Chat Directly on WhatsApp</span>
               </a>
 

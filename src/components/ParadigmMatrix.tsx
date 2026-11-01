@@ -72,10 +72,10 @@ export const ParadigmMatrix: React.FC = () => {
                 Engineering Specialization
               </span>
               <h2 className="font-display-hero text-3xl sm:text-4xl font-extrabold text-[#0A0F1D] tracking-tight mb-4 leading-tight">
-                Architectural depth over legacy agency bloat.
+                Architectural directness over legacy agency bureaucracy.
               </h2>
               <p className="text-sm text-[#475569] leading-relaxed mb-8">
-                Traditional software houses charge roughly four times more for layers of non-technical management and months of slow committee discovery. Axorks deploys dedicated senior systems practitioners across three core strategic layers:
+                Traditional software houses dilute execution through layers of non-technical management, lengthy committee discovery, and junior delegation. Axorks pairs your leadership directly with senior systems practitioners across three locked strategic pillars:
               </p>
 
               <dl className="space-y-4">
@@ -117,7 +117,7 @@ export const ParadigmMatrix: React.FC = () => {
                   Commercial Decision Framework
                 </span>
                 <span className="text-[10px] font-mono-code px-2.5 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] font-bold uppercase border border-[#A7F3D0]">
-                  Risk-Free Delivery
+                  Senior Direct Model
                 </span>
               </div>
 
@@ -125,7 +125,7 @@ export const ParadigmMatrix: React.FC = () => {
                 Axorks Studio Model vs. Legacy Enterprise IT
               </h3>
               <p className="text-xs text-[#64748B] mb-6">
-                Why paying roughly 4x more for traditional agency retainers creates real risk of delayed market execution.
+                Why senior engineering directness, eliminated administrative bloat, and milestone accountability deliver institutional-grade systems without enterprise friction.
               </p>
               
               {/* Semantic Table Structure for AEO Extraction */}
@@ -133,60 +133,60 @@ export const ParadigmMatrix: React.FC = () => {
                 <table className="w-full text-left border-collapse min-w-[500px]" data-aeo-citation="studio-comparison">
                   <thead>
                     <tr className="border-b-2 border-[#E2DED4]">
-                      <th className="pb-3.5 font-headline text-xs font-bold text-[#64748B] uppercase tracking-wider w-1/3">Commercial Vector</th>
+                      <th className="pb-3.5 font-headline text-xs font-bold text-[#64748B] uppercase tracking-wider w-1/3">Strategic Vector</th>
                       <th className="pb-3.5 font-headline text-xs font-bold text-[#0A0F1D] uppercase tracking-wider w-1/3">Axorks Studio Model</th>
                       <th className="pb-3.5 font-headline text-xs font-bold text-[#DC2626] uppercase tracking-wider w-1/3">Legacy IT Giants &amp; Agencies</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[#E2DED4] text-xs sm:text-sm">
                     <tr className="hover:bg-[#FAF9F6] transition-colors">
-                      <td className="py-4 font-mono-code text-xs font-bold text-[#0A0F1D]">Investment Vector</td>
-                      <td className="py-4 text-[#0A0F1D] font-bold flex items-center gap-1.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#059669] shrink-0" />
-                        <span>Fixed Milestones ($199 - $1,999)</span>
-                      </td>
-                      <td className="py-4 text-[#64748B]">
-                        <span className="text-[#DC2626] font-semibold">Roughly 4x - 10x higher</span> ($20k - $80k+) with open-ended hourly retainers
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-[#FAF9F6] transition-colors">
                       <td className="py-4 font-mono-code text-xs font-bold text-[#0A0F1D]">Engineering Directness</td>
                       <td className="py-4 text-[#0A0F1D] font-bold flex items-center gap-1.5">
                         <CheckCircle2 className="w-4 h-4 text-[#059669] shrink-0" />
-                        <span>Direct Senior Software Architects</span>
+                        <span>Direct Senior Systems Architects</span>
                       </td>
                       <td className="py-4 text-[#64748B]">
                         5+ layers of sales reps, account managers &amp; junior delegates
                       </td>
                     </tr>
                     <tr className="hover:bg-[#FAF9F6] transition-colors">
-                      <td className="py-4 font-mono-code text-xs font-bold text-[#0A0F1D]">Delivery Speed</td>
+                      <td className="py-4 font-mono-code text-xs font-bold text-[#0A0F1D]">Delivery Velocity</td>
                       <td className="py-4 text-[#0A0F1D] font-bold flex items-center gap-1.5">
                         <CheckCircle2 className="w-4 h-4 text-[#059669] shrink-0" />
-                        <span>Live staging build in 5-10 days</span>
+                        <span>Live staging build in 5-10 business days</span>
                       </td>
                       <td className="py-4 text-[#64748B]">
-                        <span className="text-[#DC2626] font-semibold">3-6 months discovery</span> (lost business opportunity &amp; delay)
+                        <span className="text-[#DC2626] font-semibold">3-6 months discovery</span> (lost market momentum &amp; delay)
                       </td>
                     </tr>
                     <tr className="hover:bg-[#FAF9F6] transition-colors">
-                      <td className="py-4 font-mono-code text-xs font-bold text-[#0A0F1D]">Payment Security</td>
-                      <td className="py-4 text-[#0A0F1D] font-bold flex items-center gap-1.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#059669] shrink-0" />
-                        <span>Approved only after live staging check</span>
-                      </td>
-                      <td className="py-4 text-[#64748B]">
-                        Paid upfront or billed on unverified timesheets
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-[#FAF9F6] transition-colors">
-                      <td className="py-4 font-mono-code text-xs font-bold text-[#0A0F1D]">IP Ownership</td>
+                      <td className="py-4 font-mono-code text-xs font-bold text-[#0A0F1D]">Code &amp; IP Governance</td>
                       <td className="py-4 text-[#0A0F1D] font-bold flex items-center gap-1.5">
                         <CheckCircle2 className="w-4 h-4 text-[#059669] shrink-0" />
                         <span>100% Full Git repository handover</span>
                       </td>
                       <td className="py-4 text-[#64748B]">
-                        Held hostage or ongoing licensing fee lock-in
+                        Proprietary lock-in or ongoing platform licensing fees
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-[#FAF9F6] transition-colors">
+                      <td className="py-4 font-mono-code text-xs font-bold text-[#0A0F1D]">Quality Verification</td>
+                      <td className="py-4 text-[#0A0F1D] font-bold flex items-center gap-1.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#059669] shrink-0" />
+                        <span>Milestone approved after live staging check</span>
+                      </td>
+                      <td className="py-4 text-[#64748B]">
+                        Paid upfront or billed on unverified hourly timesheets
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-[#FAF9F6] transition-colors">
+                      <td className="py-4 font-mono-code text-xs font-bold text-[#0A0F1D]">Capital Efficiency</td>
+                      <td className="py-4 text-[#0A0F1D] font-bold flex items-center gap-1.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#059669] shrink-0" />
+                        <span>Guaranteed Milestones ($199 - $1,999)</span>
+                      </td>
+                      <td className="py-4 text-[#64748B]">
+                        Bloated hourly retainers ($20k - $80k+) subsidizing heavy agency overhead
                       </td>
                     </tr>
                   </tbody>
@@ -197,10 +197,10 @@ export const ParadigmMatrix: React.FC = () => {
               <div className="mt-6 pt-5 border-t border-[#E2DED4] flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#FAF9F6] p-4 rounded-2xl">
                 <div>
                   <span className="block text-xs font-bold text-[#0A0F1D]">
-                    Ready to bypass the 4x agency markup?
+                    Ready for senior architectural directness?
                   </span>
                   <span className="block text-[11px] text-[#64748B]">
-                    Get an itemized specification and guaranteed fixed price in 24 hours.
+                    Receive an itemized technical scope and milestone roadmap in 24 hours.
                   </span>
                 </div>
                 <a
@@ -209,7 +209,7 @@ export const ParadigmMatrix: React.FC = () => {
                   rel="noopener noreferrer"
                   className="magnetic-btn px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] text-xs font-headline font-bold uppercase tracking-wider shrink-0 flex items-center gap-2 shadow-sm hover:brightness-105"
                 >
-                  <span>Lock Your Scope</span>
+                  <span>Scope Your Architecture</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>

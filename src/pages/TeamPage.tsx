@@ -29,8 +29,8 @@ export const TeamPage: React.FC = () => {
       <section className="w-full px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {TEAM_MEMBERS.map((member) => (
-            <div key={member.id} className="bg-[#0D1424] border border-white/[0.08] rounded-3xl p-6 shadow-xl flex flex-col items-center text-center hover:border-white/20 transition-all">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-6 bg-[#050814] border-2 border-white/10 shadow-md">
+            <div key={member.id} className="bg-[#121214] border border-[rgba(146,157,167,0.14)] rounded-3xl p-6 shadow-xl flex flex-col items-center text-center hover:border-[rgba(146,157,167,0.3)] transition-all">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden mb-6 bg-[#08080A] border-2 border-[rgba(146,157,167,0.18)] shadow-md">
                 {member.image ? (
                   <img 
                     src={member.image} 
@@ -38,22 +38,23 @@ export const TeamPage: React.FC = () => {
                     className={`w-full h-full object-cover ${member.id === 'yousaf-piryani' ? 'object-[26%_40%]' : member.id === 'mujahid' ? 'object-center' : 'object-[50%_15%]'}`} 
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-3xl font-headline font-bold text-slate-400">
+                  <div className="w-full h-full flex items-center justify-center text-3xl font-headline font-bold text-[#71717A]">
                     {member.name.charAt(0)}
                   </div>
                 )}
               </div>
-              <h3 className="font-headline text-lg font-bold text-white mb-1">
+              <h3 className="font-headline text-lg font-bold text-[#F4F4F5] mb-1">
                 {member.name}
               </h3>
-              <p className="text-[10px] font-mono-code text-[var(--gold)] font-bold uppercase tracking-wider mb-4">
+              <p className="text-[10px] font-mono-code text-[#E8B923] font-bold uppercase tracking-wider mb-4">
                 {member.role}
               </p>
-              <p className="text-xs text-slate-300 leading-relaxed mb-6 line-clamp-4">
+              <p className="text-xs text-[#A1A1AA] leading-relaxed mb-6 line-clamp-4">
                 {member.description}
               </p>
-              <div className="mt-auto pt-4 w-full border-t border-white/[0.08] flex justify-center gap-4">
-                
+              <div className="mt-auto pt-3.5 w-full border-t border-[rgba(146,157,167,0.12)] flex items-center justify-between text-[11px] font-mono-code text-[#A1A1AA]">
+                <span className="text-[#5EEAD4] font-semibold">Active Studio</span>
+                <span>Karachi · Islamabad</span>
               </div>
             </div>
           ))}
@@ -61,16 +62,16 @@ export const TeamPage: React.FC = () => {
       </section>
 
       <div className="dark-surface mt-12">
-        <section className="w-full bg-[var(--bg-primary)] py-20 lg:py-28 relative border-t border-[var(--glass-border)]">
+        <section className="w-full bg-[#08080A] py-20 lg:py-28 relative border-t border-[rgba(146,157,167,0.14)]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-display-hero text-3xl sm:text-4xl font-extrabold text-white mb-6">
+            <h2 className="font-display-hero text-3xl sm:text-4xl font-extrabold text-[#F4F4F5] mb-6">
               Need dedicated engineering capacity?
             </h2>
             <a 
               href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
-              className="magnetic-btn inline-block px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider"
+              className="magnetic-btn inline-block px-8 py-4 bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-[0_4px_20px_rgba(232,185,35,0.35)] hover:brightness-105"
             >
               Discuss Team Augmentation
             </a>

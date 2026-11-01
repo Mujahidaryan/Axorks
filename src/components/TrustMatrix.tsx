@@ -24,37 +24,44 @@ export const TrustMatrix: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {[
             {
-              icon: <Target className="w-5 h-5 text-[var(--gold)]" />,
+              icon: <Target className="w-5 h-5 text-[#E8B923]" />,
               title: "Fixed-Price Milestones",
-              desc: "Proposals within 24h. Projects from $1,000. You know the exact investment before any code is written."
+              desc: "Itemized scope within 24h. Guaranteed milestone deliverables with 100% budget certainty before code begins."
             },
             {
-              icon: <ShieldCheck className="w-5 h-5 text-[var(--emerald)]" />,
+              icon: <ShieldCheck className="w-5 h-5 text-[#10B981]" />,
               title: "100% IP Ownership",
-              desc: "Complete commercial rights and source code handed over upon project completion. No lock-in."
+              desc: "Complete commercial rights and source code handed over upon project completion. Zero platform lock-in."
             },
             {
-              icon: <Code2 className="w-5 h-5 text-[#38BDF8]" />,
+              icon: <Code2 className="w-5 h-5 text-[#5EEAD4]" />,
               title: "Pay Post-Verification",
               desc: "Funds are tied strictly to milestones. You inspect working staging builds before invoices are cleared."
             },
             {
-              icon: <Clock className="w-5 h-5 text-[#A78BFA]" />,
+              icon: <Clock className="w-5 h-5 text-[#E85A3C]" />,
               title: "Senior Hands Only",
               desc: "Direct execution by lead architects in Karachi & Islamabad. Zero junior delegation or non-technical layers."
             }
           ].map((item, idx) => (
-            <div key={idx} className="flex flex-col p-6 rounded-2xl bg-[#0D1424] border border-white/[0.08] shadow-xl hover:border-white/20 transition-all">
-              <div className="mb-4 p-2.5 rounded-xl bg-[#050814] border border-white/10 inline-flex w-fit">
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              className="flex flex-col p-6 rounded-2xl bg-[#121214] border border-[rgba(146,157,167,0.14)] shadow-xl hover:border-[rgba(146,157,167,0.3)] transition-all"
+            >
+              <div className="mb-4 p-2.5 rounded-xl bg-[#161618] border border-[rgba(146,157,167,0.14)] inline-flex w-fit">
                 {item.icon}
               </div>
-              <h3 className="font-headline text-sm font-bold text-white mb-2 uppercase tracking-wide">
+              <h3 className="font-headline text-sm font-bold text-[#F4F4F5] mb-2 uppercase tracking-wide">
                 {item.title}
               </h3>
-              <p className="text-xs text-slate-300 leading-relaxed font-normal">
+              <p className="text-xs text-[#A1A1AA] leading-relaxed font-normal">
                 {item.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

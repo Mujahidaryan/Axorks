@@ -275,10 +275,10 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                       Foundation Audit ($99)
                     </th>
                     <th className="py-4 px-3 font-headline text-xs font-bold text-[#E85A3C] uppercase tracking-wider w-1/4">
-                      AEO + GEO Engine ($199/mo)
+                      AEO + GEO Engine ($199)
                     </th>
                     <th className="py-4 px-3 font-headline text-xs font-bold text-[#E8B923] uppercase tracking-wider w-1/4">
-                      All-In Visibility ($299/mo)
+                      All-In Visibility ($299)
                     </th>
                   </tr>
                 </thead>
@@ -309,7 +309,7 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
                   Ready to deploy complete Google + AI citation coverage?
                 </h4>
                 <p className="text-xs text-[#A1A1AA] mt-1">
-                  Start with the All-In Visibility Engine ($299/mo) to capture traditional Google ranking and direct AI answers concurrently.
+                  Start with the All-In Visibility Engine ($299 / month or one-time) to capture traditional Google ranking and direct AI answers concurrently.
                 </p>
               </div>
 
@@ -349,8 +349,8 @@ export const VisibilityPackages: React.FC<VisibilityPackagesProps> = ({ id = 'vi
           <div className="flex items-center gap-3.5 justify-center sm:justify-start">
             <ShieldCheck className="w-5 h-5 text-[#5EEAD4] shrink-0" />
             <div>
-              <p className="text-xs font-bold text-[#F4F4F5]">Transparent Monthly Retainers</p>
-              <p className="text-[11px] text-[#71717A]">Fixed fee, zero hidden agency markups or surprises.</p>
+              <p className="text-xs font-bold text-[#F4F4F5]">Transparent Investment Model</p>
+              <p className="text-[11px] text-[#71717A]">Fixed fee, zero hidden overhead or surprises.</p>
             </div>
           </div>
 

@@ -51,7 +51,9 @@ const TRUST_METRICS = [
     label: 'Platforms Shipped',
     subtext: 'AgroTrace, IPMI-OS, MediVerse, FUME',
     icon: Award,
-    accent: '#F5C761',
+    accent: '#E8B923',
+    bgClass: 'bg-[#E8B923]/10',
+    borderClass: 'border-[#E8B923]/30',
   },
   {
     value: 100,
@@ -61,15 +63,19 @@ const TRUST_METRICS = [
     subtext: 'Zero hourly surprise billing',
     icon: ShieldCheck,
     accent: '#10B981',
+    bgClass: 'bg-[#10B981]/10',
+    borderClass: 'border-[#10B981]/30',
   },
   {
-    value: 1000,
-    suffix: '',
-    prefix: '$',
-    label: 'Projects Starting From',
-    subtext: 'Clear proposal before code',
+    value: 100,
+    suffix: '%',
+    prefix: '',
+    label: 'IP Repository Transfer',
+    subtext: 'Complete Git codebase handover',
     icon: Zap,
-    accent: '#F5C761',
+    accent: '#E85A3C',
+    bgClass: 'bg-[#E85A3C]/10',
+    borderClass: 'border-[#E85A3C]/30',
   },
   {
     value: 24,
@@ -78,7 +84,9 @@ const TRUST_METRICS = [
     label: 'Guaranteed Response',
     subtext: 'Direct engineering desks',
     icon: Clock,
-    accent: '#06B6D4',
+    accent: '#5EEAD4',
+    bgClass: 'bg-[#5EEAD4]/10',
+    borderClass: 'border-[#5EEAD4]/30',
   },
   {
     value: 8,
@@ -87,7 +95,9 @@ const TRUST_METRICS = [
     label: 'Specialists & Builders',
     subtext: 'Direct founder oversight',
     icon: Users,
-    accent: '#8B5CF6',
+    accent: '#A78BFA',
+    bgClass: 'bg-[#A78BFA]/10',
+    borderClass: 'border-[#A78BFA]/30',
   },
 ];
 
@@ -115,8 +125,7 @@ export const TrustStrip: React.FC = () => {
               >
                 <div className="flex items-center justify-between mb-3">
                   <div
-                    className="w-8 h-8 rounded-lg flex items-center justify-center"
-                    style={{ backgroundColor: `${metric.accent}15`, border: `1px solid ${metric.accent}30` }}
+                    className={`w-8 h-8 rounded-lg flex items-center justify-center border ${metric.bgClass} ${metric.borderClass}`}
                   >
                     <IconComponent className="w-4 h-4" style={{ color: metric.accent }} />
                   </div>

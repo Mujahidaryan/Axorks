@@ -40,7 +40,7 @@ export const CapabilitiesMatrix: React.FC = () => {
     {
       id: 'lms-systems',
       title: 'School & College Learning Management Systems (LMS)',
-      badge: 'From $1,999 · Education',
+      badge: 'Enterprise · Education',
       icon: <GraduationCap className="w-6 h-6 text-[#E8B923]" />,
       tagline: 'Multi-Campus Administration & Academic Operations',
       description: 'Comprehensive institutional platforms for schools, colleges, and university networks. Student Information Systems (SIS), parent-teacher telemetry, automated attendance, gradebook analytics, interactive lecture courseware, and unified online fee collection.',
@@ -50,7 +50,7 @@ export const CapabilitiesMatrix: React.FC = () => {
     {
       id: 'banking-systems',
       title: 'Core Banking & Financial Transaction Rails',
-      badge: 'From $1,999 · FinTech',
+      badge: 'Enterprise · FinTech',
       icon: <Landmark className="w-6 h-6 text-[#5EEAD4]" />,
       tagline: 'High-Throughput Ledger & Financial Transaction Rails',
       description: 'Institutional-grade core banking architectures, multi-currency transaction engines, double-entry accounting ledgers, automated payment reconciliations, and regulatory compliance pipelines (KYC/AML) with sub-second execution.',
@@ -60,7 +60,7 @@ export const CapabilitiesMatrix: React.FC = () => {
     {
       id: 'hospital-systems',
       title: 'Hospital Information & Clinical Management Systems (HMS)',
-      badge: 'From $1,999 · Healthcare',
+      badge: 'Enterprise · Healthcare',
       icon: <Activity className="w-6 h-6 text-[#E85A3C]" />,
       tagline: 'Electronic Health Records & Clinical Telemetry',
       description: 'Enterprise healthcare platforms designed for hospitals, diagnostic labs, and clinical networks. Centralized Electronic Health Records (EHR/EMR), outpatient/inpatient workflows (OPD/IPD), pharmacy stock telemetry, laboratory test routing, and strict HIPAA/WHO compliance.',
@@ -94,7 +94,7 @@ export const CapabilitiesMatrix: React.FC = () => {
                 Domain Solutions
               </span>
               <h3 className="font-display-hero text-2xl sm:text-3xl font-extrabold text-[#F4F4F5]">
-                Enterprise Industry Systems (Starting from $1,999)
+                Enterprise Industry Systems
               </h3>
             </div>
             <a
@@ -211,22 +211,22 @@ export const CapabilitiesMatrix: React.FC = () => {
                 <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-5 h-5 text-[#5EEAD4] shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-headline text-sm font-bold text-[#F4F4F5] uppercase tracking-wider mb-1">Fixed Milestone Pricing</h4>
-                    <p className="text-xs text-[#A1A1AA] leading-relaxed font-normal">Transparent tiers from $199 - $499. You never pay for agency overhead or open-ended billable hours.</p>
-                  </div>
-                </li>
-                <li className="flex items-start gap-4">
-                  <CheckCircle2 className="w-5 h-5 text-[#5EEAD4] shrink-0 mt-0.5" />
-                  <div>
                     <h4 className="font-headline text-sm font-bold text-[#F4F4F5] uppercase tracking-wider mb-1">Direct Senior Architectural Access</h4>
-                    <p className="text-xs text-[#A1A1AA] leading-relaxed font-normal">Zero junior delegate handoffs or non-technical account managers. You collaborate directly with practitioners.</p>
+                    <p className="text-xs text-[#A1A1AA] leading-relaxed font-normal">Zero junior delegate handoffs or non-technical account managers. You collaborate directly with the engineers writing your production code.</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <CheckCircle2 className="w-5 h-5 text-[#5EEAD4] shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-headline text-sm font-bold text-[#F4F4F5] uppercase tracking-wider mb-1">Staging Verification Escrow</h4>
-                    <p className="text-xs text-[#A1A1AA] leading-relaxed font-normal">Invoices are released only after you test working code on private staging URLs. Absolute financial certainty.</p>
+                    <p className="text-xs text-[#A1A1AA] leading-relaxed font-normal">Invoices are released only after you test working code on private staging URLs. Absolute quality certainty before any financial commitment.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <CheckCircle2 className="w-5 h-5 text-[#5EEAD4] shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-headline text-sm font-bold text-[#F4F4F5] uppercase tracking-wider mb-1">Guaranteed Fixed Milestone Scoping</h4>
+                    <p className="text-xs text-[#A1A1AA] leading-relaxed font-normal">Every scope is locked with guaranteed milestones. No open-ended hourly retainers, no billable hour ambiguity.</p>
                   </div>
                 </li>
               </ul>

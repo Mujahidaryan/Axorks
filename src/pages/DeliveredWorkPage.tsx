@@ -37,7 +37,7 @@ export const DeliveredWorkPage: React.FC = () => {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Custom%20Architecture%20Inquiry%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="magnetic-btn px-6 py-3.5 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-md flex items-center gap-2"
+                className="magnetic-btn px-6 py-3.5 bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] rounded-xl font-headline font-bold text-xs uppercase tracking-wider shadow-[0_4px_16px_rgba(232,185,35,0.3)] hover:brightness-105 flex items-center gap-2"
               >
                 <span>Request Similar Architecture</span>
                 <ArrowRight className="w-4 h-4" />
@@ -60,10 +60,10 @@ export const DeliveredWorkPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#0D1424] border border-white/[0.08] shadow-2xl"
+                className="p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#121214] border border-[rgba(146,157,167,0.14)] shadow-2xl"
               >
                 {/* Meta Header */}
-                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-white/[0.08]">
+                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-[rgba(146,157,167,0.12)]">
                   <div className="flex items-center gap-3">
                     {project.clientLogo && (
                       <div className="h-8 w-24 flex items-center shrink-0">
@@ -107,7 +107,7 @@ export const DeliveredWorkPage: React.FC = () => {
 
                       {/* Highlight Metrics Grid */}
                       {project.metrics && project.metrics.length > 0 && (
-                        <div className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-2xl bg-[#050814] border border-white/10">
+                        <div className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-2xl bg-[#161618] border border-[rgba(146,157,167,0.14)]">
                           {project.metrics.map((m, mIdx) => (
                             <div key={mIdx}>
                               <span className="block font-display-hero text-xl sm:text-2xl font-extrabold text-white">
@@ -195,7 +195,7 @@ export const DeliveredWorkPage: React.FC = () => {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
               target="_blank"
               rel="noopener noreferrer"
-              className="magnetic-btn inline-block px-8 py-4 bg-[var(--gold)] text-[#0A0F1D] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-lg"
+              className="magnetic-btn inline-block px-8 py-4 bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] rounded-xl font-headline font-bold text-sm uppercase tracking-wider shadow-[0_4px_20px_rgba(232,185,35,0.35)] hover:brightness-105"
             >
               Book Discovery Call
             </a>

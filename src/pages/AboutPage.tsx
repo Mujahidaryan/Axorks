@@ -43,9 +43,9 @@ export const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="p-6 rounded-2xl bg-[#121214] border border-[rgba(146,157,167,0.14)] shadow-lg hover:border-[rgba(146,157,167,0.3)] transition-all">
             <Tag className="w-5 h-5 text-[#E8B923] mb-3" />
-            <h4 className="font-headline text-base font-bold text-[#F4F4F5] mb-1">From $199 - $499</h4>
+            <h4 className="font-headline text-base font-bold text-[#F4F4F5] mb-1">Milestone-Backed Tiers</h4>
             <p className="text-xs text-[#A1A1AA] leading-relaxed">
-              Accessible fixed milestone pricing for growing companies, MVPs, and production web systems.
+              Guaranteed fixed-scope milestones for web platforms, MVPs, and production business systems.
             </p>
           </div>
 

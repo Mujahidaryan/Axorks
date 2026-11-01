@@ -107,7 +107,7 @@ export const Hero: React.FC<HeroProps> = () => {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-base sm:text-lg lg:text-xl text-[#A1A1AA] leading-relaxed font-normal max-w-xl"
           >
-            We architect mission-critical custom web applications, scalable SaaS architectures, and high-security business systems. Delivered with guaranteed fixed milestones, zero 4x agency markups, and 100% full-code IP handover.
+            We architect mission-critical custom web applications, scalable SaaS architectures, and high-security business systems. Delivered with direct senior systems engineering, rapid staging turnaround, guaranteed milestone scopes, and 100% full-code IP handover.
           </motion.p>
 
           {/* Spatial Frosted Glass Telemetry Strip (Locked Pricing Visibility) */}
@@ -119,10 +119,10 @@ export const Hero: React.FC<HeroProps> = () => {
           >
             <div className="border-r border-[rgba(146,157,167,0.14)] pr-2">
               <span className="block font-display-hero text-sm sm:text-base font-extrabold text-[#E8B923]">
-                From $199 - $499
+                Fixed Scope Lock
               </span>
               <span className="block font-mono-code text-[10px] sm:text-[11px] text-[#A1A1AA] uppercase tracking-tight">
-                Fixed Milestones
+                From $199 Milestone
               </span>
             </div>
             <div className="border-r border-[rgba(146,157,167,0.14)] px-2">

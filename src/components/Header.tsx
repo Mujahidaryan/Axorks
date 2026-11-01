@@ -171,7 +171,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDiscovery }) => {
                   </div>
                   {link.isPill && (
                     <span className="text-[10px] font-mono-code font-bold px-2 py-0.5 rounded-full bg-[#E8B923]/20 text-[#E8B923]">
-                      $99+
+                      New
                     </span>
                   )}
                 </button>

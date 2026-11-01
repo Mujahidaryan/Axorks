@@ -166,7 +166,7 @@ export const CareersPage: React.FC = () => {
                 { step: '03', title: 'Paid Trial', desc: 'A short, paid freelance milestone to evaluate communication and production code quality.' },
                 { step: '04', title: 'Direct Offer', desc: 'Immediate offer for a full-time senior role at our Karachi or Islamabad offices.' }
               ].map((item, idx) => (
-                <div key={idx} className="bg-[var(--bg-secondary)] border border-white/5 p-6 rounded-2xl">
+                <div key={idx} className="bg-[var(--bg-secondary)] border border-[rgba(146,157,167,0.14)] p-6 rounded-2xl hover:border-[rgba(146,157,167,0.28)] transition-all">
                   <div className="text-[var(--gold)] font-mono-code text-sm font-bold mb-4">{item.step}</div>
                   <h4 className="font-headline text-base font-bold text-white mb-2">{item.title}</h4>
                   <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{item.desc}</p>

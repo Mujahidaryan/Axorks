@@ -29,7 +29,7 @@ export const EvidenceEngine: React.FC = () => {
 
         <div className="space-y-24 lg:space-y-32">
           {PROJECTS.map((project, idx) => {
-            const story = CLIENT_STORIES[idx]; // 1:1 mapping mapping perfectly
+            const story = CLIENT_STORIES[idx]; // 1:1 mapping with project case study
             const isEven = idx % 2 === 0;
 
             return (

@@ -168,20 +168,20 @@ export const BlogPage: React.FC = () => {
           </div>
 
           {/* Article Footer Conversion */}
-          <div className="mt-14 p-8 rounded-3xl bg-[#0A0F1D] border border-[var(--gold)]/30 text-center shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[var(--gold)]/5 rounded-full blur-[100px] pointer-events-none" />
-            <h3 className="font-display-hero text-2xl font-bold text-white mb-2 relative z-10">
-              Need Help Implementing This in Your Business?
+          <div className="mt-14 p-8 rounded-3xl bg-[#121214] border border-[rgba(146,157,167,0.18)] text-center shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#E8B923]/5 rounded-full blur-[100px] pointer-events-none" />
+            <h3 className="font-display-hero text-2xl font-bold text-[#F4F4F5] mb-2 relative z-10">
+              Need Help Architecting This in Your Business?
             </h3>
-            <p className="text-sm text-slate-300 max-w-lg mx-auto mb-6 relative z-10">
-              Axorks engineers custom AI automations, web applications, and mobile systems with fixed-price milestones starting from $1,000.
+            <p className="text-sm text-[#A1A1AA] max-w-lg mx-auto mb-6 relative z-10">
+              Axorks architects custom web platforms, scalable SaaS architectures, and specialized enterprise systems with direct senior engineering and guaranteed fixed milestones.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@axorks.com,contact@axorks.com&su=Discovery%20Call%20Request%20-%20Axorks"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#F5C761] to-[#D97706] text-[#2A1800] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-lg"
+                className="magnetic-btn w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#E8B923] via-[#F0C735] to-[#D69E15] text-[#08080A] text-xs font-headline font-bold uppercase tracking-wider glow-gold-jewel cursor-pointer shadow-[0_4px_20px_rgba(232,185,35,0.35)] hover:brightness-105"
               >
                 <span>Book Free Discovery Call</span>
               </a>
@@ -189,9 +189,9 @@ export const BlogPage: React.FC = () => {
                 href="https://wa.me/923141030223"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-black/50 border border-[#10B981]/50 text-white text-xs font-headline font-semibold uppercase tracking-wider"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#161618] border border-[#5EEAD4]/30 text-[#F4F4F5] text-xs font-headline font-semibold uppercase tracking-wider hover:bg-[#1E1E22] transition-colors"
               >
-                <MessageSquare className="w-4 h-4 text-[#10B981]" />
+                <MessageSquare className="w-4 h-4 text-[#5EEAD4]" />
                 <span>WhatsApp: +92 314 103 0223</span>
               </a>
             </div>

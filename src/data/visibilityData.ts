@@ -53,7 +53,7 @@ export const VISIBILITY_PACKAGES: VisibilityPackage[] = [
     shortName: 'AEO + GEO Engine',
     tagline: 'Direct Answers in AI & Conversational LLMs',
     price: '$199',
-    billingPeriod: '/ month',
+    billingPeriod: '/ month or one-time',
     badge: 'AI Discovery & Citation',
     accent: 'vermilion',
     description: 'Engineered specifically for conversational AI models. Structure high-density entity models so Perplexity, ChatGPT Search, Claude, and Gemini cite your brand as the primary authority.',
@@ -73,8 +73,8 @@ export const VISIBILITY_PACKAGES: VisibilityPackage[] = [
       'Monthly AI attribution and citation market share report',
     ],
     idealFor: 'Companies that need to be actively cited and recommended when buyers ask AI for solutions.',
-    ctaText: 'Deploy AEO + GEO Engine ($199/mo)',
-    emailSubject: 'AEO + GEO Growth Engine Inquiry ($199/mo) - Axorks',
+    ctaText: 'Deploy AEO + GEO Engine ($199)',
+    emailSubject: 'AEO + GEO Growth Engine Inquiry ($199) - Axorks',
   },
   {
     id: 'all-in-visibility',
@@ -82,7 +82,7 @@ export const VISIBILITY_PACKAGES: VisibilityPackage[] = [
     shortName: '360° Search + AI',
     tagline: 'Complete Google Rank & AI Ecosystem Dominance',
     price: '$299',
-    billingPeriod: '/ month',
+    billingPeriod: '/ month or one-time',
     popular: true,
     badge: 'Full Spectrum Dominance',
     accent: 'gold',
@@ -104,8 +104,8 @@ export const VISIBILITY_PACKAGES: VisibilityPackage[] = [
       'Unified monthly 360° discovery intelligence report with clear ROI tracking',
     ],
     idealFor: 'Enterprises and fast-growing platforms seeking unassailable authority across search and AI answer engines.',
-    ctaText: 'Claim All-In Engine ($299/mo)',
-    emailSubject: 'All-In Visibility Engine Inquiry ($299/mo) - Axorks',
+    ctaText: 'Claim All-In Engine ($299)',
+    emailSubject: 'All-In Visibility Engine Inquiry ($299) - Axorks',
   },
 ];
 
@@ -129,9 +129,9 @@ export const VISIBILITY_COMPARISON = [
     allIn: 'Dominant organic rankings paired with primary AI recommendation status',
   },
   {
-    channel: 'Investment',
+    channel: 'Investment Model',
     foundation: '$99 / month or one-time',
-    aeoGeo: '$199 / month',
-    allIn: '$299 / month (Complete 360° Coverage)',
+    aeoGeo: '$199 / month or one-time',
+    allIn: '$299 / month or one-time (Complete 360° Coverage)',
   },
 ];
